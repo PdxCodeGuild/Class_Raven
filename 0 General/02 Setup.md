@@ -82,9 +82,6 @@ GitHub is a hosting service for Git repositories. You can create an account [her
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-### Atom
-
-[Atom](https://atom.io/) is another lightweight code editor.
 
 #### Shortcuts
 
