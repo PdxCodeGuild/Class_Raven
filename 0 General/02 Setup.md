@@ -104,7 +104,7 @@ You install and remove packages by going to `File -> Settings -> Packages/Instal
 
 ## Install Slack
 
-Slack is an instant messaging service we'll use to communicate. If you send me an email `anthony@pdxcodeguild.com` I can send you an invite to PDX Code Guild's Slack. You can use Slack in a browser, but it can also be installed as a desktop and mobile app.
+Slack is an instant messaging service we'll use to communicate. If you send me an email `sarah@pdxcodeguild.com` I can send you an invite to PDX Code Guild's Slack. You can use Slack in a browser, but it can also be installed as a desktop and mobile app.
 
 - Desktop: [Windows](https://slack.com/downloads/windows), [Mac](https://slack.com/downloads/mac), [Linux](https://slack.com/downloads/linux)
 - Mobile: [Android](https://slack.com/downloads/android), [iOS](https://slack.com/downloads/ios)
