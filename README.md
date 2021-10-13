@@ -2,7 +2,7 @@
 
 ### Rough Timeline
 
-Weeks 1, 2, 3, 4, 5: Python
+Weeks 1, 2, 3, 4, 5: Python 
 
 Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
@@ -12,6 +12,8 @@ Weeks 14, 15: Javascript
 
 Weeks 16, 17, 18: Capstone project
 
+### Assigned Labs: 
+  - Python lab 02
 ### Subbmitting your work
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git pull` to pull any recent changes to your local repository
