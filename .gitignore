@@ -19,6 +19,7 @@ Code/Theo/django/blog/db.sqlite3
 __pycache__
 db.sqlite3
 media
+uploads/
 
 # Backup files # 
 *.bak 
