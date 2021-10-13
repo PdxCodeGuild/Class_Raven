@@ -18,15 +18,13 @@ class RPS():
     
     # Get user input
     def get_user_choice(self) -> str:
-        usr_pick = input("\n\nPlease choose\nrock\npaper\nscissors\n\nChoice: ")
-
+        
+        usr_pick = ""
         # Check if input is valid
-        """ while True:
-            if usr_pick.lower() is not "rock" or "paper" or "scissors":
+        while usr_pick not in ['rock', 'paper', 'scissors']:
+            usr_pick = input("\nPlease choose\nrock\npaper\nscissors\n\nChoice: ")    
+            print(f"{F.RED}error, invalid input. Choose again\n{R}")
                 
-                continue
-            else:
-                break    """             
                     
         match usr_pick:
             case "rock":
