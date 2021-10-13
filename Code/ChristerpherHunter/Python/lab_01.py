@@ -33,6 +33,15 @@ def draw_legs():
     forward(-120)
     right(90)
     forward(120)
+    forward(-120)# Attach two legs to the body
+def draw_legs():
+    right(-45)
+    forward(200)
+    right(-45)
+    forward(120)
+    forward(-120)
+    right(90)
+    forward(120)
     forward(-120)
 
 
