@@ -6,7 +6,7 @@ from colorama import Fore as F
 
 R = F.RESET
 
-class RPS():
+class RPS:
 
     def __init__(self) -> None:
         self.cpu_rock = ""
@@ -18,15 +18,22 @@ class RPS():
     
     # Get user input
     def get_user_choice(self) -> str:
-        usr_pick = input("\n\nPlease choose\nrock\npaper\nscissors\n\nChoice: ")
-
+        
+        usr_pick = ""
         # Check if input is valid
+<<<<<<< HEAD
         while True:
             if usr_pick.lower() is not "rock" or "paper" or "scissors":
                 
                 continue
             else:
                 break
+=======
+        while usr_pick not in ['rock', 'paper', 'scissors']:
+            usr_pick = input("\nPlease choose\nrock\npaper\nscissors\n\nChoice: ")    
+            print(f"{F.RED}error, invalid input. Choose again\n{R}")
+                
+>>>>>>> refs/remotes/origin/Christerpher_Hunter
                     
         match usr_pick:
             case "rock":
