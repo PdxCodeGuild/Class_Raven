@@ -21,12 +21,12 @@ class RPS():
         usr_pick = input("\n\nPlease choose\nrock\npaper\nscissors\n\nChoice: ")
 
         # Check if input is valid
-        """ while True:
+        while True:
             if usr_pick.lower() is not "rock" or "paper" or "scissors":
                 
                 continue
             else:
-                break    """             
+                break
                     
         match usr_pick:
             case "rock":
