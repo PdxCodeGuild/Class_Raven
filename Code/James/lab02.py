@@ -25,7 +25,7 @@ convert_quarter = int(convert_quarter)
 remaining_balance = dollar_amount - (convert_quarter * quarters)
 
 convert_dime = remaining_balance // dimes
-convert_dime == int(convert_dime)
+convert_dime = int(convert_dime)
 remaining_balance = remaining_balance - (convert_dime * dimes)
 
 convert_nickel = remaining_balance // nickels
