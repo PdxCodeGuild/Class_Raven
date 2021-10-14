@@ -1,7 +1,7 @@
 # Christerpher Hunter
 # Lab 01: Turtle
 
-from turtle import begin_fill, circle, done, end_fill, fillcolor, forward, home, left, pendown, penup, right, setheading, setposition, speed
+from turtle import done, forward, pendown, penup, right, setposition, speed
 
 # Draw the head connected to the body
 def draw_body():
@@ -33,7 +33,9 @@ def draw_legs():
     forward(-120)
     right(90)
     forward(120)
-    forward(-120)# Attach two legs to the body
+    forward(-120)
+    
+# Attach two legs to the body
 def draw_legs():
     right(-45)
     forward(200)
