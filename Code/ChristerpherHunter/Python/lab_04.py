@@ -1,5 +1,6 @@
 # Christerpher Hunter
-# Lab 04: Make Change
+# Lab 02: Make Change 
+# Formally Lab 04
 
 # Convert input doll hairs into pennies
 def make_pennies(doll_hairs: str) -> int:
