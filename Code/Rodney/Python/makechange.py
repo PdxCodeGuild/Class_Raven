@@ -17,11 +17,11 @@ total_left_after_quarters = total_pennies - (quarter * total_quarters) ## taking
 
 total_dimes = total_left_after_quarters//dime  ## repeating the above two steps for dimes > nickels > and remaining is your pennies left over 
 
-total_left_after_dimes = total_left_after_quarters - (10 * total_dimes)
+total_left_after_dimes = total_left_after_quarters - (dime * total_dimes)
 
 total_nickels = total_left_after_dimes//nickel
 
-total_pennies_output = total_left_after_dimes - (5 * total_nickels)
+total_pennies_output = total_left_after_dimes - (nickel * total_nickels)
 
 
 if total_quarters >= 1:            ## using if statement to avoid printing out currency if we don't need to 
