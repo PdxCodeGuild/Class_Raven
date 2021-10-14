@@ -11,8 +11,7 @@ plural = ""
 number_invalid = True
 
 while number_invalid == True: # Try until valid number.
-    try:
-        #number_invalid = False # Reset number_invalid so we only try again on error.
+    try: # Try to get valid input from user. (A float)
         total_ammount = float(input(f"""Please Enter how much money you have in dollars and cents (1.36): 
 """)) # Get input from user.
     except KeyboardInterrupt: # Quit program on Ctrl+C
