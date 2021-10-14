@@ -10,30 +10,30 @@ def make_pennies(doll_hairs: str) -> int:
     return int(pennies)
 
 # Coin vending tuple
-""" coins = [
-        ('Fifty Cent piece', 50)
-        ('Quarter', 25)
-        ('Dime', 10)
-        ('Nickel', 5)
-        ('Penny', 1)
-    ] """
+coins = [
+        ('Fifty Cent piece', 50),
+        ('Quarter', 25),
+        ('Dime', 10),
+        ('Nickel', 5),
+        ('Pennie', 1)
+    ] 
 
 def make_change(pennies: int) -> int:
 
     # Make the number of Quarters
-    quarters = pennies // 25
+    quarters = pennies // coins[1][1]
 
     # Make the number of Dimes
-    pennies -= quarters * 25
-    dimes = pennies // 10
+    pennies -= quarters * coins[1][1]
+    dimes = pennies // coins[2][1]
 
     # Make the number of Nickels
-    pennies -= dimes * 10
-    nickels = pennies // 5
+    pennies -= dimes * coins[2][1]
+    nickels = pennies // coins[3][1]
 
     # Make the number of Pennies
-    pennies -= nickels * 5
-    penny = pennies // 1
+    pennies -= nickels * coins[3][1]
+    penny = pennies // coins[4][1]
 
     return quarters, dimes, nickels, penny
 
@@ -44,7 +44,11 @@ def main() -> None:
     tendered = make_pennies(tendered)
     quarters, dimes, nickels, pennies = make_change(tendered) # Overloading the variable pennies
 
-    print(f"\nThe amount tendered creates:\n{quarters} Quarter(s)\n{dimes} Dime(s)\n{nickels} Nickel(s)\n{pennies} Pennie(s)")    
+    print(f"\nThe amount tendered creates:\n\
+{quarters} {coins[1][0]}(s)\n\
+{dimes} {coins[2][0]}(s)\n\
+{nickels} {coins[3][0]}(s)\n\
+{pennies} {coins[4][0]}(s)")    
 
 
 if __name__ == '__main__':
