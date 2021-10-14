@@ -107,12 +107,15 @@ For your capstone presentation, you should plan out what features of your projec
 
 ## Rough Timeline
 
-- Weeks 1-2: HTML/CSS
-- Weeks 3-6: Python
-- Weeks 7-10: Django
-- Weeks 11-14: JavaScript
-- Weeks 15-18: Capstone
+Weeks 1, 2, 3, 4, 5: Python
 
+Weeks 6, 7, 8, 9: HTML/CSS/Flask
+
+Weeks 10, 11, 12, 13: Django
+
+Weeks 14, 15: Javascript
+
+Weeks 16, 17, 18: Capstone project
 ## Code of Conduct
 
 At PDX Code Guild we seek to create an environment conducive to personal and professional growth. Academic and personal integrity are central to creating such an environment.
