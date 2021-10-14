@@ -1,4 +1,9 @@
-coins = [('dollar',1),
+coins = [('100 dollar bill',100),
+         ('50 dollar bill',50),
+         ('20 dollar bill',20),
+         ('10 dollar bill',10),
+         ('5 dollar bill',5),
+         ('dollar bill',1),
          ('half-dollar',0.50), # Who uses half-dollars anymore?
          ('quarter',0.25),
          ('dime',0.10),
