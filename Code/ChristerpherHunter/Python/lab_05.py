@@ -6,7 +6,7 @@ from colorama import Fore as F
 
 R = F.RESET
 
-class RPS():
+class RPS:
 
     def __init__(self) -> None:
         self.cpu_rock = ""
