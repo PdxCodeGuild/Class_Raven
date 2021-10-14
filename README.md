@@ -20,3 +20,4 @@ Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git add <filename>` to add a specific file or `git add .` to add everything in the current dicrectory
 - `git commit -m "your commit message"` to commit your work
 - `git push` to push your changes up to the remote repository on GitHub
+- when lab is finished & ready to be reviewed, commit with a "completed" message
