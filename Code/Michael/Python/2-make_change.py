@@ -4,7 +4,7 @@ coins = [('dollar',1),
          ('dime',0.10),
          ('nickel',.05),
          ('penny', .01)
-         ]
+]
 
 final_string = "\n"
 plural = ""
