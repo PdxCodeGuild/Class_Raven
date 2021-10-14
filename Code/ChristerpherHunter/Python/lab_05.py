@@ -21,19 +21,9 @@ class RPS:
         
         usr_pick = ""
         # Check if input is valid
-<<<<<<< HEAD
-        while True:
-            if usr_pick.lower() is not "rock" or "paper" or "scissors":
-                
-                continue
-            else:
-                break
-=======
         while usr_pick not in ['rock', 'paper', 'scissors']:
             usr_pick = input("\nPlease choose\nrock\npaper\nscissors\n\nChoice: ")    
             print(f"{F.RED}error, invalid input. Choose again\n{R}")
-                
->>>>>>> refs/remotes/origin/Christerpher_Hunter
                     
         match usr_pick:
             case "rock":
