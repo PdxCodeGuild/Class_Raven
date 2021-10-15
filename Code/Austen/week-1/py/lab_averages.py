@@ -10,7 +10,7 @@ def v1():
 
 
 def v2():
-    print('\n Average Calculator\n (enter done to see average or quit to exit.)')
+    print('\n (enter done to see average or quit to exit.)')
     stop = ['quit', 'done']
     numbers = []
     total = 0
@@ -39,7 +39,7 @@ def v2():
 
 
 def version_picker():
-    print('Welcome to Lab 03.')
+    print('Let\'s average some numbers.')
     versions = ['v1', 'v2']
     response = input('Would you like to run v1 or v2?\n')
     if response == 'v1':
