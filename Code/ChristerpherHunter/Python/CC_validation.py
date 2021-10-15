@@ -12,25 +12,25 @@ class Validation:
 
         # Security in mind for initialization variables
         self.valid_cc = bool()
-        self.__check_digit = int()  # Private variable for the check digit
-        self.__digit_check = int()  # The final digit to check against first
-        self.__credit_card_nums_str = credit_card_nums  # The CC numbers
-        self.__credit_card_nums = list()
+        self.__init_check_digit = int()  # Private variable for the check digit
+        self.__pulled_check_digit = int()  # The final digit to check against first
+        self.__credit_card_nums_str = credit_card_nums  # The CC numbers as a str
+        self.__credit_card_nums = list()  # The credit card nums as an int list
 
     # Take in the CC numbers as a string and return list of ints
     def str_to_int(self) -> list:
 
         # Remove all spaces in entry
-        tempt = self.__credit_card_nums_str.replace(" ", "")
+        temp = self.__credit_card_nums_str.replace(" ", "")
 
         # Make list of ints
-        for i in tempt:
+        for i in temp:
             self.__credit_card_nums.append(int(i))
 
     # Conserve the check digit
     def check_digit(self) -> int:
 
-        self.__digit_check = self.__credit_card_nums[-1]
+        self.__pulled_check_digit = self.__credit_card_nums[-1]
 
         # Remove the last index of the list
         self.__credit_card_nums.pop(-1)
@@ -68,18 +68,18 @@ class Validation:
     def summer(self) -> int:
 
         for element in self.__credit_card_nums:
-            self.__check_digit += element
+            self.__init_check_digit += element
 
     # Extract the second digit of the integer
     def extraction(self) -> int:
 
         # Modulate
-        self.__check_digit = self.__check_digit % 10
+        self.__init_check_digit = self.__init_check_digit % 10
 
     # Checker
     def checker(self) -> bool:
 
-        if self.__digit_check == self.__check_digit:
+        if self.__pulled_check_digit == self.__init_check_digit:
             self.valid_cc = True
         else:
             self.valid_cc = False
