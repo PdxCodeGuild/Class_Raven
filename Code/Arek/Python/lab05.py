@@ -36,29 +36,36 @@ The procedure for comparing the two strings is as follow:
 #Palindrome
 """def check_palindrome(random_string):
     normal = list(random_string)
-    check_list = list(random_string)
-    check_list.reverse()
-    
-    if check_list == normal:
-            print(f"{random_string} is a palindrome.")
+    check = list(random_string)
+    check.reverse()
+
+    if check == normal:
+        return True
     else:
-            print(f"{random_string} is not a palindrome.")
+        return False
 
 random_string = input("Please enter a word: ")
-check_palindrome(random_string)"""
+if check_palindrome(random_string):
+    print("The word is a palindrome")
+else:
+    print("The Word is not a palindrome")"""
 
 #Anagram
 
-def check_anagram():
-    string1 = list(input("Please enter a word: ").lower().replace(" ", ""))
-    string2 = list(input("Please enter a second word: ").lower().replace(" ", ""))
-    
+def check_anagram(string1, string2):
     string1.sort()
     string2.sort()
 
     if string1 == string2:
-        print("The words are anagrams")
+        return True
     else:
-        print("The words are NOT anagrams")
+        return False
+        
 
-check_anagram()
+string1 = list(input("Please enter a word: ").lower().replace(" ", ""))
+string2 = list(input("Please enter a second word: ").lower().replace(" ", ""))
+
+if check_anagram(string1, string2):
+    print("The words are anagrams")
+else:
+    print("The words are not anagrams")
