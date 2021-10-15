@@ -15,19 +15,19 @@ total_pennies = dollar_amount/(coins[4][1]) # obtaining total number of pennies 
 #print(total_pennies)
 total_half_dollar = total_pennies//(coins[0][1])
 
-total_left_after_halfdollar = total_pennies - ((coins[0][1]) * total_half_dollar)
+remainder = total_pennies - ((coins[0][1]) * total_half_dollar)
 
-total_quarters = total_left_after_halfdollar//(coins[1][1])  ## using floor division to obtain total times 25 goes into total pennies as a whole number
+total_quarters = remainder//(coins[1][1])  ## using floor division to obtain total times 25 goes into total pennies as a whole number
 
-total_left_after_quarters = total_left_after_halfdollar - ((coins[1][1]) * total_quarters) ## taking that whole number * value of quarter and subtracting from total pennies to have remaining total pennies
+remainder = remainder - ((coins[1][1]) * total_quarters) ## taking that whole number * value of quarter and subtracting from total pennies to have remaining total pennies
 
-total_dimes = total_left_after_quarters//(coins[2][1])  ## repeating the above two steps for dimes > nickels > and remaining is your pennies left over 
+total_dimes = remainder//(coins[2][1])  ## repeating the above two steps for dimes > nickels > and remaining is your pennies left over 
 
-total_left_after_dimes = total_left_after_quarters - ((coins[2][1]) * total_dimes)
+remainder = remainder - ((coins[2][1]) * total_dimes)
 
-total_nickels = total_left_after_dimes//(coins[3][1])
+total_nickels = remainder//(coins[3][1])
 
-total_pennies_output = total_left_after_dimes - ((coins[3][1]) * total_nickels)
+total_pennies_output = remainder - ((coins[3][1]) * total_nickels)
 
 
 if total_half_dollar >=1:
