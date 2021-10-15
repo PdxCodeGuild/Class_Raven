@@ -1,15 +1,15 @@
 print("Credit Card Validation")
 def card_check(card):
-    int(card)
+    #int(card)
     card_list = []
-    card_l = list(card)
-    for i in card_l:
+    card_L = list(card)
+    card_list = [int(i) for i in card_L] # learned method in search for "list of str to int"
+    '''for i in card_L:
         int(i)
-        card_list.append(i)
-
+        card_list.append(i)'''
     print(card_list)
     check_digit = card_list.pop()
-    print(f"check digit is{check_digit}")
+    print(check_digit)
     print(card_list)
     card_list.reverse()
     print(card_list)
@@ -25,13 +25,22 @@ def card_check(card):
             double_list2.append(i)
         else:
             double_list2.append(i)
-    Sum = sum(double_list2)
+    print(double_list2)
+    Sum = str(sum(double_list2)) # search for how to use sum function with lists.
+    print(Sum)
     Sum_list = list(Sum)
-    if Sum_list[1] == check_digit:
+    print(Sum_list)
+    if int(Sum_list[1]) == check_digit:
+        print(True)
         return True
     else:
-         return False
+        print(False)
+        return False
 
 test= "9875467834"
 int(test)
 card_check(test)
+
+test2= "9875467831"
+int(test2)
+card_check(test2)
