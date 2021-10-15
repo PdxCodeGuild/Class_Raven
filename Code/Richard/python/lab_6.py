@@ -37,10 +37,8 @@ def card_check(card):
         print(False)
         return False
 
-test= "9875467834"
-int(test)
-card_check(test)
-
-test2= "9875467831"
-int(test2)
-card_check(test2)
+test= input("input credit card number to be validated\n>")
+if card_check(test) == True:
+    print("True")
+elif card_check(test) == False:
+    print("False")
