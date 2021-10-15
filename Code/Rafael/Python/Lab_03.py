@@ -32,7 +32,7 @@ def average_list(list):
         num = 0
         for integers in list:
 
-            num += integers
+            num += integers # num = num + integers is the same as; num += integers"
 
         return num
 
@@ -55,4 +55,4 @@ while True:
         numbers.append(user_input) 
 
 
-#this will print only the 2 digits after decimal..  round(round(average, 2)
+#this will print only the 2 digits after decimal..  round(round(average, 3)
