@@ -8,7 +8,7 @@ coins = [('One-Hundred dollar bill',100),
          ('quarter',0.25),
          ('dime',0.10),
          ('nickel',.05),
-         ('penny', .01)
+         ('penny',.01)
 ]
 
 final_string = "\n"
@@ -17,7 +17,7 @@ number_invalid = True
 
 while number_invalid == True: # Try until valid number.
     try: # Try to get valid input from user. (A float)
-        total_ammount = float(input(f"""Please Enter how much money you have in dollars and cents (1.36): 
+        total_ammount = float(input(f"""Please Enter how much money you have in dollars and cents (1.36):                                
 """)) # Get input from user.
     except KeyboardInterrupt: # Quit program on Ctrl+C
         print("Escaping program via KeyboardInterrupt")
