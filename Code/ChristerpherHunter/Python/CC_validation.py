@@ -45,7 +45,7 @@ class Validation:
 
         temp = []
         for element in range(0, len(self.__credit_card_nums)):
-            if self.__credit_card_nums[element] % 2 == 0:
+            if element % 2 != 0:
                 temp.append(self.__credit_card_nums[element])
             else:
                 temp.append(self.__credit_card_nums[element] * 2)
@@ -85,6 +85,10 @@ class Validation:
             self.valid_cc = False
 
         return self.valid_cc
+
+    def __str__(self) -> str:
+
+        return str(self.valid_cc)
 
 
 def main() -> None:
