@@ -4,30 +4,33 @@
 def peaks(data: list) -> list:
 
     lst = list()
-    for i, val in enumerate(data):
-        if i == 6:
-            lst.append(val)
-        elif i == 14:
-            lst.append(val)
+    for i in range(len(data) - 1):
+        if (data[i - 1] < data[i] and data[i + 1] < data[i]):
+            lst.append(i)
+        
     return lst
 
 
 def valleys(data: list) -> list:
 
     lst = list()
-    for i, val in enumerate(data):
-        if i == 9:
-            lst.append(val)
-        elif i == 17:
-            lst.append(val)
+    for i in range(len(data) - 1):
+        if (data[i - 1] > data[i] and data[i + 1] > data[i]):
+            lst.append(i)
+
     return lst
 
 
 def peaks_and_valleys(data: list) -> list:
 
-    for i, val in enumerate(data):
-        print("x" * i)
-        print("x" * val)
+    lst = list()
+    for i in range(len(data) - 1):
+        if (data[i - 1] < data[i] and data[i + 1] < data[i]):
+            lst.append(i)
+        if (data[i - 1] > data[i] and data[i + 1] > data[i]):
+            lst.append(i)
+    lst.sort()
+    return lst
 
 
 def main() -> None:
@@ -37,9 +40,15 @@ def main() -> None:
     val = peaks(data)
     val2 = valleys(data)
 
-    peaks_and_valleys(data)
+    val3 = peaks_and_valleys(data)
 
-    print(val, val2)
+    print(f"Peaks: {val}\nValleys: {val2}\nPeaks and Valleys: {val3}")
+
+    for i, val in enumerate(data):
+        if val == 9:
+            print(" " * 14 + "x" + " " * 6 + "x")
+            
+
 
 
 if __name__ == "__main__":
