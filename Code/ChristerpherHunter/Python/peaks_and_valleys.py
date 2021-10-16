@@ -59,9 +59,7 @@ def main() -> None:
 
     data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 
-    # val = peaks(data)
-    # val2 = valleys(data)
-
+    # There must be a more efficient method...
     peaks_and_valleys(data)
     print("\n\n")
     peaks_and_valleys_water(data)
