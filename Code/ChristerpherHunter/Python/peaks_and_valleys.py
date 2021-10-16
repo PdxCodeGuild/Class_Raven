@@ -23,7 +23,7 @@ def valleys(data: list) -> list:
     return lst
 
 
-def peaks_and_valleys(data: list) -> list:
+def peaks_and_valleys_water(data: list) -> list:
 
     # for i, val in enumerate(data):
 
@@ -38,6 +38,22 @@ def peaks_and_valleys(data: list) -> list:
     print(" " * 3 + " x " * 22)
     print("" + " x " * 23)
 
+def peaks_and_valleys(data: list) -> list:
+
+    # for i, val in enumerate(data):
+
+    print(" " * 48 + " x " + "   " * 5 + " x ")  # 9 High
+    print(" " * 45 + " x " * 3 + "   " * 3 + " x " * 2)  # 8 High
+    print(" " * 21 + " x " + "   " * 6 + " x " * 5 + "   " + " x " * 3)  # 7 High
+    print(" " * 18 + " x " * 3 + "   " * 3 + " x " * 11)  # High 6
+    print(" " * 15 + " x " * 5 + "   " + " x " * 12)  # High 5
+    print(" " * 12 + " x " * 19)  # High 4
+    print(" " * 9 + " x " * 20)
+    print(" " * 6 + " x " * 21)  # High 2
+    print(" " * 3 + " x " * 22)
+    print("" + " x " * 23)
+
+
 
 def main() -> None:
 
@@ -47,6 +63,8 @@ def main() -> None:
     # val2 = valleys(data)
 
     peaks_and_valleys(data)
+    print("\n\n")
+    peaks_and_valleys_water(data)
 
     # print(val, val2)
 
