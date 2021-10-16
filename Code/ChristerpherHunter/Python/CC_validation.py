@@ -17,6 +17,32 @@ class Validation:
         self.__credit_card_nums_str = credit_card_nums  # The CC numbers str
         self.__credit_card_nums = list()  # The credit card nums as an int list
 
+        # Take in cc numbers
+        real_cc = Validation(credit_card_nums)
+        real_cc.str_to_int()
+
+        # Take the last digit
+        real_cc.check_digit()
+
+        # Reverse the digits
+        real_cc.rev_digits()
+
+        # Double every other element
+        real_cc.double_the_odds()
+
+        # Subtract nines from numbers over nine
+        real_cc.take_nines()
+
+        # Sum all values
+        real_cc.summer()
+
+        # Take the ones digit
+        real_cc.extraction()
+
+        # Check for match
+        print(f"\nThe credit card enter is valid:\
+    {F.YELLOW}{real_cc.checker()}{R}")
+
     # Take in the CC numbers as a string and return list of ints
     def str_to_int(self) -> list:
 

@@ -7,13 +7,12 @@ from colorama import Fore as F
 
 R = F.RESET
 
-stop = 5_000
+stop = 1
 go = 0
 correct_count = 0
 
 while go < stop:
 
-    
     cc_nums = [4, 5, 5, 6, 7, 3, 7, 5, 8, 6, 8, 9, 9, 8, 5, 5]
     random.seed(random.randint(0, 10_000_000_000))
     random.shuffle(cc_nums)
@@ -23,11 +22,9 @@ while go < stop:
     for val in cc_nums:
         class_feeder += str(val)
 
-    
     # Take in cc numbers
-    
     real_cc = Validation(class_feeder)
-    real_cc.str_to_int()
+    """ real_cc.str_to_int()
 
     # Take the last digit
     real_cc.check_digit()
@@ -51,13 +48,8 @@ while go < stop:
     if real_cc.checker():
         # print(f"{F.GREEN}{real_cc.checker()}{R} {go}")
         correct_count += 1
-    
-    go += 1
+
+    go += 1 """
 
 
 print(f"Correct: {F.GREEN}{correct_count / stop}%{R} of {F.CYAN}{stop}{R}")
-
-        
-
-
-   
