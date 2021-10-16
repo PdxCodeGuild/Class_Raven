@@ -16,6 +16,11 @@ def thurs():
     return result
 
 
+def fri():
+  from friday_lab import friday
+  result = friday()
+  return result
+
 def week_1():
     options = [
         {'tues': 'tuesday'},
@@ -33,14 +38,18 @@ def week_1():
         'Please enter the shorthand of the day you\'d like to access\n')
     while selection != 'q':
         if selection == 'tues':
-            result = tues()
+            tues()
+            result = 'dope greeting and/or stick figure'
         elif selection == 'wed':
-            result = wed()
+            wed()
+            result = 'dope coins and/or doper stick figure (ROUNDBOII)'
         elif selection == 'thurs':
-            result = thurs()
+            thurs()
+            result = 'too many dope things, well 4... averages, card validation, palidromes, and anagrams'
         elif selection == 'fri':
-            result = ''
-        print(result)
+            fri()
+            result = 'the dopest chart'
+        # print(result)
         result = f'day: {selection} output: {result}'
         results.append({counter: result})
         counter += 1
