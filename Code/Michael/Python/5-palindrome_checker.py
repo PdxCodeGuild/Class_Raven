@@ -2,12 +2,12 @@ def check_palindrome(list_of_strings)->list:
     compiled_word = ""
     compiled_list = []
     for word in list_of_strings:
-        compiled_word = ''.join(reversed(word))
-        if compiled_word == word:
+        compiled_word = ''.join(reversed(word)) # Reverses the word then rejoins it to string.
+        if compiled_word == word: # If words match, they're palindrome.
             is_palindrome = True
         else:
             is_palindrome = False
-        compiled_list.append(tuple((word,is_palindrome)))
+        compiled_list.append(tuple((word,is_palindrome))) # Create a new list to return that contains the word and if it is paldindome.
     return compiled_list
 
 if __name__ == '__main__':
