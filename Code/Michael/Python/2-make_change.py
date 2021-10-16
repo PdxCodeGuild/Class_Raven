@@ -37,4 +37,4 @@ for coin in coins: # Check each coin type
         final_string = final_string + str(int(total_ammount // coin[1])) + " " + str(coin[0]) + plural + " " # Create a string for output.
         total_ammount = total_ammount - coin[1] * (total_ammount // coin[1]) # Reduce those coins before doing next coin type.
     
-print(final_string) # Print string.
+print(final_string)
