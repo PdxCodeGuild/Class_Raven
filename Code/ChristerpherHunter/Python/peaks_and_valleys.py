@@ -27,11 +27,11 @@ def peaks_and_valleys(data: list) -> list:
 
     # for i, val in enumerate(data):
 
-    print(" " * 17 + "x" + " " * 5 + "x")  # 9 High
-    print(" " * 16 + "x" * 3 + " " * 3 + "x" * 2)  # 8 High
-    print(" " * 8 + "x" + " " * 6 + "x" * 5 + " " + "x" * 3)  # 7 High
-    print(" " * 7 + "x" * 3 + " " * 3 + "x" * 11)  # High 6
-    print(" " * 6 + "x" * 5 + " " + "x" * 12)  # High 5
+    print(" " * 17 + "x" + "o" * 5 + "x")  # 9 High
+    print(" " * 16 + "x" * 3 + "o" * 3 + "x" * 2)  # 8 High
+    print(" " * 8 + "x" + "o" * 6 + "x" * 5 + "o" + "x" * 3)  # 7 High
+    print(" " * 7 + "x" * 3 + "o" * 3 + "x" * 11)  # High 6
+    print(" " * 6 + "x" * 5 + "o" + "x" * 12)  # High 5
     print(" " * 5 + "x" * 19)  # High 4
     print(" " * 4 + "x" * 20)
     print(" " * 3 + "x" * 21)  # High 2
