@@ -29,7 +29,7 @@ def peaks_and_valleys(data: list) -> list:
 
     print(" " * 14 + "x" + " " * 5 + "x")  # 9 High
     print(" " * 13 + "x" * 3 + " " * 3 + "x" * 2)  # 8 High
-    print(" " * 5 + "x" + " " * 6 + "x" * 5 + " " + "x" * 3)  # 7 High
+    print(" " * 5 + "x" + " " * 6 + "x" * 5 + " ")  # 7 High
     print(" " * 5 + "x" * 3)  # High 6
 
 
