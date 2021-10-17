@@ -29,7 +29,9 @@ class Dad_Joke:
         self.search_data = get(f"{self.url}/search?term={search_term}",
                                headers=self.header).json()
 
-        search_results = self.search_data['results'][randint(1, "total jokes")]['joke']
+        # Grab the jokes from the list of dictionaries
+        search_results = self.search_data['results']\
+            [randint(1, self.search_data["total_jokes"] - 1)]['joke']
 
         return search_results
 
@@ -41,7 +43,7 @@ def main() -> None:
 
     data = dad_joke.get_joke()
 
-    search_data = dad_joke.search_joke("bee")
+    search_data = dad_joke.search_joke("hipster")
 
     print(f"\n{data.get('joke')}\n")
 
