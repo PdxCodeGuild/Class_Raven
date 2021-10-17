@@ -2,7 +2,11 @@
 # Lab 08: Pick6
 
 
-from random import randint, seed
+from random import randint
+from time import time
+from colorama import Fore as F
+
+R = F.RESET
 
 
 class Pick6:
@@ -15,15 +19,15 @@ class Pick6:
         self.expenses = float()
         self.winning_ticket = winning_ticket
         self.user_ticket = list()
-        self.__matches = int()
+        self.matches = int()
 
     def pick6(self) -> None:
         """Generate 6 random numbers"""
 
         # Generate the winning & user ticket of 6 numbers
+        self.user_ticket = list()
         for _ in range(6):
-            self.winning_ticket.append(randint(1, 99))
-            seed(_)
+
             self.user_ticket.append(randint(1, 99))
 
     def purchase(self) -> None:
@@ -41,13 +45,13 @@ class Pick6:
         # Find the number of matches
         for i in range(6):
             if self.winning_ticket[i] == self.user_ticket[i]:
-                self.__matches += 1
+                self.matches += 1
 
     def add_winnings(self) -> None:
         """Add the winning to the running balance"""
 
         # Calculate the amount of winnings to award and track winnings
-        match self.__matches:
+        match self.matches:
             case 1:
                 self.balance += 4
                 self.earnings += 4
@@ -66,13 +70,17 @@ class Pick6:
             case 6:
                 self.balance += 25_000_000
                 self.earnings += 25_000_000
+            case _:
+                self.balance += 0
+                self.earnings += 0
 
-    def ROI(self) -> float:
+    def ROI(self) -> list:
         """Calculate ROI, earnings, and expenses"""
 
-        roi = (self.earnings - self.expenses) / self.expenses
+        self.balance -= self.expenses
+        roi = ((self.earnings - self.expenses) / self.expenses) * 100
 
-        return roi, self.earnings, self.expenses
+        return roi, self.earnings, self.expenses, self.balance
 
 
 def main() -> None:
@@ -81,6 +89,25 @@ def main() -> None:
     winning_ticket = list()
     for _ in range(6):
         winning_ticket.append(randint(1, 99))
+    print(f"Winning Numbers: {winning_ticket}")
+
+    game = Pick6(winning_ticket)
+    begin_time = time()
+    for _ in range(100_000):
+        game.pick6()
+        game.purchase()
+        game.matched()
+        game.add_winnings()
+
+    end_time = time()
+
+    print(f"\n\nROI: {F.YELLOW}{game.ROI()[0]:.2f}{R}%\n\
+Earnings: ${F.GREEN}{game.ROI()[1]:,.2f}{R}\n\
+Expenses: ${F.GREEN}{game.ROI()[2]:,.2f}{R}\n\
+Balance: ${F.GREEN}{game.ROI()[3]:,.2f}{R}\n")
+
+    print(f"Run time: {F.RED}{end_time - begin_time:.6f}{R} secs")
+    print(f"Number of matches: {F.CYAN}{game.matches:,}{R}")
 
 
 if __name__ == "__main__":
