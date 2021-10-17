@@ -7,7 +7,7 @@ from colorama import Fore as F
 
 R = F.RESET
 
-stop = 1
+stop = 1_000
 go = 0
 correct_count = 0
 
@@ -24,7 +24,7 @@ while go < stop:
 
     # Take in cc numbers
     real_cc = Validation(class_feeder)
-    """ real_cc.str_to_int()
+    real_cc.str_to_int()
 
     # Take the last digit
     real_cc.check_digit()
@@ -49,7 +49,7 @@ while go < stop:
         # print(f"{F.GREEN}{real_cc.checker()}{R} {go}")
         correct_count += 1
 
-    go += 1 """
+    go += 1
 
 
 print(f"Correct: {F.GREEN}{correct_count / stop}%{R} of {F.CYAN}{stop}{R}")
