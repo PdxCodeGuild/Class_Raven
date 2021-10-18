@@ -59,12 +59,12 @@ valley_list = []
 peaksAndValleys = []
 elements = len(data)
 
-def peaks(data):
+def peaks(data): # the comments for this function apply to the valleys function as well
     x = 0
     while x != elements - 1:
         for i in data:
-            x += 1
-            if x == elements - 1:
+            x += 1 # I incremented this in front of the other code because I was getting weird errors with it at the end, the first and last index dont matter in this example
+            if x == elements - 1: # Had to add this in here or else I kept getting the 'index out of range error'
                 break
             elif data[x-1] < data[x] and data[x+1] < data[x]:
                 peak_list.append(x) #at first i was doing append(data[x]) but that was causing the wrong indexes to come in. I simply just had to append[x] as that was already the correcct index
@@ -80,13 +80,12 @@ def valleys(data):
             if x == elements - 1:
                 break
             elif data[x-1] > data[x] and data[x+1] > data[x]:
-                
                 valley_list.append(x) 
 
     return valley_list
 
 def peaks_and_valleys(data):
-    peaks(data) and valleys(data)
+    peaks(data) and valleys(data) #calling these functions So i can use the lists that they return
     for i in range(elements):
         if i in peak_list or i in valley_list: # this will go through each of the lists from the first 2 functions, and since we grabbed the indices, It will append them in order of appearance
             peaksAndValleys.append(i)
