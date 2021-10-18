@@ -43,7 +43,7 @@ def main() -> None:
 
     data = dad_joke.get_joke()
 
-    search_data = dad_joke.search_joke("hipster")
+    search_data = dad_joke.search_joke("dad")
 
     print(f"\n{data.get('joke')}\n")
 
