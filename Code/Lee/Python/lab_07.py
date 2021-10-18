@@ -15,51 +15,133 @@ if the evaluated index is higher than both comparison values, it's a peak.
 valleys(data) - Returns the indices of 'valleys'. A valley is a number with a higher number on both the left and the right.
 
 peaks_and_valleys(data) - uses the above two functions to compile a single list of the peaks and valleys in order of appearance in the original data.
+# print('[' + ', '.join(data) + ']') # add quotes to data list
+# data = [i.replace('""', '') for i in data] # strips double quotes in data
+
 """
-def peaks(data):
-    print(f"Evaluating this data set for peaks:\n {data}")
-    working_data = data
-    working_data
-    peaks = []
-    for i in range(data):
-        if data[i] > data[i+1] and data[i] > data[i-1]:
-            peaks.extend('P')
-            print(peaks)
-        else:
-            peaks.extend(' ')
-            print(peaks)
-    print(data)
-    print(peaks)
-    return
+def peaks(data, peaks_data):
+  """Returns the indices of peaks.
+  A peak has a lower number on both the left and the right."""
 
-def valleys(data):
-    print(f"Evaluating this data set for valleys:\n {data}")
-    return
+  # Iterate over data set. peaks_data evaluates and extends as "P" or "0".  
+  for i in range(len(data)):
+    if data[i] > max(data[i - 1], data[(i + 1) % len(data)]):
+        peaks_data.extend('P')
+    else:
+        peaks_data.extend("-")
 
-data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+  # Clean data on extremes
+  peaks_data[0] = "-"
+  peaks_data[-1] = "-"
+
+  return peaks_data
+
+
+
+def valleys(data, valleys_data):
+  """Returns the indices of 'valleys'. 
+  A valley is a number with a higher number on both the left and the right."""
+  
+  for i in range(len(data)):
+      if data[i] < min(data[i - 1], data[(i + 1) % len(data)]):
+          valleys_data.extend('V')
+          # print(valleys)
+      else:
+          valleys_data.extend("-")
+          # print(valleys)
+  valleys_data[0]="-"
+  valleys_data[-1]="-"
+  return valleys_data
+
+
+
+def comparison_data_set(data):
+  """Reformats data to be comparable to peaks and valleys output sets"""
+  display_data_set = []
+  for i in range(len(data)):
+    number = data[i]
+    display_data_set.extend(str(number))
+  print(display_data_set)
+  return 
+
+
+
+def peaks_and_valleys(data, pv_final):
+  peaks(data, peaks_data)
+  valleys(data, valleys_data)
+  """Returns both peaks and valleys as a single list"""
+
+  # Make new list to merge valleys and peaks
+  p_and_v = []
+  for (p, v) in zip(peaks_data, valleys_data):
+    p_and_v.append(p + v)
+
+  # Clean p_and_v list to remove spaces
+  p_and_v_clean = []
+  p_and_v_clean = [x.strip('-') for x in p_and_v]
+
+  # Add back charachters so the pv data is comparable to data set
+  for i in range(len(p_and_v_clean)):
+    pv = str(p_and_v_clean[i])
+    if p_and_v_clean[i] == '':
+      pv_final.extend('-')
+    else:
+      pv_final.extend(pv)
+  return pv_final
+
+
+
+def graph_simple(data):
+  """Returns a graph of the dataset in vanilla python"""
+  # data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+  y_data = [8, 7, 6, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 1, 0, 1, 2, 3, 2, 1, 0]
+  for num in zip(data,y_data):
+    print('x' * num)
+    spacer= (9-num)
+    print('' * spacer)
+  return
+
+
+
+####################### INTERFACE ##############################################################
 complete = False
 while not complete:
+
   # Select Option 1-Peaks, 2-Valleys, 3 - Peaks and Valleys, 4 - Exit, 5+ Try Again
   start = int(input(f'\nPlease select from the following options:\n 1. Check test data for peaks \n 2. Check test data for valleys\n 3. Compile a single list of peaks and valleys.\n 4. Exit Program \n\n Enter the number of your choice: \n'))
+  data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+  display_data_set=[]
+  peaks_data =  []
+  valleys_data = []
+  pv_final = []
 
   # Allow user to escape
   if start == 4:
     print(f"\nClosing application.\n")
     complete = True
     break
-
   if start > 4:
     print(f'\n Try again:\n')
     continue
   
+
+  ################### DIRECTORY ################################################################
   # Direct user to appropriate function: Select Option 1-Peaks, 2-Valleys, 3 - Peaks and Valleys
   if start == 1:
-    peaks(data)
+    peaks(data, peaks_data)
+    print(f"Peaks noted as 'P':\n{peaks_data}")
+    comparison_data_set(data)
 
   if start == 2:
-    valleys(data)
+    valleys(data, valleys_data)
+    print(f"Valleys noted as 'V':\n{valleys_data}")
+    comparison_data_set(data)
 
   if start == 3:
-    for num in data:
-        print('x' * num) # needs to shift to vertical
+    peaks_and_valleys(data, pv_final)
+    print(f"Peaks noted as 'P' and Valleys noted as 'V'\n{pv_final}")
+    comparison_data_set(data)
+  
+  if start == 0:
+    graph_simple(data)
     continue
