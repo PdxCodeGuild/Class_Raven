@@ -1,29 +1,59 @@
-def monday():
-  from labs import Oct_18
+from tools.stamp import Stamp
 
 
-def tuesday():
-  from labs import Oct_19
-
-
-def wednesday():
-  from labs import Oct_20
-
-
-def thursday():
-  from labs import Oct_21
-
-
-def friday():
-  from labs import Oct_22
-
-
+# * contains uis to access each lab completed throughout the week
 def week_2():
-  monday()
-  tuesday()
-  wednesday()
-  thursday()
-  friday()
+    ''
+# * allows the user to continuously access each monday lab
+    def monday():
+        from labs.Oct_18 import lab_pick_6
+        results = []
+        options = ['pick_6', 'done']
+        print(options)
+        lab = input('Which lab would you like to access?\n').lower()
+        while lab != 'done':
+            if lab == 'pick_6':
+                result = f'pick_6: {lab_pick_6()}'
+            print(options)
+            lab = input('Which lab would you like to access?\n').lower()
+            results.append(result)
+        return results
+
+# * allows the user to continuously access each available day
+    def ui():
+        results = []
+        options = ['monday', 'done']
+        print(options)
+        day = input('Which day would you like to access?\n').lower()
+        while day != 'done':
+            if day == 'monday':
+                result = f'Monday: {monday()}'
+                results.append(result)
+            print(options)
+            day = input('Which day would you like to access?\n').lower()
+        return results
+    results = ui()
+    return results
 
 
-week_2()
+# * creates a file to record results and runs the week_2 ui
+def run_and_write():
+    file = open('week-2/results-log.txt', 'a')
+    results = week_2()
+# * adds an entry to identify the results
+    stamp = Stamp().results()
+    results.insert(0, stamp)
+    file.write('\n')
+# * prints and writes each result
+    counter = 0
+    for result in results:
+        if counter > 0:
+            result = f'{counter} of {len(results)-1} - {result}\n'
+        else:
+            result = f'{result}\n'
+        print(result)
+        file.write(result)
+        counter += 1
+
+
+run_and_write()
