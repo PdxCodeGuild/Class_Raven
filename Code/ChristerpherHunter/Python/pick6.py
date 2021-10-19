@@ -19,12 +19,12 @@ class Pick6:
         self.expenses = float()
         self.winning_ticket = winning_ticket
         self.user_ticket = list()
-        self.matches = int()
+        self.matches, self.temp_matches = int(), int()
 
     def pick6(self) -> None:
         """Generate 6 random numbers"""
 
-        # Generate the winning & user ticket of 6 numbers
+        # Generate the user ticket of 6 numbers
         self.user_ticket = list()
         for _ in range(6):
 
@@ -43,15 +43,17 @@ class Pick6:
         """Compare the user number to the winning numbers"""
 
         # Find the number of matches
+        self.temp_matches = 0
         for i in range(6):
             if self.winning_ticket[i] == self.user_ticket[i]:
                 self.matches += 1
+                self.temp_matches += 1
 
     def add_winnings(self) -> None:
         """Add the winning to the running balance"""
 
         # Calculate the amount of winnings to award and track winnings
-        match self.matches:
+        match self.temp_matches:
             case 1:
                 self.balance += 4
                 self.earnings += 4
@@ -101,7 +103,7 @@ def main() -> None:
 
     end_time = time()
 
-    print(f"\n\nROI: {F.YELLOW}{game.ROI()[0]:.2f}{R}%\n\
+    print(f"\n\nROI: {F.YELLOW}{game.ROI()[0]:,.2f}{R}%\n\
 Earnings: ${F.GREEN}{game.ROI()[1]:,.2f}{R}\n\
 Expenses: ${F.GREEN}{game.ROI()[2]:,.2f}{R}\n\
 Balance: ${F.GREEN}{game.ROI()[3]:,.2f}{R}\n")
