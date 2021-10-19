@@ -30,5 +30,3 @@ def card_validator(cc_num):
         return 'Invalid Card Number'
 
 print(card_validator('123456987541511'))
-
-   
