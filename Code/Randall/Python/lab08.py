@@ -1,4 +1,4 @@
-#the_picks
+#pick 6
 
 import random
 
