@@ -22,8 +22,8 @@ class ROT13:
         """Encrypt the message based on the ROT number"""
 
         self.encrypted_message = [letter for letter in
-                                  zip(self.message,
-                                      ROT13.letters(letter, self.rotation))]  # Use map() or zip(); Not sure
+                                  map(ROT13.letters(letter, self.rotation),
+                                      self.message)]  # Finish this up
 
     def decrypt(self) -> None:
         """Decrypt the message based on the ROT number"""
