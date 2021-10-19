@@ -23,7 +23,6 @@ def valleys():
     valley_list.append(index)
     valley_list.append(index2)
     (peaks_and_valleys).extend(valley_list)
-    peaks_and_valleys.sort()
     print(valley_list)
     # print(peaks_and_valleys)
 
@@ -36,3 +35,9 @@ def peaks_and_valleys():
     print(peaks_and_valleys)
 
 peaks_and_valleys()
+count = 0
+for element in data:
+    #add one x until we reach index 5 in list
+    if count < data.index(5):
+        print('x')
+        count += 1
