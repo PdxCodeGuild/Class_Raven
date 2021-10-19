@@ -88,9 +88,6 @@ for i in range(100000):
         winnings += 100
     elif match == 4:
         winnings += 50000
-        print(f"matched {match} numbers")
-        print(f"Winning Ticket: {winning_ticket}")
-        print(f"Guess Ticket: {guess_ticket}")
     elif match == 5:
         winnings += 1000000
         print(f"matched {match} numbers")
@@ -104,10 +101,8 @@ for i in range(100000):
     match = 0
     continue
 
-
-
 # The ROI (return on investment) is defined as (earnings - expenses)/expenses. Calculate your ROI, print it out along with your earnings and expenses.
 roi = ((winnings - expenses)/expenses)*100
 
-# After the loop, print the final balance
-print(f"\nTotal Expenses: ${expenses} \n Total Winnings: ${winnings} \n Total Return: ${winnings - expenses}\n ROI (percentage): {roi}%")
+# After the loop, print the final balance, round percentages to two places {a:.2f}
+print(f"\nTotal Expenses: ${expenses} \n Total Winnings: ${winnings} \n Total Return: ${winnings - expenses}\n ROI (percentage): {roi:.2f}%") 
