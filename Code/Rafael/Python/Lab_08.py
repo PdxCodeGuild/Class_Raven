@@ -1,7 +1,6 @@
 # Lab_08 Pick 6
 
 
-
 import random 
 
 lottery_ticket = []
@@ -10,13 +9,10 @@ def pick6(): # pick6() function
     numbers  = random.sample(range(1, 99), 6) #(range(1, 99), 6)
     return numbers
 
-
 winning_ticket = pick6() # pick6() function
 
 dollars = 0
 tickets = 0
-
-
 
 while tickets < 100000:
   
@@ -25,20 +21,19 @@ while tickets < 100000:
     #lottery_ticket = pick6()
     
     for i in range(1):
-        lottery_ticket = random.sample(range(1, 99), 6) #(range(1, 99), 6)
-        
+        lottery_ticket = random.sample(range(1, 99), 6) #(range(1, 99), 6)        
 
-     #   dollars += 25000000
+# 25,000,000
     if winning_ticket[0] and [1] and [2] and [3] and [4] and [5] == lottery_ticket [0] and [1] and [2] and [3] and [4] and [5]: 
         dollars += 25000000
-     #   dollars += 1000000
+# 10,000,000
     if winning_ticket[0] and [1] and [2] and [3] and [5] == lottery_ticket [0] and [1] and [2] and [3] and [5]: 
         dollars += 1000000
     if winning_ticket[1] and [2] and [3] and [4] and [5] == lottery_ticket [1] and [2] and [3] and [4] and [5]: 
         dollars += 1000000
     if winning_ticket[0] and [1] and [2] and [3] and [4] == lottery_ticket [0] and [1] and [2] and [3] and [4]: 
         dollars += 1000000
-   #     dollars += 50000
+# 50,000 dollars
     if winning_ticket[1] and [3] and [4] and [5] == lottery_ticket [1] and [3] and [4] and [5]: 
         dollars += 50000
     if winning_ticket[1] and [2] and [3] and [5] == lottery_ticket [1] and [2] and [3] and [5]: 
@@ -51,7 +46,7 @@ while tickets < 100000:
         dollars += 50000
     if winning_ticket[0] and [1] and [2] and [3] == lottery_ticket [0] and [1] and [2] and [3]: 
         dollars += 50000
-#    100 dollars
+# 100 dollars
     if winning_ticket[2] and [0] and [4] == lottery_ticket[2] and [0] and [4]: 
         dollars += 100
     if winning_ticket[2] and [0] and [3] == lottery_ticket[2] and [0] and [3]: 
@@ -140,11 +135,10 @@ while tickets < 100000:
         dollars += 4
     if winning_ticket[5] == lottery_ticket[5]:
         dollars += 4  
-  # 0 dollars 
+# 0 dollars 
     else: 
         winning_ticket == 0
         dollars += 0
-
 
 winnings = tickets * 2 + dollars
 roi = (winnings - tickets) / tickets
