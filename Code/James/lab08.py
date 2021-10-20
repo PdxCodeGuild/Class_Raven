@@ -1,4 +1,4 @@
-from math import exp
+
 import random
 
 winning_list = []
@@ -26,8 +26,11 @@ print(winning_list)
 
 while loop_times < 100000:
     count = 0
-    expenses -= 2
+    #changed this from -= to += because it was messing with the calculation
+    expenses += 2
+    #this generates a new ticket each time by calling on the get_ticket() function.
     ticket = get_ticket()
+    #for each element in the ticket list im setting a statement to compare the values to see if they're equal to eachother.
     for i in range(len(ticket)):
         if ticket[i] == winning_list[i]:
             count += 1
@@ -45,10 +48,14 @@ while loop_times < 100000:
         earnings += 25000000
 
     loop_times += 1
-roi = (earnings - expenses)/expenses
-
-print(f'Your earned {earnings} and you lost {expenses} your roi is {roi}')
+roi = (earnings - expenses)/expenses * 100
+roi = round(roi)
+print(f'Your earned {earnings} and you lost {expenses} your roi is {roi} %.')
 
 #get rid of redundancy, add comments to cement the ideas in your thinking
+
+# I want a function that adds up all the matched elements in the list.
+#def count(ticket, winning_list):
+
     
             
