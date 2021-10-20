@@ -31,12 +31,15 @@ class ROTN:
         """Encrypt the message based on the ROT number"""
 
         self.encrypted_message = map(ROTN.letters, self.message)
+        self.encrypted_message = [i for i in self.encrypted_message]
 
     def decrypt(self) -> None:
         """Decrypt the message based on the ROT number"""
 
         self.decrypted_message = "".join(map(ROTN.letters,
                                          (self.message, -self.rotation_num)))
+
+        self.decrypted_message = [i for i in self.decrypted_message]
 
     def letters(letter: str, rotation=13) -> str:
         """Takes in a letter and rotation val and returns rotated value"""
@@ -53,10 +56,9 @@ class ROTN:
 def main() -> None:
 
     message = "hello world"
-    secret = ROTN(message, 13)
+    secret = ROTN(message)
     secret.encrypt()
-    word = [i for i in secret.encrypted_message]
-    print(real_word)
+    print(secret.encrypted_message)
 
 
 if __name__ == "__main__":
