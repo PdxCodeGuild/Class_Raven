@@ -18,18 +18,37 @@ def week_2():
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
         return results
+# * allows the user to continuously access each tuesday lab
+
+    def tuesday():
+        from labs.Oct_19 import lab_blackjack
+        results = []
+        options = ['blackjack', 'done']
+        print(options)
+        lab = input('Which lab would you like to access?\n').lower()
+        while lab != 'done':
+            if lab == 'blackjack':
+                result = f'blackjack: {lab_blackjack()}'
+            print(options)
+            lab = input('Which lab would you like to access?\n').lower()
+            results.append(result)
+        return results
 
 # * allows the user to continuously access each available day
     def ui():
         results = []
-        options = ['monday', 'done']
+        options = ['monday', 'tuesday', 'done']
         print(options)
         day = input('Which day would you like to access?\n').lower()
         while day != 'done':
             if day == 'monday':
                 result = f'Monday: {monday()}'
                 results.append(result)
-            print(options)
+                print(options)
+            if day == 'tuesday':
+                result = f'Tuesday: {tuesday()}'
+                results.append(result)
+                print(options)
             day = input('Which day would you like to access?\n').lower()
         return results
     results = ui()
