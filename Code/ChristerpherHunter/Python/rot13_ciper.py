@@ -15,6 +15,7 @@ class ROTN:
     def __init__(self, message: str, rotation_num=13) -> None:
 
         self.message = message.lower().replace(" ", "")
+        self.space_num = message.count(" ")
         self.rotation_num = rotation_num
         self.encrypted_message = str()
         self.decrypted_message = str()
@@ -43,7 +44,7 @@ class ROTN:
         letter_val = [num for num, letters in enumerate(ALPHABET, start=1)
                       if letter == letters].pop()
         letter_val += rotation
-        letter_val = [letters for num, letters in enumerate(ALPHABET,
+        letter_val = [letters for num, letters in enumerate(ALPHABET * 2,
                       start=1) if num == letter_val]
 
         return letter_val
@@ -54,8 +55,8 @@ def main() -> None:
     message = "hello world"
     secret = ROTN(message, 13)
     secret.encrypt()
-    for i in secret.encrypted_message:
-        print(i)
+    word = [i for i in secret.encrypted_message]
+    print(real_word)
 
 
 if __name__ == "__main__":
