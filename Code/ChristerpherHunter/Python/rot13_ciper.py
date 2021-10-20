@@ -11,6 +11,9 @@ encryption is the same as decryption.
 
 class ROTN:
     """Encode a string with a Rotation Cipher"""
+    ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+                        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+                        'w', 'x', 'y', 'z']
 
     def __init__(self, message: str, rotation_num=13) -> None:
 
@@ -19,10 +22,6 @@ class ROTN:
         self.rotation_num = rotation_num
         self.encrypted_message = str()
         self.decrypted_message = str()
-        global ALPHABET
-        ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-                    'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-                    'w', 'x', 'y', 'z']
 
     def __str__(self) -> str:
         return self.encrypted_message
@@ -41,10 +40,10 @@ class ROTN:
     def letters(letter: str, rotation=13) -> str:
         """Takes in a letter and rotation val and returns rotated value"""
 
-        letter_val = [num for num, letters in enumerate(ALPHABET, start=1)
+        letter_val = [num for num, letters in enumerate(ROTN.ALPHABET, start=1)
                       if letter == letters].pop()
         letter_val += rotation
-        letter_val = [letters for num, letters in enumerate(ALPHABET * 2,
+        letter_val = [letters for num, letters in enumerate(ROTN.ALPHABET * 2,
                       start=1) if num == letter_val]
 
         return letter_val
@@ -55,8 +54,7 @@ def main() -> None:
     message = "hello world"
     secret = ROTN(message, 13)
     secret.encrypt()
-    word = [i for i in secret.encrypted_message]
-    print(real_word)
+    print(secret.encrypted_message)  
 
 
 if __name__ == "__main__":
