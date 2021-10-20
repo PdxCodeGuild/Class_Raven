@@ -26,6 +26,7 @@ def blackjack_advice(total):
     return
 
 def low_or_high(aces_low, aces_high):
+    """Work in progress - this function will consider the aces high and aces low scores and return the ideal option for the user"""
     if aces_low or aces_high == 21:
         print(f"\nYour total is 21 - Blackjack!")
         return
@@ -56,7 +57,6 @@ while not complete:
   if start == 1:
     ace_counter = False
     ace_high_score = 0
-    
 
     score_one = blackjack_score(input("Enter your first card: "))
     if score_one == 1:
