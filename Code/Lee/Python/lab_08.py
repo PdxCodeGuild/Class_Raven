@@ -29,7 +29,7 @@ winnings = 0
 pick6(winning_ticket)
 
 # Loop 100,000 times: 
-for i in range(100000):
+for i in range(1_000_000):
     # Generate a list of 6 random numbers representing the ticket 
     guess_ticket = []
     pick6(guess_ticket)
@@ -59,6 +59,9 @@ for i in range(100000):
         print(f"Winning Ticket: {winning_ticket}")
         print(f"Guess Ticket: {guess_ticket}")
     elif match == 4:
+        print(f"Matched {match} numbers")
+        print(f"Winning Ticket: {winning_ticket}")
+        print(f"Guess Ticket: {guess_ticket}")
         winnings += 50000
     elif match == 3:
         winnings += 100
@@ -75,4 +78,4 @@ for i in range(100000):
 roi = ((winnings - expenses)/expenses)*100
 
 # After the loop, print the final balance, round percentages to two places {a:.2f}
-print(f"\nTotal Expenses: ${expenses} \nTotal Winnings: ${winnings} \nTotal Return:   ${winnings - expenses}\nROI (percentage): {roi:.2f}% \n") 
+print(f"\nTotal Expenses: ${expenses:,} \nTotal Winnings: ${winnings:,} \nTotal Return:   ${winnings - expenses:,}\nROI (percentage): {roi:.2f}% \n") 

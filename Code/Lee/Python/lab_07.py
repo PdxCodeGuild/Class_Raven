@@ -92,25 +92,40 @@ def peaks_and_valleys(data, pv_final):
       pv_final.extend(pv)
   return pv_final
 
-
-
 def graph_simple(data):
-  """Returns a graph of the dataset in vanilla python"""
+  """Returns a graph of the dataset in vanilla python - no water"""
   data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-  # Note - this is really hard. I used numpy and matplotlib to create a chart because I got bogged down :( ...
   print(" "* 14 + "x" + " " * 5 + "x")
   print(" " * 13 + "x"*3 + " "*3 + "x"*2) # “ “ 13, x 3, - 3, x2
   print(" "*6 + "x" + " "*5 + "x"*5 +" " + "x"*3) #6 spaces, 1x, 5 spaces, 5 x, 1space, 3x
+  print(" "*5 + "x"*3 + " "*3 + "x"*10) # 5 spaces, 3 x, 3 zeros,  10 x
+  print(" "*4 + "x"*5 + " "*1 + "x"*11) # 4 spaces. 5 x, 1 zero, 11 x
+  print(" "*3 + "x"*18) # 3 spaces, 18 x
+  print(" "*2 + "x"*19) # 2 spaces, 19 x
+  print(" " + "x"*20) # 1 space, 20 x
+  print("x"*21) # 20x
   return
 
-
+def graph_fancy(data):
+  """Returns a graph of the dataset in vanilla python - with water"""
+  data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+  print(" "* 14 + "x" + "0" * 5 + "x")
+  print(" " * 13 + "x"*3 + "0"*3 + "x"*2) # “ “ 13, x 3, - 3, x2
+  print(" "*6 + "x" + "0"*5 + "x"*5 +"0" + "x"*3) #6 spaces, 1x, 5 spaces, 5 x, 1space, 3x
+  print(" "*5 + "x"*3 + "0"*3 + "x"*10) # 5 spaces, 3 x, 3 zeros,  10 x
+  print(" "*4 + "x"*5 + "0"*1 + "x"*11) # 4 spaces. 5 x, 1 zero, 11 x
+  print(" "*3 + "x"*18) # 3 spaces, 18 x
+  print(" "*2 + "x"*19) # 2 spaces, 19 x
+  print(" " + "x"*20) # 1 space, 20 x
+  print("x"*21) # 20x
+  return
 
 ####################### INTERFACE ##############################################################
 complete = False
 while not complete:
 
   # Select Option 1-Peaks, 2-Valleys, 3 - Peaks and Valleys, 4 - Exit, 5+ Try Again
-  start = int(input(f'\nPlease select from the following options:\n 1. Check test data for peaks \n 2. Check test data for valleys\n 3. Compile a single list of peaks and valleys.\n 4. Exit Program \n\n Enter the number of your choice: \n'))
+  start = int(input(f'\nPlease select from the following options:\n 0. Print graph of data set \n 1. Check test data for peaks \n 2. Check test data for valleys\n 3. Compile a single list of peaks and valleys.\n 4. Exit Program \n\n Enter the number of your choice: \n'))
   data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
   display_data_set=[]
   peaks_data =  []
