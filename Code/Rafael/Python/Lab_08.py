@@ -141,7 +141,8 @@ while tickets < 100000:
     if winning_ticket[5] == lottery_ticket[5]:
         dollars += 4  
   # 0 dollars 
-    if winning_ticket == 0:
+    else: 
+        winning_ticket == 0
         dollars += 0
 
 
