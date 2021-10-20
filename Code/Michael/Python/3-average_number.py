@@ -1,3 +1,9 @@
+'''
+PDX Code Guild Full Stack Bootcamp
+->Lab 03
+  Average Num
+Michael B
+'''
 """Version 1"""
 nums = [5, 0, 8, 3, 4, 1, 6] # Given test list.
 

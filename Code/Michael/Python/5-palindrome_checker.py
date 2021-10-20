@@ -1,3 +1,9 @@
+'''
+PDX Code Guild Full Stack Bootcamp
+->Lab 05
+  Palindrome Checker
+Michael B
+'''
 def check_palindrome(list_of_strings)->list:
     compiled_word = ""
     compiled_list = []

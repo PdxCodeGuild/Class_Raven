@@ -1,3 +1,9 @@
+'''
+PDX Code Guild Full Stack Bootcamp
+->Lab 06
+  Credit Card Validation
+Michael B
+'''
 invalid_cc_number = True
 cc_number_nined = []
 

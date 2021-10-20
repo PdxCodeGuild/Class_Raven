@@ -1,3 +1,9 @@
+'''
+PDX Code Guild Full Stack Bootcamp
+->Lab 02
+  Make Change
+Michael B
+'''
 coins = [('One-Hundred dollar bill',100),
          ('Fifty dollar bill',50),
          ('Twenty dollar bill',20),
