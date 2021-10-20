@@ -1,7 +1,6 @@
 '''
 PDX Code Guild Full Stack Bootcamp
-->Lab 01
-  Hello World
+->Lab 08
+  Pick6
 Michael B
 '''
-print('Hello World!')
