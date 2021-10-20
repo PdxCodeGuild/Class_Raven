@@ -11,18 +11,23 @@ encryption is the same as decryption.
 
 class ROTN:
     """Encode a string with a Rotation Cipher"""
+    ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+                'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+                'w', 'x', 'y', 'z']
 
     def __init__(self, message: str, rotation_num=13) -> None:
 
         self.message = message.lower().replace(" ", "")
-        self.space_num = message.count(" ")
+        self.space_num = message.find(" ")
         self.rotation_num = rotation_num
         self.encrypted_message = str()
         self.decrypted_message = str()
-        global ALPHABET
-        ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-                    'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-                    'w', 'x', 'y', 'z']
+        self.extra_val = str()
+
+        for letter in message:
+            if not letter.isalpha():
+                self.extra_val = letter
+                self.message = self.message.replace(letter, "")
 
     def __str__(self) -> str:
         return self.encrypted_message
@@ -32,22 +37,31 @@ class ROTN:
 
         self.encrypted_message = map(ROTN.letters, self.message)
         self.encrypted_message = [i for i in self.encrypted_message]
+        self.encrypted_message = "".join(["".join(i) for
+                                          i in self.encrypted_message])
+        self.encrypted_message = self.encrypted_message[0:self.space_num] +\
+            " " + self.encrypted_message[self.space_num:] + self.extra_val
 
     def decrypt(self) -> None:
         """Decrypt the message based on the ROT number"""
 
         self.decrypted_message = "".join(map(ROTN.letters,
-                                         (self.message, -self.rotation_num)))
+                                         (self.encrypted_message,
+                                          -self.rotation_num)))
 
-        self.decrypted_message = [i for i in self.decrypted_message]
+        self.decrypted_message = "".join([i for i in self.decrypted_message])
+        self.decrypted_message = "".join(["".join(i) for
+                                          i in self.decrypted_message])
+        self.decrypted_message = self.decrypted_message[0:self.space_num] +\
+            " " + self.decrypted_message[self.space_num:] + self.extra_val
 
     def letters(letter: str, rotation=13) -> str:
         """Takes in a letter and rotation val and returns rotated value"""
 
-        letter_val = [num for num, letters in enumerate(ALPHABET, start=1)
+        letter_val = [num for num, letters in enumerate(ROTN.ALPHABET, start=1)
                       if letter == letters].pop()
         letter_val += rotation
-        letter_val = [letters for num, letters in enumerate(ALPHABET * 2,
+        letter_val = [letters for num, letters in enumerate(ROTN.ALPHABET * 2,
                       start=1) if num == letter_val]
 
         return letter_val
@@ -55,10 +69,12 @@ class ROTN:
 
 def main() -> None:
 
-    message = "hello world"
+    message = "hello world!"
     secret = ROTN(message)
     secret.encrypt()
     print(secret.encrypted_message)
+    # print("\n")
+    print(secret.decrypted_message)
 
 
 if __name__ == "__main__":
