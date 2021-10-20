@@ -1,5 +1,3 @@
-# A Lottery Sim
-
 # ticket_devbox.py
 import random
 
