@@ -16,10 +16,12 @@ draw a stick figure. You can find more documentation here.
 """
 
 from PIL.Image import open
+from PIL.ImageEnhance import Contrast
 
-img = open("lenna.png")  # must be in same folder
-width, height = img.size
-pixels = img.load()
+
+with open("lenna.png") as img:
+    width, height = img.size
+    pixels = img.load()
 
 for i in range(width):
     for j in range(height):
@@ -29,4 +31,7 @@ for i in range(width):
 
         pixels[i, j] = (r, g, b)
 
-img.show()
+
+img = Contrast(img)
+img.enhance(1.0).show("0% more contrast")
+print(img.format, img.size, img.mode)
