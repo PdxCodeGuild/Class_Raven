@@ -1,6 +1,6 @@
 # Lab_09 Blackjack Advice
 
-# dic for card values
+# dict for card values
 card_values = {
 'a': 1,
 '2': 2,
@@ -55,3 +55,4 @@ Greater than or equal to 17, but less than 21, advise to "Stay"
 Exactly 21, advise "Blackjack!"
 Over 21, advise "Already Busted"
 """
+
