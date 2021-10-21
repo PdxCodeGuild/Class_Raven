@@ -41,10 +41,10 @@ while True:
         user_card2n = playing_cards.get(user_card2)
     
     total_card = user_card1n + user_card2n
-    if total_card < 21:
-        playing_cards['a'] = 11
-    else:
+    if total_card <= 21:
         playing_cards['a'] = 1
+    else:
+        playing_cards['a'] = 11
 
     # print(user_card2)
 
@@ -55,14 +55,13 @@ while True:
     if user_card3 in playing_cards:
         user_card3n = playing_cards.get(user_card3)
     
-    total_card = user_card1n + user_card2n + user_card3n
-    if total_card < 21:
-        playing_cards['a'] = 11
-    else:
+    #total_card = user_card1n + user_card2n + user_card3n
+    if total_card <= 21:
         playing_cards['a'] = 1
-    
-
+    else:
+        playing_cards['a'] = 11
     total_card = user_card1n + user_card2n + user_card3n
+    
     
     print(f'Your total amount was {total_card}')
 
