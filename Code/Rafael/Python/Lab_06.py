@@ -1,7 +1,7 @@
 # Lab_06 Credit Card Validation
 # 4556737586899855
 
-user_input = list(input('enter 16 single digitsfrom 0-9 with no spaces: ')) 
+user_input = list(input('enter 16 single digits from 0-9 with no spaces: ')) 
 
 # 1. Convert the input string into a list of ints.
 user_input = list(map(int, user_input))
