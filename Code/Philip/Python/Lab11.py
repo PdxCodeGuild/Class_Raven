@@ -1,6 +1,12 @@
+'''Rot Cipher Lab11
+By Philip Bartoo
+PDX Code Guild'''
+
+#Take user input for a string to encrypt and the rotation for the cypher as an integer
 encrypt = input('Enter string to encrypt: ')
 rotation = int(input('Enter rotation: '))
 
+#Build two dictionaries, one with letter keys and one with number keys
 alphabet1 = {
         'a' : '1', 
         'b' : '2', 
@@ -58,15 +64,17 @@ alphabet2 = {
         '25' : 'y', 
         '26' : 'z'
     }
+#Create a list to hold the results of the for loop
 code = []
+#For loop to go through each character of the original string
 for char in encrypt:
-    w = int((alphabet1[char])) 
-    x = w + rotation
-    if x > 26:
+    w = int((alphabet1[char])) #Converts each character to an integer position
+    x = w + rotation #Adds the rotation to the character position
+    if x > 26: #Account for values which exceed 26 to loop back to beginning of alphabet
         x = rotation - (26 - w)
-    y = str(x)
-    z = (alphabet2[y])
-    code.append(z)
-secret_code =''.join(code)
+    y = str(x) #Convert new number to a string
+    z = (alphabet2[y]) #Use number key to look up new letter
+    code.append(z) #Append letter to code list
+secret_code =''.join(code) #Clean it up by joining the list characters
 print(f'Your secret code is: {secret_code}')
 
