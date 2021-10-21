@@ -44,7 +44,7 @@ if __name__ == '__main__':
                 highest_peak = test_data[item]
             if test_data[item] >= i+1: # Become land.
                 current_string = current_string + "X  "
-            elif test_data[item]>=highest_peak or i>test_data[item]+(highest_peak-test_data[item]-1): # I don't know, I brute forced this into working. Become air.
+            elif test_data[item]>=highest_peak or i>test_data[item]+(highest_peak-test_data[item]-1): # I don't know, I brute forced this into existence. Become air.
                 current_string = current_string + "   "
             else: # Become water.
                 current_string = current_string + "O  "
