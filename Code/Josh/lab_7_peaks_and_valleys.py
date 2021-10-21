@@ -14,7 +14,6 @@ def valleys_func(data):
       valley_array.append(i)
   return(valley_array)
   
-
 # peaks = peaks_func(data_list)
 # valleys = valleys_func(data_list)
 # print(f'peaks {peaks}, valleys {valleys}')
@@ -55,12 +54,16 @@ def print_land_water(data):
           break
         lowest_peak = ''
         try : # find the lowest peak in the peaks array
-          lowest_peak = data[peaks[p]] if data[peaks[p]] <= data[peaks[p+1]] else data[peaks[p+1]]
+          if i >= peaks[p] and i <= peaks[p+1]: #ensure we are using the correct peaks to compare with
+            lowest_peak = data[peaks[p]] if data[peaks[p]] <= data[peaks[p+1]] else data[peaks[p+1]]
+          else: #if not correct p index pass onto the next index in for loop
+            pass
         except IndexError: # if index of peak array out of range use the last element of the data list to compare with
-          lowest_peak = data[peaks[p]] if data[peaks[p]] <= data[-1] else data[-1]
-        if data[i] <= lowest_peak and height <= lowest_peak and height > data[i] :
-          display_array.append('0')
-          skip = True
+          lowest_peak = data[peaks[-1]] if data[peaks[-1]] <= data[-1] else data[-1]
+        if lowest_peak != '': # this is here to ensure lowest_peak was created if not move on to the next iteration of peaks for loop
+          if data[i] <= lowest_peak and height <= lowest_peak and height > data[i] :
+            display_array.append('0')
+            skip = True
       if data[i] >= height:
         display_array.append('X')
       elif not skip:
