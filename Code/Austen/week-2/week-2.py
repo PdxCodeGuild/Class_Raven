@@ -3,8 +3,6 @@ from tools.stamp import Stamp
 
 # * contains uis to access each lab completed throughout the week
 def week_2():
-    ''
-# * allows the user to continuously access each monday lab
     def monday():
         from labs.Oct_18 import lab_pick_6
         results = []
@@ -18,8 +16,6 @@ def week_2():
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
         return results
-# * allows the user to continuously access each tuesday lab
-
     def tuesday():
         from labs.Oct_19 import lab_blackjack
         results = []
@@ -34,10 +30,22 @@ def week_2():
             results.append(result)
         return results
 
-# * allows the user to continuously access each available day
+    def wednesday():
+        from labs.Oct_20 import lab_rot_cipher
+        results = []
+        options = ['cipher', 'done']
+        print(options)
+        lab = input('Which lab would you like to access?\n').lower()
+        while lab != 'done':
+            if lab == 'cipher':
+                result = f'rot cipher: {lab_rot_cipher()}'
+            print(options)
+            lab = input('Which lab would you like to access?\n').lower()
+            results.append(result)
+        return results
     def ui():
         results = []
-        options = ['monday', 'tuesday', 'done']
+        options = ['monday', 'tuesday', 'wednesday', 'done']
         print(options)
         day = input('Which day would you like to access?\n').lower()
         while day != 'done':
@@ -49,21 +57,22 @@ def week_2():
                 result = f'Tuesday: {tuesday()}'
                 results.append(result)
                 print(options)
+            if day == 'wednesday':
+                result = f'Wednesday: {wednesday()}'
+                results.append(result)
+                print(options)
             day = input('Which day would you like to access?\n').lower()
         return results
     results = ui()
     return results
 
 
-# * creates a file to record results and runs the week_2 ui
 def run_and_write():
     file = open('week-2/results-log.txt', 'a')
     results = week_2()
-# * adds an entry to identify the results
     stamp = Stamp().results()
     results.insert(0, stamp)
     file.write('\n')
-# * prints and writes each result
     counter = 0
     for result in results:
         if counter > 0:

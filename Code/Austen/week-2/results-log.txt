@@ -5,3 +5,8 @@ Results from 10/18 at 21:23:
 Results from 10/19 at 21:51:
 1 of 2 - Monday: ['pick_6: Your balance after 1000 tickets: $-1784']
 2 of 2 - Tuesday: ['blackjack: busted', 'blackjack: win', 'blackjack: lost', 'blackjack: win']
+
+Results from 10/20 at 18:55:
+1 of 3 - Monday: ['pick_6: Your balance after 10000 tickets: $-17398']
+2 of 3 - Tuesday: ['blackjack: lost']
+3 of 3 - Wednesday: ['rot cipher: encrypted "(If I gave you 6,000 beans, would you tell me how to see the stars?)" using rot 13+13\n resulting in "(vS v TNIR LBH }$]]] ORNAF$ JBHYQ LBH GRYY ZR UBJ GB FRR GUR FGNEF-)"']
