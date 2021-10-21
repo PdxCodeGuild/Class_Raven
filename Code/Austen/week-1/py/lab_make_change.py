@@ -31,8 +31,7 @@ coins = [
         'worth': .01
     },
 ]
-message_pieces = [f'\nYour change is: ']
-balance = input()
+message_pieces = [f'Your change is: ']
 
 
 def coin_exchange(balance, multiplier):
@@ -46,7 +45,7 @@ def new_balance(balance, result, multiplier):
     return new_balance
 
 
-def piece_formatter(result):
+def piece_formatter(result, coin):
     if result == 1:
         name = coin['singular']
     elif result > 1:
@@ -76,22 +75,24 @@ def message_formatter():
     return formatted_message
 
 
-while True:
-    try:
-        float(balance)
-    except:
-        print('please enter a valid number')
-        balance = input()
-    else:
-        balance = float(balance)
-        balance = round(balance, 2)
+def changer():
+    balance = input()
+    while True:
+        try:
+            float(balance)
+        except:
+            print('please enter a valid number')
+            balance = input()
+        else:
+            balance = float(balance)
+            balance = round(balance, 2)
 
-    for coin in coins:
-        multiplier = coin['worth']
-        result = coin_exchange(balance, multiplier)
-        balance = new_balance(balance, result, multiplier)
-        if result > 0:
-            piece_formatter(result)
-    message = message_formatter()
-    print(message)
-    break
+        for coin in coins:
+            multiplier = coin['worth']
+            result = coin_exchange(balance, multiplier)
+            balance = new_balance(balance, result, multiplier)
+            if result > 0:
+                piece_formatter(result, coin)
+        message = message_formatter()
+        return message
+        break
