@@ -2,7 +2,6 @@
 
 user_input = list(input('Enter 16 single digits from 0-9 with no spaces: '))
 
-
 #1. Convert the input string into a list of ints
 user_input = list(map(int, user_input))
 
@@ -10,26 +9,21 @@ print(user_input)
 
 # 2. Slice off the last digit. That is the check digit.
 check_digit = user_input.pop()
+
 print(user_input)
 
 # 3. Reverse the digits.
 user_input.reverse() 
 print(user_input)
-
 # 4. Double every other element in the reversed list.
 used_digits = []
 
 for index, digit in enumerate(user_input): # enumerate allows to use the index as a list item integer to prevent typerror.
-    
-    if index % 2 == 0: #Takes 'even' numbers starting from index [0], [2], ... and later appends them to used_digits list after conditional minus 9 if greater than 9
+
+    if index % 2 == 0: #Takes 'even' numbers starting from index [0], [2], ... and appends them to used_digits list
+        used_digits.append(int(digit) * 2) # multiplies all 'even' indexes in list by 2
         
-        even_digits = int(digit) * 2 # multiplies all 'even' indexes in list by 2
-        
-# 5. Subtract nine from numbers over nine.    
-    if even_digits > 9:
-        even_digits = int(even_digits) - 9
-        used_digits.append(even_digits)
-    else: # Takes 'odd' numbers starting from [1], [3], ... and appends them to used_digits
+    else: # Takes 'odd' numbers startting from [0], [3], ... and appends them to used_digits
         used_digits.append(int(digit))
     
 """
@@ -40,23 +34,21 @@ if user_input > 9:
     user_input = user_input - 9 
 """
 
-print(used_digits)
-
- # 6. Sum all values.   
-used_digits = sum(used_digits)
-
 
 print(used_digits)
 
+#user_input = int(user_input)
 
-used_digits = str(used_digits)
+# 5. Subtract nine from numbers over nine.
+
+ # 6. Sum all values.        
+used_digits = sum(list(used_digits))
+
+print(used_digits)
 
 # 7. Take the second digit of that sum.
-used_digits = used_digits[1]
+if used_digits == check_digit[1]:
 
-print(used_digits)
-
-if used_digits == check_digit:
     print("Valid!")
 
 # 8. If that matches the check digit, the whole card number is valid.
