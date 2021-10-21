@@ -12,13 +12,13 @@ def advise_user(first_card, second_card, third_card):
     card_2_value = card_values.get(card_2)
     card_3_value = card_values.get(card_3)
     card_value_total = card_1_value + card_2_value + card_3_value  ## totals values up to provide user with total value of cards
-    card_value_list = [card_1_value, card_2_value, card_3_value]
-    for number in card_value_list:
-        if card_value_total < 21:
-            if number == 1:
+    card_value_list = [card_1_value, card_2_value, card_3_value]  ## creating list of values
+    for number in card_value_list:  ## looping through list of those values 
+        if card_value_total < 21: ## if card value total is < 21 check to see if any of the values(cards) = 1(ace)
+            if number == 1:  ## if a card equals ace, change 1 to 11
                 number = number + 9
-                card_value_total = card_value_total + number
-            if card_value_total > 21:
+                card_value_total = card_value_total + number  ## add 11 to total card value 
+            if card_value_total > 21:  ## if 11 is added and it causes total to be > 21, remove 11 (esssentially turning card back to 1)
                 card_value_total = card_value_total - number
                 break
     print(f'\nTotal of your cards is: {card_value_total}\n') 
