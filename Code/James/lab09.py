@@ -6,7 +6,7 @@ playing_cards = {'a': 1, 'q': 10, 'j': 10, 'k': 10, '2': 2, '3': 3,
 }
 
 hand_values = []
-
+#
 
 # if input == 'q':
 #     q = 10
@@ -16,39 +16,59 @@ while True:
     
     #print('Welcome to Blackjack Advice. Enter faces as Q, J, K or A.')
     user_card1 = input('What\'s your first card? ').lower().strip(' ')
-    if not user_card1.isalnum():
+    #give error if user input isnt in the dictionary
+    if not user_card1 in playing_cards:
         print('Wrong input please enter only faces or integers.')
         continue
-    #returns a string, I need it to return the value from the dictionary.
+    
     if user_card1 in playing_cards:
         user_card1n = playing_cards.get(user_card1)
-    # elif user_card1 not in playing_cards:
-    #     user_card1 = input
+    total_card = user_card1n + 0
+    
+    if total_card < 21:
+        playing_cards['a'] = 11
+    else:
+        playing_cards['a'] = 1
 
     # print(user_card1)
         
     user_card2 = input('What\'s your second card? ').lower().strip(' ')
-    if not user_card2.isalnum():
+    if not user_card2 in playing_cards:
         print('Wrong input please enter only faces or integers.')
         continue
     
     if user_card2 in playing_cards:
         user_card2n = playing_cards.get(user_card2)
+    
+    total_card = user_card1n + user_card2n
+    if total_card < 21:
+        playing_cards['a'] = 11
+    else:
+        playing_cards['a'] = 1
 
     # print(user_card2)
 
     user_card3 = input('What\'s your third card? ').lower().strip(' ')
-    if not user_card3.isalnum():
+    if not user_card1 in playing_cards:
         print('Wrong input please enter only faces or integers.')
         continue
     if user_card3 in playing_cards:
         user_card3n = playing_cards.get(user_card3)
+    
+    total_card = user_card1n + user_card2n + user_card3n
+    if total_card < 21:
+        playing_cards['a'] = 11
+    else:
+        playing_cards['a'] = 1
+    
 
     total_card = user_card1n + user_card2n + user_card3n
-    # print(f'{user_card1}\n{user_card2}\n{user_card3}')
+    
     print(f'Your total amount was {total_card}')
 
-
+    # need to change one of the aces to 11 if the total is below 21
+    # if total_card < 21:
+    #     playing_cards['a'] = 11
     if total_card < 17:
         print('Hit!')
     elif total_card >= 17 and total_card < 21:
@@ -57,8 +77,8 @@ while True:
         print('Blackjack!')
     elif total_card > 21:
         print('Already Busted')
-    elif total_card > 21:
-        'a' == 11
+    
+        
     continue
 
 
