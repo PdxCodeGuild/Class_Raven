@@ -3,15 +3,27 @@ Lee Colburn
 Evening Bootcamp - PDX Code Guild
 Lab 10 - Dad Jokes ... and Their APIs
 """
+import requests
+url = "https://icanhazdadjoke.com/search?term="
+user_search_term = input("Enter a search term: ")
+response = requests.get(url+user_search_term, headers={"Accept": "application/json"})
+data = response.json()
 
-"""Dad Joke API
-Use the Dad Joke API to get a dad joke and display it to the user. You may want to also use time.sleep to add suspense.
+total_results = data['total_jokes']
+print(f"There were {total_results} jokes found.\n")
 
-Part 1
-Use the requests library to send an HTTP request to https://icanhazdadjoke.com/ with the accept header as application/json. 
-This will return a dad joke in JSON format. You can then use the .json() method on the response to get a dictionary. 
-Get the joke out of the dictionary and show it to the user.
+results = data['results']
+counter = 1
 
-Part 2 (optional)
-Add the ability to "search" for jokes using another endpoint. Create a REPL that allows one to enter a search term and go through jokes one at a time. You can also add support for multiple pages."""
-
+for result in results:
+    print(f"Joke {counter}/{total_results}")
+    joke = result['joke']
+    print(joke)
+    counter += 1
+    if counter > total_results:
+        break
+    more_jokes = input("\nWant more? Enter 1 to continue: ")
+    if more_jokes == "1":
+        pass
+    else:
+        break
