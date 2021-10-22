@@ -36,7 +36,7 @@ class Dad_Joke:
         try:
             search_results = self.search_data['results'][randint(1, self.search_data["total_jokes"] - 1)]['joke']
         except (ValueError, IndexError):
-            print(f"{F.RED}\nNo results available. Goodbye!{R}")
+            print(f"{F.RED}\nNo results available. Goodbye!\n{R}")
             exit()
 
         return search_results
