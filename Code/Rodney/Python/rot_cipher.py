@@ -16,4 +16,14 @@ for letter in user_string: ## iterating through each letter in that user string 
             new_letter = cypher_dict[key]
             user_cypher_list.append(new_letter)  ## and then add to new cypher list 
 
+
+user_cypher_list2 = []  ## creating an empty list we will append the cypher letters to 
+for letter in user_cypher_list: ## iterating through each letter in that user string list 
+    for key in cypher_dict: ## if letter is same as key in dictionary, convert that letter to the value of that key in the dictionary 
+        if letter == key:
+            new_letter = cypher_dict[key]
+            user_cypher_list2.append(new_letter)
+
 print(''.join(user_cypher_list)) ## convert new cypher list to string before printing 
+print(''.join(user_cypher_list2))
+
