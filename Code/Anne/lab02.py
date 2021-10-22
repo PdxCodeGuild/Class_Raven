@@ -1,14 +1,11 @@
 #get input of how much money to break into coins
+
+
 answer = input("how much money do you have?  ")
 cash = float(answer)
-#print(cash) 
-#First convert the dollar amount to total number of pennies
+
 tot_pennies = cash * 100
 print(tot_pennies)
-#maybe start by getting the number of half dollars. 
-#divide the number of pennies by 50
-#separately,use modulus and get the remainder and do quarters, 
-# and so on. 
 num_half_dollars = tot_pennies // 50
 remain_aft_half_dollars = tot_pennies % 50
 

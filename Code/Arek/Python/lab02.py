@@ -60,6 +60,44 @@ print(f"{quarters} quarters, {dimes} dimes, {nickles} nickles, {pennies} pennies
 
 #will attempt version 2 at a later time
 
+"""version 2
+
+total = input("Please enter a dollar amount: ")
+#using the .replace just because it was easier for me to work with numbers without the decimals in them
+total = total.replace(".", "")
+# had to convert it into an integer last since .replace() does not work with integer data types
+total = int(total)
+
+#just setting the values for all the coins
+coin_value = [
+    ('quarter', 25),
+    ('dime', 10),
+    ('nickel', 5),
+    ('penny', 1)
+]
+
+values = [element[1] for element in coin_value]
+
+
+
+quarters = total // values[0]
+total %= values[0]
+dimes = total // values[1]
+total %= values[1]
+nickles = total // values[2]
+total %= values[2]
+pennies = total // values[3]
+total %= values[3]
+
+print(f"{quarters} quarters, {dimes} dimes, {nickles} nickles, {pennies} pennies")
+"""
+
+
+
+
+
+
+
 
 
 

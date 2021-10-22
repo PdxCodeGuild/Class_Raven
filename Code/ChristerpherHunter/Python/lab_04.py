@@ -7,6 +7,7 @@ def make_pennies(doll_hairs: str) -> int:
 
     pennies = float(doll_hairs)
     pennies = pennies * 100
+    
     return int(pennies)
 
 # Coin vending tuple

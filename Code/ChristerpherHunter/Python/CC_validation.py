@@ -8,109 +8,119 @@ R = F.RESET
 
 class Validation:
 
-    def __init__(self) -> None:
+    def __init__(self, credit_card_nums: str) -> None:
 
+        # Security in mind for initialization variables
         self.valid_cc = bool()
-        self.__check_digit = int()
-        self.check_digit = int()
+        self.__init_check_digit = int()  # Private variable for the check digit
+        self.__pulled_check_digit = int()  # The final digit to check against
+        self.__credit_card_nums_str = credit_card_nums  # The CC numbers str
+        self.__credit_card_nums = list()  # The credit card nums as an int list
 
     # Take in the CC numbers as a string and return list of ints
-    def str_to_int(self, cc_nums: str) -> list:
+    def str_to_int(self) -> list:
 
-        cc_list = list(cc_nums)
-        return cc_list
+        # Remove all spaces in entry
+        temp = self.__credit_card_nums_str.replace(" ", "")
+
+        # Make list of ints
+        for i in temp:
+            self.__credit_card_nums.append(int(i))
 
     # Conserve the check digit
-    def check_digit(self, lst_digit: list) -> int:
+    def check_digit(self) -> int:
 
-        self.check_digit = lst_digit[-1]
+        self.__pulled_check_digit = self.__credit_card_nums[-1]
+
+        # Remove the last index of the list
+        self.__credit_card_nums.pop(-1)
 
     # Reverse the digits
-    def rev_digits(self, lst_o_dgts: list) -> list:
+    def rev_digits(self) -> list:
 
-        rev_list = lst_o_dgts.reverse
-        return rev_list
+        self.__credit_card_nums.reverse()
 
     # Double every other element in the reversed list
-    def double_the_odds(self, reg_list: list) -> list:
+    def double_the_odds(self) -> list:
 
-        doubled_list = list()
-        for element in range(0, reg_list):
-            if reg_list[element] % 0:
-                doubled_list.append(reg_list[element] * 2)
+        temp = []
+        for element in range(0, len(self.__credit_card_nums)):
+            if element % 2 != 0:
+                temp.append(self.__credit_card_nums[element])
             else:
-                doubled_list.append(reg_list[element])
+                temp.append(self.__credit_card_nums[element] * 2)
 
-        return doubled_list
+        self.__credit_card_nums = temp.copy()
 
     # Subtract nine from elements over 9
-    def take_nines(self, big_list: list) -> list:
+    def take_nines(self) -> list:
 
-        summed_list = list()
-        for element in big_list:
+        temp = list()
+        for element in self.__credit_card_nums:
             if element > 9:
-                summed_list.append(element - 9)
+                temp.append(element - 9)
             else:
-                summed_list.append(element)
+                temp.append(element)
 
-        return summed_list
+        self.__credit_card_nums = temp[:]
 
     # Sum all elements of the list
-    def summer(self, unsummed: list) -> int:
+    def summer(self) -> int:
 
-        summed_value = int()
-        for element in unsummed:
-            summed_value += element
-
-        return summed_value
+        for element in self.__credit_card_nums:
+            self.__init_check_digit += element
 
     # Extract the second digit of the integer
-    def extraction(self, tbe: int) -> int:
+    def extraction(self) -> int:
 
         # Modulate
-        self.__check_digit = tbe % 10
+        self.__init_check_digit = self.__init_check_digit % 10
 
     # Checker
     def checker(self) -> bool:
 
-        if self.check_digit == self.__check_digit:
+        if self.__pulled_check_digit == self.__init_check_digit:
             self.valid_cc = True
         else:
             self.valid_cc = False
 
         return self.valid_cc
 
+    def __str__(self) -> str:
+
+        return str(self.valid_cc)
+
 
 def main() -> None:
 
     # Validation and testing
 
-    real_cc = Validation()
-
     # Take in cc numbers
-    cc_nums = input("Please enter the full CC number: ")
-    cc_list = real_cc.str_to_int(cc_nums)
+    cc_nums = input("\nPlease enter the full CC number: ")
+    real_cc = Validation(cc_nums)
+    real_cc.str_to_int()
 
     # Take the last digit
-    real_cc.check_digit(cc_list)
+    real_cc.check_digit()
 
     # Reverse the digits
-    rev_list = real_cc.rev_digits(cc_list)
+    real_cc.rev_digits()
 
     # Double every other element
-    dble_list = real_cc.double_the_odds(rev_list)
+    real_cc.double_the_odds()
 
     # Subtract nines from numbers over nine
-    minus_nines = real_cc.take_nines(dble_list)
+    real_cc.take_nines()
 
     # Sum all values
-    summed_val = real_cc.summer(minus_nines)
+    real_cc.summer()
 
     # Take the ones digit
-    real_cc.extraction(summed_val)
+    real_cc.extraction()
 
     # Check for match
-    print(f"The credit card enter is valid: {F.YELLOW}{real_cc.checker()}{R}")
+    print(f"\nThe credit card enter is valid:\
+ {F.YELLOW}{real_cc.checker()}{R}")
 
 
 if __name__ == '__main__':
