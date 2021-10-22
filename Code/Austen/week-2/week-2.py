@@ -29,7 +29,6 @@ def week_2():
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
         return results
-
     def wednesday():
         from labs.Oct_20 import lab_rot_cipher
         results = []
@@ -43,11 +42,27 @@ def week_2():
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
         return results
-    def ui():
+
+    def thursday():
+        from labs.Oct_21 import lab_dad_jokes
         results = []
-        options = ['monday', 'tuesday', 'wednesday', 'done']
+        options = ['jokes', 'done']
+        print(options)
+        lab = input('Which lab would you like to access?\n').lower()
+        while lab != 'done':
+            if lab == 'jokes':
+                result = f'dad jokes: {lab_dad_jokes()}'
+            print(options)
+            lab = input('Which lab would you like to access?\n').lower()
+            results.append(result)
+        return results
+    def ui():
+        from tools.valid import answers
+        results = []
+        options = ['monday', 'tuesday', 'wednesday', 'thursday', 'done']
         print(options)
         day = input('Which day would you like to access?\n').lower()
+        day = answers.validate(day, options)
         while day != 'done':
             if day == 'monday':
                 result = f'Monday: {monday()}'
@@ -61,6 +76,10 @@ def week_2():
                 result = f'Wednesday: {wednesday()}'
                 results.append(result)
                 print(options)
+            if day == 'thursday':
+                result = f'Thursday: {thursday()}'
+                results.append(result)
+                print(options)
             day = input('Which day would you like to access?\n').lower()
         return results
     results = ui()
@@ -68,7 +87,7 @@ def week_2():
 
 
 def run_and_write():
-    file = open('week-2/results-log.txt', 'a')
+    file = open('results-log.txt', 'a')
     results = week_2()
     stamp = Stamp().results()
     results.insert(0, stamp)

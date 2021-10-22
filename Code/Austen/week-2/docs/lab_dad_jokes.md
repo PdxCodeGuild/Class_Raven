@@ -17,16 +17,5 @@ Use the [requests](../docs/16%20Requests.md) library to send an HTTP request to 
 Add the ability to "search" for jokes using [another endpoint](https://icanhazdadjoke.com/api#search-for-dad-jokes). Create a REPL that allows one to enter a search term and go through jokes one at a time. You can also add support for multiple pages.
 
 ```
-def lab_dad_jokes():
-  import requests
-  from seperate import seperate
-  url = 'https://icanhazdadjoke.com/'
-  res = requests.get(url, headers={"Accept": "application/json"})
-  res = res.json()
-  joke = res['joke']
-  joke = seperate.sentences(joke)
-
-
-lab_dad_jokes()
 
 ```
