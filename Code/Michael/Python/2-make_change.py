@@ -1,9 +1,20 @@
-coins = [('dollar',1),
+'''
+PDX Code Guild Full Stack Bootcamp
+->Lab 02
+  Make Change
+Michael B
+'''
+coins = [('One-Hundred dollar bill',100),
+         ('Fifty dollar bill',50),
+         ('Twenty dollar bill',20),
+         ('Ten dollar bill',10),
+         ('Five dollar bill',5),
+         ('One dollar bill',1),
          ('half-dollar',0.50), # Who uses half-dollars anymore?
          ('quarter',0.25),
          ('dime',0.10),
          ('nickel',.05),
-         ('penny', .01)
+         ('penny',.01)
 ]
 
 final_string = "\n"
@@ -12,7 +23,7 @@ number_invalid = True
 
 while number_invalid == True: # Try until valid number.
     try: # Try to get valid input from user. (A float)
-        total_ammount = float(input(f"""Please Enter how much money you have in dollars and cents (1.36): 
+        total_ammount = float(input(f"""Please Enter how much money you have in dollars and cents (1.36):                                
 """)) # Get input from user.
     except KeyboardInterrupt: # Quit program on Ctrl+C
         print("Escaping program via KeyboardInterrupt")
@@ -32,4 +43,4 @@ for coin in coins: # Check each coin type
         final_string = final_string + str(int(total_ammount // coin[1])) + " " + str(coin[0]) + plural + " " # Create a string for output.
         total_ammount = total_ammount - coin[1] * (total_ammount // coin[1]) # Reduce those coins before doing next coin type.
     
-print(final_string) # Print string.
+print(final_string)
