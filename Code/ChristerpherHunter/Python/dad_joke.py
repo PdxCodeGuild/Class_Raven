@@ -3,6 +3,9 @@
 
 from requests import get
 from random import randint
+from colorama import Fore as F
+
+R = F.RESET
 
 
 class Dad_Joke:
@@ -30,8 +33,11 @@ class Dad_Joke:
                                headers=self.header).json()
 
         # Grab the jokes from the list of dictionaries
-        search_results = self.search_data['results']\
-            [randint(1, self.search_data["total_jokes"] - 1)]['joke']
+        try:
+            search_results = self.search_data['results'][randint(1, self.search_data["total_jokes"] - 1)]['joke']
+        except (ValueError, IndexError):
+            print(f"{F.RED}\nNo results available. Goodbye!{R}")
+            exit()
 
         return search_results
 
@@ -43,9 +49,13 @@ def main() -> None:
 
     data = dad_joke.get_joke()
 
-    search_data = dad_joke.search_joke("dad")
-
+    print(f"{F.GREEN}\nRandom Dad Joke{R}")
     print(f"\n{data.get('joke')}\n")
+
+    search_data = input(f"{F.YELLOW}Please enter the search topic\
+ for a Dad Joke: {R}")
+    # search_data = search_data if search_data != "" else "dogs"
+    search_data = dad_joke.search_joke(search_data)
 
     print(f"\n{search_data}\n")
 
