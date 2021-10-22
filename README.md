@@ -19,6 +19,8 @@ Weeks 16, 17, 18: Capstone project
   - Python lab 03
   - Python lab 05
   - Python lab 06
+  - Python lab 10
+  - Python lab 11
 ### Subbmitting your work
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git pull` to pull any recent changes to your local repository
