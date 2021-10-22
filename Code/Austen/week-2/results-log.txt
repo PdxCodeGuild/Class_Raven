@@ -11,3 +11,9 @@ Results from 10/20 at 18:55:
 2 of 3 - Tuesday: ['blackjack: lost']
 3 of 3 - Wednesday: ['rot cipher: encrypted "(If I gave you 6,000 beans, would you tell me how to see the stars?)" using rot 13+13\n resulting in "(vS v TNIR LBH }$]]] ORNAF$ JBHYQ LBH GRYY ZR UBJ GB FRR GUR FGNEF-)"']
 
+
+Results from 10/21 at 20:37:
+1 of 4 - Monday: ['pick_6: Your balance after 100 tickets: $-166']
+2 of 4 - Tuesday: ['blackjack: busted']
+3 of 4 - Wednesday: ['rot cipher: encrypted "(pinacolada)" using rot 20+7\n resulting in "(JCHUWIFUXU)"']
+4 of 4 - Thursday: ["dad jokes: I'm practicing for a bug-eating contest and I've got butterflies in my stomach.", 'dad jokes: [\'What did Romans use to cut pizza before the rolling cutter was invented? Lil Caesars\', \'How did the hipster burn the roof of his mouth? He ate the pizza before it was cool.\', "Want to hear my pizza joke? Never mind, it\'s too cheesy.", \'How do you fix a broken pizza? With tomato paste.\']']

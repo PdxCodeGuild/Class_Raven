@@ -12,11 +12,11 @@ def lab_dad_jokes():
   def search(url):
     start = 'yes'
     while start == 'yes':
-      # start = input('Would you like to start your search?\n')
       term = input('enter the word you\'d like to search by \n')
-      url += f'search?term={term}'
+      search_url = f'{url}search?term={term}'
+      print(search_url)
       res = requests.get(
-          url, headers={"Accept": "application/json"})
+          search_url, headers={"Accept": "application/json"})
       res = res.json()
       resjokes = res['results']
       jokes = []
@@ -31,17 +31,20 @@ def lab_dad_jokes():
             print(f'\njoke {counter} of {len(jokes)}:\n {joke}\n')
             counter += 1
             if counter <= len(jokes):
-              next = input(f'Would you like to see the next {term} joke? \n')
-      # start = input('Would you like to search again?\n')
+                next = input(f'Would you like to see the next {term} joke? \n')
+      start = input('Would you like to search again?\n')
     return jokes
 
-  options = ['random', 'search']
+  options = ['random', 'search', 'done']
   selection = input(
       'Would you like a random joke or would you like to search for something specific? \n')
   selection = answers.validate(selection, options)
-  if selection == 'random':
-    joke = random()
-  if selection == 'search':
-    joke = search(url)
-  print(joke)
+  while selection != 'done':
+    if selection == 'random':
+      joke = random()
+    if selection == 'search':
+      joke = search(url)
+    selection = input(
+        'Would you like a random joke or would you like to search for something specific? \n')
+    print(joke)
   return joke
