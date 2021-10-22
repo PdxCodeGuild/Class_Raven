@@ -7,7 +7,7 @@ import string
 
 def encrypt(user_string,rot):
     """Takes in a string and integer to set a rotated alphabet. Encrypts a messsage and returns the string"""
-    alphabet_printable = string.printable + " " # 101 chars: " " 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ 
+    alphabet_printable = string.printable + " " # 101 chars
     shifted_alphabet_printable = alphabet_printable[101-rot:] + alphabet_printable[0:(101-rot)] # rotates string to correspond with printable alphabet
     encrypted_message = ""
 
@@ -44,12 +44,12 @@ while not complete:
     print(f'\n Try again:\n')
     continue
   
-  # Direct user to appropriate function: Select Option 1 - Pass Message
+  # Direct user to appropriate function: Select Option 1 - Pass Message to encrypt or 2 - Decrypt a stored message (or your own)
   if start == 1:
 
     user_string = input("Enter your string: ")
     rot = int(input("Enter the number of digits you'd like to offset the data (1-101): "))
-    encrypted_string = encrypt(user_string, rot) # lower only test: encrypted_string = encrypt(user_string.lower(), rot)
+    encrypted_string = encrypt(user_string, rot)
     print(f"\nYour encrypted string is: {encrypted_string}\n\n If you'd like to decrypt this string, please remember it has been offset {rot} digits. \n Returning to main menu...")
 
   if start == 2:
