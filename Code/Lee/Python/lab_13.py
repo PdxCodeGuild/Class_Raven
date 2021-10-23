@@ -4,27 +4,77 @@ Evening Bootcamp - PDX Code Guild
 Lab 13 - Word Counts
 """
 
-"""Let's write a python module to analyze a given text file containing a book for its vocabulary frequency and display the most frequent words to the user in the terminal. Remember there isn't any "perfect" way to identify a word in english (acronymns, mr/ms, contractions, etc), try to find rules that work best.
-
-
-Take the following steps to build up our dictionary. The result should look something like {'a': 3, 'the': 4}
-
-Make everything lowercase, strip punctuation, split into a list of words.
-Your dictionary will have words as keys and counts as values. If a word isn't in your dictionary yet, add it with a count of 1. If it is, increment its count.
-Print the most frequent top 10 out with their counts. You can do that with the code below.
-# word_dict is a dictionary where the key is the word and the value is the count
-word_dict = {'apples': 2, 'bananas': 1, 'pears': 1, 'kiwi': 7}
-words = list(word_dict.items()) # .items() returns a list of tuples
-words.sort(key=lambda tup: tup[1], reverse=True)  # sort largest to smallest, based on count
-for i in range(min(10, len(words))):  # print the top 10 words, or all of them, whichever is smaller
-    print(words[i])
-Version 2 (optional)
-Count how often each unique pair of words is used, then print the top 10 most common pairs with their counts.
-
-Version 3 (optional)
-Let the user enter a word, then show the words which most frequently follow it."""
+############################ VERSION 1 ########################################
+"""Let's write a python module to analyze a given text file containing a book for its vocabulary frequency and display the most frequent words to the user in the terminal."""
 
 import requests
-response = requests.get('https://gutenberg.org/files/4300/4300-0.txt')
-response.encoding = 'utf-8' # set encoding to utf-8
+
+with open('ulysses.txt','r', encoding='utf-8') as book:
+    ulysses_text = book.readlines()
+    cleaned_text = []
+    book_dict = {}
+    
+    for line in ulysses_text:
+        
+        
+        line.translate(str.maketrans("", ""))
+        for word in line.split():
+            
+            word = word.strip("-")
+            word = word.strip(",")
+            word = word.strip(".")
+            word = word.strip("!")
+            word = word.strip(";")
+            word = word.strip("â")
+            word = word.strip("'")
+            word = word.strip(" ")
+            word = word.lower()
+            cleaned_text.append(word)
+
+            if word not in book_dict.keys():
+                book_dict[word] = 1
+            else:
+                book_dict[word] += 1
+    
+
+    sorted_counts = sorted(book_dict.items(), key = lambda t: t[1], reverse = True)
+
+
+    count = 1
+    print("Top Ten Most Used Words in James Joyces' 'Ulysses':")
+    for i in sorted_counts[:10]:
+        print(f"({count}/10): {i}")
+        count += 1
+
+    ############################ VERSION 2 ########################################
+    """Count how often each unique pair of words is used, then print the top 10 most common pairs with their counts."""
+
+    doubles = zip(cleaned_text[:-1], cleaned_text[1:])
+    doubles_dict = {}
+
+    for words in doubles:
+        if words not in doubles_dict.keys():
+            doubles_dict[words] = 1
+        else:
+            doubles_dict[words] += 1
+
+    doubles_counts = sorted(doubles_dict.items(), key = lambda t: t[1], reverse = True)
+    count = 1
+    print("Top Ten Most Used Word Pairs in James Joyces' 'Ulysses': ")
+    for i in doubles_counts[:10]:
+        print(f"{count}/10): {i}")
+
+    ############################ VERSION 3 ########################################
+    """Let the user enter a word, then show the words which most frequently follow it."""
+
+    search_word_init = input("Enter '1' if you'd like to search for a term, or press any key to exit. ")
+    if search_word_init == "1":
+        search_word = input("Enter a word to search for: ")
+        text_match = False
+        while text_match == False:
+            print(f"\nSearching for: '{search_word}' ....... \n")
+            search_result = book_dict.get(search_word, "Zero")
+            print(f"The word '{search_word}' appears {search_result} times.")
+            text_match = True
+    book.close()
 

@@ -15,11 +15,6 @@ content_list = []
         content_list.append(line)
     contents = file.read()'''
 
-'''with open('./test.txt', 'r') as file: # Opens 'test.txt' in read format as 'file'. output: ['this is sample data\n', 'more data\n', 'more\n', 'new line!']
-    for line in file:
-        content_list.append(line)
-    contents = file.read()
-'''
 
 ''' # write a phonebook to test.txt:
 phonebook = {'David': '5551234', 'Alice': '6662345'}
