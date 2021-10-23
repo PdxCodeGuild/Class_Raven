@@ -1,5 +1,5 @@
 class answers:
-  positive = []
+  positive = ['yes']
   negative = []
 
   def validate(selection, options):

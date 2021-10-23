@@ -1,8 +1,11 @@
-from tools.stamp import Stamp
-
+def importutilities():
+  import sys
+  utilspath = 'X:\\pdx-code-guild\\Class_Raven\\Code\\Austen\\'
+  sys.path.append(utilspath)
 
 # * contains uis to access each lab completed throughout the week
 def week_2():
+    importutilities()
     def monday():
         from labs.Oct_18 import lab_pick_6
         results = []
@@ -71,7 +74,7 @@ def week_2():
             results.append(result)
         return results
     def ui():
-        from tools.valid import answers
+        from utilities.valid import answers
         results = []
         options = ['monday', 'tuesday', 'wednesday',
                    'thursday', 'friday', 'done']
@@ -106,6 +109,8 @@ def week_2():
 
 
 def run_and_write():
+    importutilities()
+    from utilities.stamp import Stamp
     file = open('results-log.txt', 'a')
     results = week_2()
     stamp = Stamp().results()
