@@ -5,7 +5,7 @@ Let's convert an image into greyscale using the Pillow library,
 which is a fork of PIL 'python image library'.
 Version 2:
 Use the colorsys library to increase the saturation,
-decrease the brightness, and rotate the hue. 
+decrease the brightness, and rotate the hue.
 Colorsys represents colors as floats in the range 0.0 - 1.0,
 whereas pillow uses ints in the range 0 - 255.
 You'll have to convert between these two representations.
