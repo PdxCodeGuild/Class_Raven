@@ -17,3 +17,10 @@ Results from 10/21 at 20:37:
 2 of 4 - Tuesday: ['blackjack: busted']
 3 of 4 - Wednesday: ['rot cipher: encrypted "(pinacolada)" using rot 20+7\n resulting in "(JCHUWIFUXU)"']
 4 of 4 - Thursday: ["dad jokes: I'm practicing for a bug-eating contest and I've got butterflies in my stomach.", 'dad jokes: [\'What did Romans use to cut pizza before the rolling cutter was invented? Lil Caesars\', \'How did the hipster burn the roof of his mouth? He ate the pizza before it was cool.\', "Want to hear my pizza joke? Never mind, it\'s too cheesy.", \'How do you fix a broken pizza? With tomato paste.\']']
+
+Results from 10/22 at 21:39:
+1 of 5 - Monday: ['pick_6: Your balance after 1000 tickets: $-1785']
+2 of 5 - Tuesday: ['blackjack: busted']
+3 of 5 - Wednesday: ['rot cipher: encrypted "(The quick brown fox jumped over the lazy dog 16,000 times.)" using rot 25+12\n resulting in "(sGD PTHBJ AQNVM ENW ITLODC NUDQ SGD KZYX CNF ]|#\\\\\\ SHLDR%)"']
+4 of 5 - Thursday: ['dad jokes: [\'What did Romans use to cut pizza before the rolling cutter was invented? Lil Caesars\', \'How did the hipster burn the roof of his mouth? He ate the pizza before it was cool.\', "Want to hear my pizza joke? Never mind, it\'s too cheesy.", \'How do you fix a broken pizza? With tomato paste.\']']
+5 of 5 - Friday: ["count words: ['The #1 word is: lava appearing 125 times.\\n', 'The #2 word is: moon appearing 91 times.\\n', 'The #3 word is: craters appearing 87 times.\\n', 'The #4 word is: park appearing 83 times.\\n', 'The #5 word is: area appearing 39 times.\\n', 'The #6 word is: cones appearing 38 times.\\n', 'The #7 word is: cinder appearing 37 times.\\n', 'The #8 word is: plants appearing 37 times.\\n', 'The #9 word is: deer appearing 36 times.\\n', 'The #10 word is: surface appearing 34 times.\\n']"]

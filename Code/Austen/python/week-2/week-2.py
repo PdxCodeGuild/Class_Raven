@@ -56,10 +56,25 @@ def week_2():
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
         return results
+
+    def friday():
+        from labs.Oct_22 import lab_count_words
+        results = []
+        options = ['count words', 'done']
+        print(options)
+        lab = input('Which lab would you like to access?\n').lower()
+        while lab != 'done':
+            if lab == 'count words':
+                result = f'count words: {lab_count_words()}'
+            print(options)
+            lab = input('Which lab would you like to access?\n').lower()
+            results.append(result)
+        return results
     def ui():
         from tools.valid import answers
         results = []
-        options = ['monday', 'tuesday', 'wednesday', 'thursday', 'done']
+        options = ['monday', 'tuesday', 'wednesday',
+                   'thursday', 'friday', 'done']
         print(options)
         day = input('Which day would you like to access?\n').lower()
         day = answers.validate(day, options)
@@ -78,6 +93,10 @@ def week_2():
                 print(options)
             if day == 'thursday':
                 result = f'Thursday: {thursday()}'
+                results.append(result)
+                print(options)
+            if day == 'friday':
+                result = f'Friday: {friday()}'
                 results.append(result)
                 print(options)
             day = input('Which day would you like to access?\n').lower()
