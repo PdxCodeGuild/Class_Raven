@@ -29,7 +29,8 @@ class Count:
     def get_text(self) -> None:
         """Retrieve the text"""
 
-        self.texts = get('https://www.gutenberg.org/files/62897/62897-0.txt')
+        self.texts = \
+            get('https://www.gutenberg.org/cache/epub/66595/pg66595.txt')
         self.texts.encoding = "utf-8"
 
     def create_text(self) -> None:
@@ -62,8 +63,9 @@ class Count:
                       .replace(")", "")
                       .replace("/", "")
                       .replace('"', "")
+                      .replace("\\", "")
                       .replace("_", "")
-                      .lower() for i in range((len(self.texts) // 1_000))]
+                      .lower() for i in range((len(self.texts) - 1) // 100)]
 
         return self.lists
 
@@ -80,8 +82,13 @@ class Count:
 
         intermediate_list = list(self.dict_count.items())
         intermediate_list.sort(key=lambda tup: tup[1], reverse=True)
-        for i in range(min(10, len(intermediate_list))):
-            self.top_ten.append(intermediate_list[i])
+        [intermediate_list.pop(i)
+            for i in range(min(10, len(intermediate_list)))]
+
+        [self.top_ten.append(intermediate_list[i]
+                             if len(intermediate_list[i]) > 3 else
+                             intermediate_list[i + 1])
+            for i in range(min(10, len(intermediate_list)))]
 
         return self.top_ten
 
