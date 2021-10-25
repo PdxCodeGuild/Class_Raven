@@ -1,22 +1,22 @@
 def importutilities():
   import sys
-  utilspath = 'X:\\pdx-code-guild\\Class_Raven\\Code\\Austen\\'
+  utilspath = 'X:\\python\\'
   sys.path.append(utilspath)
 
 # * contains uis to access each lab completed throughout the week
 def week_2():
     importutilities()
-    from utilities.valid import answers
+    from utilities.responses import response
     def monday():
-        from labs.Oct_18 import lab_pick_6
+        from labs.Oct_18 import lab_lottery
         results = []
-        options = ['pick_6', 'done']
+        options = ['lottery', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
-        lab = answers.validate(lab, options)
+        lab = response.validate(lab, options)
         while lab != 'done':
-            if lab == 'pick_6':
-                result = f'pick_6: {lab_pick_6()}'
+            if lab == 'lottery':
+                result = f'lottery: {lab_lottery()}'
             print(options)
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
@@ -27,7 +27,7 @@ def week_2():
         options = ['blackjack', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
-        lab = answers.validate(lab, options)
+        lab = response.validate(lab, options)
         while lab != 'done':
             if lab == 'blackjack':
                 result = f'blackjack: {lab_blackjack()}'
@@ -41,7 +41,7 @@ def week_2():
         options = ['cipher', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
-        lab = answers.validate(lab, options)
+        lab = response.validate(lab, options)
         while lab != 'done':
             if lab == 'cipher':
                 result = f'rot cipher: {lab_rot_cipher()}'
@@ -56,7 +56,7 @@ def week_2():
         options = ['jokes', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
-        lab = answers.validate(lab, options)
+        lab = response.validate(lab, options)
         while lab != 'done':
             if lab == 'jokes':
                 result = f'dad jokes: {lab_dad_jokes()}'
@@ -71,7 +71,7 @@ def week_2():
         options = ['count words', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
-        lab = answers.validate(lab, options)
+        lab = response.validate(lab, options)
         while lab != 'done':
             if lab == 'count words':
                 result = f'count words: {lab_count_words()}'
@@ -79,14 +79,14 @@ def week_2():
             lab = input('Which lab would you like to access?\n').lower()
             results.append(result)
         return results
+
     def ui():
-        from utilities.valid import answers
         results = []
         options = ['monday', 'tuesday', 'wednesday',
                    'thursday', 'friday', 'done']
         print(options)
         day = input('Which day would you like to access?\n').lower()
-        day = answers.validate(day, options)
+        day = response.validate(day, options)
         while day != 'done':
             if day == 'monday':
                 result = f'Monday: {monday()}'
@@ -116,10 +116,10 @@ def week_2():
 
 def run_and_write():
     importutilities()
-    from utilities.stamp import Stamp
+    from utilities.timestamp import now
     file = open('results-log.txt', 'a')
     results = week_2()
-    stamp = Stamp().results()
+    stamp = now.result()
     results.insert(0, stamp)
     file.write('\n')
     counter = 0
