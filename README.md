@@ -21,6 +21,11 @@ Weeks 16, 17, 18: Capstone project
   - Python lab 06 (cc valid)
   - Python lab 07 (peaks&valleys)
   - Python lab 08 (pick6)
+  - Python lab 09 (blackjack)
+  - Python lab 10 (dad jokes)
+  - Python lab 11 (rot 13)
+  - Python lab 13( Count Words)
+  - 
 ### Subbmitting your work
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git pull` to pull any recent changes to your local repository
