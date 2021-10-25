@@ -1,6 +1,12 @@
+def importutilities():
+  import sys
+  utilspath = 'X:\\pdx-code-guild\\Class_Raven\\Code\\Austen\\'
+  sys.path.append(utilspath)
+
 def lab_dad_jokes():
   import requests
-  from tools.valid import answers
+  importutilities()
+  from utilities.valid import answers
   url = 'https://icanhazdadjoke.com/'
 
   def random():
@@ -24,7 +30,7 @@ def lab_dad_jokes():
         joke = joke['joke']
         jokes.append(joke)
       counter = 1
-      while counter < len(jokes):
+      while counter <= len(jokes):
         next = input(f'Would you like to see the first {term} joke? \n')
         while next == 'yes':
           for joke in jokes:

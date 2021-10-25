@@ -6,12 +6,14 @@ def importutilities():
 # * contains uis to access each lab completed throughout the week
 def week_2():
     importutilities()
+    from utilities.valid import answers
     def monday():
         from labs.Oct_18 import lab_pick_6
         results = []
         options = ['pick_6', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
+        lab = answers.validate(lab, options)
         while lab != 'done':
             if lab == 'pick_6':
                 result = f'pick_6: {lab_pick_6()}'
@@ -25,6 +27,7 @@ def week_2():
         options = ['blackjack', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
+        lab = answers.validate(lab, options)
         while lab != 'done':
             if lab == 'blackjack':
                 result = f'blackjack: {lab_blackjack()}'
@@ -38,6 +41,7 @@ def week_2():
         options = ['cipher', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
+        lab = answers.validate(lab, options)
         while lab != 'done':
             if lab == 'cipher':
                 result = f'rot cipher: {lab_rot_cipher()}'
@@ -52,6 +56,7 @@ def week_2():
         options = ['jokes', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
+        lab = answers.validate(lab, options)
         while lab != 'done':
             if lab == 'jokes':
                 result = f'dad jokes: {lab_dad_jokes()}'
@@ -66,6 +71,7 @@ def week_2():
         options = ['count words', 'done']
         print(options)
         lab = input('Which lab would you like to access?\n').lower()
+        lab = answers.validate(lab, options)
         while lab != 'done':
             if lab == 'count words':
                 result = f'count words: {lab_count_words()}'
