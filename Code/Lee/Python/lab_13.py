@@ -41,7 +41,7 @@ with open('ulysses.txt','r', encoding='utf-8') as book:
 
 
     count = 1
-    print("Top Ten Most Used Words in James Joyces' 'Ulysses':")
+    print("\nTop Ten Most Used Words in James Joyces' 'Ulysses':")
     for i in sorted_counts[:10]:
         print(f"({count}/10): {i}")
         count += 1
@@ -49,7 +49,7 @@ with open('ulysses.txt','r', encoding='utf-8') as book:
     ############################ VERSION 2 ########################################
     """Count how often each unique pair of words is used, then print the top 10 most common pairs with their counts."""
 
-    doubles = zip(cleaned_text[:-1], cleaned_text[1:])
+    doubles = zip(cleaned_text[:-1], cleaned_text[1:]) # uses cleaned_text list, pulled from above
     doubles_dict = {}
 
     for words in doubles:
@@ -60,7 +60,7 @@ with open('ulysses.txt','r', encoding='utf-8') as book:
 
     doubles_counts = sorted(doubles_dict.items(), key = lambda t: t[1], reverse = True)
     count = 1
-    print("Top Ten Most Used Word Pairs in James Joyces' 'Ulysses': ")
+    print("\nTop Ten Most Used Word Pairs in James Joyces' 'Ulysses': ")
     for i in doubles_counts[:10]:
         print(f"{count}/10): {i}")
 
