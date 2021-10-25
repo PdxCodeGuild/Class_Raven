@@ -25,6 +25,7 @@ class Count:
         self.count = int()
         self.dict_count = dict()
         self.top_ten = list()
+        self.word_pick = str()
 
     def get_text(self) -> None:
         """Retrieve the text"""
@@ -85,12 +86,24 @@ class Count:
         [intermediate_list.pop(i)
             for i in range(min(10, len(intermediate_list)))]
 
-        [self.top_ten.append(intermediate_list[i]
-                             if len(intermediate_list[i]) > 3 else
-                             intermediate_list[i + 1])
-            for i in range(min(10, len(intermediate_list)))]
+        if not self.word_pick:
+            [self.top_ten.append(intermediate_list[i]
+                                 if len(intermediate_list[i]) > 3 else
+                                 intermediate_list[i + 1])
+                for i in range(min(10, len(intermediate_list)))]
+        else:
+            [self.top_ten.append(intermediate_list[i]
+                                 if intermediate_list[i] == self.word_pick else
+                                 "Word not found")
+                for i in range(min(10, len(intermediate_list)))]
 
         return self.top_ten
+
+    def user_input(self) -> None:
+        """Ask user input then match word for the count"""
+
+        while not self.word_pick:
+            self.word_pick = input("Enter a word to be matched and counted: ")
 
 
 def main() -> None:
@@ -101,7 +114,9 @@ def main() -> None:
     words.open_text()
     words.make_list()
     words.make_dict()
+    words.user_input()
     high_count = words.highest_count()
+    
     print(high_count)
 
 
