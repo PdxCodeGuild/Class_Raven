@@ -117,7 +117,7 @@ def week_2():
 def run_and_write():
     importutilities()
     from utilities.timestamp import now
-    file = open('results-log.txt', 'a')
+    file = open('docs/results-log.txt', 'a')
     results = week_2()
     stamp = now.result()
     results.insert(0, stamp)
