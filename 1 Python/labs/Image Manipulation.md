@@ -1,4 +1,4 @@
-# Lab 16: Image Manipulation
+Image Manipulation
 
 Let's convert an image into greyscale using the Pillow library, which is a fork of PIL 'python image library'. First download the file from [here](https://upload.wikimedia.org/wikipedia/en/7/7d/Lenna_%28test_image%29.png) and place it in the same directory as your code (or save it anywhere and use an absolute path when opening it). If you don't have pillow installed, run `pip install pillow` in a terminal. You can check if pillow using `pip show pillow`.
 
