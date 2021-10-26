@@ -116,7 +116,7 @@ def main() -> None:
     words.make_dict()
     words.user_input()
     high_count = words.highest_count()
-    
+
     print(high_count)
 
 
