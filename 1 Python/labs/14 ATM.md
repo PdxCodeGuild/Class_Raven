@@ -18,7 +18,7 @@ Let's represent an ATM with a class containing two attributes: a balance and an 
         '2': 'Deposit',
         '3': 'Withdraw',
         '4': 'Interest',
-        '6': 'Exit'
+        '5': 'Exit'
     }
 
     while True:
