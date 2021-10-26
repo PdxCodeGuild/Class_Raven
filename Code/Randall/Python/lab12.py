@@ -30,7 +30,7 @@ class ATM():
         print(self.history)
         print('...end of transaction history.')
     
-    def check_withdrawl(self, amount):
+    def check_withdrawal(self, amount):
         if self.balance > amount and amount > 0:
             return True
         else:
@@ -39,9 +39,9 @@ class ATM():
 
     def withdraw(self,amount):
 
-        self.check_withdrawl(amount)
+        self.check_withdrawal(amount)
 
-        if self.check_withdrawl(amount) == True:
+        if self.check_withdrawal(amount) == True:
             self.balance -= amount
             print(f'${amount} withdrawn. You new balance is ${self.balance}.')
             self.history.append(f'Date: {self.datetime}. Withdrawl: ${amount}. Balance is ${self.balance}.')
