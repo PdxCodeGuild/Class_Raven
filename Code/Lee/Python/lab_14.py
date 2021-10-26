@@ -4,22 +4,6 @@ Lee Colburn
 Evening Bootcamp - PDX Code Guild
 Lab 14 - ATM
 """
-'''
-Let's represent an ATM with a class containing two attributes: a balance and an interest rate. 
-A newly created account will default to a balance of 0 and an interest rate of 0.1%. 
-
-
-check_balance() returns the account balance
-deposit(amount) deposits the given amount in the account
-check_withdrawal(amount) returns true if the withdrawn amount won't put the account in the negative
-withdraw(amount) withdraws the amount from the account and returns it
-calc_interest() returns the amount of interest calculated on the account
-
-
-Version 2
-Have the ATM maintain a list of transactions. 
-Every time the user makes a deposit or withdrawal, add a string to a list saying 'user deposited $15' or 'user withdrew $15'.
- Add a new method print_transactions() to your class for printing out the list of transactions.'''
 
 class ATM:
     def __init__(self, balance, interest, history) -> None: # self is always the first thing done when defining a class
@@ -46,7 +30,7 @@ class ATM:
     
     def add_trans(self, trans_type, amount):        
         note = []
-        message = str(f"User {trans_type} ${amount}")
+        message = str(f"User {trans_type} ${amount:,.2f}. Updated balance of ${self.balance:,.2f}")
         note.append(message)
         self.history = self.history + note
         return 
@@ -60,19 +44,9 @@ class ATM:
         print(self.history)
         return
 
-
 atm = ATM(10_000, 14.992315, []) # create an instance of our class
 
 print('Welcome to the ATM')
-
-menu_options = {
-'1': 'Balance',
-'2': 'Deposit',
-'3': 'Withdraw',
-'4': 'Interest',
-'5': 'Exit'
-}
-
 
 while True:
 
@@ -106,12 +80,12 @@ while True:
 
     elif command == 'help':
         print('Available commands:')
-        print('1  - get the current balance')
-        print('2  - deposit money')
+        print('1 - get the current balance')
+        print('2 - deposit money')
         print('3 - withdraw money')
         print('4 - accumulate interest')
-        print('4     - exit the program')
-
+        print('5 - exit the program')
+        
     elif command == '5':
         break
 
