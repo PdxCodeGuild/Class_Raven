@@ -43,7 +43,7 @@ class ATM:
         self.__balance += input
 
         with open("ATM_log.txt", "a") as f_write:
-            f_write.write(f"user deposited ${input}")
+            f_write.write(f"user deposited ${input}\n")
 
     def withdraw(self, input: float) -> None:
         """Subtract monies from the account balance"""
@@ -51,7 +51,7 @@ class ATM:
         self.transaction_num += 1
         self.__balance -= input
         with open("ATM_log.txt", "a") as f_write:
-            f_write.write(f"user deposited ${input}")
+            f_write.write(f"user deposited ${input}\n")
 
     def interest(self, input: float) -> None:
         """Change the interest amount"""
