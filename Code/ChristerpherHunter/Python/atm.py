@@ -31,40 +31,6 @@ class ATM:
 
         print(f"\n{F.GREEN}Welcome to the ATM:{R} ")
 
-    def menu(self) -> None:
-        """Display the menu and act on the selections"""
-
-        while self.user_input != 'q' or "":
-
-            print("\nPlease enter from the following list:\n\
-                1: Balance\n\
-                2: Deposit\n\
-                3: Withdraw\n\
-                4: Interest\n\
-                5: Exit")
-            self.user_input = input()
-
-            match self.user_input:
-                case "1":
-                    ATM.balance()
-                case "2":
-                    user_input = input("Deposit amount: ")
-                    ATM.deposit(user_input)
-                    ATM.transactions()
-                case "3":
-                    withdraw_amnt = float(input("Withdraw amount: "))
-                    ATM.withdraw(withdraw_amnt)
-                    ATM.transactions()
-                case "4":
-                    interest_chng = float(input("Interest rate: "))
-                    interest_chng = interest_chng % 100
-                    ATM.interest(interest_chng)
-                case "5":
-                    ATM.quit()
-                case _:
-                    print(f"{F.RED}INVALID INPUT: {self.user_input}{R}")
-                    continue
-
     def balance(self) -> None:
         """Return the present balance"""
 
@@ -76,28 +42,71 @@ class ATM:
         self.transaction_num += 1
         self.__balance += input
 
+        with open("ATM_log.txt", "a") as f_write:
+            f_write.write(f"user deposited ${input}")
+
     def withdraw(self, input: float) -> None:
         """Subtract monies from the account balance"""
 
         self.transaction_num += 1
         self.__balance -= input
+        with open("ATM_log.txt", "a") as f_write:
+            f_write.write(f"user deposited ${input}")
 
     def interest(self, input: float) -> None:
         """Change the interest amount"""
 
         self.__interest = input
 
-    def transactions(self) -> None:
-        """Keep a log of all transctions"""
-
-        with open("ATM_log.txt", "a") as f_write:
-            f_write.write(f"Transaction number: {self.transaction_num}\n\
-                           Balance: {self.__balance}\n\
-                           Interest rate: {self.__interest}")
-
     def quit(self) -> None:
         """Exit the ATM menu"""
 
-        print(f"{F.GREEN}Thanks you for choosing Hunter ATM's for your\
-            business today!{R}")
+        print(f"{F.GREEN}Thanks you for choosing Hunter ATM's for your"
+              f"business today!{R}")
         exit()
+
+    def menu(self) -> None:
+        """Display the menu and act on the selections"""
+
+        while self.user_input != 'q' or "":
+
+            print("\nPlease enter from the following list: \n"
+                  "1: Balance\n"
+                  "2: Deposit\n"
+                  "3: Withdraw\n"
+                  "4: Interest\n"
+                  "5: Transactions\n"
+                  "6: Exit")
+            self.user_input = input()
+
+            match self.user_input:
+                case "1":
+                    self.balance()
+                case "2":
+                    user_input = float(input("Deposit amount: "))
+                    self.deposit(user_input)
+                case "3":
+                    withdraw_amnt = float(input("Withdraw amount: "))
+                    self.withdraw(withdraw_amnt)
+                case "4":
+                    interest_chng = float(input("Interest rate: "))
+                    interest_chng = interest_chng % 100
+                    self.interest(interest_chng)
+                case "5":
+                    with open("ATM_log.txt", "r") as f_read:
+                        print(f"{f_read.read()}")
+                case "6":
+                    self.quit()
+                case _:
+                    print(f"{F.RED}INVALID INPUT: {self.user_input}{R}")
+                    continue
+
+
+def main() -> None:
+
+    atm = ATM()
+    atm.menu()
+
+
+if __name__ == "__main__":
+    main()
