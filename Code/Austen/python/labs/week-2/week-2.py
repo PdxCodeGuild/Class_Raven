@@ -1,6 +1,6 @@
 def importutilities():
   import sys
-  utilspath = 'X:\\python\\'
+  utilspath = 'X:\\pdx-code-guild\\Class_Raven\\Code\\Austen\\python\\'
   sys.path.append(utilspath)
 
 # * contains uis to access each lab completed throughout the week
@@ -117,7 +117,8 @@ def week_2():
 def run_and_write():
     importutilities()
     from utilities.timestamp import now
-    file = open('docs/results-log.txt', 'a')
+    file = open(
+        'docs\\results.log', 'a')
     results = week_2()
     stamp = now.result()
     results.insert(0, stamp)
