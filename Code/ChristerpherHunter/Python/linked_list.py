@@ -45,18 +45,70 @@ class Stack:
         return f"({self.top})"
 
 
+class LinkedList:
+    """an implementation of a Linked List"""
+
+    def __init__(self):
+        self.root = []
+
+    def append(self, element):
+        """add the element to the end"""
+
+        self.root.append(element)
+
+    def insert(self, element, index):
+        """insert the element at the given index"""
+
+        self.root.insert(index, element)
+
+    def remove(self, element):
+        """remove the first occurrence of the element"""
+
+        self.root.remove(element)
+
+    def get(self, index):
+        """get the element at the given index (starting with 0)"""
+
+        return self.root.pop(index)
+
+    def find(self, element):
+        """find the first occurrence of the element and return it"""
+
+        for i in self.root:
+            if i == element:
+                return i
+
+    def length(self):
+        """return the length of the list"""
+
+        return len(self.root)
+
+    def __str__(self) -> str:
+        return(f"{self.root}")
+
+
 def main() -> None:
 
-    s = Stack()
-    s.push(5)
-    s.push(6)
+    # s = Stack()
+    # s.push(5)
+    # s.push(6)
 
-    print(s.length())
-    s.peek()
-    print(s.pop())
-    s.peek()
-    print(s.pop())
-    s.peek()
+    # print(s.length())
+    # s.peek()
+    # print(s.pop())
+    # s.peek()
+    # print(s.pop())
+    # s.peek()
+
+    nums = LinkedList()
+    nums.append(5)
+    nums.append(6)
+    nums.insert(7, 0)
+    print(nums)  # [7, 5, 6]
+    print(nums.find(5))  # 1
+    nums.remove(5)
+    print(nums)  # [7, 6]
+    print(nums.length())  # 2
 
 
 if __name__ == "__main__":
