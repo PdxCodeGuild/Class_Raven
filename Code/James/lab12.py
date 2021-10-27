@@ -1,28 +1,39 @@
 """python  """
 class ATM:
     balance = 0
-    def __repr__(self): # stands for the representation of the class 'atm'
+    def __repr__(self): # '_repr_ stands for the representation of the class 'atm'
         return self.balance
 
     def check_balance(self):    # self refers to the class this method belongs to.
-        return self.balance
+        return round(self.balance, 2) # got rid of big balance decimal with the round function
     
     def deposit(self, amount):
-        self.balance += amount
-        return self.balance
-    
-    def check_withdrawal(self, amount): # I'm getting 
-        if amount > self.balance:
-            return False
+        if amount > 0:
+            self.balance += amount # returned a bool to define success.
+            return True
         else:
+            return False
+    
+    def check_withdrawal(self, amount): # If amount is greater than balance return false
+        if amount > self.balance: 
+            return False
+        elif amount <= self.balance:
             return True
 
     def withdraw(self, amount):
-        self.balance -= amount
-        return self.balance
+        if ATM.check_withdrawal(self, amount): #calling check_withdrawal method to check if withdraw amount is valid
+            self.balance -= amount
+            return True
+        else:
+            return False
+        
 
     def calc_interest(self):
         return self.balance * .001
+
+    # def print_transactions(self):
+    #      everytime User deposits or withdraws add a string to a list 
+    #     if atm.withdraw(self, amount)
 
 
 
@@ -60,8 +71,8 @@ while True:
     elif command == 'Withdraw':
         amount = float(input('How much would you like to withdraw?\n> $'))
             
-        success = atm.withdraw(amount)
-            
+        success = atm.withdraw(amount) #changed withdraw method to return a bool so conditioanl statements work
+           
         if not success:
             print('Insufficient funds')
         else:
