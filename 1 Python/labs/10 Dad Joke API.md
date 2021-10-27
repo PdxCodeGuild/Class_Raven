@@ -9,7 +9,7 @@ Use the [Dad Joke API](https://icanhazdadjoke.com/api) to get a dad joke and dis
 
 ## Part 1
 
-Use the [requests](../docs/16%20Requests.md) library to send an HTTP request to `https://icanhazdadjoke.com/` with the `accept` header as `application/json`. This will return a dad joke in JSON format. You can then use the `.json()` method on the response to get a dictionary. Get the joke out of the dictionary and show it to the user.
+Use the [requests](https://github.com/psf/requests) library to send an HTTP request to `https://icanhazdadjoke.com/` with the `accept` header as `application/json`. This will return a dad joke in JSON format. You can then use the `.json()` method on the response to get a dictionary. Get the joke out of the dictionary and show it to the user.
 
 
 ## Part 2 (optional)

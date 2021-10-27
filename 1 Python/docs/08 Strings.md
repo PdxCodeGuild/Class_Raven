@@ -308,7 +308,7 @@ if 'h' in 'hello world!':
 
 ```python
 text = 'Hey!'
-if char in text:
+for char in text:
   print(char)
 ```
 > H
