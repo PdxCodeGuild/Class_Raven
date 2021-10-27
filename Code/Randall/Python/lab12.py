@@ -51,7 +51,10 @@ class ATM():
             print(f'Sorry! Current balance is ${self.balance}; but you tried to withdraw ${amount}.')
             return self.balance
 
-#account1 = ATM(505)
+    ###def calc_interest(self, amount):
+### brain fried...must rest.... 
+
+
 
 
 atm = ATM() # create an instance of our class
