@@ -40,9 +40,11 @@ class ContactList:
         3) convert the dictionary to a json string (json.dumps)
         4) write the json string to the file
         """
-        self.contacts = dumps(self.contacts["contacts"])
-        with open("contact_list.json", "a") as f_write:
-            f_write.write(self.contacts)
+
+        string_dict = dumps(self.contacts, indent=4)
+
+        with open("contact_list.json", "w") as f_write:
+            f_write.write(string_dict)
 
     def print(self):
         """
@@ -59,21 +61,34 @@ class ContactList:
         add the new dictionary to self.contacts
         """
 
-        new_contact = [
-            {"name": f"{name}"},
-            {"phone_number": f"{phone_number}"},
-            {"email": f"{email}"}
-        ]
+        new_contact = {
+            "name": f"{name}",
+            "phone_number": f"{phone_number}",
+            "email": f"{email}"
+        }
 
-        self.contacts["contacts"] = new_contact
+        self.contacts["contacts"].append(new_contact)
 
     def remove(self, name):
-        """find the contact in self-contacts with the given name
-        remove the element at that index"""
+        """
+        find the contact in self-contacts with the given name
+        remove the element at that index
+        """
+
+        for i in self.contacts["contacts"]:
+            if i["name"] == name:
+                self.contacts["contacts"].remove(i)
 
     def update(self, old_name, new_name, new_phone_number, new_email):
-        """find the contact in self.contacts with the given old_name
-        set that contacts' name, phone number, etc to the given values"""
+        """
+        find the contact in self.contacts with the given old_name
+        set that contacts' name, phone number, etc to the given values
+        """
+
+        for i in self.contacts["contacts"]:
+            if i["name"] == old_name:
+                self.add(new_name, new_phone_number, new_email)
+                self.remove(old_name)
 
 
 def main():
