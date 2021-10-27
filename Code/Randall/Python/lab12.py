@@ -1,5 +1,5 @@
 # lab12 ATM
-######################DRAFT#################################
+### NEED TO ADD INTEREST ###
 class ATM(): 
 
     def __init__(self, balance=0):        
@@ -50,9 +50,6 @@ class ATM():
             self.history.append(f'Date: {self.datetime}. REJECTED Withdrawl for amount: ${amount}. Balance is ${self.balance}.')
             print(f'Sorry! Current balance is ${self.balance}; but you tried to withdraw ${amount}.')
             return self.balance
-
-    ###def calc_interest(self, amount):
-### brain fried...must rest.... 
 
 
 
