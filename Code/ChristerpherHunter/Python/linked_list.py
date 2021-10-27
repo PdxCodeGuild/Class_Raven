@@ -89,16 +89,20 @@ class LinkedList:
 
 def main() -> None:
 
-    # s = Stack()
-    # s.push(5)
-    # s.push(6)
+    print("\nStack")
+    s = Stack()
+    s.push(5)
+    s.push(6)
 
-    # print(s.length())
-    # s.peek()
-    # print(s.pop())
-    # s.peek()
-    # print(s.pop())
-    # s.peek()
+    print(s.length())
+    s.peek()
+    print(s.pop())
+    s.peek()
+    print(s.pop())
+    s.peek()
+
+    print("\n")
+    print("LinkedList")
 
     nums = LinkedList()
     nums.append(5)
