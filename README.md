@@ -15,12 +15,20 @@ Weeks 16, 17, 18: Capstone project
  [Check off completed work here:](https://docs.google.com/document/d/1FIEfkpRa00o4KCnnR45cFFjWIjSOdgNEQnmEge-KZC8/edit?usp=sharing).
  
 ### Assigned Labs: 
-  - Python lab 02
-  - Python lab 03
-  - Python lab 05
-  - Python lab 06 (cc valid)
-  - Python lab 07 (peaks&valleys)
-  - Python lab 08 (pick6)
+  - Python Lab 02
+  - Python Lab 03
+  - Python Lab 05
+  - Python Lab 06 (CC Valid)
+  - Python Lab 07 (Peaks & Valleys)
+  - Python Lab 08 (Pick 6)
+  - Python Lab 09 (Blackjack)
+  - Python Lab 10 (Dad Jokes)
+  - Python Lab 11 (Rot 13)
+  - Python Lab 13 (Count Words)
+  - Python Lab 14 (ATM)
+
+Optional:
+- [Stack and Linked List](/1%20Python/labs/optional/stack_and_linked_list.md)
 ### Subbmitting your work
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git pull` to pull any recent changes to your local repository
