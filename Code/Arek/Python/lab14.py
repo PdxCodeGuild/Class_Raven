@@ -23,7 +23,7 @@ Add a new method print_transactions() to your class for printing out the list of
 
 
 class ATM:
-    def __init__(self, balance=0, interest_rate=0.1):
+    def __init__(self, balance=0, interest_rate=0.01):
         self.balance = balance
         self.interest_rate = interest_rate
 
