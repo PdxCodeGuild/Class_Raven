@@ -21,7 +21,7 @@ def main():
 
         verb_1, verb_2, verb_3 = verbs.split()
 
-        print(f"\n\nIt has been recently discovered that mankind originated on {planet_name}")
+        print(f"\n\nIt has been recently discovered mankind originated on {planet_name}")
         print(f"Upon indication that {sun_name}, the sun, was turning into a {color_of_life} dwarf, exactly {number_of_drops_of_rain} fled.")
         print(f"Little did anyone know, {verb_1} {verb_2} and {verb_3} would have cost more than {hours_spent_on_zoom}.")
 
