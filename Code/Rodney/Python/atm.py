@@ -25,7 +25,8 @@ class Atm:
         return self.balance
 
     def calc_interest(self):  # only parameter is self since interest rate is default value
-        return self.balance * self.interest_rate # calculating interest 
+        self.balance = self.balance + (self.balance * self.interest_rate) # calculating interest 
+        return self.balance 
 
 atm = Atm()  ## creating new instance of atm 
 
@@ -48,6 +49,8 @@ exit - exit ATM interface:\n> ''').lower()
 
     elif command == 'deposit':
         amount = float(input("How much do you want to deposit?\n> "))
+        while amount <= 0: 
+            amount = float(input("Deposit must be greater than $0. How much do you want to deposit?\n> "))
         print(f'You deposited: ${amount}')
         new_balance = atm.deposit(amount) ## calling deposit function to return balance after added to current balance and assigning to variable 
         print(f'Your new balance is ${new_balance}')
@@ -63,7 +66,7 @@ exit - exit ATM interface:\n> ''').lower()
 
     elif command == 'interest':
         amount = atm.calc_interest()  ## no argument to pass since interest is default for this class attribute 
-        print(f'Accumulated interest: ${amount}')
+        print(f'Balance plus accumulated interest: ${amount}')
 
     elif command == 'transactions':
 
@@ -88,7 +91,7 @@ exit - exit ATM interface:\n> ''').lower()
             print('balance  - get the current balance')
             print('deposit  - deposit money')
             print('withdraw - withdraw money')
-            print('interest - accumulate interest')
+            print('interest - calculate interest')
             print('transactions - list of deposits and withdrawls')
             print('exit - exit the program')
     elif command == 'exit':
