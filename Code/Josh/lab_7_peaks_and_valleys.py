@@ -75,3 +75,6 @@ def print_land_water(data):
     print_str =  ' '.join([elem for elem in display_array])
     print(print_str)
 print_land_water(data_list5)
+
+
+
