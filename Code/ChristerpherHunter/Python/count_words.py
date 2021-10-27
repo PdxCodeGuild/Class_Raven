@@ -86,16 +86,17 @@ class Count:
         [intermediate_list.pop(i)
             for i in range(min(10, len(intermediate_list)))]
 
-        if not self.word_pick:
+        if not self.word_pick.isalpha or self.word_pick == "q":
             [self.top_ten.append(intermediate_list[i]
                                  if len(intermediate_list[i]) > 3 else
                                  intermediate_list[i + 1])
                 for i in range(min(10, len(intermediate_list)))]
         else:
-            [self.top_ten.append(intermediate_list[i]
-                                 if intermediate_list[i] == self.word_pick else
-                                 "Word not found")
-                for i in range(min(10, len(intermediate_list)))]
+            for i in range(len(intermediate_list)):
+                if intermediate_list[i][0] == self.word_pick:
+                    return intermediate_list[i]
+                else:
+                    print(".....")
 
         return self.top_ten
 
@@ -103,7 +104,10 @@ class Count:
         """Ask user input then match word for the count"""
 
         while not self.word_pick:
-            self.word_pick = input("Enter a word to be matched and counted: ")
+            self.word_pick = input("Enter a word to be matched and counted or "
+                                   "'q' to see top 10: ")
+            if self.word_pick == 'q':
+                break
 
 
 def main() -> None:
@@ -117,7 +121,7 @@ def main() -> None:
     words.user_input()
     high_count = words.highest_count()
 
-    print(high_count)
+    print(high_count if not high_count == [] else print("Not in Text"))
 
 
 if __name__ == "__main__":
