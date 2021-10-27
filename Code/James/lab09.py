@@ -8,8 +8,7 @@ playing_cards = {'a': 1, 'q': 10, 'j': 10, 'k': 10, '2': 2, '3': 3,
 hand_values = []
 
 
-# if input == 'q':
-#     q = 10
+
 #ask user for 3 playing cards
 print('Welcome to Blackjack Advice. Enter faces as Q, J, K or A.')
 while True: 
@@ -22,10 +21,7 @@ while True:
     #returns a string, I need it to return the value from the dictionary.
     if user_card1 in playing_cards:
         user_card1n = playing_cards.get(user_card1)
-    # elif user_card1 not in playing_cards:
-    #     user_card1 = input
-
-    # print(user_card1)
+    
         
     user_card2 = input('What\'s your second card? ').lower().strip(' ')
     if not user_card2.isalnum():
@@ -62,13 +58,7 @@ while True:
     continue
 
 
-#print(total_card)
-# def check_card(user):
-#     for x in playing_cards:
-#         if user == x:
-#             print(x)
 
-# check_card(user_card1)
 
 
         

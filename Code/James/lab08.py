@@ -52,10 +52,6 @@ roi = (earnings - expenses)/expenses * 100
 roi = round(roi)
 print(f'Your earned {earnings} and you lost {expenses} your roi is {roi} %.')
 
-#get rid of redundancy, add comments to cement the ideas in your thinking
-
-# I want a function that adds up all the matched elements in the list.
-#def count(ticket, winning_list):
 
     
             

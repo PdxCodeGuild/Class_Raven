@@ -38,9 +38,7 @@ class ATM:
     def print_transactions(self):
         """   print the transactions """
         print(self.transaction_list)
-    # def print_transactions(self):
-    #      everytime User deposits or withdraws add a string to a list 
-    #     if atm.withdraw(self, amount)
+   
 
 
 
