@@ -28,6 +28,7 @@ class ATM:
         self.__interest = 0.01
         self.transaction_num = int()
         self.user_input = str()
+        self.overdraft = bool()
 
         print(f"\n{F.GREEN}Welcome to the ATM:{R} ")
 
@@ -49,9 +50,13 @@ class ATM:
         """Subtract monies from the account balance"""
 
         self.transaction_num += 1
-        self.__balance -= input
-        with open("ATM_log.txt", "a") as f_write:
-            f_write.write(f"user deposited ${input}\n")
+        self.__balance -= input if (self.__balance - input) >= 0 else self.overdraft
+
+        if self.overdraft:
+            print("INSUFFICIENT FUNDS")
+        else:
+            with open("ATM_log.txt", "a") as f_write:
+                f_write.write(f"user deposited ${input}\n")
 
     def interest(self, input: float) -> None:
         """Change the interest amount"""
