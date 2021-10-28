@@ -1,7 +1,7 @@
 """
 PDX Code Guild Full Stack Bootcamp
 ->Lab 16
-  Automated Teller Machine
+  Searching And Sorting
 Michael B
 
 Searching and Sorting
