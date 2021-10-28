@@ -9,7 +9,10 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.first_node = None
+        
+        # private variable indicating the number of nodes in the list
         self.__length = 0
+
 
     def append(self, element):
         '''Add the given element to the end of the list'''
@@ -70,6 +73,7 @@ class LinkedList:
             # increase the list's length to include the new_node
             self.__length += 1
 
+
     def remove(self, element):
         '''Remove the first occurrence of the given element'''
 
@@ -83,8 +87,6 @@ class LinkedList:
             temp = self.first_node
             self.first_node = temp.next
             temp = None # delete the removed node from memory
-
-            return
         else:
             # otherwise, traverse the list,
             # checking each node's next node for the target value
@@ -98,14 +100,17 @@ class LinkedList:
                     
                     temp = None # delete the removed node from memory
                     return
-
                 current_node = current_node.next
-        
+
+            # if the loop makes it all the way through, the element wasn't found
+            raise ValueError(f"Element not found: {element}")
+
         # decrease the list's length to exclude the removed node
         self.__length -= 1
 
+
     def get(self, index):
-        '''get the element at the given index (starting with 0)'''
+        '''Get the element at the given index (starting with 0)'''
 
         if index > self.__length:
             raise IndexError(f'Index out of range: {index}')
@@ -113,7 +118,7 @@ class LinkedList:
         current_node = self.first_node
         current_index = 0
 
-        # traverse the list until the desired index
+        # Traverse the list until the desired index
         # return the value of the node at the index
         while current_node:
             if current_index == index:
@@ -122,7 +127,9 @@ class LinkedList:
             current_index += 1
             current_node = current_node.next
 
-    def find(self, element): # find the first occurrence of the element and return it
+
+    def find(self, element):
+        '''Return the index of the first occurance of the given element'''
         current_node = self.first_node
         current_index = 0
 
@@ -132,6 +139,9 @@ class LinkedList:
 
             current_index += 1
             current_node = current_node.next
+            
+        # if the loop makes it all the way through, the element wasn't found
+        raise ValueError(f"Element not found: {element}")
 
     def length(self):
         '''Return the length of the list'''
@@ -160,7 +170,7 @@ if __name__ == '__main__':
 
     # instantiate a linked list
     linked_list = LinkedList()
-    print(linked_list)
+    # print(linked_list)
 
 
     # add some items, each to the end
@@ -170,19 +180,20 @@ if __name__ == '__main__':
     linked_list.append('D')
     linked_list.append('E')
 
-    print(linked_list.length()) # 5
+    # print(linked_list.length()) # 5
 
     linked_list.insert('K', 0)
-    print(linked_list) # K -> A -> B -> C -> D -> E
+    # print(linked_list) # K -> A -> B -> C -> D -> E
 
     linked_list.insert('W', 4)
-    print(linked_list) # K -> A -> B -> C -> W -> D -> E
+    # print(linked_list) # K -> A -> B -> C -> W -> D -> E
     # linked_list.insert('D', 10) # IndexError: Index out of range: 10
 
 
     linked_list.remove('C')
-    print(linked_list) # K -> A -> B -> W -> D -> E
+    # print(linked_list) # K -> A -> B -> W -> D -> E
+    # linked_list.remove('X') # ValueError: Element not found: C
 
 
-    print(linked_list.get(3)) # W
-    print(linked_list.find('D')) # 4
+    # print(linked_list.get(3)) # W
+    # print(linked_list.find('D')) # 4
