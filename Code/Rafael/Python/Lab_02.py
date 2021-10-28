@@ -1,6 +1,6 @@
 # LAB 02: Make Change 
-# Version 1
 # Rafael Medina
+# Version 1
 
 
 

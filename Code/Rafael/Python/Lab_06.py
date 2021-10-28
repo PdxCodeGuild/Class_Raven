@@ -1,4 +1,24 @@
 # Lab_06 Credit Card Validation
+#Rafael Medina
+
+"""
+NOTE: Need to rework this to re-do step #7 
+
+Feedback:
+
+"It looks like step 7 isn't doing the correct operations. The instructions say to take the second digit of the transformed CC number and compare it to the check number. The way the code is written, it's converting used_digits to the check_digit and then comparing them, so they're always going to be equal
+
+used_digits = str(used_digits)
+used_digits = check_digit
+print('#7', used_digits)
+
+# 8. If that matches the check digit, the whole card number is valid.
+
+if used_digits == check_digit: # this will always be True
+    print('#8',"Valid!")"
+"""
+
+
 # 4556737586899855
 
 user_input = list(input('enter 16 single digits from 0-9 with no spaces: ')) 

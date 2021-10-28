@@ -1,8 +1,11 @@
 # Lab_10 Dad JokeAPI
+#Rafael Medina
+
 
 import requests
 import time
 import random
+
 
 
 url = "https://icanhazdadjoke.com/search"

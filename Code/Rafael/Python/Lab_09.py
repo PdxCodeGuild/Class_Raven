@@ -1,4 +1,17 @@
 # Lab_09 Blackjack Advice
+# Rafael Medina
+
+"""
+NOTE: Need to make changes to this lab 9
+10/28/2021
+
+Feedback:
+Lab 09 - Three minor things:
+
+A score of 17 causes an infinite loop.
+A score of 21 causes an infinite loop.
+Jacks, Queens and Kings are all worth 10 points in Blackjack. They're currently 11, 12, 13 in the code.
+"""
 
 # dict for card values
 card_values = {
@@ -12,9 +25,9 @@ card_values = {
 '8': 8,
 '9': 9,
 '10': 10,
-'j': 11,
-'q': 12,
-'k': 13
+'j': 10,
+'q': 10,
+'k': 10
 }
 
 # input converted to a string
