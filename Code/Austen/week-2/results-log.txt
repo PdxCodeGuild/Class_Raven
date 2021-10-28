@@ -1,0 +1,7 @@
+
+Results from 10/18 at 21:23:
+1 of 1 - Monday: ['pick_6: Your balance after 100000 tickets: $-175553']
+
+Results from 10/19 at 21:51:
+1 of 2 - Monday: ['pick_6: Your balance after 1000 tickets: $-1784']
+2 of 2 - Tuesday: ['blackjack: busted', 'blackjack: win', 'blackjack: lost', 'blackjack: win']
