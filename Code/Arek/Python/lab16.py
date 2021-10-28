@@ -5,17 +5,20 @@ Implement linear search, which simply loops through the given list and check if 
 If it is, return the index at which it was found, otherwise, return a value indicating that it was not found.
 """
 
-
+# removed the .index method to remove complexity
 """def linear_search(nums, value):
-    if value in nums:
-        return nums.index(value)
-    else:
-        return f'value not found'
+    long = len(nums)
+    for i in range(long):
+        if nums[i] == value:
+            return i
+    return f"Value not found"
+    
+        
 # index 0  1  2  3  4  5  6  7
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
 index = linear_search(nums, 3)
-print(index) # 2
-"""
+print(index) # 2"""
+
 
 
 """
@@ -30,10 +33,10 @@ Implement binary search, which requires that a list is sorted and divides its se
         If the element at mid is the one you're searching for, return it, otherwise check is the target value is less than or greater than the one at mid. 
         If it's less, make high equal to mid and loop.
         If it's greater, make low equal to mid and loop. If the loop terminates without returning, return a value indicating that it was not found.
-
-def binary_search(nums, value):
-    l = nums[0]
-    h = nums[len(nums) - 1]
+"""
+"""def binary_search(nums, value):
+    l = 0
+    h = len(nums) - 1 # changed l and h to the the indices instead of the values of the indices
     
     while l < h:
         m = (l + h) // 2
@@ -46,10 +49,10 @@ def binary_search(nums, value):
     return 'unsuccessful'
     
 #       0  1  2  3  4  5  6  7
-nums = [1, 2, 3, 4, 5, 6, 7, 8]
+nums = [11, 2, 3, 44, 5, 6, 7, 8]
 index = binary_search(nums, 3)
-print(index) # 2
-"""
+print(index) # 2"""
+
 
 
 
@@ -64,18 +67,18 @@ We repeatedly loop over the list, comparing each number to the one next to it, a
 def bubbleSort(nums):
     long = len(nums)
     while True:
-        for i in range(long):
-            if nums[i + 1] > long - 1:
-                break
-            elif nums[i] > nums[i + 1]:
-                x = nums[i + 1]
-                nums[i + 1] = nums[i]
-                nums[i] = x   
-        break
-    return nums
-    
-                
-nums = [1, 2, 4, 3, 6, 5, 7, 8]
+        for i in range(long - 1):
+            x = nums[i + 1]
+            y = i + 1
+            bubble = nums[i]
+            if nums[i] > nums[y]: # if nums[i] is changed then it will be skipped over next time
+                nums[y] = bubble
+                nums[i] = x
+        if nums != sorted(nums): # add this statement because as soon as a index was swapped to the lower value next to it, it was just skipped over. So this makes the loop repeat until all the highest values are at the end.
+                continue
+        return nums
+                   
+nums = [2, 4, 99, 45, 6, 5, 88, 8]
 index = bubbleSort(nums)
 print(index)
 
