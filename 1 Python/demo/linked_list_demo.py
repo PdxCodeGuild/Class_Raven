@@ -134,19 +134,23 @@ class LinkedList:
             current_node = current_node.next
 
     def length(self):
-        '''return the length of the list'''
+        '''Return the length of the list'''
         return self.__length
 
 
     def __repr__(self):
+        '''Return a string of the list's values with arrows between each'''
         current_node = self.first_node
 
         output = ''
-        while current_node:
-            output += current_node.value
-            if current_node.next:
-                output += ' -> '
-            current_node = current_node.next
+        if self.__length == 0:
+            output = 'The list is empty.'
+        else:
+            while current_node:
+                output += current_node.value
+                if current_node.next:
+                    output += ' -> '
+                current_node = current_node.next
 
         return output
 
@@ -156,6 +160,8 @@ if __name__ == '__main__':
 
     # instantiate a linked list
     linked_list = LinkedList()
+    print(linked_list)
+
 
     # add some items, each to the end
     linked_list.append('A')
