@@ -1,5 +1,5 @@
 """ Linear search """
-
+import random
 
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
 
@@ -49,15 +49,16 @@ def binary_search(list, target):
 
 
 """ bubble sort """
+random.shuffle(nums) # generating a random list to be used for the bubble sort function
 
-bubble_nums = [64, 34, 25, 12, 22, 11, 90]
 
 
 def bubble_sort(array):
-    
+    print('First list is inital list')
+    print(nums)
     swapped = True
 
-    while(swapped):
+    while(swapped): # while swap is True run the code.
         swapped = False
         for i in range(len(array) - 1): # will run until second to last item in list
             if array[i] > array[i + 1]:
@@ -67,7 +68,7 @@ def bubble_sort(array):
     return array
 
 
-print(bubble_sort(bubble_nums))
+print(bubble_sort(nums))
 
     
     
