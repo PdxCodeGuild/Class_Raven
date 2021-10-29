@@ -49,8 +49,9 @@ Implement binary search, which requires that a list is sorted and divides its se
     return 'unsuccessful'
     
 #       0  1  2  3  4  5  6  7
-nums = [11, 2, 3, 44, 5, 6, 7, 8]
-index = binary_search(nums, 3)
+nums = [11, 2, 3, 44, 5, 6, 7, 8] # if this list is not sorted we will get an error with the numbers that are not in the correct order
+#nums = sorted(nums)
+index = binary_search(nums, 11)
 print(index) # 2"""
 
 
@@ -66,17 +67,21 @@ We repeatedly loop over the list, comparing each number to the one next to it, a
 
 def bubbleSort(nums):
     long = len(nums)
-    while True:
-        for i in range(long - 1):
-            x = nums[i + 1]
-            y = i + 1
-            bubble = nums[i]
-            if nums[i] > nums[y]: # if nums[i] is changed then it will be skipped over next time
-                nums[y] = bubble
+    reps = 0
+    while reps < long + 1:
+        reps += 1
+        for i in range(1, long):
+            x = nums[i - 1]
+            
+            if nums[i - 1] > nums[i]: # if nums[i] is changed then it will be skipped over next time
+                nums[i -1] = nums[i]
                 nums[i] = x
-        if nums != sorted(nums): # add this statement because as soon as a index was swapped to the lower value next to it, it was just skipped over. So this makes the loop repeat until all the highest values are at the end.
-                continue
-        return nums
+        
+    return nums                
+                   
+                
+        
+    
                    
 nums = [2, 4, 99, 45, 6, 5, 88, 8]
 index = bubbleSort(nums)
