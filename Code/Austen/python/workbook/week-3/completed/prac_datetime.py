@@ -103,3 +103,6 @@ def run():
   print(format_datetime(datetime(2021, 4, 20, 17, 30)))
   results.append(format_datetime(datetime(2021, 4, 20, 17, 30)))
   return results
+
+
+run()

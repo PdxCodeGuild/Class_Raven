@@ -105,3 +105,6 @@ def lab_search_sort():
       results.append(data)
       selection = input('search, sort, or quit?\n')
   return results
+
+
+lab_search_sort()

@@ -121,3 +121,6 @@ def lab_ATM():
     message += item
   print(message)
   return message
+
+
+lab_ATM()
