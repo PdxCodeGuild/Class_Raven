@@ -75,7 +75,7 @@ def binary_search(nums, value):
   ...
 #       0  1  2  3  4  5  6  7
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
-index = linear_search(nums, 3)
+index = binary_search(nums, 3)
 print(index) # 2
 ```
 
