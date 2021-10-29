@@ -52,14 +52,15 @@ To emulate a more professional Git workflow, we're going to start creating new b
 - `git pull` if needed to pull any recent changes to your local repository
 
 - Create a new branch and switch to it.
+  - Option 1:
+    - `git branch <YOUR_NAME-SECTION-LAB_NUMBER>`
+    - `git checkout <YOUR_NAME-SECTION-LAB_NUMBER>`
   
-  1. `git branch <YOUR_NAME-SECTION-LAB_NUMBER>`
+  - Option 2:
+    
+    The `-b` flag can be used after the `checkout` command to combine these two steps:
 
-  2. `git checkout <YOUR_NAME-SECTION-LAB_NUMBER>`
-
-  The `-b` flag can be used after the `checkout` command to combine these two steps:
-
-  `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
+    `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
   
   **e.g.** My branch for the **"Lab 01 - Bio"** in the **HTML/CSS** section would be named: `keegan-htmlcss-lab01`. The name can vary a bit from this example, but please keep the chosen formatting consistent from one lab to another.
 
