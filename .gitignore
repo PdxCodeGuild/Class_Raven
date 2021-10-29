@@ -136,5 +136,5 @@ GitHub.sublime-settings
 # This prevents the duplication bulk for everyone else
 Code/Austen/python/docs/**
 Code/Austen/python/reference/**
-**/docs/**
+Code/Austen/python/workbook/**/docs/**
 
