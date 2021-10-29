@@ -46,12 +46,28 @@ To emulate a more professional Git workflow, we're going to start creating new b
 ### Creating a new branch:
 
 - `git branch` to check that you're on the master branch
+
 - `git status` to check if your local master branch is up to date with origin/master on Github.
+  
 - `git pull` if needed to pull any recent changes to your local repository
-- `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>` - e.g. My branch for the **"Lab 01 - Bio"** in the **HTML/CSS** section would be named: `keegan-htmlcss-lab01`. The name can vary a bit from this example, but please keep the chosen formatting consistent from one lab to another.
+
+- Create a new branch and switch to it.
+  
+  1. `git branch <YOUR_NAME-SECTION-LAB_NUMBER>`
+
+  2. `git checkout <YOUR_NAME-SECTION-LAB_NUMBER>`
+
+  The `-b` flag can be used after the `checkout` command to combine these two steps:
+
+  `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
+  
+  **e.g.** My branch for the **"Lab 01 - Bio"** in the **HTML/CSS** section would be named: `keegan-htmlcss-lab01`. The name can vary a bit from this example, but please keep the chosen formatting consistent from one lab to another.
 
 - `git add <FILENAME>` to add a specific file or `git add .` to add everything in the current dicrectory
+  
 - `git commit -m "your commit message"` to commit your work
+
+- Before pushing your new branch, be sure to check the master branch for any updates. Anything changes that were merged into the master branch while you were working on your branch will need to be pulled and merged into your branch.
 
 - A remote branch will need to be created for each new local branch. Git will usually display the proper command to do this when a new branch is pushed for the first time.
 
