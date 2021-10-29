@@ -133,7 +133,7 @@ algorithm partition(A, lo, hi) is
 """
 
 
-def linear_search(nums, value):  # O(n)
+def linear_search(nums, value) -> int:  # O(n)
     for i in range(len(nums)):
         if (
             nums[i] == value
@@ -142,7 +142,7 @@ def linear_search(nums, value):  # O(n)
     return -1
 
 
-def binary_search(nums, value):  # O(log n)
+def binary_search(nums, value) -> int:  # O(log n)
     low = 0  # Low index.
     high = len(nums) - 1  # High index.
     while low <= high:  # While the low index is less than or equal to the high index.
@@ -160,7 +160,7 @@ def binary_search(nums, value):  # O(log n)
     return -1
 
 
-def bubble_sort(nums):  # O(n^2)
+def bubble_sort(nums) -> list:  # O(n^2)
     for i in range(len(nums)):
         for j in range(len(nums) - i - 1):  # -i is to skip the already sorted elements.
             if (
@@ -173,7 +173,7 @@ def bubble_sort(nums):  # O(n^2)
     return nums
 
 
-def insertion_sort(nums):  # O(n^2)
+def insertion_sort(nums) -> list:  # O(n^2)
     for i in range(1, len(nums)):
         j = i
         while (
@@ -187,7 +187,7 @@ def insertion_sort(nums):  # O(n^2)
     return nums
 
 
-def quick_sort(nums):  # O(n log n)
+def quick_sort(nums) -> list:  # O(n log n)
     def partition(nums, low, high):
         pivot = nums[low + (high - low) // 2]  # Calculate the pivot index.
         adjusted_low = low - 1  # adjusted_low is the index of the previous element.
@@ -214,7 +214,7 @@ def quick_sort(nums):  # O(n log n)
                 nums[adjusted_low],
             )  # Swap the current element with the previous element.
 
-    def quicksort_recursive(nums, low, high):
+    def quicksort_recursive(nums, low, high) -> list:
         if low < high:  # If the low index is less than the high index.
             partitioned = partition(nums, low, high)  # Partition the list.
             quicksort_recursive(
