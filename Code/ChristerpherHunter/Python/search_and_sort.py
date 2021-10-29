@@ -64,17 +64,13 @@ class Search:
         sub_arr = list()
         i = 1
         sub_arr.append(nums[0])
-        sub_arr.append(nums[1])
         current_val = int()
-        while i < len(nums):
+        while i != len(nums):
             current_val = nums[i]
-            if current_val < sub_arr[i - 1]:
-                sub_arr[i],
-                sub_arr[i - 1] = sub_arr[i - 1],
-                sub_arr[i]
-                i += 1
-            else:
-                sub_arr.append(current_val)
+            temp = sub_arr[i - 1]
+            if temp > current_val:
+                sub_arr.append(temp)
+                sub_arr[i - 1] = current_val
                 i += 1
 
         return sub_arr
@@ -97,7 +93,7 @@ def main() -> None:
     val2 = search_and_sort.bin_search(nums, 6)
     print(val2)
 
-    sort_me = [5, 4, 1, 9, 2, 7, 6, 8, 3]
+    sort_me = [85, 12, 59, 45, 72, 51]
 
     # val3 = search_and_sort.bubb_sort(sort_me)
     # print(val3)
