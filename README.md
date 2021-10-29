@@ -29,6 +29,7 @@ Weeks 16, 17, 18: Capstone project
 
 Optional:
 - [Stack and Linked List](/1%20Python/labs/optional/stack_and_linked_list.md)
+- Python Lab 17 - Contact List
 ### Subbmitting your work
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git pull` to pull any recent changes to your local repository
