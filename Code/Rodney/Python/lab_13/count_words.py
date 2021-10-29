@@ -29,9 +29,39 @@ for word in text:
     used_words.append(word) #appending that word to used words list 
 
 
-words = list(new_dict.items()) # .items() returns a list of tuples
+'''words = list(new_dict.items()) # .items() returns a list of tuples
 words.sort(key=lambda tup: tup[1], reverse=True)  # sort largest to smallest, based on count
-for i in range(min(10, len(words))):  # print the top 10 words, or all of them, whichever is smaller
-    print(words[i])
+for i in range(min(50, len(words))):  # print the top 10 words, or all of them, whichever is smaller
+    print(words[i])'''
 
 
+dict2 = {}
+empty_list = []
+mother_empty_list = []
+x = 0
+
+for word in text:
+    empty_list.append(word)
+    if len(empty_list) == 2:
+        mother_empty_list.append(empty_list)
+        empty_list = []
+
+for list in mother_empty_list:
+    if ''.join(list) not in dict2:
+        for lists in mother_empty_list:
+            if ''.join(list) == ''.join(lists):
+                if ''.join(list) in dict2:
+                   dict2[list] += 1
+                   continue
+                list = ''.join(list)
+                dict2[list] = x
+
+print(dict2)
+print(type(dict2))
+new_words = list(dict2.items())
+
+#words = list(dict2.items()) # .items() returns a list of tuples
+#words.sort(key=lambda tup: tup[1], reverse=True)  # sort largest to smallest, based on count
+#for i in range(min(10, len(words))):  # print the top 10 words, or all of them, whichever is smaller
+    #print(words[i])
+print(new_words)
