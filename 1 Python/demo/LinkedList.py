@@ -170,8 +170,8 @@ if __name__ == '__main__':
 
     # instantiate a linked list
     linked_list = LinkedList()
-    # print(linked_list)
-
+    # print(linked_list) # The list is empty.
+    
 
     # add some items, each to the end
     linked_list.append('A')
@@ -181,6 +181,7 @@ if __name__ == '__main__':
     linked_list.append('E')
 
     # print(linked_list.length()) # 5
+    # print(linked_list) # A -> B -> C -> D -> E
 
     linked_list.insert('K', 0)
     # print(linked_list) # K -> A -> B -> C -> D -> E
@@ -189,6 +190,9 @@ if __name__ == '__main__':
     # print(linked_list) # K -> A -> B -> C -> W -> D -> E
     # linked_list.insert('D', 10) # IndexError: Index out of range: 10
 
+
+    # linked_list.remove('K')
+    # print(linked_list)
 
     linked_list.remove('C')
     # print(linked_list) # K -> A -> B -> W -> D -> E
