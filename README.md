@@ -12,8 +12,6 @@ Weeks 14, 15: Javascript
 
 Weeks 16, 17, 18: Capstone project
 
-[Check off completed work here:](https://docs.google.com/document/d/1FIEfkpRa00o4KCnnR45cFFjWIjSOdgNEQnmEge-KZC8/edit?usp=sharing).
-
 ### Assigned Labs:
 
 <details open>
@@ -69,7 +67,6 @@ To emulate a more professional Git workflow, we're going to start creating new b
     <summary>Screenshot</summary>
     <img src="screenshots/set_upstream_message.png" width=800>
   </details>
-  <br/>
 
 - After successfully pushing your new branch to Github, you should see the option to create a Pull Request for your branch on the main repo page.
 
@@ -77,29 +74,24 @@ To emulate a more professional Git workflow, we're going to start creating new b
     <summary>Screenshot</summary>
     <img src="screenshots/pull_request_button.png" width=800>
   </details>
-  <br/>
 
 - If you don't see that message, you'll have to navigate to your new remote branch
   <details>
     <summary>Screenshot</summary>
     <img src="screenshots/switch_branch.gif" width=800>
   </details>
-  <br/>
 
 - Once you've navigated to your individual branch, you'll find the option to create a Pull Request in the "Contribute" dropdown.
   <details>
     <summary>Screenshot</summary>
     <img src="screenshots/open_pull_request_alternative.gif" width=800>
   </details>
-  <br/>
 
 - Click the "Open Pull Request" button. Add a comment to your Pull Request like "Submitting Lab 00" and click "Create Pull request"
   <details>
     <summary>Screenshot</summary>
     <img src="screenshots/create_pull_request.png" width=800>
   </details>
-
-<br/>
 
 ### Updating a branch
 
