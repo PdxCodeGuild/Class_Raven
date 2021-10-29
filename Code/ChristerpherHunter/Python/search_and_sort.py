@@ -63,15 +63,20 @@ class Search:
 
         sub_arr = list()
         i = 1
+        j = 1
         sub_arr.append(nums[0])
         current_val = int()
         while i != len(nums):
             current_val = nums[i]
             temp = sub_arr[i - 1]
-            if temp > current_val:
-                sub_arr.append(temp)
-                sub_arr[i - 1] = current_val
-                i += 1
+            while temp > current_val:
+                temp += sub_arr[i - j]
+                j -= 1
+                if current_val == sub_arr[0]:
+                    sub_arr[0], current_val = current_val, sub_arr[0]
+
+            sub_arr.append(current_val)
+            i += 1
 
         return sub_arr
 
