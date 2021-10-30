@@ -58,27 +58,19 @@ class Search:
                     swapped = True
         return nums
 
-    def insert_sort(self, nums: list) -> list:
+    def insert_sort(self, nums: list, n) -> list:
         """Implement insertion sort algorithm"""
 
-        sub_arr = list()
-        i = 1
-        j = 1
-        sub_arr.append(nums[0])
-        current_val = int()
-        while i != len(nums):
-            current_val = nums[i]
-            temp = sub_arr[i - 1]
-            while temp > current_val:
-                temp += sub_arr[i - j]
+        if n > 0:
+            self.insert_sort(nums, n - 1)
+            x = nums[n]
+            j = n - 1
+            while j >= 0 and nums[j] > x:
+                nums[j + 1] = nums[j]
                 j -= 1
-                if current_val == sub_arr[0]:
-                    sub_arr[0], current_val = current_val, sub_arr[0]
+            nums[j + 1] = x
 
-            sub_arr.append(current_val)
-            i += 1
-
-        return sub_arr
+        return nums
 
     def quicksort(self, nums: list) -> list:
         """Implement a quicksort recursive algorithm"""
@@ -98,12 +90,12 @@ def main() -> None:
     val2 = search_and_sort.bin_search(nums, 6)
     print(val2)
 
-    sort_me = [85, 12, 59, 45, 72, 51]
+    sort_me = [85, 12, 59, 27, 64, 77, 54, 45, 896, 8474, 89, 65, 21, 32, 98]
 
     # val3 = search_and_sort.bubb_sort(sort_me)
     # print(val3)
 
-    val4 = search_and_sort.insert_sort(sort_me)
+    val4 = search_and_sort.insert_sort(sort_me, len(sort_me) - 1)
     print(val4)
 
 
