@@ -12,7 +12,7 @@ Functions are isolated pieces of code that take input, perform some operation, a
 - [Returning](#returning)
   - [Implicit Return - None](#implicit-return---none)
   - [Returning Multiple Values](#returning-multiple-values)
-- [Decorators](#decorators)
+
 - [Recursion](#recursion)
 - [Lambda Functions](#lambda-functions)
 
@@ -153,13 +153,6 @@ print(height)
 > 500
 > 200
 
-
-
-
-## Decorators
-
-
-TODO
 
 
 
