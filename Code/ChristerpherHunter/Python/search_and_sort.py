@@ -59,7 +59,7 @@ class Search:
         return nums
 
     def insert_sort(self, nums: list, n) -> list:
-        """Implement insertion sort algorithm"""
+        """Implement insertion sort algorithm, recursively"""
 
         if n > 0:
             self.insert_sort(nums, n - 1)
@@ -75,8 +75,27 @@ class Search:
     def quicksort(self, nums: list) -> list:
         """Implement a quicksort recursive algorithm"""
 
-        low = 0
-        hi = len(nums)
+        def partition(nums, low, high):
+            pivot = nums[low + (high - low) // 2]
+            i = low - 1
+            j = high - 1
+            while True:
+                i += 1
+                while nums[i] < pivot:
+                    j -= 1
+                while nums[j] > pivot:
+                    i += 1
+                    if i >= j:
+                        return j
+                nums[i], nums[j] = nums[j], nums[i]
+
+        def quicksort_rec(nums, low, high):
+            if low < high:
+                p = partition(nums, low, high)
+                quicksort_rec(nums, low, p)
+                quicksort_rec(nums, p + 1, high)
+
+        quicksort_rec(nums, 0, len(nums) - 1)
 
 
 def main() -> None:
@@ -99,6 +118,11 @@ def main() -> None:
 
     val4 = search_and_sort.insert_sort(sort_you, len(sort_you) - 1)
     print(val4)
+
+    sort_us = [85, 12, 59, 27, 61, 76, 54, 45, 896, 8474, 89, 65, 21, 32, 98]
+
+    val5 = search_and_sort.quicksort(sort_us)
+    print(val5)
 
 
 if __name__ == "__main__":
