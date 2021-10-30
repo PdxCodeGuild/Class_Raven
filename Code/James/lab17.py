@@ -12,33 +12,44 @@ class ContactList:
         self.contacts = []
 
     def load(self):
-        with open(r'C:/Users/james/Class_Raven/Code/James/contact_list.txt') as json_file:
-            data = json.load(json_file)
-            self.contacts = data
+        with open(r'C:/Users/james/Class_Raven/Code/James/contacts') as json_file:
+            data = json.load(json_file) #got the file back as a python dictionary
+            #print(data) # data is a python dictionary at this point
+            list_contacts = data.get('contacts')# get the list of contacts out of the contacts dictionary. 
+            #print(list_contacts) #this is a list of the dictionary.
+            
+            self.contacts = list_contacts
         ...
     
     def count(self):
-        return len(self.contacts)
+        return print(len(self.contacts))
         
         ...
     
     def save(self):
-        with open(r'C:/Users/james/Class_Raven/Code/James/contact_list.txt', 'w') as f:
-        ...
-
-    def print(self):
+        new_dict = {'contacts': self.contacts}
+        dict_json = json.dumps(new_dict)
+        print(dict_json)
+        with open(r'C:/Users/james/Class_Raven/Code/James/contacts', 'w') as Contact_list:
+            
+        
+        
         
         ...
 
-    def add(self, name, phone_number, email):
+    # def print(self):
+        
+    #     ...
+
+    # def add(self, name, phone_number, email):
        
-        ...
+    #     ...
     
-    def remove(self, name):
+    # def remove(self, name):
         
-        ...
+    #     ...
     
-    def update(self, old_name, new_name, new_phone_number, new_email):
+    # def update(self, old_name, new_name, new_phone_number, new_email):
         
         ...
 
@@ -46,7 +57,8 @@ class ContactList:
 
 contact_list = ContactList() # create an instance of our class
 contact_list.load()
-contact_list.count()
+#contact_list.count()
+contact_list.save()
 # print('Welcome to the Contact List App (CLA)')
 # while True:
 #     command = input('Enter a command: ')
