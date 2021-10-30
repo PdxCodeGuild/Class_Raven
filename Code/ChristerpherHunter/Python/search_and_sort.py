@@ -90,12 +90,14 @@ def main() -> None:
     val2 = search_and_sort.bin_search(nums, 6)
     print(val2)
 
-    sort_me = [85, 12, 59, 27, 64, 77, 54, 45, 896, 8474, 89, 65, 21, 32, 98]
+    sort_me = [85, 12, 59, 26, 64, 77, 54, 45, 896, 8474, 89, 65, 21, 31, 98]
 
-    # val3 = search_and_sort.bubb_sort(sort_me)
-    # print(val3)
+    val3 = search_and_sort.bubb_sort(sort_me)
+    print(val3)
 
-    val4 = search_and_sort.insert_sort(sort_me, len(sort_me) - 1)
+    sort_you = [85, 12, 59, 27, 64, 77, 54, 45, 896, 8474, 89, 65, 21, 32, 98]
+
+    val4 = search_and_sort.insert_sort(sort_you, len(sort_you) - 1)
     print(val4)
 
 
