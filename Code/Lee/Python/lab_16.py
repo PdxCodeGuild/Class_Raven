@@ -23,39 +23,36 @@ print(index) # 2'''
 
 """Part 2 - Binary Search
 Implement binary search, which requires that a list is sorted and divides its search range in half each iteration until it finds its target.
+Infinite loop seems to be caused by setting the high value to mid instead of mid - 1 and the low value being set to mid instead of mid + 1. Check the pseudocode carefully
 """
 
 def binary_search(nums, value):
   low = 0
-  high = len(nums)
+  high = len(nums)-1
   counter = 0
-  while low < high:
+  while low <= high:
       mid = (high + low) // 2
-      counter += 1 # Counter prevents infinite loops
-      # print(f"Iteration {counter}. low = {low}, middle = {mid}, high = {high}") # Test printout
-      if counter == 100:
-          break
-      
+      counter += 1 # Counter to track search iterations
+      print(f"Iteration {counter}. low = {low}, middle = {mid}, high = {high}") # Test printout
       if nums[mid] > value:
-          high = mid
+          high = mid-1
           continue
-      
       elif nums[mid] < value:
-          low = mid
+          low = mid+1
           continue
-      
       elif nums[mid] == value:
           return f"The value '{value}' is located at index '{mid}'"
-'''
-#       0  1  2  3  4  5  6  7
+
+#       0  1  2  3  4  5  6  7  
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
-index = binary_search(nums, 2)
-print(index) # 2
-'''
+index = binary_search(nums, 1)
+print(index) #
+
 
 '''Part 3 - Bubble Sort
 Bubble sort is one of the simplest and least efficient sorting algorithms. 
-We repeatedly loop over the list, comparing each number to the one next to it, and swapping them if needed.'''
+We repeatedly loop over the list, comparing each number to the one next to it, and swapping them if needed.
+
 
 def bubble_search(nums):
     complete = False
@@ -83,13 +80,13 @@ def bubble_search(nums):
     return nums
 
 #       0  1  2  3  4  5  6  7  8
-# nums = [6, 7, 8, 4, 0, 1, 2, 3, 5]
-# index = bubble_search(nums)
-#print(index) # 2
-
+nums = [6, 7, 8, 4, 0, 1, 2, 3, 5]
+index = bubble_search(nums)
+print(index) # 2
+'''
 """Part 4 - Insertion Sort (optional)
 Implement insertion sort, which like bubble sort is also O(n^2), but is efficient at placing new values into an already-sorted list.
-"""
+
 
 def insertion_sort(nums):
     sorted = []
@@ -114,6 +111,8 @@ index = insertion_sort(nums)
 print(index)'''
 """
 
+
+"""
 Part 5 - Quicksort (optional)
 Quicksort is one of the most efficient sorting algorithms. It works by swapping elements on either side of a pivot value.
 
