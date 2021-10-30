@@ -22,7 +22,7 @@ while rot > 25: #nice try shananniganizers...
 #rot = 5
 #raw = list(message)
 
-def get_key (string):
+def get_key (string): #string converted to alphabet index
     message_key = []
     for char in string:
         if char in lower:
@@ -32,7 +32,7 @@ def get_key (string):
     
     return message_key
 
-def encode (message_key, rot):
+def encode (message_key, rot): #index changed by rotational value difference and new index used for code letter
     cypher=[]
     rot_message =[]
     for num in message_key:
@@ -47,5 +47,5 @@ def encode (message_key, rot):
     return ''.join(rot_message)
 
 this = get_key(message)
-print(this)
+#print(this)
 print(f" the coded message is:{encode(this,rot)}")
