@@ -36,9 +36,9 @@ class Data:
             print(f"\n{F.YELLOW}DATA ALREADY MIGRATED{R}\n")
 
     def get_data(self) -> list:
-git
+
         df = pd.read_csv(self.file, sep=" ")
-        
+
         return df
 
 
