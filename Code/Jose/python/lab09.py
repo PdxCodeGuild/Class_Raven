@@ -13,6 +13,7 @@ playing_cards = {    # Assigning the point value of each card individually
 'Q': 10,
 'K': 10
 }
+current_hand = 0
 
 while True:
 
@@ -24,7 +25,7 @@ while True:
     p_card2 = playing_cards[p_card2]
     p_card3 = playing_cards[p_card3]
 
-    current_hand = p_card1 + p_card2 + p_card3
+    current_hand += p_card1 + p_card2 + p_card3
     if current_hand < 17:
         print(f"{current_hand} Hit \n")
     elif current_hand >= 17 and current_hand < 21:

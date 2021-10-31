@@ -6,9 +6,15 @@ class atm:
     def check_balance(self):
         return self.balance
     def deposit(self, amount):
-        self.balance += amount
+        if amount <= 0:
+            return False
+        elif amount > 0:
+            self.balance += amount
     def withdraw(self, amount):
-        self.balance -= amount
+        if amount > self.balance:
+            return False
+        elif amount <= self.balance:
+            self.balance -= amount
     def calc_interest(self):
         amount = self.interest
         self.interest = 0
