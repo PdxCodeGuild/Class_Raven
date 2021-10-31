@@ -75,10 +75,16 @@ class Search:
     def quicksort(self, nums: list) -> list:
         """Implement a quicksort recursive algorithm"""
 
+        def quicksort_rec(nums, low, high):
+            if low < high:
+                p = partition(nums, low, high)
+                quicksort_rec(nums, low, p)
+                quicksort_rec(nums, p + 1, high)
+
         def partition(nums, low, high):
             pivot = nums[low + (high - low) // 2]
             i = low - 1
-            j = high - 1
+            j = high + 1
             while True:
                 i += 1
                 while nums[i] < pivot:
@@ -88,12 +94,6 @@ class Search:
                     if i >= j:
                         return j
                 nums[i], nums[j] = nums[j], nums[i]
-
-        def quicksort_rec(nums, low, high):
-            if low < high:
-                p = partition(nums, low, high)
-                quicksort_rec(nums, low, p)
-                quicksort_rec(nums, p + 1, high)
 
         quicksort_rec(nums, 0, len(nums) - 1)
 

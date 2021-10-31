@@ -24,39 +24,37 @@ class ATM:
 
     def __init__(self) -> None:
 
-        self.__balance = 0
+        self.__balance = float()
         self.__interest = 0.01
-        self.transaction_num = int()
         self.user_input = str()
-        self.overdraft = bool()
 
         print(f"\n{F.GREEN}Welcome to the ATM:{R} ")
 
     def balance(self) -> None:
         """Return the present balance"""
 
-        print(f"\n{F.YELLOW}Balance:{R} {self.__balance}")
+        print(f"\n{F.YELLOW}Balance:{R} {self.__balance:.2f}")
 
     def deposit(self, input: float) -> None:
         """Deposit doll hairs into the account balance"""
 
-        self.transaction_num += 1
         self.__balance += input
 
         with open("ATM_log.txt", "a") as f_write:
-            f_write.write(f"user deposited ${input}\n")
+            f_write.write(f"\nuser deposited ${input:.2f} @ "
+                          f"{self.__interest:.2f}\n")
 
     def withdraw(self, input: float) -> None:
         """Subtract monies from the account balance"""
 
-        self.transaction_num += 1
-        self.__balance -= input if (self.__balance - input) >= 0 else self.overdraft
+        temp_balance = self.__balance - input
+        self.__balance -= input if input < self.__balance else 0
 
-        if self.overdraft:
+        if temp_balance < 0:
             print("INSUFFICIENT FUNDS")
         else:
             with open("ATM_log.txt", "a") as f_write:
-                f_write.write(f"user deposited ${input}\n")
+                f_write.write(f"user withdrew ${input}\n")
 
     def interest(self, input: float) -> None:
         """Change the interest amount"""
@@ -67,7 +65,7 @@ class ATM:
         """Exit the ATM menu"""
 
         print(f"{F.GREEN}Thanks you for choosing Hunter ATM's for your"
-              f"business today!{R}")
+              f"business today!{R}\n")
         exit()
 
     def menu(self) -> None:
@@ -89,7 +87,7 @@ class ATM:
                     self.balance()
                 case "2":
                     user_input = float(input("Deposit amount: "))
-                    self.deposit(user_input)
+                    self.deposit(int(user_input))
                 case "3":
                     withdraw_amnt = float(input("Withdraw amount: "))
                     self.withdraw(withdraw_amnt)
@@ -98,8 +96,11 @@ class ATM:
                     interest_chng = interest_chng % 100
                     self.interest(interest_chng)
                 case "5":
-                    with open("ATM_log.txt", "r") as f_read:
-                        print(f"{f_read.read()}")
+                    try:
+                        with open("ATM_log.txt", "r") as f_read:
+                            print(f"\n{f_read.read()}")
+                    except FileNotFoundError:
+                        print(f"{F.RED}NO TRANSACTIONS MADE YET{R}")
                 case "6":
                     self.quit()
                 case _:
