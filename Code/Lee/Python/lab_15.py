@@ -7,8 +7,36 @@ Lab 15 - Rain Data
 import csv
 from datetime import datetime
 import pandas
+import math
 
+def average(x):
+    total = 0
+    for i in range(len(x)):
+        total += x[i]
+    return total / len(x)
 
+def variance(x):
+    mu = average(x)
+    total = 0
+    for i in range(len(x)):
+        total += (x[i] - mu)**2
+    return total / len(x)
+
+def standard_deviation(x):
+    v = variance(x)
+    return math.sqrt(v)
+
+def most_rain(x):
+    record = 0
+    for current_record in x:
+        current_record = int(current_record)
+        if current_record > record:
+            record = current_record
+
+    for key, value in data_dict.items():
+        if int(value) == record:
+            print(f"Record rainfall of: {value} hundreths of an inch on {key}")
+    return
 
 with open('lab_15_data.csv', 'r', encoding='utf-8') as f:
     contents = f.read().split('\n')
@@ -30,11 +58,12 @@ with open('lab_15_data.csv', 'r', encoding='utf-8') as f:
     for entry in data_dict.keys():
         entry = datetime.strptime(entry, '%d-%b-%Y')
 
-    sum_of_totals = 0
-    for entry in data_dict.values():
-        if entry == "-":
-            entry = 0
-        entry = int(entry)
-        sum_of_totals += entry
-
-    print(sum_of_totals)
+    daily_rainfall = []
+    for key, value in data_dict.items():
+        if value == "-":
+            data_dict[key] = 0
+            value = 0
+        value = int(value)
+        daily_rainfall.append(0+value)
+    
+    most_rain(daily_rainfall)

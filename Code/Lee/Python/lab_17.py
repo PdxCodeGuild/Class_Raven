@@ -1,4 +1,4 @@
-    """
+"""
     Lee Colburn
     Evening Bootcamp - PDX Code Guild
     Lab 17 - Contact List
@@ -76,8 +76,12 @@ class ContactList:
     def print(self):
         # loop over self.contacts
         # print the information for each contact on a separate line
+        counter=1
         for i in self.contacts:
-            print(i)
+            print(f'\nContact {counter}:')
+            for value in i.values():
+                print(f"{value}")
+            counter += 1
         return
 
     def add(self, name, phone_number, email):
