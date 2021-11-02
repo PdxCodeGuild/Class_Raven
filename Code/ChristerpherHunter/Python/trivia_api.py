@@ -87,7 +87,7 @@ class Trivia:
 def main() -> None:
 
     api = Trivia()
- 
+
     holding = api.user_answers()
     print(holding)
 
