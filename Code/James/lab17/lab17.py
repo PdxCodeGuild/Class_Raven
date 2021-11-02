@@ -21,7 +21,7 @@ class ContactList:
             
             self.contacts = contacts
         ...
-    
+    @property # changed to a property so I dont need () in the repl
     def count(self):
         return len(self.contacts)
         
@@ -96,10 +96,10 @@ while True:
     command = input('Enter a command: ')
     if command == 'load':
         contact_list.load()
-        print(f'Loaded {contact_list.count()} contacts.')
+        print(f'Loaded {contact_list.count} contacts.') # changed to a property in the class
     elif command == 'save':
         contact_list.save()
-        print(f'Saved {contact_list.count()} contacts.')
+        print(f'Saved {contact_list.count} contacts.') # changed to a property in the class
     elif command == 'print':
         contact_list.print()
     elif command == 'add':
