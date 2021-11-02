@@ -30,7 +30,7 @@ def rot_13(output):
         if i == " ":
 # Concactinates an empty string after the previous user_input [i] or " " empty space choosen user_input as it goes down the loop.
             user_input = user_input + " "
-# Else if the user_input enters an alphabetic lowercase then that lowercase is moved forward the rotation value x 13 times as an integer value, so i[0] = i[13].
+# Else if the user_input enters an alphabetic lowercase then that lowercase is moved forward the rotation value x 13 times as an integer value, so i[0] = i[12].
 
         else:
             index_position = abc.index(i) + int(rotations)
