@@ -68,19 +68,25 @@ class ContactList:
         contacts['contacts'] = contacts_list
         
         # 3) convert the dictionary to a json string (json.dumps)
-        json_contacts = json.dumps(contacts)
+        json_contacts = json.dumps(contacts, indent=2)
         # 4) write the json string to the file
         f.write(json_contacts)
         return
 
-    def print(self):
+    def print(self, contact=False):
         # loop over self.contacts
         # print the information for each contact on a separate line
         counter=1
+        
         for i in self.contacts:
-            print(f'\nContact {counter}:')
-            for value in i.values():
-                print(f"{value}")
+            
+            display = (
+                f"\nContact {counter}:\n"
+                f"Name: {i['name']}\n"
+                f"Phone: {i['phone_number']}\n"
+                f"Email: {i['email']}"
+            )
+            print(display)
             counter += 1
         return
 
@@ -117,6 +123,8 @@ class ContactList:
                 entry['email'] = new_email
             index += 1
         return
+
+
 
     
 contact_list = ContactList() # create an instance of our class
