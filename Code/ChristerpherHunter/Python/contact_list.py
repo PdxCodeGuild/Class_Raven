@@ -8,6 +8,9 @@ code folder. To open the file, look at the File IO doc, to parse the JSON into
 a Python dictionary, look at json module.
 """
 from json import load, dumps
+from colorama import Fore as F
+
+R = F.RESET
 
 
 class ContactList:
@@ -53,7 +56,12 @@ class ContactList:
         """
 
         for i in range(len(self.contacts["contacts"])):
-            print(self.contacts["contacts"][i])
+            print(f"\n{F.YELLOW}Name:{R} " +
+                  self.contacts["contacts"][i]["name"],
+                  f"{F.YELLOW}Number:{R} " +
+                  self.contacts["contacts"][i]["phone_number"],
+                  f"{F.YELLOW}Email:{R} " +
+                  self.contacts["contacts"][i]["email"])
 
     def add(self, name, phone_number, email):
         """
