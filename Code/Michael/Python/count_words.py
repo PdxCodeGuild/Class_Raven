@@ -83,9 +83,9 @@ def load_file(
         response = requests.get(url)
         response.encoding = "utf-8"  # set encoding to utf-8.
         text = response.text  # get the text.
-        with open("the_raven.txt", "w", encoding="utf-8") as file:
+        with open(file_name, "w", encoding="utf-8") as file:
             file.write(text)
-            print("File saved.\n")
+            print("File downloaded and saved.\n")
     except:
         print("Something went wrong.\n")
     return text
