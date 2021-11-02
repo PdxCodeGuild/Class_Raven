@@ -16,7 +16,14 @@ class trivia:
         
         self.info = questions # now the class is initialized
         
-        print(self.info)
+        #print(self.info[0])
+        for question in self.info:
+
+            self.info[0]['question']
+            print(question)
+    
+    # def questions(self):
+
     
     
     # def print():
