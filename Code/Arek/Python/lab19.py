@@ -53,19 +53,42 @@ from time import sleep
 
 #Defining functions
 def get_questions():
-    diff = input(f"What difficulty do you want? Your choices are 'easy,'medium','hard': ")
-    cat = input(f"What category do you want? Your choices are any number from 9-32: ")
-    _type = input(f"what type of questions do you want? Your choices are 'multiple','boolean': ")
-    questionList = requests.get('https://opentdb.com/api.php', params={
-        'amount': '10',
-        'difficulty': diff,
-        'category': cat,
-        'type': _type})
+    diff_choices = ['easy','medium','hard']
+    cat_choices = [str(i) for i in (range(9,33))]
+    type_choices = ['multiple','boolean']
+
+    while True:
+        diff = input(f"What difficulty do you want? Your choices are {diff_choices}: ")
+        if diff not in diff_choices:
+            print('Option entered not valid.')
+            continue
+        cat = input(f"What category do you want? Your choices are {cat_choices}: ")
+        if cat not in cat_choices:
+            print('Option entered not valid.')
+            continue
+        _type = input(f"what type of questions do you want? Your choices are {type_choices}: ")
+        if _type not in type_choices:
+            print('Option entered not valid.')
+            continue
+        
+        questionList = requests.get('https://opentdb.com/api.php', params={
+            'amount': '10',
+            'difficulty': diff,
+            'category': cat,
+            'type': _type})
+        if questionList.text == '{"response_code":1,"results":[]}':
+            print("There are no set of questions that match your choices, Please enter them again.\n")
+            continue
+        else:
+            break
     
     global data
     data = questionList.json()
     data = data['results']
-    
+
+
+
+
     
 def ask_question(): # This function will ask the user a question, compare it to the correct answer, and give them a point if answered correctly
     get_questions()
@@ -75,18 +98,22 @@ def ask_question(): # This function will ask the user a question, compare it to 
     for i in range(len(data)):
         question_number += 1
         
-        print(f"Question {question_number}.) {html.unescape(data[i]['question'])}")
+        print(f"\nQuestion {question_number}.) {html.unescape(data[i]['question'])}")
+
         if html.unescape(data[i]['type']) == 'multiple':
             answer_choices = html.unescape(data[i]['correct_answer']).split(" ", 0) + html.unescape(data[i]['incorrect_answers'])
             print(f"Your answer choices are: {html.unescape(answer_choices)}")
         elif html.unescape(data[i]['type']) == 'boolean':
             print("Your answer choices are True or False")
+
         sleep(0.5)
         user_answer = input('Please enter your answer: \n').lower()
+
         if user_answer == html.unescape(data[i]['correct_answer']).lower():
             score += 1
         else:
             continue
+
     return score
 
 print(f"Your Score is: {ask_question()}")
