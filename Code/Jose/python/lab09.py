@@ -17,10 +17,15 @@ current_hand = 0
 
 while True:
 
-    p_card1 = input("What's your first card? ")
-    p_card2 = input("What's your second card? ")
-    p_card3 = input("What's your third card? ")
-
+    p_card1 = input("What's your first card? (enter 'done' at any moment to exit): ").upper()
+    if p_card1 == 'DONE':
+        break
+    p_card2 = input("What's your second card? (enter 'done' at any moment to exit): ").upper()
+    if p_card2 == 'DONE':
+        break
+    p_card3 = input("What's your third card? (enter 'done' at any moment to exit): ").upper()
+    if p_card3 == 'DONE':
+        break
     p_card1 = playing_cards[p_card1]
     p_card2 = playing_cards[p_card2]
     p_card3 = playing_cards[p_card3]
