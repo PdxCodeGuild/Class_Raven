@@ -33,6 +33,15 @@ Weeks 16, 17, 18: Capstone project
     <summary>Optional:</summary>
     <ul>
       <li>Stack and Linked List</li>
+      <li>15 - Rain Data</li>
+      <li>
+      Create a Binary Search Tree
+        <ul>
+            <li>Add elements</li>
+            <li>Search</li>
+            <li>Delete elements</li>
+        </ul>
+      </li>
     </ul>
   </ul>
 </details>
