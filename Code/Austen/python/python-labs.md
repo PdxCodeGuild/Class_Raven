@@ -8,23 +8,25 @@ Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - `git push` to push your changes up to the remote repository on GitHub
 - when lab is finished & ready to be reviewed, commit with a "completed" message
 
- [Check off completed work here](https://docs.google.com/document/d/1FIEfkpRa00o4KCnnR45cFFjWIjSOdgNEQnmEge-KZC8/edit?usp=sharing)
-
 ## Week 1
-- lab_make_change
-- lab_averages
-- lab_card_validator
-- lab_palindromes
-- lab_anagrams
-- lab_data_visualization
+- [x] lab_02 make_change
+- [x] lab_03 averages
+- [x] lab_06 card_validator
+- [x] lab_05 palindromes
+- [x] lab_07 data_visualization
 ## Week 2
-- lab_lottery
-- lab_blackjack
-- lab_cipher
-- lab_jokes
-- lab_word_count
+- [x] lab_08 lottery
+- [x] lab_09 blackjack
+- [x] lab_11 cipher
+- [x] lab_10 jokesAPI
+- [x] lab_13 word_count
 ## Week 3
-- lab_ATM
-- lab_search_sort
+- [o] lab_14 ATM
+- [o] lab_16 search_sort
+- [o] lab_17 contact_list
+- [ ] optional:
+  - [o] lab stacks_and_linked_lists
+  - [o] lab_15 rain_data
 ## Week 4
+- [x] lab_19 triviaAPI
 ## Week 5
