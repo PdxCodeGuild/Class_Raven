@@ -81,11 +81,11 @@ class Trivia:
         results = data['results'] # Get the results from the data.
         try:
             question = choice(results) # Get a random question from the results.
-        except IndexError:
-            print(f'{Fore.RED}>>>No questions found. Using default URL.<<<{Style.RESET_ALL}')
-            data = self.get_data('https://opentdb.com/api.php?amount=10')
-            results = data['results']
-            question = choice(results)
+        except IndexError: # If there are no results.
+            print(f'{Fore.RED}>>>No questions found. Using default URL.<<<{Style.RESET_ALL}') # Print an error message.
+            data = self.get_data('https://opentdb.com/api.php?amount=10') # Get the default data.
+            results = data['results'] # Get the results from the data.
+            question = choice(results) # Get a random question from the results.
         return question # Return the question.
 
     def ask_question(self, question):
