@@ -12,13 +12,14 @@ class ContactList:
         self.contacts = []
 
     def load(self):
-        with open(r'C:/Users/james/Class_Raven/Code/James/contacts') as json_file:
-            data = json.load(json_file) #got the file back as a python dictionary
+        with open(r'contacts.json', 'r') as contacts_file:
+            
+            contents = json.load(contacts_file) #got the file back as a python dictionary
             #print(data) # data is a python dictionary at this point
-            list_contacts = data.get('contacts')# get the list of contacts out of the contacts dictionary. 
+            contacts = contents['contacts']# get the list of contacts out of the contacts dictionary. 
             #print(list_contacts) #this is a list of the dictionary.
             
-            self.contacts = list_contacts
+            self.contacts = contacts
         ...
     
     def count(self):
