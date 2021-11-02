@@ -129,7 +129,8 @@ class ContactList:
                 return True
         except FileNotFoundError: # If the file does not exist.
             return False
-            
+        
+    @property    
     def count(self):
         return len(self.contacts) # Return the number of contacts.
     
@@ -157,7 +158,6 @@ class ContactList:
                 self.contacts.pop(self.contacts.index(contact)) # Remove the contact from the list.
                 return True
         return False
-
         
     def update(self, old_name, new_name, new_phone_number, new_email):
         for contact in self.contacts: # Loop over the list of contacts.
@@ -185,22 +185,22 @@ if __name__ == '__main__': # If this file is being run as a script.
     print('\nWelcome to the Contact List App (CLA)!\n')
     
     while not valid_command: # Loop until the user enters a valid command.
-        command = input('Enter a command: ')
+        command = input('Enter a command (help for list of commands): ')
         match command.split(): # Split the command into a list of words.
             case ['load']: # If the command is 'load'.
                 success = contact_list.load()
                 if success:
-                    print(f'\nLoaded {contact_list.count()} contacts.\n')
+                    print(f'\nLoaded {contact_list.count} contacts.\n')
                 else:
                     print('\nNo contacts file found.\n')
             case ['save']: # If the command is 'save'.
-                if contact_list.count() == 0: # If there are no contacts.
+                if contact_list.count == 0: # If there are no contacts.
                     print('\nNo contacts to save.\n')
                 else:
                     contact_list.save()
-                    print(f'\nSaved {contact_list.count()} contacts.\n')
+                    print(f'\nSaved {contact_list.count} contacts.\n')
             case ['print'|'p'|'list'|'ls'|'l']: # If the command is 'print' or 'p' or 'list' or 'ls' or 'l'.
-                if contact_list.count() == 0: # If there are no contacts.
+                if contact_list.count == 0: # If there are no contacts.
                     print('\nNo contacts to print.\n')
                 else:
                     contact_list.print()
@@ -231,16 +231,21 @@ if __name__ == '__main__': # If this file is being run as a script.
                 else:
                     print('Contact not found')
             case ['help'|'h'|'?']: # If the command is 'help' or 'h' or '?'.
+                #Dictionary of commands and their descriptions.
+                commands = {
+                    'load': 'Load all contacts from the file',
+                    'save': 'Save contacts to a file',
+                    'print': 'Print all contacts',
+                    'add': 'Add a new contact',
+                    'remove': 'Remove a contact',
+                    'update': 'Update a contact',
+                    'exit': 'Exit the program'}
                 print('\nAvailable commands:')
-                print('load   - load all contacts from the file.')
-                print('save   - save contacts to a file.')
-                print('print  - print all contacts.')
-                print('add    - add a new contact.')
-                print('remove - remove a contact.')
-                print('update - update a contact.')
-                print('exit   - exit the program.\n')
+                for command in commands: # Loop over the dictionary of commands.
+                    print(f'{command} - {commands[command]}') # Print the command and its description.
+                print()
             case ['exit'|'q'|'quit']: # If the command is 'exit' or 'q' or 'quit'.
-                print(contact_list)
+                print(contact_list) # Print the contact list.
                 quit()
             case unknown_command: # If the command is not recognized.
                 print(f'Command {unknown_command} not recognized.')
