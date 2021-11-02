@@ -10,6 +10,9 @@ the score. At the end show them how many they got correct/incorrect.
 from requests import get, Session
 from json import loads
 from html import unescape
+from colorama import Fore as F
+
+R = F.RESET
 
 
 class Trivia:
@@ -57,14 +60,36 @@ class Trivia:
             10: ques_10,
         }
 
+    def user_answers(self) -> list:
+        """Store the user answers"""
+
+        usr_answers = []
+        truthy = []
+        holding = self.fix_text()
+
+        print(f"\n{F.YELLOW}Please answer True or False:{R} ")
+        for i in holding:
+            usr_answers.append(input(f"\n{holding[i]}: "))
+            match usr_answers[i - 1].lower():
+                case "true":
+                    truthy.append(1)
+                case "false":
+                    truthy.append(0)
+                case _:
+                    print(f"{F.RED}INVALID INPUT{R}")
+
+        return truthy
+
+    def results(self) -> str:
+        """Show the results of the quiz"""
+
 
 def main() -> None:
 
     api = Trivia()
-
-    holding = api.fix_text()
-    for key in holding:
-        print(f"\n{holding[key]}\n")
+ 
+    holding = api.user_answers()
+    print(holding)
 
 
 if __name__ == "__main__":
