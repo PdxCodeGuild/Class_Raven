@@ -2,117 +2,51 @@
 #Rafael Medina
 
 """
-NOTE: Still in progress
-10/28/2021
+NOTE: 11/01/2021
 
 """
+
+# "Write a program that prompts the user for a string, and encodes it with ROT13. For each character, find the corresponding character, add it to an output string. Notice that there are 26 letters in the English language, so encryption is the same as decryption."
+
 
 import string
 
 
+# ascii string for alphabet letters in a list with indexes [i]
+abc = list(string.ascii_lowercase)
 
-abc = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz' ]
-# list index upper[0] and lower[1]
+#print(abc)
 
+# function to return the converted characters in rotations = x spaces forward.
+def rot_13(output):
 
-
- 
-# function to move the character index by 13
-def rot_cipher(cipher, rotate = 13):
-#    .maketrans allows the mapping of a character to its translation/replacement for interchangeable lowers and uppers.
-    trans_abc = str.maketrans(f'{abc[0]}{abc[1]}{abc[0]}',f'{abc[0][rotate:]}{abc[0][rotate]}{abc[1][:rotate]}')
-
-    return str.translate(cipher, rotate)
-
-cipher = input('\n\nEnter what you would like to get encoded: ')
-# # of rotations
-rotate = input('How many rotations would you like?: ')
-
-#if rotate == 0 or 26 or 52 or 78 or 104 or 130 or 156 or 182 or 208:
-    #print(f'Use another rotation number that is less than 208 and not {rotate}. This resets the cipher')
-
-print(f'Your ciphere\'d message is: {rot_cipher(cipher, rotate)}')
-
-
-
-
-
-
-
-
-"""
-def rot_cipher(abc):
-
-    cipher = input('\n\nEnter what you would like to get encoded: ')
-
-    for i in abc:
-        if i.isupper():
-            cipher.append(string.ascii_upper)[string.ascii_upper.find(i) + 13 % 2
-
-
-
-
-"""
-"""
-
-cipher = input('\n\nEnter what you would like to get encoded: ')
-# # of rotations
-rotation = input('How many rotations would you like?: ')
-  
-
-# allows to use a range
-iterations = len(cipher)
-
-# Output is gooing to be a string. 
-# non ascii alphabet spaces and characters
-output = ""
-
-for i in range(iterations):
-    new_char = cipher[i]
+# Number of rotations forward staring from [i] index location in abc.    
+    rotations = 13
+# User_input starts as an empty string prior to message concactinations.
+    user_input = ""
    
-# find() method finds the first occurrence of the specified value 26 is the range.
-    location = string.ascii_lowercase.find(new_char)
+    for i in output:
+# If the user_input is equal to an empty string " " then it will be added to the output string as an empty string.
+        if i == " ":
+# Concactinates an empty string after the previous user_input [i] or " " empty space choosen user_input as it goes down the loop.
+            user_input = user_input + " "
+# Else if the user_input enters an alphabetic lowercase then that lowercase is moved forward the rotation value x 13 times as an integer value, so i[0] = i[13].
 
-    if location < 0:
-        output += cipher[i]
-    else:
-        index_shit = string.ascii_lowercase.index[i] + rotation % 26
-        output += string.ascii_lowercase[index_shit]
-    
-
-print(output)
-
-
-
-
-
-
-
-rotation = int()
-
-
-# function to include user_input rotation amount  
-def rot_cipher (cipher, rotation):
-# non ascii alphabet spaces and characters     
-    blank_spaces = ''
-    
-    
-    
-    for i in cipher:
-        if i in string.ascii_lowercase:
-
-            index_rotation = string.ascii_lowercase.index[i] + rotation % 26
-# moves the blank_spaces allong with the cipher abc 
-            blank_spaces = blank_spaces + string.ascii_lowercase[index_rotation]
         else:
-            blank_spaces = blank_spaces + i
-       
-        return blank_spaces
-    
-    
-    cipher = input('\n\nEnter what you would like to get encoded: ')
-    rotation = input(int('How many rotations would you like?: '))
-    print(cipher, rotation)
+            index_position = abc.index(i) + int(rotations)
+# If index position is within range of abc index < 26 and not an empty string then in can be included in the output with its new character position from the index_position function as long as it is index [25] or under after the 13 rotations have beend added.
+            if index_position < 26:
+                user_input = user_input + abc[index_position]
+
+            else: 
+# Otherwise if it is out of range beyond the [25]index, the modulus % 26 operator resets that position[i] if its over [25] and keeps the values in range [0] to [25]. For example if user_inputs "z" then the index position becomes 25 + 13 = 38, so greater than index[25] uses modulus % 26, this resets to index [0] on a chosen[i] outside the [25] range and moves the index 13 positions over again for a value within the abc[i]. So, "z" then becomes [12] or "m".                    
+                user_input = user_input + abc[index_position % 26]
+    return user_input
 
 
-"""
+user_input = input("Enter text to cipher in lower case english only: ")
+
+print(rot_13(user_input))
+
+
+
