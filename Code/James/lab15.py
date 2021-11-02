@@ -7,7 +7,7 @@ def linear_search(list, value):
     match = 'No match found'
     for i in range(len(nums)):
         if nums[i] == value:
-            match = i 
+            match = i + 1 # added + 1 to give the proper index 
     print(match)
     return match
 
@@ -29,7 +29,7 @@ def binary_search(list, target):
         middle = (low + high) // 2
         
         if nums[middle] == target:
-            return middle
+            return middle + 1 # added + 1 to give the proper index 
         
         if nums[middle] > target:
             high = middle - 1
@@ -41,34 +41,34 @@ def binary_search(list, target):
         
         
 
-#print(binary_search(nums, 3))
+#print(binary_search(nums, 5))
 
 
 
 
 
 
-""" bubble sort """
-random.shuffle(nums) # generating a random list to be used for the bubble sort function
+# """ bubble sort """
+# random.shuffle(nums) # generating a random list to be used for the bubble sort function
 
 
 
-def bubble_sort(array):
-    print('First list is inital list')
-    print(nums)
-    swapped = True
+# def bubble_sort(array):
+#     print('First list is inital list')
+#     print(nums)
+#     swapped = True
 
-    while(swapped): # while swap is True run the code.
-        swapped = False
-        for i in range(len(array) - 1): # will run until second to last item in list
-            if array[i] > array[i + 1]:
-                # Swap the item in the list if it's greater then it's neighbor.
-                array[i], array[i + 1] = array[i + 1], array[i]
-                swapped = True
-    return array
+#     while(swapped): # while swap is True run the code.
+#         swapped = False
+#         for i in range(len(array) - 1): # will run until second to last item in list
+#             if array[i] > array[i + 1]:
+#                 # Swap the item in the list if it's greater then it's neighbor.
+#                 array[i], array[i + 1] = array[i + 1], array[i]
+#                 swapped = True
+#     return array
 
 
-print(bubble_sort(nums))
+# print(bubble_sort(nums))
 
     
     
