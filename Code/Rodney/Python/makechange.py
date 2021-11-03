@@ -2,27 +2,36 @@ dollar_amount = input("please enter a dollar amount: ") #input function to obtai
 
 dollar_amount = float(dollar_amount) #turning that string into a float
 
-quarter = 25.0  ## assigning values to various forms of currency
-nickel = 5.0
-penny = .01
-dime = 10.0
+coins = [
+('half-dollar', 50.0),
+('quarter', 25.0),  ## assigning values to various forms of currency
+('dime', 10.0),
+('nickel', 5.0),
+('penny', .01)
+]
 
-total_pennies = dollar_amount/penny # obtaining total number of pennies (note that assigned .01 to penny vs whole numbers for other currencies to be able to compare whole numbers going fwd)
+total_pennies = dollar_amount/(coins[4][1]) # obtaining total number of pennies (note that assigned .01 to penny vs whole numbers for other currencies to be able to compare whole numbers going fwd)
 
 #print(total_pennies)
+total_half_dollar = total_pennies//(coins[0][1])
 
-total_quarters = total_pennies//quarter  ## using floor division to obtain total times 25 goes into total pennies as a whole number
+remainder = total_pennies - ((coins[0][1]) * total_half_dollar)
 
-total_left_after_quarters = total_pennies - (quarter * total_quarters) ## taking that whole number * value of quarter and subtracting from total pennies to have remaining total pennies
+total_quarters = remainder//(coins[1][1])  ## using floor division to obtain total times 25 goes into total pennies as a whole number
 
-total_dimes = total_left_after_quarters//dime  ## repeating the above two steps for dimes > nickels > and remaining is your pennies left over 
+remainder = remainder - ((coins[1][1]) * total_quarters) ## taking that whole number * value of quarter and subtracting from total pennies to have remaining total pennies
 
-total_left_after_dimes = total_left_after_quarters - (dime * total_dimes)
+total_dimes = remainder//(coins[2][1])  ## repeating the above two steps for dimes > nickels > and remaining is your pennies left over 
 
-total_nickels = total_left_after_dimes//nickel
+remainder = remainder - ((coins[2][1]) * total_dimes)
 
-total_pennies_output = total_left_after_dimes - (nickel * total_nickels)
+total_nickels = remainder//(coins[3][1])
 
+total_pennies_output = remainder - ((coins[3][1]) * total_nickels)
+
+
+if total_half_dollar >=1:
+    print(f'{total_half_dollar} half-dollar(s)')
 
 if total_quarters >= 1:            ## using if statement to avoid printing out currency if we don't need to 
     print(f'{total_quarters} quarter(s)')
