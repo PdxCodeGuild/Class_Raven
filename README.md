@@ -17,7 +17,7 @@ Weeks 16, 17, 18: Capstone project
 <details open>
   <summary>Python</summary>
   <ul>
-    <li>Lab 02 - Madlib</li>
+    <li>Lab 02 - Make Change</li>
     <li>Lab 03 - Average Number</li>
     <li>Lab 05 - Palindrome Checker</li>
     <li>Lab 06 - Credit Card Number Validation</li>
