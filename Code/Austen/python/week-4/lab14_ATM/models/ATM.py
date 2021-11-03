@@ -1,14 +1,12 @@
 from datetime import datetime
-#* represent an ATM with a class containing two attributes
 
 
-def lab14_ATM():
-  class ATM:
+class ATM:
     #* balance and interest rate will default to a balance of 0 and an interest rate of 0.1%
     def __init__(atm):
       atm.balance = 0
       atm.interest = 0.001
-      atm.query = 'What would you like to do?'
+      atm.query = '\nWhat would you like to do?\n'
       atm.options = [{'id': 1, 'name': 'check balance'}, {'id': 2, 'name': 'deposit'},
                      {'id': 3, 'name': 'withdraw'}, {'id': 4, 'name': 'calculate interest'}, {'id': 5, 'name': 'quit'}]
     #* `check_balance()` returns the account balance
@@ -51,62 +49,3 @@ def lab14_ATM():
       balance = round(atm.balance + interest, 2)
       interest = f'After {time} years, with a starting balance of ${atm.balance} and an interest rate of {rate*100}% the interest acquired would be ${interest}. Your new account balance would be ${balance}.'
       return interest
-
-  account = ATM()
-  record = []
-  print()
-  print(account.query)
-  print()
-  for option in account.options:
-    print('  ', option['id'], option['name'])
-  transaction = input('\n   enter the transaction (name or number): ').lower()
-  try:
-    transaction = int(transaction)
-  except:
-    ''
-  else:
-    for option in account.options:
-      if transaction == option['id']:
-        transaction = option['name']
-  while transaction != 'quit':
-    if transaction == 'check balance':
-      balance = account.print_balance()
-      record.append(f'{transaction}, {balance}')
-      print('\n    ', balance)
-    elif transaction == 'deposit':
-      account.deposit()
-      balance = account.print_balance()
-      record.append(f'{transaction}, {balance}')
-      print('\n    ', balance)
-    elif transaction == 'withdraw':
-      successful = account.withdraw()
-      stamp = account.stamper()
-      if successful == True:
-        balance = account.print_balance()
-        record.append(f'{transaction}, {balance}')
-        print('\n    ', balance)
-      else:
-        failure = '\n    Balance too low. Withdrawl aborted.'
-        record.append(failure)
-        print(failure)
-    elif transaction == 'calculate interest':
-      interest = account.interest_calculator()
-      record.append(f'{transaction}, {interest}')
-      print('\n    ', interest)
-    transaction = input(
-        '\n   enter the transaction (name or number): ').lower()
-    try:
-      transaction = int(transaction)
-    except:
-      ''
-    else:
-      for option in account.options:
-        if transaction == option['id']:
-          transaction = option['name']
-  date = datetime.now().date()
-  print(f'\n  Transactions for {date}')
-  for entry in record:
-    print('\n    ', entry)
-
-
-lab14_ATM()

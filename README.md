@@ -67,7 +67,7 @@ To emulate a more professional Git workflow, we're going to start creating new b
     - `git checkout <YOUR_NAME-SECTION-LAB_NUMBER>`
   
   - Option 2:
-    
+  
     The `-b` flag can be used after the `checkout` command to combine these two steps:
 
     `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
