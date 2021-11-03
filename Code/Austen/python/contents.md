@@ -20,7 +20,15 @@
   Perhaps store the options as a dictionary and display each with a number so it's clear what should be entered?"
   ```
 - [x] lab_16 search_sort
+  ```
+  "The goal of this lab is to translate the pseudocode into Python. 
+  The bubble_sort() function doesn't seem to follow the pseudocode given in the lab."
+  ```
 - [x] lab_17 contact_list
+  ```
+  "REPL is easily broken by things like blank strings as input (such as for names in 'new contact' option). 
+  Took me a few tries to get through each option."
+  ```
 - [x] optional:
   - [x] lab stacks_and_linked_lists
   - [x] lab_15 rain_data
