@@ -21,7 +21,7 @@ Make sure all labs are located within `Class_Raven/Code/<YourName>`
 - [x] lab_10 jokesAPI
 - [x] lab_13 word_count
 ## Week 3
-- [o] lab_14 ATM
+- [x] lab_14 ATM
 - [o] lab_16 search_sort
 - [o] lab_17 contact_list
 - [ ] optional:
