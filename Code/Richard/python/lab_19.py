@@ -14,8 +14,8 @@ total_i = 0
 def question(question, correct, incorrect):
     query = ' '
     stop = 0
-    print(Y['correct_answer']) #check for value
-    print(Y['incorrect_answers']) #check for value
+    #print(Y['correct_answer']) #check for value
+    #print(Y['incorrect_answers']) #check for value
     while stop <2:
         query = input(f"{html.unescape(Y['question'])}\n>") #read question. Get feedback
         if query == 'True' or query =='False': #suitable feedback becomes bool
