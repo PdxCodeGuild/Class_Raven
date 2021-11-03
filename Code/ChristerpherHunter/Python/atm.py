@@ -34,12 +34,15 @@ class ATM:
     def balance(self) -> None:
         """Return the present balance"""
 
+        # Read balances from file to update local balance
         try:
             with open(self.filename, "r", encoding="UTF-8") as f_read:
-                line = [line for line in f_read.readlines() for i in line if i.isdigit()]
-                print(line)
+                line = [line for line in f_read.readlines() for
+                        i in line if i.isdigit()]
         except FileNotFoundError:
             print(f"{F.RED}NO PREVIOUS INPUT{R}")
+
+        # Abandoning the above code
 
         print(f"\n{F.YELLOW}Balance:{R} {self.__balance:.2f}")
 
