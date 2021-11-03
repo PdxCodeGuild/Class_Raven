@@ -14,11 +14,13 @@
 - [x] lab_13 word_count
 ## Week 3
 - [x] lab_14 ATM
-  ```
-  "Having trouble running the code. 
-  I created an account successfully and signed in, but entering "check balance" as my option crashes the program. 
-  Perhaps store the options as a dictionary and display each with a number so it's clear what should be entered?"
-  ```
+
+  "~~Having trouble running the code.~~
+
+  I created an account successfully and signed in, but ~~entering "check balance" as my option crashes the program.~~
+
+  ~~Perhaps store the options as a dictionary and display each with a number so it's clear what should be entered?~~"
+
 - [x] lab_16 search_sort
   ```
   "The goal of this lab is to translate the pseudocode into Python. 
