@@ -5,10 +5,12 @@ import requests
 class trivia:
     def __init__(self):
         self.info = []
-
+        self.correct_answers = []
+        
+        
 
     def load(self):
-        response = requests.get('https://opentdb.com/api.php?amount=10&category=23', params={'format': 'json'})
+        response = requests.get('https://opentdb.com/api.php?amount=10&category=23&type=boolean', params={'format': 'json'})
         #print(response.text)
         contents = response.json() # this is python dictionary
         # now get question out of the dictionary
@@ -16,22 +18,71 @@ class trivia:
         
         self.info = questions # now the class is initialized
         
-        #print(self.info[0])
-        for question in self.info:
+        
 
-            self.info[0]['question']
-            print(question)
-    
-    # def questions(self):
+        
+        
+        
+    def questions_answers(self):    
+       
+       for question in self.info:
+            #print(html.unescape(question['question']))
+            self.correct_answers.append(html.unescape(question['correct_answer']))
+            #print(self.correct_answers)
 
-    
-    
-    # def print():
+    def answer_checker(self, user_answer):
+        
+        if user_answer == self.correct_answers[0]:
+            print('Correct')
+            return True
+            
 
+        else:
+            print('Incorrect')
+            return False
+            
+        
+
+            
+            
+            
+        
+    
+    
 trivia = trivia() # create instance of our class
 trivia.load()
+trivia.questions_answers()
 
 
-# print('Welcome to history trivia')
-# while True:
+
+print('Welcome to history trivia enter True or False for the following questions.')
+counter = 0
+points = 0
+play = True
+while play:
+    print(html.unescape(trivia.info[counter]['question']))
+    user_answer = input('Enter True or False: ').capitalize()
+    
+    print(type(user_answer))
+    if user_answer != "True" or user_answer != "False":
+        print('Please enter True or False only.')
+        continue
+    
+    trivia.answer_checker(user_answer)
+    if trivia.answer_checker:
+        points += 1
+    counter += 1
+    if counter == 9:
+        print(f'You answered {points} questions correctly')
+        play_again = (input('Do you want to play again type yes or no \n>> ')).lower()
+        if play_again == 'no':
+            play = False
+        elif play_again == 'yes':
+            trivia.load()
+            counter = 0
+           
+            
+
+
+
     
