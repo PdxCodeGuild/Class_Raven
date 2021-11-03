@@ -27,22 +27,31 @@ class ATM:
         self.__balance = float()
         self.__interest = 0.01
         self.user_input = str()
+        self.filename = "ATM_log.txt"
 
         print(f"\n{F.GREEN}Welcome to the ATM:{R} ")
 
     def balance(self) -> None:
         """Return the present balance"""
 
+        try:
+            with open(self.filename, "r", encoding="UTF-8") as f_read:
+                line = [line for line in f_read.readlines() for i in line if i.isdigit()]
+                print(line)
+        except FileNotFoundError:
+            print(f"{F.RED}NO PREVIOUS INPUT{R}")
+
         print(f"\n{F.YELLOW}Balance:{R} {self.__balance:.2f}")
 
     def deposit(self, input: float) -> None:
         """Deposit doll hairs into the account balance"""
 
-        self.__balance += input
+        self.__balance += input if (input > 0) else\
+            (print(f"{F.RED}INVALID INPUT{R}"), self.quit())
 
-        with open("ATM_log.txt", "a") as f_write:
-            f_write.write(f"\nuser deposited ${input:.2f} @ "
-                          f"{self.__interest:.2f}\n")
+        with open(self.filename, "a") as f_write:
+            f_write.write(f"\nuser deposited $ {input:.2f}")
+            # f"{self.__interest:.2f}\n")
 
     def withdraw(self, input: float) -> None:
         """Subtract monies from the account balance"""
@@ -53,13 +62,17 @@ class ATM:
         if temp_balance < 0:
             print("INSUFFICIENT FUNDS")
         else:
-            with open("ATM_log.txt", "a") as f_write:
+            with open(self.filename, "a") as f_write:
                 f_write.write(f"user withdrew ${input}\n")
 
     def interest(self, input: float) -> None:
         """Change the interest amount"""
 
-        self.__interest = input
+        self.__interest = input if (input < 1 and input > 0) else\
+            (print(f"{F.RED}INVALID INPUT{R}"), self.quit())
+
+        interest_amount = self.__balance * self.__interest
+        print(f"{F.YELLOW}The interest accrued is: ${interest_amount:.2f}{R}")
 
     def quit(self) -> None:
         """Exit the ATM menu"""
@@ -97,7 +110,7 @@ class ATM:
                     self.interest(interest_chng)
                 case "5":
                     try:
-                        with open("ATM_log.txt", "r") as f_read:
+                        with open(self.filename, "r") as f_read:
                             print(f"\n{f_read.read()}")
                     except FileNotFoundError:
                         print(f"{F.RED}NO TRANSACTIONS MADE YET{R}")

@@ -7,7 +7,7 @@ how many steps an algorithm takes depending on the size of the input.
 For example, performing a linear search on a list of n elements takes, on
 average, n/2 steps, so we say a linear search is O(n). We throw away
 multiplicative and additive factors to characterize algorithms independently
-of the hardware it's running on. 
+of the hardware it's running on.
 """
 
 
