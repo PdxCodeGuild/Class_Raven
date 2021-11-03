@@ -23,9 +23,9 @@ index = 0
 #Iterate through the response dictionary and pull out the question as the key and the correct answer as the value
 for x in response:
     key = x['question']
-    value = x['correct_answer']
+    correct_value = x['correct_answer']
 #Assign the key/value pair to the question_answer_dictionary and increment the counter by 1
-    question_answer_dictionary[key] = value
+    question_answer_dictionary[key] = correct_value
     index += 1
 
 #print(question_answer_dictionary)
@@ -52,5 +52,5 @@ for question in question_answer_dictionary:
 print(f'You got a total of {correct} correct')
 
 for key in user_answers:
-    print('Incorrect Answer: ',key,'The correct answer was: ',value)
+    print('Incorrect Answer: ',key,'Your answer was: ',value)
 
