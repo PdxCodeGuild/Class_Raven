@@ -67,7 +67,7 @@ class Stack:
 
 # return the number of elements
   def length(self): 
-      
+   ...
  
 
   def __str__(self):
