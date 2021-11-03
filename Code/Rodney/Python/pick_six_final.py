@@ -19,9 +19,9 @@ def total_return(number_of_tickets, total_won):
 
 def winnings_decider(number_of_matches):
 ## this function is de-cluttering lottery machine function and looks at number in number_of_matches list to determine amount won for that ticket 
-    winnings = [i*0 if i == 0 else i*4 if i == 1 else i/i*7 if i == 2 else i/i*100 if i == 3 else i/i*50000 if i == 4 else i/i*1000000000 if i == 5 else 25000000 for i in number_of_matches]          
+    winnings = [i*0 if i == 0 else i*4 if i == 1 else i/i*7 if i == 2 else i/i*100 if i == 3 else i/i*50000 if i == 4 else i/i*1000000 if i == 5 else 25000000 for i in number_of_matches]          
     winnings = ''.join([str(integer) for integer in winnings]) ## ^^ using list comprehension to avoid multiple lines of code
-    winnings = float(winnings) ## amount of winnings is turned into string then float, then int
+    #winnings = float(winnings) ## amount of winnings is turned into string then float, then int
     winnings = int(winnings)
     return winnings ## function returns winnings for that ticket 
     
