@@ -1,6 +1,6 @@
 """
 Christerpher Hunter
-Lab 17: Trivia API
+Lab 19: Trivia API
 
 Send a request that will return a list of 10 true/false computer questions.
 Ask the user each question, ask them for their answer, and keep track of
