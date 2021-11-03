@@ -47,5 +47,4 @@ The following Trie diagram is storing the words ball, bat, bear, bell, bore, sta
 
 <img src="https://static.javatpoint.com/ds/images/trie-data-structure.png" width=600/>
 
-## Graph
 
