@@ -29,16 +29,17 @@
 
 
 - [x] lab_17 contact_list
-  ```
-  "REPL is easily broken by things like blank strings as input (such as for names in 'new contact' option). 
-  Took me a few tries to get through each option."
-  ```
+
+  "~~REPL is easily broken by things like blank strings as input (such as for names in 'new contact' option).~~ 
+
+  ~~Took me a few tries to get through each option.~~"
+
 - [x] optional:
   - [x] lab stacks_and_linked_lists
   - [x] lab_15 rain_data
 ## Week 4
 - [x] lab_14 ATM.v2
-- [ ] lab_16 search_sort.v2
-- [ ] lab_17 contact_list.v2
+- [x] lab_16 search_sort.v2
+- [x] lab_17 contact_list.v2
 - [x] lab_19 trivia.API
 ## Week 5
