@@ -9,8 +9,8 @@ def lab14_ATM():
       atm.balance = 0
       atm.interest = 0.001
       atm.query = 'What would you like to do?'
-      atm.options = ['check balance', 'deposit',
-                     'withdraw', 'calculate interest', 'quit']
+      atm.options = [{'id': 1, 'name': 'check balance'}, {'id': 2, 'name': 'deposit'},
+                     {'id': 3, 'name': 'withdraw'}, {'id': 4, 'name': 'calculate interest'}, {'id': 5, 'name': 'quit'}]
     #* `check_balance()` returns the account balance
 
     def stamper(atm):
@@ -58,38 +58,55 @@ def lab14_ATM():
   print(account.query)
   print()
   for option in account.options:
-    print('  ', option)
-  transaction = input('\n   enter the transaction: ')
-  while transaction != account.options[4]:
-    if transaction == account.options[0]:
+    print('  ', option['id'], option['name'])
+  transaction = input('\n   enter the transaction (name or number): ').lower()
+  try:
+    transaction = int(transaction)
+  except:
+    ''
+  else:
+    for option in account.options:
+      if transaction == option['id']:
+        transaction = option['name']
+  while transaction != 'quit':
+    if transaction == 'check balance':
       balance = account.print_balance()
-      record.append(balance)
+      record.append(f'{transaction}, {balance}')
       print('\n    ', balance)
-    elif transaction == account.options[1]:
+    elif transaction == 'deposit':
       account.deposit()
       balance = account.print_balance()
-      record.append(balance)
+      record.append(f'{transaction}, {balance}')
       print('\n    ', balance)
-    elif transaction == account.options[2]:
+    elif transaction == 'withdraw':
       successful = account.withdraw()
       stamp = account.stamper()
       if successful == True:
         balance = account.print_balance()
-        record.append(stamp+balance)
-        print('\n    ', stamp, balance)
+        record.append(f'{transaction}, {balance}')
+        print('\n    ', balance)
       else:
         failure = '\n    Balance too low. Withdrawl aborted.'
         record.append(failure)
         print(failure)
-    elif transaction == account.options[3]:
+    elif transaction == 'calculate interest':
       interest = account.interest_calculator()
-      record.append(interest)
+      record.append(f'{transaction}, {interest}')
       print('\n    ', interest)
-    transaction = input('\n   enter the transaction: ')
+    transaction = input(
+        '\n   enter the transaction (name or number): ').lower()
+    try:
+      transaction = int(transaction)
+    except:
+      ''
+    else:
+      for option in account.options:
+        if transaction == option['id']:
+          transaction = option['name']
   date = datetime.now().date()
   print(f'\n  Transactions for {date}')
   for entry in record:
     print('\n    ', entry)
 
 
-lab_14()
+lab14_ATM()
