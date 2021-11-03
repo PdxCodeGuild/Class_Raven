@@ -33,6 +33,7 @@ for x in response:
 
 #Now it's time to loop through the questions and calculate how many responses are correct
 #Start by creating a counter for the loop and a counter for the number of correct responses
+user_answers = {}
 index = 0
 correct = 0
 #Loop through the question_answer_dictionary
@@ -43,8 +44,13 @@ for question in question_answer_dictionary:
     if question_answer_dictionary[question] == value:
 #If the response evaluates to correct, increment the correct counter by 1
         correct += 1
+    else:
+        user_answers[question] = value
 #Increment the loop counter by 1 to continue to the next question
     index += 1
 #Print the total number correct
 print(f'You got a total of {correct} correct')
+
+for key in user_answers:
+    print('Incorrect Answer: ',key,'The correct answer was: ',value)
 

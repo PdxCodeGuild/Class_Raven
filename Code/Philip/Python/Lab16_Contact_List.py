@@ -24,9 +24,8 @@ class ContactList:
         with open('./Code/Philip/Python/contacts.json', 'w') as f:
             dictionary = {}
             dictionary["contacts"] = self.contacts
-            #dictionary = {'contacts': self.contacts}
-            contents = json.dumps(dictionary, indent=2)
-            f.write(contents)
+            json_dict=json.dumps(dictionary)
+            f.write(json_dict)
     
     def print(self):
         for x in self.contacts:
