@@ -4,16 +4,19 @@
 
 
 class ATM:
-    def __init__ (self, balance = 0, interest_rate = 0.6):
+    def __init__ (self, balance = 0, interest_rate = 0.6, transaction_log = []):
         self.balance = balance
         self.interest_rate = interest_rate
+        self.transaction_log = transaction_log
 
     def check_balance(self):
         return print(f"Your balance is {self.balance}")
 
-    def deposit(self, amount = 0):
+    def deposit(self, amount):
     #    self.amount = amount
         self.balance += amount
+        #self.transaction_log = transaction_log
+        #transaction_log.append(f"user deposited ${amount}\n")
         return self.balance
 
     def check_withdrawal(self, amount):
@@ -23,12 +26,21 @@ class ATM:
             return True
 
     def withdraw (self, amount):
-        self.balance = self.balance - amount 
+        self.balance = self.balance - amount
+        #self.transaction_log = transaction_log
+        #transaction_log.append(f"user withdrew ${amount}\n") 
         return self.balance - amount
 
     def calc_interest (self):
         self.balance += (self.balance * self.interest_rate)
         return self.balance
+
+    def log_event(self, transaction_log, message):
+        self.transaction_log = transaction_log
+        transaction_log.append(message) 
+
+    def print_log(self, transaction_log):
+        return print(transaction_log)
 
 # atm = ATM(1000, 0.6) # code for testing functions
 # atm.check_balance()
@@ -58,6 +70,7 @@ while True:
         amount = float(input('How much would you like '))
         if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
+            atm.log_event(f"user withdrew ${amount}\n")
             print(f'Withdrew ${amount}')
         else:
             print('Insufficient funds')
