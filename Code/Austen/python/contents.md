@@ -1,4 +1,4 @@
-# Python Labs
+# Python
 ### Oct 11 - Nov 13
 ## Week 1
 #### Oct 11-15
