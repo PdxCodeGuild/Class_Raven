@@ -1,25 +1,21 @@
 # Python Labs
+### Oct 11 - Nov 13
 ## Week 1
 #### Oct 11-15
-#
 - lab_02 make_change
 - lab_03 averages
 - lab_06 card_validator
 - lab_05 palindromes
 - lab_07 data_visualization
-#
 ## Week 2
 #### Oct 19-22
-#
 - lab_08 lottery
 - lab_09 blackjack
 - lab_11 cipher
 - lab_10 jokes.API
 - lab_13 word_count
-#
 ## Week 3
 #### Oct 25-29
-#
 - lab_14 ATM
   - issue: ~~Having trouble running the code.~~
   - issue: ~~entering "check balance" as my option crashes the program.~~
@@ -32,16 +28,12 @@
 - optional:
   - lab stacks_and_linked_lists
   - lab_15 rain_data
-#
 ## Week 4
 #### Nov 1-5
-#
 - lab_19 trivia.API
 - rewrites:
   - lab_14 ATM
   - lab_16 search_sort
   - lab_17 contact_list
-#
 ## Week 5
 #### Nov 8-13
-#
