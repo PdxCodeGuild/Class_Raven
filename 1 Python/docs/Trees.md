@@ -27,7 +27,7 @@ The left and right subtree each must also be a binary search tree.
 
 
 
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png" width=600/>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png" width=400/>
 
 ## Trie
 
