@@ -6,7 +6,13 @@ import requests
 import time
 import random
 
+"""
+NOTE: Fix the errors out when no joke is found. 
 
+Feedback: Lab 10 - It'd be great to see the joke pulled out of the dictionary.
+Lab 10 - Currently errors out
+
+"""
 
 url = "https://icanhazdadjoke.com/search"
 

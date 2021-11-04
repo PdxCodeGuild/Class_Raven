@@ -2,211 +2,120 @@
 # Rafael Medina
 
 
-""" 
-NOTE: In progress 11/2/2021
-NOTE: To self.. See if you can rewirte this more efficiently without having to number each list item, maybe there is a way to switch to the next library item in a loop from an index, value perspective. Also fix the score. it is broken printing -6 on firts 'f' and 0 after 10x 't'
 """
+NOTE: Part 1 complete with the exeption of getting html module's unescape method to work correctly.
 """
-Send a request to the following url: https://opentdb.com/api.php?amount=10&category=18&type=boolean This will return a list of 10 true/false computer questions. Ask the user each question, ask them for their answer, and keep track of the score. At the end show them how many they got correct/incorrect.
+
+
+"""
+Send a request to the following url: https://opentdb.com/api.php?amount=10&category=18&type=boolean This will return a list of 10 True/false computer questions. Ask the user each question, ask them for their answer, and keep track of the score. At the end show them how many they got correct/incorrect.
 
 Certain characters in the question text are encoded, to decode them you'll have to use the html module's unescape method.
 
 """
 
 """
+# Example on how the response from .json is displayed as an object and then accessed as a list of dicts in this case 10 lists.
+[
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'medium', 'question': 'All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.', 'correct_answer': 'False', 'incorrect_answers': ['True']}, 
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'easy', 'question': 'The programming language &quot;Python&quot; is based off a modified version of &quot;JavaScript&quot;.', 'correct_answer': 'False', 'incorrect_answers': ['True']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'medium', 'question': 'To bypass US Munitions Export Laws, the creator of the PGP published all the source code in book form. ', 'correct_answer': 'True', 'incorrect_answers': ['False']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'easy', 'question': 'Ada Lovelace is often considered the first computer programmer.', 'correct_answer': 'True', 'incorrect_answers': ['False']},
-{'category': 
-'Science: Computers', 'type': 'boolean', 'difficulty': 'medium', 'question': 'The open source program Redis is a relational database server.', 'correct_answer': 'False', 'incorrect_answers': ['True']},
+{'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'medium', 'question': 'The open source program Redis is a relational database server.', 'correct_answer': 'False', 'incorrect_answers': ['True']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'hard', 'question': 'DHCP stands for Dynamic Host Configuration Port.', 'correct_answer': 'False', 'incorrect_answers': ['True']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'easy', 'question': 'Time on Computers is measured via the EPOX System.', 'correct_answer': 'False', 'incorrect_answers': ['True']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'medium', 'question': 'It&#039;s not possible to format a write-protected DVD-R Hard Disk.', 'correct_answer': 'True', 'incorrect_answers': ['False']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'medium', 'question': 'A Boolean value of &quot;0&quot; represents which of these words?', 'correct_answer': 'False', 'incorrect_answers': ['True']},
 {'category': 'Science: Computers', 'type': 'boolean', 'difficulty': 'easy', 'question': 'The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;', 'correct_answer': 'True', 'incorrect_answers': ['False']}
+]
 """
 
+
 import html
+
 import requests
 
 
+print(html.unescape('It&#039;s not possible to format a write-protected DVD-R Hard Disk.'))
+
+# url copied from Lab_19 instructions. Or you can go to the site and custumize your own.
 url = 'https://opentdb.com/api.php?amount=10&category=18&type=boolean'
 
-
+# Gets the url data and assigns it to response.
 response = requests.get(url)
-
-
-response = response.json()
-
-response = response['results']
 
 # response [200] meaning link is valid.
 #response.encoding = 'utf-8'
 
-print(response)
-print(type(response))
-print(len(response))
+# To get out of the response[200] and convert the response to .json object.
+response = response.json()
 
-header = (f'\n        Trivia API\n')
+# Assigns the requested response to a list of dicts to be able to access from response{}
+response = response['results']
+print()
+print(response,'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+
+decoded_string = html.unescape(response)# Takes out html characters from requested response.
+
+
+
+
+#print(response)
+#print(type(response))
+#print(len(response))
+
+  
+
+
+header = (f'\n                     Trivia API')# Centering the header over the bottom text.
 
 print(header)
 
 
-questions = 0
-points = 0
-
-# replace the html characters with regular characters from the listed dictionaries and have them output at each print before when the question is given.
-
-#if questions > 9 and questions < 10 or questions == 0:
-
-
-while True:
+points = 0 # Note: to keep point values staring tally outside the loop and not inside to reset the values each cycle. 
+index = -1 # Negative value 1 allows for the while loop to start at 0 and run less than 10 times up to index[9]
 
 
 
-        print("\n1st) question is",response[0]['category'],'and the dificulty is',response[0]['difficulty'],'\n\nThe question is:', response[0]['question'], "Is this True 't' or False 'f' ? Type 't' of 'f'")
-        user_input = input()
+# http://projectpython.net/chapter07/ reference on how to begin a while loop for multiple lists.
 
-        if user_input == 't' and response[0]['correct_answer'] == ['True']:
-            points += 1
+while index < 9: # 10 cycles
+    index = index + 1 # Takes away a cycle each loop.
+
+    print("\nThe topic is",response[index]['category'],':'' The dificulty is',response[index]['difficulty'],':''\n\nThe question is:', response[index]['question'], "\nIs this True 't' or False 'f' ? ")
     
-        if  user_input == 'f' and response[0]['incorrect_answers'] == ['False']:
-            points += 1
+    user_input = input()
 
-        if  user_input == 'f' and response[0]['incorrect_answers'] == ['true']  or user_input == 'f' and response[0]['correct_answer']: 
-            points -= 1
-
-        else:
-            print("\n2nd) question is",response[1]['category'],'and the dificulty is',response[1]['difficulty'],'\n\nThe question is:', response[1]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[1]['correct_answer'] == ['True']:
-            points += 1
+# Note that only 'incorrect_answers' could be used for this boleean checks. I tried boolean the "correct_answer" and it was not getting a response from the loop progression. 
+    if user_input == 'f' and response[index]['incorrect_answers'] == ['True']:
+        points = points + 1
     
-        if  user_input == 'f' and response[1]['incorrect_answers'] == ['False']:
-            points += 1
+    elif  user_input == 't' and response[index]['incorrect_answers'] == ['False']:
+        points = points + 1
 
-        if  user_input == 'f' and response[1]['incorrect_answers'] == ['true']  or user_input == 'f' and response[1]['correct_answer']: 
-            points -= 1
+    elif user_input == 'f' and response[index]['incorrect_answers'] != ['True']:
+        points = points + 0
+    
+    elif  user_input == 't' and response[index]['incorrect_answers'] != ['False']:
+        points = points + 0
+    # One liner version of the last elif's shown.
+    #if  user_input == 'f' and response[index]['correct_answer'] == ['True'] or  user_input == 't' and response[index]['correct_answer'] == ['False']: 
+            #points = points + 0 
+    else:
+        print('Looks you typed a wrong response, please try the 10 question trivia again')
+        break
+print(f'You got {points} out of 10 points.')
            
-        else:            
-            print("\n3rd) question is",response[2]['category'],'and the dificulty is',response[2]['difficulty'],'\n\nThe question is:', response[2]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-        if user_input == 't' and response[2]['correct_answer'] == ['True']:
-            points += 1
     
-        if  user_input == 'f' and response[2]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[2]['incorrect_answers'] == ['true']  or user_input == 'f' and response[0]['correct_answer']: 
-            points -= 1
-        else:            
-            print("\n4th) question is",response[3]['category'],'and the dificulty is',response[3]['difficulty'],'\n\nThe question is:', response[3]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[3]['correct_answer'] == ['True']:
-            points += 1
     
-        if  user_input == 'f' and response[3]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[3]['incorrect_answers'] == ['true']  or user_input == 'f' and response[3]['correct_answer']: 
-            points -= 1
-
-        else:            
-            print("\n5th) question is",response[4]['category'],'and the dificulty is',response[4]['difficulty'],'\n\nThe question is:', response[4]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[4]['correct_answer'] == ['True']:
-            points += 1
-    
-        if  user_input == 'f' and response[4]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[4]['incorrect_answers'] == ['true']  or user_input == 'f' and response[4]['correct_answer']: 
-            points -= 1
-
-        else:            
-            print("\n6th) question is",response[5]['category'],'and the dificulty is',response[5]['difficulty'],'\n\nThe question is:', response[5]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[5]['correct_answer'] == ['True']:
-            points += 1
-    
-        if  user_input == 'f' and response[5]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[5]['incorrect_answers'] == ['true']  or user_input == 'f' and response[5]['correct_answer']: 
-            points -= 1
-
-        else:            
-            print("\n7th) question is",response[6]['category'],'and the dificulty is',response[6]['difficulty'],'\n\nThe question is:', response[6]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[6]['correct_answer'] == ['True']:
-            points += 1
-    
-        if  user_input == 'f' and response[6]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[6]['incorrect_answers'] == ['true']  or user_input == 'f' and response[6]['correct_answer']: 
-            points -= 1
-
-        else:            
-            print("\n8th) question is",response[7]['category'],'and the dificulty is',response[7]['difficulty'],'\n\nThe question is:', response[7]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[7]['correct_answer'] == ['True']:
-            points += 1
-    
-        if  user_input == 'f' and response[7]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[7]['incorrect_answers'] == ['true']  or user_input == 'f' and response[7]['correct_answer']: 
-            points -= 1
-
-        else:            
-            print("\n9th) question is",response[8]['category'],'and the dificulty is',response[8]['difficulty'],'\n\nThe question is:', response[8]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[8]['correct_answer'] == ['True']:
-            points += 1
-    
-        if  user_input == 'f' and response[8]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[8]['incorrect_answers'] == ['true']  or user_input == 'f' and response[8]['correct_answer']: 
-            points -= 1
-
-        else:            
-            print("\n10th) question is",response[9]['category'],'and the dificulty is',response[4]['difficulty'],'\n\nThe question is:', response[9]['question'], "Is this True 't' or False 'f' ?")
-            user_input = input()
-
-        if user_input == 't' and response[9]['correct_answer'] == ['True']:
-            points += 1
-    
-        if  user_input == 'f' and response[9]['incorrect_answers'] == ['False']:
-            points += 1
-
-        if  user_input == 'f' and response[9]['incorrect_answers'] == ['true']  or user_input == 'f' and response[9]['correct_answer']: 
-            points -= 1
-
-        if questions == 0: 
-                break
-                    
-print(f'You got {points} out of 10')
-
-
+        
+        
+        
+"""      
+    print('Looks you typed a wrong response, please try the trivia again')        
+      user_input("Type 'yes' to continue a new trivia or 'no' to quit")
+    if user_input == 'yes':
+        index = -1
+    if user_input == 'no':
+        break
 """
-user_input = input("Welcome to trivia 10 questions, would you like to play? 'y' or 'n':\n")
-    if user_input == 'y':  
-
-        if user_input == 'n':
-            break
-    
-"""
-
-
-# Create a for loop to replace the html characters with regular characters from the listed dictionaries and have them output at each print before an answer is given.
-

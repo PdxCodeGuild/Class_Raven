@@ -3,6 +3,7 @@
 # Rafael Medina
 
 """
+NOTE: Part 1,2,3 ready for review. 11/03/2021
 """
 
 #Part 1 - Linear Search

@@ -10,7 +10,7 @@ Lab 09 - Three minor things:
 
 A score of 17 causes an infinite loop.
 A score of 21 causes an infinite loop.
-Jacks, Queens and Kings are all worth 10 points in Blackjack. They're currently 11, 12, 13 in the code.
+Jacks, Queens and Kings are all worth 10 points in Blackjack. They're currently 11, 12, 13 in the code (fixed).
 """
 
 # dict for card values
@@ -59,6 +59,8 @@ while True:
         print(f'{total_draw} "Blackjack!"')
     elif total_draw > 21:
         print(f'{total_draw} "Already Busted"')
+        break
+    else: 
         break
     
 
