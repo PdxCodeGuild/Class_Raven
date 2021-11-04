@@ -75,27 +75,27 @@ class Search:
     def quicksort(self, nums: list) -> list:
         """Implement a quicksort recursive algorithm"""
 
-        def quicksort_rec(nums, low, high):
+        def quicksort_rec(numbs, low, high):
             if low < high:
-                p = partition(nums, low, high)
-                quicksort_rec(nums, low, p)
-                quicksort_rec(nums, p + 1, high)
+                p = partition(numbs, low, high)
+                quicksort_rec(numbs, low, p - 1)
+                quicksort_rec(numbs, p + 1, high)
+            
+            return numbs
 
-        def partition(nums, low, high):
-            pivot = nums[low + (high - low) // 2]
+        def partition(numbers, low, high):
+            pivot = numbers[high]
             i = low - 1
-            j = high + 1
-            while True:
-                i += 1
-                while nums[i] < pivot:
-                    j -= 1
-                while nums[j] > pivot:
+            for j in range(low, high):
+                if numbers[j] <= pivot:
                     i += 1
-                    if i >= j:
-                        return j
-                nums[i], nums[j] = nums[j], nums[i]
+                    numbers[i], numbers[j] = numbers[j], numbers[i]
 
-        quicksort_rec(nums, 0, len(nums) - 1)
+            numbers[i + 1], numbers[high] = numbers[high], numbers[i + 1]
+
+            return i + 1
+
+        return quicksort_rec(nums, 0, len(nums) - 1)
 
 
 def main() -> None:
@@ -104,25 +104,25 @@ def main() -> None:
     nums = [1, 2, 3, 4, 5, 6, 7, 8]
 
     val = search_and_sort.linear_search(nums, 6)
-    print(val)
+    print(f"\nLinear Search: {val}\n")
 
     val2 = search_and_sort.bin_search(nums, 6)
-    print(val2)
+    print(f"Binary Search: {val2}\n")
 
     sort_me = [85, 12, 59, 26, 64, 77, 54, 45, 896, 8474, 89, 65, 21, 31, 98]
 
     val3 = search_and_sort.bubb_sort(sort_me)
-    print(val3)
+    print(f"Bubble Sort: {val3}\n")
 
     sort_you = [85, 12, 59, 27, 64, 77, 54, 45, 896, 8474, 89, 65, 21, 32, 98]
 
     val4 = search_and_sort.insert_sort(sort_you, len(sort_you) - 1)
-    print(val4)
+    print(f"Insert Sort: {val4}\n")
 
-    sort_us = [85, 12, 59, 27, 61, 76, 54, 45, 896, 8474, 89, 65, 21, 32, 98]
+    sort_us = [86, 12, 57, 25, 61, 76, 51, 42, 899, 8475, 81, 64, 22, 30, 99]
 
     val5 = search_and_sort.quicksort(sort_us)
-    print(val5)
+    print(f"Quick Sort: {val5}\n")
 
 
 if __name__ == "__main__":
