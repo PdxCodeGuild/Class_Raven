@@ -27,8 +27,8 @@ class trivia:
        
        for question in self.info:
             #print(html.unescape(question['question']))
-            self.correct_answers.append(html.unescape(question['correct_answer']))
-            #print(self.correct_answers)
+            self.correct_answers.append(html.unescape(question['correct_answer'])) # questoin is just an iterable its not important
+            
 
     def answer_checker(self, user_answer):
         
@@ -59,12 +59,12 @@ print('Welcome to history trivia enter True or False for the following questions
 counter = 0
 points = 0
 play = True
+
 while play:
     print(html.unescape(trivia.info[counter]['question']))
     user_answer = input('Enter True or False: ').capitalize()
     
-    print(type(user_answer))
-    if user_answer != "True" or user_answer != "False":
+    if user_answer not in  ['True', 'False']:
         print('Please enter True or False only.')
         continue
     
