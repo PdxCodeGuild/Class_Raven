@@ -114,7 +114,7 @@ class Trivia:
             question = choice(results) # Get a random question from the results.
         except IndexError: # If there are no results.
             print(f'{Fore.RED}>>>No questions found. Using default URL.<<<{Style.RESET_ALL}') # Print an error message.
-            data = self.get_data('https://opentdb.com/api.php?amount=10') # Get the default data.
+            data = self.get_data_from_settings() # Get the default data.
             results = data['results'] # Get the results from the data.
             question = choice(results) # Get a random question from the results.
         return question # Return the question.
@@ -189,7 +189,7 @@ class Trivia:
             settings['category'] = 'any' # Set the category to any.
         return settings
     
-    def get_data_from_settings(self, difficulty, type, category): 
+    def get_data_from_settings(self, difficulty='any', type='any', category='any'): 
         """
         Get the data from the settings.
         :param difficulty: The difficulty.
