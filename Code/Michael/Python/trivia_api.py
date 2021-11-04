@@ -110,7 +110,7 @@ class Trivia:
         :raises: IndexError
         """
         results = data['results'] # Get the results from the data.
-        try:
+        try: # Try to get the question from the results.
             question = choice(results) # Get a random question from the results.
         except IndexError: # If there are no results.
             print(f'{Fore.RED}>>>No questions found. Using default URL.<<<{Style.RESET_ALL}') # Print an error message.
