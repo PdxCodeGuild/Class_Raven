@@ -86,16 +86,30 @@ def main() -> None:
         # get the command from the user
         command = input("what is your command? ")
 
-        if command == "done":
-            break  # exit the game
-        elif command == "l":
-            player.position_y -= 1  # move left
-        elif command == "r":
-            player.position_y += 1  # move right
-        elif command == "u":
-            player.position_x -= 1  # move up
-        elif command == "d":
-            player.position_x += 1  # move down
+        match command:
+            case "done":
+                break  # exit the game
+            case "l":
+                player.position_y -= 1  # move left
+            case "r":
+                player.position_y += 1  # move right
+            case "u":
+                player.position_x -= 1  # move up
+            case "d":
+                player.position_x += 1  # move down
+            case _:
+                print(f"{F.RED}INVALID INPUT{R}")
+
+        # if command == "done":
+        #     break  # exit the game
+        # elif command == "l":
+        #     player.position_y -= 1  # move left
+        # elif command == "r":
+        #     player.position_y += 1  # move right
+        # elif command == "u":
+        #     player.position_x -= 1  # move up
+        # elif command == "d":
+        #     player.position_x += 1  # move down
 
         match player.position_x:
             case -1:
