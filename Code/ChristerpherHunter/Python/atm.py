@@ -35,12 +35,12 @@ class ATM:
         """Return the present balance"""
 
         # Read balances from file to update local balance
-        try:
-            with open(self.filename, "r", encoding="UTF-8") as f_read:
-                line = [line for line in f_read.readlines() for
-                        i in line if i.isdigit()]
-        except FileNotFoundError:
-            print(f"{F.RED}NO PREVIOUS INPUT{R}")
+        # try:
+        #     with open(self.filename, "r", encoding="UTF-8") as f_read:
+        #         line = [line for line in f_read.readlines() for
+        #                 i in line if i.isdigit()]
+        # except FileNotFoundError:
+        #     print(f"{F.RED}NO PREVIOUS INPUT{R}")
 
         # Abandoning the above code
 
@@ -53,26 +53,26 @@ class ATM:
             (print(f"{F.RED}INVALID INPUT{R}"), self.quit())
 
         with open(self.filename, "a") as f_write:
-            f_write.write(f"\nuser deposited $ {input:.2f}")
-            # f"{self.__interest:.2f}\n")
+            f_write.write(f"\nuser deposited $ {input:.2f}"
+                          f" @ {self.__interest:.2f}% \n")
 
     def withdraw(self, input: float) -> None:
         """Subtract monies from the account balance"""
 
         temp_balance = self.__balance - input
-        self.__balance -= input if input < self.__balance else 0
+        self.__balance -= input if input <= self.__balance else 0
 
         if temp_balance < 0:
             print("INSUFFICIENT FUNDS")
         else:
             with open(self.filename, "a") as f_write:
-                f_write.write(f"user withdrew ${input}\n")
+                f_write.write(f"user withdrew ${input:.2f}\n")
 
     def interest(self, input: float) -> None:
         """Change the interest amount"""
 
-        self.__interest = input if (input < 1 and input > 0) else\
-            (print(f"{F.RED}INVALID INPUT{R}"), self.quit())
+        # self.__interest = input if (input < 1 and input > 0) else\
+        #     (print(f"{F.RED}INVALID INPUT{R}"), self.quit())
 
         interest_amount = self.__balance * self.__interest
         print(f"{F.YELLOW}The interest accrued is: ${interest_amount:.2f}{R}")
@@ -108,8 +108,8 @@ class ATM:
                     withdraw_amnt = float(input("Withdraw amount: "))
                     self.withdraw(withdraw_amnt)
                 case "4":
-                    interest_chng = float(input("Interest rate: "))
-                    interest_chng = interest_chng % 100
+                    # interest_chng = float(input("Interest rate: "))
+                    interest_chng = 0.1
                     self.interest(interest_chng)
                 case "5":
                     try:
