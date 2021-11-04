@@ -69,7 +69,8 @@ class Trivia:
 
         print(f"\n{F.YELLOW}Please answer True or False:{R} ")
         for i in holding:
-            usr_answers.append(input(f"\n{holding[i]}: "))
+            print(f"\n{F.YELLOW}Question:{R} {i}")
+            usr_answers.append(input(f"{holding[i]}: "))
             match usr_answers[i - 1].lower():
                 case "true":
                     truthy.append(1)
@@ -141,8 +142,8 @@ def main() -> None:
     api = Trivia()
 
     holding = api.publish_findings()
-    print(f"\nYou know {F.CYAN}{holding}{R} correct answers"
-          f"out of {F.RED}10{R}.\n")
+    print(f"\nYou know {F.CYAN}{holding}{R} correct answers "
+          f"of {F.RED}10{R}.\n")
 
 
 if __name__ == "__main__":
