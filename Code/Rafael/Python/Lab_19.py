@@ -48,7 +48,7 @@ response = requests.get(url)
 #response.encoding = 'utf-8'
 
 # To get out of the response[200] and convert the response to .json object.
-response = response.json()
+response = response.json() # "It's not possible to format a write-protected DVD-R Hard Disk" error if using the html.unescape(response) on .json response
 
 # Assigns the requested response to a list of dicts to be able to access from response{}
 
