@@ -22,6 +22,19 @@ The API has many more options for different difficulties, different categories, 
 Below are list of dictionaries containing the parameter name (what gets put into the query string) and a friendly name to show the user. 
 Prompt the user for each of these parameters, and include them in the request to get the list of questions. 
 Ask the user each question, ask them for their answer, and keep track of the score. At the end show them how many they got correct/incorrect.
+
+    Save for later.
+    def get_answer(self, question):
+        if question['type'] == 'boolean': # If the question is a true/false question.
+            answer = question['correct_answer'] # Get the correct answer.
+        else: # If the question is a multiple choice question.
+            answers = question['incorrect_answers'] # Get the incorrect answers.
+            answers.append(question['correct_answer']) # Add the correct answer to the list of incorrect answers.
+            shuffle(answers) # Shuffle the list of incorrect answers.
+            answer = choice(answers) # Get a random answer from the list of incorrect answers.
+        return answer
+    
+
 """
 
 import requests
@@ -31,6 +44,11 @@ from colorama import Fore, Style
 
 class Trivia:
     def __init__(self) -> None:
+        """
+        Initialize the class.
+        :return: None
+        :rtype: None
+        """
         self.questions = []
         self.score = 0
         self.total = 0
@@ -73,11 +91,24 @@ class Trivia:
             { 'parameter': '32', 'name': 'Entertainment: Cartoon &amp; Animations' }
         ]
 
-    def get_data(self, url):
+    def get_data(self, url) -> dict:
+        """
+        Get the data from the url.
+        :param url: The url to get the data from.
+        :return: The data from the url.
+        :rtype: dict
+        """
         data = requests.get(url).json() # Get the data from the url.
         return data
 
-    def get_question(self, data):
+    def get_question(self, data) -> dict:
+        """
+        Get the question from the data.
+        :param data: The data from the url.
+        :return: The question.
+        :rtype: dict
+        :raises: IndexError
+        """
         results = data['results'] # Get the results from the data.
         try:
             question = choice(results) # Get a random question from the results.
@@ -88,7 +119,13 @@ class Trivia:
             question = choice(results) # Get a random question from the results.
         return question # Return the question.
 
-    def ask_question(self, question):
+    def ask_question(self, question) -> None:
+        """
+        Ask the question.
+        :param question: The question.
+        :return: None
+        :rtype: None
+        """
         answer = "Invalid"
         print(unescape(question['question'])) # Print the question.
         correct = question['correct_answer'] # Get the correct answer.
@@ -110,7 +147,12 @@ class Trivia:
             print(f'Incorrect! The correct answer was {correct}')
         self.total += 1 # Add to the total.
 
-    def get_settings(self):
+    def get_settings(self) -> dict:
+        """
+        Get the settings.
+        :return: The settings.
+        :rtype: dict
+        """
         settings = {}
         print('\nPlease choose your settings, no answer will default to any.\n')
         for difficulty in self.difficulties: # Loop through the difficulties.
@@ -148,10 +190,18 @@ class Trivia:
         return settings
     
     def get_data_from_settings(self, difficulty, type, category): 
+        """
+        Get the data from the settings.
+        :param difficulty: The difficulty.
+        :   type: The type.
+        :   category: The category.
+        :return: The data from the settings.
+        :rtype: dict
+        """
         if difficulty == 'any': # If the difficulty is any.
             difficulty = '' # Set the difficulty to empty.
         else: # If the difficulty is not any.
-            difficulty = f'&difficulty={difficulty}' # Add the difficulty to the url.
+            difficulty = f'&difficulty={difficulty}' # Add the difficulty to the url
         if type == 'any': # If the type is any.
             type = '' # Set the type to empty.
         else: # If the type is not any.
@@ -166,6 +216,9 @@ class Trivia:
 
 
 if __name__ == "__main__": 
+    """
+    Run the program.
+    """
     play_again = True
     print("Welcome to the Trivia Quiz!")
     trivia = Trivia()
@@ -173,6 +226,9 @@ if __name__ == "__main__":
     data = trivia.get_data_from_settings(settings['difficulty'], settings['type'], settings['category'])
     
     while play_again: # Loop until the user says no.
+        """
+        Play the game.
+        """
         question = trivia.get_question(data) # Get the question.
         trivia.ask_question(question) # Ask the question.
         print(f'You got {trivia.score} out of {trivia.total} correct!')
