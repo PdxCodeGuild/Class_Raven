@@ -33,7 +33,7 @@ for x in response:
 
 #Now it's time to loop through the questions and calculate how many responses are correct
 #Start by creating a counter for the loop and a counter for the number of correct responses
-user_answers = {}
+user_answers = []
 index = 0
 correct = 0
 #Loop through the question_answer_dictionary
@@ -51,6 +51,8 @@ for question in question_answer_dictionary:
 #Print the total number correct
 print(f'You got a total of {correct} correct')
 
-for key in user_answers:
+final_list = []
+for i in question_answer_dictionary:
+    tpl = (i, question_answer_dictionary[i], )
     print('Incorrect Answer: ',key,'Your answer was: ',value)
 
