@@ -51,19 +51,19 @@ response = requests.get(url)
 response = response.json()
 
 # Assigns the requested response to a list of dicts to be able to access from response{}
+
+
 response = response['results']
+
+"""
 print()
 print(response,'!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-
-decoded_string = html.unescape(response)# Takes out html characters from requested response.
-
-
-
+"""
+#decoded_string = html.unescape(response)# Takes out html characters from requested response.
 
 #print(response)
 #print(type(response))
 #print(len(response))
-
   
 
 
