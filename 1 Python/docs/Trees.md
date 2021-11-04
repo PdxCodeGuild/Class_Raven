@@ -19,15 +19,15 @@ A tree is a nonlinear hierarchical data structure that consists of nodes connect
 ## Binary Search Tree
 Binary Search Tree is a node-based binary tree data structure (each node only has two children) which has the following properties:
 
-The left subtree of a node contains only nodes with keys lesser than the node’s key.
+The left subtree of a node contains only nodes with values less than the node’s value.
     
-The right subtree of a node contains only nodes with keys greater than the node’s key.
+The right subtree of a node contains only nodes with values greater than the node’s value.
 
 The left and right subtree each must also be a binary search tree.
 
 
 
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png" width=600/>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png" width=400/>
 
 ## Trie
 
@@ -47,5 +47,4 @@ The following Trie diagram is storing the words ball, bat, bear, bell, bore, sta
 
 <img src="https://static.javatpoint.com/ds/images/trie-data-structure.png" width=600/>
 
-## Graph
 
