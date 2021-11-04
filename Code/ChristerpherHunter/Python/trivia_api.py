@@ -20,8 +20,12 @@ class Trivia:
 
     def __init__(self) -> None:
 
+        self.amount = 10
+        self.category = 18
+        self.cat_type = 'boolean'
         self.url = \
-            "https://opentdb.com/api.php?amount=10&category=18&type=boolean"
+            f"https://opentdb.com/api.php?amount={self.amount}&\
+            category={self.category}&type={self.cat_type}"
 
     def touch_api(self) -> object:
         """Get the information from the API"""
