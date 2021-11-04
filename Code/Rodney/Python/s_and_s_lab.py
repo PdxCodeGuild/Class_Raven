@@ -3,19 +3,18 @@
 ## part 1: linear search---------------------------------------------------------------------------------
 
 def linear_search(nums, value):  # defining function with nums and value as paramaters 
-
-    for number in nums:  # for loop to loop through numbers in nums list 
-        if number == value:  ## if a number we are looping through matches the user input value
-            index_value = nums.index(value)  # we assign a variable to that numbers index value from the list 
-            break
-        else:
-            index_value = "Value's index not found" ## if value is not in list, we let user know 
-    return index_value
-
-
-search_list = [1, 2, 3, 4, 5, 6, 7, 8]
-index = linear_search(search_list, 2)
-print(index) 
+	
+	for i in range(len(nums)):  # for loop to loop through numbers in nums list 
+	    if nums[i] == value:  ## if the value of the index in the list equals value entered by user, then true 
+	        index_value = i  # we assign a variable to i 
+	        break
+	    else:
+	        index_value = "Value's index not found" ## if value is not in list, we let user know 
+	return index_value
+	
+nums = [1, 2, 3, 4, 5, 6, 7, 8]
+index = linear_search(nums, 2)
+print(index)
 
 
 ## part 2: binary search---------------------------------------------------------------------------------
@@ -44,20 +43,17 @@ print(index)
 
 ## part 3: bubble sort---------------------------------------------------------------------------------
 
-list_to_sort = [12, 0, 2, 98, 4, 698, 1, 0, 0, 74]## random list to sort 
-print(list_to_sort)  
-sorted_list = [12, 0, 2, 98, 4, 698, 1, 0, 0, 74] ## copy of that list 
-list.sort(sorted_list)  ## copy of list is sorted using .sort function 
 
+list_to_sort = [12, 0, 2, 98, 4, 698, 1, 0, 0, 74] ## random list to sort 
 list_length = len(list_to_sort) - 1  # we take length of list to sort - 1 
+swapped = True
 
-while list_to_sort != sorted_list:  # while our list doesn't equal the sorted list, continue 
+while swapped == True:  # while swap is true, run loop
+    swapped = False # set swap to false 
     for i in range (list_length): # this will 'do something' so many times, which in this case is the number of indices in list 
-        i = i + 1  ## we want i to equal i + 1 so we can compare i with i - 1
-        if list_to_sort[i - 1] > list_to_sort[i]:  ## using our list, say i is index 1, so i - 1 is index 0, in our list those are values: 0 and 12 
-            list_to_sort[i], list_to_sort[i - 1] = list_to_sort[i - 1], list_to_sort[i]  # 12 is greater than 0, so this line tells us to switch 0 to index 0 and 12 to index 1 
-               # this will repeat for every index in list and loop will repeat until our list to sort equals the sorted list 
-    
-print(list_to_sort)
-
+        if list_to_sort[i] > list_to_sort[i + 1]:  ## using our list, say i is index 0, so i + 1 is index 1, in our list those are values: 12 and 0
+            list_to_sort[i], list_to_sort[i + 1] = list_to_sort[i + 1], list_to_sort[i]  # 12 is greater than 0, so this line tells us to switch 0 to index 0 and 12 to index 1 
+            swapped = True
+               # eventually when swapped will be set to false: the list will be iterated all the way through each indice and
+print(list_to_sort) ## there will be no values that need to be swapped, so swapped will continue to be false and then break the loop when the list is iterated through the last time 
 
