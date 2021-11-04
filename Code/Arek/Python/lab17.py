@@ -46,7 +46,7 @@ class ContactList:
         # loop over self.contacts
         # print the information for each contact on a separate line
         for i in range(len(self.contacts)):
-            print(f"{self.contacts[i]}'\n'")
+            print(f"{self.contacts[i]['name']}, {self.contacts[i]['phone_number']}, {self.contacts[i]['email']}\n")
         ...
 
     def add(self, name, phone_number, email):
@@ -68,7 +68,7 @@ class ContactList:
     def update(self, old_name, new_name, new_phone_number, new_email):
         # find the contact in self.contacts with the given old_name
         # set that contacts' name, phone number, etc to the given values
-        for i in range(len(self.contacts) -1):
+        for i in range(len(self.contacts)):
             if old_name == self.contacts[i]['name']:
                 self.contacts[i]['name'] = new_name
                 self.contacts[i]['phone_number'] = new_phone_number
