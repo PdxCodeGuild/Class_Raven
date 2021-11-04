@@ -88,13 +88,13 @@ def main() -> None:
 
         if command == "done":
             break  # exit the game
-        elif command == "left":
+        elif command == "l":
             player.position_y -= 1  # move left
-        elif command == "right":
+        elif command == "r":
             player.position_y += 1  # move right
-        elif command == "up":
+        elif command == "u":
             player.position_x -= 1  # move up
-        elif command == "down":
+        elif command == "d":
             player.position_x += 1  # move down
 
         match player.position_x:
