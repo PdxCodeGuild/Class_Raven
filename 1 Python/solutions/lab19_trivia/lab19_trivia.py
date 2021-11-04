@@ -89,15 +89,15 @@ if __name__ == '__main__':
             print(message)
 
 
-            show_results = input("Do you want to see your results? y/n: ")
+            show_results = input("\nDo you want to see your results? y/n: ")
             if show_results == 'y':
                 for question in game.questions:
                     symbol = "x" if question['was_answered_correctly'] == True else "+"
-                    print(f"{symbol} - {question['text']}")
+                    print(f"{symbol} | {question['text']}")
             
 
 
-            again = input("Do you want to play again? y/n: ")
+            again = input("\nDo you want to play again? y/n: ")
             if again == 'y':
                 print("Okay, let's play again!")
 
