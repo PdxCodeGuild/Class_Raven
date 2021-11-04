@@ -36,7 +36,6 @@ import html
 import requests
 
 
-print(html.unescape('It&#039;s not possible to format a write-protected DVD-R Hard Disk.'))
 
 # url copied from Lab_19 instructions. Or you can go to the site and custumize your own.
 url = 'https://opentdb.com/api.php?amount=10&category=18&type=boolean'
