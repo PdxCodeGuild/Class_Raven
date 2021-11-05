@@ -20,8 +20,12 @@ class Trivia:
 
     def __init__(self) -> None:
 
+        self.amount = 10
+        self.category = 18
+        self.cat_type = 'boolean'
         self.url = \
-            "https://opentdb.com/api.php?amount=10&category=18&type=boolean"
+            f"https://opentdb.com/api.php?amount={self.amount}&\
+            category={self.category}&type={self.cat_type}"
 
     def touch_api(self) -> object:
         """Get the information from the API"""
@@ -57,7 +61,7 @@ class Trivia:
             7: ques_07,
             8: ques_08,
             9: ques_09,
-            10: ques_10,
+            10: ques_10
         }
 
     def user_answers(self) -> list:
@@ -69,7 +73,8 @@ class Trivia:
 
         print(f"\n{F.YELLOW}Please answer True or False:{R} ")
         for i in holding:
-            usr_answers.append(input(f"\n{holding[i]}: "))
+            print(f"\n{F.YELLOW}Question:{R} {i}")
+            usr_answers.append(input(f"{holding[i]}: "))
             match usr_answers[i - 1].lower():
                 case "true":
                     truthy.append(1)
@@ -80,16 +85,69 @@ class Trivia:
 
         return truthy
 
-    def results(self) -> str:
-        """Show the results of the quiz"""
+    def get_results(self) -> dict:
+        """Get the answers to the quiz"""
+
+        ans_01 = loads(self.url.text)["results"][0]["correct_answer"]
+        ans_02 = loads(self.url.text)["results"][1]["correct_answer"]
+        ans_03 = loads(self.url.text)["results"][2]["correct_answer"]
+        ans_04 = loads(self.url.text)["results"][3]["correct_answer"]
+        ans_05 = loads(self.url.text)["results"][4]["correct_answer"]
+        ans_06 = loads(self.url.text)["results"][5]["correct_answer"]
+        ans_07 = loads(self.url.text)["results"][6]["correct_answer"]
+        ans_08 = loads(self.url.text)["results"][7]["correct_answer"]
+        ans_09 = loads(self.url.text)["results"][8]["correct_answer"]
+        ans_10 = loads(self.url.text)["results"][9]["correct_answer"]
+
+        return {
+            1: ans_01,
+            2: ans_02,
+            3: ans_03,
+            4: ans_04,
+            5: ans_05,
+            6: ans_06,
+            7: ans_07,
+            8: ans_08,
+            9: ans_09,
+            10: ans_10
+        }
+
+    def get_answers(self) -> list:
+        """Store correct answers to be manipulated later"""
+
+        hiding = self.get_results()
+        correct_answer = []
+        ansy = []
+
+        for i in hiding:
+            correct_answer.append(hiding[i])
+            match correct_answer[i - 1].lower():
+                case "true":
+                    ansy.append(1)
+                case "false":
+                    ansy.append(0)
+                case _:
+                    print(f"{F.RED}UNEXPECTED INPUT{R}")
+
+        return ansy
+
+    def publish_findings(self) -> int:
+        """Publish the quiz results"""
+
+        truthy = self.user_answers()
+        ansy = self.get_answers()
+        correct = int() + sum(truthy[i] == ansy[i] for i in range(len(truthy)))
+
+        return correct
 
 
 def main() -> None:
 
     api = Trivia()
 
-    holding = api.user_answers()
-    print(holding)
+    holding = api.publish_findings()
+    print(f"\nYou know {F.CYAN}{holding}{R} correct answers "
+          f"of {F.RED}10{R}.\n")
 
 
 if __name__ == "__main__":
