@@ -4,19 +4,23 @@
 
 
 class ATM:
-    def __init__ (self, balance = 0, interest_rate = 0.6, transaction_log = []):
+    def __init__ (self, balance = 0, interest_rate = 0.6):
         self.balance = balance
         self.interest_rate = interest_rate
-        self.transaction_log = transaction_log
+        self.transaction_log = [
+
+        ]
 
     def check_balance(self):
         return print(f"Your balance is {self.balance}")
 
     def deposit(self, amount):
     #    self.amount = amount
+        if amount <= 0:
+            print("amount must be more than $0")
+            return
         self.balance += amount
-        #self.transaction_log = transaction_log
-        #transaction_log.append(f"user deposited ${amount}\n")
+        self.transaction_log.append(f"user deposited ${amount}")
         return self.balance
 
     def check_withdrawal(self, amount):
@@ -27,20 +31,17 @@ class ATM:
 
     def withdraw (self, amount):
         self.balance = self.balance - amount
-        #self.transaction_log = transaction_log
-        #transaction_log.append(f"user withdrew ${amount}\n") 
+        self.transaction_log.append(f"user withdrew ${amount}") 
         return self.balance - amount
 
     def calc_interest (self):
         self.balance += (self.balance * self.interest_rate)
         return self.balance
 
-    def log_event(self, transaction_log, message):
-        self.transaction_log = transaction_log
-        transaction_log.append(message) 
-
-    def print_log(self, transaction_log):
-        return print(transaction_log)
+    def print_log(self):
+        for item in self.transaction_log:
+            print(item)
+        return
 
 # atm = ATM(1000, 0.6) # code for testing functions
 # atm.check_balance()
@@ -65,12 +66,13 @@ while True:
     elif command == 'deposit':
         amount = float(input('How much would you like to deposit? '))
         atm.deposit(amount) # call the deposit(amount) method
+        #atm.log_event(f"user Deposited ${amount}\n")
         print(f'Deposited ${amount}')
     elif command == 'withdraw':
         amount = float(input('How much would you like '))
         if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method
             atm.withdraw(amount) # call the withdraw(amount) method
-            atm.log_event(f"user withdrew ${amount}\n")
+            #atm.log_event(f"user withdrew ${amount}\n")
             print(f'Withdrew ${amount}')
         else:
             print('Insufficient funds')
@@ -78,12 +80,15 @@ while True:
         amount = atm.calc_interest() # call the calc_interest() method
         atm.deposit(amount)
         print(f'Accumulated ${amount} in interest')
+    elif command == 'log':
+        atm.print_log()
     elif command == 'help':
         print('Available commands:')
         print('balance  - get the current balance')
         print('deposit  - deposit money')
         print('withdraw - withdraw money')
         print('interest - accumulate interest')
+        print('log  - print transaction log')
         print('exit     - exit the program')
     elif command == 'exit':
         break
