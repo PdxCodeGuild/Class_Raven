@@ -31,6 +31,7 @@ origin = origin.lower()
 letter_string = string.ascii_lowercase
 cipher_list = list(letter_string)
 # print(cipher_list)
+char_string = ''
 for i in origin:
     if i  in cipher_list:
         start = cipher_list.index(i)
@@ -38,7 +39,10 @@ for i in origin:
         if shift > 25:
             shift = shift - 26
         new_char = cipher_list[shift]
-        print(new_char)
+        char_string = char_string + new_char
+        
        
     else:
         print("Try again only using letters of the alphabet")
+
+print(char_string)

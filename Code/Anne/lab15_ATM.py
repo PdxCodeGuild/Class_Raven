@@ -12,11 +12,17 @@ class ATM:
         
         # deposits the given amount in the account
     def deposit(self, amount):
-        self.balance = self.balance + amount
-
+        if amount > 0:
+            self.balance = self.balance + amount
+        else:
+            return False
+        
         # withdraws the amount from the account and returns it
     def withdraw(self, amount):
-        self.balance = self.balance - amount
+        if amount < self.balance:
+            self.balance = self.balance - amount
+        else:
+            print("your balance is too low for this withdrawl")
         
         # returns true if the withdrawn amount won't put the account in the negative
     def check_withdrawal(self, amount):
@@ -31,7 +37,8 @@ class ATM:
         interest = float(interest)
         return interest
 
-
+# Lab 15 - The ATM currently allows negative amounts to be deposited and 
+# withdrawals to be more than the available balance. 
         
 atm = ATM() # create an instance of our class
 print('Welcome to the ATM')

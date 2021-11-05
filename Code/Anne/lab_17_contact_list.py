@@ -36,7 +36,7 @@ class ContactList:
         # 4) get the list of contacts out of the dictionary
         # and assign the list of dictionaries to self.contacts
         self.contacts = pyth_dict['contacts']
-        print(self.contacts)
+        # print(self.contacts)
     
     
     def count(self):
@@ -59,29 +59,48 @@ class ContactList:
         # 4) write the json string to the file 
             save_file.write(other_fu_king_thing)
     
-    
 
     def print(self):
         # loop over self.contacts
         for c in self.contacts:
+            # maybe take them out of the dictionary
             print(c)
         # print the information for each contact on a separate line
         ...
 
+
     def add(self, name, phone_number, email):
-        # create a new dictionary using the 3 parameters
-        # add the new dictionary to self.contacts
-        ...
-    
+        new_dict = {}
+        new_dict ['name'] = name
+        new_dict ["phone_number"] = phone_number
+        new_dict ['email'] = email
+        self.contacts.append(new_dict)
+        # print(self.contacts)
+     
     def remove(self, name):
         # find the contact in self-contacts with the given name
-        # remove the element at that index
-        ...
+        for dic in self.contacts:
+            for val in dic.values():
+                if val == name:
+                    # remove the element at that index
+                    self.contacts.remove(dic)
+                    # print(self.contacts)
     
     def update(self, old_name, new_name, new_phone_number, new_email):
         # find the contact in self.contacts with the given old_name
+        for dic in self.contacts:
+            for val in dic.values():
+                if val == old_name:
+                    dic['name'] = new_name
+                    dic['phone_number'] = new_phone_number
+                    dic['email'] = new_email
+                return(self.contacts)
+                    
+
+
         # set that contacts' name, phone number, etc to the given values
-        ...
+
+
     
 contact_list = ContactList() # create an instance of our class
 contact_list.load()
