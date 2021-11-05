@@ -59,18 +59,19 @@ print('#5', user_input)
 # 6. Sum all the values. 
 used_digits = sum(used_digits) 
 print('#6', used_digits)
+#print('#6', type(used_digits))
 
 # 7. Take the second digit of that sum.
 used_digits = str(used_digits)
-used_digits = check_digit
-print('#7', used_digits)
+second_digit = int(used_digits[1]) # after converting the remaining digits into a string to target the 2nd index [1] it needed to be converted back into an integer otherwise when it checks with the check_digit it will be a mismatch of char type..
+print('#7', second_digit)
 
 # 8. If that matches the check digit, the whole card number is valid.
 
-if used_digits == check_digit:
+if second_digit == check_digit:
     print('#8',"Valid!")
 
-elif used_digits != check_digit:
+elif second_digit != check_digit:
     print('#8', "invalid")
 
 
