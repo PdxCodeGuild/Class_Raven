@@ -30,12 +30,9 @@ Certain characters in the question text are encoded, to decode them you'll have 
 ]
 """
 
-
 import html
 
 import requests
-
-
 
 # url copied from Lab_19 instructions. Or you can go to the site and custumize your own.
 url = 'https://opentdb.com/api.php?amount=10&category=18&type=boolean'
@@ -50,7 +47,6 @@ response = requests.get(url)
 response = response.json() # "It's not possible to format a write-protected DVD-R Hard Disk" error if using the html.unescape(response) on .json response
 
 # Assigns the requested response to a list of dicts to be able to access from response{}
-
 
 response = response['results']
 
@@ -73,7 +69,6 @@ print(header)
 
 points = 0 # Note: to keep point values staring tally outside the loop and not inside to reset the values each cycle. 
 index = -1 # Negative value 1 allows for the while loop to start at 0 and run less than 10 times up to index[9]
-
 
 
 # http://projectpython.net/chapter07/ reference on how to begin a while loop for multiple lists.
