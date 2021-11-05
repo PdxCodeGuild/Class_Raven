@@ -188,3 +188,12 @@ Tasks are moved from the To Do column to the In Progress column as needed to mee
 |**Storyboard**|Board is reset after each Sprint|Board is persistent for the duration of the project
 
 [Back to Top](#the-agile-methodology)
+
+## Resources
+[Agile Manifesto](https://agilemanifesto.org/)
+
+[Scrum Guide](https://scrumguides.org/scrum-guide.html)
+
+[Kanban Guide](https://kanbanguides.org/)
+
+[Scrum Vs Kanban](https://www.wrike.com/blog/scrum-vs-kanban/#What-is-Scrum)
