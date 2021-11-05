@@ -25,6 +25,7 @@
     - [Project Boards](#project-boards)
     - [Application](#application)
   - [Summary](#summary)
+  - [Resources](#resources)
 
 </details>
 
