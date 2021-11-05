@@ -44,7 +44,7 @@ peaks_valleys_list = []
 for i in range(1, len(data) - 1): # for an index in the range of the list. The -1 keeps the index within range to prevent error..
         
         # This finds the peaks. Python tutor has the counts at index [6]&[14]
-        if data[i - 1] < data[i] > data[i + 1]: # If the previos index -1 index to the left is less than i and if the next index to the right +1 is less than i then it is a peak in data.
+        if data[i - 1] < data[i] > data[i + 1]: # If the previos index -1 to the left is less than i and if the next index to the right +1 is less than i then it is a peak in data.
 
                 peak_counts += 1 # Adds the peaks to the count.
 
@@ -52,8 +52,8 @@ for i in range(1, len(data) - 1): # for an index in the range of the list. The -
 
 # for an index in the range of the list. The -1 keeps the index within range
 for i in range(1, len(data) - 1):
-    # This finds the valleys. Python tutor has the counts at index [6]&[14]
-        if data[i - 1] > data[i] < data[i + 1]: # If the previos index -1 to the left is greater than i and if the next +1 to the right is greater than i then it is a valley in data. 
+    # This finds the valleys. Python tutor has the counts at index [9]&[17]
+        if data[i - 1] > data[i] < data[i + 1]: # If the previous index -1 to the left is greater than i and if the next +1 to the right is greater than i then it is a valley in data. 
                 valley_counts += 1 # Adds the valleys to the count.
 
 peaks_valleys_counts = peak_counts + valley_counts
