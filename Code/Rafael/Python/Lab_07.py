@@ -85,7 +85,6 @@ def valleys(data):
     return peaks_list
 peaks_list = valleys(data)
 # 3. peaks_and_valleys(data) - uses the above two functions to compile a single list of the peaks and valleys in order of appearance in the original data.
-
 def peaks_and_valleys(data):
     peaks_valleys_list = []
     for i in range(1, len(data) -1):
@@ -101,6 +100,6 @@ peaks_valleys_list = peaks_and_valleys(data)
 #print(valleys_list)
 #print(peaks_list + valleys_list)
 
-print(f'\nThe functions found {peak_counts} peaks @ {peaks_list}, {valley_counts} valleys @ {valleys_list} and {peaks_valleys_counts} peaks and valleys @ {peaks_valleys_list}.')
+print(f'\nThe functions found {peak_counts} peaks @ {peaks_list}, {valley_counts} valleys @ {valleys_list} and {peaks_valleys_counts} peaks and valleys @ {peaks_valleys_list}.\n')
 
  
