@@ -2,7 +2,6 @@
 # Lab_06 Peaks and Valleys
 # Rafael Medinally
 
-
 """
 NOTE: version 1 ready for review 11/4/2021.
 
@@ -100,6 +99,6 @@ peaks_valleys_list = peaks_and_valleys(data)
 #print(valleys_list)
 #print(peaks_list + valleys_list)
 
-print(f'\nThe functions found {peak_counts} peaks @ {peaks_list}, {valley_counts} valleys @ {valleys_list} and {peaks_valleys_counts} peaks and valleys @ {peaks_valleys_list}.\n')
+print(f'\nThe functions found {peak_counts} peaks @ {peaks_list}, {valley_counts} valleys @ {valleys_list} and {peaks_valleys_counts} peaks and valleys total @ {peaks_valleys_list}.\n')
 
  
