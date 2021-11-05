@@ -59,11 +59,12 @@ class ContactList:
         # 4) write the json string to the file 
             save_file.write(other_fu_king_thing)
     
-     
-
+    
 
     def print(self):
         # loop over self.contacts
+        for c in self.contacts:
+            print(c)
         # print the information for each contact on a separate line
         ...
 
