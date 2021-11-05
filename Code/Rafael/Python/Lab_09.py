@@ -2,14 +2,13 @@
 # Rafael Medina
 
 """
-NOTE: Need to make changes to this lab 9
+NOTE: Ready for changes review 11/4/2021
 10/28/2021
 
 Feedback:
-Lab 09 - Three minor things:
-
-A score of 17 causes an infinite loop.
-A score of 21 causes an infinite loop.
+"Three minor things:"
+A score of 17 causes an infinite loop.(fixed)
+A score of 21 causes an infinite loop.(fixed)
 Jacks, Queens and Kings are all worth 10 points in Blackjack. They're currently 11, 12, 13 in the code (fixed).
 """
 
@@ -49,15 +48,16 @@ total_draw = first_draw + second_draw + third_draw
 
 # while loop breaking if boolean is True
 while True:
-    if total_draw < 17:
+    if total_draw <= 17:
         print(f'{total_draw} "Hit"')
         break
-    if total_draw > 17 and total_draw < 21:
+    if total_draw >= 17 and total_draw < 21:
         print(f'{total_draw} "Stay"')
         break
     if total_draw == 21:
         print(f'{total_draw} "Blackjack!"')
-    elif total_draw > 21:
+        break
+    elif total_draw >= 21:
         print(f'{total_draw} "Already Busted"')
         break
     else: 
