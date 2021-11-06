@@ -47,13 +47,6 @@ The Waterfall Method follows these steps:
 4. Release
 
 This can work well, but often there are unforeseen challenges in the Coding stage that will send the entire project back to the Planning or bugs in the Testing phase which will send the entire project back to the Coding phase. This can cause a delay in the release of a product, this causing the release of an outdated product.
-
-## Scrum/Kanban
-
-Built around the Agile Methodology, **Scrum** and **Kanban** offer alternatives to the Waterfall Method. They each aim to break a complex task down into smaller, more manageable pieces that each pass through the Design, Coding and Testing phases before their individual releases. 
-
-This will lead to faster and more frequent feature releases and ensure that each is adapted to the ever-changing needs of the project and the market.
-
 ### Benefits of Agile:
 - Quickly adapts to changing requirements
 - Very flexible
@@ -61,6 +54,12 @@ This will lead to faster and more frequent feature releases and ensure that each
 - Faster decision-making
 - Improved team communication
 - Emphasis on continuous analysis and workflow improvement
+## Scrum/Kanban
+
+Built around the Agile Methodology, **Scrum** and **Kanban** offer alternatives to the Waterfall Method. They each aim to break a complex task down into smaller, more manageable pieces that each pass through the Design, Coding and Testing phases before their individual releases. 
+
+This will lead to faster and more frequent feature releases and ensure that each is adapted to the ever-changing needs of the project and the market.
+
 
 [Back to Top](#the-agile-methodology)
 
