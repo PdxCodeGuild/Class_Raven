@@ -20,7 +20,8 @@ class ContactList:
         
         # 1) open 'contacts.json' with option 'r' for read
         #with open(r'contacts.json') as contacts_file: # r had to be added in front of string to eliminate ('SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated')
-
+        
+        # Make sure that contacts.json file is in the same location and .py file.
         with open ('contacts.json','r') as contacts_file: # 'r' default reading 'w' (erasing) 'x' open file "failing if it exists" 'a' appending 't' read and write as text 'b' read and write as binary
           
 
@@ -58,17 +59,23 @@ class ContactList:
     def count(self):
         lenght = len(self.contacts)
         # return the count of self.contacts
-        # There is no count
-        return lenght
+        # There is no count on the REPL exept for save and remove coomands.
+        return lenght(self.contacts)
         ...
     
     def save(self):
         # 1) open 'contacts.json' with open 'w' for write
-        
-            
+        with open ('contacts.json','r') as contacts_file:
+
         # 2) put self.contacts in a dictionary with the key 'contacts'
+            contacts_dict = {'contacts': self.contacts}
+
         # 3) convert the dictionary to a json string (json.dumps)
+        # .dumps "Serialize obj to a JSON formatted str".
+            contents = json.dumps(contacts_dict, indent = 2) # indents print by 2
+            
         # 4) write the json string to the file
+            contacts_file .write(contents)
         ...
 
     def print(self):
@@ -96,15 +103,25 @@ class ContactList:
     def remove(self, name):
         # find the contact in self-contacts with the given name
         # remove the element at that index
+        for index in range(self.count):
+            contact = self.contacts[index]
+            if contact['name'] == name:
+                return self.contacts.pop(index)
+            # pops the name from the contact list    
         ...
     
     def update(self, old_name, new_name, new_phone_number, new_email):
         # find the contact in self.contacts with the given old_name
         # set that contacts' name, phone number, etc to the given values
+        for index in range(self.count):
+            contact = self.contacts[index]
+            if contact['name'] == old_name:
+                self.contacts[index] = {'name': new_name, 'phone_number': new_phone_number, 'email': new_email}
         ...
     
 contact_list = ContactList() # create an instance of our class
 contact_list.load()
+
 print('\nWelcome to the Contact List App (CLA)')
 print(f"'help'   - 'available commands:")
 print(f"'load'   - 'load all contacts from the file'")
@@ -122,7 +139,7 @@ while True:
 
         contact_list.load()
 
-        print(f'Loaded ${contact_list.count()} contacts.')
+        print(f'Loaded ${contact_list.count()} contacts.') # If a @property above the functions then it becomes part of that propert and the () are not needed any more.  
 
     elif command == 'save':
 
@@ -147,7 +164,8 @@ while True:
     elif command == 'remove':
 
         name = input('Name of contact to remove: ')
-        contact_list.remove(name)
+        removed = contact_list.remove(name)
+        print(f"Removed: {removed['name']}")
 
     elif command == 'update':
 
