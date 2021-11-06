@@ -1,8 +1,12 @@
 def linear(data, value):
   print(data)
   try:
-    index = data.index(value)
-    return index
+    index = 0
+    for item in data:
+      if item != value:
+        index += 1
+      elif item == value:
+        return index
   except:
     return 'value not found'
 
