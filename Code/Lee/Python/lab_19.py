@@ -25,18 +25,13 @@ def api_request(difficulty='any', type='any', category='any'):
     else:
         difficulty_url = f"&difficulty={difficulty}"
     
-    url = "https://opentdb.com/api.php?amount=10" + category_url + difficulty_url + type_url
-    print(url)
-    payload={}
-    headers = {}
-    response = requests.request("GET", url, headers=headers, data=payload).json()
-    # print(response)
+    url = f"https://opentdb.com/api.php?amount=10{category_url}{difficulty_url}{type_url}"
+    response = requests.request("GET", url).json()
+
     if response.get('response_code') != 0:
         print(f"error - response code {response['response_code']} encountered. Exiting to main menu")
         question_list = False
         return question_list
-    else:
-        print("Questions loaded successfully!\n")
     question_list = response["results"]
     return question_list
 
@@ -52,9 +47,7 @@ def test(question_list):
             generated_question = html.unescape(question.get("question"))
             generated_answer = html.unescape(question.get("correct_answer"))
             generated_incorrect_answer = html.unescape(question.get("incorrect_answers"))
-            generated_type = html.unescape(question.get("type"))
-            # print(f'Question Type: {generated_type}, Correct Answer: {generated_answer}, incorrect answer: {generated_incorrect_answer}')
-            
+            generated_type = html.unescape(question.get("type"))            
             if generated_type == 'multiple':
                 answer = multiple_choice(generated_question, generated_answer, generated_incorrect_answer)
             elif generated_type == 'boolean':
