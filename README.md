@@ -31,6 +31,8 @@ Weeks 16, 17, 18: Capstone project
     <li>Lab 16 - Searching & Sorting</li>
     <li>Lab 17 - Contact List</li>
     <li>Lab 19 - Trivia API</li>
+    <li>Lab 20 - Adventure (mob)</li>
+    <li>Mini-Capstone</li>
     <summary>Optional:</summary>
     <ul>
       <li>Stack and Linked List</li>
