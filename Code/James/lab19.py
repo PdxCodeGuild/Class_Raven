@@ -6,8 +6,9 @@ class trivia:
     def __init__(self):
         self.info = []
         self.correct_answers = []
-        
-        
+        self.i = 0
+        self.points = 0
+        self.current_question = 1
 
     def load(self):
         response = requests.get('https://opentdb.com/api.php?amount=10&category=23&type=boolean', params={'format': 'json'})
@@ -29,16 +30,19 @@ class trivia:
             #print(html.unescape(question['question']))
             self.correct_answers.append(html.unescape(question['correct_answer'])) # questoin is just an iterable its not important
             
-
+    
     def answer_checker(self, user_answer):
-        
-        if user_answer == self.correct_answers[0]:
+           
+        if user_answer == self.correct_answers[self.i]:
             print('Correct')
+            self.i += 1
+            self.points += 1
             return True
             
 
-        else:
+        elif user_answer != self.correct_answers[self.i]:
             print('Incorrect')
+            self.i += 1
             return False
             
         
@@ -57,11 +61,12 @@ trivia.questions_answers()
 
 print('Welcome to history trivia enter True or False for the following questions.')
 counter = 0
-points = 0
 play = True
 
+
 while play:
-    print(html.unescape(trivia.info[counter]['question']))
+    
+    print(trivia.current_question, html.unescape(trivia.info[counter]['question']))
     user_answer = input('Enter True or False: ').capitalize()
     
     if user_answer not in  ['True', 'False']:
@@ -69,14 +74,17 @@ while play:
         continue
     
     trivia.answer_checker(user_answer)
-    if trivia.answer_checker:
-        points += 1
+    
     counter += 1
+    trivia.current_question += 1
+    
+    
     if counter == 9:
-        print(f'You answered {points} questions correctly')
+        print(f'You answered {trivia.points} questions correctly')
         play_again = (input('Do you want to play again type yes or no \n>> ')).lower()
         if play_again == 'no':
             play = False
+        
         elif play_again == 'yes':
             trivia.load()
             counter = 0
