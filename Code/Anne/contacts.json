@@ -1,0 +1,19 @@
+{
+    "contacts": [
+        {
+            "name": "dorrie",
+            "phone_number": "kdjfs",
+            "email": "fasd"
+        },
+        {
+            "name": "Annette D. Berube",
+            "phone_number": "662-319-6954",
+            "email": "annette@gmail.com"
+        },
+        {
+            "name": "Austin M. Pigott",
+            "phone_number": "478-777-8878",
+            "email": "austin@aol.com"
+        }
+    ]
+}
