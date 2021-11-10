@@ -1,9 +1,11 @@
 """
-Lee Colburn
-Evening Bootcamp - PDX Code Guild
-Lab 17 - Contact List
-"""
+    Lee Colburn
+    Evening Bootcamp - PDX Code Guild
+    Lab 17 - Contact List
+    """
 '''
+Reference...
+
 contacts.json:
 {
     "contacts": [{
@@ -66,16 +68,26 @@ class ContactList:
         contacts['contacts'] = contacts_list
         
         # 3) convert the dictionary to a json string (json.dumps)
-        json_contacts = json.dumps(contacts)
+        json_contacts = json.dumps(contacts, indent=2)
         # 4) write the json string to the file
         f.write(json_contacts)
         return
 
-    def print(self):
+    def print(self, contact=False):
         # loop over self.contacts
         # print the information for each contact on a separate line
+        counter=1
+        
         for i in self.contacts:
-            print(i)
+            
+            display = (
+                f"\nContact {counter}:\n"
+                f"Name: {i['name']}\n"
+                f"Phone: {i['phone_number']}\n"
+                f"Email: {i['email']}"
+            )
+            print(display)
+            counter += 1
         return
 
     def add(self, name, phone_number, email):
@@ -98,9 +110,22 @@ class ContactList:
         return 
     
     def update(self, old_name, new_name, new_phone_number, new_email):
+        
+        index = 0
+        listing = self.contacts
         # find the contact in self.contacts with the given old_name
-        # set that contacts' name, phone number, etc to the given values
-        ...
+        for entry in listing:
+            name_check = entry['name']
+            # set that contacts' name, phone number, etc to the given values
+            if name_check == old_name:
+                entry['name'] = new_name
+                entry['phone_number'] = new_phone_number
+                entry['email'] = new_email
+            index += 1
+        return
+
+
+
     
 contact_list = ContactList() # create an instance of our class
 contact_list.load()
@@ -122,7 +147,7 @@ while True:
         print(f'Loaded {contact_list.count()} contacts.')
     elif command == 'save':
         contact_list.save()
-        print(f'Saved ${contact_list.count()} contacts.')
+        print(f'Saved {contact_list.count()} contacts.')
     elif command == 'print':
         contact_list.print()
     elif command == 'add':

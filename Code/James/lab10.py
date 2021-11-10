@@ -15,12 +15,7 @@ data = response.json() # this is saved as dictionary
 print(data['results'][0]['joke'])
 
 
-#how to search through all the dictionaries to find the users search term?
 
 
 
 
-# if user in data.values():
-#     print(data.values())
-# find = data[user]
-# print(find)
