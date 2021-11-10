@@ -13,10 +13,10 @@ Weeks 14, 15: Javascript
 Weeks 16, 17, 18: Capstone project
 
 ### Scheduled Holidays (no class)
-**Nov 11** - Veterans Day
-**Nov 25-26** - Thanksgiving
-**Dec 24** - Christmas Eve
-**Dec 31** - New Years Eve
+- **Nov 11** - Veterans Day
+- **Nov 25-26** - Thanksgiving
+- **Dec 24** - Christmas Eve
+- **Dec 31** - New Years Eve
 
 ### Assigned Labs:
 
