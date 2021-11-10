@@ -1,1 +1,0 @@
-# Lab 00 - Github branching example
