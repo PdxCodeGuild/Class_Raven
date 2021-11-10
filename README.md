@@ -42,7 +42,7 @@ Optional:
 <details open>
   <summary>Python</summary>
   <ul>
-    <li>Lab 02 - Madlib</li>
+    <li>Lab 02 - Make Change</li>
     <li>Lab 03 - Average Number</li>
     <li>Lab 05 - Palindrome Checker</li>
     <li>Lab 06 - Credit Card Number Validation</li>
@@ -77,8 +77,37 @@ Optional:
 ## Submitting your work
 
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
+<<<<<<< HEAD
 - `git pull` to pull any recent changes to your local repository
 - `git add <filename>` to add a specific file or `git add .` to add everything in the current dicrectory
+=======
+
+To emulate a more professional Git workflow, we're going to start creating new branches for each lab starting in the HTML/CSS section.
+
+### Creating a new branch:
+
+- `git branch` to check that you're on the master branch
+
+- `git status` to check if your local master branch is up to date with origin/master on Github.
+  
+- `git pull` if needed to pull any recent changes to your local repository
+
+- Create a new branch and switch to it.
+  - Option 1:
+    - `git branch <YOUR_NAME-SECTION-LAB_NUMBER>`
+    - `git checkout <YOUR_NAME-SECTION-LAB_NUMBER>`
+  
+  - Option 2:
+  
+    The `-b` flag can be used after the `checkout` command to combine these two steps:
+
+    `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
+  
+  **e.g.** My branch for the **"Lab 01 - Bio"** in the **HTML/CSS** section would be named: `keegan-htmlcss-lab01`. The name can vary a bit from this example, but please keep the chosen formatting consistent from one lab to another.
+
+- `git add <FILENAME>` to add a specific file or `git add .` to add everything in the current dicrectory
+  
+>>>>>>> master
 - `git commit -m "your commit message"` to commit your work
 - `git push` to push your changes up to the remote repository on GitHub
 - when lab is finished & ready to be reviewed, commit with a "completed" message
