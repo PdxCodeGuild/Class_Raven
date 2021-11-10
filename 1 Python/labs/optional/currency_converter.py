@@ -36,6 +36,7 @@ symbols = {
     '₫': 'Viet Nam Dong',
 }
 
+
 def fill_wallet(operations):
     output = []
     for _ in range(operations):
@@ -45,20 +46,25 @@ def fill_wallet(operations):
             output.append(choice(whitespace))
     return output
 
+
 def get_currency():
     return f'{choice(list(symbols.keys()))}{get_nums()}{get_cents()}'
 
+
 def get_nums():
     return str(randint(0, 5000))
+
 
 def get_cents():
     if random() < 0.5:
         return ''
     return '.' + str(randint(0, 99)).zfill(2)
 
+
 def random_wallet():
     with open('wallet.txt', 'w', encoding='utf-8') as f:
         f.writelines(fill_wallet(1000))
+
 
 random_wallet()
 
@@ -68,4 +74,3 @@ and convert all currencies to USD goes below:
 """
 
 # Your code here
-
