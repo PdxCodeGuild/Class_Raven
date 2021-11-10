@@ -158,6 +158,3 @@ class Circle:
 circle = Circle(10, 5, 5)
 print(circle) # A circle centered at (5, 5) with a radius of 10
 print(circle.center)
-
-# ----------------------------------------------------------------------- #
-

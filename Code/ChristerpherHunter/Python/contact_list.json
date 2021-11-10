@@ -1,0 +1,19 @@
+{
+    "contacts": [
+        {
+            "name": "Austin M. Pigott",
+            "phone_number": "478-777-8878",
+            "email": "austin@aol.com"
+        },
+        {
+            "name": "Joe B. Smith",
+            "phone_number": "504-879-4458",
+            "email": "common_name@gmail.com"
+        },
+        {
+            "name": "Danielle A. Hunter",
+            "phone_number": "547-879-8875",
+            "email": "ladymail@gmail.com"
+        }
+    ]
+}

@@ -131,3 +131,10 @@ GitHub.sublime-settings
 .history
 
 .vscode/settings.json
+
+# Austen copied and reformatted most of the docs into his own folder
+# This prevents the duplication bulk for everyone else
+Code/Austen/python/docs/**
+Code/Austen/python/reference/**
+Code/Austen/python/workbook/**/docs/**
+

@@ -121,7 +121,9 @@ if __name__ == "__main__":
             before_interest = atm.check_balance()
             atm.calc_interest()  # call the calc_interest() method
             after_interest = atm.check_balance()
-            amount = after_interest - before_interest # calculate the amount of interest
+            amount = (
+                after_interest - before_interest
+            )  # calculate the amount of interest
             print(f"Accumulated ${amount} in interest")
 
         elif command == "Exit":  # exit the program
