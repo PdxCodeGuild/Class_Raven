@@ -31,7 +31,12 @@ class ATM:
         return self.balance
 
     def deposit(self, amount):
-        self.balance += amount
+        if amount < 0:
+            print(f"You cannot deposit negative numbers")
+            return False
+        else:
+            self.balance += amount
+            return True
 
     def check_withdrawal(self, amount):
         if self.balance - amount < 0:
@@ -59,9 +64,9 @@ while True:
         print(f'Your balance is ${balance}')
     elif command == 'deposit':
         amount = float(input('How much would you like to deposit? '))
-        atm.deposit(amount) # call the deposit(amount) method
-        print(f'Deposited ${amount}')
-        transactions.append(f"Deposited ${amount}") # adding the string to the transactions list for version 2
+        if atm.deposit(amount):
+            print(f'Deposited ${amount}')
+            transactions.append(f"Deposited ${amount}") # adding the string to the transactions list for version 2
     elif command == 'withdraw':
         amount = float(input('How much would you like '))
         if atm.check_withdrawal(amount): # call the check_withdrawal(amount) method

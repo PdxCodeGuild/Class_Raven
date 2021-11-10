@@ -33,37 +33,27 @@ def peaks_and_valleys(data, options="None")->list:
             return "Error: Invalid input."   
 
 if __name__ == '__main__':
-    test_data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8]
-    peak_and_valley = peaks_and_valleys(test_data)
-    peak = peaks_and_valleys(test_data,"peaks")
-    valley = peaks_and_valleys(test_data,"valleys")
+    test_data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
     
     print(f' data: {test_data}')
     for i in reversed(range(0,max(test_data))):
         current_string = "        "
         highest_peak = 0
         for item in range(0,len(test_data)):
-            
             if test_data[item] >= highest_peak: # Get highest peak to use later for water bounds.
                 highest_peak = test_data[item]
             if test_data[item] >= i+1: # Become land.
                 current_string = current_string + "X  "
-                
-                # Need to fix the below algorithm. 
-            elif test_data[item]>=highest_peak or i>test_data[item]+(highest_peak-test_data[item]-1): # or test_data[item] == test_data[len(test_data)-1]: # I don't know, I brute forced this into existence. Become air.
+            elif test_data[item]>=highest_peak or i>test_data[item]+(highest_peak-test_data[item]-1): # I don't know, I brute forced this into working. Become air.
                 current_string = current_string + "   "
             else: # Become water.
                 current_string = current_string + "O  "
         print(current_string)
     print('index: [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]')
-    print("Peaks and Valleys: ",peak_and_valley)
-    print("Peaks: ", peak)
-    print("Valleys: ", valley)
-    
-    
+    print("Peaks and Valleys: ",peaks_and_valleys(test_data))
       
 """ Output:
-data:  [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+data: [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
                                                   X  O  O  O  O  O  X  
                                                X  X  X  O  O  O  X  X
                           X  O  O  O  O  O  X  X  X  X  X  O  X  X  X
@@ -73,6 +63,6 @@ data:  [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
               X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X
            X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X
         X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X
-index: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20]
+index: [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 Peaks and Valleys:  [6, 9, 14, 17]
 """
