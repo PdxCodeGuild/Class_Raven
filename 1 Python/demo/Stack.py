@@ -36,14 +36,34 @@ class Stack:
 
         temp = self.top_node
         self.top_node = temp.next
-        temp = None
-
         # decrease the height because a node got removed
         self.__height -= 1
+
+        return temp
 
     def peek(self): 
         ''' returns the top_node or None if there is no top_node'''
         return self.top_node
+
+    def empty(self):
+        '''Continually pop nodes off the top of the stack until the stack is empty'''
+        if self.__height == 0:
+            # base case
+            print('All nodes removed')
+            return
+    
+        # recursive case
+        node = self.pop()
+        print("Removed", node)
+        self.empty() # recursion
+
+    """ 
+    def empty(self):
+        '''Continually pop nodes off the top of the stack until the stack is empty'''
+        while self.__height > 0:
+            self.pop()
+    """
+
 
     @property # decorator to allow the height to be accessed like an attribute of the class
     def height(self):
@@ -86,6 +106,11 @@ if __name__ == '__main__':
 
 
     # print(stack.peek()) # A
-    stack.pop()
-    print(stack)
-    print(stack.height) # 2
+    # stack.pop()
+    # print(stack)
+    # print(stack.height) # 2
+
+    # print(stack)
+
+    stack.empty()
+    # print(stack)
