@@ -1,57 +1,94 @@
-
-import random
-
-winning_list = []
-balance = 0
-loop_times = 0
-earnings = 0
-expenses = 0
+""" blackjack advice """
 
 
-def win_list():
-    for x in range (0, 6):
-        winning_list.append(random.randint(1, 99))
-    return winning_list
+playing_cards = {'a': 1, 'q': 10, 'j': 10, 'k': 10, '2': 2, '3': 3, 
+'4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10
+}
 
+hand_values = []
+#
 
-def get_ticket():
-    ticket = []
-    for x in range (0, 6):
-        ticket.append(random.randint(1, 99))
+# if input == 'q':
+#     q = 10
+#ask user for 3 playing cards
+print('Welcome to Blackjack Advice. Enter faces as Q, J, K or A.')
+while True: 
     
-    return ticket
-
-win_list()
-print(winning_list)
-
-while loop_times < 100000:
-    count = 0
-    #changed this from -= to += because it was messing with the calculation
-    expenses += 2
-    #this generates a new ticket each time by calling on the get_ticket() function.
-    ticket = get_ticket()
-    #for each element in the ticket list im setting a statement to compare the values to see if they're equal to eachother.
-    for i in range(len(ticket)):
-        if ticket[i] == winning_list[i]:
-            count += 1
-    if count == 1:
-        earnings += 4
-    elif count == 2:
-        earnings += 7
-    elif count == 3:
-        earnings += 100
-    elif count == 4:
-        earnings += 50000
-    elif count == 5:
-        earnings += 1000000
-    elif count == 6:
-        earnings += 25000000
-
-    loop_times += 1
-roi = (earnings - expenses)/expenses * 100
-roi = round(roi)
-print(f'Your earned {earnings} and you lost {expenses} your roi is {roi} %.')
-
-
+    #print('Welcome to Blackjack Advice. Enter faces as Q, J, K or A.')
+    user_card1 = input('What\'s your first card? ').lower().strip(' ')
+    #give error if user input isnt in the dictionary
+    if not user_card1 in playing_cards:
+        print('Wrong input please enter only faces or integers.')
+        continue
     
-            
+    if user_card1 in playing_cards:
+        user_card1n = playing_cards.get(user_card1)
+    total_card = user_card1n + 0
+    
+    if total_card < 21:
+        playing_cards['a'] = 11
+    else:
+        playing_cards['a'] = 1
+
+    # print(user_card1)
+        
+    user_card2 = input('What\'s your second card? ').lower().strip(' ')
+    if not user_card2 in playing_cards:
+        print('Wrong input please enter only faces or integers.')
+        continue
+    
+    if user_card2 in playing_cards:
+        user_card2n = playing_cards.get(user_card2)
+    
+    total_card = user_card1n + user_card2n
+    if total_card <= 21:
+        playing_cards['a'] = 1
+    else:
+        playing_cards['a'] = 11
+
+    # print(user_card2)
+
+    user_card3 = input('What\'s your third card? ').lower().strip(' ')
+    if not user_card1 in playing_cards:
+        print('Wrong input please enter only faces or integers.')
+        continue
+    if user_card3 in playing_cards:
+        user_card3n = playing_cards.get(user_card3)
+    
+    #total_card = user_card1n + user_card2n + user_card3n
+    if total_card <= 21:
+        playing_cards['a'] = 1
+    else:
+        playing_cards['a'] = 11
+    total_card = user_card1n + user_card2n + user_card3n
+    
+    
+    print(f'Your total amount was {total_card}')
+
+    # need to change one of the aces to 11 if the total is below 21
+    # if total_card < 21:
+    #     playing_cards['a'] = 11
+    if total_card < 17:
+        print('Hit!')
+    elif total_card >= 17 and total_card < 21:
+        print('stay')
+    elif total_card == 21:
+        print('Blackjack!')
+    elif total_card > 21:
+        print('Already Busted')
+    
+        
+    continue
+
+
+#print(total_card)
+# def check_card(user):
+#     for x in playing_cards:
+#         if user == x:
+#             print(x)
+
+# check_card(user_card1)
+
+
+        
+    
