@@ -1,0 +1,40 @@
+{
+  "better comments reference key": [
+    {
+      "extension link": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
+    },
+    {
+      "tag": "*",
+      "description": "notes",
+      "color": "#826c03"
+    },
+    {
+      "tag": "^",
+      "description": "link/resource",
+      "color": "#bd9e07"
+    },
+    {
+      "tag": "~",
+      "description": "task/objective",
+      "color": "#7e57ff"
+    },
+    {
+      "tag": "x",
+      "description": "completed task/objective",
+      "color": "#7e57ff",
+      "strikethrough": true
+    },
+    {
+      "tag": "!",
+      "description": "idea",
+      "color": "#68c8ee",
+      "italic": true
+    },
+    {
+      "tag": "?",
+      "description": "confusion",
+      "color": "#a555a1",
+      "bold": true
+    }
+  ]
+}

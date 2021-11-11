@@ -5,9 +5,7 @@ def peaks(data: list) -> list:
 
     lst = list()
     for i, val in enumerate(data):
-        if i == 6:
-            lst.append(val)
-        elif i == 14:
+        if i in [6, 14]:
             lst.append(val)
     return lst
 
@@ -16,9 +14,7 @@ def valleys(data: list) -> list:
 
     lst = list()
     for i, val in enumerate(data):
-        if i == 9:
-            lst.append(val)
-        elif i == 17:
+        if i in [9, 17]:
             lst.append(val)
     return lst
 
@@ -65,8 +61,6 @@ def main() -> None:
     peaks_and_valleys(data)
     print("\n\n")
     peaks_and_valleys_water(data)
-
-    # print(val, val2)
 
 
 if __name__ == "__main__":

@@ -13,17 +13,17 @@ Weeks 14, 15: Javascript
 Weeks 16, 17, 18: Capstone project
 
 ### Scheduled Holidays (no class)
-**Nov 11** - Veterans Day
-**Nov 25-26** - Thanksgiving
-**Dec 24** - Christmas Eve
-**Dec 31** - New Years Eve
+- **Nov 11** - Veterans Day
+- **Nov 25-26** - Thanksgiving
+- **Dec 24** - Christmas Eve
+- **Dec 31** - New Years Eve
 
 ### Assigned Labs:
 
 <details open>
   <summary>Python</summary>
   <ul>
-    <li>Lab 02 - Madlib</li>
+    <li>Lab 02 - Make Change</li>
     <li>Lab 03 - Average Number</li>
     <li>Lab 05 - Palindrome Checker</li>
     <li>Lab 06 - Credit Card Number Validation</li>
@@ -37,6 +37,8 @@ Weeks 16, 17, 18: Capstone project
     <li>Lab 16 - Searching & Sorting</li>
     <li>Lab 17 - Contact List</li>
     <li>Lab 19 - Trivia API</li>
+    <li>Lab 20 - Adventure (mob)</li>
+    <li>Mini-Capstone</li>
     <summary>Optional:</summary>
     <ul>
       <li>Stack and Linked List</li>
@@ -58,8 +60,11 @@ Weeks 16, 17, 18: Capstone project
 Make sure all labs are located within `Class_Raven/Code/<YourName>`
 
 To emulate a more professional Git workflow, we're going to start creating new branches for each lab starting in the HTML/CSS section.
+<h2>Creating a new branch:</h2>
+<details>
+<summary>Click to expand</summary>
 
-### Creating a new branch:
+
 
 - `git branch` to check that you're on the master branch
 
@@ -73,7 +78,7 @@ To emulate a more professional Git workflow, we're going to start creating new b
     - `git checkout <YOUR_NAME-SECTION-LAB_NUMBER>`
   
   - Option 2:
-    
+  
     The `-b` flag can be used after the `checkout` command to combine these two steps:
 
     `git checkout -b <YOUR_NAME-SECTION-LAB_NUMBER>`
@@ -125,6 +130,7 @@ To emulate a more professional Git workflow, we're going to start creating new b
     <summary>Screenshot</summary>
     <img src="screenshots/create_pull_request.png" width=800>
   </details>
+</details>
 
 ### Updating a branch
 
@@ -147,3 +153,14 @@ Corrections will be made only to that particular branch.
 - Only one Pull Request is allowed per branch. A message will be added to the current Pull Request for the new commits.
 
 - Once a lab is complete, its branch will be merged into master.
+
+## Additional Resources
+
+<details>
+    <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>
+    <ul>
+    <li>Windows - <a href="https://www.screentogif.com">Screen to GIF</a></li>
+    <li>MacOS - <a href="https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12">GIPHY</a></li>
+    <li>Linux - <a href="https://github.com/phw/peek">Peek</a></li>
+    </ul>
+  </details>

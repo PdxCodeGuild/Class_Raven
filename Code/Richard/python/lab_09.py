@@ -34,7 +34,7 @@ print(hand)
 for card in hand:
     hand_value += card_values.get(card)
     
-    print(hand_value)
+print(hand_value)
 
 if hand_value < 17:
     print(f"{hand_value} You can't win with that... 'HIT'")

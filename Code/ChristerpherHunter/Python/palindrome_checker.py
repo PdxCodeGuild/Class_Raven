@@ -14,6 +14,7 @@ def check_palindrome() -> bool:
     rev_word = str()
     for i in reversed(user_input):
         rev_word += i
+
     if rev_word == user_input:
         return True
     else:
