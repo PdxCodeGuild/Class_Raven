@@ -1,4 +1,6 @@
 # Lab 05: Palindrome and Anagram
+# Rafael Medina
+
 # Palindrome
 
 user_input = input('\nenter a word ').lower()
@@ -13,7 +15,7 @@ else:
 # Lab 05: Palindrome and Anagram
 # Anagram
 
-"""
+
 user_input1= list(input(f"\nenter the first word: ").lower())
 user_input2 = list(input(f"\nenter the second word: ").lower())
 
@@ -36,7 +38,7 @@ else:
 
 # I still need to figure out how to print the original user input1 & 2, instead of printing the sorted version from original output. Note: ask Sarah or a student for tips.
 
-"""
+
 
 
 
