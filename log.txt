@@ -1,0 +1,5286 @@
+commit b5ad30fd35de34f49e55a44d3912a84c234af671
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 10 14:07:10 2021 -0800
+
+    removed () file
+
+commit 461a5fe27331cc6323ed51f99f12783780c9cb0a
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 10 14:05:38 2021 -0800
+
+    updated scheduled holiday formatting
+
+commit 1b27889de6cbbd3d99d3cba5dd78140ba78c103a
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 10 14:04:54 2021 -0800
+
+    added screenshots
+
+commit 7ef21fce01ac11a26284d4dcd608361f2aac2deb
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 10 14:02:07 2021 -0800
+
+    deleted test file
+
+commit 7b0e6619a5e88d92c66d1e5360280d9cf534d38c
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 10 14:01:23 2021 -0800
+
+    test file
+
+commit dec26f2bd2416eaa821b9380e9ba2c2bf7e5ba12
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 10 13:58:33 2021 -0800
+
+    replaced delete lines
+
+commit 4a861c27c88937a01993ac9fa20244df792e7fc2
+Merge: d0106cd e04ebc6
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 20:12:52 2021 -0800
+
+    Merge pull request #103 from PdxCodeGuild/Randall
+    
+    Randall
+
+commit d0106cd02499c6d3365468602edc5e6fb7aa1ed8
+Merge: 9e26749 4a6dc7e
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 20:12:27 2021 -0800
+
+    Merge pull request #107 from PdxCodeGuild/Rodney
+    
+    lab 20
+
+commit 9e26749e4318d704dc056a8cc64e038a1fd54e38
+Merge: 4191141 f1c3571
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 19:45:37 2021 -0800
+
+    Merge pull request #78 from PdxCodeGuild/james
+    
+    James
+
+commit f1c3571c0aee3ef0817fc7dddc38dc97e9e67ee0
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Nov 9 19:09:09 2021 -0800
+
+    final_mob_lab
+
+commit 463a8f5dbaafb1ab4a9c3df3a76708d59784dd9e
+Merge: 40044b9 4191141
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Nov 9 19:06:28 2021 -0800
+
+    Merge branch 'master' into james
+
+commit 40044b9985b24fb2cda7d9d8915b03d2a849b698
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Nov 9 19:03:41 2021 -0800
+
+    mini_cap
+
+commit 419114199eae5e7209240bf481a067fe83657912
+Merge: 27acfd6 efbf16f
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:52:28 2021 -0800
+
+    Merge pull request #102 from PdxCodeGuild/Christerpher_Lab_20
+    
+    Christerpher lab 20
+
+commit 27acfd6a5c74b1b29771b2959731bd7572d3a5a5
+Merge: f5a5ae7 4e3d87a
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:52:13 2021 -0800
+
+    Merge pull request #97 from PdxCodeGuild/aaronq-python-lab_18
+    
+    Aaronq python lab 18
+
+commit f5a5ae798d39735dafdb368f34b34c35c1dadb3c
+Merge: 3642427 027d81d
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:51:45 2021 -0800
+
+    Merge pull request #95 from PdxCodeGuild/Richard
+    
+    Richard
+
+commit 3642427552915e1d9dbeda3c4e4b0c3b906e9dec
+Merge: 9123c31 7f87f34
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:51:30 2021 -0800
+
+    Merge pull request #86 from PdxCodeGuild/Jose
+    
+    Jose
+
+commit 9123c31bdae9cb664f7fcbb6f72633cb07e38071
+Merge: c6e4071 7731cff
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:48:47 2021 -0800
+
+    Merge pull request #85 from PdxCodeGuild/Michael_lab_18
+    
+    Michael lab 18(19??) trivia complete
+
+commit c6e4071a3eb26cfd09be853d19b825ca196d71b9
+Merge: 10dcfa3 befa631
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:48:28 2021 -0800
+
+    Merge pull request #82 from PdxCodeGuild/Michael_lab_17
+    
+    Michael lab 17 complete
+
+commit 10dcfa376e974bafc362c5e0bcdc02c0f2010048
+Merge: 7208c8c 2377629
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:48:11 2021 -0800
+
+    Merge pull request #81 from PdxCodeGuild/Lee
+    
+    Lee
+
+commit 7208c8c88be1bfde90a194d891e31d70bc5188a5
+Merge: 9fc9bf6 e6d5fda
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:47:25 2021 -0800
+
+    Merge pull request #77 from PdxCodeGuild/Michael
+    
+    Michael lab 16 complete
+
+commit 9fc9bf6bfa865a252bd0e0d3a1f640b5deee5a78
+Merge: 96c0395 7aa4900
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:47:01 2021 -0800
+
+    Merge pull request #100 from PdxCodeGuild/austen-python-lab16
+    
+    Austen python lab16 rewrite bubble_sort
+
+commit 96c0395676b9cbc51e3b4ece80cd2c02668f1bed
+Merge: eb534fc fa23d23
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Nov 9 18:46:39 2021 -0800
+
+    Merge pull request #91 from PdxCodeGuild/Arek
+    
+    Arek
+
+commit 3615d776820777d9a24191787578b6c50af41928
+Merge: c5b22a6 eb534fc
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 8 20:26:44 2021 -0800
+
+    Merge branch 'master' into james
+
+commit c5b22a64c24c8f88ac3aa69acf2c3208836f7a74
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 8 20:26:12 2021 -0800
+
+    mini_cap
+
+commit eb534fcd4bc4796e2247e423efd90e183ef8451f
+Merge: d5fc563 1218ec8
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Mon Nov 8 20:23:37 2021 -0800
+
+    Merge pull request #75 from PdxCodeGuild/anne
+    
+    Great work, Anne! :smile:
+
+commit fa23d23a176d6cce3736785e4520147914eb3de9
+Merge: 3e62dc1 d5fc563
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Nov 8 16:56:54 2021 -0800
+
+    Merge branch 'master' into Arek
+
+commit d5fc5637b7088055fd178f6b8f35d651f8f69055
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Nov 8 10:10:46 2021 -0800
+
+    added labs
+
+commit 1a5ee95ceaf721de5fd1b0e963116597a63b5305
+Merge: 06cf535 708fa75
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 8 10:10:10 2021 -0800
+
+    Merge branch 'master' into james
+
+commit 06cf535bf386e88309d75acec85e110b86b5feaf
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 8 10:09:15 2021 -0800
+
+    lab 19 completed
+
+commit 237762942aa5bcea7540ccd11ac8664b39fbdd82
+Merge: e1beca1 0a4c8a7
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Nov 8 10:05:40 2021 -0800
+
+    Merge branch 'Lee' of github.com:PdxCodeGuild/Class_Raven into Lee
+
+commit e1beca1f8c3cf12abdc6a9a49e123f0763a9f08d
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Nov 8 10:05:20 2021 -0800
+
+    added labs
+
+commit 0a4c8a71491a2bddda8243a8bc6176b42ea161af
+Merge: 9f89a8a 708fa75
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Fri Nov 5 17:43:27 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 9f89a8a2326ff9902c45ab896ad3c074ea261197
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Fri Nov 5 17:42:39 2021 -1000
+
+    adding lab19 entry
+
+commit 7aa49003b9c66f7b883aabf5f4160a9eab5333d3
+Merge: 2cfb639 7db0fe6
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Fri Nov 5 19:21:36 2021 -0600
+
+    Merge pull request #108 from PdxCodeGuild/Austen
+    
+    fixed use of index() in linear search
+
+commit 7db0fe6e980aae1b66f433669e0a173cbf56de17
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Nov 5 19:19:56 2021 -0600
+
+    fixed use of index() in linear search
+
+commit efbf16f57a3488ebc38091a258db9c1d1e369828
+Merge: a309613 7ebeb05
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Nov 5 21:14:33 2021 -0400
+
+    Merge branch 'Christerpher_Lab_20' of https://github.com/PdxCodeGuild/Class_Raven into Christerpher_Lab_20
+    
+    updating local repo
+
+commit a309613baf7862cdd36610fb530e431c2f853571
+Merge: 8f0ca71 708fa75
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Nov 5 21:13:13 2021 -0400
+
+    updating local repo
+
+commit 708fa75d0785c6ec913c7efae34f8569caeb4775
+Merge: e85a4b8 e2308c6
+Author: unknown <keegood8@gmail.com>
+Date:   Fri Nov 5 18:01:28 2021 -0700
+
+    Merge branch 'master' of github.com:PdxCodeGuild/Class_Raven
+
+commit e85a4b8d09dddbb60e1668942e38b715cc3ebbe0
+Author: unknown <keegood8@gmail.com>
+Date:   Fri Nov 5 18:01:16 2021 -0700
+
+    added doctest demo
+
+commit 4a6dc7ed5e52c1313850e65ec85f08a350e8beab
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Fri Nov 5 20:57:56 2021 -0400
+
+    lab 20
+
+commit e2308c692128f7d2f60ef1358f407b3aa4329b57
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Nov 5 17:16:28 2021 -0700
+
+    updated
+
+commit df0b9e05bb51f4eac8295906f8a4b5de431b083d
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Nov 5 13:22:31 2021 -0700
+
+    added additional resources
+
+commit 9ffb9ea36a62ddfef29522c746c89b586887729e
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Nov 5 13:21:46 2021 -0700
+
+    added additional resources
+
+commit dd77c75f43a11fb56f58614dc8730b00fdc9d626
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Nov 5 13:10:19 2021 -0700
+
+    added agile doc
+
+commit 3e62dc1b4ed076ba2f194d8a7be9d88ae431cea5
+Merge: c2dcc23 ad13d5a
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Fri Nov 5 11:51:59 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit 027d81d60533f7471049e4b191777223782170bc
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Nov 4 22:21:07 2021 -0500
+
+    lab_14 finished
+
+commit 1218ec821803fe8a62d47c2e1f2d2807ab76a5a1
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Thu Nov 4 19:56:04 2021 -0700
+
+    all labs finsihed and edited up through 17
+
+commit c85879b62176c0b784f991752634363a2e3b8d51
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Nov 4 21:45:14 2021 -0500
+
+    Lab_13 finished
+
+commit 7ebeb05ffa2badeb76cbdf9d84ef092656773702
+Merge: 8f0ca71 ad13d5a
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Nov 4 22:21:19 2021 -0400
+
+    Merge branch 'master' into Christerpher_Lab_20
+
+commit e6d5fda8d5d4624d47916abae9fbeba495b1708b
+Merge: 53ec491 ad13d5a
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Nov 4 19:12:19 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit e04ebc6a1aeecd3fbe39f8c6e4375e9d15d74ab3
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Thu Nov 4 19:07:44 2021 -0700
+
+    Update All Labs
+
+commit 3eb1bee845583dfffae88e0769e274d80eef46dc
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Thu Nov 4 18:09:30 2021 -0700
+
+    git wants me to commmit
+
+commit ad13d5a76b61133c64d14c896624ce7faae3863d
+Merge: 9e58a74 da58f55
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Nov 4 18:03:19 2021 -0700
+
+    Merge pull request #96 from PdxCodeGuild/Christerpher_Lab_19
+    
+    Christerpher lab 19
+
+commit dd824cc00a53638632a0d8873c3579481da322e6
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Thu Nov 4 17:55:36 2021 -0700
+
+    committing all up through half-finished 17
+
+commit 3dd7f2eb7b0d9874134fb32db90fc8c7d95dc98e
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Nov 4 17:28:43 2021 -0700
+
+    got rid of old file
+
+commit 8f0ca71138b120430dbd139cca341e69bbba41c9
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Nov 4 20:25:11 2021 -0400
+
+    COMPLETE
+
+commit 7ec3b5b1440dc11f57fbe04f94f5624a93326b4d
+Merge: 6698d35 9e58a74
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Nov 4 17:25:09 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 6698d3534de98a8f3d7bffe5737583cd1b28c788
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Nov 4 17:19:22 2021 -0700
+
+    lab20 completed
+
+commit 9e58a74a2d35e0e2946859ed681a65297c2b115a
+Merge: 1266116 0fc0fb1
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Nov 4 15:50:36 2021 -0700
+
+    Merge pull request #79 from PdxCodeGuild/Rodney
+    
+    Rodney
+
+commit 4d1f649f39514dd7c400210b34a4bfdcd9d6cf7f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Nov 4 18:27:03 2021 -0400
+
+    replaced the 'if elif' logic
+
+commit 1266116fe72aeb5c5879f3f5797eb70b0f233e3a
+Merge: bf4a6d4 f8acca3
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Nov 4 15:22:23 2021 -0700
+
+    Merge pull request #65 from PdxCodeGuild/Christerpher_Hunter
+    
+    Nice work Christerpher
+
+commit f8acca3e715d499b83d163e80f466463d432328a
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Nov 4 17:52:34 2021 -0400
+
+    minor syntax improvements
+
+commit c281d094d09e80b6cc0b576905608880face05ac
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Nov 4 17:50:44 2021 -0400
+
+    Search and Sort repair and COMPLETE
+
+commit 0fc0fb1936f3064f0dc593e12e604e53b972474b
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Nov 4 16:04:27 2021 -0400
+
+    Added labs
+
+commit c42edf166ef4817268487ff8214827498a9d62e3
+Merge: 820b5c4 bf4a6d4
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Nov 4 15:53:19 2021 -0400
+
+    updated search and sort
+
+commit 820b5c47f80de1e9902615b09a4fdf6b902f8d0a
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Nov 4 15:48:25 2021 -0400
+
+    updated search and sort lab
+
+commit c2dcc23fd32f8fd2bf00d5d31801681db4f02f44
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Nov 4 09:56:25 2021 -0700
+
+    Fixed contact list print and update functions
+
+commit 0487b67a17400749c87dd8707e67d509c93fdc7e
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Nov 4 09:55:52 2021 -0700
+
+    Added contact.json for Lab17
+
+commit 0566c234d09deca188f5d5e2a5fa659be6d2eff6
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Nov 4 09:44:55 2021 -0700
+
+    Added validation for entering negative deposits
+
+commit 2bccde8418fb0a590d7578ae69a1fcce04a7846d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Nov 4 08:19:44 2021 -0400
+
+    Changes made per Josh's recs.  ATM COMPLETE
+
+commit 2cfb639d7640efdf2a4b31aa47cb4b232e550e25
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Nov 3 21:56:46 2021 -0600
+
+    lab20 semi-functional
+
+commit 3b229b19f4835afbfebb38e5d88329d68e7473ee
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Nov 3 20:39:00 2021 -0700
+
+    lab20 michael, james, jose incomplete
+
+commit d5aedba3a299716756ad5b3db09b195800e13351
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Nov 3 23:29:45 2021 -0400
+
+    getting gitty
+
+commit be7dc5c2b04905729d184ccaa0485f0bb4e694d9
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Nov 3 23:11:52 2021 -0400
+
+    GAME COMPLETE
+
+commit bf4a6d4646078d8dd11c93113f62e926ee9375d2
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Nov 3 19:01:35 2021 -0700
+
+    updated
+
+commit 868a68e71bf5257b7ab860f1b97a68aab141046e
+Merge: e130573 05a2307
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Nov 3 19:00:56 2021 -0700
+
+    Merge branch 'master' of github.com:PdxCodeGuild/Class_Raven
+
+commit e130573d252e66ddfbe04a2304827559bd60d217
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Nov 3 18:59:25 2021 -0700
+
+    added game_board demo
+
+commit 05a2307e1ad1def8225b228d14046ece397fc3a3
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 18:48:49 2021 -0700
+
+    added new line character
+
+commit 3fcc0c494c8578807bb66974c46d68da61d6f753
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Nov 3 21:27:21 2021 -0400
+
+    init adventure.py
+
+commit c98421b56671b614d41eaecccfdd25dd745f9141
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 18:26:04 2021 -0700
+
+    changed name to avoid circular import
+
+commit 9944591ba1603904ef8294e3a2c2ae44729e3ea9
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 18:25:44 2021 -0700
+
+    added lab19 solution
+
+commit d5d380480c83ee7adee661fe4c6c630032400261
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 18:25:21 2021 -0700
+
+    fixed errant underscores
+
+commit af9b6017cc4666bc041b638efb80bd6b8e20ebbc
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Nov 3 18:14:51 2021 -0700
+
+    lab 19 v1 completed
+
+commit da58f552347ddc8484e4a02ff8e8fb4fdc6a2d14
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Nov 3 21:09:42 2021 -0400
+
+    minor update: ver 1 COMPLETE
+
+commit 43340ae79925c4823e0c6c1ad6923c15444878fc
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Nov 3 21:00:48 2021 -0400
+
+    Added question numbers
+    
+    This feature is a result of Goods' period of instruction
+
+commit 7731cffa6af49aed33ddc2aeeca65d3a11cc3f46
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Nov 3 17:27:09 2021 -0700
+
+    Missing comment.
+
+commit 4ec03098dab39557783a36d8204bca3178ee797a
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Nov 3 17:26:25 2021 -0700
+
+    Removed a hard coded URL.
+
+commit 537a696486f1ff6db93642fc2c833bda25953083
+Merge: e46b31e 6df3536
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Nov 3 17:16:22 2021 -0700
+
+    Merge branch 'master' into Michael_lab_18
+
+commit e46b31efc9ee072091b3edb90c408a2d556de9d9
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Nov 3 17:16:08 2021 -0700
+
+    playing with docstrings
+
+commit 16c329ed42fd6d5276f6a44933711f15bfdff0eb
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 17:07:15 2021 -0700
+
+    updated formatting
+
+commit 37f2bff23eb60aa468384c71924ece232d671c6d
+Merge: 5652839 6df3536
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Wed Nov 3 16:48:57 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit 7e9f7c1e0d3511902ae871cc710af69a303caed6
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Wed Nov 3 14:48:32 2021 -0400
+
+    lab 17 with changes
+
+commit 6df35361cd7043226ec5d287da5e4dbbfeefcc3c
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 11:37:00 2021 -0700
+
+    changed name to prevent circular import
+
+commit cc062d667db1b3768d6748ae6af15184145f9cfc
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 11:27:15 2021 -0700
+
+    added scheduled holidays
+
+commit a56fb1c01b2e0f92e0e2f6c484fa82164d139e1a
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Nov 3 12:13:51 2021 -0600
+
+    minor updates to week-1 labs
+
+commit b660aa74db4acd79d1be2388496fc5c456cafe12
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Wed Nov 3 14:10:48 2021 -0400
+
+    trivia lab
+
+commit 0444981aa18fa36218b18840d663f268bd4b33f1
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Nov 3 12:03:57 2021 -0600
+
+    refinement of labs 14, 16, 17, and 19
+
+commit 43885e11e1171658b7ab62fc986a6db9cac2f0a5
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 11:03:53 2021 -0700
+
+    replaced 'key' with 'value'
+
+commit cd5aa983de07fc5be2be4bad25480914e9c5148e
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 11:02:25 2021 -0700
+
+    shrunk BST image
+
+commit 9fbb53475e88d02d089f92c687018c016d6d9c7e
+Author: keegangood <keegood8@gmail.com>
+Date:   Wed Nov 3 10:59:55 2021 -0700
+
+    removed last mention of graph
+
+commit b938902333a30fbaf255c2a71bceaae8b9868c17
+Merge: 655b02f 977e3d1
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 09:41:44 2021 -0600
+
+    Merge pull request #101 from PdxCodeGuild/master
+    
+    added Trees doc
+
+commit 655b02f147215e7b638476f9ae2262117e743b54
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:27:51 2021 -0600
+
+    Update contents.md
+
+commit 387d0da7abd5fe7ddf9ffa4b48ca30b10aac7ae0
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:27:38 2021 -0600
+
+    Update contents.md
+
+commit 96c529c745a5b43c4c3d221731fefd04502e130d
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:19:41 2021 -0600
+
+    Update contents.md
+
+commit 77244cae085efbd333a4f66c3b503f47b25962bf
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:16:56 2021 -0600
+
+    Update contents.md
+
+commit 2fd7bdf581abba2f447f017fd1a3663a51456075
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:15:05 2021 -0600
+
+    Update contents.md
+
+commit f046dbf457e6dc18cc810c6513b22d1004cabdcd
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:12:14 2021 -0600
+
+    Update contents.md
+
+commit 840a00ba2ed1775d0f82ee02b9d2fdf4808fa36a
+Merge: 62f4eb1 881fb42
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Nov 3 00:01:44 2021 -0600
+
+    Merge pull request #98 from PdxCodeGuild/austen-python-lab17
+    
+    Austen python lab17
+
+commit 881fb428d8261d076b219c6059581a69dcfd864b
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Nov 3 00:01:07 2021 -0600
+
+    completed rewrite of lab17
+
+commit 977e3d1a1e9972384763354b050f6722084a4fde
+Author: unknown <keegood8@gmail.com>
+Date:   Tue Nov 2 21:44:38 2021 -0700
+
+    added Trees doc
+
+commit 56374787a0abe63c62fec2d51b1de0edfe857462
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Nov 2 22:52:56 2021 -0500
+
+    removed spoiler print statements
+
+commit 549b46363d7a5cf06944f1c2370e3e2cb51aaa22
+Merge: cf139d7 b437599
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Nov 2 20:44:19 2021 -0700
+
+    Merge branch 'master' into james
+
+commit cf139d77ef1df1ac166bd3621a2d8197e1c5b968
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Nov 2 20:43:23 2021 -0700
+
+    lab19 incomplete
+
+commit bc851baf1ccd60b44c5578bd301d5eb89e9f79c0
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 23:15:45 2021 -0400
+
+    FULLY COMPLETE
+
+commit 8372385415d1deae46e87964227e0b4649d26089
+Merge: 13e1766 b437599
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Nov 2 22:06:36 2021 -0500
+
+    Merge branch 'master' into richard
+
+commit 13e1766b903dfd6f538445658ffd51b85bb4819d
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Nov 2 22:05:33 2021 -0500
+
+     lab_14 in progress...
+
+commit 802acbd63ddecce829b3567b8e844d9612c94113
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 20:59:18 2021 -0600
+
+    modified bubble_sort() to better follow pseudocode
+
+commit d4366d834bc560559da31086551deeb254c5cbf2
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Nov 2 21:57:37 2021 -0500
+
+    lab_10 submission
+
+commit f40f6a5363d9aae1fe56e8543ceaa966084911c7
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Tue Nov 2 19:33:31 2021 -0700
+
+    labs 15 and 16
+
+commit 225ee24f3788b4a5b062588dfc77a79d0e36e716
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Tue Nov 2 19:24:10 2021 -0700
+
+    damn
+
+commit 07ad6f945d9fb42899d42a6fd2e51b1985c26acd
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Nov 2 21:03:25 2021 -0500
+
+    lab_19 first part completed and working.
+
+commit 0660804f260d3f15ecee0980acf744bc83166f77
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 21:59:43 2021 -0400
+
+    removed the ATM log file
+
+commit 91fed24121c705a693f50018994d3f26834dcf69
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 21:57:53 2021 -0400
+
+    ATM COMPLETE. Be harsh, please!
+
+commit 87a5c149c3cc048728cbc4f1313575d2a8698bab
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 19:52:54 2021 -0600
+
+    updated lab14 status
+
+commit 6fc3e05589d8993f02783b5d81843f091f425070
+Merge: d158b56 d42d313
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 21:51:08 2021 -0400
+
+    Merge branch 'Christerpher_Lab_17' into Christerpher_Hunter
+    updating local local repo
+
+commit 97cc8dfcf62a52c16e721203f6dce6c2602fafd4
+Merge: 5626e6e 62f4eb1
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 19:48:31 2021 -0600
+
+    Merge pull request #94 from PdxCodeGuild/Austen
+    
+    Austen
+
+commit d42d313a08310d35a4e185d6902190fdc6072726
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 21:47:58 2021 -0400
+
+    ATM repair in progress
+
+commit 62f4eb1d78bc8ff43aa619fe42297478b5b45baf
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 19:47:48 2021 -0600
+
+    lab14 tweaks
+
+commit a26d0a518b33bd32d18c3312fe8e28a55955cc55
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Nov 2 18:26:06 2021 -0700
+
+    Added Contacts
+
+commit f019dddb394f6dbe655b78ae6394fe052b537fd0
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 19:24:45 2021 -0600
+
+    Update contents.md
+
+commit 311ff89c9bb78c66d7393ef53cf43a27bd951aa3
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 19:23:39 2021 -0600
+
+    Update contents.md
+
+commit 0bf38d75a339b51450dedd83fa3b73c9ae853c9f
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 19:23:06 2021 -0600
+
+    Update contents.md
+
+commit 5d3c7d38d4dfdac6f486edb28f83af8afa393bdd
+Merge: 15ed3da b7bdc7a
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Nov 2 18:22:47 2021 -0700
+
+    Merge branch 'master' into Randall
+
+commit b7bdc7aaf9965559477e26b4a2a79cc90c5a7271
+Merge: 78c661f b437599
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Nov 2 18:21:46 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit d3cc6f7d82d40a03dfa6951f9281260de0a0816e
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 19:19:06 2021 -0600
+
+    rename md tracker
+
+commit 304ed6b1a5747fc36bef83b227628e15942f625f
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 19:13:45 2021 -0600
+
+    directory tweaks
+
+commit 5e2f467d8f5229ca46443cd173e44e5a28613d42
+Merge: 6a68112 5626e6e
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 19:07:27 2021 -0600
+
+    Merge pull request #93 from PdxCodeGuild/austen_myers-python-14
+    
+    ATM lab bare bones rework complete
+
+commit 5626e6e0feb87f396a49c1833364e896481c6a24
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 19:06:32 2021 -0600
+
+    ATM lab bare bones rework complete
+
+commit 15ed3dac6c2c63931772b302cdb3242f7f399fa7
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Nov 2 17:03:21 2021 -0700
+
+    lab17
+
+commit 5b2c036c2d71967b0ed1a5630a53604cec0ecd1a
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Nov 2 16:58:37 2021 -0700
+
+    lab17 Contacts
+
+commit 5652839b7abd5e99db3653864b62816a3377e023
+Merge: eff1993 b437599
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Nov 2 16:56:30 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit d158b56454383a562a223d05e022ce75f9ebfb3d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 17:26:07 2021 -0400
+
+    COMPLETED 'contact list' recommendations
+
+commit 6a6811288b6825db8406e23450eb08823de193ed
+Merge: 61a7d09 a126941
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 14:02:58 2021 -0600
+
+    Merge pull request #90 from PdxCodeGuild/README-correction into Austen
+    
+    corrected lab 02 was "make change" not "madlibs"
+
+commit a1269418270dc0cd7c510f6f4578cd43a1268ed1
+Merge: c61f44a 61a7d09
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 14:02:44 2021 -0600
+
+    Merge branch 'Austen' into README-correction
+
+commit 61a7d099feba3ee5987af0def7bccd6f69bebd40
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 13:57:15 2021 -0600
+
+    created/updated personal lab tracker
+
+commit c61f44a2bcbd0ca38bef5b3d857ae7b0e05e2cf3
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 13:40:35 2021 -0600
+
+    corrected lab 02 was "make change" not "madlibs"
+
+commit 70a03c016f3967286a6ecc3c21d6fab0c38ab7d9
+Merge: 00ba47a 743b723
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 13:22:20 2021 -0600
+
+    Merge pull request #88 from PdxCodeGuild/austen_myers-python-19
+    
+    Merge python-19 into Austen
+
+commit 00ba47a492c05ad0dccdb379389afa959b3d8cb4
+Merge: f7c5fec b437599
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Tue Nov 2 13:21:07 2021 -0600
+
+    Merge pull request #87 from PdxCodeGuild/master
+    
+    merge master into Austen 11-02-21
+
+commit d915291d2d2f9c6b5dbff2acfa4fa7b8e354a77e
+Merge: 293d457 b437599
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Nov 2 09:18:53 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 293d457bbf21172a86244d560f97d645bb9266cd
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Nov 2 09:17:34 2021 -1000
+
+    adding lab 19 - complete
+
+commit 743b723c787c4c5f3018703aa432ff2c8f4ca706
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Nov 2 13:09:04 2021 -0600
+
+    minor changes to make code more readable
+
+commit 7f87f34b4563e2e6483bc323834ad036a50fbea7
+Merge: 54f94f8 b437599
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Nov 2 12:08:06 2021 -0700
+
+    Merge branch 'master' into Jose
+
+commit 54f94f807001dd7bb3c9447c69fa624b6f7ef5b2
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Nov 2 12:07:24 2021 -0700
+
+    lab19 and lab09 corrections
+
+commit eff19939de3a0e6e56c2dbc9ad64ddd282f55f7a
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Nov 2 08:55:07 2021 -0700
+
+    Fixed part 2 of lab19. Should work now
+
+commit a51bd723fa460a931945ee3b2a77d775794a2cf9
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 00:30:36 2021 -0400
+
+    ""
+
+commit 9fbb228b0a1d9616f99827c5f4097e62b39c9331
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Nov 2 00:30:12 2021 -0400
+
+    Working user quiz, results next
+
+commit b4375993e669af5204a56d6d469b5506364a31af
+Merge: b5f0f47 1193527
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Mon Nov 1 21:29:03 2021 -0700
+
+    Merge pull request #71 from PdxCodeGuild/Jose
+
+commit 3fc9c27756cb172deacb31bfbe91de7e6d4092ba
+Merge: 93f0e9c b5f0f47
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Nov 1 21:01:43 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit 93f0e9c3fdf0a9f9eb13fd76fecb1f1fac38c97c
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Nov 1 21:00:34 2021 -0700
+
+    Submitted Lab19, Part 1 works and Part 2 works partially exceps some category options seem to not have all types of answers
+
+commit 90e5f9229cdefa782c1721f5fc3fc2ddcae2155f
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 20:44:26 2021 -0700
+
+    minor commenting
+
+commit dec964c665e8a074e2f7c37c7e7a4bdb8fb7cefc
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 20:39:25 2021 -0700
+
+    lab 18 trivia api complete
+
+commit f49dcb6e527c49d04f37cbb74773a11d64e725bf
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 20:35:02 2021 -0700
+
+    lab 19 incomplete
+
+commit 289c8163eb850ea1f10d213e1c9bf4acac7d21e4
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Nov 1 23:26:04 2021 -0400
+
+    Manicured the output
+
+commit 9b594c02a1f4cd42bea68133ac8ef9728ba63ade
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Nov 1 21:23:49 2021 -0600
+
+    completed lab_trivia with optional part 2
+
+commit 803c9db372fd99b8b04b04cc7d9b7d2e278b00f3
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 20:07:44 2021 -0700
+
+    lab17 complete with changes
+
+commit 56067052a401995f36db89ae78ae83a046b8fdf0
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 20:03:41 2021 -0700
+
+    lab15 complete with changes
+
+commit ec6e71973cef152740c5d7c1db76d66d971bf7d1
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 19:56:08 2021 -0700
+
+    incomplete lab19
+
+commit 40816d4d0c4624c51e5f112ba5a1b741e04d616a
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Nov 1 22:22:50 2021 -0400
+
+    Retrieved 200 status code
+
+commit afe22ff0be3c6b4f0a6090e1859188e201ec4241
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 19:07:41 2021 -0700
+
+    updating files
+
+commit c7d27b539200e85ebfbbbed9c3c4ca78d1a2f1bf
+Merge: 67b30e0 b5f0f47
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Nov 1 21:53:47 2021 -0400
+
+    Merge branch 'master' into Christerpher_Lab_15
+    updating local repo
+
+commit 004733f7122836c4f6c4072d010369082512583f
+Merge: a8fb5d1 b5f0f47
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 18:39:53 2021 -0700
+
+    Merge branch 'master' into james
+
+commit a8fb5d1496347ee2c0ff0020b3dfd66efb122335
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 18:37:07 2021 -0700
+
+    lab 17 completed
+
+commit eb3ba4d183a329fd669a8a820e64b68964b319d6
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:22:22 2021 -0700
+
+    Fix revert changes
+
+commit 53ec4911907b88b894147afa1cf15b272243f111
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:21:51 2021 -0700
+
+    Fix undo changes.
+
+commit befa6316da0e7db1ebd116159b739ee2f2e9ea17
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:21:21 2021 -0700
+
+    Fix remove changes.
+
+commit cdd14d03ae0abf41068e7d2d5906c0ac36d07eed
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:20:22 2021 -0700
+
+    Undo changes.
+
+commit 2a7a3e2c05b98efe26c483136c7b91112ca7feff
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:20:03 2021 -0700
+
+    Undo changes.
+
+commit aaf8e5d4622449b01f29a658800ef2aef41fd78f
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:19:42 2021 -0700
+
+    Undo changes.
+
+commit ab3807dee00307b087049eca2571cfacb060dc3a
+Merge: 7be8c49 b5f0f47
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:18:21 2021 -0700
+
+    Merge branch 'master' into Michael_lab_18
+
+commit e2b6927fbb6865e4a2d6dae7478f3c4d015ad723
+Merge: 44dcb1b b5f0f47
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:18:02 2021 -0700
+
+    Merge branch 'master' into Michael_lab_17
+
+commit ac946303297e3df7868259d673a049e86649613a
+Merge: 7be8c49 b5f0f47
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 18:17:44 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit b5f0f47428b921df34071b2e329d83216f3a8e14
+Author: unknown <keegood8@gmail.com>
+Date:   Mon Nov 1 18:16:36 2021 -0700
+
+    added lab 19
+
+commit 2dfc85d8c9b8c8f01159bb3aa9155e304c685980
+Merge: cc0853c 2e941e1
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Nov 1 18:14:20 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 2e941e1a96cf3c21dfda45036ec4b8480915cb6c
+Author: unknown <keegood8@gmail.com>
+Date:   Mon Nov 1 18:12:04 2021 -0700
+
+    added contact list solution
+
+commit 44dcb1bc55eac3408d2990ee59a5db6ce6918bc2
+Merge: 6821fcb 05ed783
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:44:33 2021 -0700
+
+    Merge branch 'master' into Michael_lab_17
+
+commit 7be8c49bf86ac9c0b9e0cdecfea1bd112b0d4651
+Merge: ee1fe8a 6821fcb
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:43:44 2021 -0700
+
+    Merge branch 'Michael_lab_17' into Michael
+
+commit ee1fe8a20e06342d25f9fc090b64dadfeb9b9eca
+Merge: 5b420ff 05ed783
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:38:33 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit 6821fcb911d896f6bced2368c5ea7f754f44b4b4
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:38:14 2021 -0700
+
+    update gitignore
+
+commit 4c76ddaa7e6cca44287ec293adfe695954770bd3
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:38:04 2021 -0700
+
+    remove the raven
+
+commit e2689607d4a399662adb01ef7ce067d68158e19b
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:37:06 2021 -0700
+
+    Added some minor changes.
+
+commit eace74c4742dbe726c7bdd63722ce0048926c399
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Nov 1 17:36:51 2021 -0700
+
+    Rename count words so I can use as a lib
+
+commit 88bd9e4d3ff521dde58165fb41614c240e37df40
+Merge: 0a673e0 05ed783
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Nov 1 17:29:50 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit be386b41a1450d36ea9b1fb07db55d7b6772e2a3
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Nov 1 11:58:46 2021 -1000
+
+    fixed labs 16, 17, and completed lab 15
+
+commit 1193527b5998efd1862451f49178ed5ef35270d7
+Merge: 0d312f6 05ed783
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Sun Oct 31 14:51:35 2021 -0700
+
+    Merge branch 'master' into Jose
+
+commit 0d312f623d43a1035eb66abdd28e5480a3033cd5
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Sun Oct 31 14:50:50 2021 -0700
+
+    labs
+
+commit 67b30e0e0d7b1c5c2e85ef0867d02c7d86b28297
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 31 17:14:28 2021 -0400
+
+    starting and making progress
+
+commit e8b4d02faa53256b0936f9962f9b20c3e399673c
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 31 17:13:24 2021 -0400
+
+    starting and making progress
+
+commit 2309c461ba82c414af031740d62a113023349e43
+Merge: 435bf8a 05ed783
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 31 15:45:29 2021 -0400
+
+    Merge branch 'master' into Christerpher_Lab_15
+    updating new branch
+
+commit 435bf8ad58e51c02f4b3e9269296ddb21e752030
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 31 15:44:03 2021 -0400
+
+    ""
+
+commit 8393789d9c03dcec6524f2905bc5e14531d89677
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 31 14:40:31 2021 -0400
+
+    ATM COMPLETE
+
+commit b66161eb9729f90c86e285145eb1659364471ca5
+Merge: 391cf26 05ed783
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Sat Oct 30 10:45:04 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 391cf26769fe8c33370b053fcc443ecf420d8d17
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Sat Oct 30 10:44:31 2021 -1000
+
+    Corrected Lab 16
+
+commit b2f1be4efe799afe2253c2c63f789d1ffbafd312
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 30 08:20:30 2021 -0700
+
+    NaN
+
+commit f7c5fec389d4032140f22198fc57bcdac26e9d3a
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 29 22:53:06 2021 -0600
+
+    lab_rain getdata complete
+
+commit cc0853c05c7e1f89e40959891019bb885e7a8999
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 29 20:35:49 2021 -0700
+
+    update
+
+commit bbf6f8ea4e2a8351df88901fae18da745d71f5f5
+Merge: 9bf339b 05ed783
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 29 20:34:07 2021 -0700
+
+    lab17 incomplete
+
+commit 2224fc813b9a801986625b1652dc7cb3543f5a8f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 29 20:28:32 2021 -0700
+
+    only Qucksort remains - COMPLETE
+
+commit 0fbe1088b3ab9c5755692eb9ab11ff4704c94a31
+Merge: f584019 05ed783
+Author: Richard <raw0039@gmail.com>
+Date:   Fri Oct 29 21:53:13 2021 -0500
+
+    Merge branch 'master' into Richard
+
+commit f5840199b30436b929ea941076b521424b5b1186
+Author: Richard <raw0039@gmail.com>
+Date:   Fri Oct 29 21:51:55 2021 -0500
+
+    catching up- modified files
+
+commit 1c1a4a8e350c259a9676ae54618e72a0717d4085
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 29 19:47:07 2021 -0700
+
+    insert sort COMPLETE
+
+commit 9bf339b344f12dc2098a2a918f47586dd1dfd816
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 29 18:08:12 2021 -0700
+
+    lab 17 incomplete
+
+commit 05ed783992b81824b8a9473b7f5e4637fefd1034
+Author: unknown <keegood8@gmail.com>
+Date:   Fri Oct 29 18:01:11 2021 -0700
+
+    added more optional labs
+
+commit 0e6dbfb8b40a64ecf992beb28be7ccff3b545867
+Merge: d062e9d cd28493
+Author: unknown <keegood8@gmail.com>
+Date:   Fri Oct 29 17:58:16 2021 -0700
+
+    Merge branch 'master' of github.com:PdxCodeGuild/Class_Raven
+
+commit d062e9d53264aba81fd22219301f689d5b870402
+Author: unknown <keegood8@gmail.com>
+Date:   Fri Oct 29 17:58:01 2021 -0700
+
+    recursion
+
+commit 0a673e011bb6446c9c492f81e43f41e07eac48bf
+Merge: f3069d3 cd28493
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Fri Oct 29 17:39:54 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit cd28493cf52c621e0874a96d7cbabb4b16639eae
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 13:02:15 2021 -0700
+
+    updated formatting
+
+commit 5eb87e4d79b77d53098d71f4d972238b9c0ac808
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 12:59:29 2021 -0700
+
+    added description of -b flag
+
+commit 35c41fd504cccd90653494d28fb770c25aa43da7
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 12:18:00 2021 -0700
+
+    Removed link to completed labs doc
+
+commit 9c52368fc51b2321fe2d9cfdd18d7d8e3345dad4
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 12:14:54 2021 -0700
+
+    enlarged screenshots
+
+commit 171f56a37d2a4e95e10fe571f5287ac6362fd68f
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 12:13:51 2021 -0700
+
+    updated readme with new git workflow and added screenshots
+
+commit d1087c9538e04d27413528273e4ba631a08ad189
+Merge: 0c3cf11 9c32251
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Fri Oct 29 11:53:37 2021 -0700
+
+    Merge pull request #83 from PdxCodeGuild/keegan-example-00
+    
+    Keegan example 00
+
+commit 9c3225106823fd2a1aa77adec4b9301a51718c10
+Merge: fd66a04 0c3cf11
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 11:47:43 2021 -0700
+
+    Merge branch 'master' into keegan-example-00
+
+commit fd66a04f36c1415a7c46bde11db29ee855feb8c3
+Author: keegangood <keegood8@gmail.com>
+Date:   Fri Oct 29 11:30:20 2021 -0700
+
+    Finished lab 00
+
+commit a9386efff5509890874dd6f430d623d682005daf
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 29 07:41:08 2021 -0700
+
+    initial commit on new branch
+
+commit 2bccef9dfdcbc7a987d15887952f31fd450dc633
+Merge: 0c3cf11 bba54e2
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 29 07:21:57 2021 -0700
+
+    Merge branch 'Christerpher_Hunter' into Lab_17_Search_and_Sort
+    updating new branch
+
+commit 31fc4b9e6aacb99905ff1617207cc26d2687d261
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 29 03:21:32 2021 -0600
+
+    completed contact_list improved imports
+
+commit 0f2767e7a947f9ca2e0c2d595dbdad5f732db43d
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 28 23:00:57 2021 -0500
+
+    lab 16 completed
+
+commit 5b420ff1542456c62d3ea716c84267057d1eb07c
+Merge: f873a7d 0c3cf11
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 21:00:35 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit f873a7d420b37e5629239945a6d70326b0c83ffd
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 21:00:16 2021 -0700
+
+    Lab 17 Complete
+
+commit c7f52e8ec5706c63f407f477bf2553563d98fa7b
+Merge: 1be5a21 0c3cf11
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 28 23:39:02 2021 -0400
+
+    lab17_contact_list.py
+
+commit 1be5a2182ae572b0ac963284b4abc0b4af3f8b7c
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 28 23:37:12 2021 -0400
+
+    contact list lab
+
+commit f478a9d8460b2cce17ad77c9d0576dfca2e3be29
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Thu Oct 28 19:57:37 2021 -0700
+
+    lab16 Searching and Sorting
+
+commit d0c6c3ba09db69a57e9950c8d4a9b842973e459f
+Merge: 3b696ae 0c3cf11
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 28 16:42:43 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 3b696ae5d7e6591c5814622dc2b23c7f8eac9558
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 28 16:42:10 2021 -1000
+
+    Lab 16 and Lab 17 complete
+
+commit f3069d3d3624d70a2e59e98f26daaf3bb7a63312
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 28 19:39:02 2021 -0700
+
+    submitted lab17
+
+commit bba54e2b1a22747ff4cbcae335e74f9d5de8fd2d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 28 19:33:58 2021 -0700
+
+    insertion sort FAIL
+    
+    Unable to shift values more than once space in the correct direction.
+
+commit 0c3cf11978a46663f57776c9b71d76e1a339d83f
+Merge: 6cc7572 d1d51ba
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Thu Oct 28 19:16:21 2021 -0700
+
+    Merge pull request #76 from PdxCodeGuild/Arek
+    
+    submitted lab16
+    
+    Great job, Arek! -KG
+
+commit 26c0e518102a482a1b772926ca7e9b7473344211
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 28 18:53:38 2021 -0700
+
+    lab15 completed
+
+commit 77845c08c9d0e9cad10458575a487ec4c1b1194e
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 28 21:48:21 2021 -0400
+
+    Search and Sort Lab
+
+commit 78656e89349231a7ad849ef5a97b7b5363ab39e2
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 28 21:44:38 2021 -0400
+
+    rot_cipher
+
+commit 8c063543b1485b5c100c922f71049e6b8c8c3f2b
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 28 21:44:10 2021 -0400
+
+    count words
+
+commit 8ce8cfb52c5d8b009ddd0587b7b7e7391913363b
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 28 21:43:39 2021 -0400
+
+    notes
+
+commit 2086d63a9a79c03dd6b7468cda738b780541a73b
+Merge: 1e8f77a 6cc7572
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 28 18:26:53 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 1e8f77a2f84cc2c3c2a0876f68bd7de5cdf9c3f3
+Merge: 8561e47 b79cacb
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 28 18:26:06 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 6cc757219fd359f31c087ef92147305fdfc0bbb9
+Author: unknown <keegood8@gmail.com>
+Date:   Thu Oct 28 18:20:17 2021 -0700
+
+    added a few more operations/print operations
+
+commit f6a37b169e4ebfa1b35ee4772f7000a826b8f9a8
+Author: unknown <keegood8@gmail.com>
+Date:   Thu Oct 28 18:19:25 2021 -0700
+
+    added stack demo
+
+commit d1d51bae89a921281156c53d833916ecffc8a71a
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 28 17:55:01 2021 -0700
+
+    Fixed lab16 again
+
+commit c30194d619e16383e47201d7ff96847c68d2cbe7
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 28 18:20:40 2021 -0600
+
+    final clean-up
+
+commit 3d2cc31b8b75a2759bd86436d9711aa12aa49bad
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 28 18:17:50 2021 -0600
+
+    more clean-up
+
+commit 8f3d7efe859a78ead248e2f41b38639b19803029
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 28 18:14:11 2021 -0600
+
+    tweak directories
+
+commit 510a8a81495f24ba2fec324f4fc07b5018ed3fc1
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 28 18:12:12 2021 -0600
+
+    directory clean-up
+
+commit 6a5ddd4ee91a5f8da01b68c9928d221910aecb6b
+Merge: c639d47 c1a4d30
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 17:07:50 2021 -0700
+
+    Merge branch 'Michael' of https://github.com/PdxCodeGuild/Class_Raven into Michael
+
+commit c639d47a4641658a658394d14666b688e3670e39
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 17:07:47 2021 -0700
+
+    minor formatting
+
+commit e601f7bd09e1ac0eeb92248b70fbd102b6b8eb62
+Merge: b112e2d b79cacb
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 28 17:05:05 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit b112e2d2db6b2a7e777e93a683c531d2f36c0585
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 28 17:04:26 2021 -0700
+
+    making progress on search and sort
+
+commit 9cbf73f990ca4ace2a4408a42cf2229689b9eb74
+Merge: 01a2edd b79cacb
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 28 17:58:40 2021 -0600
+
+    Merge branch 'master' into Austen
+
+commit 8561e47acaa19e22fc970b4c1fa6aae67b89a379
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 28 16:47:35 2021 -0700
+
+    lab15 completed
+
+commit fb321f17be6e6d9aad01a2159f4950ceee49fe05
+Merge: 41ad415 b79cacb
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 28 09:21:50 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit 41ad4150dd6ef20b87bd798e9c2d053df7985250
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 28 09:21:24 2021 -0700
+
+    fixed the lab to be more robuse in case the numbers are not the same as the examples given
+
+commit c1a4d301d6c36d1f8bbb36295ecea973992f2958
+Author: cdmichaelb <broetjem@gmail.com>
+Date:   Thu Oct 28 06:06:36 2021 -0700
+
+    Fixed copy paste fail in header block
+
+commit 21bc0694535ac01e303f59f0d55f71fa5ca074a8
+Merge: d36e02d b79cacb
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 06:04:03 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit d36e02d70328cdde74ce27ab62a12dc28982311e
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 06:03:36 2021 -0700
+
+    white space formatting
+
+commit f628b0036ba0563dc865310e6cdb1995c655620d
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 28 06:03:25 2021 -0700
+
+    Lab 16 complete
+
+commit b79cacb2c80fcb92fcbdda78b9d3751c8fd4a19d
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Oct 27 23:33:28 2021 -0700
+
+    updated docstrings and added more error handling
+
+commit 986b9cf67a295a65088a3dee2cc6f6d136a7ab08
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Oct 27 23:13:25 2021 -0700
+
+    renamed linked_list_demo to LinkedList
+
+commit 4897550854c2d2cd8c56f87239c5baa3899c4406
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Oct 27 23:10:40 2021 -0700
+
+    updated docstrings and __repr__ logic
+
+commit a9680756d57fb7f2b76b1fae71aafb956aecd38c
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Oct 27 23:04:30 2021 -0700
+
+    cleaned up linked list logic and added comments
+
+commit 01a2edda002d04b2ad12514f07af20a171cc1826
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Oct 27 23:21:56 2021 -0600
+
+    completed lab_search_sort
+
+commit 8a9e682544a152e28628c3d0168eb0be95e41e22
+Merge: a0d464b 64fcf87
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Wed Oct 27 21:15:30 2021 -0700
+
+    Merge pull request #74 from PdxCodeGuild/Michael
+    
+    Michael
+
+commit 64fcf87eeeff6efb9b5e36e59b3e6954849aaf8b
+Merge: 977b9df a0d464b
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 27 20:40:49 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit 9b477058310359d9fd0e179e5fc453cb42f3090d
+Merge: d2a95a6 a0d464b
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 27 20:32:10 2021 -0700
+
+    Merge branch 'master' into james
+
+commit d2a95a6829ff8718c806714f10beab2eb91475f5
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 27 20:31:43 2021 -0700
+
+    lab15 incomplete
+
+commit ac4e9bfe7ff1b4544d6ce64d99a0278003fd7f44
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Wed Oct 27 20:26:52 2021 -0700
+
+    submitted lab16
+
+commit 977b9dfb66f68c00759d1969bd6390c6a9ecbb36
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 27 20:03:08 2021 -0700
+
+    Fixed lab number
+
+commit a0d464ba7c46b5df80207c7a767bb7d449569420
+Merge: 7c35367 18f6464
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 27 19:57:06 2021 -0700
+
+    Merge pull request #69 from PdxCodeGuild/Lee
+    
+    Lee
+
+commit dd6e6f16fa41ec7e6ea43e52581f29237633a7f1
+Merge: c84e7a0 7c35367
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 27 19:12:05 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit 7c35367bee7a70c40d6b37772bf1098b23f41061
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Oct 27 18:56:16 2021 -0700
+
+    fixed erroneous function call
+
+commit 4013abba5151c410ddeb53dd9a5950629a109634
+Merge: 9cc378c 578027f
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 27 18:38:57 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 578027f7f88101e12d7095008dbca12c87d3c464
+Author: unknown <keegood8@gmail.com>
+Date:   Wed Oct 27 18:38:30 2021 -0700
+
+    added liinked list demo
+
+commit 18f646458817859668fb6560b62f2cf037551d23
+Merge: 0ed0b77 5d9bfd1
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 27 14:58:27 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 0ed0b77119caa05383e8a73ad0f18ad32066d5eb
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 27 14:57:56 2021 -1000
+
+    updating...
+
+commit 95254a73c56860f5c9d98d4641a2af3b008303d6
+Merge: 39ada59 455ddd1
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 27 17:57:24 2021 -0700
+
+    Merge branch 'Christerpher_Hunter' of https://github.com/PdxCodeGuild/Class_Raven into Christerpher_Hunter
+    fixing issues
+
+commit 39ada594108618b668a16678c3f672c331fbbf7c
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 27 17:55:56 2021 -0700
+
+    modification in progress
+
+commit 455ddd1558c3fc3c4a0df41c71ea16e0ab82b224
+Merge: 2559bfa 5d9bfd1
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 27 17:12:53 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+
+commit acc81bfcf290ff08c3f1263e202665807042e9ba
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 27 16:51:56 2021 -0700
+
+    lab12 (needs int added)
+
+commit 5d9bfd12c10461a6f852254fc72951af2bc8ce1a
+Merge: 90dc450 7f2ac90
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 27 16:50:01 2021 -0700
+
+    Merge pull request #68 from PdxCodeGuild/Rodney
+    
+    Rodney
+
+commit 2559bfa3428306c105baa5641930d7d044af0202
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 27 16:18:56 2021 -0700
+
+    Count word CORRECTED AND COMPLETE
+
+commit 33001710a5db0fcafd4e7e47bfe1455e72cabc1d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 27 14:29:21 2021 -0700
+
+    Contact List COMPLETE
+    
+    tested some scenarios and every function
+
+commit 7569e864d03c02b8c68d7a3773ff1ee784060bda
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Wed Oct 27 13:52:29 2021 -0700
+
+    commiting again
+
+commit d3c01995b2effc99c29990c8b63eada9cf89add4
+Merge: a97ce0c 90dc450
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Wed Oct 27 13:49:01 2021 -0700
+
+    i getting my labs back
+    Merge branch 'master' into anne
+
+commit 7f2ac904d0c5de0f1b225d1de417636bd5dc6a38
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Wed Oct 27 14:32:29 2021 -0400
+
+    atm with changes
+
+commit 9cc378ca718050d9c6e63981d63ba014d624959a
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 20:45:24 2021 -0700
+
+    cleaned up code and added correct lab#'s
+
+commit 74a94256e9c35c135a62f53bb81d5417c9561fff
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 20:39:44 2021 -0700
+
+    major progress on the contact list
+
+commit c84e7a08fbb47b980eec0d42bf322233696e23e2
+Merge: 63fd786 90dc450
+Author: Michael <broetjem@gmail.com>
+Date:   Tue Oct 26 20:33:42 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit 63fd786b75c2dfefa6f9905553ff89483b784c01
+Author: Michael <broetjem@gmail.com>
+Date:   Tue Oct 26 20:33:20 2021 -0700
+
+    Lab 14 complete
+
+commit 90dc450414f5a0f17d4bdb3c8548fc7557550bfc
+Merge: f0e15df 2a39749
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Tue Oct 26 20:15:00 2021 -0700
+
+    Merge pull request #73 from PdxCodeGuild/josh
+    
+    added new lines
+
+commit 2a3974985ba284a1e04dddb880f8aa243119d918
+Author: jhell85 <jhell85@gmail.com>
+Date:   Tue Oct 26 20:14:37 2021 -0700
+
+    added new lines
+
+commit cd8ecbd833e2e117cb24d50dbd0c0569ccdb5b4d
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 26 19:57:56 2021 -0700
+
+    lab12 update draft
+
+commit 2484ceedeae7ab703816a57770e5ac6969796447
+Merge: 3d6afec ceb777c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 19:42:33 2021 -0700
+
+    Merge branch 'master' into james
+
+commit ceb777caa0dc99170099e4a10cf89d52add55d15
+Merge: e4de002 f0e15df
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 19:39:00 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 3d6afec766a26eb6928ee5bc11a53da68faf6dc6
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 19:18:32 2021 -0700
+
+    lab12 v2 completed
+
+commit a97ce0c3f398812f19a0c6bbb6210a33ce658baf
+Merge: 00505de f0e15df
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Tue Oct 26 19:18:02 2021 -0700
+
+    Merge branch 'master' into anne
+    doing the merge thing
+
+commit f0e15df8d2951321ca629b9baf8858bcde579c5a
+Author: keegangood <keegood8@gmail.com>
+Date:   Tue Oct 26 19:12:52 2021 -0700
+
+    added contact list lab
+
+commit aca5b20d47e7696ba1fd4f25886807a52bd2efe5
+Merge: e4de002 e4c274c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 19:09:49 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit e4de002a8fc7ca7a84247e136a96d64d60f6148b
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 18:58:19 2021 -0700
+
+    lab12 v2 completed
+
+commit e4c274c31aef799921e6dfd2717e820861eb5a6c
+Merge: 12070a1 3ec6dcf
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Tue Oct 26 18:38:18 2021 -0700
+
+    Merge pull request #63 from PdxCodeGuild/Arek
+    
+    Arek
+
+commit 12070a1df7236280579fd4f692c1c9d2be2e9e24
+Merge: a5050a9 cf11654
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Tue Oct 26 18:36:46 2021 -0700
+
+    Merge pull request #64 from PdxCodeGuild/james
+    
+    lab12 withdraw amount giving insufficient funds when its not.
+
+commit 34027e4b694dae46a5ef37c1722d47b5526e7c0b
+Merge: 82b6c39 a5050a9
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 18:30:48 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit a5050a91cbbd2e875db0205b0e566e2e1fde998b
+Author: unknown <keegood8@gmail.com>
+Date:   Tue Oct 26 18:27:03 2021 -0700
+
+    demo updates
+
+commit 78c6a08b6d580c8368ad0a88532ad5b2d71eae35
+Merge: ed48869 f867653
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Oct 26 18:20:56 2021 -0700
+
+    Merge branch 'master' into Jose
+
+commit 3ec6dcfe9cb778ea81cf2bf1142496f182ce2e6b
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Oct 26 17:48:06 2021 -0700
+
+    Fixed interest rate on lab14
+
+commit b3d7cd195a75a432ba06bc4a73e916b9be07a17d
+Merge: edb5a3a 78c661f
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 26 17:27:55 2021 -0700
+
+    Merge branch 'master' into Randall
+
+commit 78c661ff400c6d15c451bcd528b40793a87660d1
+Merge: 0e38fdf f867653
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 26 17:27:13 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 2275412e3393f936efc2f4de49bfcad7bc8815e4
+Merge: 4a412f4 f867653
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 26 14:24:02 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 82b6c391cfbf80186bfa87cf78049eaf80193afd
+Merge: 87bc054 f867653
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 17:20:43 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit 87bc0547516819586189665bf7655c21f8d837f9
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 17:19:37 2021 -0700
+
+    LinkedList and Stack COMPLETE
+
+commit f8676532c3815315da313b6c565d60b5d0db5ca0
+Merge: 1b45f52 32ea543
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Tue Oct 26 17:19:28 2021 -0700
+
+    Merge pull request #70 from PdxCodeGuild/keegan
+    
+    Keegan
+
+commit ed48869c489c119083b0b7b86dd4f083f8c25d00
+Merge: bd9e15e b8166df
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Oct 26 17:16:42 2021 -0700
+
+    Merge branch 'master' into jose
+
+commit 32ea5434752a916fd1e99ccdf6cfc07bb7d61deb
+Merge: 015e281 b8166df
+Author: unknown <keegood8@gmail.com>
+Date:   Tue Oct 26 17:16:18 2021 -0700
+
+    Merge branch 'master' into keegan
+
+commit bd9e15ece7727f3428435c34db22b0551ea8bb58
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Oct 26 17:14:30 2021 -0700
+
+    lab14
+
+commit 015e281e37db1a87153c6e30c1e22472aea3dbb9
+Author: unknown <keegood8@gmail.com>
+Date:   Tue Oct 26 17:14:19 2021 -0700
+
+    added divider
+
+commit 1b45f52eba454961c27f09b966110fac0de538ca
+Merge: b8166df 4a24201
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Tue Oct 26 17:12:52 2021 -0700
+
+    Merge pull request #58 from PdxCodeGuild/Michael
+    
+    Michael
+
+commit bfa9aed4ce7957373845ca9dd429afea7fde8e69
+Merge: e7e5d02 df74531
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Oct 26 19:10:50 2021 -0500
+
+    Merge branch 'master' into Richard
+
+commit 6058e486b4a224769ef39db0e169e813c72530e3
+Merge: 84b88a2 45daa8e
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Oct 26 17:10:49 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit 45daa8ec1b77f9f41499dabd45b7a76e5cc47855
+Merge: 1bdf340 b8166df
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Oct 26 17:10:27 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit cf1165474ce4a088c5a06781a8836a592c834a3c
+Merge: b6cc955 b8166df
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 17:07:31 2021 -0700
+
+    Merge branch 'master' into james
+
+commit b6cc955a951560c806a8ce2fbf531ed42c9a837c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 26 17:07:00 2021 -0700
+
+    lab12 completed
+
+commit edb5a3acac0b35ad24b43c5571db526f84ef2e9d
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 26 16:56:08 2021 -0700
+
+    lab12 update
+
+commit 0b1f949e22dce7db84dee6cbf27abb690ce7bf0f
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 26 16:55:39 2021 -0700
+
+    lab12 update
+
+commit 0101d2557b609356c391e6a23fb8559f5c3ed0ca
+Merge: 6c8b552 b8166df
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 16:39:02 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit 6c8b552abb6d5509ead99a30bd1c2499832b87cf
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 16:36:54 2021 -0700
+
+    LinkedList and Stack COMPLETE
+
+commit dffc965432ec670c6c3e1c6b9b12164ca6240fde
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Tue Oct 26 18:21:10 2021 -0400
+
+    atm lab
+
+commit 4a412f4e91534698554d839e41307d20e2238c9c
+Merge: 3d0f2a3 b8166df
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 26 11:30:07 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 3d0f2a3e3b1317414b63d6703e8cc2f7815bf18d
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 26 11:29:36 2021 -1000
+
+    lab 14 complete
+
+commit 98a8188dc3ffbcb116d011c803e4cbc6d6d7f205
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 26 14:15:11 2021 -0700
+
+    class Stack COMPLETE\
+
+commit 74237ce642a424c901bfc981acdfc31e0fb2eab4
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 26 12:15:40 2021 -0700
+
+    lab12 draffft
+
+commit b8166df3c597d52d7ff10beb1490d7f1934585ec
+Merge: 9b79031 555106e
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Tue Oct 26 09:17:01 2021 -0700
+
+    Merge pull request #67 from PdxCodeGuild/josh
+    
+    updated REPL for atm
+
+commit 555106edfac5b0777a1ab672265b1e36fead13cd
+Author: jhell85 <jhell85@gmail.com>
+Date:   Tue Oct 26 09:16:07 2021 -0700
+
+    updated REPL for atm
+
+commit 2dbf3038fd3de08f5d5132a52104f3507924b035
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Oct 25 22:22:10 2021 -0600
+
+    complete lab_ATM
+
+commit e7e5d02c66a83c592b05dbd9332e467c6b23a6e5
+Author: Richard <raw0039@gmail.com>
+Date:   Mon Oct 25 23:12:29 2021 -0500
+
+    lab 14completed-- pretty sure  I got it all fixed.
+
+commit 0198cc31782b4008a7dd177ff5539374f86a983c
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 21:07:18 2021 -0700
+
+    Low level test completed
+    
+    Minor error checking
+    no input validation
+    not a logical ATM but assignment completed
+
+commit 4a242011b556e5f92b052d6a4b17ed15a9b4f62a
+Merge: 7acba0d 9b79031
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Oct 25 20:58:34 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit 7acba0d53f305538160f6a19d200733fdffae429
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Oct 25 20:58:10 2021 -0700
+
+    Lab 14 in progress
+
+commit 4c4b6db67236926735fb0f23d079adda9942bad3
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 20:43:25 2021 -0700
+
+    Minor testing passed
+
+commit b15c9d3a06c00bc88bbb9b6bca4deff41cd9f53a
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 25 20:37:58 2021 -0700
+
+    lab12 incomplete need help
+
+commit ab1c57bc86bec8a19c19c03f5a849534349dbcae
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 25 17:37:55 2021 -1000
+
+    updating with lab 14
+
+commit d2b90837c66e0a313eaffd5fd92876044e1215cb
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 25 20:35:10 2021 -0700
+
+    lab12 incomplete
+
+commit 00505de530c87bf3211b27201af0cd23fd7056ae
+Merge: 2225460 9b79031
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Mon Oct 25 20:32:44 2021 -0700
+
+    I probably wrecked something. sorry
+
+commit 222546039644444f11e8484eac0446dc2d19b494
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Mon Oct 25 20:26:27 2021 -0700
+
+    finished atm lab
+
+commit 84b88a25175cd915e08ebf93911b814b10a67b00
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 20:09:53 2021 -0700
+
+    Submitted lab14
+
+commit 9b79031d448aa486af892e4e1c01043d1c967ab5
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Oct 25 20:12:12 2021 -0700
+
+    updated ATM, added stack and linked list lab
+
+commit 1a2d7d0dd924ee53f0fdb706a5fc8754df98db16
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 20:10:50 2021 -0700
+
+    all of ATM written.  First run imminent
+
+commit 1bdf340773b00dee048aecf3669797ecea52672d
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 20:09:53 2021 -0700
+
+    Submitted lab14
+
+commit 647b87ca07f284212a9480cdd16b1a7898435c2a
+Merge: 610a16d b28f66e
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Mon Oct 25 19:59:12 2021 -0600
+
+    Merge pull request #62 from PdxCodeGuild/master
+    
+    merge from master OCT25
+
+commit 47daab21092311c81fa2987b17f8fd70212f2c4a
+Merge: b39c3d0 b28f66e
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Oct 25 18:58:59 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit b28f66e0d4536994586d15de22c4afbbc1b2b22c
+Merge: e03d93c dbdf164
+Author: Keegan Good <56051123+keegangood@users.noreply.github.com>
+Date:   Mon Oct 25 18:47:44 2021 -0700
+
+    Merge pull request #61 from PdxCodeGuild/keegan
+    
+    added classes demo
+
+commit dbdf1649432cc651823984e558c8c8364d5ac88f
+Author: unknown <keegood8@gmail.com>
+Date:   Mon Oct 25 18:40:36 2021 -0700
+
+    added classes demo
+
+commit 4c3814c9b2074683ea23419aa2bc9e27a51a2593
+Merge: 57d2eb5 e03d93c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 25 18:34:26 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 6b14590015ab1b5c27677f28bb242cd992421ee7
+Merge: 5e69b83 e03d93c
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 18:32:49 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+    adding a number to the ATM lab
+
+commit d83d8d28350c7ebc6ef3d3f83c721e3d1e1f050a
+Merge: de8e587 e03d93c
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 18:32:41 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit e03d93c72c1370535943182bd0a5420c1982fe21
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Oct 25 18:32:19 2021 -0700
+
+    updated REPL
+
+commit de8e587902a8f0367553c04ca8f2fcc985e2eea3
+Merge: 89b1127 64c3436
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 18:32:10 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 64c3436dcf7628b572796ca5782b100bf355e796
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Oct 25 18:31:40 2021 -0700
+
+    updated REPL
+
+commit b39c3d08a7de5f362c7e9e9a7990ad5e1758e11e
+Merge: 998686c 0663cec
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Oct 25 18:29:24 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit 5e69b8336dd53aaba14e5ebcb9dd30a16defd53a
+Merge: 6b34060 0663cec
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 18:28:11 2021 -0700
+
+    Merge branch 'master' into Christerpher_Hunter
+    Adding ATM lab
+
+commit 89b1127a4d20186b03f23c0350dc48fa7f31f15b
+Merge: e315e1c 0663cec
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 18:24:14 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 0663ceca670da215c6f8f51c4175b2887bb61cb3
+Author: keegangood <keegood8@gmail.com>
+Date:   Mon Oct 25 18:23:43 2021 -0700
+
+    added ATM lab
+
+commit e315e1c9fd5c3828cf2483c05d44bb9ad9e6f554
+Merge: 5aec601 4afe2e3
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 16:53:10 2021 -0700
+
+    Merge branch 'Arek'
+
+commit 5aec601797d8fc6631db7ccc600722be54621dc6
+Merge: bc61d70 b034514
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 25 16:52:58 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 610a16d22b483b51d4853f79e598e9224df25c56
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Oct 25 17:46:51 2021 -0600
+
+    added files I duplicated into the gitignore
+
+commit 38165a7de0830141ad5c121a7d3baa928170adda
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Oct 25 17:09:25 2021 -0600
+
+    minor tweaks 2
+
+commit 7e7fe51f7e1dc331919dd5961863391681c8abff
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Oct 25 17:00:59 2021 -0600
+
+    minor tweaks and updates
+
+commit 6b34060c0550c4750a50018b79a2ecb8564e51fd
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 15:40:42 2021 -0700
+
+    working on version 3
+
+commit 75c6b8a33f00889fa2ca3d100a33ca1761421644
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 25 12:25:21 2021 -1000
+
+    Lab 13 complete
+
+commit dc587fcd9932775e1983a6956021f2b8f05e4c76
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 25 13:28:00 2021 -0700
+
+    Lab10 Dad Jokes
+
+commit a60879eafa6f017c59be2f126511da318dbe1e38
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 25 13:24:45 2021 -0700
+
+    Lab10 Dad Jokes
+
+commit 0428caa29209f282cd4e2664595474887683211f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 25 10:44:28 2021 -0700
+
+    moderate progress on version 2 and 3
+
+commit 57d2eb5b00a44c430a3e4bafedad04fe191179b9
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Sun Oct 24 00:35:19 2021 -0700
+
+    lab11 v1 complete
+
+commit 275d49ad9634837ff2a3bbd8d09865d5bc99c72b
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 23 17:11:53 2021 -0400
+
+    accomplished the initial task
+
+commit 7c2d91aa314fd33bafad89dfb5e5005755bd9f7c
+Merge: 0c96588 b034514
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Sat Oct 23 10:04:49 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 0c96588cce4c76cede7c38a44f4bc8d729ff737a
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Sat Oct 23 10:04:09 2021 -1000
+
+    Lab 13 complete
+
+commit a464db5b910f57ad5134b49577f731ee0a9d35c6
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Sat Oct 23 13:15:37 2021 -0400
+
+    count_words lab
+
+commit 632510d7477b1d31d26a169ddaceeaca4801cb9b
+Merge: 2722088 b034514
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Fri Oct 22 22:10:18 2021 -0600
+
+    Merge pull request #60 from PdxCodeGuild/master
+    
+    merge master into austen
+
+commit 27220882b9015b2329e235b47d696a1563833273
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 22 22:06:54 2021 -0600
+
+    general folder clean up
+
+commit 72e524785d8a9795a32e33b8a60dccbe79d8bd70
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 22 21:41:42 2021 -0600
+
+    week-2 all labs complete
+
+commit 4e3d87a3a3d798df398e40813d259930dca07217
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Fri Oct 22 17:39:07 2021 -1000
+
+    lab13 complete
+
+commit 78abc8c5fb29121f9aaf0940cb4a965882734d5e
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 20:36:08 2021 -0700
+
+    example of formatting a json file
+
+commit e5aa17317d69143982c5e28df22902d517b35cf9
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 20:35:42 2021 -0700
+
+    lab11 incomplete
+
+commit 9b0c9ab9cd0fede203c69e8adc29cb34ca659b7b
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Fri Oct 22 20:35:35 2021 -0700
+
+    finished word count lab
+
+commit 45f183440be6fed573bd1436afe73dcaec84721f
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 20:35:30 2021 -0700
+
+    lab10 v3 complete
+
+commit 74db898e9be1c471838e8ce4c9485772623bfb54
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 20:35:02 2021 -0700
+
+    using the open and read function
+
+commit 6dd2adb44a38b336bc5e05c179ac748c787943c6
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 20:34:34 2021 -0700
+
+    test text file for io
+
+commit 637bad157e086f2acf24357f2ad79dc35b9d8a51
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 20:33:37 2021 -0700
+
+    lab11 incomplete
+
+commit 4afe2e34cdcede0996c0592a78c7c4047206f1d6
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Fri Oct 22 20:26:49 2021 -0700
+
+    submitted lab13(without extra version yet)
+
+commit 998686c7f21abda622c7966b8a327b5bba7eed97
+Merge: e3942f4 b034514
+Author: Michael <broetjem@gmail.com>
+Date:   Fri Oct 22 20:21:17 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit e3942f45900be0432c93fe4c366180a1ec02e992
+Author: Michael <broetjem@gmail.com>
+Date:   Fri Oct 22 20:20:30 2021 -0700
+
+    9,11,13 complete, formatting changes in rest
+
+commit 1a8445cca069ac3fb599074190a11845c51f0ff8
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 22 22:46:39 2021 -0400
+
+    Count words in progress
+
+commit 4879acc520b1688decea6ed00937691b1a8f8ff4
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 19:14:01 2021 -0700
+
+    lab11 progress
+
+commit d696d74036d828a9fa73f51088f53298488e0308
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 19:13:17 2021 -0700
+
+    version 3 changes
+
+commit ea4e1c5a4fdefc6a73010a58ff1821f4d5a065e6
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Fri Oct 22 18:33:17 2021 -0700
+
+    lab10, lab13, and text file for lab13
+
+commit 74e840d120bb756357c2691b86d5b4769cfddb62
+Merge: 76131de b034514
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 22 20:54:18 2021 -0400
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit 76131de6a76a66dcd2bfa97beff508493a7f603a
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 22 20:52:09 2021 -0400
+
+    Attempting to begin image manipulation lab
+
+commit b03451482633f41cd0d260a6a20475282e7b1f68
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Fri Oct 22 20:11:46 2021 -0400
+
+    Update README.md
+
+commit 83507161770e49b383b18831f8e817d032c0bde8
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Fri Oct 22 20:07:51 2021 -0400
+
+    Update and rename 12 Image Manipulation.md to Image Manipulation.md
+
+commit 32ef8fa9d536e6557c51518a2ff2023b941b7467
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 22 17:47:43 2021 -0600
+
+    complete reorg of week-1 and added prepcourse labs
+
+commit 476d5b9073f5ec588f7898101cf5bd0183fd3f1b
+Merge: f86dbba 1e5854b
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 15:45:59 2021 -0700
+
+    Merge branch 'master' into james
+
+commit f86dbba2aaa7e2d5126063c6ddfec6189ef870b5
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 15:45:29 2021 -0700
+
+    lab10 v3 incomplete
+
+commit b0ed2cc775c98b5f4ec0eb6c13488f43e0191362
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 15:20:33 2021 -0700
+
+    lab10 complete and proper lab#
+
+commit 108f158bffc40b2afd6cc32e16a3f91c8286b19a
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 15:19:59 2021 -0700
+
+    lab09 complete
+
+commit ddc090107334c6dcc441a65eef12d501faaa2b69
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 14:59:22 2021 -0700
+
+    changed to proper lab number
+
+commit 10ab3eb38c81870b88dd21a0b0c503356ac8d760
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 14:57:58 2021 -0700
+
+    changed to proper lab number
+
+commit 048b22b49bdb1b7562e770cfe3270e80deef588c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 22 14:57:17 2021 -0700
+
+    Changed to proper lab number
+
+commit e6105da843b16c1544d48f05a99806a69a818f9e
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Fri Oct 22 03:15:19 2021 -0400
+
+    cypher lab with version 2
+
+commit a9937888878e8b2c063a5b39edcab9e6aa580582
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Thu Oct 21 22:50:09 2021 -0700
+
+    couldn't stop coding am halfway through word counter
+
+commit 3e7e6c42d5a47fab46ce57c2aa94b1133e515440
+Merge: a06bf66 1e5854b
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 21 21:04:56 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit a06bf66a66e820a9e45d6a73a40a5ed7a7949dc1
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 21 21:03:50 2021 -0700
+
+    Dad joke complete, optional in progress
+
+commit 76a62d86a506021ad61c48ced57137c065c09174
+Merge: 9c03a9c 1e5854b
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 17:40:02 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 4a6338f4a5759adea996265ba9b6fcb3fea8a7b7
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Thu Oct 21 20:39:01 2021 -0700
+
+    completed dad jokes lab and i/o work
+
+commit 9c03a9c3df4129808d72a9aa1f74dcc81e26a3f3
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 17:38:18 2021 -1000
+
+    adding lab 13 shell
+
+commit 9d726f028f594024ee969a0bb67b29ad77ffde7d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 21 23:35:48 2021 -0400
+
+    minor mod
+
+commit 1e5854b25cabb81391f2c8640d53890aad7d8b2a
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 21 23:32:35 2021 -0400
+
+    Update 13 Count Words.md
+
+commit 855f52dbf584a726469e65cd2c064174042ce2fe
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Thu Oct 21 17:30:24 2021 -1000
+
+    lab 10 complete
+
+commit 63166a83fc517285b4c99efd5b7289339eecf6c5
+Merge: fe3a431 2173243
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Thu Oct 21 21:11:17 2021 -0600
+
+    Merge branch 'master' into Austen
+
+commit fe3a4311f86e367772914e38a3a260e1b7ba52cf
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Thu Oct 21 21:09:20 2021 -0600
+
+    Update README.md
+
+commit 584cb99e6463079b5bad1de374380f6665353c2d
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Thu Oct 21 20:40:54 2021 -0600
+
+    completed dad jokes
+
+commit a1215ba789677e49cc5a471626db09283be85f9d
+Merge: 1654848 2173243
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 16:32:18 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit 1654848991b744a2fb1b5e65b4586b1566688c12
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 16:31:24 2021 -1000
+
+    adding lab 10 as complete
+
+commit 6333500a94e7faed4ffacad9d3e435dd7684e34e
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Thu Oct 21 20:10:26 2021 -0600
+
+    dad jokes api
+
+commit bc61d70c77cc926efd569094c1d46df41ab9d087
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 21 19:08:19 2021 -0700
+
+    submitted lab10
+
+commit c4f9464ebbe165c4d716a91a029339358878a2ce
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 21 21:38:19 2021 -0400
+
+    dad jokes
+
+commit 5020f332a1579048b04fd43fe30935364ebd474f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 21 21:27:25 2021 -0400
+
+    Validated input
+
+commit 21732430d83cbed62481adb714a1e5e29a0b1c3f
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 21 21:09:58 2021 -0400
+
+    Update 10 Dad Joke API.md
+
+commit bb130a65654ae3a8c006913f383ed618dde2edef
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Thu Oct 21 20:38:26 2021 -0400
+
+    requests cat fact
+
+commit 8922c6ad6cbca95652218f3f5d5590fd74bf6825
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 21 20:18:47 2021 -0400
+
+    Minor reafctoring of Josh's code
+
+commit 76c2490e5051667515aba2967f1237fce12365f5
+Merge: 5203a44 bdf41d2
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 21 20:09:11 2021 -0400
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit a5b2f6e8575d5afe34ece6fa90af74b118c9c1cb
+Merge: c25ad0d bdf41d2
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 14:09:08 2021 -1000
+
+    Merge branch 'master' into Lee
+
+commit c25ad0dbb23b64d7153198012c07376a9e10936e
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 14:08:36 2021 -1000
+
+    adding lab10 shell
+
+commit 7c4339b7b2cf1ab413532b57a34e9c912c83eeee
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Thu Oct 21 16:15:25 2021 -0400
+
+    rot cipher part 1
+
+commit 5203a440255a6abb47fd7fd1ae3460328f38e4ce
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 21 15:53:50 2021 -0400
+
+    added a new picture and got nowhere after a while
+
+commit bdf41d20ddb5f3d8e562539d919297bf62eb2a39
+Merge: 6f3e31c 9cf1563
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 21 11:58:37 2021 -0700
+
+    Merge pull request #57 from PdxCodeGuild/josh
+    
+    removed needless else statement added more data list to test with
+
+commit 9cf1563c6112157c6bb4b9b9f4199a5c0f4deb72
+Author: jhell85 <jhell85@gmail.com>
+Date:   Thu Oct 21 11:58:01 2021 -0700
+
+    removed needless else statement added more data list to test with
+
+commit cc0fddeccc05a4dcd93787367e0fb5850381531b
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Thu Oct 21 08:44:15 2021 -1000
+
+    my code lab 5 complete
+
+commit 6f3e31cd264f51c653943cb65d71d7677607dda2
+Merge: e2257b4 ee8adff
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 21 11:41:43 2021 -0700
+
+    Merge pull request #56 from PdxCodeGuild/josh
+    
+    V3 fully functional
+
+commit 3a08253a87788fdeea40a23f5ba36c377a0e382b
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 21 08:12:03 2021 -1000
+
+    improved lab11
+
+commit 067c88d61c6f738d489b58abf00f01edd62e05d6
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 21 13:47:08 2021 -0400
+
+    boiler plate and pic
+
+commit ee8adff73bd9eec2c6bebaf8df41d7fe5bec7376
+Author: jhell85 <jhell85@gmail.com>
+Date:   Thu Oct 21 10:41:41 2021 -0700
+
+    V3 fully functional
+
+commit 6a7990d709e27db6d012d15638f3e78efd6399e2
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 20 20:38:45 2021 -0700
+
+    Lab 8 in progress, issues with ROI
+
+commit 8022c011e6f69e4d1443b4490326c7a197efd1ba
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 20 20:37:38 2021 -0700
+
+    lab 11 complete!
+
+commit d93bfa21595edca93bf9766aa90325d7faaf2e0f
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Wed Oct 20 17:30:17 2021 -1000
+
+    still have lots of work to do, but trying
+
+commit 35b93cc24b2923a3b628a7e019168ee58b188627
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Wed Oct 20 17:28:16 2021 -1000
+
+    lab 5 and lab 8 working on
+
+commit 1e834435fcb6e60b1acaf9d0e5db7d3d6b2fca4c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 20 20:28:04 2021 -0700
+
+    complete lab10
+
+commit 93806f70cf616be1b2c9a21143c34547017ad160
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Wed Oct 20 20:23:35 2021 -0700
+
+    finished up through lab 11
+
+commit bdb23abe8da356777cf2064bec46b5c5ae6e1de9
+Author: Richard <raw0039@gmail.com>
+Date:   Wed Oct 20 22:17:08 2021 -0500
+
+    lab 11 and 11v2 complete.
+
+commit b19708e0d066fce99d5b9b092ea00866480c66a1
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Wed Oct 20 23:15:52 2021 -0400
+
+    black jack with version 2
+
+commit 6b6ada75b6ac6e0e130fff127e5982172aeaf724
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Wed Oct 20 19:38:32 2021 -0700
+
+    lab11
+
+commit 26455df3ab3bf2e51446aa03c79cd7268d9a9f29
+Merge: f5b7757 e2257b4
+Author: rodney_russell@hotmail.com <rodney_russell@hotmail.com>
+Date:   Wed Oct 20 22:27:01 2021 -0400
+
+    merge master
+
+commit b76fdd9c140c10ced40992bd646125f45c235da8
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 22:23:55 2021 -0400
+
+    Lab 11 COMPLETE
+
+commit 878f838b8e83c283dff08814f0b1e72daabcf99b
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Wed Oct 20 19:19:36 2021 -0700
+
+    submitted lab11
+
+commit f5b77578f7e007110c2ed421889b47ca7ba6f9f2
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 20 22:17:41 2021 -0400
+
+    Added labs
+
+commit 3713c41e0543eb90c46b28db3a366ee1f149f88c
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 20 18:52:43 2021 -0700
+
+    Complete, but minor fixes for version 3
+
+commit 6ada1f399304ec9f96a8a882c624c61efadf7225
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 20 18:44:29 2021 -0700
+
+    lab11 ROT-13
+
+commit f5fc189208df321ef56786424580c8d53869dd87
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 20 18:09:39 2021 -0700
+
+    completed lab09
+
+commit da26d5c9d52e7a86c73fd16bf9ff8f15f18383bb
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Oct 20 19:00:29 2021 -0600
+
+    completed rot cipher
+
+commit eb2d83897cae33206df8c8d7acd583015ae2ff56
+Author: Richard <raw0039@gmail.com>
+Date:   Wed Oct 20 19:58:40 2021 -0500
+
+    very flavorful solution
+
+commit 8cb7da3b5c3ee0c362adb5c95249ce1b9d9fe094
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Wed Oct 20 17:36:30 2021 -0700
+
+    lab09
+
+commit a7ed2390cacff719a38947e79b0ffa878e86a096
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 20 17:36:13 2021 -0700
+
+    completed lab09
+
+commit e943c1e1a35813f466c29685240804c0dd10c942
+Merge: cc1802f e2257b4
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 20 17:19:40 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit cc1802fda42711f8f69761995c3b9b13a3ee92c7
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 20 17:19:03 2021 -0700
+
+    Lab 7 complete
+
+commit 7568d773a315e0626e0992bdfa131a1f97434f85
+Merge: 84d7e70 14b4303
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 20:14:19 2021 -0400
+
+    Merge branch 'Christerpher_Hunter' of https://github.com/PdxCodeGuild/Class_Raven into Christerpher_Hunter
+    updating local repo
+
+commit 84d7e7042b9c9968470d168b19ca55749b81a626
+Merge: 10bfdaa e2257b4
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 20:12:28 2021 -0400
+
+    Merge branch 'master' into Christerpher_Hunter
+    update the local repo
+
+commit 14b4303da5f71be83b3b187c52d2a412a42feaf6
+Merge: 5bcf63a 10bfdaa
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 19:46:13 2021 -0400
+
+    Successfully encoded Hello World
+
+commit 640fc4e0f841d4d83b962efa579064aa0044eb52
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 20 15:28:39 2021 -0700
+
+    lab07 Peaks and Valleys
+
+commit 5bcf63ada862db9e9253743e3ded24d72fa3e9ea
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 18:11:39 2021 -0400
+
+    attempting to repair final output
+
+commit 10bfdaac1f8c8eb4c43f7c79cab409684a82772e
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 17:53:07 2021 -0400
+
+    Modified a class attribute
+
+commit c6682dca35924b65cd788d66669d230196c6440a
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 20 17:28:43 2021 -0400
+
+    black jack advice
+
+commit 16cd495756b791e78544ff8c57c536cc7e63ce37
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 20 17:27:56 2021 -0400
+
+    pick 6
+
+commit e2257b400f623be7d54daf0850f00d83d37ec699
+Merge: 520cceb f485a94
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:14:47 2021 -0700
+
+    Merge pull request #55 from PdxCodeGuild/aaronq
+    
+    Aaronq
+
+commit 520cceba99c85b7736c4fb315dfac035ad7822f5
+Merge: 7caa5c0 7d7730c
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:14:17 2021 -0700
+
+    Merge pull request #54 from PdxCodeGuild/Rodney
+    
+    Rodney
+
+commit 7caa5c0c340328f00b48709fa62a5f270401e665
+Merge: 984d763 83376b9
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:13:54 2021 -0700
+
+    Merge pull request #53 from PdxCodeGuild/Jose
+    
+    Jose
+
+commit 984d763a46bce763ad433a2f6f5b97ddb2f37f43
+Merge: 866670b 147541a
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:13:31 2021 -0700
+
+    Merge pull request #52 from PdxCodeGuild/james
+    
+    James
+
+commit 866670b2424b00434967ebfdf176a283b2413b96
+Merge: 6ccca5a 76d6f2e
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:13:06 2021 -0700
+
+    Merge pull request #51 from PdxCodeGuild/Randall
+    
+    Randall
+
+commit 6ccca5a553d2eaf6598f40d37016d56303f80516
+Merge: 3e29e65 3c2dd9b
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:12:47 2021 -0700
+
+    Merge pull request #50 from PdxCodeGuild/Arek
+    
+    Arek
+
+commit 3e29e65f62fcd08dd25524d9f04561de811b93b9
+Merge: 18f91d0 6004fad
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:12:19 2021 -0700
+
+    Merge pull request #42 from PdxCodeGuild/Michael
+    
+    Michael
+
+commit 18f91d09fe5bcc43cb0bc402152597319ceaaeb2
+Merge: af08550 8da510d
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:11:58 2021 -0700
+
+    Merge pull request #49 from PdxCodeGuild/anne
+    
+    Anne
+
+commit af08550fdcb53cee3073ba08d6bbe86376c6e581
+Merge: 00c7e20 22866e5
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:11:31 2021 -0700
+
+    Merge pull request #48 from PdxCodeGuild/Richard
+    
+    Richard
+
+commit 00c7e20d20c1eeb34df70db8410b701c436aa7ce
+Merge: 4f73f68 30f5336
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:11:01 2021 -0700
+
+    Merge pull request #41 from PdxCodeGuild/Austen
+    
+    Austen week-1 labs complete (with mini ui)
+
+commit 4f73f68cf3a336e6d298e62ba91751890a8cae81
+Merge: 82d65aa e30e2ba
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:10:39 2021 -0700
+
+    Merge pull request #47 from PdxCodeGuild/Lee
+    
+    Lee
+
+commit 82d65aaa62eac314b0c4dc3ce2d7922cf95a6b1e
+Merge: 22ad939 bb3839c
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:10:18 2021 -0700
+
+    Merge pull request #46 from PdxCodeGuild/Rafael
+    
+    Rafael
+
+commit 22ad9390c4c7ca928facf865bda94c4aba51f4d4
+Merge: 696fbb7 2941195
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:09:59 2021 -0700
+
+    Merge pull request #45 from PdxCodeGuild/Christerpher_Hunter
+    
+    Christerpher hunter
+
+commit 696fbb78ba241ebd9fafeea273ac1837eb025445
+Merge: b137569 7659e7c
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:09:02 2021 -0700
+
+    Merge pull request #44 from PdxCodeGuild/Philip
+    
+    Philip
+
+commit b13756961ef7f0eaef375851f9bdca27a4723a20
+Merge: 687d542 7da99d1
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 20 14:08:43 2021 -0700
+
+    Merge pull request #43 from PdxCodeGuild/josh
+    
+    Josh
+
+commit 7da99d191cea20ff17cdddc21f37509fb9831c75
+Author: jhell85 <jhell85@gmail.com>
+Date:   Wed Oct 20 13:36:30 2021 -0700
+
+    v3 done with minor bug still working on
+
+commit 7659e7c478fa73bfe1fe59899c4e9a6068019472
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Wed Oct 20 08:52:41 2021 -0700
+
+    Completed Version 1
+
+commit 29411956148d83987f3b9a41025e9d6f8a95ab01
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 20 10:11:19 2021 -0400
+
+    Finished the class and stating on the main
+
+commit bb3839c57b028825f5452fa392b3602107f417a3
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Wed Oct 20 01:20:23 2021 -0700
+
+    finished Lab_08
+
+commit 07a0690d98c94620902bf81ec8ed84b2f910bf3b
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Wed Oct 20 01:13:10 2021 -0700
+
+    Lab_08 complete
+
+commit 2661e6f6c2bfe19ad5114bd893afd15a72cede7c
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Wed Oct 20 01:11:04 2021 -0700
+
+    Lab_08 completed
+
+commit dc1384c9253d692484fbd46594938d9fbc3c193c
+Author: jhell85 <jhell85@gmail.com>
+Date:   Tue Oct 19 22:55:06 2021 -0700
+
+    v2
+
+commit e30e2ba1ea9985a94d418a0b05ab52cc8135b353
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 19 21:43:01 2021 -0700
+
+    lab 9 complete
+
+commit 30f533665ec4532fc9f6aa6d9b78097a4c89b275
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Tue Oct 19 21:51:57 2021 -0600
+
+    lab_blackjack completed
+
+commit cbaafe2ec481d8ae58b99ab51b8afcada419451a
+Author: jhell85 <jhell85@gmail.com>
+Date:   Tue Oct 19 20:49:04 2021 -0700
+
+    v1
+
+commit 22866e5be916a257c60c269ef8975a433316a207
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Oct 19 22:43:21 2021 -0500
+
+    lab_09 completed
+
+commit f8913d08e5920b9a0df1d9b5f175eff3f077d816
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Oct 19 22:42:49 2021 -0500
+
+    lab_09 completed
+
+commit 8da510de2d3eb29397cefd71dd9b0958dcfdee85
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Tue Oct 19 20:40:09 2021 -0700
+
+    completed labs up to lab 9
+
+commit 58a10d6d27d5fde8c74fc4a479763e93a373d7b7
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 19 20:34:03 2021 -0700
+
+    lab 9 complete
+
+commit 6004fad210692daf1bde284aa7e81daa4e2f3f31
+Author: Michael <broetjem@gmail.com>
+Date:   Tue Oct 19 20:21:31 2021 -0700
+
+    Lab 7 complete and other edits
+
+commit 3c2dd9bfae6623c28005ed0120679cc5aef29080
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Oct 19 20:13:41 2021 -0700
+
+    Submitted Lab9
+
+commit 76d6f2e724081e49d35b6c3ec9b73d496f21d408
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 19 20:02:11 2021 -0700
+
+    lab09 Blackjack Advice
+
+commit 147541a297f10f47f337a9607b68b4d4f850e7e8
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 19 20:00:41 2021 -0700
+
+    complete lab09.py
+
+commit 83376b93c6d9295741b23e2a05658313a1d8fa46
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Oct 19 19:59:49 2021 -0700
+
+    lab08
+
+commit b1b823bacd0c2533a16aed9950a16dba84a62838
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Tue Oct 19 19:33:56 2021 -0700
+
+    complete
+
+commit 5ac8734a2852572dcad080704daa2766d33d4bcc
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 19 18:13:47 2021 -0700
+
+    lab08 completed
+
+commit d16a7e7d66ac2cc0e2be44d9729e2ccee9cbf3a5
+Merge: 2ce5958 7a80e0a
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Oct 19 17:30:31 2021 -0700
+
+    Merge branch 'Arek'
+
+commit 2ce595844a1bc11ea08650d33e7cafcdb0973baf
+Merge: dc72575 687d542
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Tue Oct 19 17:30:22 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 056bdbdf9d1d4e917b70881c8db32d30b71d93b2
+Merge: a364844 687d542
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 19 17:23:45 2021 -0700
+
+    Merge branch 'master' into Lee
+
+commit 9763bbe701116c3970e77c149fa7356b466843f3
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 19 16:43:45 2021 -0700
+
+    lab06 Credit Card Validation
+
+commit 27343a99d858826cd744cb66d69774ea214a7ebe
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 19 16:41:04 2021 -0700
+
+    lab08 pick6
+
+commit 76edc3cdca101a16302da0b5ad41df55d7e3dfed
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Tue Oct 19 16:38:05 2021 -0700
+
+    Lab_06 update
+
+commit 5aea2aaba5d1563f03119c766b52f32f46e9b579
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Tue Oct 19 16:36:06 2021 -0700
+
+    lab06 Credit Card Validation
+
+commit 7d7730c9ec9dd6910b348b840e3e4523e695862f
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Tue Oct 19 18:47:27 2021 -0400
+
+    pick6 final
+
+commit 8bb90dec32642ae20e200dabf8c4f5cad8ebb076
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Tue Oct 19 06:17:14 2021 -0700
+
+    Lab 8 in progress
+
+commit a36484458675486e7fb8c95bd4499b11002e2900
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 18 23:06:20 2021 -0700
+
+    finished lab 7
+
+commit 3ab3d3e922818bd01d2c25519b7c644a6e52adee
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Tue Oct 19 00:32:48 2021 -0400
+
+    progress toward non-crash output
+
+commit 6beab66eb705bd05724a6bc8a242ab67ae33388e
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Mon Oct 18 21:26:49 2021 -0700
+
+    lab 7 done, lab 8 in progress
+
+commit abe50c5b5ca16cec63228bf9baf56a4b79be388a
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 18 20:54:14 2021 -0700
+
+    tweked lab 8
+
+commit 931634ce0bfebb140d91ce5929aa4a146782eda1
+Merge: ed460fa 687d542
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Oct 18 20:46:38 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit ed460fa7f03f4d269687709a70bae0ebdab81d54
+Author: Michael <broetjem@gmail.com>
+Date:   Mon Oct 18 20:43:49 2021 -0700
+
+    Complete
+
+commit 8470dd31f7f468b9917a5690b20a8134566c4861
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 18 20:40:46 2021 -0700
+
+    lab08
+
+commit 91489b817fb58bc41cb2d67ec12c88a08739de6e
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Oct 18 21:38:16 2021 -0600
+
+    completed lab_pick_6
+
+commit 95f0bf9c88b28650725ebb09a8f9e50d6986881d
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 18 20:37:35 2021 -0700
+
+    adding lab8 as complete
+
+commit 47773ee6e82317ea01863a0178c006d3c8137679
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 18 20:36:35 2021 -0700
+
+    add lab08
+
+commit ce574ad8d90b03ba9a5229d016a5e81becd59ece
+Merge: 1db0ecd 687d542
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Mon Oct 18 20:36:25 2021 -0700
+
+    Merge branch 'master' into Philip
+
+commit 8f258378dabd512027f44d230316889c0cbfcbfb
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 18 23:36:04 2021 -0400
+
+    done for the night
+
+commit 9bce558fb514fc82053df9878547bd3d5c1d9a76
+Merge: 0a59ee9 687d542
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Mon Oct 18 20:35:53 2021 -0700
+
+    Merge branch 'master' into Jose
+
+commit 7a80e0a321e08fb4ba1c163aef0d42dd8ace9e2b
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 18 20:33:32 2021 -0700
+
+    Submitted lab8
+
+commit 0a59ee9f31e1fc2fb2882c0ffad281756bf4589c
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Mon Oct 18 20:33:20 2021 -0700
+
+    Lab07
+
+commit 853ace735245c646cc83f05c0ad47d18f848e444
+Merge: 427f5a5 687d542
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 18 20:33:15 2021 -0700
+
+    Merge branch 'master' into james
+
+commit a1b3922a1787a21808375f0bd10071fae6aba7ba
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Mon Oct 18 23:32:49 2021 -0400
+
+    peaks and valleys version 2
+
+commit 427f5a5f8c5179a8d650b389e678169260da8144
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 18 20:32:35 2021 -0700
+
+    lab_pick6.py
+
+commit 725f1c08779c74d9691568d2b14eb1d2ad6d3457
+Author: Richard <raw0039@gmail.com>
+Date:   Mon Oct 18 22:32:34 2021 -0500
+
+    lab_08 version 2 completed
+
+commit 2a16d3b8015fbfe31045132f065d4e80b148fc2c
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 18 23:32:34 2021 -0400
+
+    ROT13 in progress
+
+commit 91dc14a2acf1d97745ae59a5038976bb9c5d2379
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Mon Oct 18 23:19:19 2021 -0400
+
+    peaks and valleys version 1
+
+commit 46dd8a90cbe561f1d3eeb96e4fab485ae9c767a6
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 18 22:12:12 2021 -0400
+
+    Fixed: outputs correctly this is a losing strategy
+
+commit 687d5429837ec88e5dbe61fe778be8fc1424d8a7
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Mon Oct 18 21:58:23 2021 -0400
+
+    Update README.md
+
+commit bc310bafb8a71884c979d3c1f3f919af346ebec0
+Merge: 8ed905e 6313e8d
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Mon Oct 18 18:41:24 2021 -0700
+
+    Merge branch 'master' into anne
+
+commit dc725758535bbf30051050984dfa333367996cec
+Merge: 374a5d3 6313e8d
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 18 17:57:01 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit b3ecea74d19a96781cf190073cac20a1c002767b
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Mon Oct 18 18:18:48 2021 -0600
+
+    renamed some files
+
+commit 5a2e1a689b269cc11df4ffac7a5ab27ff3592b2a
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 18 17:17:54 2021 -0700
+
+    complete with lab 7
+
+commit e168b571fa2b2a6cd1bc798e404944465591ff00
+Merge: 918f62d 6313e8d
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 18 17:07:38 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 918f62d680dd7de3786fb9d7fe47fe413924af63
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 18 17:06:19 2021 -0700
+
+    lab07.py
+
+commit 9c88f0ba4a3260c355689469027fdd8bea5f108f
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Mon Oct 18 17:06:06 2021 -0700
+
+    lab06.py
+
+commit 3f605462d204104208a33352679e57e5084ff824
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 18 20:05:18 2021 -0400
+
+    starting ROT cipher from arch linux
+
+commit 5ae1fcceae8eab222d0a21aafab1a97975cfe97a
+Merge: 7bed597 6313e8d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 18 20:03:01 2021 -0400
+
+    Merge branch 'master' into Christerpher_Hunter
+    bringing local repo up to date
+
+commit 8198bd220dedaf8884cd0f7973afe8ecca4d9ef2
+Merge: ee18b51 6313e8d
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Mon Oct 18 17:02:12 2021 -0700
+
+    Merge branch 'master' into Lee
+
+commit 678c7bc79a82670309c167b358b1048efac4ce38
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 18 16:52:44 2021 -0700
+
+    lab06
+
+commit 6313e8dff42cfe8bb0685dd817c78ff5aacab854
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Mon Oct 18 19:50:46 2021 -0400
+
+    :memo:
+
+commit 7bed597a446168ad318885d03e3668f787547f10
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Mon Oct 18 18:34:12 2021 -0400
+
+    Change the search keyword
+
+commit eab8219da37c981a7735cfa689794c2e7f1cf230
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 18 15:01:32 2021 -0700
+
+    lab05 add
+
+commit 0fa13374b567ad89fe7480d69b5036e6fc0f597f
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Mon Oct 18 16:06:00 2021 -0400
+
+    Update 10 Functions.md
+
+commit 89bcea640a162b1aae6a193bbf0a90f0281a5ba2
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 18 11:39:08 2021 -0700
+
+    Added comments to lab7
+
+commit 3c95b6417b6491194994a313ee95cbc98bdd4e9f
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Mon Oct 18 11:33:19 2021 -0700
+
+    Finished Version 1 of Lab7
+
+commit e1adee89841d14d6daca0e654ff8b0616cdeebba
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Mon Oct 18 11:23:13 2021 -0700
+
+    lab03
+
+commit 1db0ecdd2f0e5db82d05f312d94fd29c63f5164e
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Mon Oct 18 10:49:31 2021 -0700
+
+    Completed
+
+commit d394cba3566c8ce9739e757b1ef7bab51768ea64
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Sun Oct 17 20:37:39 2021 -0700
+
+    lab07.py
+
+commit ee18b51ecd7d7b65aa7606ab6f4ebbd7aab79278
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Sun Oct 17 18:14:43 2021 -0700
+
+    updating lab 7
+
+commit 2f1c9cf8693daac464c40ce53db9dd64d34d0505
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 17 19:25:06 2021 -0400
+
+    Lab 10: Dad Joke api; COMPLETE
+
+commit 62d1a8497a366c099ec012022e49bd677f4c6ce8
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 17 19:05:56 2021 -0400
+
+    trying to fix git errors
+
+commit bc861776f26059e6f2af67d750b562c43e71e7bd
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 17 18:53:39 2021 -0400
+
+    coding and testing in progress. Dad Jokes API
+
+commit 904e92d83303b02a5bf1cbcb13a1aa19d86c6740
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 17 13:27:05 2021 -0400
+
+    COMPLETE
+
+commit 8a6394b56e06887ed10ff998ee7368f12b569396
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 17 13:26:15 2021 -0400
+
+    Lab 08: tested and COMPLETED!
+
+commit 7500eb92c28422f9f1ff7dd7cde8e519e3cd9e8e
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sun Oct 17 10:10:19 2021 -0400
+
+    Repaired the credit card validation and testing
+
+commit d1289a3e60ce0c722d75f9e55087118ad3ef6c53
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Sun Oct 17 01:09:21 2021 -0700
+
+    lab06.py
+
+commit 5271d863952485441fa3562a414b6b0df24f47de
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Sat Oct 16 22:20:36 2021 -0700
+
+    Lab_06 in progress
+
+commit 9911312d9fcdbb2692fa94e86a211c2517a9721e
+Merge: 8fb8d9c df74531
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Sat Oct 16 20:21:53 2021 -0700
+
+    Merge branch 'master' into Rafael
+
+commit 8fb8d9c330414c5a620abc9826eacb9dd756cb2c
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Sat Oct 16 20:15:02 2021 -0700
+
+    Lab_06 in progress
+
+commit 76fee2abae5dc0a358adfad650984a00228b9c6f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 16 22:08:38 2021 -0400
+
+    Lab 08: Pick6 tested and COMPLETE
+
+commit 196ea3c3b4062c9a3caae324c1aef95657c20297
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 16 21:11:07 2021 -0400
+
+    Class created not tested
+
+commit f11ad1896d26a8d7df7368b5edd183019e7efbc0
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 16 17:36:04 2021 -0400
+
+    Starting pick6
+
+commit ebdb55875c4b5567b74644f64605357517c0f49f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 16 13:47:22 2021 -0400
+
+    updating local Arch repo
+
+commit ac49798f44af6d5066e71ffde180921b05109bbf
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Sat Oct 16 12:58:12 2021 -0300
+
+    Added a single comment under main()
+
+commit bf4ae849e3e5ce51f38dfa1b7676378ed074cc6e
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Sat Oct 16 12:56:45 2021 -0300
+
+    Made separate functions for "water" and not water
+
+commit 94735db716e29fdd85ab9835645a858d4a8c37da
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Sat Oct 16 12:52:30 2021 -0300
+
+    Added the requisite spacing to get expected output
+
+commit b0574cab3767d9c779fa9e5ad95d2f099b646f52
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Sat Oct 16 12:42:47 2021 -0300
+
+    Modified for Ver.3: COMPLETE
+
+commit 738863bb1c1baf0e6acc0e5a252d52c624d4736c
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Sat Oct 16 11:00:01 2021 -0300
+
+    Lab 07: Peaks & Valleys COMPLETE
+
+commit f737a6701d8da125627607e8e3f5cd13f54a2715
+Merge: c057d39 5a8c3bc
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 16 09:36:34 2021 -0400
+
+    Merge branch 'Christerpher_Hunter' of https://github.com/PdxCodeGuild/Class_Raven into Christerpher_Hunter
+    
+    Trying to move to other computer
+
+commit c057d399cd1df8f20b1460dd257cf616c103beda
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Sat Oct 16 09:34:00 2021 -0400
+
+    Proceeding to hard code the peaks and valleys...
+
+commit 2e81009efcd123d6b5f5353d1986f6f94c6472a4
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Sat Oct 16 00:23:20 2021 -0400
+
+    credit card lab
+
+commit f485a9470b4d2a55db7941fe33d172dd7fa85b58
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Fri Oct 15 17:54:34 2021 -1000
+
+    palindrome complete
+
+commit 6db04e8d4fb398205fe24189f8b8ef33ee54aa4e
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Fri Oct 15 20:42:04 2021 -0700
+
+    incomplete Lab_06 push
+
+commit a229d12af64e948a65fc6cccaa4e38e6bf65491a
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Fri Oct 15 20:39:43 2021 -0700
+
+    lab 7 in progress
+
+commit 86f9b4988d363b133a575efaa08cc5bf4f1c6f76
+Author: Richard <raw0039@gmail.com>
+Date:   Fri Oct 15 22:31:07 2021 -0500
+
+    lab_7 completed
+
+commit 8ed905ee1ee4eee59d9482af85165091fdee4e93
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Fri Oct 15 20:23:37 2021 -0700
+
+    final friday push
+
+commit 58b54c41f47a831f936964c9bd501c80e798c218
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Fri Oct 15 20:12:34 2021 -0700
+
+    firday code commit
+
+commit 9a32cb404a12035c5271e657fd9c4aa8fea612a5
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 15 21:07:06 2021 -0600
+
+    week-1 labs COMPLETE (with UI)
+
+commit 67903355c3fd3a3d27540b868a25c717e3c443f4
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Fri Oct 15 20:01:34 2021 -0700
+
+    incomplete lab07
+
+commit 0ae0c9e36e040323e5acb8f9a6195a58d37c932c
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Fri Oct 15 19:43:10 2021 -0700
+
+    lab05.py
+
+commit 32da5d5c9a3ed53115aee905b5f1aabcb4e43a19
+Author: Michael <broetjem@gmail.com>
+Date:   Fri Oct 15 19:13:48 2021 -0700
+
+    complete, added some comments
+
+commit 9e19a03bfbcf2134602c34d6946f267d99aa0f47
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Fri Oct 15 19:11:59 2021 -0700
+
+    lab 6 done
+
+commit a9e59883504dd595b6aeb86a95546d3b3a8dbe8c
+Merge: f420be2 df74531
+Author: Michael <broetjem@gmail.com>
+Date:   Fri Oct 15 19:07:57 2021 -0700
+
+    Merge branch 'master' into Michael
+
+commit f420be23c7bebaec631e83c2551ab0042dbc709a
+Author: Michael <broetjem@gmail.com>
+Date:   Fri Oct 15 19:07:24 2021 -0700
+
+    Initial commit
+
+commit dcfffe863258e290243b37625e5239b3ec0469a5
+Author: Michael <broetjem@gmail.com>
+Date:   Fri Oct 15 19:07:12 2021 -0700
+
+    Completed
+
+commit c7f942307e9b2973a1aed8e88803ec870be53d4a
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Fri Oct 15 18:48:18 2021 -0700
+
+    Completed
+
+commit ceb0759726e477f47f8e7a1382f1d8bd9813861e
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Fri Oct 15 18:23:53 2021 -0700
+
+    lab 6 complete
+
+commit 5a8c3bce38213ce53a6b6f95b186e74f6b666918
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Fri Oct 15 22:20:45 2021 -0300
+
+    working on Ver 2 and Ver 3
+
+commit 81086953837555e3d91ea4cefbcbf2fab1034cfc
+Merge: 49b727b df74531
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Fri Oct 15 17:57:02 2021 -0700
+
+    Merge branch 'master' into Philip
+
+commit 08f8ce11488f6fd03e03866c7e7becaec139030e
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Fri Oct 15 17:52:07 2021 -0700
+
+    lab02
+
+commit d526e5a441dd2f067853322c89466be02122c229
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Fri Oct 15 17:22:50 2021 -0700
+
+    Submitted lab 6
+
+commit f325e8f59bde505413bec8f27d8ede8f9e7104b2
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Fri Oct 15 17:09:46 2021 -0700
+
+    labs
+
+commit 25cbf78c3514715a049d9cf1537dadd430812aef
+Merge: 2320f91 df74531
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Fri Oct 15 17:09:10 2021 -0700
+
+    Merge branch 'master' into Jose
+
+commit 6fe5a8b3ef6e1740dde4cdc5e579b5e0234c2d25
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Fri Oct 15 14:05:03 2021 -1000
+
+    lab3 v1_v2 complete
+
+commit c328d9b623fba0c993c870d4202c6cc78403a505
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Fri Oct 15 15:57:42 2021 -0700
+
+    Lab 3 complete
+
+commit 49b727b38181124cb14ef764d4615a527ad36277
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Fri Oct 15 15:32:09 2021 -0700
+
+    Complete
+
+commit e1ac81e90cd777670c4f5f032cbd6150fffc6543
+Merge: f83723a 47c39da
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Fri Oct 15 15:23:57 2021 -0700
+
+    Merge branch 'master' into Philip
+
+commit 41fee028b4e3e997916d3334ec304afb6d187707
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 15 18:12:36 2021 -0400
+
+    started peaks and valleys
+
+commit ec4059256c17109c617df2d051ce3366cbc1425c
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Fri Oct 15 13:46:40 2021 -0400
+
+    palindrome and anagram lab
+
+commit d51a3125d3228cd13c4e5c7c5073d35ac49f3137
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 15 09:57:11 2021 -0400
+
+    Complete and tested
+
+commit b3568768d5f008505e1c12b27d1469fa2a15bcae
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 15 09:23:31 2021 -0400
+
+    fixed some line length issues
+
+commit 0f00e7088c3afcf23f343bffcd9d6ce345d82b7d
+Merge: 14769e0 e98a76c
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 15 09:20:16 2021 -0400
+
+    Merge branch 'Christerpher_Hunter' of https://github.com/PdxCodeGuild/Class_Raven into Christerpher_Hunter
+    grabbing the progress from desktop
+
+commit e98a76cabfb85173b74415efcc2bb9b6749e1a1e
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Fri Oct 15 09:49:37 2021 -0300
+
+    Palindrome done, not Anagram yet
+
+commit 14769e0ac09fc7a10800fba0eff274812f4da3d1
+Merge: f25d196 df74531
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Fri Oct 15 08:41:57 2021 -0400
+
+    Merge branch 'master' into Christerpher_Hunter
+    updating local repo
+
+commit 92c619647ef6755bfea5a17c04dec736bf3c1cb0
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Thu Oct 14 23:44:25 2021 -0700
+
+    pushed Lab_02.py Lab_03.py Lab_05.py
+
+commit 0f749168d66853dbb9e8c67ac881c36b303bb4f1
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Fri Oct 15 00:24:11 2021 -0600
+
+    completed thurs labs and created ui to access week
+
+commit 7f7b1ff94598707e6bb885c1a3bd222e8e5e8d7a
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 23:22:09 2021 -0500
+
+    completed and cleaned up unnecessary lines.
+
+commit f4d63b37d5f8a646b644fe112b2135c93684a47e
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Thu Oct 14 21:21:10 2021 -0700
+
+    Lab_03 Summitted
+
+commit 1924f99b14a5037418c7e16cfd3e1c93a63cae09
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 23:19:19 2021 -0500
+
+    use of input statement added back in.
+
+commit a97cde1f563b658fa559bbe9063cf7b87a47186b
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 23:12:40 2021 -0500
+
+    working credit card check with tons of test printing
+
+commit 48113cbe705ea68465c10c2f532e20c105b32339
+Merge: 575d65f df74531
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 14 20:58:20 2021 -0700
+
+    Merge branch 'master' into Lee
+
+commit 575d65fef66c8225de9256e761c71a3f3250a9e4
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Thu Oct 14 20:56:34 2021 -0700
+
+    lab 5 complete
+
+commit 374a5d3efc27c6a90ae042c5b47d194febb644ba
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 14 20:52:06 2021 -0700
+
+    Updated lab5 to match instructions
+
+commit 8bc1252f94d25e5081dc7efc9c5bee988ca0b784
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 22:42:10 2021 -0500
+
+    end of day lab_6
+
+commit b293bf735bb92c5ad67f8e031d3d59cc83b967e0
+Merge: ccc3eea df74531
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 14 20:22:15 2021 -0700
+
+    Merge branch 'master' into james
+
+commit ccc3eea9ca44cb4c077a6136bfddcbd9b1e2a770
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 14 20:20:15 2021 -0700
+
+    lab03.py
+
+commit f25d196a59c71e49a40bece96625c428e1e94090
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Fri Oct 15 00:18:28 2021 -0300
+
+    Lab 03 revamped COMPLETE
+
+commit 220d30be8bf0f1655154f8b838a2ecb0a5bbf22f
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 14 20:11:24 2021 -0700
+
+    Submitted lab05
+
+commit 7a955abaaa4bb52f4a7743f39f39890bf3912b0d
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 14 20:00:32 2021 -0700
+
+    Completed. Removed errant space.
+
+commit 9aee054d575a254feaa1d8f1fb1e6e732db451da
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 14 19:59:57 2021 -0700
+
+    Completed
+
+commit 2fadd4b0cf848dd75d757c50d0bc080543a3c1e8
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 21:56:31 2021 -0500
+
+    this is the palindrome checker as a function.  Palindrome.py is code I had written before in 102 for fun.
+
+commit 598d4ba8f0fca89a85c1adb2dbbbd145b96338e0
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Thu Oct 14 23:47:02 2021 -0300
+
+    Credit Card Checker and Tester COMPLETE
+
+commit 9df5a71b2156a70d08bf5f9ce740289c8c233ded
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 21:37:54 2021 -0500
+
+    Lab 3.2 complete.
+
+commit c0d5c896014934a70e149217b9ceb00457cdf876
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 14 19:31:43 2021 -0700
+
+    Submitted Lab03
+
+commit 224e46d083d5d054be230435f31b4ce94e8422cd
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Thu Oct 14 16:31:19 2021 -1000
+
+    lab 3 v1 finished
+
+commit ff2d7dbaf5cc810a9a925a31dad941d72bc294ac
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Thu Oct 14 22:29:37 2021 -0400
+
+    number averages lab
+
+commit a211ad6a0184f6b609447a9888744239e4a249ca
+Merge: 11600a8 df74531
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Thu Oct 14 20:22:55 2021 -0600
+
+    Merge pull request #39 from PdxCodeGuild/master
+    
+    updates
+
+commit 11600a83b834a1db92d56528ae760f3d9967a2a7
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 14 20:22:07 2021 -0600
+
+    completed lab_average_numbers
+
+commit 09d9f7748cc1844552b87433413931c5ebb23a65
+Merge: 912dda4 df74531
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 14 19:13:02 2021 -0700
+
+    Merge branch 'master' into Arek
+
+commit 31b98f6fcb97467194d94081cd363de91fcc121f
+Author: Richard <raw0039@gmail.com>
+Date:   Thu Oct 14 21:11:25 2021 -0500
+
+    palindrome and anagram for lab3
+
+commit 5a963f2f7d747d23e680244438ef2747f55fb503
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Thu Oct 14 22:05:22 2021 -0400
+
+    updated changes part 2
+
+commit df745316c9e844b13747033b969d4ce8d46bb925
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Thu Oct 14 21:58:30 2021 -0400
+
+    :tada:
+
+commit 6582980af6ab542973dad8f61a44efa03e882679
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 14 21:56:31 2021 -0400
+
+    Update README.md
+
+commit 791d12dc49019ca71a0d4cf064ad7f65222dbdd0
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 14 21:56:06 2021 -0400
+
+    Update README.md
+
+commit cf0fc6c64fde115c030e660ab02449629f70a15f
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 14 21:47:27 2021 -0400
+
+    Update 03 AverageNum.md
+
+commit cbbe375512b9f91926085368d923e2032f78b52a
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 14 21:27:56 2021 -0400
+
+    Update 08 Strings.md
+
+commit 4af6a49d0a051c77c20ca90bee3016a1aa63fde5
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Thu Oct 14 22:09:01 2021 -0300
+
+    Cleared up some variable names
+
+commit 721a059b30cb4bfc0023cd3c09fcea5c8d8b5cc4
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Thu Oct 14 21:33:18 2021 -0300
+
+    minor visual manipulation
+
+commit 2320f91b0ef4e1440f3f1c1a188e1a7bcec94ec7
+Merge: 08f2bcc 47c39da
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Thu Oct 14 17:30:23 2021 -0700
+
+    Merge branch 'master' into Jose
+
+commit 08f2bcc80b75cda7d928193a234924e41245ba51
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Thu Oct 14 17:29:10 2021 -0700
+
+    Indentation
+
+commit b5170a3317b3a6cdfff59598d2a536dd2ce5a79e
+Merge: 47c39da d271366
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Thu Oct 14 21:09:31 2021 -0300
+
+    Merge branch 'Christerpher_Hunter' of https://github.com/PdxCodeGuild/Class_Raven into Christerpher_Hunter
+    syncing the local repo
+
+commit a0998bfa62ec75acd699e49b11672ccda900b0fb
+Merge: a17e5fa 47c39da
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Thu Oct 14 18:02:34 2021 -0600
+
+    Merge pull request #38 from PdxCodeGuild/master
+    
+    14-Oct merge master
+
+commit 49db7c3c6af815101ce96fb9500a95bc48733154
+Merge: 0cf1340 47c39da
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 14 16:52:09 2021 -0700
+
+    Merge branch 'master' into james
+
+commit 912dda462f0819c71e857003485266aab5ec4f35
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Thu Oct 14 16:51:47 2021 -0700
+
+    added version 2 of lab02
+
+commit 3a67b4aa0aa148ffb156fa0e6ada6d53890afc55
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 14 16:47:22 2021 -0700
+
+    Completed, but changed naming scheme on currency to be more readable.
+
+commit 3362593d7a92064234d18eed2c66f1bbbd2bccb3
+Author: Michael <broetjem@gmail.com>
+Date:   Thu Oct 14 16:43:37 2021 -0700
+
+    Completed but added 5, 10, 20, 50, and 100 dollar bills for fun.
+
+commit 47c39da15e6399817ee7062670b554e5a9d0d17f
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 14 19:41:28 2021 -0400
+
+    Rename * Mini Capstone.md to MiniCapstone.md
+
+commit d2713665682ad664720c40dde2df1b69bae31e4d
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 19:29:51 2021 -0400
+
+    Cannot figure odd list elements...
+
+commit 0cf13407d504a9cc285e006baf9a1c32fbdb4866
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Thu Oct 14 16:28:30 2021 -0700
+
+    Lab02
+
+commit 8eed1e5f66f9b6cbc1eadcf9256f6af32a03c6da
+Merge: 98de5a9 433a53b
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 18:38:46 2021 -0400
+
+    Merge branch 'master' into Christerpher_Hunter
+    class update
+
+commit 98de5a90b99444dc2570086e663d791985fc4818
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 18:38:18 2021 -0400
+
+    presently trouble shooting
+
+commit 433a53b16b14936af95448c21a5d07c6aa3bd8c1
+Merge: 0e5e24f 9d3aced
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:25:23 2021 -0700
+
+    Merge pull request #36 from PdxCodeGuild/josh
+    
+    Josh
+
+commit 0e5e24fcb5f75e7894e6c5304c935eb45a13ae79
+Merge: 27282ea 939770d
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:24:49 2021 -0700
+
+    Merge pull request #17 from PdxCodeGuild/Randall
+    
+    added hello world
+
+commit 27282ea9801c79c3d85b625aa344551cb870ede1
+Merge: 71f4b16 7633f8e
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:24:16 2021 -0700
+
+    Merge pull request #35 from PdxCodeGuild/Lee
+    
+    Lee
+
+commit 71f4b16bf541f8d7d298dd04fbd816b9907be3be
+Merge: 879bcfe 72e0469
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:23:54 2021 -0700
+
+    Merge pull request #34 from PdxCodeGuild/anne
+    
+    pushing lab
+
+commit 879bcfe773a67ee886548ed5f5ac13785a8ec9e8
+Merge: 991d72c 25fd9d4
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:23:09 2021 -0700
+
+    Merge pull request #33 from PdxCodeGuild/Michael
+    
+    Michael
+
+commit 991d72cf91787a217964d62329234925857df274
+Merge: 9e8785a 94d7359
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:22:49 2021 -0700
+
+    Merge pull request #32 from PdxCodeGuild/Philip
+    
+    Philip
+
+commit 9e8785abbc947af36ca4b4dcbe99ce652d8aaef8
+Merge: 036a22c 97c1291
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:22:08 2021 -0700
+
+    Merge pull request #31 from PdxCodeGuild/aaronq
+    
+    Lab 02 Complete
+
+commit 036a22c89d90df71b3c2ea745f83d978c943efb5
+Merge: 5ae6e8e d12972c
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:21:38 2021 -0700
+
+    Merge pull request #30 from PdxCodeGuild/Richard
+    
+    Richard
+
+commit 5ae6e8eb193c2030d113637a3fec4af7c43fbf8c
+Merge: 64b5c7e 8a563ee
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:21:12 2021 -0700
+
+    Merge pull request #29 from PdxCodeGuild/Arek
+    
+    Arek
+
+commit 64b5c7ec781f4d9c296753768d10b475ba9d2ed9
+Merge: c8b41c8 7bcace6
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:20:40 2021 -0700
+
+    Merge pull request #28 from PdxCodeGuild/james
+    
+    James
+
+commit c8b41c854a8ea592b5006daa1e6696a56b2f3015
+Merge: 5bd016c cbcd971
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:20:06 2021 -0700
+
+    Merge pull request #27 from PdxCodeGuild/Jose
+    
+    lab02
+
+commit 5bd016cf14cdc808a817e88515393fd10f7297cf
+Merge: c2be53e a17e5fa
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:19:50 2021 -0700
+
+    Merge pull request #22 from PdxCodeGuild/Austen
+    
+    Austen completed lab 02
+
+commit c2be53e92712d985e4bb48119640694193c0bbba
+Merge: 2f068e5 682adaf
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:18:58 2021 -0700
+
+    Merge pull request #26 from PdxCodeGuild/Rafael
+    
+    complete_v1
+
+commit 2f068e5be04d629623cee2af34105d8fa8012f31
+Merge: 1121f49 30395c2
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:18:29 2021 -0700
+
+    Merge pull request #25 from PdxCodeGuild/Rodney
+    
+    Rodney
+
+commit 1121f49c0ed61729c66c5e82a296115566b13c8e
+Merge: 493ea4b f75aca4
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Thu Oct 14 15:15:05 2021 -0700
+
+    Merge pull request #24 from PdxCodeGuild/Christerpher_Hunter
+    
+    Christerpher hunter
+
+commit f75aca4409749a51b1ea925655e3657ff4ed3acc
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 17:22:35 2021 -0400
+
+    CC Validtion prior to first test
+
+commit 39a8acb97511c98cf1e542172dc71d2524738ac8
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 15:27:47 2021 -0400
+
+    fixing the input validation
+
+commit 645bf4ebe8126932815870c99f44844c2589c5f5
+Merge: a2361b1 8cfdb9f
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 15:23:17 2021 -0400
+
+    updating local repo
+
+commit a2361b1832910263ca960e7e8fef318f1876645e
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Thu Oct 14 15:19:20 2021 -0400
+
+    Minor changes in layout
+
+commit 493ea4b4aa9e15bcf9f5ddb39e8af97dc7755678
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Thu Oct 14 14:22:38 2021 -0400
+
+    Create * Mini Capstone.md
+
+commit 30395c27b70e23050568ddb772400a96744fe4d4
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Thu Oct 14 12:40:28 2021 -0400
+
+    Part 2
+
+commit f83723a5929c16173f1a72b1036229a88e58cfec
+Merge: 94d7359 ce36455
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Thu Oct 14 09:08:17 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven into Philip
+
+commit 7b0ec2ad303da5c047623473be66534483a88024
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Thu Oct 14 11:51:35 2021 -0400
+
+    updated change lab
+
+commit 682adafa934ba4fe727369991cf6da8e5fb1e05b
+Author: Rafael <realworldsurf@gmail.com>
+Date:   Thu Oct 14 00:59:23 2021 -0700
+
+    complete_v1
+
+commit a17e5fafe05ff2e6ebf46f9143a9577e0c975d8f
+Merge: ea2e551 ce36455
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Thu Oct 14 00:57:50 2021 -0600
+
+    Merge pull request #23 from PdxCodeGuild/master
+    
+    updated labs
+
+commit ea2e55180192a7a6dff578483124bc15bd9b8c5e
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Thu Oct 14 00:54:08 2021 -0600
+
+    completed lab-02
+
+commit cbcd97198bb6ab8b4a96e66c7d1f970ea18dbef9
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Wed Oct 13 21:14:35 2021 -0700
+
+    lab02
+
+commit 7bcace68ebe8bb67d4184d777b154317021cbca1
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 13 20:59:44 2021 -0700
+
+    Lab02
+
+commit 8a563eebec4a774236afe83418cacff6dffd2c63
+Merge: 503c478 ce36455
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Wed Oct 13 20:45:07 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit d12972c671f329f14e3e985253a3b7916d64a866
+Author: Richard <raw0039@gmail.com>
+Date:   Wed Oct 13 22:42:06 2021 -0500
+
+    complete and cleaned up
+
+commit 503c4784395aa8d6a82c150decdd445ac90db72a
+Author: arek8675 <smullenarek10@gmail.com>
+Date:   Wed Oct 13 20:40:14 2021 -0700
+
+    submitted Lab 2
+
+commit f478d29e07028aa28da169287037253079cf1785
+Merge: db68bfe ce36455
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 13 20:36:36 2021 -0700
+
+    Merge branch 'master' into james
+
+commit db68bfe1c495073acfb103df1dca23a0de8cbe09
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Wed Oct 13 20:29:56 2021 -0700
+
+    lab.02 first version
+
+commit 97c1291bd28fb9ca4f8d6694f2d39cf72b6f0658
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Wed Oct 13 17:28:02 2021 -1000
+
+    Lab 02 Complete
+
+commit 94d7359053e3d7c2cb457ee54578daf9f3063229
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Wed Oct 13 20:27:50 2021 -0700
+
+    Added functionality to Lab02
+
+commit 9c7d6b2683e3fdeaad9943bc293efb85d8a7aa79
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 13 23:25:02 2021 -0400
+
+    added change lab
+
+commit 8cfdb9f711921e2cd2e0777e0090d1a8ca82a2df
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Thu Oct 14 00:24:50 2021 -0300
+
+    implemented Ver. 2
+
+commit 75a04cdb331d800d19f956e88339997c7398808f
+Author: Richard <raw0039@gmail.com>
+Date:   Wed Oct 13 22:20:07 2021 -0500
+
+    Better version of lab_2.py
+
+commit 25fd9d4c93417e7e6e95f6eb77b226802b5ac65e
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 13 20:18:40 2021 -0700
+
+    minor fix in formatting (complete)
+
+commit 72e04691a4e03425d096eb73069f3245af7727db
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Wed Oct 13 20:11:27 2021 -0700
+
+    pushing lab
+
+commit 7c571e74aee8ddc4385a6931a551f9a9be50bfc3
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 13 20:10:10 2021 -0700
+
+    Minor fix
+
+commit 7633f8e9c4e1d276559a0624519645b34f62cc7c
+Merge: 71892e9 ce36455
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 13 20:07:05 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 6655a65c30cd5e6618e17b227d3650d2b9bb87be
+Author: Michael <broetjem@gmail.com>
+Date:   Wed Oct 13 20:05:27 2021 -0700
+
+    Complete Coin change lab
+
+commit ce36455f6727f904439953bf3e58c0fcb0a2888b
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 23:01:32 2021 -0400
+
+    Update and rename 05 Rock Paper Scissors.md to 05 Palindrome Checker.md
+
+commit 034325cea5b4e613e474ff7b7850e307cc7260cf
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 23:00:17 2021 -0400
+
+    Create 12 Image Manipulation.md
+
+commit befdba195291f6e82e1cbb47694f46ce59de174d
+Author: Richard <raw0039@gmail.com>
+Date:   Wed Oct 13 22:00:13 2021 -0500
+
+    lab_02 complete.. still making it better
+
+commit 4103c231b3f990d91b52ef12f5324e114ecd896f
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 22:59:16 2021 -0400
+
+    Delete 12 Unit Converter.md
+
+commit d1aabfd80538ca78b6da7c1f21f5dfbe7b8996bd
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 22:59:06 2021 -0400
+
+    Delete 04 Unit Converter.md
+
+commit 6ba46edf578004cd117fa3274f78b4a0a0bfe389
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 22:58:29 2021 -0400
+
+    Update and rename 06 Random Password Generator.md to 06 Credit Card Validation.md
+
+commit 6330e28180b791446438f91990955d5de8ee3abd
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 22:57:24 2021 -0400
+
+    Update and rename 04 Number to Phrase.md to 04 Unit Converter.md
+
+commit 71892e9436b949498378a253fdbcec7537be1079
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 13 19:52:52 2021 -0700
+
+    lab 2 complete :)
+
+commit f606410e1145dbd4789740930967924ac5122078
+Author: Philip Bartoo <Philip_99bartoo@hotmail.com>
+Date:   Wed Oct 13 19:50:36 2021 -0700
+
+    Completed Lab02.py
+
+commit 939770dca88efc932edf1433ce98a86fcc5d6158
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 13 19:47:10 2021 -0700
+
+    adding lab02
+
+commit 6a69e6e862773d84f907fd1511e6e7046c743404
+Merge: afe11fe 1e99c86
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Oct 13 20:22:30 2021 -0600
+
+    Merge pull request #21 from PdxCodeGuild/master
+    
+    updated labs 2-4
+
+commit 0e38fdfee9393738a0cbc95bf8d4133547ed5ae9
+Merge: 082ab4b 1e99c86
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 13 19:22:22 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 29e6f0211f6170d74e514871423c5c8ec24fbe16
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 23:21:43 2021 -0300
+
+    Changed the lab number
+
+commit 6af42ad03911b0a0fecb9318a0a590bfae4e9da0
+Merge: 3f93419 1e99c86
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 23:19:29 2021 -0300
+
+    Merge branch 'master' into Christerpher_Hunter
+    grabbing update labs
+
+commit e4fa5421fd04c590e502a51b464eac8483b10f27
+Merge: ddcd8e4 1e99c86
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 13 19:18:53 2021 -0700
+
+    Merge branch 'master' into Lee
+    merge messgae
+
+commit 1e99c86c2c6b7dbee8e28c4a34cefa518f0e6335
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Wed Oct 13 22:14:17 2021 -0400
+
+    updated labs 2-4
+
+commit afe11fede77163bd183281d7b26ace42da061778
+Merge: 9385411 7ed59c9
+Author: Austen C Myers <84463571+austenc-id@users.noreply.github.com>
+Date:   Wed Oct 13 20:05:14 2021 -0600
+
+    Merge pull request #19 from PdxCodeGuild/master
+    
+    merge-master-13-Oct
+
+commit 93854119fd30808ef2665a54026b9c7d281d225e
+Author: Austen Myers <austenc.id@pm.me>
+Date:   Wed Oct 13 20:03:10 2021 -0600
+
+    turtle-lab-v2
+
+commit 3f93419aad59c79d24ae8783c41525e97b6ed8b4
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 23:02:02 2021 -0300
+
+    rearranged the layout and added comments
+
+commit f94627ee2e9c260e468302b74d1ca7f6796dc596
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 22:56:00 2021 -0300
+
+    minor adjustment to spacing
+
+commit f980b49df9ffedebc4f4f1987f30c7b7d071a856
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 22:36:41 2021 -0300
+
+    removed unused imports
+
+commit 4bfc8f5ba49e562015b2f7b6a86567e9e669377f
+Merge: e52c248 7ed59c9
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 13 21:17:13 2021 -0400
+
+    Merge branch 'master' into rodney
+
+commit 082ab4b5f1d858ad6da12dd99a7361204d7de1b8
+Merge: f1a448a 7ed59c9
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 13 18:17:02 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit ad7f8b338381040658702df00c52c30c01487919
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 22:13:03 2021 -0300
+
+    minor edit
+
+commit ddcd8e4e9295e0a2ee30426fd11da4c079e35ab9
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Wed Oct 13 18:12:47 2021 -0700
+
+    adding lab ... getting used to Git...
+
+commit 68912f9db47930dbde6adbcde3643180521f38b3
+Merge: 4bd6232 7ed59c9
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 21:45:48 2021 -0300
+
+    Merge branch 'master' into
+    Christerpher_Hunter
+
+commit 9d3acedc3c5f25f21e35131179a4bb3c2d396544
+Merge: 6c19a1e 7ed59c9
+Author: jhell85 <jhell85@gmail.com>
+Date:   Wed Oct 13 17:41:23 2021 -0700
+
+    q
+    
+    Merge branch 'master' into josh
+    
+    :w
+    
+    :q
+    
+     commit.
+
+commit 6c19a1eebeee05083347cc1ce5e88d0cfb9d7079
+Author: jhell85 <jhell85@gmail.com>
+Date:   Wed Oct 13 17:29:43 2021 -0700
+
+    add new git file
+
+commit 4bd6232ab6ce13db602fcbd1818d2d45aea95d01
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 21:27:31 2021 -0300
+
+    very beginning but told to cease & desist
+
+commit 7ed59c95d7fb4b05dc1ed36d3761e6c76aa73fa3
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 20:11:14 2021 -0400
+
+    Update README.md
+
+commit 8316f9952d8a092a3803c92af08cf88ec546b65f
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 21:06:28 2021 -0300
+
+    repaired a error in class employment
+
+commit 5203fb9de80ecf5de1d59d3996ea2c4057a3d06c
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Wed Oct 13 19:52:54 2021 -0400
+
+    Update README.md
+
+commit 7aeb8aa5448047f0b4af91e602e284ab6c3a7368
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Wed Oct 13 19:57:01 2021 -0300
+
+    Lab 05 COMPLETE
+
+commit ec6549df401827633473541a8079f82c1593e14e
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 13 17:31:31 2021 -0400
+
+    Lab 05: all done except input validation
+
+commit e52c248b5f316cf40b071255c2f366a3cc6201e7
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 13 17:21:21 2021 -0400
+
+    new file - practice
+
+commit eed2cfc7dee5e062348e7b777fcd8a2947175dae
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Wed Oct 13 17:19:40 2021 -0400
+
+    new updates to hello world today
+
+commit e6f1ea1cb81c37395dad059488da8724d9543270
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 13 13:45:09 2021 -0400
+
+    Lab 04 COMPLETE
+
+commit 9a2d78edb49ec6c865cb88214f81f01d1533c557
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 10:23:50 2021 -0700
+
+    add uploads/ to .gitignore
+
+commit f1a448afb7364c169c76b21ffebc421f3feb54e5
+Author: TheAncientBooer <randall.mayton@gmail.com>
+Date:   Wed Oct 13 10:05:25 2021 -0700
+
+    added hello world
+
+commit 6fd7610962740c75abead1cd15eb3a0a9027f2e8
+Merge: db17804 7163131
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:55:01 2021 -0700
+
+    Merge pull request #16 from PdxCodeGuild/Michael
+    
+    added hello world
+
+commit db17804f3c433ce253ff76232fc1942b627a45f1
+Merge: 54f4efe 4cc332d
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:54:40 2021 -0700
+
+    Merge pull request #15 from PdxCodeGuild/Arek
+    
+    added hello world
+
+commit 54f4efe497d3bf5791db7262e4c212e3f84c6778
+Merge: 4bca31a 9903568
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:54:22 2021 -0700
+
+    Merge pull request #14 from PdxCodeGuild/Philip
+    
+    added hello world
+
+commit 4bca31a3a5ff9e57b55630668b214bfe4f4412fb
+Merge: 625f3b2 c752429
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:54:04 2021 -0700
+
+    Merge pull request #13 from PdxCodeGuild/Rafael
+    
+    added hello world
+
+commit 625f3b2df7f5cace1fabe7a4a58532b7f67f2aab
+Merge: b09587f c28fb1f
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:53:46 2021 -0700
+
+    Merge pull request #12 from PdxCodeGuild/Robert
+    
+    added hello world
+
+commit b09587f8db96345e206f6293238bceada55ef51a
+Merge: b5aa428 dc169c0
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:53:02 2021 -0700
+
+    Merge pull request #11 from PdxCodeGuild/Jose
+    
+    added hello world
+
+commit b5aa4282d17fe42f15e3571ba06a0394d01d2fdf
+Merge: 2598ab3 24f2f97
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:52:43 2021 -0700
+
+    Merge pull request #10 from PdxCodeGuild/josh
+    
+    initial commit
+
+commit 2598ab366f469ece97a540fbacb3591ae64d399a
+Merge: 39f294c 6995312
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:51:25 2021 -0700
+
+    Merge pull request #9 from PdxCodeGuild/Richard
+    
+    added hello world
+
+commit 39f294c4bd70fcbbb119313a1453677b812c916a
+Merge: 4235294 da560fe
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:50:49 2021 -0700
+
+    Merge pull request #2 from PdxCodeGuild/Austen
+    
+    Austen
+
+commit 4235294178a1839183c15923d702b370e3179a1d
+Merge: 9a700d0 eb06d6e
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:50:21 2021 -0700
+
+    Merge pull request #8 from PdxCodeGuild/james
+    
+    initial commit
+
+commit 9a700d0fca3c00fbb5db21cdecb350f0bb5d73d7
+Merge: f26c9a2 e9a6be0
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:49:34 2021 -0700
+
+    Merge pull request #7 from PdxCodeGuild/Rodney
+    
+    Rodney
+
+commit f26c9a22a5c2d03fa2515c9b12b7d78723bafd7c
+Merge: 90734f1 ece479e
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:47:42 2021 -0700
+
+    Merge pull request #6 from PdxCodeGuild/aaronq
+    
+    1-hello-world.py
+
+commit 90734f1a7720b709b33da119edb74088c03395da
+Merge: 83b6991 7ef8156
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:47:11 2021 -0700
+
+    Merge pull request #5 from PdxCodeGuild/Lee
+    
+    Lee
+
+commit 83b6991dc86e8a04d796741b0a0f5de99aec7775
+Merge: fd1f0c7 9e1f5ec
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:43:03 2021 -0700
+
+    Merge pull request #4 from PdxCodeGuild/anne
+    
+    Anne
+
+commit fd1f0c7aa2fd01a5d6f4467210ca95a48fac590f
+Merge: 39f1597 3d6bbec
+Author: Josh <45572759+jhell85@users.noreply.github.com>
+Date:   Wed Oct 13 09:42:18 2021 -0700
+
+    Merge pull request #3 from PdxCodeGuild/Christerpher_Hunter
+    
+    Christerpher hunter
+
+commit 3d6bbecda907029515a74445b8c70ad1d7f0fac0
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 13 10:56:51 2021 -0400
+
+    Lab 03 COMPLETE!
+
+commit cad5b2a7bac00fb4491639dfc62ce85c7a7d5f20
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 13 10:53:40 2021 -0400
+
+    Lab 02 COMPLETE!
+
+commit 06123b97f5f35d545b496301c52685b78d67db84
+Author: Christerpher Hunter <djhunter67@gmail.com>
+Date:   Wed Oct 13 10:45:41 2021 -0400
+
+    Stick figure man COMPLETE!
+
+commit 9e1f5ec7ccecaf3de3147ba6cce4ff1aab2bbfb2
+Author: Anne Smith <annelaurasmith.me@gmail.com>
+Date:   Tue Oct 12 20:31:44 2021 -0700
+
+    change file
+
+commit 44728d4972be8c4f505394dc91597b9e9d5494fa
+Author: AnneSmith <sheridover@Sheris-MacBook-Pro-2.local>
+Date:   Tue Oct 12 20:16:48 2021 -0700
+
+    made a branch
+
+commit 7ef8156de7525ca0239796f352829d922b30f3e2
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 12 20:15:25 2021 -0700
+
+    cleaning things up
+
+commit ece479eedbea13638188789dc36c0334fb216441
+Author: SGTWOBBLE <aaron.quiroz23@yahoo.com>
+Date:   Tue Oct 12 16:59:27 2021 -1000
+
+    1-hello-world.py
+
+commit e9a6be0507d17a3723903b119e2d9d6970cdef34
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Tue Oct 12 22:50:31 2021 -0400
+
+    added new copy of hello world
+
+commit eb06d6e9647941516fcd60f1e42469c773a7baeb
+Author: James Johnson <jamesjhnsn1995@gmail.com>
+Date:   Tue Oct 12 19:49:28 2021 -0700
+
+    initial commit
+
+commit da560fec3253ab07e9ed06633f60f3a504d06d1b
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Tue Oct 12 20:42:57 2021 -0600
+
+    quick-fix
+
+commit 69953121ca56fa2d08ea8d30ab94022667c81e1c
+Author: Richard <raw0039@gmail.com>
+Date:   Tue Oct 12 21:38:32 2021 -0500
+
+    added hello world
+
+commit 24f2f97c37e28ea3f29642c306d0ff8ab14f6a4f
+Author: jhell85 <jhell85@gmail.com>
+Date:   Tue Oct 12 19:36:56 2021 -0700
+
+    initial commit
+
+commit 1a5f90c88b672a0e7c714986441657c2e62dea1b
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 12 19:34:38 2021 -0700
+
+    another add!
+
+commit dc169c035ae9ef5398dd519647763b68c54224f6
+Author: Tac82 <taceightytwo@gmail.com>
+Date:   Tue Oct 12 19:34:31 2021 -0700
+
+    added hello world
+
+commit cb315a0f5dc669490faf7984aa7ea4fc50174bd5
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Tue Oct 12 23:33:24 2021 -0300
+
+    adding to new personal branch
+
+commit c28fb1f5ea1663490e36943d01dc9fd151d6b3d1
+Author: Robert <rvt94@outlook.com>
+Date:   Tue Oct 12 19:33:19 2021 -0700
+
+    added hello world
+
+commit c7524297cd3b7a58a0b6f4fbfcdba6dd19a24150
+Author: Rafael Medina <realworldsurf@gmail.com>
+Date:   Tue Oct 12 19:32:29 2021 -0700
+
+    added hello world
+
+commit 9903568b7424730b10f4a493e0507888dd3a3723
+Author: Philip Bartoo <Philip_Bartoo@Philips-Air-2.attlocal.net>
+Date:   Tue Oct 12 19:28:09 2021 -0700
+
+    added hello world
+
+commit bcbd2d6ae7fff3d8dbf4ac337a7d96baa8363c14
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Tue Oct 12 20:26:15 2021 -0600
+
+    hello-world+turtle-lab
+
+commit d8fe4acd17dbb41abed23847f454bc254f27ec23
+Author: Rodney <rodneyrussell@Rodneys-MBP.lan>
+Date:   Tue Oct 12 22:24:50 2021 -0400
+
+    added hello world
+
+commit 4cc332df3f6aecbc8dce94f8333ab6ccc0324e53
+Author: Arek Smullen <smullenarek10@gmail.com>
+Date:   Tue Oct 12 19:19:09 2021 -0700
+
+    added hello world
+
+commit 71631313ca8397dd55ecf788e9c0f07de66e2469
+Author: Michael <broetjem@gmail.com>
+Date:   Tue Oct 12 19:18:17 2021 -0700
+
+    added hello world
+
+commit 39f1597a986453a6642d14eae74b3669c634c553
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Tue Oct 12 21:41:53 2021 -0400
+
+    Update 01 Course Overview.md
+
+commit 22c4d5e2e4a45cef3ef1cda55cbaa5889eafe81c
+Merge: 4b24b8c 42f678b
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Tue Oct 12 21:48:01 2021 -0300
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 42f678bdcc86cbd6b1269305c13433ea7b7532b1
+Merge: 18ca9d3 f30635c
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Tue Oct 12 18:18:29 2021 -0600
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 18ca9d39537af8953c6a9f10525b3a0ebc4f214e
+Author: Austen C Myers <austenc.id@pm.me>
+Date:   Tue Oct 12 18:18:22 2021 -0600
+
+    VS-code workspace setup
+
+commit f30635c3236305ded86cc8c8792cb1a999526a9b
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 12 17:13:54 2021 -0700
+
+    removed duplicate of  hello world
+
+commit 47d6cbcf6162758f3eb48bf0496a82919455105c
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 12 17:04:35 2021 -0700
+
+    added hello world
+
+commit 2fa89134cfef35663f7ab7b57e75dc489c5923eb
+Merge: 411e390 a19c7d7
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 12 16:57:33 2021 -0700
+
+    Merge branch 'master' of https://github.com/PdxCodeGuild/Class_Raven
+
+commit 4b24b8c7f78d173b70a2f3ce214ccd1974adce43
+Author: djhunter67 <djhunter67@gmail.com>
+Date:   Tue Oct 12 20:55:51 2021 -0300
+
+    added hello world
+
+commit a19c7d7f8a4aabbee483a4b3989db1beee98cb19
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Tue Oct 12 19:42:55 2021 -0400
+
+    Update 02 Setup.md
+
+commit 411e3904efc3481cc4b7a09fe45ca7f8712e2081
+Author: Lee Colburn <colburn.lee@gmail.com>
+Date:   Tue Oct 12 14:38:34 2021 -0700
+
+    added hello world!
+
+commit 9754e09fdcaaaa7b65beac0027a8b8e086190ad9
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Tue Oct 12 10:43:46 2021 -0400
+
+    :bulb:
+
+commit 08dc7002b938d36e664274091a6b4ae272ebdb69
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Tue Oct 12 10:39:36 2021 -0400
+
+    :card_file_box:
+
+commit d008b6a05290ec19d7a0fe7df91cc35538c58b1b
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Tue Oct 12 10:38:17 2021 -0400
+
+    :card_file_box:
+
+commit 06f9f5bbdfb175d23c7e29772d5f066d4f9b9ff6
+Author: sbtries <49175343+sbtries@users.noreply.github.com>
+Date:   Tue Oct 12 10:34:16 2021 -0400
+
+    Delete .DS_Store
+
+commit c157bbda22203f7836f7de8f5c93ee8ff13d687a
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Tue Oct 12 10:33:39 2021 -0400
+
+    :lock:
+
+commit 0fdb60657ab46d482e87b97b39d2a2b322182efb
+Author: sbtries <sarahbtracy17@gmail.com>
+Date:   Tue Oct 12 10:32:30 2021 -0400
+
+    :rocket:

@@ -1,58 +1,55 @@
-'''palindrome'''
-#user_input = input('Enter a word: ')
-def palindrome(word):
-    while True: 
+""" credit card validation """
 
-        #taking user input
-        user_input = input('Enter a word or type q to quit: ')
-        #if the input is not an alphabet character we print the message and start loop over.
-        if not user_input.isalpha():
-            print("Please enter only letters.")
-            continue
-#flipping the user input backwards
-        user_inputb = user_input[::-1]
+def credit_card_validation():
+     #user input divided by spaces
+     user_input = list(int(num) for num in input("Enter your numbers seperated by space: \n>>> ").strip().split())
+     user_input2 = ' '.join(str(n) for n in user_input)
+     print(user_input2)
+     #storing the check digit with the pop method.
+     check_digit = user_input.pop(-1)
+     #adding back the check digit because .pop returns new list
+     add_back = user_input.append(check_digit)
 
-#print(word.split())
-
-#checking if the input is the same spelt backwards
-        if user_input == 'q':
-            break
-        if user_input == user_inputb:
-            print(f'{user_input} is a palindrome')
-        else:
-            print(f'{user_input} is not a palindrome!')
-#calling the function
-#palindrome(input)
+     #print(check_digit)
 
 
-'''Anagram'''
-def anagram():
-    while True:   
-            
-        user_input = input('Enter the first word or type q to quit: ')
-        if not user_input.isalpha():
-            print('please enter only letters.')
-            continue
-        if user_input == 'q':      
-            break
-        user_input_list = user_input.lower().replace(' ', '')
-        user_input_list = sorted(user_input)
 
-                
-        user_input2 = input('Enter the first word or type q to quit: ')
-        if not user_input2.isalpha():
-            print('please enter only letters.')
-            continue
-        if user_input2 == 'q':      
-            break
-        user_input2_list = user_input2.lower().replace(' ', '')
-        user_input2_list = sorted(user_input)
-        
-        if set(user_input_list) == set(user_input2_list):
-            user = ''.join(user_input)
-            user2 = ''.join(user_input2)
-            print(f'{user_input} and {user_input2} are anagrams!')
-        elif user_input != user_input2:
-            print(f'{user_input} and {user_input2} are not anagrams.')
+     #slicing off that last digit and storing in sliced list
+     sliced_list = user_input[:-1] # need to store the sliced digit in a variable
+     user_input2 = ' '.join(str(n) for n in sliced_list)
+     print(user_input2)
+     #print(user_input[:-1])
 
-anagram()
+     sliced_list.reverse()
+     #print(sliced_list)
+
+
+     #doubling every 2nd iterable in the list
+     doubled_list = [n * 2 if index % 2 == 0 else n for index, n in enumerate(sliced_list)]
+     user_input2 = ' '.join(str(n) for n in doubled_list)
+     print(user_input2)
+
+     #trying to subtract 9 from a every number above 9
+     subtract_list = [n - 9 if n > 9 else n for n in doubled_list]
+     user_input2 = ' '.join(str(n) for n in subtract_list)
+     print(user_input2)
+
+     total_list = sum(subtract_list)
+     print(total_list)
+
+     #converting to str so I can call the value of the 2nd position in the integer
+     second_digit = str(total_list)
+     print(second_digit[1])
+
+     #converting back to an integer
+     back_int = int(second_digit[1])
+
+     # confirming the credit card.
+     if back_int == check_digit:
+          print('Valid!')
+     else:
+          print('Not Valid!')
+credit_card_validation()
+
+
+
