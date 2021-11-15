@@ -4,7 +4,7 @@
 
 Weeks 1, 2, 3, 4, 5: Python
 
-Weeks 6, 7, 8, 9: HTML/CSS/Flask
+**Weeks 6, 7, 8, 9: HTML/CSS/Flask**
 
 Weeks 10, 11, 12, 13: Django
 
@@ -14,13 +14,13 @@ Weeks 16, 17, 18: Capstone project
 
 ### Scheduled Holidays (no class)
 - **Nov 11** - Veterans Day
-- **Nov 25-26** - Thanksgiving
+- **Nov 25 - 26** - Thanksgiving
 - **Dec 24** - Christmas Eve
 - **Dec 31** - New Years Eve
 
 ### Assigned Labs:
 
-<details open>
+<details>
   <summary>Python</summary>
   <ul>
     <li>Lab 02 - Make Change</li>
@@ -52,6 +52,12 @@ Weeks 16, 17, 18: Capstone project
         </ul>
       </li>
     </ul>
+  </ul>
+</details>
+
+<details open>
+  <summary>HTML/CSS/Flask</summary>
+  <ul>
   </ul>
 </details>
 
@@ -132,8 +138,9 @@ To emulate a more professional Git workflow, we're going to start creating new b
   </details>
 </details>
 
-### Updating a branch
-
+## Updating a branch
+<details>
+<summary>Click to expand</summary>
 After a Pull Request is submitted, the code on that branch will be checked. Necessary corrections or adjustments will be posted as comments on the Pull Request on Github.
 
 Corrections will be made only to that particular branch.
@@ -153,14 +160,30 @@ Corrections will be made only to that particular branch.
 - Only one Pull Request is allowed per branch. A message will be added to the current Pull Request for the new commits.
 
 - Once a lab is complete, its branch will be merged into master.
+</details>
+
+---
 
 ## Additional Resources
 
 <details>
-    <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>
-    <ul>
-    <li>Windows - <a href="https://www.screentogif.com">Screen to GIF</a></li>
-    <li>MacOS - <a href="https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12">GIPHY</a></li>
-    <li>Linux - <a href="https://github.com/phw/peek">Peek</a></li>
-    </ul>
-  </details>
+  <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>
+  <ul>
+    <li>
+      Windows - <a href="https://www.screentogif.com">Screen to GIF</a>
+    </li>
+    <li>
+      MacOS - <a href="https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12">GIPHY</a>
+    </li>
+    <li>
+      Linux - <a href="https://github.com/phw/peek">Peek</a>
+    </li>
+  </ul>
+</details>
+
+<!-- 
+<details>
+  <summary></summary>
+</details>
+   -->
+
