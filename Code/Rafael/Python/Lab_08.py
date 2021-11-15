@@ -1,5 +1,15 @@
-# Lab_08 Pick 6
 
+# Lab_08 Pick 6
+# Rafael Medina
+
+
+"""
+NOTE: Need to re-write this program to use a loop forthe tickets
+
+feedback: 
+"Lab 08 - While this does work, what if the amount of numbers per ticket changed to 5 or 7? Is there a way this could be written more dynamically (perhaps a loop?)"
+
+"""
 
 import random 
 
@@ -64,8 +74,6 @@ while tickets < 100000:
     if winning_ticket[1] and [0] and [4] == lottery_ticket[1] and [0] and [4]: 
         dollars += 100
     if winning_ticket[1] and [0] and [3] == lottery_ticket[1] and [0] and [3]: 
-        dollars += 100
-    if winning_ticket[1] and [0] and [2] == lottery_ticket[1] and [0] and [2]: 
         dollars += 100
     if winning_ticket[0] and [3] and [4] == lottery_ticket[0] and [3] and [4]: 
         dollars += 100
