@@ -22,7 +22,7 @@ for letter in words:
     if not letter.isalpha():
         extra_val = letter  # punctuation holder
         holding = holding.replace(letter, "")
-
+    
 # number the alphabet
 alpha = {}
 numbers = {}
@@ -31,14 +31,31 @@ for num, letter in enumerate(string.ascii_lowercase, start=1):
     numbers[letter] = num
 
 
-# encrypt the message
+# grab each letter in user input and assign number
 input_number = []
 for letter in holding:
-    if letter == numbers[letter]:  # this gives user letter as number
-        temp = numbers[letter]
-        print(temp)
+    input_number.append(numbers[letter] + 13)  # appends the number of the letter of the user input
+print(input_number)
+        
+# adjust alphabet limit       
+for num, letter in enumerate(input_number):
+    if letter > len(string.ascii_lowercase):
+        input_number[num]= letter - len(string.ascii_lowercase)
+print(input_number)
+
+# grab the associated letter to the ROT number
+encrypted_message = ""
+for num in input_number:
+    encrypted_message += alpha[num]
+print(encrypted_message)
 
 
-# decrypt the message
+# store the index number of the space and special character
+spaces = [i for i, space in enumerate(words) if space.isspace()]
+
+# insert spaces in the rot string
+for count in spaces:
+    encrypted_message = encrypted_message[:count] + " " + encrypted_message[count:] # overloading the variable, inserting a space into string
 
 # print the encryption
+print(encrypted_message)
