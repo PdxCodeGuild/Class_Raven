@@ -182,6 +182,23 @@ Corrections will be made only to that particular branch.
   </ul>
 </details>
 
+
+<details>
+  <summary>Webpage Styling</summary>
+  <p>**Color Schemes**</p>
+  <ul>
+    <li><a href="https://coolors.co">Coolors</a></li>
+    <li><a href="https://color.adobe.com/create/color-wheel">Adobe Color Wheel</a></li>
+  </ul>
+
+  <p>Design Principles</p>
+  <ul>
+    <li><a href="https://www.canva.com/learn/20-web-design-principles-follow/">20 Web Design Principles</a></li>
+    <li><a href="https://blog.tubikstudio.com/anatomy-of-web-page/">Anatomy of a Webpage</a></li>
+    <li><a href="https://blog.devgenius.io/what-are-html-semantic-tags-and-why-should-you-care-a0403972a217">What are Semantic HTML Tags and Why You Should Care</a></li>
+  </ul>
+</details>
+  
 <!-- 
 <details>
   <summary></summary>
