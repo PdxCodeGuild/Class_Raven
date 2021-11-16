@@ -1,43 +1,55 @@
-data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+""" credit card validation """
 
-peak_list = []
-valley_list = []
-peaks_and_valleys = []
+def credit_card_validation():
+     #user input divided by spaces
+     user_input = list(int(num) for num in input("Enter your numbers seperated by space: \n>>> ").strip().split())
+     user_input2 = ' '.join(str(n) for n in user_input)
+     print(user_input2)
+     #storing the check digit with the pop method.
+     check_digit = user_input.pop(-1)
+     #adding back the check digit because .pop returns new list
+     add_back = user_input.append(check_digit)
 
-def peaks():
-    
-    index = data.index(7)
-    index2 = data.index(9)
-    peak_list.append(index)
-    peak_list.append(index2)
-    peaks_and_valleys.extend(peak_list)
-    print(peak_list)
-    print(peaks_and_valleys)
-
-peaks()
+     #print(check_digit)
 
 
-def valleys():
-    index = data.index(4, 8, 10)
-    index2 = data.index(6, 16, 18)
-    valley_list.append(index)
-    valley_list.append(index2)
-    (peaks_and_valleys).extend(valley_list)
-    print(valley_list)
-    # print(peaks_and_valleys)
 
-valleys()
+     #slicing off that last digit and storing in sliced list
+     sliced_list = user_input[:-1] # need to store the sliced digit in a variable
+     user_input2 = ' '.join(str(n) for n in sliced_list)
+     print(user_input2)
+     #print(user_input[:-1])
+
+     sliced_list.reverse()
+     #print(sliced_list)
 
 
-def peaks_and_valleys():
-    peaks_and_valleys = valley_list + peak_list
-    peaks_and_valleys.sort()
-    print(peaks_and_valleys)
+     #doubling every 2nd iterable in the list
+     doubled_list = [n * 2 if index % 2 == 0 else n for index, n in enumerate(sliced_list)]
+     user_input2 = ' '.join(str(n) for n in doubled_list)
+     print(user_input2)
 
-peaks_and_valleys()
-count = 0
-for element in data:
-    #add one x until we reach index 5 in list
-    if count < data.index(5):
-        print('x')
-        count += 1
+     #trying to subtract 9 from a every number above 9
+     subtract_list = [n - 9 if n > 9 else n for n in doubled_list]
+     user_input2 = ' '.join(str(n) for n in subtract_list)
+     print(user_input2)
+
+     total_list = sum(subtract_list)
+     print(total_list)
+
+     #converting to str so I can call the value of the 2nd position in the integer
+     second_digit = str(total_list)
+     print(second_digit[1])
+
+     #converting back to an integer
+     back_int = int(second_digit[1])
+
+     # confirming the credit card.
+     if back_int == check_digit:
+          print('Valid!')
+     else:
+          print('Not Valid!')
+credit_card_validation()
+
+
+
