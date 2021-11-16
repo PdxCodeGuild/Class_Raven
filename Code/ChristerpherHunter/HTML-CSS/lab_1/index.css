@@ -1,6 +1,81 @@
 html {
     box-sizing: border-box;
+    background-image: linear-gradient(red, yellow);        
 }
-*, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: inherit;
+} */
+
+#page-container {
+    position: relative;
+}
+
+#content-wrapper {
+    padding-bottom: 2.5rem;
+}
+
+#page-title{
+    padding: 10px auto;
+}
+
+#center-para{
+    text-align: center;
+    margin: 0 200px;
+}
+
+.goulds {
+    width: 25vw;
+    height: 300px;
+    /* margin: auto; */
+    display: flex;  
+    /* flex-flow: wrap; */
+    /* gap: 100px 100px; */
+}
+img {
+    /* margin: auto; */
+}
+
+/*Main picture*/
+#main-gould{
+    
+    /* margin-bottom: 100px; */
+}
+
+#left-gould{
+margin-top: 50px;    
+}
+
+#right-gould{
+    
+    
+}
+
+#left-para{
+    text-align: left;
+    margin-right: 1000px;
+}
+
+aside{
+    padding: 5px;
+    margin: 10px;
+}
+
+#right-para{
+    text-align: right;
+    margin-left: 1000px;
+    
+}
+
+#credits {
+    margin-left: 885px;
+    color: white;
+    
+    }
+
+#footer {
+    background-image: linear-gradient(to right, yellow, blue);    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
 }
