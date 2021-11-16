@@ -1,65 +1,43 @@
-""" blackjack advice """
-
-
-playing_cards = {'a': 1, 'q': 10, 'j': 10, 'k': 10, '2': 2, '3': 3, 
-'4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10
-}
-
-hand_values = []
+""" rot cipher"""
+import string
 
 
 
-#ask user for 3 playing cards
-print('Welcome to Blackjack Advice. Enter faces as Q, J, K or A.')
-while True: 
-    
-    #print('Welcome to Blackjack Advice. Enter faces as Q, J, K or A.')
-    user_card1 = input('What\'s your first card? ').lower().strip(' ')
-    if not user_card1.isalnum():
-        print('Wrong input please enter only faces or integers.')
-        continue
-    #returns a string, I need it to return the value from the dictionary.
-    if user_card1 in playing_cards:
-        user_card1n = playing_cards.get(user_card1)
-    
+#making alphabet from string module.
+alpha = string.ascii_lowercase
+
+
+
+while True:
+        # taking user input
+        user = input("Enter your message here: \n>>>").lower()
+        if not user.isalpha():
+            print("Please enter only letters.")
+            continue
+            
+        rot = input("Enter your rotation: ")
+        if not rot.isnumeric():
+            print("Please enter only numbers.")
+            continue
+        rot = int(rot)
+
+        user_output = []
+        #for each character in user input add it to an output list
+        for element in user:
+            #alpha.append(element)
+            index = alpha.find(element)
+            encrypt = (index + rot) % 26
+            #print(encrypt)
+            user_output.append(alpha[encrypt])
+            #print(user_output)
         
-    user_card2 = input('What\'s your second card? ').lower().strip(' ')
-    if not user_card2.isalnum():
-        print('Wrong input please enter only faces or integers.')
-        continue
-    
-    if user_card2 in playing_cards:
-        user_card2n = playing_cards.get(user_card2)
-
-    # print(user_card2)
-
-    user_card3 = input('What\'s your third card? ').lower().strip(' ')
-    if not user_card3.isalnum():
-        print('Wrong input please enter only faces or integers.')
-        continue
-    if user_card3 in playing_cards:
-        user_card3n = playing_cards.get(user_card3)
-
-    total_card = user_card1n + user_card2n + user_card3n
-    # print(f'{user_card1}\n{user_card2}\n{user_card3}')
-    print(f'Your total amount was {total_card}')
-
-
-    if total_card < 17:
-        print('Hit!')
-    elif total_card >= 17 and total_card < 21:
-        print('stay')
-    elif total_card == 21:
-        print('Blackjack!')
-    elif total_card > 21:
-        print('Already Busted')
-    elif total_card > 21:
-        'a' == 11
-    continue
+        #why is print printing the list and the string?
+        print(''.join(user_output))
+        break
 
 
 
 
 
-        
-    
+
+print(user_output)

@@ -1,8 +1,6 @@
 """python  """
 class ATM:
     balance = 0
-    transaction_list = []
-    
     def __repr__(self): # '_repr_ stands for the representation of the class 'atm'
         return self.balance
 
@@ -12,7 +10,6 @@ class ATM:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount # returned a bool to define success.
-            self.transaction_list.append(amount)
             return True
         else:
             return False
@@ -26,7 +23,6 @@ class ATM:
     def withdraw(self, amount):
         if ATM.check_withdrawal(self, amount): #calling check_withdrawal method to check if withdraw amount is valid
             self.balance -= amount
-            self.transaction_list.append(amount)
             return True
         else:
             return False
@@ -35,10 +31,9 @@ class ATM:
     def calc_interest(self):
         return self.balance * .001
 
-    def print_transactions(self):
-        """   print the transactions """
-        print(self.transaction_list)
-   
+    # def print_transactions(self):
+    #      everytime User deposits or withdraws add a string to a list 
+    #     if atm.withdraw(self, amount)
 
 
 
@@ -72,7 +67,6 @@ while True:
             print("Deposit amount must be a positive number.")
         else: 
             print(f'Deposited ${amount}')
-            print(atm.transaction_list)
         
     elif command == 'Withdraw':
         amount = float(input('How much would you like to withdraw?\n> $'))
@@ -83,7 +77,6 @@ while True:
             print('Insufficient funds')
         else:
                 print(f'Withdrew ${amount}')
-                print(atm.transaction_list)
         
     elif command == 'Interest':
         amount = atm.calc_interest() # call the calc_interest() method
