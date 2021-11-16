@@ -58,6 +58,7 @@ Weeks 16, 17, 18: Capstone project
 <details open>
   <summary>HTML/CSS/Flask</summary>
   <ul>
+    <li>Lab 01 - Bio</li>
   </ul>
 </details>
 
