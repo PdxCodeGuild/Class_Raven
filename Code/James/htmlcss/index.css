@@ -1,0 +1,31 @@
+#header-1 {
+    text-align: center;
+    
+  } 
+
+  #paragraph1 {
+    text-align: center;
+    
+  }
+
+#paragraph2 {
+    text-align: center;
+  }
+
+
+
+#img {
+    display: block;
+    margin-left: auto;
+}
+
+#list {
+    text-align: right;
+
+}
+
+#link {
+    text-align: left;
+    list-style-position: inside;
+}
+
