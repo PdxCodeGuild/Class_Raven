@@ -1,4 +1,6 @@
 # Lab 03: Average Numbers
+#Rafael Medina
+
 # Version 1
 """
 # I have 3 ways to get the same solution below;
