@@ -8,6 +8,7 @@ class trivia:
         self.correct_answers = []
         self.i = 0
         self.points = 0
+        self.current_question = 1
 
     def load(self):
         response = requests.get('https://opentdb.com/api.php?amount=10&category=23&type=boolean', params={'format': 'json'})
@@ -60,12 +61,12 @@ trivia.questions_answers()
 
 print('Welcome to history trivia enter True or False for the following questions.')
 counter = 0
-#points = 0
 play = True
 
+
 while play:
-    print(trivia.correct_answers)
-    print(html.unescape(trivia.info[counter]['question']))
+    
+    print(trivia.current_question, html.unescape(trivia.info[counter]['question']))
     user_answer = input('Enter True or False: ').capitalize()
     
     if user_answer not in  ['True', 'False']:
@@ -75,6 +76,7 @@ while play:
     trivia.answer_checker(user_answer)
     
     counter += 1
+    trivia.current_question += 1
     
     
     if counter == 9:
