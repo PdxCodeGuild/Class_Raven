@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags</title>
+</head>
+
+<body>
+  <h2>html and css notes</h2>
+  <details>
+    <summary>details and summary tags
+      <hr>
+    </summary>
+    <p>summary tag will always display while everything else will only display when clicked</p>
+    <p>hr tag will create
+      a horizontal line</p>
+  </details>
+  <details>
+    <summary>header tags
+      <hr>
+    </summary>
+    <h1>header 1</h1>
+    <h2>header 2</h2>
+    <h3>header 3</h3>
+    <h4>header 4</h4>
+    <h5>header 5</h5>
+    <h6>header 6</h6>
+  </details>
+  <details>
+    <summary>
+      div tags
+      <hr>
+    </summary>
+    <div>div tags seperate elements through line breaks only</div>
+    <div>div 1</div>
+    <div>div 2</div>
+  </details>
+  <details>
+    <summary>p tags
+      <hr>
+    </summary>
+    <p>p tags seperate elements through line breaks and padding</p>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+
+  </details>
+  <details>
+    <summary>span tags
+      <hr>
+    </summary>
+    <span>span tags do not visually seperate items, but allow for each item to be styled independantly <br> you can add
+      line
+      breaks by using the br tag anywhere</span><br>
+    <span>span 1</span>
+    <span>span 2</span><br><span>span 3</span>
+
+
+  </details>
+  <details>
+    <summary>
+      pre tags
+      <hr>
+    </summary>
+    <pre>
+  pre tags provide auto styling for code blocks
+  </pre>
+    <pre>
+  def sum(a, b):
+    return a + b
+  </pre>
+  </details>
+  <details>
+    <summary>html built-in style tags
+      <hr>
+    </summary>
+    <ul> unordered list
+      <li><b>bold item</b></li>
+      <li><i>italic item</i></li>
+      <li><small>small item</small></li>
+      <li><strong>strong item</strong></li>
+      <li>item with<sup>superscript item</sup></li>
+      <li>item with<sub>subscript item</sub></li>
+    </ul>
+  </details>
+  <details>
+    <summary>css style tags</summary>
+    <p class="styleme">style tags set <span id="stylespan">styling rules</span></p>
+    <style>
+      p.styleme {
+        color: white;
+        background-color: black;
+      }
+
+      #stylespan {
+        color: red
+      }
+    </style>
+    <pre>
+    <ol>
+      <li>sets style by html tag</li>
+      <li> any rule with a . before it styles anything <br> with that class written into the tag</li>
+      <li> any rule following a # will only style items <br> with that id written into it's tag</li>
+      <li> anything in the curly brackets is the actual style desired</li>
+    </ol>
+      <details>
+      <summary>examples: <hr></summary>
+      this styles ONLY/ALL p tags WITH class "styleme"
+      <br>
+      p.styleme {
+        color: white;
+        background-color: black;
+      }
+      <hr>
+      this would style ALL p tags
+      <br>
+      p {
+       color: white
+      }
+      <hr>
+      this would style ALL tags with the class "styleme"
+      <br>
+      .styleme {
+        color: white
+      }
+      <hr>
+      this styles ONLY the item with the id "stylespan"
+      <br>
+      #stylespan {
+        color: red
+      }
+      </details>
+    </pre>
+    <pre>
+    you can also write all of this to a .css file,<br> and link it by writing in a path to that file in a link tag
+    &ltlink href="style.css"&gt</pre>
+  </details>
+
+</body>
+
+</html>
