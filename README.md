@@ -6,9 +6,9 @@ Weeks 1, 2, 3, 4, 5: Python
 
 **Weeks 6, 7, 8, 9: HTML/CSS/Flask**
 
-Weeks 10, 11, 12, 13: Django
+Weeks 10, 11: Javascript
 
-Weeks 14, 15: Javascript
+Weeks 12, 13, 14, 15: Django
 
 Weeks 16, 17, 18: Capstone project
 
