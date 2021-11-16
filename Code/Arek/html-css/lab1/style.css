@@ -16,6 +16,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color:rgb(0,0,0, 0.4);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 
 }
@@ -27,18 +28,25 @@
     width: 400px;
     height: 200px;
     margin-bottom: 20px;
+    border-radius: 30px;
 
 }
 
 #list-desc{
 
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 #home{
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-image: url(Jar_Jar_SWSB.png);
+    
+
    
     
 }
@@ -47,6 +55,8 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
 
 }
 
