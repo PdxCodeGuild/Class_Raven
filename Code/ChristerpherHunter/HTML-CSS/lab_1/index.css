@@ -19,6 +19,7 @@ html {
 body {
     position: relative;
     background-image: url("https://imgr.search.brave.com/nzvJG6NbW5w797cinAh8R7_pdCh3vqRWMbHQFT6QVmk/fit/1200/720/ce/1/aHR0cHM6Ly93d3cu/d2hhdHMtb24tbmV0/ZmxpeC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTgvMTEv/bmF0aW9uYWwtZ2Vv/Z3JhcGhpYy1yZW1v/dmFsLW5ldGZsaXgt/MjAxOS5qcGc")
+    
 }
 
 #page-container {
@@ -45,40 +46,40 @@ body {
     font-size: 2rem;
     color: white;
     text-align: center;
-    margin: 0 200px;
-    padding-bottom: 20px;
+    margin: 0 5vh;
+    /* padding-bottom: 20px; */
     justify-content: center;
 }
 
 .mid-section {
     display: flex;
-    height: 35vh;
+    height: 39vh;
     justify-content: space-between;
-    
+    border-radius: 3rem;
 }
 
 #left-para{
     text-align: left;
-    
-    flex-grow: 1;
-    
+    border-radius: 2rem;
+
 }
 
 aside{
-    padding: 5px;
-    margin: 10px;
-    margin-top: 150px;
+    /* padding: 5px; */
+    /* margin: 10px; */
+    margin-top: 15vh;
     max-width: 400px;
-    word-spacing: 0.3rem;
+    /* word-spacing: 0.3rem; */
     background-color: var(--bg-color);
     opacity: 90%;
     font-size: 2rem;
+    align-self: center;
 }
 
 #right-para{
     text-align: right;
     /* margin-left: 1000px; */
-    flex-grow: 1;
+    border-radius: 2rem;
 }
 
 /*Main picture*/
@@ -86,8 +87,8 @@ aside{
     width: 50rem;
     height: 35rem;
     margin-top: 9rem;
-    flex-shrink: 0;
-    flex-grow: 0;
+    border-radius: 2rem;
+
 }
 
 /* Smaller pictures and the circle */
@@ -97,6 +98,14 @@ aside{
     height: 20vh;
     justify-content: space-between;
     align-content: space-between;
+}
+
+#left-gould {
+    border-radius: 2rem;
+}
+
+#right-gould {
+    border-radius: 2rem;
 }
 
 #cirlce {
@@ -118,19 +127,23 @@ aside{
     display: flex;
     justify-content: space-between;
     align-items: center;    
-    bottom: 0;
     width: 100%;
     height: 5vh;
     position: fixed;
     bottom: 0;
-    padding-left: 10vw;
+    padding-left: 0;
     padding-right: 10vw;
 }
 
+#author {
+    position: static;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 1rem;
+}
+
 #credits {
-    /* margin-left: 885px; */
     position: static;
     color: white;
-    border: solid 1px black;
-    
+    font-family: 'Ubuntu', sans-serif;    
+    padding-right: 1rem;
 }
