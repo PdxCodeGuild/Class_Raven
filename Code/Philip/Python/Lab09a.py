@@ -8,7 +8,7 @@ card2 = input("What's your second card? ")
 card3 = input("What's your third card? ")
 
 #Build a dictionary for the cards and their values
-mydict= {'A': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10}
+mydict= {'A': 11, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10}
 
 #Using the card as the key, extract the dictionary value and assign it to a variable for each card
 card_value1 = mydict[card1]
@@ -18,6 +18,33 @@ card_value3 = mydict[card3]
 #Total the value of all cards and print
 players_hand = card_value1 + card_value2 + card_value3
 print(players_hand)
+
+#Logic to determine if player should reduce ace value to 1
+if players_hand > 21:
+    if card1 == 'A' and card2 !='A' and card3 !='A':
+        players_hand -= 10
+    elif card1 !='A' and card2 == 'A' and card3 !='A':
+        players_hand -= 10
+    elif card1 !='A' and card2 !='A' and card3 =='A':
+        players_hand -=10
+    elif card1 =='A' and card2 =='A' and card3 !='A' and players_hand >31:
+        players_hand -=20
+    elif card1 =='A' and card2 =='A' and card3 !='A' and players_hand <=31:
+        players_hand -=10
+    elif card1 !='A' and card2 =='A' and card3 =='A' and players_hand >31:
+        players_hand -=20
+    elif card1 !='A' and card2 =='A' and card3 =='A' and players_hand <=31:
+        players_hand -=10    
+    elif card1 =='A' and card2 =='A' and card3 !='A' and players_hand >31:
+        players_hand -=20
+    elif card1 =='A' and card2 =='A' and card3 !='A' and players_hand <=31:
+        players_hand -=10
+    elif card1 =='A' and card2 !='A' and card3 =='A' and players_hand >31:
+        players_hand -=20
+    elif card1 =='A' and card2 !='A' and card3 =='A' and players_hand <=31:
+        players_hand -=10
+    elif card1 =='A' and card2 =='A' and card3 =='A':
+        players_hand -=20
 
 #Build the logic for whether to hit, stay, blackjack or already busted and store as a message
 if players_hand < 17:
@@ -31,3 +58,4 @@ else:
 
 #Print the final message
 print(message)
+print(players_hand)
