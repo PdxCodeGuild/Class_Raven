@@ -67,6 +67,7 @@ body {
 aside{
     padding: 5px;
     margin: 10px;
+    margin-top: 150px;
     max-width: 400px;
     word-spacing: 0.3rem;
     background-color: var(--bg-color);
