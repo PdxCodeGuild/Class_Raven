@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+
+body {
+    background-color: cornflowerblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    background-color: goldenrod;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Select all ul elements within nav elements */
+nav ul {
+    display: flex;
+}
+
+.nav-link {
+    background-color: darkgoldenrod;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    border-radius: 5px;
+
+    /* make the hover transition slower */
+    transition: all .3s ease-in-out;
+}
+
+/* pseudo selectors */
+.nav-link:hover {
+    cursor: pointer;
+    background-color: black;
+    color: darkgoldenrod;
+}
+
+header {
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+aside {
+    background-color: goldenrod;
+    width: 30vw;
+    height: 300px;
+    float: right;
+}
+
+footer {
+    background-color: goldenrod;
+    padding: 2rem;
+
+    position: fixed;
+    bottom: 0;
+}
