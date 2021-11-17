@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Estonia&display=swap");
+body {
+    text-align: center;
+    font-family: estonia, sans-serif;
+    font-size: 2.5em;
+    background-image: url("https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xMDIyMDM2Mi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY0Njg1MTM3OX0.6rhwHN5gm2GmCRwquUJebCG3l0gl5GDtOBBzVFJV95A/img.jpg");
+    background-size: 35vw;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: gray;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: darkslategray;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: darkslategray;
+}
+
+p {
+    font-size: 1em;
+    margin: 0;
+}
+
+img {
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: darkslateblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". picture ." ". main-content links" ". . .";
+}
+
+.links {
+    grid-area: links;
+    justify-items: right;
+    gap: 0px 0px;
+}
+
+.picture {
+    grid-area: picture;
+    gap: 0px 0px;
+}
+
+.main-content {
+    grid-area: main-content;
+    gap: 0px 0px;
+}
