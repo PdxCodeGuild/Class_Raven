@@ -1,70 +1,127 @@
 
-
-.button {
-    background-color: #81af4c; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position:center;
 }
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-}
-
-.right{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 5%;
-}
-
-
-.button3 {background-color: #f44336;} /* Red */ 
-.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
-.button5 {background-color: #555555;} /* Black */
-.container {
-    display: flex; /* or inline-flex */
-  }
-.item {
-    order: 5; /* default is 0 */
-  }
-
 body {
     font-family: 'Roboto', sans-serif;
-    background-repeat: no-repeat;
-    background-size:cover
   }
-  h1 {
-    color: blue;
-    text-align: left;
-  }
-  h2 {
-    text-align: center;
-  }
-  h3 {
-    text-align: center;
-    }
 
-  p {
-    color: red;
-    text-align: left;
-  }
-  ul {
-    display: table;
-    margin: 0 auto;
-  }
-  
+h2 {
+  text-align: left;
+}
 
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  }
+
+p {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+img {
+  border-radius: 50%;
+  border: 5px solid rgb(51, 43, 43);}
+
+ul {
+  display: table;
+}
+ul.b {
+  list-style-type: circle;
+  padding-top:10px;
+
+}
+ul.a {
+  list-style-type: square;
+  padding-top:10px;
+  padding-left: 5px;
+}
+ul.quote{
+  list-style-type: square;
+  padding-left: 135px;
+
+}
+
+q{
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 15px;
+
+}
+
+header {
+  font-size: 3rem;
+  margin: 2rem;
+  color: rgb(9, 9, 95);
+  text-align: center;
+}
+
+
+.container {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 0.5fr 0.5fr 0.5fr; 
+  grid-template-rows: 0.25fr 1.5fr 0.75fr; 
+  gap: 15px 35px; 
+  grid-template-areas: 
+    "Title Title Title"
+    "Callout Areas-Lived Areas-Lived"
+    "Quotes Quotes Quotes"; 
+  width: 75%; 
+  height: 75%; 
+  justify-items: center; 
+  align-items: center; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.Areas-Lived {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  gap: 5px 5px; 
+  justify-content: center; 
+  align-content: space-evenly; 
+  justify-items: center; 
+  align-items: center; 
+  justify-self: start; 
+  align-self: center; 
+  grid-area: Areas-Lived; 
+  width: 90%; 
+  height: 75%; 
+}
+
+.Quotes { 
+  justify-content: center; 
+  align-content: space-evenly; 
+  justify-items: center; 
+  align-items: center; 
+  align-self: center; 
+  grid-area: Quotes; 
+  width: 50%;
+  }
+
+.Title { 
+  grid-area: Title;
+  justify-self: center;
+  width: 75%; 
+  align-self: end; 
+ }
+
+.Callout { 
+  justify-self: right; 
+  align-self: stretch; 
+  grid-area: Callout; 
+
+}
