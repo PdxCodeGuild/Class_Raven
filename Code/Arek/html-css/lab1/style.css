@@ -11,12 +11,11 @@
 #bio{
     text-align: center;
     color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color:rgb(0,0,0, 0.6);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Libre Franklin'
     
 
 }
@@ -33,38 +32,39 @@
 }
 
 #list-desc{
-
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: 'Libre Franklin';
+    color: white;
+    background-color: rgb(0,0,0, 0.6);
 }
 
 #home{
+    padding-top: 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 20px;
+    font-family: 'Libre Franklin';
     list-style-image: url(Jar_Jar_SWSB.png);
-    
-
-   
-    
+    color: white;
 }
 
 #quote{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
-
+    color: white;
+    background-color: rgb(0,0,0, 0.6);
 }
 
 #wiki{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    color:#004601
-    
+    color:#004601;
+    background-color: rgb(0,0,0, 0.6);
 }
