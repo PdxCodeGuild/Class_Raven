@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
 
+
+/* CSS Variables are defined using the :root selector*/
+:root {
+    --bg-color-nav-link: darkgoldenrod;
+    --text-color-nav-link: black;
+}
+
 body {
     background-color: cornflowerblue;
     font-family: 'Open Sans', sans-serif;
@@ -19,7 +26,8 @@ nav ul {
 }
 
 .nav-link {
-    background-color: darkgoldenrod;
+    /* CSS variables are used with the var() function */
+    background-color: var(--bg-color-nav-link);
     padding: 5px;
     margin: 10px;
     font-family: 'Roboto', sans-serif;
@@ -33,8 +41,8 @@ nav ul {
 /* pseudo selectors */
 .nav-link:hover {
     cursor: pointer;
-    background-color: black;
-    color: darkgoldenrod;
+    background-color: var(--text-color-nav-link);
+    color: var(--bg-color-nav-link);
 }
 
 header {
