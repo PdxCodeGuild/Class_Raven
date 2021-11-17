@@ -186,6 +186,12 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>Webpage Styling</summary>
 
+  <p><b>Flexbox Games</b></p>
+  <ul>
+    <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+    <li><a href="https://mastery.games/flexboxzombies/">Flexbox Zombies</a></li>
+  </ul>
+
   <p><b>Color Schemes</b></p>
   <ul>
     <li><a href="https://coolors.co">Coolors</a></li>
