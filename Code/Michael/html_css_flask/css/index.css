@@ -3,28 +3,25 @@ body {
     text-align: center;
     font-family: estonia, sans-serif;
     font-size: 2.5em;
-    background-image: url("https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xMDIyMDM2Mi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY0Njg1MTM3OX0.6rhwHN5gm2GmCRwquUJebCG3l0gl5GDtOBBzVFJV95A/img.jpg");
-    background-size: 35vw;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-color: gray;
+    background-image: radial-gradient(circle, hsl(209, 22%, 68%), hsl(206, 36%, 58%));
 }
 
-h1 {
-    font-size: 2em;
-    margin: 0;
-    color: darkslategray;
+strong {
+    font-size: 0.8em;
+    color: hsl(30, 94%, 14%);
 }
 
 h2 {
     font-size: 1.5em;
     margin: 0;
-    color: darkslategray;
+    color: hsl(30, 94%, 14%);
+    padding: 0em;
 }
 
 p {
     font-size: 1em;
     margin: 0;
+    padding: 0em;
 }
 
 img {
@@ -45,12 +42,12 @@ li {
 }
 
 a {
-    color: darkslateblue;
+    color: hsl(358, 89%, 7%);
     text-decoration: none;
 }
 
 a:hover {
-    color: red;
+    color: hsl(11, 42%, 58%);
 }
 
 .container {
@@ -59,7 +56,12 @@ a:hover {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
-    grid-template-areas: ". picture ." ". main-content links" ". . .";
+    grid-template-areas: ". picture ." "introduction main-content links" ". . .";
+    height: 95vh;
+    padding-left: 0vw;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
+    padding-right: 0vw;
 }
 
 .links {
@@ -76,4 +78,20 @@ a:hover {
 .main-content {
     grid-area: main-content;
     gap: 0px 0px;
+    padding-bottom: 10vh;
+}
+
+.introduction {
+    grid-area: introduction;
+    gap: 0px 0px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
 }
