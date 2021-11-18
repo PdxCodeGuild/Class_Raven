@@ -1,0 +1,41 @@
+assignment a {
+	color: red;
+}
+#company-name {
+	font-size: 32px;
+	margin-left: 5vw;
+}
+.container {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+main h3 {
+	margin-top: 0;
+}
+#gallery colm{
+	max-width: 80vw;
+}
+
+#copywrite {
+	margin-right: 1vw;
+}
+@media screen and (max-width: 600px) {
+	#gallery colm {
+		margin-left: 5vw;
+	}
+}
+main p {
+	padding: 2rem;
+	text-indent: 10px;
+}
+.first-word {
+	font-size: 24px;
+	font-weight: bold;
+}
+main ol {
+	font-size: 20px;
+}
+.product-desc {
+	font-size: 16px;
+	font-style: italic;
+}
