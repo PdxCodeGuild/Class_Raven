@@ -1,0 +1,52 @@
+.container-flex {
+    background-color: purple;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box.flex {
+    background-color: blueviolet;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.container-grid {
+    background-color: purple;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.box.grid {
+    background-color: aqua;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+
+
+@media screen and (min-width: 500px){
+    .box.flex {
+        height: 100px;
+        width: 100px;
+    }
+
+    .container-flex {
+        background-color: teal;
+    }
+
+    .container-grid {
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .grid-box-a {
+        grid-column: 1 / span 3;
+    }
+
+}
