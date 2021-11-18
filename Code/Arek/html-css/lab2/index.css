@@ -1,71 +1,117 @@
+#body{
+    background-image: url('water.jpg');
+    font-family: 'Balsamiq Sans', cursive;
+    
+}
+
 #header-1{
     display: flex;
     justify-content: center;
-    
+    color:  black;
+    background-color: rgb(200,200,200, 0.9);
 }
 
 #top-nav{
     display: flex;
-    justify-content: space-around;
-    background-color: rgb(0,0,0, 0.6);
+    justify-content: space-between;
+    background-color: rgb(0,0,0, 0.8);
     padding: 20px;
-
-
+    height: 50px;
+    margin-bottom: 20px;
+    border-style: double;
 }
 
 .nav-top{
-    color: black;
-    
-
-
+    color: beige;
+    padding: 20px;
 }
 
 #section2{
     display: flex;
-    align-content: center;
-
-
-
+    justify-content: center;
 }
+
+
 
 #side-nav{
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    background-color: rgb(0,0,0, 0.6);
+    background-color: rgb(0,0,0, 0.8);
     width: 125px;
-    height: 600px;
+    height: 100vh;
     justify-content: space-evenly;
     float: left;
-    
+    margin-top: 35px;
+    border-style: double;
 }
 
 .nav-side{
-    
-    padding: 10px;
-    
+    padding: 20px;
+    color: beige;
+}
 
-
+#articles{
+    text-align: center;
+    padding: 0px;
+    margin: 20px;
+    color: beige;
 }
 
 #article1{
-    margin-top: 0px;
-    padding-top: 20px;
-    text-align: center;
-    
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:  black;
+    background-color: rgb(200,200,200, 0.9);
 }
 
-.articles{
+
+
+.paragraphs{
     display: flex;
-    float: right;
+    background-color: rgb(0,0,0, 0.8);
+    align-items: center;
+    float:right;
+    justify-content: space-around;
+    flex-direction: column;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
-    background-color: rgb(0,0,0, 0.6);
     border-width: 10px;
-    border-style:outset;
+    border-style:solid;
+    border-color: black;
+    line-height: 120%;
+    color:beige
     
 }
 
+#end{
+    text-align: center; 
+    font-size: x-large; 
+    font-weight: bold;
+    color: beige;
+    margin-top: 20px;
+    color:  black;
+    background-color: rgb(200,200,200, 0.9);
+}
+
+
+
+#contact-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(0,0,0, 0.8);
+    padding: 20px;
+    border-style: double;
+    border-color: black;
+    color: beige;
+}
+
+.li{
+    float: left;
+}
