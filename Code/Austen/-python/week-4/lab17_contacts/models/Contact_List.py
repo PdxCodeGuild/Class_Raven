@@ -88,7 +88,8 @@ class Contact_List:
     options = contactlist.actions['update']
     for option in options:
       print('  ', option['id'], option['name'])
-    selection = input('enter the option name or number: ')
+    selection = input(
+        'Enter 4 or "done" when finished updating.\nenter the option name or number: ')
     selection = contactlist.select(selection, options)
     while selection != 'done':
       print('Which contact would you like to update?')
@@ -102,7 +103,8 @@ class Contact_List:
       elif selection == 'email':
         email = Contact.enter_email()
         found.email = email
-      selection = input('enter the option name or number: ')
+      selection = input(
+          'Enter 4 or "done" when finished updating\nenter the option name or number: ')
       selection = contactlist.select(selection, options)
     contact = Contact.print(found)
     return contact

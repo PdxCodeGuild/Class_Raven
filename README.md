@@ -182,9 +182,44 @@ Corrections will be made only to that particular branch.
   </ul>
 </details>
 
-<!-- 
+
 <details>
-  <summary></summary>
+  <summary>Webpage Styling</summary>
+
+  <p><b>Flexbox Games</b></p>
+  <ul>
+    <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+    <li><a href="https://mastery.games/flexboxzombies/">Flexbox Zombies</a></li>
+  </ul>
+
+  <p><b>Color Schemes</b></p>
+  <ul>
+    <li><a href="https://coolors.co">Coolors</a></li>
+    <li><a href="https://color.adobe.com/create/color-wheel">Adobe Color Wheel</a></li>
+  </ul>
+
+  <p><b>Design Principles</b></p>
+  <ul>
+    <li><a href="https://www.reddit.com/r/Indiewebdev/comments/lakhft/18_tips_to_make_websites_look_better_and_a/">18 Tips to Make Websites Look Better</a></li>
+    <li><a href="https://www.canva.com/learn/20-web-design-principles-follow/">20 Web Design Principles</a></li>
+    <li><a href="https://blog.tubikstudio.com/anatomy-of-web-page/">Anatomy of a Webpage</a></li>
+    <li><a href="https://blog.devgenius.io/what-are-html-semantic-tags-and-why-should-you-care-a0403972a217">What are Semantic HTML Tags and Why You Should Care</a></li>
+    <li><a href="https://kinsta.com/blog/html-best-practices/">HTML Best Practices</a></li>
+  </ul>
 </details>
-   -->
+  
+<details>
+  <summary>CSS Preprocessors</summary>
+  <ul>
+    <li><a href="https://youtu.be/RhX2rb10AC4">Intro to & Bootstrap Theming with Sass</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Coding Principles</summary>
+  <ul>
+    <li><a href="https://x-team.com/blog/principles-clean-code/">Principles of Clean Code</a></li>
+  </ul>
+</details>
+  
 
