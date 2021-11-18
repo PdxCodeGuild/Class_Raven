@@ -2,31 +2,128 @@
 @import "variable";
 @import "functions";
 
-* {
-    border: 1px solid black;
-}
+
 
 body {
     background-color: $primary-color;
     height: 100vh;
 
     .header {
-        display: flex;   
-        justify-content: center;     
-    }
-
-    .left-box {
-        display: flex;
-        align-items: flex-start;
+        @include flex(row, flex-start, space-between);
+        height: 11vh;
+        .nav-bars {
+            @include flex(row, center, flex-start);
+            .btn{
+                letter-spacing: .20rem;
+                text-transform: uppercase;
+                font-size: x-small;
+                font-weight: thin;
+                @include border-radius(15px);
+                &:hover {
+                    // @extend %pointer;
+                    @include border;
+                    color: blueviolet;
+                    } 
+            }
+            
+        }
+        .side-btn {
+            @include flex(column, center, flex-end);
+            margin-left: 4rem;            
+            .btn-2 {
+                text-transform: uppercase;
+                font-size: smaller;
+                margin-right: 0.1rem;
+                letter-spacing: 0.20rem;
+                @include border-radius(15px);                
+            }
+        }
     }
 
     .main-body {
+        @include flex(row, center, space-between);
+        background-color: burlywood;
+        @include border-radius(35px);
+        .blogs {
+            margin-right: 0.5rem;
+            .blog-post { 
+                padding-bottom: 5rem;               
+                .blog-section {
+                    background-color: chartreuse;
+                    // border-radius: 12px;
+                    @include border-radius(10px);
+                    padding-top: 0.1rem;
+                    padding: 0.1rem;
+                    .art-1 {
+                        font-size: x-small;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+            }
+        }
+        .top-post {
+            padding-left: 0.5rem;
+        }
+        .advert {
+            padding-right: 0.5rem;
+            // @include rectangle(55px)
+        }
+    }    
+
+    #footer {
         display: flex;
-        flex-flow: column;
-        @include center-flex
+        // flex-grow: 1;
+        font-size: small;
+        justify-content: space-between;
+        position: relative;
+        bottom: 0;
+        width: 95vw;        
     }
 }
 
-@media screen and (max-width: 400px) {
-    
+@media screen and (max-width: 430px) {
+    .top-post {
+        color: burlywood;
+    }    
+}
+
+@media screen and (min-width: 431px) {
+    .blogs {
+        margin-left: 5rem;
+    }
+
+    .art-1 {
+        font-size: medium;
+        letter-spacing: 0.4rem;
+    }
+    .header {
+        @include flex(row, flex-start, space-between);
+        height: 18vh;
+        .nav-bars {
+            @include flex(row, center, flex-start);
+            .btn{
+                letter-spacing: .40rem;
+                text-transform: uppercase;
+                font-size: x-small;
+                font-weight: thin;
+                @include border-radius(15px);
+                &:hover {
+                    // @extend %pointer;
+                    @include border;
+                    color: blueviolet;
+                    } 
+            }
+            
+        }
+        .side-btn {
+            @include flex(row, flex-start, flex-start);
+            .btn-2 {
+                font-size: large;
+                text-transform: uppercase;
+                margin-right: 0.1rem;
+                letter-spacing: 0.40rem;
+                @include border-radius(15px);                
+            }
+        }
+    }
 }
