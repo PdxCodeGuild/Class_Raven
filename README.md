@@ -211,7 +211,7 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>CSS Preprocessors</summary>
   <ul>
-    <li><a href="https://youtu.be/RhX2rb10AC4">Intro to & Bootstrap Theming with Sass</a></li>
+    <li><a href="https://youtu.be/RhX2rb10AC4">Intro to & Bootstrap Theming with Sass</a> & <a href="https://github.com/keegangood/sass_talk">Repository</a></li>
   </ul>
 </details>
 
