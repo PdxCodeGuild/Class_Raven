@@ -1,32 +1,29 @@
-/* minor css reset */
-* {
-vertical-align: baseline;
-border: 0 none;
-outline: 0;
-padding: 0;
-margin: 0;
-}
-@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
-/* set overall sytling */
 body {
+	/* minor css reset */
+	vertical-align: baseline;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	/* set overall sytling */
   color: white;
   background-color: black;
   font-family: 'Underdog', cursive;
 }
-/* mark items in assignment as complete */
-.done {
-  text-decoration: line-through;
+/* assignment details for quick reference */
+assignment {
+	color: grey;
 }
 /* header rules */
 nav {
-  background-color: rgb(56, 7, 170);
+  background-color: #3807aa;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 nav h1 {
   margin: 1rem;
-  margin-right: 40vw;
+  margin-right: 70vw;
 }
 nav ul {
   margin: 5px;
@@ -43,22 +40,27 @@ cursor: pointer;
 }
 /* blog content rules*/
 main article {
-  margin: 1rem;
-  margin-top: 5vh;
-  background-color: rgb(56, 7, 170);
+  margin: 10rem;
+  margin-top: 10vh;
+  padding: 5rem;
+  background-color: #3807aa;
 }
-main article h3 {
+main article h2 {
   margin: 10px;
+  background-color: #320699;
 }
 main article p {
   margin: 1rem;
   text-indent: 1rem;
   flex-wrap: wrap;
+  color: lightgrey;
+  font-size: 20px;
+  background-color: #4100d9;
 }
 /* sidebar rules */
-main sidebar {
-  float: right;
+main sidebar details{
   background-color: black;
+  margin-left: 10vw;
 }
 .side-link {
   cursor: pointer;
@@ -68,5 +70,5 @@ main sidebar {
   transition: all .3s;
 }
 .side-link:hover {
-  background-color: rgb(56, 7, 170)
+  background-color: #3807aa
 }
