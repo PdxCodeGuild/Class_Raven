@@ -1,0 +1,32 @@
+@import "mixin";
+@import "variable";
+@import "functions";
+
+* {
+    border: 1px solid black;
+}
+
+body {
+    background-color: $primary-color;
+    height: 100vh;
+
+    .header {
+        display: flex;   
+        justify-content: center;     
+    }
+
+    .left-box {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .main-body {
+        display: flex;
+        flex-flow: column;
+        @include center-flex
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+}

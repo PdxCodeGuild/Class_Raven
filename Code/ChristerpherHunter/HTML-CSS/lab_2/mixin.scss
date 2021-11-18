@@ -1,0 +1,9 @@
+@mixin mixin-1() {
+    background: crimson;
+    height: 4rem;
+}
+
+@mixin center-flex() {
+    justify-content: center;
+    align-items: center;
+}

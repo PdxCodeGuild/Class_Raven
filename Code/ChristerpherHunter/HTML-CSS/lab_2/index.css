@@ -1,0 +1,22 @@
+* {
+  border: 1px solid black;
+}
+
+body {
+  background-color: saddlebrown;
+  height: 100vh;
+}
+body .header {
+  display: flex;
+  justify-content: center;
+}
+body .left-box {
+  display: flex;
+  align-items: flex-start;
+}
+body .main-body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */
