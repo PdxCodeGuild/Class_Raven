@@ -1,8 +1,6 @@
-@import "mixin";
-@import "variable";
-@import "functions";
-
-
+@import "src/mixin";
+@import "src/variable";
+@import "src/functions";
 
 body {
     background-color: $primary-color;
