@@ -1,0 +1,45 @@
+body {
+    background-color: cadetblue;
+}
+
+/* target an id */
+#header-1 {
+    color: brown;
+}
+
+#custom-button {
+    background-color: slateblue;
+    height: 50px;
+    width: 50px;
+
+    /* padding = space around the content */
+    /* padding: 20px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    /* margin = space around box */
+    margin: 20px;
+}
+
+#button-section {
+    background-color: cyan;
+    padding: 5px;
+
+    /* center the text within this element */
+    text-align: center; 
+}
+
+/* target a class */
+.btn {
+    border: 4px solid black;
+    border-radius: 5px;
+    /* Red, Green, Blue */
+    color: rgb(200, 75, 100);
+    /* Hex code (RRGGBB)*/
+    color: #c84b64;
+    /* Hue, Saturation, Lightness */
+    color: hsl(348, 53%, 54%);
+}
+
