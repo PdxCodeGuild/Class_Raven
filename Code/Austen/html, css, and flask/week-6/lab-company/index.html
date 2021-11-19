@@ -27,6 +27,7 @@
 			<li>
 				<a class="white-text" href="../pages/products.html">products</a>
 			</li>
+			<li><a>contact us</a></li>
 		</ul>
 		<nav class="nav-wrapper blue darken-3">
 				<a id="company-name" href="../index.html">Company Name</a>
@@ -40,11 +41,16 @@
 					<li>
 						<a href="../pages/products.html">products</a>
 					</li>
+					<li>
+						<a onclick="load_contact_form()">contact us</a>
+					</li>
 				</ul>
 				<a href="" data-target="mobile-nav" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
 		</nav>
 	</header>
 	<main class="container blue">
+		<section id="contact-form-target">
+		</section>
 		<h3>Gallery</h3>
 		<row id="gallery" class="row">
 			<colm class="col s12 m4 l3">
@@ -77,10 +83,38 @@
 			</colm>
 		</row>
 	</main>
+	<template id="contact-form">
+		<form class="blue darken-3">
+			<label for="customer-name">your name</label>
+			<input type="text" name="customer-name" id="customer-name" placeholder="Jesse Smith" required>
+			<label for="phone">phone number</label>
+			<input type="tel" pattern="[0-9]{10}" name="phone" id="phone" placeholder="1234567890">
+			<label for="email">email</label>
+			<input type="text" name="email" id="email" placeholder="jesse.smith@domainmail.com" required>
+			<label>message type:</label>
+			<br>
+				<label>
+					<input class="message-type" type="radio" name="type" id="question">
+					<span>question</span>
+				</label>
+				<label>
+					<input class="message-type" type="radio" name="type" id="comment">
+					<span>comment</span>
+				</label>
+				<label>
+					<input class="message-type" type="radio" name="type" id="sales">
+					<span>sales</span>
+				</label>
+			<br>
+			<label for="message">message:</label>
+			<input type="textarea" name="message" id="message" required>
+			<input type="submit" name="submit">
+		</form>
+	</template>
 	<footer class="blue darken-3 right-align">
 		<span id="copywrite">&copy; Company Name 2021</span>
 	</footer>
 	<script type="text/javascript" src="../style/materialize.js"></script>
-	<script type="text/javascript" src="../style/mobile-nav.js"></script>
+	<script type="text/javascript" src="../scripts/doc.js"></script>
 </body>
 </html>
