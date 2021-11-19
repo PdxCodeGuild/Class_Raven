@@ -37,8 +37,8 @@ class ROTN:
 
         self.encrypted_message = map(ROTN.letters, self.message)
         self.encrypted_message = [i for i in self.encrypted_message]
-        self.encrypted_message = "".join(["".join(i) for
-                                          i in self.encrypted_message])
+        self.encrypted_message = "".join("".join(i) for
+                                         i in self.encrypted_message)
         self.encrypted_message = self.encrypted_message[0:self.space_num] +\
             " " + self.encrypted_message[self.space_num:] + self.extra_val
 
@@ -46,12 +46,12 @@ class ROTN:
         """Decrypt the message based on the ROT number"""
 
         self.decrypted_message = "".join(map(ROTN.letters,
-                                         (self.encrypted_message,
-                                          -self.rotation_num)))
+                                             (self.encrypted_message,
+                                              -self.rotation_num)))
 
-        self.decrypted_message = "".join([i for i in self.decrypted_message])
-        self.decrypted_message = "".join(["".join(i) for
-                                          i in self.decrypted_message])
+        self.decrypted_message = "".join(self.decrypted_message)
+        self.decrypted_message = "".join("".join(i) for
+                                         i in self.decrypted_message)
         self.decrypted_message = self.decrypted_message[0:self.space_num] +\
             " " + self.decrypted_message[self.space_num:] + self.extra_val
 
@@ -62,7 +62,8 @@ class ROTN:
                       if letter == letters].pop()
         letter_val += rotation
         letter_val = [letters for num, letters in enumerate(ROTN.ALPHABET * 2,
-                      start=1) if num == letter_val]
+                                                            start=1)
+                      if num == letter_val]
 
         return letter_val
 
