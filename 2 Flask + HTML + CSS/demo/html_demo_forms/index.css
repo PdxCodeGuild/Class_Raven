@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+form {
+    border-radius: 5px;
+}
+
+form input {
+    margin: .5rem 0;
+    padding: .5rem;
+}
+
+form input[type=submit] {
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: gold;
+}
+
+#intro-form {
+    background-color: gray;
+}
+
+#intro-form form {
+    background-color: lightgrey;
+    padding: 20px 50px 30px;
+    margin: 10px 0 auto 0;
+}
+/* 
+
+
+
+
+
+
+
+LOGIN FORM*/
+#login-form-container {
+    background-color: darkslategray;
+}
+
+/* 1 value sets all, 2 values sets top-bottom,
+3 values top-left/right-bottom, 4 values top-right-bottom-left */
+
+#login-form {
+    background-color: slateblue;
+    border: 5px solid #8474e9;
+    padding: 30px 50px 75px;
+    margin: 10rem 0 auto 0;
+
+    /* to orient the position:absolute elements
+    relative to this element */
+    position: relative;
+}
+
+.inner-circle {
+    background-color: #8474e9;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.corner-circle {
+    background-color: darkslategray;
+    height: 40px;
+    width: 40px;
+
+    border: 5px solid #8474e9;
+    /* make a circle */
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.corner-wedge {
+    background-color: darkslategray;
+    border-top: 5px solid #8474e9;
+    border-left: 5px solid #8474e9;
+    border-top-left-radius: 70%;
+    padding: 5px 0 0 5px;
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+}
+/* 
+
+
+
+
+
+
+
+
+
+CONTACT FORM*/
+
+#contact-form-container {
+    background-color: darkblue;
+    padding-bottom: 150px;
+}
+
+#contact-form {
+    background-color: steelblue;
+    padding: 30px 50px 75px;
+    margin: 5rem 0 auto;
+}
+
+#contact-form textarea {
+    resize: none;
+}
