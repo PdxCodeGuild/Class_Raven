@@ -1,24 +1,43 @@
+/* CSS HEX */
+/* CSS HSL */
+/* SCSS Gradient */
 body {
-  background-color: saddlebrown;
+  background: linear-gradient(135deg, #edeec9ff, #dde7c7ff, #bfd8bdff, #98c9a3ff, #77bfa3ff);
   height: 100vh;
+}
+body img {
+  height: 15rem;
+  width: 30rem;
+  border-radius: 20px;
+  border: none none none;
+  padding: 1rem 0 0 0;
+  border: 2px #97c8a2 solid;
+  margin: 1rem 0 0 0;
 }
 body .header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  height: 11vh;
+  height: 3.5vh;
+  border-radius: 25px;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: #78bfa4;
 }
 body .header .nav-bars {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 8px;
 }
 body .header .nav-bars .btn {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  font-size: x-small;
+  font-size: small;
   font-weight: thin;
   border-radius: 15px;
 }
@@ -26,65 +45,89 @@ body .header .nav-bars .btn:hover {
   border: 1px black solid;
   color: blueviolet;
 }
-body .header .side-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  margin-left: 4rem;
-}
-body .header .side-btn .btn-2 {
-  text-transform: uppercase;
-  font-size: smaller;
-  margin-right: 0.1rem;
-  letter-spacing: 0.2rem;
-  border-radius: 15px;
-}
 body .main-body {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: burlywood;
+  background-color: #edeec9;
   border-radius: 35px;
+  padding: 2rem 0 0 0;
+}
+body .main-body p {
+  width: 25rem;
+  background-image: radial-gradient(lightgray, #b49c7d);
+  padding: 5px;
+  border-radius: 3rem;
+  border: 5px #bdd7bc solid;
 }
 body .main-body .blogs {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+  max-width: 95%;
 }
 body .main-body .blogs .blog-post {
   padding-bottom: 5rem;
 }
 body .main-body .blogs .blog-post .blog-section {
-  background-color: chartreuse;
-  border-radius: 10px;
-  padding-top: 0.1rem;
-  padding: 0.1rem;
+  border: 2px solid #97c8a2;
+  background-color: #dce7c6;
+  border-radius: 18px;
+  padding: 0.7rem;
 }
 body .main-body .blogs .blog-post .blog-section .art-1 {
   font-size: x-small;
   letter-spacing: 0.1rem;
 }
-body .main-body .top-post {
-  padding-left: 0.5rem;
-}
 body .main-body .advert {
   padding-right: 0.5rem;
 }
+body .main-body .advert img {
+  height: 25rem;
+  width: 12rem;
+}
 body #footer {
   display: flex;
-  font-size: small;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  font-size: x-small;
   position: relative;
   bottom: 0;
   width: 95vw;
 }
 
-@media screen and (max-width: 430px) {
-  .top-post {
-    color: burlywood;
+@media screen and (max-width: 809px) {
+  .advert {
+    display: none;
+  }
+
+  img {
+    max-width: 95%;
+    max-height: 95%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .blogs {
+    margin-top: 2rem;
+  }
+
+  .side-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 0 4rem 2rem;
+  }
+  .side-btn .btn-2 {
+    text-transform: uppercase;
+    font-size: smaller;
+    margin-right: 0.1rem;
+    letter-spacing: 0.2rem;
+    border-radius: 15px;
   }
 }
-@media screen and (min-width: 431px) {
+@media screen and (min-width: 810px) {
   .blogs {
     margin-left: 5rem;
   }
@@ -94,41 +137,40 @@ body #footer {
     letter-spacing: 0.4rem;
   }
 
-  .header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 18vh;
-  }
-  .header .nav-bars {
+  .nav-bars {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
   }
-  .header .nav-bars .btn {
+  .nav-bars .btn {
     letter-spacing: 0.4rem;
     text-transform: uppercase;
     font-size: x-small;
     font-weight: thin;
     border-radius: 15px;
   }
-  .header .nav-bars .btn:hover {
+  .nav-bars .btn:hover {
     border: 1px black solid;
     color: blueviolet;
   }
-  .header .side-btn {
+
+  .side-btn {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-top: 3px;
   }
-  .header .side-btn .btn-2 {
+  .side-btn .btn-2 {
     font-size: large;
     text-transform: uppercase;
     margin-right: 0.1rem;
     letter-spacing: 0.4rem;
     border-radius: 15px;
+  }
+  .side-btn .btn-2:hover {
+    border: 1px black solid;
+    color: blueviolet;
   }
 }/*# sourceMappingURL=index.css.map */
