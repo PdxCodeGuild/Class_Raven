@@ -1,47 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Merriweather:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
 
-
-/* .container {
-
-
-  align-content: space-between;
-  font-family: 'Merriweather', serif;
-} */
-
-.container {
-  display: grid;
-  grid-template-columns: 0.8fr 1.8fr 1fr;
-  grid-template-rows: 0.4fr 2.2fr 0.4fr;
-  grid-auto-columns: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  justify-items: stretch;
-  grid-template-areas:
-    "nav Header Header"
-    "nav article side-nav"
-    ". footer footer";
+.grid_container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr 0.8fr;
+    grid-template-rows: 0.4fr 2.4fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+        ". title nav_bar"
+        ". body-text side_nav"
+        "footer footer footer";
 }
 
-.Header { grid-area: Header; }
+.body-text { 
+    grid-area: body-text;
+    grid-area: body-text;
+    grid-area: 2 / 2 / 3 / 3;
+    color: white;
+    font-size: 2.4rem;
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 16px;
+ }
 
-.article { grid-area: article; }
+.side_nav { grid-area: side_nav; }
 
-.side-nav { grid-area: side-nav; }
+.title { grid-area: title; }
+
+.nav_bar { 
+    grid-area: nav_bar;
+    grid-area: 1 / 1 / 4 / 2;
+    font-size: 1.5rem;
+    padding: 16px;
+    font-family: 'Merriweather Sans', sans-serif;
+ }
 
 .footer { grid-area: footer; }
 
-.nav { 
-  grid-area: nav;
-  font-size: 3rem;
-  
+.nav-link {
+color: grey;
 }
 
-
-
+.nav-link:hover {
+color: white;
+}
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1542718786-2e81a9d3dfac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80");
-}
-
-
-
+    background-image: url("https://images.unsplash.com/photo-1542718786-2e81a9d3dfac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80");
+  }
