@@ -8,6 +8,7 @@ assignment a {
 .container {
 	margin-top: 10vh;
 	margin-bottom: 10vh;
+	padding: 20px;
 }
 main h3 {
 	margin-top: 0;
@@ -38,4 +39,14 @@ main ol {
 .product-desc {
 	font-size: 16px;
 	font-style: italic;
+}
+label {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+form {
+	margin: 20px;
+	padding: 20px;
 }
