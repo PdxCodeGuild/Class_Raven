@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Merriweather:ital,wght@1,300&display=swap');
+
+
+/* .container {
+
+
+  align-content: space-between;
+  font-family: 'Merriweather', serif;
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.8fr 1fr;
+  grid-template-rows: 0.4fr 2.2fr 0.4fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  grid-template-areas:
+    "nav Header Header"
+    "nav article side-nav"
+    ". footer footer";
+}
+
+.Header { grid-area: Header; }
+
+.article { grid-area: article; }
+
+.side-nav { grid-area: side-nav; }
+
+.footer { grid-area: footer; }
+
+.nav { 
+  grid-area: nav;
+  font-size: 3rem;
+  
+}
+
+
+
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1542718786-2e81a9d3dfac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80");
+}
+
+
+
