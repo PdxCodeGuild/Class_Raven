@@ -51,6 +51,7 @@ main article h2 {
 }
 main article p {
   margin: 1rem;
+  padding: 20px;
   text-indent: 1rem;
   flex-wrap: wrap;
   color: lightgrey;
