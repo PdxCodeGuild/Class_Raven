@@ -1,3 +1,37 @@
 body {
-  background-color: slategray;
+  background-color: #fff;
+}
+
+.mid-1 {
+  background-image: url("../assets/home-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
+
+.mid-2 {
+  background-image: url("../assets/home-service-header.e9330b88.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  width: 100%;
+  margin-top: -8.5rem;
+}
+
+.mid-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -23rem;
+}
+.mid-3 .card-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mid-3 .info-cube {
+  background-color: #fff;
 }/*# sourceMappingURL=index.css.map */

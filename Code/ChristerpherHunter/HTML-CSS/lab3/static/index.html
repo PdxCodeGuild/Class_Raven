@@ -4,30 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text" href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Sears Auto Center</title>
 </head>
 
 <body>
-    <header class="top-header"></header>
-    <header class="low-head"></header>
+    <header class="top-header">
+        <button class="appointment" type="button" oneclick="alert('Appointment Scheduled!')">
+            SCHEDULE AN APPOINTMENT
+        </button>
+        <a class="link" href="">Select your Store</a>
+    </header>
+    <header class="low-head">
+        <img src="" alt="">
+        <a href="" class="services" target="_blank">TIRES</a>
+        <a href="" class="services" target="_blank">AUTO MAINTENANCE</a>
+        <a href="" class="services" target="_blank">AUTO REPAIR</a>
+        <a href="" class="services" target="_blank">OFFERS</a>
+        <a href="" target="_blank" id="search">
+            <img src="assets/maggnifying_glass.png" alt="search-icon">&nbsp;&nbsp;
+            <span>____________________</span>
+        </a>
+    </header>
     <div class="main-body">
-        <section class="side-bar"></section>
-        <div class="search-bar"></div>
         <div class="center-box">
             <div class="mid-1">
-                <figure class="sec-1">
-                    <img src="assets/home-header.png" alt="home-header" class="head-img">
-                </figure>
+                <!-- <figure class="sec-1">
+                    top home header image 
+                    <img src="assets/home-header.png" alt="home-header" class="head-img"> 
+                </figure> -->
+                <section class="side-bar">
+                    <span>
+                        <a href="" target="_blank">
+                            <img src="assets/oil-change-icon.png" alt="oil-change"><a href="" target="_blank"
+                                class="side-bar-links"></img>
+                                <p>OIL CHANGE</p>
+                            </a>
+                    </span>
+                    <span>
+                        <a href="" target="_blank">
+                            <img src="assets/brakes-icon.png" alt="brakes"><a href="" target="_blank"
+                                class="side-bar-links"></img>
+                                <p>BRAKES</p>
+                            </a>
+                    </span>
+                    <span>
+                        <a href="" target="_blank">
+                            <img src="assets/alignment-wheel.png" alt="alignment"><a href="" target="_blank"
+                                class="side-bar-links"></img>
+                                <p>ALIGNMENT</p>
+                            </a>
+                    </span>
+                    <a href="" target="_blank">
+                        <span>
+                            <img src="assets/battery.png" alt="battery"><a href="" target="_blank"
+                                class="side-bar-links"></img>
+                                <p>BATTERY</p>
+                        </span>
+                    </a>
+                </section>
             </div>
             <div class="mid-2">
-                <p id="top-string"></p>
+                <p id="top-string">Visit any of these Sears Auto Location center to Save!</p>
                 <section id="grid-box">
                     <div class="inner-grid">
-                        <p class="address-line"></p>
-                        <p class="city-state-zip"></p>
-                        <p class="number"></p>
+                        <p class="address-line">5110 Pacific Ave</p>
+                        <p class="city-state-zip">Stockton, CA 95207</p>
+                        <p class="number">(209)475-6528</p>
                     </div>
                     <div class="inner-grid">
                         <p class="address-line"></p>
@@ -95,66 +139,143 @@
                         <p class="number"></p>
                     </div>
                     <div class="inner-grid">
-                        <p class="address-line"></p>
-                        <p class="city-state-zip"></p>
-                        <p class="number"></p>
+                        <p class="address-line">3000 Town East Blvd</p>
+                        <p class="city-state-zip">Mesquite, TX 75150</p>
+                        <p class="number">(469)405-6858</p>
                     </div>
                 </section>
             </div>
             <div class="mid-3">
                 <p class="header">Your Car is in the Right Hands</p>
-                <span class="info-cube"></span>
-                <span class="info-cube"></span>
-                <span class="info-cube"></span>
-                <span class="info-cube"></span>
-                <button type="button" oneclick="alert('Appointment Scheduled!')">SCHEDULE AN APPOINTMENT TODAY!</button>
+                <div class="card-section">
+                    <a href="" target="_blank">
+                        <span class="info-cube">
+                            <img src="assets/home-tire-service.9968d562.png" alt="Tires">
+                            <p class="info-cube-tires">TIRES</p>
+                            <p class="info-cube-tires">When it comes to your car or truck, there’s a lot riding on your
+                                tires.</p>
+                            <p id="learn-more" class="info-cube-tires">LEARN MORE</p>
+                        </span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span class="info-cube">
+                            <img src="assets/home-brake-service.f1d31a32.png" alt="Brakes">
+                            <p class="info-cube-brakes">BRAKES</p>
+                            <p class="info-cube-brakes">Your brakes are one of the most important components of your
+                                vehicle.</p>
+                            <p id="learn-more" class="info-cube-brakes">LEARN MORE</p>
+                        </span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span class="info-cube">
+                            <img src="assets/home-service.115b8a5b.png" alt="Services">
+                            <p class="info-cube-services">SERVICES</p>
+                            <p class="info-cube-services">As a complete auto service center, we offer essential services
+                                and
+                                even more.</p>
+                            <p id="learn-more" class="info-cube-services">LEARN MORE</p>
+                        </span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span class="info-cube">
+                            <img src="assets/home-battery-service.84db62b9.png" alt="Battery">
+                            <p class="info-cube-batteries">BATTERIES</p>
+                            <p class="info-cube-batteries">It's important to feel confident when going to start your
+                                car.
+                            </p>
+                            <p id="learn-more" class="info-cube-batteries">LEARN MORE</p>
+                        </span>
+                    </a>
+                </div>
+                <button class="appointment" type="button" oneclick="alert('Appointment Scheduled!')">SCHEDULE AN
+                    APPOINTMENT TODAY!</button>
             </div>
             <!-- 'Rules of the road' emblem -->
             <div class="mid-4">
-                <img id=emblem src="assets/ruleroad.041a534c.png" alt="emblem">
+                <div>
+                    <img id=emblem src="assets/ruleroad.041a534c.png" alt="emblem">
+                </div>
             </div>
             <div class="mid-5">
                 <div class="bottom-cards">
-                    <img src="assets/auto-safety.jpeg" alt="auto-safety" id="auto-safety">
-                    <span id="auto-safety-body">
-                        <p id="top-row">Auto Safety</p>
-                        <p id="middle-row">Get driving safety tips including child passenger safety - and learn the
-                            biggest contributors to vehicle crashes.</p>
-                        <button type="button" onclick="alert('Learned More!')">Learn More</button>
-                    </span>
+                    <a href="" class="link" target="_blank">
+                        <img src="assets/auto-safety.jpeg" alt="auto-safety" id="auto-safety">
+                        <span id="auto-safety-body">
+                            <p id="top-row">Auto Safety</p>
+                            <p id="middle-row">Get driving safety tips including child passenger safety - and learn the
+                                biggest contributors to vehicle crashes.</p>
+                            <p class="bottom-row">Learn More</p>
+                        </span>
+                    </a>
                 </div>
                 <div class="bottom-cards">
-                    <img src="assets/distracted-driving.jpeg" alt="distracted-driving" id="distracted-driving">
-                    <span id="auto-safety-body">
-                        <p id="top-row">Distracted Driving</p>
-                        <p id="middle-row">The truth about the dangers of using cell phones while driving, from Sears
-                            Auto Center</p>
-                        <button type="button" onclick="alert('Learned More!')">Learn More</button>
-                    </span>
+                    <a href="" class="link" target="_blank">
+                        <img src="assets/distracted-driving.jpeg" alt="distracted-driving" id="distracted-driving">
+                        <span id="auto-safety-body">
+                            <p id="top-row">Distracted Driving</p>
+                            <p id="middle-row">The truth about the dangers of using cell phones while driving, from
+                                Sears
+                                Auto Center</p>
+                            <p class="bottom-row">Learn More</p>
+                        </span>
+                    </a>
                 </div>
-                <div class="bottom-cards"><img src="assets/emergency-scenarios-flash-flood.jpeg"
-                        alt="emergency-scenarios" id="emergency-scenarios">
-                    <span id="auto-safety-body">
-                        <p id="top-row">Emergency Scenarios: Flash Flood</p>
-                        <p id="middle-row">Flash floods can occur fast and the danger is higher for those inside
-                            vehicles. Learn what to do if you get caught in one when you’re in the car. </p>
-                        <button type="button" onclick="alert('Learned More!')">Learn More</button>
-                    </span>
+                <div class="bottom-cards">
+                    <a href="" class="link" target="_blank">
+                        <img src="assets/emergency-scenarios-flash-flood.jpeg" alt="emergency-scenarios"
+                            id="emergency-scenarios">
+                        <span id="auto-safety-body">
+                            <p id="top-row">Emergency Scenarios: Flash Flood</p>
+                            <p id="middle-row">Flash floods can occur fast and the danger is higher for those inside
+                                vehicles. Learn what to do if you get caught in one when you’re in the car. </p>
+                            <p class="bottom-row">Learn More</p>
+                        </span>
+                    </a>
                 </div>
-                <p class="below-safety-cards">VIEW MORE ARTICLES >></p>
+                <a href="" target="_blank" class="below-safety-cards">
+                    <p> VIEW MORE ARTICLES >></p>
+                </a>
             </div>
         </div>
         <footer class="low-footer">
-            <div class="footer-items"></div>
-            <div class="footer-items"></div>
-            <div class="footer-items"></div>
-            <div class="footer-items"></div>
-            <div class="footer-items"></div>
+            <div class="low-footer-image-container">
+                <a href="" class="footer-items">
+                    <img src="assets/sears_logo.8d3f1b17.png" alt="sears_logo">
+                    <p>AUTO CENTER</p>
+                    <img src="assets/ase-cert-badge.png" alt="ase-cert-badge">
+            </div>
+            </a><a href="" class="footer-items">
+                <p>TIRES</p>
+            </a><a href="" class="footer-items">
+                <p>AUTO MAINTENANCE</p>
+            </a><a href="" class="footer-items">
+                <p>AUTO REPAIR</p>
+            </a><a href="" class="footer-items">
+                <p>OFFERS</p>
+            </a><a href="" class="footer-items">
+                <p>PAYMENT OPTIONS</p>
+            </a><a href="" class="footer-items">
+                <p>ABOUT US</p>
+            </a><a href="" class="footer-items">
+                <p>CARREERS</p>
+            </a><a href="" class="footer-items">
+                <p>FIND A STORE</p>
+            </a><a href="" class="footer-items">
+                <img src="assets/linked-in-icon.png" alt="linked-in-icon">
+            </a><a href="" class="footer-items">
+                <img src="assets/facebook-icon.png" alt="facebook-icon">
+            </a><a href="" class="footer-items">
+                <img src="assets/twitter.png" alt="twitter">
+            </a><a href="" class="footer-items">
+                <img src="assets/youtube-icon.png" alt="youtube-icon">
+            </a><a href="" class="footer-items">
+                <img src="assets/sears-store-icon.png" alt="sears-store-icon">
+            </a>
             <p class="foot-text">© 2020 Transform SR Brands LLC. All Rights Reserved</p>
             <section class="foot-section">
-                <button>Terms of Use</button>
-                <button>Privacy Policy</button>
-                <button>California Privacy Rights</button>
+                <a href="" target="_blank">Terms of Use</a>
+                <a href="" target="_blank">Privacy Policy</a>
+                <a href="" target="_blank">California Privacy Rights</a>
             </section>
         </footer>
     </div>

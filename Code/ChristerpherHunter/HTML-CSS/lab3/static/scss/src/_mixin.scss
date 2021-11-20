@@ -1,0 +1,20 @@
+// if flex row is desired, pass only the last two args
+// if flex col is desired pass the first as well
+@mixin flex($dir: row, $align-items: flex-start, $justify-content: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+// 1 arg sets all, 2 args sets top/bottom, 4 args sets TLDR
+@mixin border-radius($top-left, $bottom-left: null, $top-right: $top-left, $bottom-right: $bottom-left) {
+    @if not $bottom-left {
+        border-radius: $top-left;
+    } @else {
+        border-top-left-radius: $top-left;
+        border-top-right-radius: $top-right;
+        border-bottom-left-radius: $bottom-left;
+        border-bottom-right-radius: $bottom-right;
+    }
+}
