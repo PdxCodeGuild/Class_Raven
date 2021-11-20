@@ -1,0 +1,17 @@
+#top-bar{
+    background-color: green;
+    color: beige;
+    font-weight: bolder;
+    max-height: 100%;
+    max-width: 100%;
+   
+}
+col {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img { /* htis is an setting this for all image tags */
+    max-width: 100%;
+    max-height: 100%;
+}
