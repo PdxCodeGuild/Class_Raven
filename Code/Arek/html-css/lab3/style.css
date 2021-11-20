@@ -1,17 +1,83 @@
-#top-bar{
-    background-color: green;
-    color: beige;
-    font-weight: bolder;
-    max-height: 100%;
-    max-width: 100%;
-   
-}
-col {
-    max-width: 100%;
-    max-height: 100%;
+.row{
+
+    margin-bottom: 0px;
+    min-height: auto;
+    justify-content: center;
+    min-width: 100vw;
+    
+    
 }
 
-img { /* htis is an setting this for all image tags */
-    max-width: 100%;
-    max-height: 100%;
+
+
+#top-bar{
+    display: flex;
+    font-style: oblique;
+    font-weight: bolder;
+    padding-top: 44px;
+    font-size: x-large;
+    justify-content: center;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-color: black;
+    
+    
+    
 }
+#blank-bar{
+   
+    
+    
+    justify-content: right;
+    padding-top: 90px;
+    border-style: solid;
+    border-color: black;
+    border-right: black;
+    
+    
+
+}
+
+#mission-div{
+    background-image: url('green.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 100vh;
+    
+    
+
+
+}
+
+
+ #mission{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    
+    
+
+ }
+ #mission-text{
+    display: flex;
+    justify-content:center;
+    font-size: x-large;
+    padding: 30px 30px;
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-style:groove;
+    max-width: 100vw;
+    line-height: 100%;
+
+
+
+ }
+
+
+
+
