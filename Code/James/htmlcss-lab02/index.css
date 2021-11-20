@@ -1,51 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
 
+
 .grid_container {
     display: grid;
-    grid-template-columns: 0.9fr 1.3fr 0.8fr;
-    grid-template-rows: 0.4fr 2.4fr 0.2fr;
+    grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
+    grid-template-rows: 0.4fr 0.7fr 2.6fr 0.3fr;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     justify-items: stretch;
     grid-template-areas:
-        ". title nav_bar"
-        ". body-text side_nav"
-        "footer footer footer";
+      "top-nav top-nav top-nav top-nav"
+      "title title title title"
+      ".body-text .side-nav"
+      "footer footer footer footer";
+  }
+  
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0; 
+    grid-area: footer;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+    padding: 16px;
+    
+ }
+
+.top-nav { 
+    grid-area: top-nav;
+    
+ }
+
+.title { 
+    display: flex;
+    justify-content: center;
+    grid-area: title;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+    font-size: 2rem;
+    padding: 16px;
 }
 
-.body-text { 
-    grid-area: body-text;
-    grid-area: body-text;
-    grid-area: 2 / 2 / 3 / 3;
+.side-nav {
+    
+    grid-area: 1 / 4 / 4 / 5;
+    font-family: 'Merriweather Sans', sans-serif;
+
+} 
+
+
+
+br {
     color: white;
-    font-size: 2.4rem;
+}
+
+
+.body-text { 
+    display: flex;
+    align-self: left;
+    grid-area: body-text;
+    color: white;
     font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.4rem;
     padding: 16px;
  }
 
-.side_nav { grid-area: side_nav; }
-
-.title { grid-area: title; }
-
-.nav_bar { 
-    grid-area: nav_bar;
-    grid-area: 1 / 1 / 4 / 2;
-    font-size: 1.5rem;
-    padding: 16px;
-    font-family: 'Merriweather Sans', sans-serif;
- }
-
-.footer { grid-area: footer; }
 
 .nav-link {
-color: grey;
+    
+    color: grey;
+    font-family: 'Merriweather Sans', sans-serif;
+    
 }
 
 .nav-link:hover {
-color: white;
+    color: white
 }
 
-body {
-    background-image: url("https://images.unsplash.com/photo-1542718786-2e81a9d3dfac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80");
+
+.nav {
+    display: flex;
+    justify-content: left;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+ body {
+    background-image: url("https://images.unsplash.com/photo-1637278643503-3a49c91b7000?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   }
