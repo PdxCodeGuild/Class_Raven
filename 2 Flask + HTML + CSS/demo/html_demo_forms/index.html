@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Forms Demo</title>
+  </head>
+  <body>
+    <!-- CONTACT FORM -->
+    <section id="contact-form-container">
+      <form action="" id="contact-form">
+        <label for="first-name">
+          First Name <br />
+          <input type="text" name="first-name" id="first-name" />
+        </label>
+        <br />
+        <label for="last-name">
+          Last Name <br />
+          <input type="text" name="last-name" id="last-name" />
+        </label>
+        <br />
+        <label for="phone">
+          Phone <br />
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="xxx-xxx-xxxx"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
+        </label>
+        <br />
+        <fieldset>
+            <legend>How did you hear about us?</legend>
+            <label>
+                <input type="radio" name="found-by" value="google"> Google
+            </label><br/>
+            <label>
+                <input type="radio" name="found-by" value="friend"> A friend
+            </label><br/>
+            <label>
+                <input type="radio" name="found-by" value="luck"> Pure luck
+            </label><br/>
+        </fieldset><br/>
+        <textarea name="" id="" cols="30" rows="10"></textarea> <br/>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- LOGIN FORM -->
+    <section id="login-form-container">
+      <form action="" id="login-form">
+        <div class="corner-circle">
+          <div class="inner-circle"></div>
+        </div>
+        <div class="corner-wedge">
+          <div class="inner-circle"></div>
+        </div>
+        <label for="username">
+          Username <br />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            autocomplete="off"
+            required
+          />
+        </label>
+        <br />
+        <label for="password">
+          Password <br />
+          <input type="password" id="password" name="password" required />
+        </label>
+        <br />
+        <br />
+        <input type="submit" value="Login" />
+      </form>
+    </section>
+
+    <!-- INTRO FORM -->
+    <section id="intro-form">
+      <form action="">
+        <input type="text" placeholder="Enter something" value="abcd" /> <br />
+        <input type="number" value="5" disabled /> <br />
+        <textarea name="" id="" cols="30" rows="10"></textarea> <br />
+        <input type="radio" />
+        <input type="checkbox" /> <br />
+        <input type="color" />
+        <input type="file" /> <br />
+        <select name="" id="">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+        <br />
+        <input type="date" />
+        <input type="time" /> <br />
+        <input type="range" /> <br />
+        <input type="button" value="Submit" />
+      </form>
+    </section>
+  </body>
+</html>
