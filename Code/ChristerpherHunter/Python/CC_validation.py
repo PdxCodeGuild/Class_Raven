@@ -44,7 +44,7 @@ class Validation:
     def double_the_odds(self) -> list:
 
         temp = []
-        for element in range(0, len(self.__credit_card_nums)):
+        for element in range(len(self.__credit_card_nums)):
             if element % 2 != 0:
                 temp.append(self.__credit_card_nums[element])
             else:
@@ -79,11 +79,7 @@ class Validation:
     # Checker
     def checker(self) -> bool:
 
-        if self.__pulled_check_digit == self.__init_check_digit:
-            self.valid_cc = True
-        else:
-            self.valid_cc = False
-
+        self.valid_cc = self.__pulled_check_digit == self.__init_check_digit
         return self.valid_cc
 
     def __str__(self) -> str:
