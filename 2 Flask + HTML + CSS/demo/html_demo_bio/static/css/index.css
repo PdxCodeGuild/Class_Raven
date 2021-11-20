@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?&family=Princess+Sofia&family=Open+Sans&family=Playfair+Display:wght@400;600&display=swap');
+
+:root {
+    --font-display: 'Princess Sofia', cursive;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+
+    --font-color-primary: #e6edfc;
+}
+
+* {
+    font-family: var(--font-primary);
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.center-x {
+    justify-content: center;
+}
+
+.center-y {
+    align-items: center;
+}
+
+#hero {
+    background: url("../images/space.jpg") no-repeat center center fixed;
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; */
+}
+
+#hero #headshot {
+    background: url("../images/alan-watts.webp") no-repeat 35% 45%;
+    background-size: cover;
+
+    border: 20px solid #5d7492;
+    border-radius: 25% 50% 50%;
+    box-shadow: 0 0 5px #405775;
+
+    /* responsive square */
+    height: 50vh;
+    max-height: 50vw;
+    width: 50vw;
+    max-width: 50vh;
+
+    position: relative;
+    top: 20vh;
+    left: 12%;
+}
+
+#hero #name-bubble {
+    background-color: #3e587a;
+
+    border: 20px solid #5d7492;
+    border-radius: 25% 50%;
+
+    /* responsive square */
+    height: 25vh;
+    max-height: 25vw;
+    width: 25vw;
+    max-width: 25vh;
+
+    position: relative;
+    top: -35%;
+    left: -35%;
+}
+
+#hero #name-bubble > div {
+    color: var(--font-color-primary);
+    font-family: var(--font-display);
+    font-size: 3rem;
+    
+    position: relative;
+}
+
+#hero #name-bubble #first-name{
+    left: -1rem;
+    margin-bottom: 15px;
+}
+
+#hero #name-bubble #last-name{
+    left: 1rem;
+}
+
+#hero blockquote {
+    background-color: rgba(0, 0, 0, .8);
+    height: 25%;
+    width: 40%;
+    margin: auto 0;
+    margin-left: 15rem;
+
+    border: 5px solid #aa664b;
+    border-radius: 5px;
+
+    padding: 30px;
+
+    color: var(--font-color-primary);
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+blockquote cite {
+    font-size: 1.2rem;
+}
+
+
+
+
+#bio-1{
+    background-color: #5d7492;
+}
+
+#bio-1 #paisley {
+    background: url("../images/paisley.png");
+    min-height: 100vh;
+    width: 66vw;
+    padding: 10rem 0;
+}
+
+#bio-1 .bio-section {
+    min-height: 40vh;
+    width: 55vw;
+}
+
+.bio-section .content {
+    padding: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.custom-link {
+    padding: 3rem;
+}
+
+#bio-container a {
+    text-decoration: none;
+    color: black;
+}
+
+#bio-container a:hover {
+    text-decoration: underline;
+    color: var(--font-color-primary)
+}
+
+#bio-1 .portrait {
+    background-color:rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    width: 50%;
+    padding: 30px;
+    margin: 15px;
+}
+
+#bio-1 .portrait:nth-child(2){
+    align-self: flex-end;
+}
+
+#bio-1 .portrait img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#bio-2 {
+    background-color: #aa664b;
+    min-height: 30vh;
+    flex-wrap: wrap;
+}
+
+#bio-2 h1 {
+    font-family: var(--font-secondary);
+}
+
+#bio-2 ul {
+    list-style: none;
+}
+
+#bio-2 li {
+    font-size: 1.5rem;
+}
+
+#bio-2 li span {
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-90deg);
+}
+
+#bio-2 #closing {
+    font-family: var(--font-display);
+    font-size: 3rem;
+
+    margin: 5rem 0;
+    width: 100%;
+    text-align: center;
+}
