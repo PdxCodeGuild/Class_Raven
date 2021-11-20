@@ -1,0 +1,67 @@
+/*
+    Name: Michael
+    Date: 10/10/2019
+    Description: Lab 02
+*/
+/*
+Lab 2: Blog
+Let's make the template of a blog with a title, top-nav, side-nav, and multiple posts.
+Use flexbox and semantic elements (header, nav, section, and footer).
+You can use a custom font, fancy colors, and make generate fake content using an Ipsum.
+*/
+
+/* Body */
+body {
+	background-color: darkgreen;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 300;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: normal;
+	align-items: normal;
+	align-content: normal;
+}
+
+.flex-items:nth-child(n) {
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	align-self: auto;
+	order: 1;
+}
+
+.flex-items a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.flex-items a:hover {
+	color: rgb(37, 37, 37);
+	text-decoration: none;
+}
+
+.flex-items a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.right-nav {
+	float: right;
+	position: sticky;
+}
+
+.left-nav {
+	float: left;
+}
