@@ -1,37 +1,30 @@
 @use "src/variables";
 @use "src/mixin";
 @use "src/functions";
+@use "src/bulma/bulma.sass";
 
-body {
+.top-header {
     background-color: variables.$white;
+    @include mixin.flex(row, center, space-between);
+    // TRBL: top-right-bottom-left
+    padding: 1rem 1rem 0.3rem 1rem;
+    font-size: smaller;
 }
 
-.mid-1 {
-    background-image: url("../assets/home-header.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-    width: 100%;
-}
-
-.mid-2 {
-    background-image: url("../assets/home-service-header.e9330b88.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 50vh;
-    width: 100%;
-    margin-top: -8.5rem;
-}
-
-.mid-3 {
-    @include mixin.flex(column, center, space-between);
-    margin-top: -23rem;
-
-    .card-section {
-        @include mixin.flex();
+.low-header {
+    background-color: variables.$blue;
+    @include mixin.flex(row, center, space-between); 
+    &.-container {
+        @include mixin.flex(row, center, flex-end);
     }
-    .info-cube {
-        background-color: variables.$white;
+    & > img {
+        @include mixin.rectangle(18px, 130px);
     }
-
+    a {
+        
+    }
+    input {
+        background: none;
+        width: 8rem;
+    }   
 }

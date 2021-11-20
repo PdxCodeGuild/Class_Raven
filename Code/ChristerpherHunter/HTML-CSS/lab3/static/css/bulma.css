@@ -10337,36 +10337,4 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
-}
-
-.top-header {
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1rem 0.3rem 1rem;
-  font-size: smaller;
-}
-
-.low-header {
-  background-color: #007bff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.low-header.-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-.low-header > img {
-  height: 18px;
-  width: 130px;
-}
-.low-header input {
-  background: none;
-  width: 8rem;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=bulma.css.map */

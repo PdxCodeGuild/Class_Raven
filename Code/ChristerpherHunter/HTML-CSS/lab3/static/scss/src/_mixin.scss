@@ -18,3 +18,8 @@
         border-bottom-right-radius: $bottom-right;
     }
 }
+
+@mixin rectangle($height, $width:$height) {
+    height: $height;
+    width: $width;
+}
