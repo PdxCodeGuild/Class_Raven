@@ -16,33 +16,41 @@ You can use a custom font, fancy colors, and make generate fake content using an
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 	<body>
-		<header class="header">
-			<h1>Blog</h1>
-		</header>
-		<div class="flex-container">
-			<div class="flex-items">
-				<ul class="left-nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-				<ul class="right-nav">
+		<section id="nav-top" class="flex-container">
+			<div id="left-nav" class="flex-container flex-column left-y left-x">
+				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</div>
-			<div class="flex-items">
+			<header class="center-x center-y">
+				<h1>Blog</h1>
+			</header>
+		</section>
+		<section id="nav" class="">
+			<div id="right-nav center-x center-y">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="blogs" class="flex-container center-y center-x">
+			<div id="post" class="flex-container center-y center-x">
 				<h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
 					delectus, quis excepturi porro enim sit.
 				</p>
 			</div>
-			<div class="flex-items">
+			<div id="post" class="flex-container center-y center-x">
 				<h2>Lorem, ipsum dolor.</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
@@ -52,7 +60,7 @@ You can use a custom font, fancy colors, and make generate fake content using an
 					quas neque aspernatur doloribus delectus ab nemo!
 				</p>
 			</div>
-			<div class="flex-items">
+			<div id="post" class="flex-container center-y center-x">
 				<h2>Lorem ipsum dolor sit amet.</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum minima
@@ -62,13 +70,13 @@ You can use a custom font, fancy colors, and make generate fake content using an
 					voluptatem eos soluta totam mollitia iure ullam ratione maxime.
 				</p>
 			</div>
-			<div class="flex-items">
+			<div id="post" class="flex-container center-y center-x">
 				<h2>Lorem ipsum dolor sit.</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
 					numquam a animi similique asperiores accusamus quos sunt.
 				</p>
 			</div>
-		</div>
+		</section>
 	</body>
 </html>
