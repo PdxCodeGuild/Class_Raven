@@ -8,6 +8,15 @@
     
 }
 
+nav ul li a{
+    color: darkgreen;
+    font-size: large;
+}
+
+nav ul li a:hover{
+    color:orange;
+}
+
 
 
 #top-bar{
@@ -40,6 +49,7 @@
 }
 
 #mission-div{
+    
     background-image: url('green.jpg');
     background-size:cover;
     background-repeat:no-repeat;
@@ -64,6 +74,7 @@
  }
  #mission-text{
     display: flex;
+    background-color: rgb(0,0,0, 0.7);
     justify-content:center;
     font-size: x-large;
     padding: 30px 30px;
@@ -71,12 +82,111 @@
     margin-left: 100px;
     margin-right: 100px;
     border-style:groove;
-    max-width: 100vw;
+    max-width: 75vw;
     line-height: 100%;
 
-
-
  }
+
+#donate{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#donate-text{
+    display: flex;
+    background-color: rgb(0,0,0, 0.7);
+    justify-content:center;
+    font-size: x-large;
+    padding: 30px 30px;
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-style:groove;
+    max-width: 75vw;
+    line-height: 150%;
+
+}
+
+#contact-section{
+    
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+    
+    
+}
+
+#contact-header{
+
+    display: flex;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+    border-style: solid;
+
+
+}
+
+#contact{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+
+    
+    
+    
+
+
+}
+
+#phone{
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    padding-top: 40px;
+    font-size: large;
+    border-style: solid;
+    border-right: black;
+}
+
+#email{
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    padding-top: 40px;
+    font-size: large;
+    border-style: solid;
+    border-right: black;
+    border-left: black;
+}
+
+#donate-link{
+
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    padding-top: 40px;
+    font-size: large;
+    border-style: solid;
+    border-right: black;
+    border-left: black;
+    
+
+}
 
 
 
