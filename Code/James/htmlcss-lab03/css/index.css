@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@300&display=swap');
-/* font-family: 'Bebas Neue', cursive;
+
 
 font-family: 'Merriweather Sans', sans-serif; */
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.5fr 0.9fr 1.2fr;
+  grid-template-rows: 0.4fr 1.5fr 1.2fr 0.9fr;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -20,6 +20,7 @@ font-family: 'Merriweather Sans', sans-serif; */
 
 .nav_bar { 
   grid-area: nav_bar;
+  padding: 16px;
   
   
   }
@@ -29,6 +30,7 @@ img {
   width: 90px;
   height: 100px;
   float: left;
+  padding: 8px;
  
 }
 
@@ -38,8 +40,8 @@ ul {
   margin: 0;
   padding: 16px;
   text-align: right;
-  word-spacing: 30px;
-  /* background-color: blue; */
+  word-spacing: 20px;
+  background-color: #1d1e22;
 } 
 
 li {
@@ -48,9 +50,10 @@ li {
 
 .list:link {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: white;
   display: inline;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
 .list:hover {
@@ -64,27 +67,24 @@ li {
   grid-area: body;
   position: relative;
   text-align: center;
-  
-  
-  
-  
-
+  padding: 16px;
 }
 
 p  {
-  margin-top: 20%;
-  /* text-align: left */
+  
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.3rem;
   color: white;
   margin: auto;
   max-width: 500px;
   line-height: 40px;
+  padding: 16px;
   
 }
 
 .underline {
   text-decoration: underline;
+  padding: 16px;
   
 }
 
@@ -93,11 +93,15 @@ button {
   border: none;
   color: white;
   text-align: center;
+  padding: 4px;
+  
   
 }
 
 .pictures { 
   grid-area: pictures;
+  padding: 16px;
+  
   
   
   
@@ -115,22 +119,34 @@ button {
   width: 100%;
 }
 
-.footing p { 
+.footing  { 
   grid-area: footing;
-  top: 50%;
-  margin-top: 200px;
-
-}
-
-.test {
-  margin-top: 100px;
-  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d1e22;
   color: white;
   text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  line-height: 40px;
+  padding: 16px;
+  
+ 
+}
+
+.img2 {
+  position: fixed;
+  left: 47%;
+  bottom: 60px;
+  padding: 16px;
+
 }
 
 body {
     background-color: #1d1e22;
+    
 }
 
 /* adds responsive design */
