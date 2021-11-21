@@ -7,6 +7,9 @@
 body {
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,
                 Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    a {
+        text-decoration: none;
+    }
 }
 .top-header {
     background-color: variables.$white;
@@ -49,25 +52,335 @@ body {
             @include mixin.flex(column, flex-start, center);
         }
         .mid-2 {
-            @include mixin.flex();
+            @include mixin.flex(column, center);
+            &-heading {
+                
+                text-align: center;
+                color: #002859;
+                font-size: 21pt;
+            }
+            &-grid-box {
+                display: flex;
+                flex-wrap: wrap;
+                grid-auto-flow: column;
+                grid-template-rows: repeat(auto-fill, 100px);
+                grid-template-columns: repeat(auto-fill, 100px);
+                padding: 40px 20% 5%;
+                .inner-grid {
+                    box-sizing: border-box;
+                    @include mixin.border-radius(6px);
+                    outline: 1px solid black;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    padding: 3px;
+                }
+            }
         }
         .mid-3 {
             @include mixin.flex(column, center, center);
-            .card-section {
-                @include mixin.flex(row, center, center);
+            margin-bottom: 10rem;
+            &-header {
+                text-align: center;
+                color: #002859;
+                font-size: 29pt;
+            }
+            &-card-section {
+                @include mixin.flex(row, center, space-between);
+                flex-wrap: wrap;
+                &-1 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin: -0.3rem 2rem 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+                &-2 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin: -0.3rem 2rem 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+                &-3 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin: -0.3rem 2rem 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+                &-4 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin: -0.3rem 0 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+            &-button {
+                margin-top: 3rem;
+                @include mixin.border-radius(25px);
+                background-color: yellow;
+                padding: 1rem;
+                font-size: 12px;
+                font-weight: 700;
+                text-align: center;
+                cursor: pointer;
+                font-family: OpenSans-Bold,sans-serif;
             }
         }
         .mid-4 {
             @include mixin.flex(row, center, center);
+            margin: -5rem 0 5rem 0;
         }
         .mid-5 {
             @include mixin.flex(row, center, center);
-            .bottom-cards {
-                @include mixin.flex(column, center, space-between);
+            // @include mixin.rectangle(30vh, 30vw);            
+            &-left {
+                @include mixin.flex(column, center, center);
+                &-image{
+                    img {
+                        @include mixin.rectangle(152.3335px,326.775px);
+                        @include mixin.border-radius(25px, 0, 25px, 0);
+                    }
+                    
+                }
+                &-content {
+                    @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(300px, 326.775px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin-top: -1.3rem;
+                    box-shadow: 1px 4px #888888;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+            &-mid {
+                @include mixin.flex(column, center, center);
+                &-image{
+                    img {
+                        @include mixin.rectangle(152.3335px,326.775px);
+                        @include mixin.border-radius(25px, 0, 25px, 0);
+                    }
+                }
+                &-content {
+                    @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(300px, 326.775px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin-top: -1.3rem;
+                    box-shadow: 1px 4px #888888;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &-right {
+                @include mixin.flex(column, center, center);
+                &-image{
+                    img {
+                        @include mixin.rectangle(152.3335px,326.775px);
+                        @include mixin.border-radius(25px, 0, 25px, 0);
+                    }
+                }
+                &-content {
+                    @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(300px, 326.775px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px black solid;
+                    margin-top: -1.3rem;
+                    box-shadow: 1px 4px #888888;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+            &-bot-text {
+                font-weight: 700;
+                color: black;
+                text-align: center;
+                font-size: 12px;
+                padding-bottom: 20px;
+                padding-top: 25px;
             }
         }
     }
 }
+
 
 .low-footer {
     background-color: #0048bb;
