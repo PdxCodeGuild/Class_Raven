@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@300&display=swap');
+
+
+font-family: 'Merriweather Sans', sans-serif; */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1.2fr 0.9fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  grid-template-areas:
+    "nav_bar nav_bar nav_bar"
+    "body body body"
+    "pictures pictures pictures"
+    "footing footing footing";
+}
+
+.nav_bar { 
+  grid-area: nav_bar;
+  padding: 16px;
+  
+  
+  }
+
+img {
+  vertical-align: baseline;
+  width: 90px;
+  height: 100px;
+  float: left;
+  padding: 8px;
+ 
+}
+
+ul {
+  font-family: 'Merriweather Sans', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 16px;
+  text-align: right;
+  word-spacing: 20px;
+  background-color: #1d1e22;
+} 
+
+li {
+  display: inline;
+}
+
+.list:link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  display: inline;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.list:hover {
+  color: grey;
+}
+
+
+
+
+.body { 
+  grid-area: body;
+  position: relative;
+  text-align: center;
+  padding: 16px;
+}
+
+p  {
+  
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  margin: auto;
+  max-width: 500px;
+  line-height: 40px;
+  padding: 16px;
+  
+}
+
+.underline {
+  text-decoration: underline;
+  padding: 16px;
+  
+}
+
+button {
+  background-color: #29282d;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  
+  
+}
+
+.pictures { 
+  grid-area: pictures;
+  padding: 16px;
+  
+  
+  
+  
+  
+ }
+
+.imgs {
+  float: right;
+  padding: 4px;
+  
+}
+
+.line {
+  color: white;
+  width: 100%;
+}
+
+.footing  { 
+  grid-area: footing;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d1e22;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  line-height: 40px;
+  padding: 16px;
+  
+ 
+}
+
+.img2 {
+  position: fixed;
+  left: 47%;
+  bottom: 60px;
+  padding: 16px;
+
+}
+
+body {
+    background-color: #1d1e22;
+    
+}
+
+/* adds responsive design */
+/* @media (min-width: 768px {} */ 
