@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@300&display=swap');
+/* font-family: 'Bebas Neue', cursive;
+
+font-family: 'Merriweather Sans', sans-serif; */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 0.9fr 1.2fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  grid-template-areas:
+    "nav_bar nav_bar nav_bar"
+    "body body body"
+    "pictures pictures pictures"
+    "footing footing footing";
+}
+
+.nav_bar { 
+  grid-area: nav_bar;
+  
+  
+  }
+
+img {
+  vertical-align: baseline;
+  width: 90px;
+  height: 100px;
+  float: left;
+ 
+}
+
+ul {
+  font-family: 'Merriweather Sans', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 16px;
+  text-align: right;
+  word-spacing: 30px;
+  /* background-color: blue; */
+} 
+
+li {
+  display: inline;
+}
+
+.list:link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  display: inline;
+}
+
+.list:hover {
+  color: grey;
+}
+
+
+
+
+.body { 
+  grid-area: body;
+  position: relative;
+  text-align: center;
+  
+  
+  
+  
+
+}
+
+p  {
+  margin-top: 20%;
+  /* text-align: left */
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  margin: auto;
+  max-width: 500px;
+  line-height: 40px;
+  
+}
+
+.underline {
+  text-decoration: underline;
+  
+}
+
+button {
+  background-color: #29282d;
+  border: none;
+  color: white;
+  text-align: center;
+  
+}
+
+.pictures { 
+  grid-area: pictures;
+  
+  
+  
+  
+ }
+
+.imgs {
+  float: right;
+  padding: 4px;
+  
+}
+
+.line {
+  color: white;
+  width: 100%;
+}
+
+.footing p { 
+  grid-area: footing;
+  top: 50%;
+  margin-top: 200px;
+
+}
+
+.test {
+  margin-top: 100px;
+  
+  color: white;
+  text-align: center;
+}
+
+body {
+    background-color: #1d1e22;
+}
+
+/* adds responsive design */
+/* @media (min-width: 768px {} */ 
