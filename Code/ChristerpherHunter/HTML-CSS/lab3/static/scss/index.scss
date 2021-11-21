@@ -48,15 +48,47 @@ body {
     @include mixin.flex(column, center, center);
     .center-box {
         @include mixin.flex(column, center, center);
+        background-image: url("../assets/home-header.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        
         .mid-1 {
-            @include mixin.flex(column, flex-start, center);
+            @include mixin.flex(column, flex-start);
+            padding-top: 30rem;
+            &-side-bar {
+                &-butts {
+                    @include mixin.flex(row, center, center);
+                    position: relative;
+                    left: -750px;
+                    top: -400px;
+                    text-align: center;
+                    outline: none 1px solid;
+                    @include mixin.border-radius(0, 0, 3rem, 3rem);
+                    background-color: #002859;
+                    width: 15vw;
+                    margin: 0.5vh 0;
+                    transition-duration: 0.7s;
+                    &:hover {
+                        background-color: blue;
+                    }
+                    p {
+                        color: white;
+                        font-size: 20pt;
+                        margin-left: 25px;
+                    }
+                }
+            }
         }
         .mid-2 {
             @include mixin.flex(column, center);
+            background-image: url("../assets/home-service-header.e9330b88.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -70px;
             &-heading {
                 
                 text-align: center;
-                color: #002859;
+                color: white;
                 font-size: 21pt;
             }
             &-grid-box {
@@ -69,10 +101,13 @@ body {
                 .inner-grid {
                     box-sizing: border-box;
                     @include mixin.border-radius(6px);
-                    outline: 1px solid black;
+                    outline: 2px solid white;
                     margin-left: 10px;
                     margin-bottom: 10px;
                     padding: 3px;
+                    color: white;
+                    line-height: 3px;
+                    font-size: small;
                 }
             }
         }
