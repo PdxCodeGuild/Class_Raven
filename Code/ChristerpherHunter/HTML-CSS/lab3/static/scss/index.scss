@@ -7,41 +7,57 @@
 body {
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,
                 Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    height: 100vh;
     a {
         text-decoration: none;
     }
 }
 .top-header {
     background-color: variables.$white;
-    @include mixin.flex(row, center, space-between);
+    @include mixin.rectangle(5vh, 100%);
+    @include mixin.flex(row, center, flex-end);
     // TRBL: top-right-bottom-left
-    padding: 1rem 1rem 0.3rem 1rem;
     font-size: smaller;
-}
-
-.low-header {
-    background-color: variables.$blue;
-    @include mixin.flex(row, center, space-between); 
-
-    &-top-container {
-        @include mixin.flex(row, center, space-between);
-        & > figure {
-            @include mixin.rectangle(44px);
-            & > img {
-                @include mixin.rectangle(40px);
-            }
-        }
-        // mobile consideration
-        font-size: 0.6rem;      
+    p {
+        margin-right: 3rem;
+        font-size: 15pt;
+        font-weight: 800;
     }
-
-    &.-low-container {
-        @include mixin.flex(row, center, flex-end);
-    }       
-    input {
-        background: none;
-        width: 8rem;
-    }   
+    &-button {
+        margin-right: 8rem;
+        @include mixin.border-radius(25px);
+        background-color: yellow;
+        padding: 0.7rem;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        font-family: OpenSans-Bold,sans-serif;
+    }
+}
+.dummy-border {
+    @include mixin.rectangle(0.5vh, 100%);
+    background-color: navy;
+}
+.low-header {
+    background-color: #0048bb;
+    @include mixin.flex(row, center, space-between);
+    &-logo {
+        img {
+            @include mixin.rectangle(4vh, 12vw);
+            margin-left: 2rem;
+            padding: 0.7rem;
+        }
+    }
+    &-links {
+        @include mixin.flex(row, center, space-between);
+        p {
+            padding: 0 2rem 0 2rem;
+            color: white;
+            font-size: larger;
+            font-weight: 800;   
+        }
+    }
 }
 
 .main-body {
@@ -59,17 +75,20 @@ body {
                 &-butts {
                     @include mixin.flex(row, center, center);
                     position: relative;
-                    left: -750px;
+                    float: top;
+                    left: -829px;
                     top: -400px;
                     text-align: center;
                     outline: none 1px solid;
                     @include mixin.border-radius(0, 0, 3rem, 3rem);
                     background-color: #002859;
-                    width: 15vw;
+                    width: 25vw;
                     margin: 0.5vh 0;
                     transition-duration: 0.7s;
                     &:hover {
                         background-color: blue;
+                        left: -800px;
+                        // width: 16vw;
                     }
                     p {
                         color: white;
@@ -114,6 +133,8 @@ body {
         .mid-3 {
             @include mixin.flex(column, center, center);
             margin-bottom: 10rem;
+            background-color: #1c4696;
+            width: 100%;
             &-header {
                 text-align: center;
                 color: #002859;
@@ -123,10 +144,12 @@ body {
                 @include mixin.flex(row, center, space-between);
                 flex-wrap: wrap;
                 &-1 {
+                    // @include mixin.flex(column, center, center);
                     @include mixin.rectangle(220px, 272px);
-                    text-align: center;
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    background-color: white;
+                    text-align: center;
+                    border: 1px lightgray solid;
                     margin: -0.3rem 2rem 0 0;
                     #top-row {
                         color: #0048bb;
@@ -159,7 +182,8 @@ body {
                     @include mixin.rectangle(220px, 272px);
                     text-align: center;
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    background-color: white;
+                    border: 1px lightgray solid;
                     margin: -0.3rem 2rem 0 0;
                     #top-row {
                         color: #0048bb;
@@ -192,7 +216,8 @@ body {
                     @include mixin.rectangle(220px, 272px);
                     text-align: center;
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    background-color: white;
+                    border: 1px lightgray solid;
                     margin: -0.3rem 2rem 0 0;
                     #top-row {
                         color: #0048bb;
@@ -225,7 +250,8 @@ body {
                     @include mixin.rectangle(220px, 272px);
                     text-align: center;
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    background-color: white;
+                    border: 1px lightgray solid;
                     margin: -0.3rem 0 0 0;
                     #top-row {
                         color: #0048bb;
@@ -256,7 +282,7 @@ body {
                 }
             }
             &-button {
-                margin-top: 3rem;
+                margin: 3rem;
                 @include mixin.border-radius(25px);
                 background-color: yellow;
                 padding: 1rem;
@@ -287,7 +313,7 @@ body {
                     @include mixin.flex(column, center, center);
                     @include mixin.rectangle(300px, 326.775px);
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    border: 1px lightgray solid;
                     margin-top: -1.3rem;
                     box-shadow: 1px 4px #888888;
                     #top-row {
@@ -330,7 +356,7 @@ body {
                     @include mixin.flex(column, center, center);
                     @include mixin.rectangle(300px, 326.775px);
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    border: 1px lightgray solid;
                     margin-top: -1.3rem;
                     box-shadow: 1px 4px #888888;
                     #top-row {
@@ -373,7 +399,7 @@ body {
                     @include mixin.flex(column, center, center);
                     @include mixin.rectangle(300px, 326.775px);
                     @include mixin.border-radius(0, 25px, 0, 25px);
-                    border: 1px black solid;
+                    border: 1px lightgray solid;
                     margin-top: -1.3rem;
                     box-shadow: 1px 4px #888888;
                     #top-row {
@@ -418,8 +444,9 @@ body {
 
 
 .low-footer {
+    @include mixin.flex(row, center, space-evenly);
     background-color: #0048bb;
-    @include mixin.rectangle(10vh, 101%);
+    @include mixin.rectangle(20vh, 101%);
     position: relative;
     bottom: 0;
     // @include mixin.flex(row, center, space-between);

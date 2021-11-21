@@ -110,6 +110,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100vh;
 }
 body a {
   text-decoration: none;
@@ -117,45 +118,61 @@ body a {
 
 .top-header {
   background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1rem 0.3rem 1rem;
-  font-size: smaller;
-}
-
-.low-header {
-  background-color: #007bff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.low-header-top-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.6rem;
-}
-.low-header-top-container > figure {
-  height: 44px;
-  width: 44px;
-}
-.low-header-top-container > figure > img {
-  height: 40px;
-  width: 40px;
-}
-.low-header.-low-container {
+  height: 5vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+  font-size: smaller;
 }
-.low-header input {
-  background: none;
-  width: 8rem;
+.top-header p {
+  margin-right: 3rem;
+  font-size: 15pt;
+  font-weight: 800;
+}
+.top-header-button {
+  margin-right: 8rem;
+  border-radius: 25px;
+  background-color: yellow;
+  padding: 0.7rem;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  font-family: OpenSans-Bold, sans-serif;
+}
+
+.dummy-border {
+  height: 0.5vh;
+  width: 100%;
+  background-color: navy;
+}
+
+.low-header {
+  background-color: #0048bb;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.low-header-logo img {
+  height: 4vh;
+  width: 12vw;
+  margin-left: 2rem;
+  padding: 0.7rem;
+}
+.low-header-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.low-header-links p {
+  padding: 0 2rem 0 2rem;
+  color: white;
+  font-size: larger;
+  font-weight: 800;
 }
 
 .main-body {
@@ -186,7 +203,8 @@ body a {
   align-items: center;
   justify-content: center;
   position: relative;
-  left: -750px;
+  float: top;
+  left: -829px;
   top: -400px;
   text-align: center;
   outline: none 1px solid;
@@ -195,12 +213,13 @@ body a {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 3rem;
   background-color: #002859;
-  width: 15vw;
+  width: 25vw;
   margin: 0.5vh 0;
   transition-duration: 0.7s;
 }
 .main-body .center-box .mid-1-side-bar-butts:hover {
   background-color: blue;
+  left: -800px;
 }
 .main-body .center-box .mid-1-side-bar-butts p {
   color: white;
@@ -247,6 +266,8 @@ body a {
   align-items: center;
   justify-content: center;
   margin-bottom: 10rem;
+  background-color: #1c4696;
+  width: 100%;
 }
 .main-body .center-box .mid-3-header {
   text-align: center;
@@ -263,12 +284,13 @@ body a {
 .main-body .center-box .mid-3-card-section-1 {
   height: 220px;
   width: 272px;
-  text-align: center;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  background-color: white;
+  text-align: center;
+  border: 1px lightgray solid;
   margin: -0.3rem 2rem 0 0;
 }
 .main-body .center-box .mid-3-card-section-1 #top-row {
@@ -305,7 +327,8 @@ body a {
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  background-color: white;
+  border: 1px lightgray solid;
   margin: -0.3rem 2rem 0 0;
 }
 .main-body .center-box .mid-3-card-section-2 #top-row {
@@ -342,7 +365,8 @@ body a {
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  background-color: white;
+  border: 1px lightgray solid;
   margin: -0.3rem 2rem 0 0;
 }
 .main-body .center-box .mid-3-card-section-3 #top-row {
@@ -379,7 +403,8 @@ body a {
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  background-color: white;
+  border: 1px lightgray solid;
   margin: -0.3rem 0 0 0;
 }
 .main-body .center-box .mid-3-card-section-4 #top-row {
@@ -409,7 +434,7 @@ body a {
   cursor: pointer;
 }
 .main-body .center-box .mid-3-button {
-  margin-top: 3rem;
+  margin: 3rem;
   border-radius: 25px;
   background-color: yellow;
   padding: 1rem;
@@ -457,7 +482,7 @@ body a {
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  border: 1px lightgray solid;
   margin-top: -1.3rem;
   box-shadow: 1px 4px #888888;
 }
@@ -512,7 +537,7 @@ body a {
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  border: 1px lightgray solid;
   margin-top: -1.3rem;
   box-shadow: 1px 4px #888888;
 }
@@ -567,7 +592,7 @@ body a {
   border-top-right-radius: 0;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  border: 1px black solid;
+  border: 1px lightgray solid;
   margin-top: -1.3rem;
   box-shadow: 1px 4px #888888;
 }
@@ -607,8 +632,12 @@ body a {
 }
 
 .low-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: #0048bb;
-  height: 10vh;
+  height: 20vh;
   width: 101%;
   position: relative;
   bottom: 0;

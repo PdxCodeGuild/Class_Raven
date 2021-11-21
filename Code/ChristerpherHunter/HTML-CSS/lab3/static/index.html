@@ -11,28 +11,39 @@
 
 <body>
     <header class="top-header">
-        <button class="appointment" type="button" oneclick="alert('Appointment Scheduled!')">
+        <button class="top-header-button" type="button" oneclick="alert('Appointment Scheduled!')">
             SCHEDULE AN APPOINTMENT
         </button>
-        <a class="link" href="">Select your Store</a>
+        <a class="link" href="">
+            <p>Select your Store</p>
+        </a>
     </header>
+    <div class="dummy-border"></div>
     <header class="low-header">
-        <div class="low-header-top-container">
-            <figure class="image is-2by1">
-                <a href="">
-                    <img src="assets/sears_logo.8d3f1b17.png" alt="sears-store-icon">
-                </a>
-            </figure>
-            <a href="" class="services" target="_blank">TIRES</a>
-            <a href="" class="services" target="_blank">AUTO MAINTENANCE</a>
-            <a href="" class="services" target="_blank">AUTO REPAIR</a>
-            <a href="" class="services" target="_blank">OFFERS</a>
+        <div class="low-header-logo">
+            <a href="">
+                <img src="assets/sears_logo.top.header.f7f2a3d1.png" alt="sears-store-icon">
+            </a>
         </div>
-        <div class="low-header-low-container">
+        <div class="low-header-links">
+            <a href="" class="services" target="_blank">
+                <p> TIRES</p>
+            </a>
+            <a href="" class="services" target="_blank">
+                <p> AUTO MAINTENANCE</p>
+            </a>
+            <a href="" class="services" target="_blank">
+                <p> AUTO REPAIR</p>
+            </a>
+            <a href="" class="services" target="_blank">
+                <p> OFFERS</p>
+            </a>
+        </div>
+        <div class="low-header-search-bar">
             <a href="" target="_blank" id="search">
                 <img src="assets/maggnifying_glass.png" alt="search-icon">&nbsp;&nbsp;
             </a>
-            <input class="input is-small is-loading" type="text"></input>
+            <input class="" type="text"></input>
         </div>
     </header>
     <div class="main-body">
@@ -160,21 +171,26 @@
             <div class="mid-3">
                 <p class="mid-3-header">Your Car is in the Right Hands</p>
                 <div class="mid-3-card-section">
-                    <a href="" target="_blank">
+                    <div class="mid-3-card">
                         <div class="mid-3-card-section-1-1">
-                            <img src="assets/home-tire-service.9968d562.png" alt="Tires">
+                            <a href="" target="_blank">
+                                <img src="assets/home-tire-service.9968d562.png" alt="Tires">
+                            </a>
                         </div>
                         <div class="mid-3-card-section-1">
-                            <p id="top-row">TIRES</p>
-                            <p id="dummy"></p>
-                            <p id="middle-row">When it comes to your car or truck, there’s a lot riding on your
-                                tires.</p>
-                            <p id="bottom-row">LEARN MORE</p>
+                            <a href="" target="_blank">
+                                <p id="top-row">TIRES</p>
+                                <p id="dummy"></p>
+                                <p id="middle-row">When it comes to your car or truck, there’s a lot riding on your
+                                    tires.</p>
+                                <p id="bottom-row">LEARN MORE</p>
+                            </a>
                         </div>
-                    </a>
-                    <a href="" target="_blank">
+                    </div>
+                    <div class="mid-3-card">
                         <div class="mid-3-card-section-2-1">
-                            <img src="assets/home-brake-service.f1d31a32.png" alt="Brakes">
+                            <a href="" target="_blank">
+                                <img src="assets/home-brake-service.f1d31a32.png" alt="Brakes">
                         </div>
                         <div class="mid-3-card-section-2">
                             <p id="top-row">BRAKES</p>
@@ -182,11 +198,13 @@
                             <p id="middle-row">Your brakes are one of the most important components of your
                                 vehicle.</p>
                             <p id="bottom-row">LEARN MORE</p>
+                            </a>
                         </div>
-                    </a>
-                    <a href="" target="_blank">
+                    </div>
+                    <div class="mid-3-card">
                         <div class="mid-3-card-section-3-1">
-                            <img src="assets/home-service.115b8a5b.png" alt="Services">
+                            <a href="" target="_blank">
+                                <img src="assets/home-service.115b8a5b.png" alt="Services">
                         </div>
                         <div class="mid-3-card-section-3">
                             <p id="top-row">SERVICES</p>
@@ -195,11 +213,13 @@
                                 and
                                 even more.</p>
                             <p id="bottom-row">LEARN MORE</p>
+                            </a>
                         </div>
-                    </a>
-                    <a href="" target="_blank">
+                    </div>
+                    <div class="mid-3-card">
                         <div class="mid-3-card-section-4-1">
-                            <img src="assets/home-battery-service.84db62b9.png" alt="Battery">
+                            <a href="" target="_blank">
+                                <img src="assets/home-battery-service.84db62b9.png" alt="Battery">
                         </div>
                         <div class="mid-3-card-section-4">
                             <p id="top-row">BATTERIES</p>
@@ -208,8 +228,9 @@
                                 car.
                             </p>
                             <p id="bottom-row">LEARN MORE</p>
+                            </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <button class="mid-3-button" type="button" oneclick="alert('Appointment Scheduled!')">SCHEDULE AN
                     APPOINTMENT TODAY!</button>
@@ -350,6 +371,7 @@
                 </div>
             </footer>
         </div>
+    </div>
 </body>
 
 </html>
