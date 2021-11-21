@@ -1,8 +1,13 @@
+@use "src/bulma/sass/utilities/_all.sass";    
+@use "src/bulma/sass/elements/image.sass";
 @use "src/variables";
 @use "src/mixin";
 @use "src/functions";
-@use "src/bulma/bulma.sass";
 
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,
+                Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
 .top-header {
     background-color: variables.$white;
     @include mixin.flex(row, center, space-between);
@@ -14,17 +19,115 @@
 .low-header {
     background-color: variables.$blue;
     @include mixin.flex(row, center, space-between); 
-    &.-container {
+
+    &-top-container {
+        @include mixin.flex(row, center, space-between);
+        & > figure {
+            @include mixin.rectangle(44px);
+            & > img {
+                @include mixin.rectangle(40px);
+            }
+        }
+        // mobile consideration
+        font-size: 0.6rem;      
+    }
+
+    &.-low-container {
         @include mixin.flex(row, center, flex-end);
-    }
-    & > img {
-        @include mixin.rectangle(18px, 130px);
-    }
-    a {
-        
-    }
+    }       
     input {
         background: none;
         width: 8rem;
+    }   
+}
+
+.main-body {
+    @include mixin.flex(column, center, center);
+    .center-box {
+        @include mixin.flex(column, center, center);
+        .mid-1 {
+            @include mixin.flex(column, flex-start, center);
+        }
+        .mid-2 {
+            @include mixin.flex();
+        }
+        .mid-3 {
+            @include mixin.flex(column, center, center);
+            .card-section {
+                @include mixin.flex(row, center, center);
+            }
+        }
+        .mid-4 {
+            @include mixin.flex(row, center, center);
+        }
+        .mid-5 {
+            @include mixin.flex(row, center, center);
+            .bottom-cards {
+                @include mixin.flex(column, center, space-between);
+            }
+        }
+    }
+}
+
+.low-footer {
+    background-color: #0048bb;
+    @include mixin.rectangle(10vh, 101%);
+    position: relative;
+    bottom: 0;
+    // @include mixin.flex(row, center, space-between);
+    &-left-container {
+            @include mixin.flex(row, center, space-around);
+        &-image-container {
+            @include mixin.flex(column, center, center);
+            // padding-top: 2rem;
+            #foot-text {
+                margin: 0 0;
+                font-size: 9pt;
+                color: variables.$white;
+            }
+            #sears-logo {
+                @include mixin.rectangle(44px, 309px);
+                padding-top: 2rem;
+            }
+            #ase-cert-badge {
+                @include mixin.rectangle(60px, 80px);
+            }
+            #row-links {
+                @include mixin.flex(row, center, space-between);
+                p {
+                    // screen size consideration
+                    margin: 1.2rem 0.7rem;
+                    color: white;
+                    font-weight: 700;
+                    cursor: pointer;
+                    font-size: 10pt;
+                }
+            }
+        }
+        &-link-container {
+            @include mixin.flex(column, center, center);
+            padding: 2.3rem 0 0 0;      
+            #other-row-links {
+                @include mixin.flex(row, center, center);
+                p {
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                font-size: 10pt;
+                margin: 0.4rem 1rem;
+                padding: 0.5rem 0;
+                }
+            }
+            #low-foot-foot-section {
+            @include mixin.flex(row, center, space-between);
+            p {
+                margin: 0.7rem 2rem;
+                color: white;
+                font-weight: lighter;
+                cursor: pointer;
+                font-size: 9pt;
+                }
+            }
+        }
     }   
 }
