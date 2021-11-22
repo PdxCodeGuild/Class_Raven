@@ -232,7 +232,8 @@ span, h1{
   display: flex;   
   flex: 1;
   justify-content: space-between;
-  flex-direction: column;   
+  flex-direction: column; 
+  margin-top: -8px;  
 }
 .card .thumb{
   padding-bottom: 60%;
@@ -251,7 +252,7 @@ h1{
   color: #333;
 }
 .card span{
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   color: #999;
   text-transform: uppercase;
@@ -267,11 +268,12 @@ button{
   text-align: center;
   display: inline-block;
   font-size:13px;
-  margin-top: 10px;
+  margin-top: 14px;
   border-radius: 25px;
   max-width: 115px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -10px;
 }
 
 button:hover{
