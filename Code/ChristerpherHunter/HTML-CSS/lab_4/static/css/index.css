@@ -1,0 +1,15 @@
+.main-head-body {
+  display: grid;
+  height: 5vh;
+  width: clamp(50vw, 100vw, 100%);
+  background-color: blue;
+  grid-template-columns: 33em, 66em, 33em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-head-body-butts {
+  height: 2em;
+  width: 10em;
+}/*# sourceMappingURL=index.css.map */

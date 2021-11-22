@@ -2,3 +2,15 @@
 @use "src/mixin";
 @use "src/functions";
 
+.main-head {    
+    &-body {
+        display: grid; 
+        @include mixin.rectangle(5vh, clamp(50vw, 100vw, 100%));
+        background-color: blue;
+        grid-template-columns: 33em, 66em, 33em;
+        @include mixin.flex(row, center, space-around);
+        &-butts {
+            @include mixin.rectangle(2em, 10em);
+        }
+    }
+}
