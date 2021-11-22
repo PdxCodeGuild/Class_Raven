@@ -46,6 +46,9 @@ body{
 li.Menu-item.Menu-item--color6:hover{
   font-size: 1.3rem;
 }
+li.Menu-item.Menu-item--color6{
+    font-size: 1rem;
+}
 
 /* --prevents "about us" from dislodging other menu items-- */ 
 .Menu-item:hover{
