@@ -40,7 +40,7 @@ body{
   color: #fff;
   transition: all .4s;
   cursor: pointer;
-  min-width: 80px;
+
 }
 
 li.Menu-item.Menu-item--color6:hover{
@@ -131,7 +131,7 @@ li.Menu-item.Menu-item--color6:hover{
   margin-bottom:25px;
   background: linear-gradient(90deg, rgba(42,157,143,1) 0%, rgba(231,184,64,1) 50%, rgba(231,111,81,1) 100%);
   height: 130px;
-  font-size:1.1rem;
+  font-size:1.4rem;
   margin-bottom: -10px;
   box-shadow: 10px rgba(0,0,0,0.4);
 }
@@ -141,6 +141,7 @@ li.Menu-item.Menu-item--color6:hover{
 .content{
   flex-direction:column;
   order:1;
+  font-size:1.1rem;
 }
 .maincontent{
   order:-1;
@@ -148,17 +149,13 @@ li.Menu-item.Menu-item--color6:hover{
 .sidenav{
   display:none;
 }
-  .Menu1 {
-    font-size: 1.2rem;
-  
-}
 
 /* --Keeps the flexbox from getting distorted when hovering is mobile-- */
 body > header > ul > li.Menu-item.Menu-item--color1:hover{
   font-size: 1.3rem;
 }
 body > header > ul > li.Menu-item.Menu-item--color2:hover{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 body > header > ul > li.Menu-item.Menu-item--color3:hover{
   font-size: 1.3rem;
@@ -166,11 +163,30 @@ body > header > ul > li.Menu-item.Menu-item--color3:hover{
 body > header > ul > li.Menu-item.Menu-item--color4:hover{
   font-size: 1.3rem;
 }
+body > header > ul > li.Menu-item.Menu-item--color1{
+  font-size: 1.2rem;
+}
+body > header > ul > li.Menu-item.Menu-item--color2{
+  font-size: 1rem;
+}
+body > header > ul > li.Menu-item.Menu-item--color3{
+  font-size: 1.2rem;
+}
+body > header > ul > li.Menu-item.Menu-item--color4{
+  font-size: 1.2rem;
+}
+
 /* columns:2; did the trick of getting 2 cloumns on @media call. Padding 15px to align with one column items */ 
 .aside{
   height: auto;
   columns: 2;
   padding: 15px;
+}
+h3 {
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-right:10px;
+  
 }
 }
 
@@ -201,7 +217,7 @@ span, h1{
 .card{
   min-height: 100%;
   background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(73, 73, 73, 0.1);
   display: flex;
   flex-direction: column;
   text-decoration: none;
