@@ -49,6 +49,12 @@ li.Menu-item.Menu-item--color6:hover{
 li.Menu-item.Menu-item--color6{
     font-size: 1rem;
 }
+li.Menu-item.Menu-item--color8:hover{
+  font-size: 1.5rem;
+}
+li.Menu-item.Menu-item--color8{
+    font-size: 1.2rem;
+}
 
 /* --prevents "about us" from dislodging other menu items-- */ 
 .Menu-item:hover{
@@ -298,6 +304,7 @@ h2{
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) 
+  
 }
 
 
