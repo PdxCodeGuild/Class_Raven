@@ -5,7 +5,7 @@
     font-family: 'Merriweather Sans', sans-serif;
     margin: 0;
     padding: 0;
-
+    
 }
 /* linear-gradient(rgba(4,9,30,0.7)),rgba(4,9,30,0.7), */
 
@@ -16,7 +16,8 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    filter: brightness(75%);
+    filter: brightness(80%);
+    
     
     
 }
