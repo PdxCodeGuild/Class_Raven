@@ -21,6 +21,7 @@ body{
   height: inherit;
   box-shadow: 0 5px 7px rgba(0,0,0,0.4);
   font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgb(128, 128, 128);
 }
 
 /* --Tried several combos so static would not overlap footer, this did the trick " position: sticky; top: xxpx;".-- */
@@ -29,6 +30,7 @@ body{
   position: sticky; top:50px;
   box-shadow: 0 5px 7px rgba(71, 71, 71, 0.4);
   font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgb(128, 128, 128);
 }
 
 .Menu-item{
