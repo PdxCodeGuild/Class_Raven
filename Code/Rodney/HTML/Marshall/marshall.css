@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+body {
+
+    background-image: url("bluesky.jpg");
+    background-size: cover;
+
+}
+
+/*  #background-pic {
+    
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-image: url("Marshall.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.15
+} */
+
+#border {
+    border-style: dashed;
+    border: rgb(0, 0, 0);
+}
+
+img {
+    border: 5px solid#555;
+}
+
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: left
+}
+
+img {
+    max-width: 90%
+}
+
+.image {
+    flex-basis: 90%
+}
+
+.text {
+    font-family:'Indie Flower', cursive;
+    font-size: 17px;
+    padding-left: 0px;
+}
+
+
+#bio {
+    text-decoration: underline;
+    font-weight:bolder;
+    font-size:xx-large
+}
+
+.main-text{
+    font-family:'Indie Flower', cursive;  
+    font-size: xx-large;
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+}
+
+ul {
+    font-family:'Indie Flower', cursive;
+    font-size:x-large;
+    display: table;
+    margin: 0 auto;
+    
+}
+    
+#title-marshall {
+        font-family:'Indie Flower', cursive;
+        font-weight: bolder;
+        font-size: 50px;
+        text-align: center;
+        justify-content:space-evenly;
+        color: rgb(88, 48, 2);
+        background-color: rgb(133, 184, 204);
+        height: 9vh
+        
+    }

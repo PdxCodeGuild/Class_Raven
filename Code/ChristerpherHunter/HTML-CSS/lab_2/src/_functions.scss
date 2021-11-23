@@ -1,0 +1,10 @@
+
+@function increase-font-size($n) {
+    @if ($n > 2) {
+        @return $n;
+    }
+    @else{
+        @return $n * 4;
+    }    
+}
+

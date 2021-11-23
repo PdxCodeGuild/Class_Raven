@@ -1,0 +1,18 @@
+/* 
+    Not used, hit a hiccup installing NPM and other dependancies so just did CSS for this project.
+*/
+
+$font-stack: cursive,
+sans-serif;
+$primary-color: darkslategray;
+$secondary-color: darkslateblue;
+$tertiary-color: red;
+body {
+    text-align: center;
+    font-family: $font-stack;
+    background-image: url("https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xMDIyMDM2Mi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY0Njg1MTM3OX0.6rhwHN5gm2GmCRwquUJebCG3l0gl5GDtOBBzVFJV95A/img.jpg");
+    background-size: 35vw;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-color: gray;
+}
