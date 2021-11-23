@@ -94,6 +94,7 @@ h5 {
 		font-size: 3vw;
 	}
 }
+/* Massively large 4k monitor */
 @media (min-width: 1400px) {
 	#main-div {
 		width: 60vw;
