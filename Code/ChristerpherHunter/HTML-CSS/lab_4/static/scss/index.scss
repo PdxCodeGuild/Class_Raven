@@ -2,15 +2,100 @@
 @use "src/mixin";
 @use "src/functions";
 
-.main-head {    
+body {
+    background-color: lightgray;
+    min-height: 100%;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        overflow: hidden;
+}
+
+.main-head {
+    display: grid;
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: variables.$coffee;
+    @include mixin.rectangle(10em, clamp(50vw, 100vw, 150%));
     &-body {
-        display: grid; 
-        @include mixin.rectangle(5vh, clamp(50vw, 100vw, 100%));
-        background-color: blue;
-        grid-template-columns: 33em, 66em, 33em;
+        // grid-template-columns: 33em, 66em, 33em;
         @include mixin.flex(row, center, space-around);
         &-butts {
-            @include mixin.rectangle(2em, 10em);
+            @include mixin.rectangle(10em, 4em);
+            @include mixin.border-radius(30px, 30px);
+            border: none;
+            color: black;
+            // padding: 5em, 5em;
+            text-align: center;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            &:hover {
+                @include mixin.border-radius(30px, 55px);
+            }
         }
+    }
+}
+
+.main-body {
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-auto-rows: minmax(150px, auto);
+    &-hero {
+            justify-self: start;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            @include mixin.flex(column, center, center);
+        &-image {
+            background-image: url(../assets/prof-image.jpeg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            border: 2px solid black;
+            border-radius: 50% 50%;
+            @include mixin.rectangle(18em, 18em);
+        }
+        &-text-box {
+            background-color: green;
+            border: 2px solid black;
+            justify-items: center;
+            @include mixin.rectangle(5vh, 15vw);
+        }
+        &-item-3 {
+            
+            background-color: blue;
+            border: 2px solid black;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &-item-4 {
+            @include mixin.rectangle(5vh, 20vw);
+            background-color: blue;
+            border: 2px solid black;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    }
+    
+}
+
+.main-footer {
+    display: grid;
+    position: relative;    
+    bottom: 0;
+    &-container {
+        @include mixin.flex(row, center, space-around);
+        @include mixin.rectangle(10vh, 100vw);
+        background-color: variables.$xanadu;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main-head {
+        @include mixin.rectangle(6em, clamp(50vw, 100vw, 150%));
+    }
+    .main-head-body-butts {
+        @include mixin.rectangle(4em, 10em);
+    }
+    .main-body {
+        grid-template-columns: 190px auto 190px;
     }
 }
