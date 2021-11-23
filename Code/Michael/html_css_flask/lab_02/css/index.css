@@ -10,7 +10,15 @@ Use flexbox and semantic elements (header, nav, section, and footer).
 You can use a custom font, fancy colors, and make generate fake content using an Ipsum.
 */
 
-/* Body */
-* {
-	font-family: "Roboto", sans-serif;
+/* Footer */
+.footer {
+	position: sticky;
+	bottom: 0;
+	z-index: 1;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
