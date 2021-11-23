@@ -10,7 +10,7 @@ env
 
 Code/Theo/django/blog/db.sqlite3
 
-node_modules/
+*/node_modules/
 
 # Django #
 *.log
