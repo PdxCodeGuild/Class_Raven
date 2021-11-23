@@ -10,18 +10,73 @@ Use flexbox and semantic elements (header, nav, section, and footer).
 You can use a custom font, fancy colors, and make generate fake content using an Ipsum.
 */
 
-/* Footer */
-#footer {
-	position: sticky;
+footer {
+	position: static;
 	bottom: 0;
 	z-index: 1;
 }
 
 #nav {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	z-index: 1;
 }
 #carousel {
 	z-index: auto;
+}
+
+.carouselItems {
+	z-index: auto;
+	padding: 3rem;
+	padding-top: 0;
+}
+
+#posts {
+	align-items: center;
+	text-align: center;
+	font-size: 3rem;
+}
+
+#nav-list-spy {
+	width: auto;
+	position: fixed;
+	top: 25vh;
+	right: 0;
+	z-index: 2;
+}
+
+#transparent-nav {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#transparent-nav:hover {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+#mousehide:hover {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	@supports (-webkit-transition) {
+		-webkit-transition: opacity 0.25s ease-out;
+	}
+	opacity: 0;
+}
+#mousehide:not(hover) {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	@supports (-webkit-transition) {
+		-webkit-transition: opacity 0.25s ease-out;
+	}
+	opacity: 1;
+}
+
+p {
+	font-size: 2.5vw;
+}
+h5 {
+	font-size: 3.5vw;
+}
+
+#carousel-control {
+	background-color: red;
 }
