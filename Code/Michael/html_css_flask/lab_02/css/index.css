@@ -11,14 +11,17 @@ You can use a custom font, fancy colors, and make generate fake content using an
 */
 
 /* Footer */
-.footer {
+#footer {
 	position: sticky;
 	bottom: 0;
 	z-index: 1;
 }
 
-.nav {
+#nav {
 	position: fixed;
 	top: 0;
 	z-index: 1;
+}
+#carousel {
+	z-index: auto;
 }
