@@ -4,23 +4,23 @@
 
 Weeks 1, 2, 3, 4, 5: Python
 
-Weeks 6, 7, 8, 9: HTML/CSS/Flask
+**Weeks 6, 7, 8, 9: HTML/CSS/Flask**
 
-Weeks 10, 11, 12, 13: Django
+Weeks 10, 11: Javascript
 
-Weeks 14, 15: Javascript
+Weeks 12, 13, 14, 15: Django
 
 Weeks 16, 17, 18: Capstone project
 
 ### Scheduled Holidays (no class)
 - **Nov 11** - Veterans Day
-- **Nov 25-26** - Thanksgiving
+- **Nov 25 - 26** - Thanksgiving
 - **Dec 24** - Christmas Eve
 - **Dec 31** - New Years Eve
 
 ### Assigned Labs:
 
-<details open>
+<details>
   <summary>Python</summary>
   <ul>
     <li>Lab 02 - Make Change</li>
@@ -52,6 +52,16 @@ Weeks 16, 17, 18: Capstone project
         </ul>
       </li>
     </ul>
+  </ul>
+</details>
+
+<details open>
+  <summary>HTML/CSS/Flask</summary>
+  <ul>
+    <li>Lab 01 - Bio</li>
+    <li>Lab 02 - Blog</li>
+    <li>Lab 03 - Company Page</li>
+    <li>Lab 04 - Personal Portfolio</li>
   </ul>
 </details>
 
@@ -132,8 +142,9 @@ To emulate a more professional Git workflow, we're going to start creating new b
   </details>
 </details>
 
-### Updating a branch
-
+## Updating a branch
+<details>
+<summary>Click to expand</summary>
 After a Pull Request is submitted, the code on that branch will be checked. Necessary corrections or adjustments will be posted as comments on the Pull Request on Github.
 
 Corrections will be made only to that particular branch.
@@ -153,14 +164,65 @@ Corrections will be made only to that particular branch.
 - Only one Pull Request is allowed per branch. A message will be added to the current Pull Request for the new commits.
 
 - Once a lab is complete, its branch will be merged into master.
+</details>
+
+---
 
 ## Additional Resources
 
 <details>
-    <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>
-    <ul>
-    <li>Windows - <a href="https://www.screentogif.com">Screen to GIF</a></li>
-    <li>MacOS - <a href="https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12">GIPHY</a></li>
-    <li>Linux - <a href="https://github.com/phw/peek">Peek</a></li>
-    </ul>
-  </details>
+  <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>
+  <ul>
+    <li>
+      Windows - <a href="https://www.screentogif.com">Screen to GIF</a>
+    </li>
+    <li>
+      MacOS - <a href="https://apps.apple.com/us/app/giphy-capture-the-gif-maker/id668208984?mt=12">GIPHY</a>
+    </li>
+    <li>
+      Linux - <a href="https://github.com/phw/peek">Peek</a>
+    </li>
+  </ul>
+</details>
+
+
+<details>
+  <summary>Webpage Styling</summary>
+
+  <p><b>Flexbox Games</b></p>
+  <ul>
+    <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+    <li><a href="https://mastery.games/flexboxzombies/">Flexbox Zombies</a></li>
+  </ul>
+
+  <p><b>Color Schemes</b></p>
+  <ul>
+    <li><a href="https://coolors.co">Coolors</a></li>
+    <li><a href="https://color.adobe.com/create/color-wheel">Adobe Color Wheel</a></li>
+  </ul>
+
+  <p><b>Design Principles</b></p>
+  <ul>
+    <li><a href="https://www.reddit.com/r/Indiewebdev/comments/lakhft/18_tips_to_make_websites_look_better_and_a/">18 Tips to Make Websites Look Better</a></li>
+    <li><a href="https://www.canva.com/learn/20-web-design-principles-follow/">20 Web Design Principles</a></li>
+    <li><a href="https://blog.tubikstudio.com/anatomy-of-web-page/">Anatomy of a Webpage</a></li>
+    <li><a href="https://blog.devgenius.io/what-are-html-semantic-tags-and-why-should-you-care-a0403972a217">What are Semantic HTML Tags and Why You Should Care</a></li>
+    <li><a href="https://kinsta.com/blog/html-best-practices/">HTML Best Practices</a></li>
+  </ul>
+</details>
+  
+<details>
+  <summary>CSS Preprocessors</summary>
+  <ul>
+    <li><a href="https://youtu.be/RhX2rb10AC4">Intro to & Bootstrap Theming with Sass</a> & <a href="https://github.com/keegangood/sass_talk">Repository</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Coding Principles</summary>
+  <ul>
+    <li><a href="https://x-team.com/blog/principles-clean-code/">Principles of Clean Code</a></li>
+  </ul>
+</details>
+  
+
