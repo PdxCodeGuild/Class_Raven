@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Playfair+Display&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+header {
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    height: 8vh;
+    padding: 16px;
+  } 
+
+  section {
+    /* text-align: center; */
+    color: white;
+    font-size: 2rem;
+    padding: 16px;
+    /* height: 20vh; */
+    font-family: 'Roboto', sans-serif;
+    
+  }
+
+  blockquote {
+    position: relative;
+    top: 80px;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Dosis', sans-serif;
+    padding: 16px;
+    width: 1200px;
+    left: 190px;
+    
+  }
+
+
+
+aside {
+    display: block;
+    float: right; 
+}
+
+
+img {
+  border-radius: 60px;
+  padding: 16px;
+}
+
+h3 {
+  font-family: 'Dosis', sans-serif;
+  position: relative;
+  right: 30px;
+  text-align: right;
+  color: white;
+  font-size: 1.8rem;
+  padding: 16px;
+  list-style-type: circle;
+  top: -200px;
+}
+
+
+ul {
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    top: -210px;
+    left: 400px;
+    text-align: right;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 2em ;
+    padding: 16px; 
+    list-style-type: circle;
+    width: 1400px;
+}
+
+
+#link {
+    
+    color: black;
+    font-size: 2.2rem;   
+}
+
+
+body {
+  background-color: gray;
+  /* background-image: url("https://images.unsplash.com/photo-1541090218962-edf4f2ada2cc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1935&q=80"); */
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+}
+
