@@ -56,17 +56,14 @@ footer {
 #mousehide:hover {
 	animation-delay: 1s;
 	-webkit-animation-delay: 1s;
-	@supports (-webkit-transition) {
-		-webkit-transition: opacity 0.25s ease-out;
-	}
+
+	transition: all 0.25s;
 	opacity: 0;
 }
 #mousehide:not(hover) {
 	animation-delay: 1s;
 	-webkit-animation-delay: 1s;
-	@supports (-webkit-transition) {
-		-webkit-transition: opacity 0.25s ease-out;
-	}
+	transition: all 0.25s;
 	opacity: 1;
 }
 
