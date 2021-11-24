@@ -1,9 +1,9 @@
 # Austen Myers
 This is my assignment folder.
 
-## contents
+## file contents
 <html>
-    <details>
+    <details class="indent">
     <summary>archive</summary>
         <details class="indent">
             <summary>prep-course</summary>
@@ -12,7 +12,7 @@ This is my assignment folder.
             <summary>python</summary>
         </details>
     </details>
-    <details open>
+    <details open class="indent">
         <summary>html + css</summary>
         <details class="indent">
             <summary>labs</summary>
@@ -35,3 +35,7 @@ This is my assignment folder.
         }
     </style>
 </html>
+
+## links
+- Python "Mini Capstone"
+: [MysteonDex](https://github.com/austenc-id/MysteonDex)
