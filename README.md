@@ -60,6 +60,8 @@ Weeks 16, 17, 18: Capstone project
   <ul>
     <li>Lab 01 - Bio</li>
     <li>Lab 02 - Blog</li>
+    <li>Lab 03 - Company Page</li>
+    <li>Lab 04 - Personal Portfolio</li>
   </ul>
 </details>
 
