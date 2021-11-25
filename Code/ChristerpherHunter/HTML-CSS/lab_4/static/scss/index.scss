@@ -22,7 +22,7 @@ body {
         // height: 10vh;
 
         &-butts {
-            @include mixin.rectangle(6.5em, 5em);
+            // @include mixin.rectangle(6.5em, 5em);
             border-radius: 30px 30px;
             background-color: variables.$grullo;
             border: none;
@@ -36,15 +36,18 @@ body {
 
 .main-body {
     display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-rows: auto auto;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: auto auto auto 10vh;
     // min-height: 140vh;
+    justify-content: center;
+
     &-hero {
         // Mobile consideration
         justify-self: center;
         grid-column-start: 2;
         grid-column-end: 3;
         @include mixin.flex(column, center, center);
+        // @include mixin.rectangle(auto, 700px);
         margin-bottom: 1em;
         &-image {
             // Replace the garbage that is this picture
@@ -61,6 +64,8 @@ body {
             background-color: green;
             border: 2px solid black;
             justify-items: center;
+            // margin: 2em;
+            padding: 3px 2em;
             width: 100%;
             border-radius: variables.$bd-size;
         }
@@ -74,15 +79,14 @@ body {
         justify-self: center;
         @include mixin.flex(row, center, space-evenly);
         flex-wrap: wrap;
-        // @include mixin.rectangle(40vh, auto);
-        // background-color: cyan;
         border-radius: 15px;
+        border: black 2px solid;
         width: 80vw;
+        margin-bottom: 1em;
 
         &-card {
             @include mixin.flex(column, flex-start, center);
-            // flex-wrap: wrap;
-            margin: 3em 0;
+            margin: 2em 0;
             border-radius: variables.$bd-size;
             overflow: hidden;
 
@@ -98,7 +102,7 @@ body {
                 max-height: 200px;
                 object-position: center;
                 aspect-ratio: 16 / 9;
-                transition-delay: 0.2s transform ease-in-out;
+                transition-delay: 0.2s;
                 &:hover {
                     transform: scale(1.025);
                 }
@@ -115,28 +119,27 @@ body {
             // Backgorund image for card 2
             &-2-image {
                 padding: 0;
-                background-image: url("../assets/images/ASU-logo.png");
+                background-image: url("../assets/images/NOVA.png");
                 background-size: cover;
                 background-repeat: no-repeat;
                 overflow: hidden;
                 display: block;
                 width: 100%;
-                // max-height: 30px;
-                // max-width: 200px;
+                max-height: 200px;
                 object-position: center;
                 aspect-ratio: 16 / 9;
-                transition-delay: 0.2s;
+                transition-delay: 0.2s transform ease-in-out;
                 &:hover {
                     transform: scale(1.025);
                 }
-            }
-            &-2-info {
-                color: darkmagenta;
-                font-size: small;
-                width: 80vw;
-                // position: relative;
-                left: -1em;
-                margin: 1em 0;
+                &-2-info {
+                    color: darkmagenta;
+                    font-size: small;
+                    width: 80vw;
+                    position: relative;
+                    left: -1em;
+                    margin: 1em 0;
+                }
             }
 
             // Backgorund image for card 3
@@ -165,10 +168,53 @@ body {
                 margin: 1em 0;
             }
         }
-        // Independently produced classes and then apply; bootstrap style
+
+        // Independently produced class and then apply; bootstrap style
         .card-shadow {
             border: none;
             box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &-exp-cards {
+        border: black 2px solid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+
+        &-horz-card-1 {
+            @include mixin.flex(column, center, center);
+            border: 2px solid black;
+
+            &-1 {
+                @include mixin.flex(row, center, center);
+                &-image {
+                    padding: 0;
+                    background-image: url("../assets/images/ASU-logo.png");
+                    background-size: fit;
+                    background-repeat: no-repeat;
+                    overflow: hidden;
+                    display: block;
+                    width: 100%;
+                    max-height: 200px;
+                    object-position: center;
+                    aspect-ratio: 16 / 9;
+                    transition-delay: 0.2s;
+                    &:hover {
+                        transform: scale(1.025);
+                    }
+                }
+                &-info {
+                    color: darkmagenta;
+                    font-size: small;
+                    width: 80vw;
+                    position: relative;
+                    left: -13em;
+                    margin: 1em 0;
+                }
+            }
         }
     }
 }
@@ -201,7 +247,7 @@ body {
     .main-body {
         grid-template-columns: 190px auto 190px;
         &-hero {
-            // Mobile consideration
+            // Large Screen consideration
             justify-self: start;
         }
     }

@@ -24,8 +24,6 @@ body {
   width: 100vw;
 }
 .main-head-body-butts {
-  height: 6.5em;
-  width: 5em;
   border-radius: 30px 30px;
   background-color: #a29071;
   border: none;
@@ -37,8 +35,9 @@ body {
 
 .main-body {
   display: grid;
-  grid-template-columns: 10px auto 10px;
-  grid-template-rows: auto auto;
+  grid-template-columns: 10vw auto 10vw;
+  grid-template-rows: auto auto auto 10vh;
+  justify-content: center;
 }
 .main-body-hero {
   justify-self: center;
@@ -65,6 +64,7 @@ body {
   background-color: green;
   border: 2px solid black;
   justify-items: center;
+  padding: 3px 2em;
   width: 100%;
   border-radius: 15px;
 }
@@ -80,14 +80,16 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   border-radius: 15px;
+  border: black 2px solid;
   width: 80vw;
+  margin-bottom: 1em;
 }
 .main-body-card-section-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 3em 0;
+  margin: 2em 0;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -103,7 +105,7 @@ body {
   -o-object-position: center;
      object-position: center;
   aspect-ratio: 16/9;
-  transition-delay: 0.2s transform ease-in-out;
+  transition-delay: 0.2s;
 }
 .main-body-card-section-card-1-image:hover {
   transform: scale(1.025);
@@ -118,24 +120,26 @@ body {
 }
 .main-body-card-section-card-2-image {
   padding: 0;
-  background-image: url("../assets/images/ASU-logo.png");
+  background-image: url("../assets/images/NOVA.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
   width: 100%;
+  max-height: 200px;
   -o-object-position: center;
      object-position: center;
   aspect-ratio: 16/9;
-  transition-delay: 0.2s;
+  transition-delay: 0.2s transform ease-in-out;
 }
 .main-body-card-section-card-2-image:hover {
   transform: scale(1.025);
 }
-.main-body-card-section-card-2-info {
+.main-body-card-section-card-2-image-2-info {
   color: darkmagenta;
   font-size: small;
   width: 80vw;
+  position: relative;
   left: -1em;
   margin: 1em 0;
 }
@@ -167,6 +171,52 @@ body {
 .main-body-card-section .card-shadow {
   border: none;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.main-body-exp-cards {
+  border: black 2px solid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-self: center;
+}
+.main-body-exp-cards-horz-card-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+.main-body-exp-cards-horz-card-1-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-exp-cards-horz-card-1-1-image {
+  padding: 0;
+  background-image: url("../assets/images/ASU-logo.png");
+  background-size: fit;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  -o-object-position: center;
+     object-position: center;
+  aspect-ratio: 16/9;
+  transition-delay: 0.2s;
+}
+.main-body-exp-cards-horz-card-1-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-1-1-info {
+  color: darkmagenta;
+  font-size: small;
+  width: 80vw;
+  position: relative;
+  left: -13em;
+  margin: 1em 0;
 }
 
 .main-footer {
