@@ -1,7 +1,7 @@
 /* SCSS HSL */
 /* SCSS Gradient */
 body {
-  background-color: lightgray;
+  background-image: linear-gradient(180deg, #abc4abff, #a39171ff, #dcc9b6ff, #727d71ff, #6d4c3dff);
   position: relative;
 }
 
@@ -43,6 +43,7 @@ body {
   justify-self: center;
   grid-column-start: 2;
   grid-column-end: 3;
+  width: 97%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,19 +55,19 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  border: 2px solid black;
   border-radius: 50% 50%;
   height: 18em;
   width: 18em;
   margin-bottom: 0.8em;
 }
 .main-body-hero-text-box {
-  background-color: green;
-  border: 2px solid black;
+  background-color: #dcc9b7;
   justify-items: center;
-  padding: 3px 2em;
-  width: 100%;
+  width: 98%;
   border-radius: 15px;
+}
+.main-body-hero-text-box p {
+  padding: 0.6em;
 }
 .main-body-card-section {
   grid-column-start: 2;
@@ -80,7 +81,6 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   border-radius: 15px;
-  border: black 2px solid;
   width: 80vw;
   margin-bottom: 1em;
 }
@@ -92,10 +92,11 @@ body {
   margin: 2em 0;
   border-radius: 15px;
   overflow: hidden;
+  background-color: #dcc9b7;
 }
 .main-body-card-section-card-1-image {
   padding: 0;
-  background-image: url("../assets/images/ASU-logo.png");
+  background-image: url("../assets/images/elec-eng.gif");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -105,7 +106,7 @@ body {
   -o-object-position: center;
      object-position: center;
   aspect-ratio: 16/9;
-  transition-delay: 0.2s;
+  transition: 0.3s ease-in;
 }
 .main-body-card-section-card-1-image:hover {
   transform: scale(1.025);
@@ -120,8 +121,8 @@ body {
 }
 .main-body-card-section-card-2-image {
   padding: 0;
-  background-image: url("../assets/images/NOVA.png");
-  background-size: cover;
+  background-image: url("../assets/images/agile.gif");
+  background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -130,7 +131,7 @@ body {
   -o-object-position: center;
      object-position: center;
   aspect-ratio: 16/9;
-  transition-delay: 0.2s transform ease-in-out;
+  transition: 0.3s ease-in;
 }
 .main-body-card-section-card-2-image:hover {
   transform: scale(1.025);
@@ -145,8 +146,8 @@ body {
 }
 .main-body-card-section-card-3-image {
   padding: 0;
-  background-image: url("../assets/images/ASU-logo.png");
-  background-size: cover;
+  background-image: url("../assets/images/welding.gif");
+  background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
@@ -155,7 +156,7 @@ body {
   -o-object-position: center;
      object-position: center;
   aspect-ratio: 16/9;
-  transition-delay: 0.2s transform ease-in-out;
+  transition: 0.3s ease-in;
 }
 .main-body-card-section-card-3-image:hover {
   transform: scale(1.025);
@@ -168,12 +169,7 @@ body {
   left: -1em;
   margin: 1em 0;
 }
-.main-body-card-section .card-shadow {
-  border: none;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-}
 .main-body-exp-cards {
-  border: black 2px solid;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -185,43 +181,188 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  margin-bottom: 1em;
+  background-color: #dcc9b7;
 }
 .main-body-exp-cards-horz-card-1-1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .main-body-exp-cards-horz-card-1-1-image {
   padding: 0;
-  background-image: url("../assets/images/ASU-logo.png");
-  background-size: fit;
+  background-image: url("../assets/images/pdx-codeguil.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
+  margin: 0 0.4em;
   display: block;
-  width: 100%;
-  max-height: 200px;
+  width: 98vw;
+  max-height: 100vh;
   -o-object-position: center;
      object-position: center;
   aspect-ratio: 16/9;
-  transition-delay: 0.2s;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.3s ease-in;
 }
 .main-body-exp-cards-horz-card-1-1-image:hover {
   transform: scale(1.025);
 }
 .main-body-exp-cards-horz-card-1-1-info {
+  justify-content: flex-start;
   color: darkmagenta;
   font-size: small;
   width: 80vw;
   position: relative;
-  left: -13em;
-  margin: 1em 0;
+  left: -3em;
+  margin: 0;
+}
+.main-body-exp-cards-horz-card-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c4c3d;
+  margin-bottom: 1em;
+}
+.main-body-exp-cards-horz-card-2-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-exp-cards-horz-card-2-1-image {
+  padding: 0;
+  background-image: url("../assets/images/ASU-big.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin: 0 0.4em;
+  display: block;
+  width: 98vw;
+  max-height: 100vh;
+  -o-object-position: center;
+     object-position: center;
+  aspect-ratio: 16/9;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.3s ease-in;
+}
+.main-body-exp-cards-horz-card-2-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-2-1-info {
+  justify-content: flex-start;
+  color: darkmagenta;
+  font-size: small;
+  position: relative;
+  width: 100vw;
+  left: -1em;
+  margin: 0;
+}
+.main-body-exp-cards-horz-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c4c3d;
+}
+.main-body-exp-cards-horz-card-3-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-exp-cards-horz-card-3-1-image {
+  padding: 0;
+  background-image: url("../assets/images/USMC-machine-gun.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin: 0 0.4em;
+  display: block;
+  width: 98vw;
+  max-height: 100vh;
+  -o-object-position: center;
+     object-position: center;
+  aspect-ratio: 16/9;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.3s ease-in;
+}
+.main-body-exp-cards-horz-card-3-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-3-1-info {
+  justify-content: flex-start;
+  color: darkmagenta;
+  font-size: small;
+  width: 100vw;
+  left: -1em;
+  position: relative;
+  margin: 0;
+}
+.main-body-exp-cards-horz-card-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6c4c3d;
+}
+.main-body-exp-cards-horz-card-4-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-exp-cards-horz-card-4-1-image {
+  padding: 0;
+  background-image: url("../assets/images/Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin: 0 0.4em;
+  display: block;
+  width: 98vw;
+  max-height: 100vh;
+  -o-object-position: center;
+     object-position: center;
+  aspect-ratio: 16/9;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: 0.3s ease-in;
+}
+.main-body-exp-cards-horz-card-4-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-4-1-info {
+  justify-content: flex-start;
+  color: darkmagenta;
+  font-size: small;
+  width: 100vw;
+  left: -1em;
+  position: relative;
+  margin: 0;
 }
 
 .main-footer {
   display: grid;
+  position: relative;
   bottom: 0;
+  left: -0.4em;
+  align-content: end;
 }
 .main-footer-container {
   display: flex;
@@ -231,6 +372,12 @@ body {
   height: 10vh;
   width: 100vw;
   background-color: #737e72;
+}
+
+.card-shadow {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (min-width: 1000px) {
@@ -258,5 +405,38 @@ body {
 
   .text-box-width {
     width: 30em;
+  }
+
+  .main-body-exp-cards-horz-card-1-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /* &-info {
+        // left: -36em;
+    } */
+  }
+  .main-body-exp-cards-horz-card-1-1-image {
+    width: 30%;
+    max-height: 100vh;
+    border-radius: 15px;
+  }
+
+  .main-body-card-section-card-2-image {
+    background-size: cover;
+  }
+
+  .main-body-exp-cards-horz-card-2-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .main-body-exp-cards-horz-card-3-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
 }/*# sourceMappingURL=index.css.map */
