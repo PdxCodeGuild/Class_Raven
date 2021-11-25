@@ -1,0 +1,508 @@
+@use "src/bulma/sass/utilities/_all.sass";    
+@use "src/bulma/sass/elements/image.sass";
+@use "src/variables";
+@use "src/mixin";
+@use "src/functions";
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,
+                Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    height: 100vh;
+    a {
+        text-decoration: none;
+    }
+}
+.top-header {
+    background-color: variables.$white;
+    @include mixin.rectangle(5vh, 100%);
+    @include mixin.flex(row, center, flex-end);
+    // TRBL: top-right-bottom-left
+    font-size: smaller;
+    p {
+        margin-right: 3rem;
+        font-size: 15pt;
+        font-weight: 800;
+    }
+    &-button {
+        margin-right: 8rem;
+        @include mixin.border-radius(25px);
+        background-color: yellow;
+        padding: 0.7rem;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+        font-family: OpenSans-Bold,sans-serif;
+    }
+}
+.dummy-border {
+    @include mixin.rectangle(0.5vh, 100%);
+    background-color: navy;
+}
+.low-header {
+    background-color: #0048bb;
+    @include mixin.flex(row, center, space-between);
+    &-logo {
+        img {
+            @include mixin.rectangle(4vh, 12vw);
+            margin-left: 2rem;
+            padding: 0.7rem;
+        }
+    }
+    &-links {
+        @include mixin.flex(row, center, space-between);
+        p {
+            padding: 0 2rem 0 2rem;
+            color: white;
+            font-size: larger;
+            font-weight: 800;   
+        }
+    }
+}
+
+.main-body {
+    @include mixin.flex(column, center, center);
+    .center-box {
+        @include mixin.flex(column, center, center);
+        background-image: url("../assets/home-header.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        .mid-1 {
+            @include mixin.flex(column, flex-start);
+            padding-top: 30rem;
+            &-side-bar {
+                &-butts {
+                    @include mixin.flex(row, center, center);
+                    position: relative;
+                    float: top;
+                    left: -829px;
+                    top: -400px;
+                    text-align: center;
+                    outline: none 1px solid;
+                    @include mixin.border-radius(0, 0, 3rem, 3rem);
+                    background-color: #002859;
+                    width: 25vw;
+                    margin: 0.5vh 0;
+                    transition-duration: 0.7s;
+                    &:hover {
+                        background-color: blue;
+                        left: -800px;
+                        // width: 16vw;
+                    }
+                    p {
+                        color: white;
+                        font-size: 20pt;
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+        .mid-2 {
+            @include mixin.flex(column, center);
+            background-image: url("../assets/home-service-header.e9330b88.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -70px;
+            &-heading {
+                
+                text-align: center;
+                color: white;
+                font-size: 21pt;
+            }
+            &-grid-box {
+                display: flex;
+                flex-wrap: wrap;
+                grid-auto-flow: column;
+                grid-template-rows: repeat(auto-fill, 100px);
+                grid-template-columns: repeat(auto-fill, 100px);
+                padding: 40px 20% 5%;
+                .inner-grid {
+                    box-sizing: border-box;
+                    @include mixin.border-radius(6px);
+                    outline: 2px solid white;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    padding: 3px;
+                    color: white;
+                    line-height: 3px;
+                    font-size: small;
+                }
+            }
+        }
+        .mid-3 {
+            @include mixin.flex(column, center, center);
+            margin-bottom: 10rem;
+            background-color: #1c4696;
+            width: 100%;
+            &-header {
+                text-align: center;
+                color: #002859;
+                font-size: 29pt;
+            }
+            &-card-section {
+                @include mixin.flex(row, center, space-between);
+                flex-wrap: wrap;
+                &-1 {
+                    // @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(220px, 272px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    background-color: white;
+                    text-align: center;
+                    border: 1px lightgray solid;
+                    margin: -0.3rem 2rem 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+                &-2 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    background-color: white;
+                    border: 1px lightgray solid;
+                    margin: -0.3rem 2rem 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+                &-3 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    background-color: white;
+                    border: 1px lightgray solid;
+                    margin: -0.3rem 2rem 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+                &-4 {
+                    @include mixin.rectangle(220px, 272px);
+                    text-align: center;
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    background-color: white;
+                    border: 1px lightgray solid;
+                    margin: -0.3rem 0 0 0;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+            &-button {
+                margin: 3rem;
+                @include mixin.border-radius(25px);
+                background-color: yellow;
+                padding: 1rem;
+                font-size: 12px;
+                font-weight: 700;
+                text-align: center;
+                cursor: pointer;
+                font-family: OpenSans-Bold,sans-serif;
+            }
+        }
+        .mid-4 {
+            @include mixin.flex(row, center, center);
+            margin: -5rem 0 5rem 0;
+        }
+        .mid-5 {
+            @include mixin.flex(row, center, center);
+            // @include mixin.rectangle(30vh, 30vw);            
+            &-left {
+                @include mixin.flex(column, center, center);
+                &-image{
+                    img {
+                        @include mixin.rectangle(152.3335px,326.775px);
+                        @include mixin.border-radius(25px, 0, 25px, 0);
+                    }
+                    
+                }
+                &-content {
+                    @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(300px, 326.775px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px lightgray solid;
+                    margin-top: -1.3rem;
+                    box-shadow: 1px 4px #888888;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+            &-mid {
+                @include mixin.flex(column, center, center);
+                &-image{
+                    img {
+                        @include mixin.rectangle(152.3335px,326.775px);
+                        @include mixin.border-radius(25px, 0, 25px, 0);
+                    }
+                }
+                &-content {
+                    @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(300px, 326.775px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px lightgray solid;
+                    margin-top: -1.3rem;
+                    box-shadow: 1px 4px #888888;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &-right {
+                @include mixin.flex(column, center, center);
+                &-image{
+                    img {
+                        @include mixin.rectangle(152.3335px,326.775px);
+                        @include mixin.border-radius(25px, 0, 25px, 0);
+                    }
+                }
+                &-content {
+                    @include mixin.flex(column, center, center);
+                    @include mixin.rectangle(300px, 326.775px);
+                    @include mixin.border-radius(0, 25px, 0, 25px);
+                    border: 1px lightgray solid;
+                    margin-top: -1.3rem;
+                    box-shadow: 1px 4px #888888;
+                    #top-row {
+                        color: #0048bb;
+                        text-align: center;
+                    }
+                    #dummy {
+                        background: #71fda0;
+                        width: 40px;
+                        height: 3px;
+                        margin: 0 auto;
+                    }
+                    #middle-row {
+                        font-size: 12px;
+                        text-align: center;
+                        color: #002859;
+                        padding-top: 11px;
+                        font-family: OpenSans,sans-serif;
+                        height: 80px;
+                    }
+                    #bottom-row {
+                        color: #3468c4;
+                    }
+                    p {
+                        color: black;
+                        font-weight: 700;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+            &-bot-text {
+                font-weight: 700;
+                color: black;
+                text-align: center;
+                font-size: 12px;
+                padding-bottom: 20px;
+                padding-top: 25px;
+            }
+        }
+    }
+}
+
+
+.low-footer {
+    @include mixin.flex(row, center, space-evenly);
+    background-color: #0048bb;
+    @include mixin.rectangle(20vh, 101%);
+    position: relative;
+    bottom: 0;
+    // @include mixin.flex(row, center, space-between);
+    &-left-container {
+            @include mixin.flex(row, center, space-around);
+        &-image-container {
+            @include mixin.flex(column, center, center);
+            // padding-top: 2rem;
+            #foot-text {
+                margin: 0 0;
+                font-size: 9pt;
+                color: variables.$white;
+            }
+            #sears-logo {
+                @include mixin.rectangle(44px, 309px);
+                padding-top: 2rem;
+            }
+            #ase-cert-badge {
+                @include mixin.rectangle(60px, 80px);
+            }
+            #row-links {
+                @include mixin.flex(row, center, space-between);
+                p {
+                    // screen size consideration
+                    margin: 1.2rem 0.7rem;
+                    color: white;
+                    font-weight: 700;
+                    cursor: pointer;
+                    font-size: 10pt;
+                }
+            }
+        }
+        &-link-container {
+            @include mixin.flex(column, center, center);
+            padding: 2.3rem 0 0 0;      
+            #other-row-links {
+                @include mixin.flex(row, center, center);
+                p {
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                font-size: 10pt;
+                margin: 0.4rem 1rem;
+                padding: 0.5rem 0;
+                }
+            }
+            #low-foot-foot-section {
+            @include mixin.flex(row, center, space-between);
+            p {
+                margin: 0.7rem 2rem;
+                color: white;
+                font-weight: lighter;
+                cursor: pointer;
+                font-size: 9pt;
+                }
+            }
+        }
+    }   
+}
