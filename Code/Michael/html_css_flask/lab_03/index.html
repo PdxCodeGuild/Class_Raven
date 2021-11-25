@@ -33,149 +33,166 @@ Browse the internet for existing company pages and imitate as much as you can.
 	<body>
 		<!-- top nav bar -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">Industrial Securities</a>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
+			<div class="container-fluid" id="top">
+				<a class="navbar-brand" href="#">Industrial Securities</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input
-						class="form-control mr-sm-2"
-						type="search"
-						placeholder="Search"
-						aria-label="Search"
-					/>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-						Search
-					</button>
-				</form>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								More &DownArrow;
+							</a>
+							<ul
+								class="dropdown-menu bg-dark"
+								aria-labelledby="navbarDropdown"
+							>
+								<li><a class="dropdown-item text-light" href="#">About</a></li>
+								<li>
+									<a class="dropdown-item text-light" href="#">Clients</a>
+								</li>
+								<li><hr class="dropdown-divider text-light" /></li>
+								<li>
+									<a id="nav-contact" class="dropdown-item text-light" href="#"
+										>Contact</a
+									>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 		<!-- end of top nav bar -->
 		<!-- right side floating nav bar -->
-		<nav id="right-side-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input
-						class="form-control mr-sm-2"
-						type="search"
-						placeholder="Search"
-						aria-label="Search"
-					/>
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-						Search
-					</button>
-				</form>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div id="right-side-nav" class="list-group">
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#top"
+					>Top</a
+				>
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#jumbotron"
+					>Information</a
+				>
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#main-content"
+					>Job Examples</a
+				>
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#footer"
+					>Bottom</a
+				>
 			</div>
 		</nav>
 		<!-- end of right side floating nav bar -->
 		<!-- Hero section -->
-		<div class="jumbotron">
+		<div id="jumbo-hidden" class="jumbotron">
+			<br /><br /><br /><br /><br /><br /><br /><br />
+		</div>
+		<div id="jumbotron" class="jumbotron">
 			<h1 class="display-4">Industrial Securities</h1>
 			<p class="lead">
-				This is a simple hero unit, a simple jumbotron-style component for calling
-				extra attention to featured content or information.
+				Securing all industrial assets and providing the best services to our
+				clients.
 			</p>
-			<hr class="my-4" />
-			<p>
-				It uses utility classes for typography and spacing to space content out within
-				the larger container.
-			</p>
+
+			<p>Request an estimate for your protection today!</p>
 			<p class="lead">
-				<a class="btn btn-primary btn-lg" href="#" role="button">
-					Learn more
+				<a
+					id="contact-now"
+					class="btn btn-primary btn-lg"
+					href="#"
+					role="button"
+				>
+					Contact now
 				</a>
 			</p>
 		</div>
 		<!-- end of hero section -->
 		<!-- main content section -->
-		<div class="container">
+		<div id="main-content" class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="card">
-						<img src="./assets/img/1.jpg" class="card-img-top" alt="..." />
+					<div class="card bg-dark text-light">
+						<img
+							src="https://media.istockphoto.com/photos/rusty-drums-on-arctic-coast-picture-id1189756636"
+							class="card-img-top"
+							alt="Picture of an industrial waste dump."
+						/>
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
+							<h5 class="card-title">Industrial Waste</h5>
 							<p class="card-text">
-								Some quick example text to build on the card title and make up the
-								bulk of the card's content.
+								Industrial waste is a waste that is generated by the industry.
+								We protect your waste by providing a safe and secure disposal
+								facility.
 							</p>
-							<a href="#" class="btn btn-primary">
-								Go somewhere
-							</a>
+							<a href="#" class="btn btn-primary"> See more </a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="card">
-						<img src="./assets/img/2.jpg" class="card-img-top" alt="..." />
+					<div class="card bg-dark text-light">
+						<img
+							src="https://thumbs.dreamstime.com/b/industrial-building-site-21944100.jpg"
+							class="card-img-top"
+							alt="Picture of an industrial build site."
+						/>
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
+							<h5 class="card-title">Industrial Buildsites</h5>
 							<p class="card-text">
-								Some quick example text to build on the card title and make up the
-								bulk of the card's content.
+								Industrial buildsites are the sites where industrial assets are
+								built. We protect your assets by providing personel and
+								equipment protection.
 							</p>
-							<a href="#" class="btn btn-primary">
-								Go somewhere
-							</a>
+							<a href="#" class="btn btn-primary"> See more </a>
 						</div>
 					</div>
 				</div>
+
 				<div class="col-md-4">
-					<div class="card">
-						<img src="./assets/img/3.jpg" class="card-img-top" alt="..." />
+					<div class="card bg-dark text-light">
+						<img
+							src="https://cdn.pixabay.com/photo/2020/04/22/00/59/industrial-office-5075246_960_720.jpg"
+							class="card-img-top"
+							alt="Picture of some industrial offices."
+						/>
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
+							<h5 class="card-title">Industrial Offices</h5>
 							<p class="card-text">
-								Some quick example text to build on the card title and make up the
-								bulk of the card's content.
+								Industrial Offices are the locations where industrial assets are
+								stored. We protect your offices by providing personel and
+								building protection.
 							</p>
-							<a href="#" class="btn btn-primary">
-								Go somewhere
-							</a>
+							<a href="#" class="btn btn-primary"> See more </a>
 						</div>
 					</div>
 				</div>
@@ -183,13 +200,89 @@ Browse the internet for existing company pages and imitate as much as you can.
 		</div>
 		<!-- end of main content section -->
 		<!-- footer section -->
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="container">
-				<span class="text-muted">Place sticky footer content here.</span>
+				<span class="text-muted"
+					>&COPY; Industrial Securities 2021 All rights reserved.</span
+				>
 			</div>
 		</footer>
 		<!-- end of footer section -->
-	</div>
-	<!-- end of container -->
+
+		<!-- end of container -->
+		<div class="toast-container position-absolute me-2" id="toast-container">
+			<div
+				id="liveToast"
+				class="toast"
+				role="alert"
+				aria-live="assertive"
+				aria-atomic="true"
+			>
+				<div class="toast-header">
+					<img
+						src="https://cdn-icons-png.flaticon.com/512/80/80596.png"
+						class="rounded me-2"
+						alt="..."
+						style="width: 25px; height: 25px"
+					/>
+					<strong class="me-auto">Connect with an Agent?</strong>
+
+					<button
+						type="button"
+						class="btn-close"
+						data-bs-dismiss="toast"
+						aria-label="Close"
+					></button>
+				</div>
+				<div class="toast-body">
+					<div>Hello! Would you like to connect with an agent?</div>
+					<div class="mt-2 pt-2 border-top">
+						<button type="button" class="btn btn-primary btn-sm">
+							Yes please!
+						</button>
+						<button
+							type="button"
+							class="btn btn-secondary btn-sm"
+							data-bs-dismiss="toast"
+						>
+							No.😡
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var toastTrigger1 = document.getElementById("contact-now");
+			var toastTrigger2 = document.getElementById("nav-contact");
+			var toastLive = document.getElementById("liveToast");
+			var toast = new bootstrap.Toast(toastLive);
+			setTimeout(function () {
+				toast.show();
+			}, 15000);
+			if (toastTrigger1) {
+				toastTrigger1.addEventListener("click", function () {
+					toast.show();
+					document.getElementById("jumbotron").style.display = "none";
+					if (window.matchMedia("(min-width: 768px)").matches) {
+						document.getElementById("jumbo-hidden").style.display = "block";
+					}
+				});
+			}
+			if (toastTrigger2) {
+				toastTrigger2.addEventListener("click", function () {
+					toast.show();
+					document.getElementById("jumbotron").style.display = "none";
+					if (window.matchMedia("(min-width: 768px)").matches) {
+						document.getElementById("jumbo-hidden").style.display = "block";
+					}
+				});
+			}
+			setTimeout(function () {
+				document.getElementById("jumbotron").style.display = "none";
+				if (window.matchMedia("(min-width: 768px)").matches) {
+					document.getElementById("jumbo-hidden").style.display = "block";
+				}
+			}, 15000);
+		</script>
 	</body>
 </html>

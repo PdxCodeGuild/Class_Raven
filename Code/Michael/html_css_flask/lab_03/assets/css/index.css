@@ -5,13 +5,39 @@
 */
 
 /* right side nav bar */
-.right-side-nav {
+body {
+	background-color: #adadad;
+}
+
+#right-side-nav {
+	width: auto;
 	position: fixed;
-	top: 0;
-	right: 100vw;
-	width: 20%;
-	height: 100%;
-	background-color: #f1f1f1;
-	overflow-x: hidden;
-	padding-top: 20px;
+	top: 25vh;
+	right: 0;
+	z-index: 2;
+}
+#transparent-nav {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#transparent-nav:hover {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+#jumbotron {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-width: 1px;
+	border-radius: 0% 0% 100% 0%;
+	border-color: black;
+	border-style: solid;
+}
+#toast-container {
+	right: 0;
+	width: auto;
+	position: fixed;
+	top: 75vh;
+}
+
+#jumbo-hidden {
+	display: none;
 }
