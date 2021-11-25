@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Questrial', sans-serif;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+#card-section {
+    background-color: teal;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#card-section .card {
+    background-color: lightskyblue;
+    border-radius: 10px;
+    height: 50vh;
+    width: 25vw;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card button {
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+
+    transition: background .3s ease-in-out;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color: goldenrod;
+}
+
+.card .content {
+    opacity: 0;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.card .circle {
+    background-color: aqua;
+    border: 5px solid darkcyan;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .3s ease-in-out;
+}
+
+/* add hover transition for card inner circle */
+#card-section .card:hover .circle {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+/* add hover transition for card content */
+#card-section .card:hover .content {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.card .circle h1, .card .circle p {
+    margin: 0;
+    text-align: center;
+}
+
+
+#animation-section {
+    background-color: darkslateblue;
+    
+    position: relative;
+}
+
+.pattern {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 300px;
+    position: relative;
+
+    animation: move-pattern;
+    animation-duration: 30s;
+}
+
+.pattern .box {
+    height: 100px;
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .circle {
+    background-color: cyan;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    animation: grow-shrink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.circle.small {
+    height: 66%;
+    width: 66%;
+
+    animation: grow-shrink-small;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.circle.smaller {
+    height: 33%;
+    width: 33%;
+
+    animation: grow-shrink-smaller;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.left {
+    left: 15px;
+}
+
+.right {
+    right: 15px;
+}
+
+.top {
+    top: 15px;
+}
+
+.bottom {
+    bottom: 15px;
+}
+
+
+
+@keyframes move-pattern {
+    0% {
+        left: 0;
+        top: 0;
+        transform: rotate(0deg);
+    }
+    25% {
+        left: calc(100% - 400px);
+        top: calc(100% - 400px);
+    }
+    50% {
+        /* calculate the stopping point as 100% of the view width minus the width of the div */
+        left: calc(100% - 400px);
+        top: 0;
+        transform: rotate(-360deg);
+    }
+    75% {
+        left: 0;
+        top: calc(100% - 400px);
+    }
+    100% {
+        left: 0;
+        top: 0;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes grow-shrink {
+    0% {
+        height: 100%;
+        width: 100%;
+        
+    }
+    50% {
+        height: 50%;
+        width: 50%;
+        border: 5px solid yellow;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes grow-shrink-small {
+    0% {
+        height: 66%;
+        width: 66%;
+        
+    }
+    50% {
+        height: 33%;
+        width: 33%;
+        background-color: yellow;
+        border: 5px solid magenta;
+    }
+    100% {
+        height: 66%;
+        width: 66%;
+    }
+}
+
+@keyframes grow-shrink-smaller {
+    0% {
+        height: 33%;
+        width: 33%;
+        
+    }
+    50% {
+        height: 14%;
+        width: 14%;
+        background-color: magenta;
+        border: 5px solid cyan;
+    }
+    100% {
+        height: 33%;
+        width: 33%;
+    }
+}
