@@ -1,7 +1,14 @@
 # Austen Myers
-## Contents
-### Prep Course
-### Python
-### HTML, CSS, and Flask
-#### Key
-##### A '-' before a directory name indicated that the coursework within has been completed.
+This is my assignment folder.
+
+## archive
+- prep-course
+- python
+
+## html, css, and flask
+<details>
+<summary>labs</summary>
+<li>html-01: biography
+<li>html-02: blog
+<li>html-03: company landing page
+</details>
