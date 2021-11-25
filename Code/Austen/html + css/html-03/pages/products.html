@@ -40,11 +40,16 @@
 					<li class="active">
 						<a href="../pages/products.html">products</a>
 					</li>
+					<li>
+						<a onclick="load_contact_form()">contact us</a>
+					</li>
 				</ul>
 				<a href="" data-target="mobile-nav" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
 		</nav>
 	</header>
 	<main class="container blue">
+		<section id="contact-form-target">
+		</section>
 		<ol>
 			<li>Product #1<br><span class="product-desc">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</span></li>
 			<li>Product #2<br><span class="product-desc">Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</span></li>
@@ -53,10 +58,38 @@
 			<li>Product #5<br><span class="product-desc">Dynamically target high-payoff intellectual capital for customized technologies. Objectively integrate emerging core competencies before process-centric communities. Dramatically evisculate holistic innovation rather than client-centric data.</span></li>
 		</ol>
 	</main>
+	<template id="contact-form">
+		<form class="blue darken-3">
+			<label for="customer-name">your name</label>
+			<input type="text" name="customer-name" id="customer-name" placeholder="Jesse Smith" required>
+			<label for="phone">phone number</label>
+			<input type="tel" pattern="[0-9]{10}" name="phone" id="phone" placeholder="1234567890">
+			<label for="email">email</label>
+			<input type="text" name="email" id="email" placeholder="jesse.smith@domainmail.com" required>
+			<label>message type:</label>
+			<br>
+				<label>
+					<input class="message-type" type="radio" name="type" id="question">
+					<span>question</span>
+				</label>
+				<label>
+					<input class="message-type" type="radio" name="type" id="comment">
+					<span>comment</span>
+				</label>
+				<label>
+					<input class="message-type" type="radio" name="type" id="sales">
+					<span>sales</span>
+				</label>
+			<br>
+			<label for="message">message:</label>
+			<input type="textarea" name="message" id="message" required>
+			<input type="submit" name="submit">
+		</form>
+	</template>
 	<footer class="blue darken-3 right-align">
 		<span id="copywrite">&copy; Company Name 2021</span>
 	</footer>
 	<script type="text/javascript" src="../style/materialize.js"></script>
-	<script type="text/javascript" src="../style/mobile-nav.js"></script>
+	<script type="text/javascript" src="../scripts/doc.js"></script>
 </body>
 </html>
