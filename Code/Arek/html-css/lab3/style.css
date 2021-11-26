@@ -1,192 +1,57 @@
-.row{
+#top-row{
+    background-color: beige;
+    height: 100px;
+    margin-bottom: 0;
 
-    margin-bottom: 0px;
-    min-height: auto;
-    justify-content: center;
-    min-width: 100vw;
-    
-    
 }
 
-nav ul li a{
-    color: darkgreen;
-    font-size: large;
-}
-
-nav ul li a:hover{
-    color:orange;
-}
-
-
-
-#top-bar{
+#green-box{
+    height: 100px;
     display: flex;
-    font-style: oblique;
+    align-items: end;
+    justify-content: center;
+    font-size: larger;
+    font-weight:  bold;
+}
+
+header{
+    font-size: x-large;
     font-weight: bolder;
-    padding-top: 44px;
-    font-size: x-large;
-    justify-content: center;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    border-style: solid;
-    border-color: black;
-    
-    
-    
+    color: beige;
 }
-#blank-bar{
-   
-    
-    
-    justify-content: right;
-    padding-top: 90px;
-    border-style: solid;
-    border-color: black;
-    border-right: black;
-    
-    
+
+#article-section{
+    background-image: url(green.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 
 }
 
-#mission-div{
-    
-    background-image: url('green.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 100vh;
-    
-    
-
-
-}
-
-
- #mission{
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    
-    
-
- }
- #mission-text{
-    display: flex;
-    background-color: rgb(0,0,0, 0.7);
-    justify-content:center;
-    font-size: x-large;
-    padding: 30px 30px;
-    margin-top: 5px;
-    margin-left: 100px;
-    margin-right: 100px;
-    border-style:groove;
-    max-width: 75vw;
-    line-height: 100%;
-
- }
-
-#donate{
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
-
-#donate-text{
-    display: flex;
-    background-color: rgb(0,0,0, 0.7);
-    justify-content:center;
-    font-size: x-large;
-    padding: 30px 30px;
-    margin-top: 5px;
-    margin-left: 100px;
-    margin-right: 100px;
-    border-style:groove;
-    max-width: 75vw;
+#articles{
+    padding: 20px 20px;
+    margin: 20px 20px;
     line-height: 150%;
+    background-color: rgb(0,0,0, 0.5);
+    color: beige;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    font-size: x-large;
+    
 
 }
 
-#contact-section{
-    
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    
-    
-    
-}
-
-#contact-header{
-
-    display: flex;
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    margin-bottom: 75px;
-    padding-left: 20px;
-    padding-right: 20px;
+#contact-link{
     background-color: black;
-    border-style: solid;
-
-
-}
-
-#contact{
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    border-style: solid;
-
+    color: beige;
+    font-size: larger;
     
-    
-    
-
-
+    text-align: center;
 }
 
-#phone{
-    display: flex;
-    justify-content: center;
-    min-height: 100px;
-    padding-top: 40px;
-    font-size: large;
-    border-style: solid;
-    border-right: black;
-}
 
-#email{
-    display: flex;
-    justify-content: center;
-    min-height: 100px;
-    padding-top: 40px;
-    font-size: large;
-    border-style: solid;
-    border-right: black;
-    border-left: black;
-}
-
-#donate-link{
-
-    display: flex;
-    justify-content: center;
-    min-height: 100px;
-    padding-top: 40px;
-    font-size: large;
-    border-style: solid;
-    border-right: black;
-    border-left: black;
-    
-
-}
 
 
 
