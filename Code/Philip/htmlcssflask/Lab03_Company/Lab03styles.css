@@ -8,6 +8,10 @@
     background: white;
   }
   
+a:link {
+  text-decoration: none;
+}
+
   .header {
     padding: 30px;
     text-align: center;
@@ -95,6 +99,9 @@
   .img{
     width:auto;
     height:200px;
+    display:block;
+    margin:auto;
+  
   }
   .footer {
     padding: 50px;
