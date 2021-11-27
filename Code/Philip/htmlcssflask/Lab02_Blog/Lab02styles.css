@@ -1,3 +1,35 @@
+.flex-grid{
+  display:flex;
+}
+
+.sidebar {
+  
+  height: 50vh;
+  width: 15vw;
+  border-radius: 100px;
+  border-style: solid;
+   border-color:slateblue;
+   border-width: 1px;
+   margin: 2.2em 0em;
+   padding: 25px 1px 25px 1px;
+}
+.list-style{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  font-family: 'Sora', sans-serif;
+    color: slateblue;
+    line-height: 2.0em;
+}
+
+.wrapper {
+  display:flex;
+  flex:1;
+  flex-direction: column;
+ 
+}
+
 .flex-container {
     display: flex;
     flex-flow: row wrap;
