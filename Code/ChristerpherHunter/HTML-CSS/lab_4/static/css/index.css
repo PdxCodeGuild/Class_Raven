@@ -12,24 +12,26 @@ body {
   margin-bottom: 1rem;
   background-color: #6c4c3d;
   z-index: 2;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
 }
 .main-head-body {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100vw;
-  height: 15vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  -moz-column-gap: 3em;
+       column-gap: 3em;
 }
 .main-head-body-butts {
   height: 6em;
   width: 5em;
   border-radius: 30px 30px;
   background-color: #a29071;
+  margin: 0.5em 0;
   border: none;
   color: black;
   text-align: center;
@@ -118,12 +120,16 @@ body {
   transform: scale(1.025);
 }
 .main-body-card-section-card-1-info {
-  color: darkmagenta;
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  color: white;
   font-size: small;
-  width: 80vw;
-  position: relative;
-  left: -1em;
-  margin: 1em 0;
+  padding: 1.9em;
+  padding-top: 0;
+  overflow: hidden;
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .main-body-card-section-card-2-image {
   padding: 0;
@@ -142,13 +148,17 @@ body {
 .main-body-card-section-card-2-image:hover {
   transform: scale(1.025);
 }
-.main-body-card-section-card-2-image-2-info {
-  color: darkmagenta;
+.main-body-card-section-card-2-info {
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  color: white;
   font-size: small;
-  width: 80vw;
-  position: relative;
-  left: -1em;
-  margin: 1em 0;
+  padding: 1.9em;
+  padding-top: 0;
+  overflow: hidden;
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .main-body-card-section-card-3-image {
   padding: 0;
@@ -169,12 +179,16 @@ body {
   transform: scale(1.025);
 }
 .main-body-card-section-card-3-info {
-  color: darkmagenta;
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  color: white;
   font-size: small;
-  width: 80vw;
-  position: relative;
-  left: -1em;
-  margin: 1em 0;
+  padding: 1.9em;
+  padding-top: 0;
+  overflow: hidden;
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .main-body-exp-cards {
   grid-column-start: 2;
@@ -373,13 +387,20 @@ body {
 
 @media screen and (min-width: 1000px) {
   .main-head {
-    height: 6vh;
+    grid-template-rows: -webkit-min-content;
+    grid-template-rows: min-content;
   }
-
+  .main-head-body {
+    -moz-column-gap: 25em;
+         column-gap: 25em;
+  }
   .main-head-body-butts {
     height: 4em;
     width: 10em;
     transition-duration: 0.4s;
+    font-size: medium;
+    padding: 0;
+    margin: 1em 0;
   }
   .main-head-body-butts:hover {
     opacity: 90%;
@@ -388,6 +409,18 @@ body {
 
   .main-body {
     grid-template-columns: 190px auto 190px;
+    /*         &-card-section {
+        &-card {
+            &-1-info {
+                transform: translateY(70%);
+                transition: 0.7s ease-in;
+                font-size: medium;
+                &:hover {
+                    transform: translateY(0%);
+                }
+            }
+        }
+    } */
   }
   .main-body-hero {
     display: flex;
@@ -401,10 +434,6 @@ body {
     height: -moz-min-content;
     height: min-content;
     overflow-wrap: break-word;
-  }
-
-  .text-box-width {
-    width: 30em;
   }
 
   .main-body-exp-cards-horz-card-1-1 {
@@ -432,7 +461,6 @@ body {
     align-items: center;
     justify-content: flex-start;
   }
-
   .main-body-exp-cards-horz-card-2-1 {
     display: flex;
     flex-direction: row;
@@ -499,5 +527,21 @@ body {
 
   .main-body-card-section-card-2-image {
     background-size: cover;
+  }
+
+  .transform-text {
+    transform: translateY(70%);
+    transition: 0.7s ease-in;
+    font-size: medium;
+    opacity: 0.6;
+  }
+  .transform-text:hover {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  .text-box-width {
+    width: 18vw;
+    min-height: 14vh;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -13,19 +13,25 @@ body {
     margin-bottom: 1rem;
     background-color: variables.$coffee;
     z-index: 2;
-    @include mixin.flex(row, center, center);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
 
     &-body {
-        @include mixin.flex(row, center, space-evenly);
-        width: 100vw;
-        height: 15vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        column-gap: 3em;
+
         &-butts {
             @include mixin.rectangle(6em, 5em);
             border-radius: 30px 30px;
             background-color: variables.$grullo;
+            margin: 0.5em 0;
             border: none;
             color: black;
-            // margin: 1em 0;
             text-align: center;
             cursor: pointer;
         }
@@ -82,7 +88,6 @@ body {
         @include mixin.flex(row, center, space-evenly);
         flex-wrap: wrap;
         border-radius: 15px;
-        // border: black 2px solid;
         width: 80vw;
         margin-bottom: 1em;
 
@@ -112,12 +117,14 @@ body {
                 }
             }
             &-1-info {
-                color: darkmagenta;
+                background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+                color: white;
                 font-size: small;
-                width: 80vw;
-                position: relative;
-                left: -1em;
-                margin: 1em 0;
+                padding: 1.9em;
+                padding-top: 0;
+                overflow: hidden;
+                width: 70vw;
+                height: max-content;
             }
 
             // Backgorund image for card 2
@@ -136,14 +143,16 @@ body {
                 &:hover {
                     transform: scale(1.025);
                 }
-                &-2-info {
-                    color: darkmagenta;
-                    font-size: small;
-                    width: 80vw;
-                    position: relative;
-                    left: -1em;
-                    margin: 1em 0;
-                }
+            }
+            &-2-info {
+                background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+                color: white;
+                font-size: small;
+                padding: 1.9em;
+                padding-top: 0;
+                overflow: hidden;
+                width: 70vw;
+                height: max-content;
             }
 
             // Backgorund image for card 3
@@ -165,12 +174,14 @@ body {
                 }
             }
             &-3-info {
-                color: darkmagenta;
+                background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+                color: white;
                 font-size: small;
-                width: 80vw;
-                position: relative;
-                left: -1em;
-                margin: 1em 0;
+                padding: 1.9em;
+                padding-top: 0;
+                overflow: hidden;
+                width: 70vw;
+                height: max-content;
             }
         }
     }
@@ -353,23 +364,30 @@ body {
 
 // Large Screen Development
 @media screen and (min-width: 1000px) {
+    // HEADER
     .main-head {
-        height: 6vh;
-    }
+        grid-template-rows: min-content;
 
-    .main-head-body-butts {
-        @include mixin.rectangle(4em, 10em);
-        // transition: background 0.4s ease-in-out;
-        transition-duration: 0.4s;
-        &:hover {
-            opacity: 90%;
-            transform: scale(1.035);
+        &-body {
+            column-gap: 25em;
+
+            &-butts {
+                @include mixin.rectangle(4em, 10em);
+                transition-duration: 0.4s;
+                font-size: medium;
+                padding: 0;
+                margin: 1em 0;
+                &:hover {
+                    opacity: 90%;
+                    transform: scale(1.035);
+                }
+            }
         }
     }
 
     .main-body {
         grid-template-columns: 190px auto 190px;
-        // justify-content: start;
+
         &-hero {
             // Large Screen consideration
             @include mixin.flex(row, flex-end, space-between);
@@ -380,10 +398,18 @@ body {
                 overflow-wrap: break-word;
             }
         }
-    }
-
-    .text-box-width {
-        width: 30em;
+        /*         &-card-section {
+            &-card {
+                &-1-info {
+                    transform: translateY(70%);
+                    transition: 0.7s ease-in;
+                    font-size: medium;
+                    &:hover {
+                        transform: translateY(0%);
+                    }
+                }
+            }
+        } */
     }
 
     // Experience horiztonal cards
@@ -396,53 +422,58 @@ body {
             max-height: min-content;
         }
         &-info {
-            // width: min-content;
             height: min-content;
         }
     }
 
     .main-body-exp-cards-horz-card-2 {
         @include mixin.flex(row, center, flex-start);
+
+        &-1 {
+            @include mixin.flex(row, center, flex-start);
+            @include mixin.border-radius(variables.$bd-size);
+
+            &-image {
+                max-height: 300vh;
+                width: 22.39vw;
+            }
+            &-info {
+                font-size: medium;
+                left: 0;
+            }
+        }
     }
 
-    .main-body-exp-cards-horz-card-2-1 {
-        @include mixin.flex(row, center, flex-start);
-        @include mixin.border-radius(variables.$bd-size);
-        &-image {
-            max-height: 300vh;
-            width: 22.39vw;
-        }
-        &-info {
-            font-size: medium;
-            left: 0;
-        }
-    }
+    .main-body-exp-cards-horz-card-3 {
+        &-1 {
+            @include mixin.flex(row, center, flex-start);
+            @include mixin.border-radius(variables.$bd-size);
 
-    .main-body-exp-cards-horz-card-3-1 {
-        @include mixin.flex(row, center, flex-start);
-        @include mixin.border-radius(variables.$bd-size);
-        &-image {
-            max-height: 600vh;
-            width: 32.69vw;
-            z-index: 1;
-        }
-        &-info {
-            overflow: hidden;
-            z-index: -1;
-            left: 0;
-            top: -1.3em;
-            padding-top: 1rem;
-            padding-right: 1rem;
-            max-width: fit-content;
-            font-size: medium;
+            &-image {
+                max-height: 600vh;
+                width: 32.69vw;
+                z-index: 1;
+            }
+            &-info {
+                overflow: hidden;
+                z-index: -1;
+                left: 0;
+                top: -1.3em;
+                padding-top: 1rem;
+                padding-right: 1rem;
+                max-width: fit-content;
+                font-size: medium;
+            }
         }
     }
 
     .main-body-exp-cards-horz-card-4 {
         @include mixin.flex(row, center, flex-start);
+
         &-1 {
             @include mixin.flex(row, center, space-between);
             width: 100%;
+
             &-image {
                 width: 500px;
                 background-position: center;
@@ -458,5 +489,23 @@ body {
     // Upper middle card picture
     .main-body-card-section-card-2-image {
         background-size: cover;
+    }
+
+    // Middle cards transform effect
+    .transform-text {
+        transform: translateY(70%);
+        transition: 0.7s ease-in;
+        font-size: medium;
+        opacity: 0.6;
+        &:hover {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    // Middle Cards text box section width
+    .text-box-width {
+        width: 18vw;
+        min-height: 14vh;
     }
 }
