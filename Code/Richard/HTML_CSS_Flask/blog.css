@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab&family=Oswald&display=swap');
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(86, 226, 43);
+
+}
+
+nav>ul{
+display:flex;
+justify-content: space-between;
+align-content: space-between;
+
+}
+
+li {
+    padding: 0px, 40px, 0px, 0px;
+}
+
+nav {
+
+    position: fixed;
+    top: 0;
+    width: 100vh;
+    max-height: 4rem;
+background-color: burlywood;
+}
+
+
+body {
+
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+background-color: cornflowerblue;
+font-family: Tahoma, sans-serif;
+padding: 15rem;
+max-width: 50%;
+
+
+}
+
+section {
+
+margin:auto
+
+}
+
+
+footer {
+    display:flex;
+    justify-content: center;
+    border-radius: 3px;
+    border-color: blue;
+}
+
+.side-nav {
+
+display: flex;
+flex-direction: row-reverse;
+justify-content: flex-start;
+
+position: fixed;
+right:0;
+padding: 20px, 80px;
+
+}
