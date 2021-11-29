@@ -7,7 +7,7 @@ body {
     font-family: 'Merriweather', serif;
 }
 header { 
-    font-size: 60px;
+    font-size: 70px;
     text-decoration: underline;
     color: #DC143C;
     text-align: center;
@@ -21,14 +21,38 @@ nav  a:hover {
 }
 .flex-container {
     display: flex;
-    background-color: #4e4c4c;
+    background-color: #5f5656;;
   }
   
   .flex-container > div {
     background-color: grey;
     margin: 10px;
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+  .flex-container1 {
+    display: flex;
+    background-color: #4e4c4c;
+  }
+  
+  .flex-container1 > div {
+    background-color: grey;
+    margin: 10px;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .flex-container2 {
+    display: flex;
+    background-color: #5f5656;
+  }
+  
+  .flex-container2 > div {
+    background-color: grey;
+    margin: 10px;
+    padding: 18px;
+    font-size: 18px;
   }
 
 /* The sidebar menu */
@@ -63,6 +87,14 @@ nav  a:hover {
     margin-left: 160px; /* Same as the width of the sidebar */
     padding: 0px 10px;
   }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #dbdbdb;
+    color: rgb(0, 0, 0);
+}
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
