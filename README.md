@@ -60,6 +60,8 @@ Weeks 16, 17, 18: Capstone project
   <ul>
     <li>Lab 01 - Bio</li>
     <li>Lab 02 - Blog</li>
+    <li>Lab 03 - Company Page</li>
+    <li>Lab 04 - Personal Portfolio</li>
   </ul>
 </details>
 
@@ -166,7 +168,24 @@ Corrections will be made only to that particular branch.
 
 ---
 
+
+
+
 ## Additional Resources
+
+<details>
+  <summary>SEO & Accessibility</summary>
+  <p><b>SEO</b></p>
+  <ul>
+    <li><a href="https://developers.google.com/search/docs/beginner/get-started?hl=en%2F">Get Started with SEO</a></li>
+    <li><a href="https://moz.com/beginners-guide-to-seo">Beginner's Guide to SEO</a></li>
+  </ul>
+  <p><b>Accessibility</b></p>
+  <ul>
+    <li><a href="https://www.w3.org/TR/html-aria/#rules-wd">ARIA in HTML - W3C</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA - MDN Web Docs</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>

@@ -1,109 +1,111 @@
 /* Language: css */
 
-
 /* Path: Code\Michael\html_css_flask\lab_01\css\index.css */
-
 
 /*
     Name: Michael
-    Date: 10/10/2019
-    Description: Lab 02
+    Date: 10/17/2021
+    Description: Lab 01
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Estonia&display=swap");
 body {
-    text-align: center;
-    font-family: estonia, sans-serif;
-    font-size: 2.5em;
-    background-image: radial-gradient(circle, hsl(209, 22%, 68%), hsl(206, 36%, 58%));
+	text-align: center;
+	font-family: estonia, sans-serif;
+	font-size: 2.5em;
+	background-image: radial-gradient(
+		circle,
+		hsl(209, 22%, 68%),
+		hsl(206, 36%, 58%)
+	);
 }
 
 strong {
-    font-size: 0.8em;
-    color: hsl(30, 94%, 14%);
+	font-size: 0.8em;
+	color: hsl(30, 94%, 14%);
 }
 
 h2 {
-    font-size: 1.5em;
-    margin: 0;
-    color: hsl(30, 94%, 14%);
-    padding: 0em;
+	font-size: 1.5em;
+	margin: 0;
+	color: hsl(30, 94%, 14%);
+	padding: 0em;
 }
 
 p {
-    font-size: 1em;
-    margin: 0;
-    padding: 0em;
+	font-size: 1em;
+	margin: 0;
+	padding: 0em;
 }
 
 img {
-    border-radius: 50%;
-    border: 1px solid black;
-    margin: 0 auto;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin: 0 auto;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 li {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-    color: hsl(358, 49%, 42%);
-    text-decoration: none;
+	color: hsl(358, 49%, 42%);
+	text-decoration: none;
 }
 
 a:hover {
-    color: hsl(11, 42%, 58%);
+	color: hsl(11, 42%, 58%);
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: ". picture ." "introduction main-content links" ". . .";
-    height: 95vh;
-    padding-left: 0vw;
-    padding-top: 0vh;
-    padding-bottom: 0vh;
-    padding-right: 0vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: ". picture ." "introduction main-content links" ". . .";
+	height: 95vh;
+	padding-left: 0vw;
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+	padding-right: 0vw;
 }
 
 .links {
-    grid-area: links;
-    justify-items: right;
-    gap: 0px 0px;
+	grid-area: links;
+	justify-items: right;
+	gap: 0px 0px;
 }
 
 .picture {
-    grid-area: picture;
-    gap: 0px 0px;
+	grid-area: picture;
+	gap: 0px 0px;
 }
 
 .main-content {
-    grid-area: main-content;
-    gap: 0px 0px;
-    padding-bottom: 10vh;
+	grid-area: main-content;
+	gap: 0px 0px;
+	padding-bottom: 10vh;
 }
 
 .introduction {
-    grid-area: introduction;
-    gap: 0px 0px;
+	grid-area: introduction;
+	gap: 0px 0px;
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	text-align: center;
 }
