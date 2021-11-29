@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Questrial', sans-serif;
+}
+
+.h1, .h2, .h3, .display-4 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+#hero {
+    background-image: url('../images/notebook.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    background-size: cover;
+    height: 60vh;
+}
+
+.rounded-circle {
+    height: 40vh;
+    max-height: 40vw;
+    width: 40vw;
+    max-width: 40vh;
+}

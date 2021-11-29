@@ -1,0 +1,109 @@
+/*
+    Name: Michael
+    Date: 10/19/2021
+    Description: Lab 02
+*/
+/*
+Lab 2: Blog
+Let's make the template of a blog with a title, top-nav, side-nav, and multiple posts.
+Use flexbox and semantic elements (header, nav, section, and footer).
+You can use a custom font, fancy colors, and make generate fake content using an Ipsum.
+*/
+
+footer {
+	position: static;
+	bottom: 0;
+	z-index: 1;
+}
+
+#nav {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+#carousel {
+	z-index: auto;
+}
+
+.carouselItems {
+	z-index: auto;
+	padding: 3rem;
+	padding-top: 0;
+}
+
+#posts {
+	align-items: center;
+	text-align: center;
+	font-size: 3rem;
+}
+
+#nav-list-spy {
+	width: auto;
+	position: fixed;
+	top: 25vh;
+	right: 0;
+	z-index: 2;
+}
+
+#transparent-nav {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#transparent-nav:hover {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+#mousehide:hover {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+
+	transition: all 0.25s;
+	opacity: 0;
+}
+#mousehide:not(hover) {
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	transition: all 0.25s;
+	opacity: 1;
+}
+
+p {
+	font-size: 2vw;
+}
+h5 {
+	font-size: 2.5vw;
+	padding: 5%;
+	color: rgb(167, 167, 167);
+}
+
+#carousel-control {
+	background-color: red;
+}
+
+@media (min-width: 1200px) {
+	#main-div {
+		width: 70vw;
+	}
+	p {
+		font-size: 2vw;
+	}
+	h5 {
+		font-size: 3vw;
+	}
+}
+/* Massively large 4k monitor */
+@media (min-width: 1400px) {
+	#main-div {
+		width: 60vw;
+	}
+	p {
+		font-size: 1.5vw;
+	}
+	h5 {
+		font-size: 2.5vw;
+		padding: 5%;
+	}
+	#nav-list-spy {
+		width: 20vw;
+	}
+}
