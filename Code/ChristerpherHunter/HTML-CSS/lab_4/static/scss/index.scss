@@ -70,15 +70,22 @@ body {
             justify-items: center;
             // margin: -2em;
             // padding: 3px 2em;
-            width: 98%;
+            width: 95%;
             height: min-content;
             border-radius: variables.$bd-size;
+            h2 {
+                padding: 0.6em 1em 0 1em;
+            }
             p {
-                padding: 0.6em;
+                width: 90%;
+                padding: 0 1.5em;
+                // margin: 0 1rem;
+                font-size: large;
             }
         }
     }
 
+    // Middle Card Section
     &-card-section {
         grid-column-start: 2;
         grid-column-end: 3;
@@ -105,11 +112,11 @@ body {
                 background-image: url("../assets/images/elec-eng.gif");
                 background-size: cover;
                 background-repeat: no-repeat;
+                background-position: top;
                 overflow: hidden;
                 display: block;
                 width: 100%;
-                max-height: 200px;
-                object-position: center;
+                max-height: max-content;
                 aspect-ratio: 16 / 9;
                 transition: 0.3s ease-in;
                 &:hover {
@@ -136,8 +143,7 @@ body {
                 overflow: hidden;
                 display: block;
                 width: 100%;
-                max-height: 200px;
-                object-position: center;
+                max-height: max-content;
                 aspect-ratio: 16 / 9;
                 transition: 0.3s ease-in;
                 &:hover {
@@ -165,8 +171,7 @@ body {
                 overflow: hidden;
                 display: block;
                 width: 100%;
-                max-height: 200px;
-                object-position: center;
+                max-height: max-content;
                 aspect-ratio: 16 / 9;
                 transition: 0.3s ease-in;
                 &:hover {
@@ -178,14 +183,17 @@ body {
                 color: white;
                 font-size: small;
                 padding: 1.9em;
+                padding-bottom: 0;
                 padding-top: 0;
                 overflow: hidden;
                 width: 70vw;
                 height: max-content;
+                margin: 0;
             }
         }
     }
 
+    // Lower Card Section
     &-exp-cards {
         grid-column-start: 2;
         grid-column-end: 3;
@@ -195,8 +203,9 @@ body {
 
         &-horz-card-1 {
             @include mixin.flex(column, center, center);
-            margin-bottom: 1em;
+            margin-bottom: 2em;
             width: 99%;
+            overflow: hidden;
 
             &-1 {
                 @include mixin.flex(column, center, center);
@@ -213,7 +222,7 @@ body {
                     // margin: 0 0.4em;
                     display: block;
                     width: 100%;
-                    max-height: 100vh;
+                    // max-height: 10vh;
                     // object-position: center;
                     aspect-ratio: 16 / 9;
                     transition: 0.3s ease-in;
@@ -227,13 +236,18 @@ body {
                     position: relative;
                     left: -1em;
                     margin: 0;
+                    @include mixin.rectangle(15rem, 25rem);
                 }
+            }
+
+            b {
+                font-size: 15pt;
             }
         }
 
         &-horz-card-2 {
             @include mixin.flex(column, center, center);
-            margin-bottom: 1em;
+            margin-bottom: 2em;
 
             &-1 {
                 @include mixin.flex(column, center, center);
@@ -268,7 +282,7 @@ body {
 
         &-horz-card-3 {
             @include mixin.flex(column, center, center);
-            margin-bottom: 1em;
+            margin-bottom: 2em;
 
             &-1 {
                 @include mixin.flex(column, center, center);
@@ -350,8 +364,12 @@ body {
     align-content: end;
     &-container {
         @include mixin.flex(row, center, space-around);
-        @include mixin.rectangle(10vh, 100vw);
+        @include mixin.rectangle(min-content, 100vw);
         background-color: variables.$xanadu;
+
+        p {
+            text-align: center;
+        }
     }
 }
 
@@ -366,15 +384,18 @@ body {
 @media screen and (min-width: 1000px) {
     // HEADER
     .main-head {
-        grid-template-rows: min-content;
+        // grid-template-rows: min-content;
 
         &-body {
-            column-gap: 25em;
+            column-gap: 0;
+            width: 100%;
+            justify-items: center;
+            justify-content: space-around;
 
             &-butts {
                 @include mixin.rectangle(4em, 10em);
                 transition-duration: 0.4s;
-                font-size: medium;
+                font-size: clamp(small, medium, large);
                 padding: 0;
                 margin: 1em 0;
                 &:hover {
@@ -395,51 +416,54 @@ body {
             &-text-box {
                 width: 60%;
                 height: min-content;
-                overflow-wrap: break-word;
-            }
-        }
-        /*         &-card-section {
-            &-card {
-                &-1-info {
-                    transform: translateY(70%);
-                    transition: 0.7s ease-in;
-                    font-size: medium;
-                    &:hover {
-                        transform: translateY(0%);
-                    }
+                // overflow-wrap: break-word;
+                h2 {
+                    padding: 0.6em 1em 0 1em;
                 }
             }
-        } */
+        }
+
+        // Middle Card Section
+        &-card-section {
+            align-items: start;
+
+            &-card {
+                height: 26vh;
+            }
+        }
     }
 
     // Experience horiztonal cards
     .main-body-exp-cards-horz-card-1-1 {
         @include mixin.flex(row, center, flex-start);
         @include mixin.border-radius(variables.$bd-size);
+        width: 100%;
 
         &-image {
-            width: 60%;
+            width: 30%;
             max-height: min-content;
         }
         &-info {
             height: min-content;
+            // @include mixin.rectangle(min-content, 89em)
         }
     }
 
     .main-body-exp-cards-horz-card-2 {
-        @include mixin.flex(row, center, flex-start);
+        // @include mixin.flex(row, center, flex-start);
 
         &-1 {
             @include mixin.flex(row, center, flex-start);
             @include mixin.border-radius(variables.$bd-size);
+            width: 100%;
 
             &-image {
-                max-height: 300vh;
-                width: 22.39vw;
+                width: 30%;
+                max-height: min-content;
             }
             &-info {
+                height: min-content;
                 font-size: medium;
-                left: 0;
             }
         }
     }
@@ -448,40 +472,37 @@ body {
         &-1 {
             @include mixin.flex(row, center, flex-start);
             @include mixin.border-radius(variables.$bd-size);
+            width: 100%;
 
             &-image {
-                max-height: 600vh;
-                width: 32.69vw;
-                z-index: 1;
+                width: 44%;
+                max-height: min-content;
             }
             &-info {
-                overflow: hidden;
-                z-index: -1;
-                left: 0;
-                top: -1.3em;
-                padding-top: 1rem;
-                padding-right: 1rem;
-                max-width: fit-content;
+                height: min-content;
                 font-size: medium;
             }
         }
     }
 
     .main-body-exp-cards-horz-card-4 {
-        @include mixin.flex(row, center, flex-start);
+        // @include mixin.flex(row, center, flex-start);
 
         &-1 {
-            @include mixin.flex(row, center, space-between);
+            @include mixin.flex(row, center, flex-start);
+            @include mixin.border-radius(variables.$bd-size);
             width: 100%;
 
             &-image {
-                width: 500px;
+                width: 30%;
+                max-height: min-content;
                 background-position: center;
             }
             &-info {
-                width: 100%;
-                left: 3.86em;
+                height: min-content;
                 font-size: medium;
+                left: 0;
+                margin: 0;
             }
         }
     }
@@ -493,7 +514,7 @@ body {
 
     // Middle cards transform effect
     .transform-text {
-        transform: translateY(70%);
+        transform: translateY(78%);
         transition: 0.7s ease-in;
         font-size: medium;
         opacity: 0.6;
@@ -506,6 +527,6 @@ body {
     // Middle Cards text box section width
     .text-box-width {
         width: 18vw;
-        min-height: 14vh;
+        height: 17vh;
     }
 }

@@ -68,14 +68,19 @@ body {
 .main-body-hero-text-box {
   background-color: #dcc9b7;
   justify-items: center;
-  width: 98%;
+  width: 95%;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   border-radius: 15px;
 }
+.main-body-hero-text-box h2 {
+  padding: 0.6em 1em 0 1em;
+}
 .main-body-hero-text-box p {
-  padding: 0.6em;
+  width: 90%;
+  padding: 0 1.5em;
+  font-size: large;
 }
 .main-body-card-section {
   grid-column-start: 2;
@@ -107,12 +112,13 @@ body {
   background-image: url("../assets/images/elec-eng.gif");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
   overflow: hidden;
   display: block;
   width: 100%;
-  max-height: 200px;
-  -o-object-position: center;
-     object-position: center;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   aspect-ratio: 16/9;
   transition: 0.3s ease-in;
 }
@@ -139,9 +145,9 @@ body {
   overflow: hidden;
   display: block;
   width: 100%;
-  max-height: 200px;
-  -o-object-position: center;
-     object-position: center;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   aspect-ratio: 16/9;
   transition: 0.3s ease-in;
 }
@@ -169,9 +175,9 @@ body {
   overflow: hidden;
   display: block;
   width: 100%;
-  max-height: 200px;
-  -o-object-position: center;
-     object-position: center;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
   aspect-ratio: 16/9;
   transition: 0.3s ease-in;
 }
@@ -183,12 +189,14 @@ body {
   color: white;
   font-size: small;
   padding: 1.9em;
+  padding-bottom: 0;
   padding-top: 0;
   overflow: hidden;
   width: 70vw;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  margin: 0;
 }
 .main-body-exp-cards {
   grid-column-start: 2;
@@ -202,8 +210,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   width: 99%;
+  overflow: hidden;
 }
 .main-body-exp-cards-horz-card-1-1 {
   display: flex;
@@ -225,7 +234,6 @@ body {
   overflow: hidden;
   display: block;
   width: 100%;
-  max-height: 100vh;
   aspect-ratio: 16/9;
   transition: 0.3s ease-in;
 }
@@ -238,13 +246,18 @@ body {
   position: relative;
   left: -1em;
   margin: 0;
+  height: 15rem;
+  width: 25rem;
+}
+.main-body-exp-cards-horz-card-1 b {
+  font-size: 15pt;
 }
 .main-body-exp-cards-horz-card-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .main-body-exp-cards-horz-card-2-1 {
   display: flex;
@@ -285,7 +298,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .main-body-exp-cards-horz-card-3-1 {
   display: flex;
@@ -374,9 +387,14 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  height: 10vh;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   width: 100vw;
   background-color: #737e72;
+}
+.main-footer-container p {
+  text-align: center;
 }
 
 .card-shadow {
@@ -386,19 +404,18 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
-  .main-head {
-    grid-template-rows: -webkit-min-content;
-    grid-template-rows: min-content;
-  }
   .main-head-body {
-    -moz-column-gap: 25em;
-         column-gap: 25em;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    width: 100%;
+    justify-items: center;
+    justify-content: space-around;
   }
   .main-head-body-butts {
     height: 4em;
     width: 10em;
     transition-duration: 0.4s;
-    font-size: medium;
+    font-size: clamp(small, medium, large);
     padding: 0;
     margin: 1em 0;
   }
@@ -409,18 +426,6 @@ body {
 
   .main-body {
     grid-template-columns: 190px auto 190px;
-    /*         &-card-section {
-        &-card {
-            &-1-info {
-                transform: translateY(70%);
-                transition: 0.7s ease-in;
-                font-size: medium;
-                &:hover {
-                    transform: translateY(0%);
-                }
-            }
-        }
-    } */
   }
   .main-body-hero {
     display: flex;
@@ -433,7 +438,15 @@ body {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    overflow-wrap: break-word;
+  }
+  .main-body-hero-text-box h2 {
+    padding: 0.6em 1em 0 1em;
+  }
+  .main-body-card-section {
+    align-items: start;
+  }
+  .main-body-card-section-card {
+    height: 26vh;
   }
 
   .main-body-exp-cards-horz-card-1-1 {
@@ -442,9 +455,10 @@ body {
     align-items: center;
     justify-content: flex-start;
     border-radius: 15px;
+    width: 100%;
   }
   .main-body-exp-cards-horz-card-1-1-image {
-    width: 60%;
+    width: 30%;
     max-height: -webkit-min-content;
     max-height: -moz-min-content;
     max-height: min-content;
@@ -455,26 +469,25 @@ body {
     height: min-content;
   }
 
-  .main-body-exp-cards-horz-card-2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
   .main-body-exp-cards-horz-card-2-1 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     border-radius: 15px;
+    width: 100%;
   }
   .main-body-exp-cards-horz-card-2-1-image {
-    max-height: 300vh;
-    width: 22.39vw;
+    width: 30%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
   }
   .main-body-exp-cards-horz-card-2-1-info {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     font-size: medium;
-    left: 0;
   }
 
   .main-body-exp-cards-horz-card-3-1 {
@@ -483,46 +496,43 @@ body {
     align-items: center;
     justify-content: flex-start;
     border-radius: 15px;
+    width: 100%;
   }
   .main-body-exp-cards-horz-card-3-1-image {
-    max-height: 600vh;
-    width: 32.69vw;
-    z-index: 1;
+    width: 44%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
   }
   .main-body-exp-cards-horz-card-3-1-info {
-    overflow: hidden;
-    z-index: -1;
-    left: 0;
-    top: -1.3em;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     font-size: medium;
   }
 
-  .main-body-exp-cards-horz-card-4 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
   .main-body-exp-cards-horz-card-4-1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    border-radius: 15px;
     width: 100%;
   }
   .main-body-exp-cards-horz-card-4-1-image {
-    width: 500px;
+    width: 30%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
     background-position: center;
   }
   .main-body-exp-cards-horz-card-4-1-info {
-    width: 100%;
-    left: 3.86em;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     font-size: medium;
+    left: 0;
+    margin: 0;
   }
 
   .main-body-card-section-card-2-image {
@@ -530,7 +540,7 @@ body {
   }
 
   .transform-text {
-    transform: translateY(70%);
+    transform: translateY(78%);
     transition: 0.7s ease-in;
     font-size: medium;
     opacity: 0.6;
@@ -542,6 +552,6 @@ body {
 
   .text-box-width {
     width: 18vw;
-    min-height: 14vh;
+    height: 17vh;
   }
 }/*# sourceMappingURL=index.css.map */
