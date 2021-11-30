@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .basic-info {
     font-family: 'Montserrat', sans-serif;
     font-size:100%; line-height:1;   
@@ -15,70 +19,9 @@ h2 {
     font-size: 5em;
 }
 
-
-.hero-container {
-    background-color:#578d8d; 
-    color:white;
-    font-weight:bold;
-    padding:5%;
-    padding-bottom: 5%;
-
-}
-
-.profile-image {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-text {
-    text-align:center;
-    line-height:2em;
-}
-
-.button-box {
-    text-align:center;
-    margin-top: 20%;
-}
-
-#contact-btn {
- 
-    color:white;
-    font-weight:bold;
-    
-    vertical-align: bottom;
-    border:none;
-    }
-
-.certifications-box {
-    text-align:center;
-    padding:10%;
-}
-
-.time-box {
-    text-align:center;
-    line-height:2em;
-    background-color: #474d4d;
-    color:white;
-    font-weight:bold;
-    padding-top:2%;
-
-}
-
-.time-details {
-    text-align:left;
-    line-height:2em;
-    padding-top:5%;
-}
-
-.aircraft-section {
-    text-align:center;
-    padding:2%;
-
-}
-
 .btn {
-    width: 120px;
+    width: 150px;
+    height: 50px;
     padding:2px;
     margin:3px;
 }
@@ -89,6 +32,70 @@ h2 {
 
 .btn-secondary {
     background-color: #474d4d !important;
+}
+
+#contact-btn {
+    background-color: #e1ebeb !important;
+    color:black !important;
+}
+
+.hero-box {
+    background-color:#578d8d; 
+    color:white;
+    font-weight:bold;
+    padding-top:5%
+}
+
+.profile-image {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0;
+}
+
+.hero-text-box {
+    text-align:center;
+    line-height:2em;
+}
+
+.button-box {
+    text-align:center;
+    padding-top: 2%;
+    padding-bottom:2%;
+    background-color: #578d8d;
+    position:sticky;
+    top:0;
+}
+
+#contact-btn {
+    font-weight:bold;
+    vertical-align: bottom;
+    border:none;
+    }
+
+.certifications-box {
+    text-align:center;
+    padding:15%;
+}
+
+.time-box {
+    text-align:center;
+    line-height:2em;
+    background-color: #474d4d;
+    color:white;
+    font-weight:bold;
+    padding-top:2%;
+}
+
+.time-details {
+    text-align:left;
+    line-height:2em;
+    padding-top:5%;
+}
+
+.aircraft-box {
+    text-align:center;
+    padding:2%;
 }
 
 .modal-title {
@@ -106,68 +113,10 @@ h2 {
     width:50%;
 }
 
-.name {
-    font-family: 'Montserrat', sans-serif;
-    text-align:center;
-}
-
 .experience-box {
     padding-top: 10%;
     margin-bottom: 15%;
     line-height:2em;
-}
-
-.education-box {
-    background-color: #578d8d;
-    color:white;
-    padding:5%;
-    line-height:2em;
-    text-align:center;
-}
-
-.inner-education-box {
-    padding-top:3%;
-    text-align:left;
-}
-
-.achievements-interests-box {
-    text-align:center;
-    padding:10%;
-    line-height: 3em;
-    padding-bottom:15%;
-}
-
-.achievements-box {
-    text-align:center;
-}
-
-.interests-box {
-    text-align:center;
-}
-
-.contact-info {
-    text-align: center;
-}
-
-a:link, a:hover, a:visited, a:active {
-    color:white !important;
-    text-decoration-color: lightgrey;
-    
-}
-.job-target {
-    font-size: xx-large;
-}
-
-
-
-.certificates {
-    text-align:right;
-    line-height: 1.2em;
-}
-
-
-.flight-label{
-    text-align:left;
 }
 
 .location {
@@ -184,15 +133,47 @@ a:link, a:hover, a:visited, a:active {
     line-height: 1.5em;
 }
 
+.education-box {
+    background-color: #578d8d;
+    color:white;
+    padding:15%;
+    line-height:2em;
+    text-align:center;
+}
+
+.inner-education-box {
+    padding-top:3%;
+    text-align:left;
+}
+
+.achievements-interests-box {
+    text-align:center;
+    padding:20%;
+    line-height: 3em;
+}
+
+.achievements-box {
+    text-align:center;
+}
+
+.interests-box {
+    text-align:center;
+}
+
+a:link, a:hover, a:visited, a:active {
+    color:white !important;
+    text-decoration-color: lightgrey;  
+}
+
 .footer-box {
     background-color: #474d4d;
     color:white;
+    padding:12%;
 }
 
 .contact-me {
     padding:5%;
     text-align: left;
-
 }
 
 .address-info {
@@ -205,10 +186,6 @@ a:link, a:hover, a:visited, a:active {
     padding-top:15%;
 }
 
-.submit-button {
-    text-align:center;
-}
-
 #certificate-image {
     display:block;
     margin-left:auto;
@@ -216,7 +193,7 @@ a:link, a:hover, a:visited, a:active {
     padding-bottom: 5%;
 }
 
-#time-clock {
+#timer-image {
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -230,7 +207,7 @@ a:link, a:hover, a:visited, a:active {
     padding-bottom: 5%;
 }
 
-#work-experience {
+#experience-image {
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -252,13 +229,6 @@ a:link, a:hover, a:visited, a:active {
 }
 
 #interests-image {
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    padding-bottom: 2%;
-}
-
-#email-image {
     display:block;
     margin-left:auto;
     margin-right:auto;
