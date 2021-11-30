@@ -173,7 +173,7 @@ body {
 
 @media (pointer: coarse) and (hover: none) {
 .video-container {
-  background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  background: url('./images/video-background.jpg') black center;
 }
 
 .video-container video {
@@ -241,15 +241,26 @@ body {
 }
 
 .btn-primary {
-  color:#DFDEDF;
-  background-color:#212529;
-  border: 2px solid #ffae00;
+  display: inline-block;
+  background: #171a1d;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border:2px solid #ffae00 ;
+  box-shadow: 0px 17px 10px -10px rgba(17, 17, 17, 0.8);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
+  box-shadow: 0px 37px 20px -20px rgba(255, 230, 7, 0.746);
+  background-color: #171a1d;
   color:#ffae00;
-  background-color:#212529;
-  border: 2px solid #DFDEDF;
+  border:2px solid #ffae00 ;
+  -webkit-transform: translate(0px, -10px) scale(1.1);
+  transform: translate(0px, -10px) scale(1.1);
 }
 
 #hanging-icons > h2{
@@ -433,3 +444,5 @@ div#hanging-icons.container.px-4.py-5{
 }
 
 .bg-dark{background-color:#171a1d!important;}
+
+
