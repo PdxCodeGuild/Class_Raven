@@ -98,7 +98,7 @@ a.nav-link{
 
 @media (min-width: 574px) {
 #hanging-icons > h2 {
-  font-size: 1rem!important;
+  font-size: 1.7rem!important;
 }
 #icon-grid > h2{font-size: 1rem!important;
 }
@@ -256,7 +256,7 @@ body {
   text-align: center;
   padding-bottom: 50px!important;
   font-family: 'Centauri';
-  font-size: 2rem;
+  font-size: 1rem;
   
 }
 
@@ -340,7 +340,6 @@ padding-top: 20px;
 #icon-grid > div > div:nth-child(7) > footer > div.d-flex.justify-content-between.py-4.my-4.border-top{
   backdrop-filter: blur(15px);
   border: none;
-
 }
 
   a.nav-link.p-0.text-muted{
@@ -351,8 +350,6 @@ padding-top: 20px;
   color: #ffae00 !important;
 }
   
-
-
 h5{
   margin-left:20px !important;
 }
