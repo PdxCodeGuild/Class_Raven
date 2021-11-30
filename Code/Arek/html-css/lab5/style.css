@@ -1,0 +1,39 @@
+body{
+    background-image: url(burrito.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+}
+
+
+#burrito-form{
+    margin: 25vh 0px;
+}
+
+#burrito-page{
+    background-color: rgb(0,0,0, 0.90);
+    border-style: solid;
+    border-width: 10px;
+}
+
+h4{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.input-field label {
+    color: orange;
+}
+
+header{
+    color: orangered;
+    font-size: large;
+    font-weight: bold;
+    margin: 20px;
+}
+
+
+
+
