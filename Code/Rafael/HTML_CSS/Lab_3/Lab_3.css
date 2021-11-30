@@ -7,6 +7,11 @@
   src: url('fonts/Centauri.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Equinox';
+    src: url('fonts/Equinox.woff') format('woff');
+  }
+
 /* Main menu and mobile menu css */
 
 /* -- reference for menu undeline css: "https://codingyaar.com/responsive-bootstrap-navbar-underline-animation"-- */
