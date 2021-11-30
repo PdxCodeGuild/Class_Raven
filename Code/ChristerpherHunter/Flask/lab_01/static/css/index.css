@@ -23,6 +23,15 @@ body {
   border: 2px solid black;
   margin-bottom: 2rem;
 }
+.main-body-top-left {
+  grid-column: 2/3;
+}
+.main-body-top-left-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
 .main-body-top-left-form-name {
   font-weight: 400;
 }

@@ -29,7 +29,11 @@ body {
     margin-bottom: 2rem;
 
     &-top-left {
+        grid-column: 2 / 3;
+
         &-form {
+            @include mixins.flex(column, flex-start, center);
+
             &-name {
                 font-weight: 400;
             }
@@ -94,7 +98,7 @@ body {
     @include mixins.rectangle(40px, 40px);
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (min-width: 568px) {
     
-
+    
 }
