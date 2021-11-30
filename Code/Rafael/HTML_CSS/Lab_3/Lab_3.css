@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'Equinox';
   src: url('fonts/Equinox.woff') format('woff');
-  }
+}
 
 /* Main menu and mobile menu css */
 
@@ -226,6 +226,7 @@ body {
   padding-top: 3rem!important;
   padding-bottom: 3rem!important;
 }
+
 .px-4 {
   padding-right: 1.5rem!important;
   padding-left: 1.5rem!important;
@@ -447,7 +448,4 @@ div#hanging-icons.container.px-4.py-5{
 
 .btn{
   font-size: 0.8rem;
-
 }
-
-
