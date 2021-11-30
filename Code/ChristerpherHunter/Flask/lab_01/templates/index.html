@@ -23,24 +23,39 @@
     <div class="main-body">
         <div class="main-body-top-left">
             <section class="main-body-top-left-form">
-                <div class="main-body-top-left-form-name">
-                    <label for="name">First Name:</label>
-                    <input type="text" name="name" id="name" value="" tabindex="1">
-                </div>
-                <div class="main-body-top-left-form-radio-1">
-                    <label for="white-flour">White Flour</label>
-                    <input type="radio" name="white-flour" tabindex="2" value="White Flour">
-                    <label for="wheat-flour"></label>
-                    <input type="radio" name="wheat-flour" tabindex="3" value="Wheat Flour">
-                    <label for="spinach"></label>
-                    <input type="radio" name="spinach" tabindex="4" value="Spinach">
-                    <label for="corn"></label>
-                    <input type="radio" name="corn" tabindex="5" value="Corn">
-                </div>
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <form action="" method="post">
+                    <div class="main-body-top-left-form-name">
+                        <input type="text" name="f-name" placeholder="First Name" pattern="[a-z][A-Z]" tabindex="1">
+                        <br>
+                        <input type="text" name="l-name" placeholder="Last Name" pattern="[a-z][A-Z]" tabindex="1">
+                        </div>
+                        <div class="main-body-top-left-form-radio-1">
+                        <p>Tortilla Type:</p>
+                        <div>
+                            <input type="radio" name="tortilla-type" tabindex="2" value="White Flour" checked>
+                            <label for="white-flour">White Flour</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="tortilla-type" tabindex="3" value="Wheat Flour">
+                            <label for="wheat-flour">Wheat Flour</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="tortilla-type" tabindex="4" value="Spinach">
+                            <label for="spinach">Spinach</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="tortilla-type" tabindex="5" value="Corn">
+                            <label for="corn">Corn</label>
+                        </div>
+                        </div>
+                    <br>
+                    <select name="additional-ingreds">Additional Ingredients
+                        <option value="additional-ingreds">Cheese<input type="checkbox"></option>
+                        <option value="additional-ingreds">Sour Cream<input type="checkbox"></option>
+                    </select>
+                    <br>
+                    <textarea name="deliv-instr" cols="30" rows="10" placeholder="Delivery Instructions:"></textarea>
+                    </form>
             </section>
         </div>
         <div class="main-body-top-right">
