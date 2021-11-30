@@ -62,6 +62,7 @@ Weeks 16, 17, 18: Capstone project
     <li>Lab 02 - Blog</li>
     <li>Lab 03 - Company Page</li>
     <li>Lab 04 - Personal Portfolio</li>
+    <li>Lab 05 - Burrito Form</li>
   </ul>
 </details>
 
@@ -76,7 +77,7 @@ To emulate a more professional Git workflow, we're going to start creating new b
 
 
 
-- `git branch` to check that you're on the master branch
+- `git branch` to check that you're on the master branch, use `git checkout master` to go to the master branch if needed.
 
 - `git status` to check if your local master branch is up to date with origin/master on Github.
   
