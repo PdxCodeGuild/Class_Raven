@@ -1,0 +1,266 @@
+.basic-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size:100%; line-height:1;   
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:90%;
+}
+
+h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    font-size: 5em;
+}
+
+
+.hero-container {
+    background-color:#578d8d; 
+    color:white;
+    font-weight:bold;
+    padding:5%;
+    padding-bottom: 5%;
+
+}
+
+.profile-image {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    text-align:center;
+    line-height:2em;
+}
+
+.button-box {
+    text-align:center;
+    margin-top: 20%;
+}
+
+#contact-btn {
+ 
+    color:white;
+    font-weight:bold;
+    
+    vertical-align: bottom;
+    border:none;
+    }
+
+.certifications-box {
+    text-align:center;
+    padding:10%;
+}
+
+.time-box {
+    text-align:center;
+    line-height:2em;
+    background-color: #474d4d;
+    color:white;
+    font-weight:bold;
+    padding-top:2%;
+
+}
+
+.time-details {
+    text-align:left;
+    line-height:2em;
+    padding-top:5%;
+}
+
+.aircraft-section {
+    text-align:center;
+    padding:2%;
+
+}
+
+.btn {
+    width: 120px;
+    padding:2px;
+    margin:3px;
+}
+
+.btn-primary {
+    font-weight:bolder !important;
+}
+
+.btn-secondary {
+    background-color: #474d4d !important;
+}
+
+.modal-title {
+    color:black;
+}
+
+.modal-body {
+    color:black;
+}
+
+.aircraft-picture {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+}
+
+.experience-box {
+    padding-top: 10%;
+    margin-bottom: 15%;
+    line-height:2em;
+}
+
+.education-box {
+    background-color: #578d8d;
+    color:white;
+    padding:5%;
+    line-height:2em;
+    text-align:center;
+}
+
+.inner-education-box {
+    padding-top:3%;
+    text-align:left;
+}
+
+.achievements-interests-box {
+    text-align:center;
+    padding:10%;
+    line-height: 3em;
+    padding-bottom:15%;
+}
+
+.achievements-box {
+    text-align:center;
+}
+
+.interests-box {
+    text-align:center;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+a:link, a:hover, a:visited, a:active {
+    color:white !important;
+    text-decoration-color: lightgrey;
+    
+}
+.job-target {
+    font-size: xx-large;
+}
+
+
+
+.certificates {
+    text-align:right;
+    line-height: 1.2em;
+}
+
+
+.flight-label{
+    text-align:left;
+}
+
+.location {
+    line-height: 1.5em;
+}
+
+.job-title {
+    text-decoration: underline;
+    padding-bottom: 0.4em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-history {
+    line-height: 1.5em;
+}
+
+.footer-box {
+    background-color: #474d4d;
+    color:white;
+}
+
+.contact-me {
+    padding:5%;
+    text-align: left;
+
+}
+
+.address-info {
+    line-height: 1.7em;
+    padding-top:5%;
+}
+
+.availability {
+    line-height: 1.7em;
+    padding-top:15%;
+}
+
+.submit-button {
+    text-align:center;
+}
+
+#certificate-image {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 5%;
+}
+
+#time-clock {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 5%;
+}
+
+#airplane-image {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 5%;
+}
+
+#work-experience {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 2%;
+}
+
+#education-image {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 2%;
+}
+
+#achievements-image {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 2%;
+}
+
+#interests-image {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 2%;
+}
+
+#email-image {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 2%;
+}

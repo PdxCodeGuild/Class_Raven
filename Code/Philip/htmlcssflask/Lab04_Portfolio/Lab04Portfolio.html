@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip Bartoo Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="Lab04styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+        </style>
+</head>
+<body class="basic-info">
+    <div class="container-fluid hero-container row">
+        <div class="col-sm-1"></div>
+            <div class="col-sm-10 row">
+                <div class="col-sm-3">
+                    <img class="profile-image" src="images/me3.png" alt="My photo" width="200px" height="200px">
+                </div>
+                <div class="col-sm-7">
+                    <div><h1 class="hero-text">Philip Bartoo <br>First Officer<br></h1></div>
+                    <div class="button-box">
+                        <a href="#contact-me-form">
+                    <button type="button" class="btn btn-primary btn-md" id="contact-btn" href="#contact-me-form">Contact Me</button></a>
+                    </div>
+                </div>
+            </div>
+        <div class="col-sm-1"></div>
+    </div>
+        
+       
+    
+    <div class="container-fluid certifications-box">
+        <img id="certificate-image" src="https://img.icons8.com/ios/100/000000/certificate.png"/>
+        <h2>Certificates & Ratings</h2><br>
+        <div class="certifications-list">
+        <p>Airline Transport Pilot Certificate, Airplane Multi-Engine Land</p>
+        <p>Certified Flight Instructor, Airplane Instrument Single-Engine & Multi-Engine Land</p>
+        <p>Current FAA Class I Medical, No Restrictions</p>
+        <p>FCC Radiotelephone Operator Permit</p>
+        <p>Current Passport, No Restrictions</p>
+        <p>Current Top Secret Security Clearance</p>
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="container-fluid row time-aircraft-box">
+        <div class=col-sm-1></div>
+        
+    <div class="col-sm-5 time-box"> 
+        <img id="time-clock" src="https://img.icons8.com/dotty/80/000000/time.png"/>
+        <h2> Time:</h2>
+        <div class="time-details">
+        <ul>
+            <li>Total Time = 3,082 hours</li>
+            <ul>
+                <li>Multi-Engine Time = 2,886 hours</li>
+                <li>Single-Engine Time = 196 hours</li>
+            </ul>
+            <li>Pilot in Command = 1,569 hours</li>
+            <li>Turbine Time = 2,845 hours</li>
+            <ul>
+                <li>Jet Time = 218 hours</li>
+            </ul>
+            <li>Last flight was in a CRJ-200 on August 24, 2020.</li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="col-sm-5 aircraft-section" id="time-section"> 
+        <img id="airplane-image" src="https://img.icons8.com/external-tulpahn-detailed-outline-tulpahn/64/000000/external-airplane-mobile-user-interface-tulpahn-detailed-outline-tulpahn.png"/>
+        <h2> Aircraft:</h2><br>
+        <div>
+            <div class=col-sm-1></div>
+
+
+
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary aircraft" data-bs-toggle="modal" data-bs-target="#crj200Modal">
+    CRJ-200
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="crj200Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CRJ-200</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Total Time: 115 hrs<br>
+          SIC Time: 115 hrs<br>
+          Employer: SkyWest Airlines, Inc.<br>
+          Operations: Type 141
+        </div>
+        <div><img src="images/crj200.jpeg" width="200" height="auto" alt="crj200" class="aircraft-picture"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+   
+
+
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary aircraft" data-bs-toggle="modal" data-bs-target="#c130Modal">
+C-130E/H
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="c130Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">C-130E/H</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Total Time: 2556 hrs<br>
+PIC Time (Including Instructor): 1461 hrs<br>
+SIC Time (Including Dual): 800 hrs<br>
+Other Time: 295 hrs<br>
+Employer: U.S. Air Force<br>
+Operations: Military
+</div>
+<div><img src="images/c130.jpeg" width="200" height="auto" alt="c130" class="aircraft-picture"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary aircraft" data-bs-toggle="modal" data-bs-target="#tc12bModal">
+TC-12B
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="tc12bModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">TC-12B</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Total Time: 112 hrs<br>
+PIC Time: 5 hrs<br>
+SIC Time (Including Dual): 107 hrs<br>
+Employer: U.S. Air Force<br>
+Operations: Military
+</div>
+<div><img src="images/tc12b.jpeg" width="200" height="auto" alt="tc12b" class="aircraft-picture"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#t37Modal">
+T-37B
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="t37Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">T-37B</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Total Time: 103.4 hrs<br>
+SIC Time (Including Dual): 103.4 hrs<br>
+Employer: U.S. Air Force<br>
+Operations: Military
+</div>
+<div><img src="images/t37.jpeg" width="200" height="auto" alt="t37" class="aircraft-picture"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#cessna208Modal">
+Cessna 208
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="cessna208Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Cessna 208</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Total Time: 88 hrs<br>
+PIC Time (Including Instructor): 64 hrs<br>
+SIC Time (Including Dual): 24 hrs<br>
+Employer: U.S. Air Force<br>
+Operations: Military
+</div>
+<div><img src="images/cessna208.jpeg" width="200" height="auto" alt="cessna208" class="aircraft-picture"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#pa28Modal">
+PA-28
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="pa28Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">PA-28</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Total Time: 48 hrs<br>
+PIC Time (Including Instructor): 3 hrs<br>
+SIC Time (Including Dual): 45 hrs<br>
+Personal<br>
+Operations: Part 91
+
+</div>
+<div><img src="images/pa28.jpeg" width="200" height="auto" alt="pa28" class="aircraft-picture"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#cessna172Modal">
+Cessna 172
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="cessna172Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Cessna 172</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+Total Time:  60 hrs<br>
+PIC Time (Including Instructor): 28 hrs<br>
+SIC Time (Including Dual): 32 hrs<br>
+Personal<br>
+Operations: Part 91
+</div>
+<div><img src="images/cessna172.jpeg" width="200" height="auto" alt="cessna172" class="aircraft-picture"></div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+</div>
+
+
+
+
+<div class="container experience-box">
+    <img id="work-experience" src="https://img.icons8.com/ios/50/000000/work.png"/>
+    <div><h2>Experience</h2>
+        <div class="row g-3">
+            <div class="col-sm-2 location"><br>Aug 2020- Present<br>
+            Oakland, CA</div>
+            <div class="col-sm-10 job-history">
+                <div class="job-title">Federal Emergency Management Agency</div>
+                <ul>
+                    <li>Provides administrative, budgetary, operational planning and data analytic support to the Region 9 National Preparedness Division.</li>
+                </ul>
+            </div><br>
+            <div class="col-sm-2 location"><br>Dec 2019- Aug 2020<br>
+                Fairfield, CA</div>
+                <div class="col-sm-10 job-history">
+                    <div class="job-title">SkyWest Airlines CRJ-200 First Officer</div>
+                    <ul>
+                        <li>Aircraft Second in Command of scheduled domestic FAA Part 121 air carrier passenger operations.</li>
+                    </ul>
+                </div><br>
+            <div class="col-sm-2 location"><br>May 2019- Dec 2019<br>
+            Travis AFB, CA</div>
+            <div class="col-sm-10 job-history">
+                <div class="job-title">USAF Deputy Air Mobility Division Chief / Strategist</div>
+                <ul>
+                    <li>Assisted in leading 70-person team optimizing international cargo and passenger operations.</li>
+                </ul>
+            </div><br>
+            <div class="col-sm-2 location"><br>Jun 2018- May 2019<br>
+                Kandahar, Afghanistan</div>
+                <div class="col-sm-10 job-history">
+                    <div class="job-title">USAF Cessna 208B Evaluator & Instructor Pilot / Deputy Group Commander</div>
+                    <ul>
+                        <li>Instructor and Evaluator pilot to the Afghan Air Force for international flight operations.</li>
+                        <li>Mentor to Afghan Air Wing in management of fixed and rotary wing, operations, training, maintenance and flight support activities.</li>
+                    </ul>
+                </div><br>
+                <div class="col-sm-2 location"><br>Jul 2015- Jun 2018<br>
+                    Travis AFB, CA</div>
+                    <div class="col-sm-10 job-history">
+                        <div class="job-title">USAF C-130 Aircraft Commander / Operations Officer</div>
+                        <ul>
+                            <li>Conducted airdrop of cargo and personnel in VMC & IMC.</li>
+                            <li>Air Mobility Divison Deputy Chief managing flight dispatch operations for disaster relief.</li>
+                        </ul>
+                    </div><br>
+                    <div class="col-sm-2 location"><br>Aug 2011- Jul 2015<br>
+                        McGuire AFB, NJ</div>
+                        <div class="col-sm-10 job-history">
+                            <div class="job-title">USAF Wing Director of Staff</div>
+                            <ul>
+                                <li>Led geographically dispersed 74-person team providing operational oversight, human resource management, finance, and public affairs for 1,600 member Wing.</li>
+                            </ul>
+                        </div><br>
+                        <div class="col-sm-2 location"><br>Jun 2007- Aug 2011<br>
+                            Yokota AB, Japan</div>
+                            <div class="col-sm-10 job-history">
+                                <div class="job-title">USAF C-130 Evaluator & Instructor Pilot / Chief Pilot</div>
+                                <ul>
+                                    <li>Responsible for technical and professional development of 72 pilots.</li>
+                                    <li>Instructor and Evaluator Pilot for in-flight pilot qualification certifications.</li>
+                                </ul>
+                            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="container-fluid education-box">
+            <img id="education-image" src="https://img.icons8.com/ios/50/000000/university.png"/>
+            <h2>Education</h2>
+            <div class="container inner-education-box">
+                <div class="row g-1">
+            
+                    <div class="col-sm-7 education">- Full Stack Software Development Bootcamp (In Progress)</div>
+                    <div class="col-sm-5 school">Feb 2022 | PDX Code Guild</div>
+                </div>
+                        
+                <div class="row g-1">
+            
+                <div class="col-sm-7 education">- Masters of Science in Aviation Science (emphasis in Space Studies)</div>
+                <div class="col-sm-5 school">Mar 2011 | Embry Riddle Aeronautical University</div>
+            </div>
+            <div class="row g-1">
+                
+                <div class="col-sm-7 education">- Air Command and Staff College - Military Professional Development</div>
+                <div class="col-sm-5 school">Sep 2009 | Air University</div>
+            </div>
+            <div class="row g-1">
+                
+                <div class="col-sm-7 education">- Squadron Officers School - Military Professional Development</div>
+                <div class="col-sm-5 school">Aug 2006 | Air University</div>
+            </div>
+            <div class="row g-1">
+                
+                <div class="col-sm-7 education">- Aerospace Basic Course - Military Professional Development</div>
+                <div class="col-sm-5 school">Mar 2001 | Air University</div>
+            </div>
+            <div class="row g-1">
+                
+                <div class="col-sm-7 education">↣ Bachelor of Science in Marine Transportation</div>
+                <div class="col-sm-5 school">Jul 1999 | United States Merchant Marine Academy</div>
+            </div>
+            </div>
+        </div>
+        </div>
+        
+
+
+        <div class="container-fluid row achievements-interests-box"">
+            
+           <div class="col-sm-1"></div>
+            <div class="container col-md-5 g-3 achievements-box">
+                <img id="achievements-image" src="https://img.icons8.com/ios/50/000000/star--v1.png"/>
+                <h2>Achievements</h2>
+                <div class="awards"></div>Air Mobility Command Flying Safety Award
+                <div class="awards">Air Medal (5 Oak Leaf Clusters)</div>
+                <div class="awards"></div>Third Mate Ocean, any Gross Tons Coast Guard License
+            </div>
+            <div class="container col-sm-5 g-3 interests-box">
+                <img id="interests-image" src="https://img.icons8.com/ios/50/000000/skiing.png"/>
+                <h2>Interests</h2>
+                <div class="interests">Hiking / Camping / Skiing</div>
+                <div class="interests">Coding</div>
+                <div class="interests">Japanese Culture & Family</div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+       
+
+
+
+<footer class="container-fluid footer-box">
+    <div class="contact-me row" id="contact-me-form">
+        <h2>Get in touch:</h2>
+        <div class="container-fluid col-sm-4">    
+        <address class="address-info">
+            5286 Carlson Lane<br>
+            Fairfield, CA  94533<br>
+            609-410-4807<br>
+            <a href="mailto:philip_99bartoo@hotmail.com?subject=Opportunity">philip_99bartoo@hotmail.com</a>
+        </address>
+        <div class="availability">*Available with a two week notice</div>
+        </div>
+        <div class="container-fluid col-sm-8 contact-form">
+            <form action="mailto: philip_99bartoo@hotmail.com"
+method="POST"
+enctype="multipart/form-data"
+name="EmailForm">
+                <div class="row">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" placeholder="Name">
+                    </div>
+                    
+                </div>
+                <div class="form-group"><br>
+                    <label for="Email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group"><br>
+                    <label for="comments">Enter a Message Below:</label>
+                    <textarea class="form-control" id="comments" rows="3"></textarea>
+                </div><br>
+                <button type="submit" name="submit" value="Submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
