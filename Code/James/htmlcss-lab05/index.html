@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>lab05</title>
+    <link rel="stylesheet" href="./static/normalize.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  
+    <link rel="stylesheet" type="text/css" href="./static/index.css" />
+  
+  
   </head>
   <body>
-    <div class="user mx-auto">
+    
+    <div class="row justify-content-start">
+    <div class="col-4 ">
       <form action="/action_page.php">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" /><br /><br />
@@ -15,90 +23,175 @@
         <input type="text" id="lname" name="lname" /><br /><br />
         <input type="submit" value="Submit" />
       </form>
+    
     </div>
-
-    <div class="tortilla">
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
-        />
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault2"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault2">
-          Default checked radio
-        </label>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
-          />
-          <label class="form-check-label" for="flexRadioDefault1">
-            Default radio
-          </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            checked
-          />
-          <label class="form-check-label" for="flexRadioDefault2">
-            Default checked radio
-          </label>
-        </div>
+  </div> 
+    
+    <!-- first card -->
+    
+    <div class="card-group">
+    <div class="card" style="width: 18rem;">
+      <img src="./static/media/visual-stories-micheile-1zyj8nOdwPs-unsplash.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tortilla</h5>
+        <p class="card-text">
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              White Flour
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Wheat FLour
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Spinach
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Corn
+            </label>
+          </div>
+            </p>
       </div>
     </div>
+    <!-- end first card -->
 
-    <div class="rice">
-        <input
-        class="form-check-input"
-        type="radio"
-        name="flexRadioDefault"
-        id="flexRadioDefault2"
-        checked
-      />
-      <label class="form-check-label" for="flexRadioDefault2">
-        Default checked radio
-      </label>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
-        />
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
+    
+    <!-- start second card -->
+    <div class="card" style="width: 18rem;">
+      <img src="./static/media/louis-hansel-CvLZ6hbIemI-unsplash.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rice</h5>
+        <p class="card-text">
+          
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="rice-radio" id="rice-radio">
+          <label class="form-check-label" for="rice-radio">
+            White Rice
+          </label>
+        </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="rice-radio" id="rice-radio">
+          <label class="form-check-label" for="rice-radio">
+            Brown Rice
+          </label>
+        </div>
+      
+      </p>
       </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault2"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault2">
-          Default checked radio
-        </label>
+    </div>
+  <!-- end second card -->
+    
+
+
+  <!-- start third card -->
+<div class="card" style="width: 18rem;">
+      <img src="./static/media/shelley-pauls-t4X660oKiYs-unsplash.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Beans</h5>
+        <p class="card-text">
+          
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="beans-radio" id="beans-radio">
+          <label class="form-check-label" for="beans-radio">
+            Black Beans
+          </label>
+        </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="beans-radio" id="beans-radio">
+          <label class="form-check-label" for="beans-radio">
+            Pinto Beans
+          </label>
+        </div>
+      
+      </p>
+      </div>
+    </div>
+     <!-- end third card -->
+        
+        
+      <!-- start fourth card -->
+    <div class="card" style="width: 18rem;">
+      <img src="./static/media/mark-deyoung-mjcJ0FFgdWI-unsplash.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Protein</h5>
+        <p class="card-text">
+          
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
+          <label class="form-check-label" for="protein-radio">
+            Carnitas
+          </label>
+        </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
+          <label class="form-check-label" for="protein-radio">
+            Chicken
+          </label>
+        </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
+          <label class="form-check-label" for="protein-radio">
+            Sofritas
+          </label>
+        </div>
+          <div class="form-check">
+          <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
+          <label class="form-check-label" for="protein-radio">
+            None
+          </label>
+        </div>
+      </p>
+      </div>
+    </div>
+    <!-- end fourth card -->
+  </div>
+    
+    <!-- start fifth card -->
+    <div class="card" style="width: 18rem;">
+      <img src="./static/media/andra-ion-qsPHXC4T2cY-unsplash.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Additional ingrediants</h5>
+        <p class="card-text">
+          
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Cheese
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Sour Cream
+            </label>
+          </div>
+      </p>
+      </div>
+    </div>
+    <!-- end fifth card -->
+  
+<!-- start text area -->
+    <div class="row">
+    <div class="mb-3 col-md-4">
+      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </div>
+    <!-- end text area --> 
+      
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      </body>
       </div>
     </div>
     </div>
