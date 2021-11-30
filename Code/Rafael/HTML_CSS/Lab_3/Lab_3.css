@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Oswald:600&display=swap');
+
+/* --The 'woff' is for interent explorer compatibility 'woff2 is newer with less compatability-- */
+
+@font-face {
+  font-family: 'Centauri';
+  src: url('fonts/Centauri.woff') format('woff');
+}
+
+/* Main menu and mobile menu css */
+
+/* -- reference for menu undeline css: "https://codingyaar.com/responsive-bootstrap-navbar-underline-animation"-- */
+  
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffae00;
+}
+
+@media only screen and (min-width: 960px) {
+.navbar .navbar-nav .nav-link {
+  padding: 1em 1em;
+}
+.navbar {       
+  padding: 0;
+}
+.navbar .navbar-brand {
+  padding: 0 0.7em;
+}
+}
+
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ffae00;
+  color: transparent;
+  width: 0%;
+  content: '';
+  height: 3px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* --blurs the transparent background menu-- */
+  .bg-transparent{
+  backdrop-filter: blur(25px);
+  background-color: hsla(0,0%,100%,.3);
+}
+
+/* --Gets rid of thick border around mobile hamburger menu-- */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.03rem; 
+}
+
+a.nav-link{
+  font-family: 'Centauri';
+  font-size: 1.2rem;
+  padding-top:15px;
+  padding-bottom:20px;
+}
+@media (max-width: 1200px) 
+{
+div.row{
+    backdrop-filter: blur(3px);
+}
+}
+@media (max-width: 960px) 
+{a.nav-link{
+  font-size: 1.3rem;
+}
+h1.display-3 {
+  font-size: 1rem; 
+}
+.header-img {
+  height: 80px;
+}
+}
+
+@media (max-width: 574px) {
+a.nav-link{
+  font-size: 1.1rem;
+}
+}
+
+@media (max-width: 574px) {
+#hanging-icons > h2 {
+  font-size: 1rem!important;
+}
+#icon-grid > h2{font-size: 1rem!important;
+}
+h5 {
+  
+  font-size: 1.4rem!important;
+}
+}
+
+.navbar-dark .navbar-nav .nav-link.active{
+  color:#ffae00;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color: rgb(255 255 255 / 85%);
+}
+/* Main content h1 , body */
+
+h1.display-3 {
+  font-family: 'Centauri';
+  color:rgba(255,255,255,.85);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Video Background CSS */
+
+.video-container {
+  background: black;
+  height: 75vh;
+  min-height: 25rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.video-container .overlay {
+  background: black;
+  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.video-container video {
+  height: auto;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%; 
+  position: absolute;
+  top: 50%;
+  width: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-container .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Media Query - The primary input mechanism of the device includes a pointing device of limited accuracy. Also has no hover. */
+
+@media (pointer: coarse) and (hover: none) {
+.video-container {
+  background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+}
+
+.video-container video {
+  display: none;
+}
+}
+
+/*Spinning text world .box*/ 
+.box {
+  animation: rotation 18s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+}
+  to {
+  transform: rotate(359deg);
+}
+}
+
+.w-100{
+  backdrop-filter: blur(20px);border-radius: 2px 50px / 70px;
+  border: solid;
+  border-width: 1px 1px;
+  border-radius: 40px;
+  padding-bottom: 35px;
+  padding-top: 45px
+}
+
+.earth-icon{
+  position: absolute;
+  bottom: 0;
+  z-index: 20000;
+}
+
+.spin-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box{
+  display: flex; 
+  justify-content:center; 
+  align-items: center
+}
+
+.py-5 {
+  padding-top: 3rem!important;
+  padding-bottom: 3rem!important;
+}
+.px-4 {
+  padding-right: 1.5rem!important;
+  padding-left: 1.5rem!important;
+}
+
+.container{
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  color:#DFDEDF;
+}
+
+.btn-primary {
+  color:#DFDEDF;
+  background-color:#212529;
+  border: 2px solid #ffae00;
+}
+
+.btn-primary:hover{
+  color:#ffae00;
+  background-color:#212529;
+  border: 2px solid #DFDEDF;
+}
+
+#hanging-icons > h2{
+  text-align: center;
+  padding-bottom: 50px!important;
+  font-family: 'Centauri';
+  font-size: 2rem;
+  
+}
+
+#icon-grid > h2 {
+  text-align: center;
+  padding-bottom: 35px!important;
+  font-family: 'Centauri';
+  font-size: 1.6rem;
+}
+
+.container{
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#newsletter1{
+  background-color:rgb(36, 36, 36);
+  
+}
+
+#icon-grid > div > div:nth-child(7) > footer > div.row > div.col-4.offset-1 > form > div{
+  border: none;
+}
+
+#icon-grid > div > div.container{
+padding-top: 20px;
+}
+
+.col-2{
+  margin-right:70px;
+}
+
+#newsletter1{
+  min-width: 60px;
+}
+
+#icon-grid{
+  background-image: url(./images/earth-2021-08-30-09-19-14-utc.jpg);
+}
+
+.w-100-2 {
+  border-radius: 2px 50px / 70px;
+  border-width: 1px 1px;
+  padding: 15px
+}
+  
+#icon-grid > div > div:nth-child(7) > footer > div.row > div.col-2{
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: none;
+  padding: 15px
+}
+
+#icon-grid > div > div:nth-child(1){
+  backdrop-filter: blur(15px);
+  border: none;
+  padding-top: 10px;
+}
+
+#icon-grid > div > div:nth-child(2){
+  backdrop-filter: blur(15px);
+  border: none;
+  padding-top: 10px;
+}
+
+#icon-grid > div > div:nth-child(3){
+  backdrop-filter: blur(15px);
+  border: none;
+  padding-top: 10px;
+}
+
+#icon-grid > div > div:nth-child(4){
+  backdrop-filter: blur(15px);
+  border: none;
+  padding-top: 10px;
+}
+
+#icon-grid > div > div:nth-child(7) > footer > div.d-flex.justify-content-between.py-4.my-4.border-top{
+  backdrop-filter: blur(15px);
+  border: none;
+
+}
+
+  a.nav-link.p-0.text-muted{
+  color: #b8b8b8 !important;
+}
+
+  a.nav-link.p-0.text-muted:hover{
+  color: #ffae00 !important;
+}
+  
+
+
+h5{
+  margin-left:20px !important;
+}
+
+.py-4{
+  margin-bottom:0 !important;
+}
+
+#icon-grid > h2{  
+  backdrop-filter: blur(15px);
+  padding-top:30px;
+}
+
+.btn .btn-primary{
+align-items: center;
+}
+
+.d-flex {
+  display: flex!important;
+  flex-wrap: wrap;
+  
+}
+
+.row{
+  justify-content: space-around;
+}
+
+h4.fw-bold.mb-0{
+  padding-top:15px;
+}
+
+.icons_above{padding-top:15px;}
+
+h5{
+  backdrop-filter: blur(15px);
+  font-size:2rem;
+}
+
+.py-4{
+  padding-bottom: 0 !important;
+}
+
+div#hanging-icons.container.px-4.py-5{
+  margin-bottom: -50px;
+  background-color: #171a1d;
+}
+
+.my-4 {
+  margin-top: 1.5rem!important;
+  margin-bottom: 1.5rem!important;
+}
+
+.align-items-center {
+  align-items: center!important;
+}
+
+.justify-content-between {
+  justify-content: space-between!important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap!important;
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6!important;
+}
+
+.d-flex {
+  display: flex!important;
+}
+
+.text-muted{
+  color: white !important;;
+}
+
+.col-2{
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  font-size: 2rem;
+}
+
+.bg-dark{background-color:#171a1d!important;}
