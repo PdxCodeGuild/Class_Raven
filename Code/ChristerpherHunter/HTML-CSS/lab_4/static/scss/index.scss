@@ -427,9 +427,9 @@ body {
         &-card-section {
             align-items: start;
 
-            &-card {
-                height: 26vh;
-            }
+            /*  &-card {
+                // height: 26vh;
+            } */
         }
     }
 
@@ -527,6 +527,6 @@ body {
     // Middle Cards text box section width
     .text-box-width {
         width: 18vw;
-        height: 17vh;
+        height: 37vh;
     }
 }

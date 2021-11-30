@@ -444,9 +444,9 @@ body {
   }
   .main-body-card-section {
     align-items: start;
-  }
-  .main-body-card-section-card {
-    height: 26vh;
+    /*  &-card {
+        // height: 26vh;
+    } */
   }
 
   .main-body-exp-cards-horz-card-1-1 {
@@ -552,6 +552,6 @@ body {
 
   .text-box-width {
     width: 18vw;
-    height: 17vh;
+    height: 37vh;
   }
 }/*# sourceMappingURL=index.css.map */
