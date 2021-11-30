@@ -2,7 +2,7 @@
 /* p= font-family: 'Roboto', sans-serif; */
 
 body { 
-    background-color:rgba(61, 40, 180, 0.342);
+    background-color:rgba(42, 15, 194, 0.342);
     font-family: 'Roboto', sans-serif;
     padding:50px;
     margin: 50px;
@@ -22,3 +22,8 @@ img {
     border-width: 5px;
     border-color: black;
 }
+/* footer {
+position: fixed;
+position:absolute;
+position: bottom;
+} */
