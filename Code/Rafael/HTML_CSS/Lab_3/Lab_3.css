@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: 'Equinox';
-    src: url('fonts/Equinox.woff') format('woff');
+  font-family: 'Equinox';
+  src: url('fonts/Equinox.woff') format('woff');
   }
 
 /* Main menu and mobile menu css */
@@ -67,7 +67,7 @@
 
 a.nav-link{
   font-family: 'Centauri';
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding-top:15px;
   padding-bottom:20px;
 }
@@ -77,25 +77,26 @@ div.row{
     backdrop-filter: blur(3px);
 }
 }
+
 @media (max-width: 960px) 
 {a.nav-link{
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 h1.display-3 {
   font-size: 1rem; 
 }
 .header-img {
-  height: 80px;
+  height: 75px;
 }
 }
 
 @media (max-width: 574px) {
 a.nav-link{
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 }
 
-@media (max-width: 574px) {
+@media (min-width: 574px) {
 #hanging-icons > h2 {
   font-size: 1rem!important;
 }
@@ -134,6 +135,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
+  z-index: -5;
 }
 
 .video-container .overlay {
@@ -144,7 +146,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .video-container video {
@@ -155,16 +157,16 @@ body {
   position: absolute;
   top: 50%;
   width: auto;
-  z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
 }
 
 .video-container .container {
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 /* Media Query - The primary input mechanism of the device includes a pointing device of limited accuracy. Also has no hover. */
@@ -198,13 +200,14 @@ body {
   border-width: 1px 1px;
   border-radius: 40px;
   padding-bottom: 35px;
-  padding-top: 45px
+  padding-top: 45px;
+  z-index:10;
 }
 
 .earth-icon{
   position: absolute;
   bottom: 0;
-  z-index: 20000;
+  z-index: 5;
 }
 
 .spin-container{
