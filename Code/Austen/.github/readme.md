@@ -12,7 +12,7 @@ This is my assignment folder.
             <summary>python</summary>
         </details>
     </details>
-    <details open class="indent">
+    <details class="indent">
         <summary>html + css</summary>
         <details class="indent">
             <summary>labs</summary>
