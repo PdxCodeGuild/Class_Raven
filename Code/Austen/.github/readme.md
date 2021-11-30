@@ -23,7 +23,7 @@ This is my assignment folder.
             </ul>
         </details>
     </details>
-    <style>
+<!--     <style>
         .indent {
             text-indent: 17px;
         }
@@ -33,7 +33,7 @@ This is my assignment folder.
         ul {
             list-style: none;
         }
-    </style>
+    </style> -->
 </html>
 
 ## links
