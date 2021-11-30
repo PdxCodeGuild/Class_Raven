@@ -1,0 +1,23 @@
+:root {
+  --clr-txt: #2a271d;
+  --clr-bg-primary: #665d3e;
+  --clr-bg-secondary: #395036;
+  --clr-bg-tertiary: #477740;
+}
+body {
+  background-color: var(--clr-bg-primary);
+}
+header .portrait {
+  width: 50%;
+  margin: 2.5vh auto 2.5vh;
+}
+section .heading {
+  margin: 1rem auto 1rem;
+  max-width: 700px;
+}
+details > summary {
+  list-style-type: "◐";
+}
+details[open] > summary {
+  list-style-type: "◑";
+}

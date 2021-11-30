@@ -1,56 +1,94 @@
 <!DOCTYPE html>
+<!-- > comment key -->
+<!-- > = description/title -->
+<!-- ? = needs investigating -->
+<!-- ! = todo -->
+<!-- * = save for other projects -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- development stylesheet -->
-    <!-- <link rel="stylesheet" href="style/frame.css"> -->
-    <!-- local stylesheet -->
-    <link rel="stylesheet" href="style/style.css">
-    <title>Austen Myers</title>
-</head>
-<body>
-    <!-- assignment details -->
-    <!-- remove before publishing -->
-    <!-- <assignment>
-        <details>
-            <summary>
-                assignment details
-            </summary>
-            <p>
-                A personal portfolio website helps market yourself to prospective employers and can demonstrate your skills as a front-end developer. GitHub lets you host a static website for free, and since we're hosting our code there already, it's a great place for a personal portfolio site. Follow <a href="https://pages.github.com/" target="_blank">this tutorial</a> to create your own site. Here's a <a href="https://www.springboard.com/blog/programmer-portfolio/" target="_blank">thorough guide</a> for developing a portfolio site. You can also get a custom domain from a number of domain registrars (<a href="https://domains.google.com/" target="_blank">Google</a>, <a href="https://www.hover.com/" target="_blank">Hover</a>, <a href="https://www.techradar.com/news/best-domain-registrars" target="_blank">etc</a>) and then follow <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site" target="_blank">this tutorial</a> for setting it up with GitHub Pages.
-            </p>
-            <ul> Info to Include
-                <li>Name</li>
-                <li>Profile image</li>
-                <li>Short bio</li>
-                <li>Skills</li>
-                <li>Work history</li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Austen M.</title>
+    <!-- >* modular/reusable custom class styling -->
+    <link rel="stylesheet" href="./index/signature.css" />
+    <!-- > styling unique to this page -->
+    <link rel="stylesheet" href="./index/style.css" />
+    <!-- >* simple js functionality to render template data to target sections -->
+    <script src="./index/courier.js"></script>
+  </head>
+  <body>
+    <!-- > page title and main image -->
+    <header class="flex col">
+      <!-- ? media queries are not working as intended AFTER templates are rendered -->
+      <h1 class="heading">Austen C. Myers-Flachson</h1>
+      <!-- ! could use a nice background color/image -->
+      <img
+        class="portrait"
+        src="./assets/portrait.jpg"
+        alt="austen-myers-professional-portrait"
+      />
+    </header>
+    <!-- > navbar and empty section to receive templates -->
+    <main>
+      <nav class="flex">
+        <h3 class="heading" onclick="render('about-me')">about me</h3>
+        <h3 class="heading" onclick="render('skills')">skills</h3>
+        <h3 class="heading" onclick="render('work-history')">work history</h3>
+      </nav>
+      <section id="target"></section>
+    </main>
+  </body>
+  <!-- > templates for each navbar item -->
+  <!-- ! draft the actual content for each template -->
+  <templates>
+    <template id="about-me">
+      <h2 class="heading">208 to 808 and back</h2>
+      <section class="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+        impedit recusandae asperiores quaerat dolor tempora fugiat illum, ex
+        alias voluptates eum minima velit? Repellendus ducimus eos cupiditate
+        voluptas repudiandae eveniet voluptatibus. Non recusandae ratione quas,
+        laborum mollitia dolorum voluptates, quae autem temporibus quis in ab
+        tenetur unde. Numquam, corporis enim.
+      </section>
+    </template>
+    <template id="skills">
+      <h2 class="heading">skills</h2>
+      <section class="content">
+        <details open>
+          <summary>medical maintenance and repair</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
         </details>
-    </assignment> -->
-        <h1 class="heading">Austen C. Myers</h1>
-        <img class="image" src="images/picture.jpg" alt="austen-myers-professional-portrait">
-        <h3 class="heading text-content">a little about me</h3>
-        <p class="text-content"> 
-            Born in Boise, Idaho 
-            Raised in Florida, California, and Hawai'i
-            Hobbies include video games, tinkering, crypto, dogs
-        </p>
-        <section class="lists">
-            <ul class="list">
-                Special Skills:
-                <li>medical maintenance and repair</li>
-                <li>technical troubleshooting</li>
-                <li>alchemical problem solving</li>
-            </ul>
-            <ol class="list offset-top">
-                Work History:
-                <li>Idaho National Guard</li>
-                <li>Verizon</li>
-                <li>Sun Valley Company</li>
-                <li>Starbucks</li>
-            </ol>
-        </section>
-</body>
+        <details>
+          <summary>technical troubleshooting</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
+        </details>
+        <details>
+          <summary>alchemical problem solving</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
+        </details>
+      </section>
+    </template>
+    <template id="work-history">
+      <h2 class="heading">Work History</h2>
+      <section class="content">
+        <details open>
+          <summary>Idaho National Guard</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
+        </details>
+        <details>
+          <summary>Verizon</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
+        </details>
+        <details>
+          <summary>Sun Valley Company</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
+        </details>
+        <details>
+          <summary>Starbucks</summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, tempora?
+        </details>
+      </section>
+    </template>
+  </templates>
 </html>
