@@ -1,0 +1,437 @@
+<!--
+    Name: Michael
+    Date: 10/17/2021 
+    Description: Lab 02
+-->
+<!--
+Lab 2: Blog
+Let's make the template of a blog with a title, top-nav, side-nav, and multiple posts.
+Use flexbox and semantic elements (header, nav, section, and footer).
+You can use a custom font, fancy colors, and make generate fake content using an Ipsum.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lab 02 - Blog</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body class="bg-secondary">
+		<div class="container" id="main-div">
+			<!-- Side Nav -->
+			<div id="nav-list-spy" class="list-group">
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#top"
+					>Top</a
+				>
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#catItems"
+					>Cat Blogs</a
+				>
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#dogItems"
+					>Dog Blogs</a
+				>
+				<a
+					id="transparent-nav"
+					class="list-group-item list-group-item-action"
+					href="#footer"
+					>Footer</a
+				>
+			</div>
+			<div>
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<div class="container-fluid" id="top">
+						<a class="navbar-brand" href="#">Lab 02 - Blog</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#"
+										>Home</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">New Post</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="navbarDropdown"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										More &DownArrow;
+									</a>
+									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="#">About</a></li>
+										<li><a class="dropdown-item" href="#">Archive</a></li>
+										<li><hr class="dropdown-divider" /></li>
+										<li>
+											<a class="dropdown-item" href="#">Contact</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<!-- Hero Section -->
+				<section class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<div class="jumbotron">
+								<h1 class="display-4">Welcome to lab-02 Blog!</h1>
+								<p class="lead">Where bad ideas come to end.</p>
+								<hr class="my-4" />
+								<p>Created for Class Raven.</p>
+								<p class="lead">
+									<a class="btn btn-primary btn-lg" href="#" role="button">
+										Learn more
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Blog Content-->
+				<section>
+					<h5 id="posts">Cat Blogs</h5>
+					<div
+						id="catItems"
+						class="carousel carousel-dark slide carousel-fade carouselItems"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#catItems"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#catItems"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#catItems"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#catItems"
+								data-bs-slide-to="3"
+								aria-label="Slide 4"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="http://placekitten.com/g/200/204"
+									class="d-block w-100"
+									alt="kitten"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem, ipsum dolor.</h5>
+									<p>
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										Molestiae facere sapiente eaque vel nisi hic voluptate
+										asperiores? Ab laboriosam distinctio maxime ipsam accusamus
+										reprehenderit eaque labore debitis dicta eveniet ratione
+										corrupti quae libero illum sit dolores, nulla reiciendis
+										dolor ducimus. Vero inventore maiores suscipit nemo, odio
+										autem maxime dignissimos saepe laborum sit temporibus
+										aperiam eaque esse at sapiente dolorum assumenda reiciendis
+										unde, a voluptate quis nulla! Commodi iste voluptates
+										officia.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="http://placekitten.com/g/200/201"
+									class="d-block w-100"
+									alt="kitten"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem ipsum dolor sit.</h5>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Earum omnis repellat hic praesentium, recusandae amet quasi
+										distinctio incidunt sapiente quae repellendus debitis
+										voluptate deleniti atque.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="http://placekitten.com/g/200/203"
+									class="d-block w-100"
+									alt="kitten"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem.</h5>
+									<p>
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										Nobis, distinctio! Dolorem repudiandae sint ipsum ullam?
+										Illum, aliquam necessitatibus architecto laboriosam,
+										excepturi delectus porro assumenda sit expedita deleniti
+										laudantium consequuntur qui ad provident impedit!
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="http://placekitten.com/g/200/205"
+									class="d-block w-100"
+									alt="kitten"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem, ipsum dolor sit amet consectetur adipisicing.</h5>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Quis numquam incidunt hic ea, maxime mollitia suscipit qui
+										ratione quaerat?
+									</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#catItems"
+							data-bs-slide="prev"
+						>
+							<span
+								id="carousel-control"
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#catItems"
+							data-bs-slide="next"
+						>
+							<span
+								id="carousel-control"
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</section>
+				<section>
+					<h5 id="posts">Dog Blogs</h5>
+					<div
+						id="dogItems"
+						class="carousel carousel-dark slide carousel-fade carouselItems"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#dogItems"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#dogItems"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#dogItems"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="http://placedog.net/200/204"
+									class="d-block w-100"
+									alt="doggen"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem, ipsum dolor.</h5>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Est quaerat quidem amet natus laudantium dolore quia et
+										obcaecati. Illo eaque sapiente ut quae voluptates veritatis
+										modi vitae beatae. Minima pariatur repudiandae quod at quo.
+										Cumque rem quis perspiciatis totam illo accusantium iste
+										impedit quos modi aliquam nostrum a dignissimos, ex quasi
+										ipsum possimus accusamus quod doloremque vero. Ducimus
+										dolorum mollitia facere, velit nulla neque ipsam facilis
+										quisquam temporibus porro esse saepe dignissimos pariatur
+										delectus! Minima.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="http://placedog.net/200/201"
+									class="d-block w-100"
+									alt="doggen"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem ipsum dolor sit.</h5>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Cumque, quam cum laudantium ex dolore maiores expedita
+										aspernatur.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="http://placedog.net/200/203"
+									class="d-block w-100"
+									alt="doggen"
+								/>
+								<div
+									class="carousel-caption d-md-block bg-dark text-light"
+									id="mousehide"
+								>
+									<h5>Lorem, ipsum.</h5>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Eveniet delectus, necessitatibus laudantium, nisi, nihil sit
+										nulla eligendi excepturi natus exercitationem aspernatur
+										voluptatem itaque nam maxime debitis cum quos deleniti
+										reiciendis. Tempore esse animi reprehenderit facilis
+										repellendus, accusantium autem alias, pariatur commodi
+										maiores nulla corporis temporibus.
+									</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#dogItems"
+							data-bs-slide="prev"
+						>
+							<span
+								id="carousel-control"
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#dogItems"
+							data-bs-slide="next"
+						>
+							<span
+								id="carousel-control"
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</section>
+				<!-- Footer -->
+				<footer class="footer bg-dark">
+					<div class="container" id="footer">
+						<div class="row">
+							<div
+								class="col-lg-6 h-100 text-center w-100 text-lg-left my-auto"
+							>
+								<ul class="list-inline mb-2">
+									<li class="list-inline-item">
+										<a href="#">About</a>
+									</li>
+									<li class="list-inline-item">&sdot;</li>
+									<li class="list-inline-item">
+										<a href="#">Contact</a>
+									</li>
+									<li class="list-inline-item">&sdot;</li>
+									<li class="list-inline-item">
+										<a href="#">Terms of Use</a>
+									</li>
+									<li class="list-inline-item">&sdot;</li>
+									<li class="list-inline-item">
+										<a href="#">Privacy Policy</a>
+									</li>
+								</ul>
+								<p class="text-muted small mb-4 mb-lg-0">
+									&copy; Blog Lab-02 2021. All Rights Reserved.
+								</p>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

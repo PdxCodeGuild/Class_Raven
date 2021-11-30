@@ -1,0 +1,466 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Normalize CSS-->
+        <link href="css/normalize.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Bootstrap Icon CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <!-- Init Bootstrap as script -->
+        <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></script>
+        <!-- Link in css stylesheet-->
+        <link href="css/style.css" rel="stylesheet">
+
+        <title>Honolulu Primary Care Associates</title>
+    </head>
+  
+  <body class="bg-light">
+        <!-- Init Bootstrap Javascript bundle with Popper-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-50 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                
+                <!--Adjustment for the Navbar is in the CSS file-->
+                <img src="images/icon.png" alt="" width="75" height="50" class="d-inline-block">
+                Honolulu Primary Care Associates
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hpca_navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="hpca_navbar"> 
+                    <ul class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href=#>Home</a>
+                        <a class="nav-link" href="#questions" >COVID-19 Precautions</a>  <!-- # wtf it wont go to location and open the accordion # role="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCOVID" aria-expanded="false" aria-controls="flush-headingCOVID">COVID-19</a> -->
+                        <a class="nav-link" href="#about_us">Who We Are</a>
+                        <a class="nav-link" href="#bill_pay">Bill Payment</a>
+                        <a class="nav-link" href="#contact_us">Contact Us</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Showcase-->
+        <section class="bg-light text-dark p-5 p-lg-10 p-lg-15 text-center text-sm-start">
+            <div class="container">
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <div>
+                        <h1>Live Your Healthiest Life with <span class="text-success"> HPCA</span></h1>
+                        <p class="lead my-4">
+                            <br>John Houk, MD 
+                            <br>Joey Kohatsu, MD 
+                            <br>Lauren Oshima, MD  
+                            <br>Laura Houk, MD
+                        </p>
+                    </div>
+                    <img class="img-fluid w-50 d-none d-md-block mx-2 rounded-3 border border-3 shadow-lg" src="images/lauren&laura.png"> <!--#2F9A5B Hex for illustration from undraw.co-->
+                </div> 
+            </div>
+        </section>
+
+        <!-- Bill Pay/Newsletter Bar-->
+        <section class="bg-secondary text-light p-5">
+            <div class="container" id="bill_pay">
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <h3 class="h3 mb-3 mb-md-0">Need to pay your bill? Try our online payment portal through Akamai Pay here:</h3> 
+                    <button class="btn btn-success btn-lg"><a href="https://www.akamaipay.com/HonoluluPrimaryCareAssociates/Practice" target="_blank" class="text-light" >Online Bill Pay</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!--Important Information Accordion-->
+        <!--Init Section-->
+        <section id="questions" class="p-5">
+            <!--Init Container-->
+            <div class="container">
+                <div data-spy="scroll" data-target="#hpca_navbar" data-bs-offset="50" >
+
+                    <h2 class="text-center mb-2">Important Information</h2>
+                    
+                    <!--Redirect to the bottom of page for Standard Operating Information-->
+                    <div class="alert alert-success d-flex align-items-center mx-5" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-info-circle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Information:">
+                          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                        </svg>
+                        <div>
+                            HPCA Address, Phone Number, and Hours can be found <a href="#contact_us" class="text-success"> here</a>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush" id="faq"> 
+                    
+                    <br>
+
+                        <!--Item: COVID Update-->
+                        <div class="accordion-item" id="rona">
+                            <h2 class="accordion-header" id="flush-headingCOVID">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseCOVID" aria-expanded="false" aria-controls="flush-collapseCOVID">
+                                <b>COVID-19 Protocols</b>
+                            </button>
+                            </h2>
+                            <div id="flush-collapseCOVID" class="accordion-collapse collapse" aria-labelledby="flush-headingCOVID" data-bs-parent="#faq">
+                                <div class="accordion-body">You must wear a face mask at <b>all times</b> while on the Queen's campus and in our office. 
+                                    <br><br>All patients, visitors, and staff must enter Queen's POB 2 through the lobby for a mandatory temperature check. 
+                                    <br><br><b>All garage entrances into POB 2 are closed.</b> To help with social distancing, we ask you to come alone for the visit. Those needing assistance may bring one helper or family member. 
+                                    <br><br>We greatly appreciate your cooperation in helping prevent and reduce the risk of COVID transmission within our office.
+                                </div> 
+                            </div>
+                        </div>
+
+                        <!--Item: AfterHours-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingAfterHours">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseAfterHours" aria-expanded="false" aria-controls="flush-collapseAfterHours">
+                                <b>After Hours Care</b>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseAfterHours" class="accordion-collapse collapse" aria-labelledby="flush-headingAfterHours" data-bs-parent="#faq">
+                                <div class="accordion-body"> 
+                                    <b>After Hours</b>: For emergencies occuring outside of our regular office hours, please use the Physician's Exchange number (808-524-2575)
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Item: Location and Parking-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingLocationParking">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseLocationParking" aria-expanded="false" aria-controls="flush-collapseLocationParking">
+                                <b>Location and Parking Information</b>
+                            </button>
+                            </h2>
+                            <div id="flush-collapseLocationParking" class="accordion-collapse collapse" aria-labelledby="flush-headingLocationParking" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    Our offices are located at <b>Queens POB II, Suite 503</b>
+                                    <br><br><b>Address</b>: 1329 Lusitana Street, Honolulu, HI 96813
+                                    <br><br><b>Parking</b>: Please park in the garage located at the intersection of Lauhala St. and Lusitana St. The first hour of parking is free.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Item Scheduling-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingScheduling">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseScheduling" aria-expanded="false" aria-controls="flush-collapseScheduling">
+                                <b>Scheduling an Appointment</b>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseScheduling" class="accordion-collapse collapse" aria-labelledby="flush-headingScheduling" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                For the most up to date availabilty please contact the HPCA Office Phone (808-599-8922). You may also request an appointment through your Queen's MyChart Account, and a HPCA staff member will call you to confirm an appointment time.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--New Patient -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingNewPatient">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNewPatient" aria-expanded="false" aria-controls="flush-collapseNewPatient">
+                                <b>New Patient Information</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseNewPatient" class="accordion-collapse collapse" aria-labelledby="flush-headingNewPatient" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    All new patients need to complete two forms: an Administrative Enrollment and a New Patient Medical History. 
+                                    <i>If possible, please print and complete prior to your first appointment</i>
+                                    
+                                    <br><br><b>Administrative Enrollment</b>:
+                                    <br>&nbsp&nbsp<a href="./files/admin_np.pdf" target="_blank"><button type="button" class="btn btn-success btn-sm">Download</button></a>
+
+                                    <br><br><b>Patient Medical History</b>: 
+                                    <br>&nbsp&nbsp<a href="./files/houk_pmh.pdf" target="_blank"><button type="button" class="btn btn-success btn-sm">Download</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Room -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingED">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseED" aria-expanded="false" aria-controls="flush-collapseED">
+                                <b>When to Use an Emergency Room</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseED" class="accordion-collapse collapse" aria-labelledby="flush-headingED" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <b>Emergency Rooms</b> should ideally be used for only serious and potentially life threatening medical conditions.
+                                    <br><br><b>If you have a potentially life threatening condition, please go straight to your nearest Emergency Room (ER)</b>.  These conditions are best evaluated at the ER as they may require rapid or advanced treatment. Examples include:
+                                    <br><br>- Chest pain, significant difficulty breathing, severe and/or uncontrolled bleeding, signs of a stroke including: weakness/numbness on one side, slurred speech.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Urgent Care -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingUC">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseUC" aria-expanded="false" aria-controls="flush-collapseUC">
+                                <b>When to Seek Urgent Care</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseUC" class="accordion-collapse collapse" aria-labelledby="flush-headingUC" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <a href="https://www.google.com/maps/search/urgent+care/@21.4852716,-158.0724133,11z" target="_blank"><b>Urgent Care</b></a> - Urgent care centers are same-day, walk-in clinics that can treat medical problems <b> not considered true emergencies</b>. 
+                                    <br>If you are experiencing a non-emergent medical condition that cannot wait until the next available appointment at the office, then you should consider going to Urgent Care. 
+                                    <br><br>Examples include:
+                                    <br>- Cold symptoms, nausea, vomiting, and / or diarrhea, mild asthma exacerbation, rashes, dehydration, sprains and strains, small cuts that may require stitches.
+                                    
+                                    <br><br>Our physicians at HPCA can help decide the best course of action if you’re ever unsure of when or where to seek medical care. During office hours, you may call our office at 599-8922 to leave a message for your doctor requesting a callback with medical advice. If you call after hours, you may reach our physicians via Physician’s Exchange at 808-524-2575.
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Using MyChart -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingMyChart">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseMyChart" aria-expanded="false" aria-controls="flush-collapseMyChart">
+                                <b>Using MyChart</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseMyChart" class="accordion-collapse collapse" aria-labelledby="flush-headingMyChart" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <b>MyChart</b> MyChart is an online patient portal that gives you access to your healthcare information and allows you to connect with your doctor in a way that is convenient for you.
+                                    <br><br>With MyChart you can:                                   
+                                    <br>&nbsp<b>- </b>Securely Email your doctor with questions about your health
+                                    <br>&nbsp<b>- </b>View recent test results securely
+                                    <br>&nbsp<b>- </b>Request prescription refills
+                                    <br>&nbsp<b>- </b>View summaries of your appointment
+                                    <br>&nbsp<b>- </b>Help family members track their health
+
+                                    <br><br>Call our office at (808-599-8922) to obtain an authorization code to register <a href="https://mychart.queens.org/MyChart/" target="_blank">here</a>.
+                                    <br>If you are already registered with MyChart and have any questions you can call their help desk at: 808-691-5000.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Care Planning -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingACP">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseACP" aria-expanded="false" aria-controls="flush-collapseACP">
+                                <b>Advance Care Planning</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseACP" class="accordion-collapse collapse" aria-labelledby="flush-headingACP" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <b>Advance care planning</b> (ACP) is making decisions about the care you would want to receive if you become unable to speak for yourself. ACP documents include an Advanced Health Care Directive (AHCD) and a Physician's Orders for Life Sustaining Treatment (POLST).
+                                    <br><br>Our office offers various resources to help you with ACP:                                   
+                                    <br>&nbsp<b>- </b>Kokua Mau's <a href="https://kokuamau.org/advance-directives/" target="_blank">AHCD Template</a>
+                                    <br>&nbsp<b>- </b>Queen’s Medical Center’s Free ACP Clinic: call 808-691-7735 for more information
+                                    <br>&nbsp<b>- </b>My ACP Decisions Videos: Inquire about a prescription at your next visit to get access to ACP videos
+                                    </div>
+                            </div>
+                        </div>
+
+                        <!-- QCIPN -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingQCIPN">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseQCIPN" aria-expanded="false" aria-controls="flush-collapseQCIPN">
+                                <b>Queens Clinically Integrated Physicians Network</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseQCIPN" class="accordion-collapse collapse" aria-labelledby="flush-headingQCIPN" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <b>Queens Clinically Integrated Physicians Network</b> (QCIPN) consists of physicians and health care professions that work to create the best clinical practices to make Hawaii healthier. This network currently represents over 975 physicians across five islands.
+                                    <br><br><b>QCIPN's Services</b>:                                   
+                                    <br>&nbsp<b>- </b>Educational workshops and symposiums (in-person and online)
+                                    <br>&nbsp<b>- </b>In-home assessments
+                                    <br>&nbsp<b>- </b>Care coordination
+                                    <br>&nbsp<b>- </b>Assistance with Advanced Care Planning
+                                    <br>&nbsp<b>- </b>Mental health consultations
+                                    <br>&nbsp<b>- </b>Monthly newsletters
+                                    <br><br>&nbsp Give our office a call or tell us about your interest in QCIPN at your next appointment.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QCIPN -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headinghmsa_coaching">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsehmsa_coaching" aria-expanded="false" aria-controls="flush-collapsehmsa_coaching">
+                                <b>HMSA Health Coaching</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapsehmsa_coaching" class="accordion-collapse collapse" aria-labelledby="flush-headinghmsa_coaching" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <b> You do not have to manage your health alone.</b> HMSA offers free health coaching to support HMSA subscribers living with chronic diseases and to improve well-being. The HMSA Health Coaching Team consists of registered nurses, dieticians, and other professional health care providers.
+                                    <br><br>To learn more about Health Coaching at HMSA, please <a href="https://hmsa.com/well-being/health-coaching/" target="_blank">visit here</a> or call 1-855-329-5461.                                  
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bill Payment -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingbill_payment">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsebill_payment" aria-expanded="false" aria-controls="flush-collapsebill_payment">
+                                <b>Bill Payment Options</b> 
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapsebill_payment" class="accordion-collapse collapse" aria-labelledby="flush-headingbill_payment" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <b> In Office</b>: We accept cash, checks, and most major forms of credit and debit. 
+                                    <br><br><b>By Phone</b>: Please call 808-683-7260 to reach our Akamai billing department.
+                                    <br><br><b>Online</b>: Use the link to access <a href="https://www.akamaipay.com/HonoluluPrimaryCareAssociates/Practice" target="_blank">Akamai Bill Pay</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Item: Contact-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingContact">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseContact" aria-expanded="false" aria-controls="flush-collapseContact">
+                                <b>Still have questions?</b>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseContact" class="accordion-collapse collapse" aria-labelledby="flush-headingContact" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                <b>If you have any questions, please contact:</b>
+                                <br><b>>HPCA Office Phone</b>: 808-599-8922 <br><b>Fax</b>: 808-599-8923 <br><b>Physician's Exchange</b>: 808-524-2575
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about_us" class="p-5 bg-secondary">
+            <div class="container">
+                <h2 class="text-center text-light">
+                    Meet the Physicians of HPCA
+                </h2>
+                <p class="lead text-center text-light mb-5">
+                    Our providers build upon over forty years of clincial expertise to give you the highest caliber of care.
+                </p>
+
+                <div class="row g-4">
+                    <!--Dr John Houk's Profile-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="images/houk_sr.jpg"
+                                class="img-thumbnail mb-3"
+                                alt=""
+                                >
+                                <h3 class="card-title mb-1">John Houk, MD</h3>
+                                <span class="badge rounded-pill bg-warning text-dark mb-2">Not Accepting New Patients</span>
+                                <p class="card-text">Dr. Houk has practiced general internal medicine since 1980 and is the founder of HPCA. He enjoys golf, gardening, and spending time with Jane, his wife and his two daughters. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Dr Joey Kohatsu's Profile-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="images/kohatsu.jpg"
+                                class="img-thumbnail mb-3"
+                                alt=""
+                                >
+                                <h3 class="card-title mb-1">Joey Kohatsu, MD</h3>
+                                <span class="badge rounded-pill bg-warning text-dark mb-2">Not Accepting New Patients</span>
+                                <p class="card-text">Dr. Kohatsu joined HPCA in 2012. He is a proud father to his daughter Janine, born in June 2018. He enjoys UH Football and spending time with his family. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Dr Lauren Oshima's Profile-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="images/oshima.jpg"
+                                class="img-thumbnail mb-3"
+                                alt=""
+                                >
+                                <h3 class="card-title mb-1">Lauren Oshima, MD</h3>
+                                <span class="badge rounded-pill bg-warning text-dark mb-2">Not Accepting New Patients</span>
+                                <p class="card-text">A former health manager for Dr. John Houk, Dr. Oshima joined HPCA as a physician in 2019. She enjoys running, yoga, and hiking.</p>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Dr Laura Houk's Profile-->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="images/laura_houk_a.png"
+                                class="img-thumbnail mb-3"
+                                alt=""
+                                >
+                                <h3 class="card-title mb-1">Laura Houk, MD</h3>
+                                <span class="badge rounded-pill bg-success mb-2">Accepting Select Patients</span>
+                                <p class="card-text">Dr. Houk joins HPCA after recently completing her Internal Medicine residency at UH. She previously worked at HPCA as a Scribe with her father, Dr. John Houk.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Contact Us and Google Map-->
+        <section class="p-5">
+            <div class="container" id="contact_us">
+                <div class="row g-4">
+                    <div class="col-md">
+                        <h2 class="text-center mb-4">
+                            Contact Us!
+                        </h2>
+
+                        <!--Contact Us! Information -->
+                        <ul class="list-group list-group-flush lead">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Address:</span> 1329 Lusitana Street Suite 503, Honolulu, HI 96813
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold"> Hours: </span> Mon-Fri: 8:00AM - 5:00PM <br>Most Saturdays: 8:00AM - 11:00AM
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Office Phone: </span> 808-599-8922
+                                <br>
+                            </li>
+
+                            <!--Google map-->                            
+                            <div class="container-fluid p-3">
+                                <div class="map-responsive">
+                                <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJbemxbt5tAHwRYFODYBzhE3Y&key=AIzaSyADGpC0og1IkYMdyqdwocihTreZ5n2zwsM" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer, Copyright, and Anchor Link to Top of Page -->
+        <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+          <p class="lead"> &copy; Copyright of 2021 Honolulu Primary Care Associates</p>
+            
+          <!-- Anchor Link to Top of Page -->
+          <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-square-fill text-success h1"></i>
+          </a>
+        </div>
+      </footer>
+
+  </body>
+</html>
