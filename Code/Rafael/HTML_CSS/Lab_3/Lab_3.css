@@ -173,7 +173,7 @@ body {
 
 @media (pointer: coarse) and (hover: none) {
 .video-container {
-  background: url('./images/video-background.jpg') black center;
+  background: url('./images/video-background.jpg') black center ;
 }
 
 .video-container video {
@@ -444,5 +444,10 @@ div#hanging-icons.container.px-4.py-5{
 }
 
 .bg-dark{background-color:#171a1d!important;}
+
+.btn{
+  font-size: 0.8rem;
+
+}
 
 
