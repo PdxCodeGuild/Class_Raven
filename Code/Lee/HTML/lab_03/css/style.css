@@ -1,0 +1,38 @@
+
+body::before {
+    display: block;
+    content: " ";
+    height: 10vh;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+body {
+    margin-top: 50px;/* make room for the nav bar */
+}
+
+/* make room for the nav bar */
+a[id],
+div[id]
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id],
+dt[id]{
+    padding-top: 60px;
+    margin-top: -50px;
+}
