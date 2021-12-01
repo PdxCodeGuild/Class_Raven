@@ -8,74 +8,81 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link rel='stylesheet' type="text/css" href="{{url_for('static', filename='style.css') }}"/>
+    
+    
   </head>
 
   <body id="burrito-form" class="white">
     <div id="burrito-page" class="container">
       <h4 class="black-text center-align white-text">Burrito Form</h4>
       <div class="row">
-        <div class="col-s12 center-align">
-          <div class="row form">
-            <div class="input-field col s6">
-              <input placeholder="placeholder" id="first-name" type="text" />
-              <label for="first-name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input placeholder="placeholder" id="last-name" type="text" />
-              <label for="last-name">Last Name</label>
-            </div>
-            <!---<div class='input-field col s12'>
-                                <input placeholder="Enter Password" id='password' type="password">
-                                <label for='password'>Password</label>
-                            </div> -->
-            <div class="col s12 left-align">
-              <header class="left-align">Tortilla</header>
-              <p>
-                <label for="white_flour">
-                  <input
-                    id="white_flour"
-                    class="with-gap"
-                    name="tortilla"
-                    type="radio"
-                  />
-                  <span>White Flour</span>
-                </label>
-              </p>
-              <p>
-                <label for="wheat_flour">
-                  <input
-                    id="wheat_flour"
-                    class="with-gap"
-                    name="tortilla"
-                    type="radio"
-                  />
-                  <span>Wheat Flour</span>
-                </label>
-              </p>
-              <p>
-                <label for="spinach">
-                  <input
-                    id="spinach"
-                    class="with-gap"
-                    name="tortilla"
-                    type="radio"
-                  />
-                  <span>Spinach</span>
-                </label>
-              </p>
-              <p>
-                <label for="corn">
-                  <input
-                    id="corn"
-                    class="with-gap"
-                    name="tortilla"
-                    type="radio"
-                  />
-                  <span>Corn</span>
-                </label>
-              </p>
-            </div>
+        <form action="{{url_for('create_receipt')}}" method="post">
+          <div class="col-s12 center-align">
+            <div class="row">
+              <div class="input-field col s6">
+                <input class='white-text' name='f-name' placeholder="" id="first-name" type="text" />
+                <label for="first-name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input class='white-text' name='l-name' placeholder="" id="last-name" type="text" />
+                <label for="last-name">Last Name</label>
+              </div>
+              <!---<div class='input-field col s12'>
+                                  <input placeholder="Enter Password" id='password' type="password">
+                                  <label for='password'>Password</label>
+                              </div> -->
+              <div class="col s12 left-align">
+                <header class="left-align">Tortilla</header>
+                <p>
+                  <label for="white_flour">
+                    <input
+                      id="white_flour"
+                      class="with-gap"
+                      name="tortilla"
+                      type="radio"
+                      value="White Flour"
+                    />
+                    <span>White Flour</span>
+                  </label>
+                </p>
+                <p>
+                  <label for="wheat_flour">
+                    <input
+                      id="wheat_flour"
+                      class="with-gap"
+                      name="tortilla"
+                      type="radio"
+                      value="Wheat Flour"
+                    />
+                    <span>Wheat Flour</span>
+                  </label>
+                </p>
+                <p>
+                  <label for="spinach">
+                    <input
+                      id="spinach"
+                      class="with-gap"
+                      name="tortilla"
+                      type="radio"
+                      value="Spinach"
+                    />
+                    <span>Spinach</span>
+                  </label>
+                </p>
+                <p>
+                  <label for="corn">
+                    <input
+                      id="corn"
+                      class="with-gap"
+                      name="tortilla"
+                      type="radio"
+                      value="Corn"
+                    />
+                    <span>Corn</span>
+                  </label>
+                </p>
+              </div>
 
             <div class="col s12 left-align">
               <header class="left-align">Rice</header>
@@ -86,6 +93,7 @@
                     class="with-gap"
                     name="rice"
                     type="radio"
+                    value="White Rice"
                   />
                   <span>White Rice</span>
                 </label>
@@ -97,6 +105,7 @@
                     class="with-gap"
                     name="rice"
                     type="radio"
+                    value="Brown Rice"
                   />
                   <span>Brown Rice</span>
                 </label>
@@ -112,6 +121,7 @@
                     class="with-gap"
                     name="beans"
                     type="radio"
+                    value="Black Beans"
                   />
                   <span>Black Beans</span>
                 </label>
@@ -123,6 +133,7 @@
                     class="with-gap"
                     name="rice"
                     type="radio"
+                    value="Pinto Beans"
                   />
                   <span>Pinto Beans</span>
                 </label>
@@ -138,6 +149,7 @@
                     class="with-gap"
                     name="protein"
                     type="radio"
+                    value="Carnitas"
                   />
                   <span>Carnitas</span>
                 </label>
@@ -149,6 +161,7 @@
                     class="with-gap"
                     name="protein"
                     type="radio"
+                    value="Chicken"
                   />
                   <span>Chicken</span>
                 </label>
@@ -160,6 +173,7 @@
                     class="with-gap"
                     name="protein"
                     type="radio"
+                    value="Sofritas"
                   />
                   <span>Sofritas</span>
                 </label>
@@ -171,6 +185,7 @@
                     class="with-gap"
                     name="protein"
                     type="radio"
+                    value="None"
                   />
                   <span>None</span>
                 </label>
@@ -181,14 +196,14 @@
               <header class="left-align">Extras</header>
               <p>
                 <label for="cheese">
-                  <input id="cheese" name="extra" type="checkbox" />
+                  <input id="cheese" name="extra" type="checkbox" value="Cheese" />
                   <span>Cheese</span>
                 </label>
               </p>
 
               <p>
                 <label for="sour-cream">
-                  <input id="sour-cream" name="extra" type="checkbox" />
+                  <input id="sour-cream" name="extra" type="checkbox" value="Sour Cream"/>
                   <span>Sour Cream</span>
                 </label>
               </p>
@@ -196,8 +211,8 @@
 
             <div class="col s12">
               <header class="left-align">Delivery Instructions:</header>
-              <div class="input-field">
-                <textarea id="delivery" class="materialize-textarea"></textarea>
+              <div class="input-field ">
+                <textarea name='deliv-instructions' id="delivery" class="materialize-textarea white-text"></textarea>
                 <label for="delivery"></label>
               </div>
             </div>
@@ -212,7 +227,9 @@
               </button>
             </div>
           </div>
-        </div>
+        </form>
+        
+        
       </div>
     </div>
 
