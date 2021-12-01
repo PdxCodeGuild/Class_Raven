@@ -24,6 +24,7 @@ body {
   margin-bottom: 2rem;
 }
 .main-body-top-left {
+  margin: 2rem;
   grid-column: 2/3;
 }
 .main-body-top-left-form {
@@ -31,6 +32,12 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  border: solid 2px black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2rem;
+  background-color: #c5d86e;
 }
 .main-body-top-left-form-name {
   font-weight: 400;
@@ -45,17 +52,40 @@ body {
   grid-column: 3/4;
   justify-self: center;
 }
+.main-body-top-right-container {
+  /* &-info {
+  } */
+}
+.main-body-top-right-container-img {
+  background-image: url(../images/burrito_main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: calc(338px * 2.5);
+  height: calc(225px * 2.5);
+  border: 1rem solid #c5d86e;
+  border-radius: 15px;
+}
+.main-body-lower {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
 .main-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
   border: 2px solid black;
-  width: 100vw;
+  width: 100%;
 }
 .main-footer-left {
   display: flex;
@@ -71,6 +101,11 @@ body {
   /* &-blocks {
 
   } */
+}
+
+.box-shadow {
+  box-shadow: 10px 10px 8px #271d16;
+  border-radius: 15px;
 }
 
 .fb-image {
@@ -99,4 +134,38 @@ body {
   background-repeat: no-repeat;
   height: 40px;
   width: 40px;
+}
+
+@media screen and (max-width: 568px) {
+  .main-body {
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: auto 2fr;
+    justify-content: center;
+  }
+  .main-body-top-right {
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 0/1;
+  }
+  .main-body-top-right-container-info {
+    border: 1px black solid;
+  }
+  .main-body-top-right-container-img {
+    margin-bottom: 2rem;
+    height: 200px;
+    width: 308px;
+  }
+  .main-body-top-left {
+    grid-row: 2/3;
+    justify-content: center;
+  }
+  .main-body-top-left-form {
+    place-self: center;
+  }
+  .main-body-lower {
+    grid-row: auto;
+    /*  &:nth-child() {
+
+    } */
+  }
 }/*# sourceMappingURL=index.css.map */

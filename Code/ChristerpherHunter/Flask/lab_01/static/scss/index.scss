@@ -29,10 +29,15 @@ body {
     margin-bottom: 2rem;
 
     &-top-left {
+        margin: 2rem;
         grid-column: 2 / 3;
 
         &-form {
             @include mixins.flex(column, flex-start, center);
+            border: solid 2px black;
+            width: fit-content;
+            padding: 2rem;
+            background-color: variables.$june-bud;
 
             &-name {
                 font-weight: 400;
@@ -42,9 +47,32 @@ body {
             }
         }
     }
+
     &-top-right {
         grid-column: 3 / 4;
         justify-self: center;
+
+        &-container {
+            /* &-info {
+            } */
+            &-img {
+                background-image: url(../images/burrito_main.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+                width: calc(338px * 2.5);
+                height: calc(225px * 2.5);
+                border: 1rem solid variables.$june-bud;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    &-lower {
+        grid-row: 2 / 3;
+        grid-column: 1 / 4;
+        @include mixins.flex(row, center, space-evenly);
+        flex-wrap: wrap;
     }
 }
 
@@ -52,12 +80,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     border: 2px solid black;
-    width: 100vw;
+    width: 100%;
 
     &-left {
         @include mixins.flex(row, center, center);
@@ -72,6 +100,11 @@ body {
             } */
         }
     }
+}
+
+.box-shadow {
+    box-shadow: 10px 10px 8px variables.$black-chocolate;
+    border-radius: 15px;
 }
 
 .fb-image {
@@ -98,7 +131,44 @@ body {
     @include mixins.rectangle(40px, 40px);
 }
 
-@media screen and (min-width: 568px) {
-    
-    
+@media screen and (max-width: 568px) {
+    .main-body {
+        grid-template-columns: 10% auto 10%;
+        grid-template-rows: auto 2fr;
+        justify-content: center;
+
+        &-top-right {
+            text-align: center;
+            grid-column: 2 / 3;
+            grid-row: 0 / 1;
+
+            &-container {
+                &-info {
+                    border: 1px black solid;
+                }
+                &-img {
+                    margin-bottom: 2rem;
+                    height: 200px;
+                    width: 308px;
+                }
+            }
+        }
+
+        &-top-left {
+            grid-row: 2 / 3;
+            justify-content: center;
+
+            &-form {
+                place-self: center;
+            }
+        }
+
+        &-lower {
+            grid-row: auto;
+
+            /*  &:nth-child() {
+
+            } */
+        }
+    }
 }
