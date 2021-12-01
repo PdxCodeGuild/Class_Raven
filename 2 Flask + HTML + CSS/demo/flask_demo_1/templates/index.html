@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <title>My App</title>
+</head>
+<body>
+    
+    <h1>Hello, {{ context.name }}!</h1>
+    <p>Today the temperature is {{ temperature }} degrees</p>
+
+    {% if context.temperature < 50  %}
+        <p>cold</p>
+    {% elif context.temperature < 80 %}
+        <p>warm</p>
+    {% else %}
+        <p>hot</p>
+    {% endif %}
+
+    <ul>
+        {% for num in context.numbers %}
+            <li>{{ num }}</li>
+        {% endfor %}
+    </ul>
+
+
+
+
+
+</body>
+</html>
