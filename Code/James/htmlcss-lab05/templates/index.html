@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lab05</title>
-    <link rel="stylesheet" href="./static/normalize.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  
-    <link rel="stylesheet" type="text/css" href="../static/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
-  
-  </head>
-  <body>
-    
+{% extend "base.html" %} {% block content %}
     <div class="row text-center">
     <div class="col ">
     <div class="title">
@@ -24,7 +9,7 @@
     
   <div class="row justify-content-start">
       <div class="col-4 ">
-      <form action="/action_page.php">
+      <form action="/login" method="post">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" /><br /><br />
         <label for="lname">Last name:</label>
@@ -203,10 +188,9 @@
     <!-- end text area --> 
       
       
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-      </body>
-      </div>
-    </div>
-    </div>
-  </body>
-</html>
+    {% endblock %}    
+      
+      
+    
+  
+
