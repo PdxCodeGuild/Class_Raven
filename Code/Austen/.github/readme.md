@@ -12,7 +12,7 @@ This is my assignment folder.
             <summary>python</summary>
         </details>
     </details>
-    <details open class="indent">
+    <details class="indent">
         <summary>html + css</summary>
         <details class="indent">
             <summary>labs</summary>
@@ -23,7 +23,7 @@ This is my assignment folder.
             </ul>
         </details>
     </details>
-    <style>
+<!--     <style>
         .indent {
             text-indent: 17px;
         }
@@ -33,7 +33,7 @@ This is my assignment folder.
         ul {
             list-style: none;
         }
-    </style>
+    </style> -->
 </html>
 
 ## links
