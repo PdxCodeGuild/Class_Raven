@@ -27,21 +27,20 @@ def index():
 @app.route("/orders", methods=['POST', 'GET'])
 def orders():
 
-
-if request.method == "POST":
-    order_dict = {
-        "first_name": request.form["f-name"],
-        "last_name": request.form["l-name"],
-        "tortilla": request.form["tortilla-type"],
-        "rice": request.form["rice"],
-        "beans": request.form["beans"],
-        "protein": request.form["protein"],
-        "additional_ingredients": request.form.getlist("add-ingr"),
-        "delivery_instructions": request.form["deliv-instr"],
-    }
+    if request.method == "POST":
+        order_dict = {
+            "first_name": request.form["f-name"].lower(),
+            "last_name": request.form["l-name"].lower(),
+            "tortilla": request.form["tortilla-type"].lower(),
+            "rice": request.form["rice"].lower(),
+            "beans": request.form["beans"].lower(),
+            "protein": request.form["protein"].lower(),
+            "additional_ingredients": request.form.getlist("add-ingr"),
+            "delivery_instructions": request.form["deliv-instr"].lower(),
+        }
 
     save_data(order_dict)
-    print(load_data())
+    # print(load_data())
 
     return redirect(url_for('index'))
 

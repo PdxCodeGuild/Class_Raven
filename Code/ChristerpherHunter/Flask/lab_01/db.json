@@ -1,12 +1,12 @@
 {
-  "first_name": "Christerpher",
-  "last_name": "Hunter",
-  "tortilla": "Spinach",
-  "rice": "Brown-Rice",
-  "beans": "Black-Beans",
-  "protein": "Chicken",
+  "first_name": "christerpher",
+  "last_name": "hunter",
+  "tortilla": "spinach",
+  "rice": "brown-rice",
+  "beans": "black-beans",
+  "protein": "chicken",
   "additional_ingredients": [
     "Cheese"
   ],
-  "delivery_instructions": "Turn left on hopscotch ln then look for garage door G12-6."
+  "delivery_instructions": "turn left on hopscotch ln then look for garage door g12-6."
 }

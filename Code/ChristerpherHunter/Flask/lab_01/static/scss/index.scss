@@ -1,6 +1,7 @@
 @use "src/mixins";
 @use "src/variables";
 @use "src/functions";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 body {
     background-color: orange;
@@ -14,9 +15,15 @@ body {
         margin-bottom: 2rem;
 
         &-item {
-            font-size: larger;
-            font-style: oblique;
+            font-size: 30pt;
             text-align: center;
+            font-family: "Anton", sans-serif;
+            letter-spacing: 0.09em;
+            word-spacing: 0.1em;
+
+            h1 {
+                color: variables.$black-chocolate;
+            }
         }
     }
 }
@@ -31,20 +38,22 @@ body {
     &-top-left {
         margin: 2rem;
         grid-column: 2 / 3;
+        width: fit-content;
+        height: fit-content;
 
         &-form {
-            @include mixins.flex(column, flex-start, center);
+            @include mixins.flex(column, center, center);
             border: solid 2px black;
             width: fit-content;
             padding: 2rem;
             background-color: variables.$june-bud;
 
-            &-name {
+            /* &-name {
                 font-weight: 400;
-            }
-            &-radio-1 {
-                @include mixins.flex(column, flex-start, center);
-            }
+            } */
+            /* &-radio-1 {
+                // @include mixins.flex(column, flex-start, center);
+            } */
         }
     }
 
@@ -52,10 +61,24 @@ body {
     &-top-right {
         grid-column: 3 / 4;
         justify-self: center;
+        width: fit-content;
+        height: fit-content;
+        font-family: "Anton", sans-serif;
 
         &-container {
-            /* &-info {
-            } */
+
+            &-info {
+                font-size: 30pt;
+                font-style: oblique;
+
+                h2 {
+                    letter-spacing: 0.09em;
+                    word-spacing: 0.1em;
+                    text-align: center;
+                    color: variables.$black-chocolate;
+                }
+            }
+
             &-img {
                 background-image: url(../images/burrito_main.jpg);
                 background-repeat: no-repeat;
@@ -64,7 +87,6 @@ body {
                 width: calc(13em * 2.5);
                 height: calc(12em * 2.5);
                 border: 1rem solid variables.$june-bud;
-                border-radius: 15px;
             }
         }
     }
@@ -72,9 +94,12 @@ body {
     // FOUR LOWER
     &-lower {
         grid-row: 2 / 3;
-        grid-column: 1 / 4;
-        @include mixins.flex(row, center, space-evenly);
-        flex-wrap: wrap;
+        grid-column: 2 / 4;
+
+        &-container {
+            @include mixins.flex(row, center, space-evenly);
+            flex-wrap: wrap;
+        }
     }
 }
 
@@ -145,9 +170,9 @@ body {
             grid-row: 0 / 1;
 
             &-container {
-                &-info {
-                    border: 1px black solid;
-                }
+                /* &-info {
+                    // border: 1px black solid;
+                } */
                 &-img {
                     margin-bottom: 2rem;
                     height: 200px;
@@ -176,10 +201,21 @@ body {
 }
 
 @media screen and (min-width: 1300px) {
-
     .main-body-top-right-container-img {
-
         width: calc(20em * 3);
         height: calc(15em * 3);
+    }
+
+    fieldset {
+        font-size: x-large;
+    }
+
+    img {
+        @include mixins.rectangle(30rem, 45rem);
+        margin: 2em;
+    }
+
+    .main-body-top-right-container-info {
+        font-size: 60pt;
     }
 }
