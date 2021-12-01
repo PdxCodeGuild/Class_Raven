@@ -1,3 +1,5 @@
+# python3 -m http.server # starts a server at localhost port 8000
+
 """
 Encapsulation - Hides the internal components of a class
 Inheritance - Derives one type from another type ('has-a' relation)
