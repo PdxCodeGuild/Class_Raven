@@ -23,21 +23,24 @@
     <div class="main-body">
         <div class="main-body-top-left">
             <div class="main-body-top-left-form box-shadow">
-                <form action="" method="post">
-                    <div class="main-body-top-left-form-name">
-                        <input type="text" name="f-name" placeholder="First Name" pattern="[a-z][A-Z]" tabindex="1">
-                        <br>
-                        <input type="text" name="l-name" placeholder="Last Name" pattern="[a-z][A-Z]" tabindex="1">
-                    </div>
-                    <div class="main-body-top-left-form-radio-1">
-                        <p>Tortilla Type:</p>
-                        <div>
-                            <input type="radio" id="tort-type-1" name="tortilla-type" tabindex="2" value="White Flour" checked>
-                            <label for="tort-type-1">White Flour</label>
+                <form action="{{ url_for('orders') }}" method="POST">
+                    <fieldset class="box-shadow">
+                        <div class="main-body-top-left-form-name">
+                            <input type="text" name="f-name" placeholder="First Name" tabindex="1">
+                            <br>
+                            <input type="text" name="l-name" placeholder="Last Name" tabindex="1">
                         </div>
-                        <div>
-                            <input type="radio" id="tort-type-2" name="tortilla-type" tabindex="3" value="Wheat Flour">
-                            <label for="tort-type-2">Wheat Flour</label>
+                        <div class="main-body-top-left-form-radio-1">
+                            <p>Tortilla Type:</p>
+                            <div>
+                                <input type="radio" id="tort-type-1" name="tortilla-type" tabindex="2"
+                                    value="White Flour" checked>
+                                <label for="tort-type-1">White Flour</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="tort-type-2" name="tortilla-type" tabindex="3"
+                                    value="Wheat Flour">
+                                <label for="tort-type-2">Wheat Flour</label>
                             </div>
                             <div>
                                 <input type="radio" id="tort-type-3" name="tortilla-type" tabindex="4" value="Spinach">
@@ -47,67 +50,81 @@
                                 <input type="radio" id="tort-type-4" name="tortilla-type" tabindex="5" value="Corn">
                                 <label for="tort-type-4">Corn</label>
                             </div>
-                            </div>
-                            <br>
-                            <div class="main-body-top-left-form-radio-2">
-                                <p>Rice:</p>
-                                <div>
-                                    <input type="radio" id="rice-1" name="rice" tabindex="6" value="rice" checked>
-                                    <label for="rice-1">White Rice</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="rice-2" name="rice" tabindex="7" value="rice">
-                                    <label for="rice-2">Brown Rice</label>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="main-body-top-left-form-radio-3">
-                                <p>Beans:</p>
-                                <div>
-                                    <input type="radio" id="beans-1" name="beans" tabindex="8" value="beans" checked>
-                                    <label for="beans-1">Black Beans</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="beans-2" name="beans" tabindex="9" value="beans">
-                                    <label for="beans-2">Pinto Beans</label>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="main-body-top-left-form-radio-4">
-                                <p>Protein:</p>
-                                <div>
-                                    <input type="radio" id="protein-1" name="protein" tabindex="10">
-                                    <label for="protein-1">Carnitas</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="protein-2" name="protein" tabindex="11">
-                                    <label for="protein-2">Chicken</label>
                         </div>
-                        <div>
-                            <input type="radio" id="protein-3" name="protein" tabindex="12">
-                            <label for="protein-3">Sofritas</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="protein-4" name="protein" tabindex="13" checked>
-                            <label for="protein-4">None</label>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="main-body-top-left-form-checkbox">
-                        <p>Additional Ingredients:</p>
-                        <input type="checkbox" id="add-ingr-1" name="add-ingr" tabindex="14">
-                        <label for="add-ingr-1">Cheese</label>
                         <br>
-                        <input type="checkbox" id="add-ingr-2" name="add-ingr" tabindex="15">
-                        <label for="add-ingr-2">Sour Cream</label>
+                        <div class="main-body-top-left-form-radio-2">
+                            <p>Rice:</p>
+                            <div>
+                                <input type="radio" id="rice-1" name="rice" tabindex="6" value="White-Rice" checked>
+                                <label for="rice-1">White Rice</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="rice-2" name="rice" tabindex="7" value="Brown-Rice">
+                                <label for="rice-2">Brown Rice</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="main-body-top-left-form-radio-3">
+                            <p>Beans:</p>
+                            <div>
+                                <input type="radio" id="beans-1" name="beans" tabindex="8" value="Black-Beans" checked>
+                                <label for="beans-1">Black Beans</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="beans-2" name="beans" tabindex="9" value="Pinto-Beans">
+                                <label for="beans-2">Pinto Beans</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="main-body-top-left-form-radio-4">
+                            <p>Protein:</p>
+                            <div>
+                                <input type="radio" id="protein-1" name="protein" tabindex="10" value="Carnitas">
+                                <label for="protein-1">Carnitas</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="protein-2" name="protein" tabindex="11" value="Chicken">
+                                <label for="protein-2">Chicken</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="protein-3" name="protein" tabindex="12" value="Sofritas">
+                                <label for="protein-3">Sofritas</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="protein-4" name="protein" tabindex="13" checked value="None">
+                                <label for="protein-4">None</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="main-body-top-left-form-checkbox">
+                            <p>Additional Ingredients:</p>
+                            <fieldset>
+                                <input type="checkbox" id="add-ingr-1" name="add-ingr" tabindex="14" value="Cheese">
+                                <label for="add-ingr-1">Cheese</label>
+                                <br>
+                                <input type="checkbox" id="add-ingr-2" name="add-ingr" tabindex="15" value="Sour-Cream">
+                                <label for="add-ingr-2">Sour Cream</label>
+                                <br>
+                                <input type="checkbox" id="add-ingr-3" name="add-ingr" tabindex="16" value="None"
+                                    checked>
+                                <label for="add-ingr-3">None</label>
+                            </fieldset>
                         </div>
                         <br>
                         <div class="main-body-top-left-form-textar">
                             <label for="textar">Delivery Instructions:</label>
                             <br>
-                            <textarea id="textar" name="deliv-instr" cols="25" rows="10" placeholder="Place Text Here..."></textarea>
+                            <textarea id="textar" name="deliv-instr" cols="25" rows="10"
+                                placeholder="Place Text Here..."></textarea>
                         </div>
-                        </form>
+                        <br>
+                        <div class="main-body-top-left-form-submit">
+                            <div>
+                                <button type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
         <div class="main-body-top-right">

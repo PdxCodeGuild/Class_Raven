@@ -25,9 +25,9 @@ body {
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 2fr 1fr;
-    border: 2px solid black;
     margin-bottom: 2rem;
 
+    // ORDER FORM
     &-top-left {
         margin: 2rem;
         grid-column: 2 / 3;
@@ -48,6 +48,7 @@ body {
         }
     }
 
+    // PICTURE
     &-top-right {
         grid-column: 3 / 4;
         justify-self: center;
@@ -60,14 +61,15 @@ body {
                 background-repeat: no-repeat;
                 background-size: cover;
                 overflow: hidden;
-                width: calc(338px * 2.5);
-                height: calc(225px * 2.5);
+                width: calc(13em * 2.5);
+                height: calc(12em * 2.5);
                 border: 1rem solid variables.$june-bud;
                 border-radius: 15px;
             }
         }
     }
 
+    // FOUR LOWER
     &-lower {
         grid-row: 2 / 3;
         grid-column: 1 / 4;
@@ -170,5 +172,14 @@ body {
 
             } */
         }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .main-body-top-right-container-img {
+
+        width: calc(20em * 3);
+        height: calc(15em * 3);
     }
 }

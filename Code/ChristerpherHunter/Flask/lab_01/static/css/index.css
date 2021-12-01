@@ -20,7 +20,6 @@ body {
   display: grid;
   grid-template-columns: 10% 40% 40% 10%;
   grid-template-rows: 2fr 1fr;
-  border: 2px solid black;
   margin-bottom: 2rem;
 }
 .main-body-top-left {
@@ -61,8 +60,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  width: calc(338px * 2.5);
-  height: calc(225px * 2.5);
+  width: calc(13em * 2.5);
+  height: calc(12em * 2.5);
   border: 1rem solid #c5d86e;
   border-radius: 15px;
 }
@@ -167,5 +166,11 @@ body {
     /*  &:nth-child() {
 
     } */
+  }
+}
+@media screen and (min-width: 1300px) {
+  .main-body-top-right-container-img {
+    width: calc(20em * 3);
+    height: calc(15em * 3);
   }
 }/*# sourceMappingURL=index.css.map */

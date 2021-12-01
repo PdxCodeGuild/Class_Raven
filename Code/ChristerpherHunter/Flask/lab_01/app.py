@@ -1,6 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
+from json import dumps, loads
 
 app = Flask(__name__)
+
+
+def load_data() -> dict():
+    """Load the data to be excercised"""
+
+    with open("lab_01/db.json", "r") as f_read:
+        return loads(f_read.read())
+
+
+def save_data(data: dict) -> None:
+    """Save the data input from the user"""
+
+    with open("lab_01/db.json", "w") as f_write:
+        f_write.write(dumps(data, indent=2))
 
 
 @app.route("/")
@@ -9,10 +24,26 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about")
-def about():
+@app.route("/orders", methods=['POST', 'GET'])
+def orders():
 
-    return "About Page CVH"
+
+if request.method == "POST":
+    order_dict = {
+        "first_name": request.form["f-name"],
+        "last_name": request.form["l-name"],
+        "tortilla": request.form["tortilla-type"],
+        "rice": request.form["rice"],
+        "beans": request.form["beans"],
+        "protein": request.form["protein"],
+        "additional_ingredients": request.form.getlist("add-ingr"),
+        "delivery_instructions": request.form["deliv-instr"],
+    }
+
+    save_data(order_dict)
+    print(load_data())
+
+    return redirect(url_for('index'))
 
 
 if __name__ == "__main__":
