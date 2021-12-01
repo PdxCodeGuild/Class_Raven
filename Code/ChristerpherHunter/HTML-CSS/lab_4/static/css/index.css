@@ -1,0 +1,557 @@
+/* SCSS HSL */
+/* SCSS Gradient */
+body {
+  background-image: linear-gradient(180deg, #abc4abff, #a39171ff, #dcc9b6ff, #727d71ff, #6d4c3dff);
+  position: relative;
+}
+
+.main-head {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1rem;
+  background-color: #6c4c3d;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
+}
+.main-head-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  -moz-column-gap: 3em;
+       column-gap: 3em;
+}
+.main-head-body-butts {
+  height: 6em;
+  width: 5em;
+  border-radius: 30px 30px;
+  background-color: #a29071;
+  margin: 0.5em 0;
+  border: none;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main-body {
+  display: grid;
+  grid-template-columns: 10vw auto 10vw;
+  grid-template-rows: auto auto auto 10vh;
+  justify-content: center;
+}
+.main-body-hero {
+  justify-self: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.main-body-hero-image {
+  background-image: url(../assets/images/prof-image.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50% 50%;
+  height: 18em;
+  width: 18em;
+  margin-bottom: 0.8em;
+}
+.main-body-hero-text-box {
+  background-color: #dcc9b7;
+  justify-items: center;
+  width: 95%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  border-radius: 15px;
+}
+.main-body-hero-text-box h2 {
+  padding: 0.6em 1em 0 1em;
+}
+.main-body-hero-text-box p {
+  width: 90%;
+  padding: 0 1.5em;
+  font-size: large;
+}
+.main-body-card-section {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  width: 80vw;
+  margin-bottom: 1em;
+}
+.main-body-card-section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 2em 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #dcc9b7;
+}
+.main-body-card-section-card-1-image {
+  padding: 0;
+  background-image: url("../assets/images/elec-eng.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+}
+.main-body-card-section-card-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-card-section-card-1-info {
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  color: white;
+  font-size: small;
+  padding: 1.9em;
+  padding-top: 0;
+  overflow: hidden;
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.main-body-card-section-card-2-image {
+  padding: 0;
+  background-image: url("../assets/images/agile.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+}
+.main-body-card-section-card-2-image:hover {
+  transform: scale(1.025);
+}
+.main-body-card-section-card-2-info {
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  color: white;
+  font-size: small;
+  padding: 1.9em;
+  padding-top: 0;
+  overflow: hidden;
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.main-body-card-section-card-3-image {
+  padding: 0;
+  background-image: url("../assets/images/welding.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+}
+.main-body-card-section-card-3-image:hover {
+  transform: scale(1.025);
+}
+.main-body-card-section-card-3-info {
+  background: linear-gradient(rgba(0, 0, 0, 0), black);
+  color: white;
+  font-size: small;
+  padding: 1.9em;
+  padding-bottom: 0;
+  padding-top: 0;
+  overflow: hidden;
+  width: 70vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0;
+}
+.main-body-exp-cards {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-self: center;
+}
+.main-body-exp-cards-horz-card-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  width: 99%;
+  overflow: hidden;
+}
+.main-body-exp-cards-horz-card-1-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main-body-exp-cards-horz-card-1-1-image {
+  padding: 0;
+  background-image: url("../assets/images/pdx-codeguil.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+}
+.main-body-exp-cards-horz-card-1-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-1-1-info {
+  color: black;
+  font-size: small;
+  position: relative;
+  left: -1em;
+  margin: 0;
+  height: 15rem;
+  width: 25rem;
+}
+.main-body-exp-cards-horz-card-1 b {
+  font-size: 15pt;
+}
+.main-body-exp-cards-horz-card-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.main-body-exp-cards-horz-card-2-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main-body-exp-cards-horz-card-2-1-image {
+  padding: 0;
+  background-image: url("../assets/images/ASU-big.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: 100vh;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+}
+.main-body-exp-cards-horz-card-2-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-2-1-info {
+  color: black;
+  font-size: small;
+  position: relative;
+  left: -1em;
+  margin: 0;
+}
+.main-body-exp-cards-horz-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.main-body-exp-cards-horz-card-3-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main-body-exp-cards-horz-card-3-1-image {
+  padding: 0;
+  background-image: url("../assets/images/USMC-machine-gun.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: 100vh;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+}
+.main-body-exp-cards-horz-card-3-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-3-1-info {
+  color: black;
+  font-size: small;
+  left: -1em;
+  position: relative;
+  margin: 0;
+}
+.main-body-exp-cards-horz-card-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-exp-cards-horz-card-4-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.main-body-exp-cards-horz-card-4-1-image {
+  padding: 0;
+  background-image: url("../assets/images/Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: -9px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  max-height: 100px;
+  aspect-ratio: 16/9;
+  transition: 0.3s ease-in;
+  margin-bottom: -1.5em;
+}
+.main-body-exp-cards-horz-card-4-1-image:hover {
+  transform: scale(1.025);
+}
+.main-body-exp-cards-horz-card-4-1-info {
+  background-color: #737e72;
+  color: black;
+  font-size: small;
+  left: -0.2em;
+  overflow: hidden;
+  position: relative;
+  margin: 0 -0.9em;
+}
+
+.main-footer {
+  display: grid;
+  position: relative;
+  bottom: -0.4em;
+  left: -0.5em;
+  align-content: end;
+}
+.main-footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100vw;
+  background-color: #737e72;
+}
+.main-footer-container p {
+  text-align: center;
+}
+
+.card-shadow {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 1000px) {
+  .main-head-body {
+    -moz-column-gap: 0;
+         column-gap: 0;
+    width: 100%;
+    justify-items: center;
+    justify-content: space-around;
+  }
+  .main-head-body-butts {
+    height: 4em;
+    width: 10em;
+    transition-duration: 0.4s;
+    font-size: clamp(small, medium, large);
+    padding: 0;
+    margin: 1em 0;
+  }
+  .main-head-body-butts:hover {
+    opacity: 90%;
+    transform: scale(1.035);
+  }
+
+  .main-body {
+    grid-template-columns: 190px auto 190px;
+  }
+  .main-body-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .main-body-hero-text-box {
+    width: 60%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .main-body-hero-text-box h2 {
+    padding: 0.6em 1em 0 1em;
+  }
+  .main-body-card-section {
+    align-items: start;
+    /*  &-card {
+        // height: 26vh;
+    } */
+  }
+
+  .main-body-exp-cards-horz-card-1-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .main-body-exp-cards-horz-card-1-1-image {
+    width: 30%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+  .main-body-exp-cards-horz-card-1-1-info {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+
+  .main-body-exp-cards-horz-card-2-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .main-body-exp-cards-horz-card-2-1-image {
+    width: 30%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+  .main-body-exp-cards-horz-card-2-1-info {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    font-size: medium;
+  }
+
+  .main-body-exp-cards-horz-card-3-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .main-body-exp-cards-horz-card-3-1-image {
+    width: 44%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
+  }
+  .main-body-exp-cards-horz-card-3-1-info {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    font-size: medium;
+  }
+
+  .main-body-exp-cards-horz-card-4-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .main-body-exp-cards-horz-card-4-1-image {
+    width: 30%;
+    max-height: -webkit-min-content;
+    max-height: -moz-min-content;
+    max-height: min-content;
+    background-position: center;
+  }
+  .main-body-exp-cards-horz-card-4-1-info {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    font-size: medium;
+    left: 0;
+    margin: 0;
+  }
+
+  .main-body-card-section-card-2-image {
+    background-size: cover;
+  }
+
+  .transform-text {
+    transform: translateY(78%);
+    transition: 0.7s ease-in;
+    font-size: medium;
+    opacity: 0.6;
+  }
+  .transform-text:hover {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  .text-box-width {
+    width: 18vw;
+    height: 37vh;
+  }
+}/*# sourceMappingURL=index.css.map */
