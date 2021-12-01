@@ -21,7 +21,7 @@ def save_data(data: dict) -> None:
 @app.route("/")
 def index():
 
-    return render_template("index.html")
+    return render_template("index.html", orders=load_data())
 
 
 @app.route("/orders", methods=['POST', 'GET'])
@@ -29,8 +29,8 @@ def orders():
 
     if request.method == "POST":
         order_dict = {
-            "first_name": request.form["f-name"].lower(),
-            "last_name": request.form["l-name"].lower(),
+            "First Name": request.form["f-name"].capitalize(),
+            "Last Name": request.form["l-name"].capitalize(),
             "tortilla": request.form["tortilla-type"].lower(),
             "rice": request.form["rice"].lower(),
             "beans": request.form["beans"].lower(),

@@ -135,6 +135,17 @@
                 <div class="main-body-top-right-container-img box-shadow">
                     <!-- Burrito cloud image -->
                 </div>
+                <div class="main-body-top-right-container-receipt">
+                    <div class="main-body-top-right-container-receipt-box">
+                        <div class="main-body-top-right-container-receipt-box-area">
+                            <h1>ORDER CONFIRMATION</h1>
+                            {% for order, val in orders.items() %}
+                                <p id="order">{{ order }}:</p>
+                                <p id="val">{{ val }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         <div class="main-body-lower">

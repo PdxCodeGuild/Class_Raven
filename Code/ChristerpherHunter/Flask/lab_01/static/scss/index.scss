@@ -47,13 +47,6 @@ body {
             width: fit-content;
             padding: 2rem;
             background-color: variables.$june-bud;
-
-            /* &-name {
-                font-weight: 400;
-            } */
-            /* &-radio-1 {
-                // @include mixins.flex(column, flex-start, center);
-            } */
         }
     }
 
@@ -66,10 +59,15 @@ body {
         font-family: "Anton", sans-serif;
 
         &-container {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
 
             &-info {
+                grid-row: 1 / 2;
                 font-size: 30pt;
                 font-style: oblique;
+                height: fit-content;
 
                 h2 {
                     letter-spacing: 0.09em;
@@ -80,6 +78,7 @@ body {
             }
 
             &-img {
+                grid-row: 2 / 3;
                 background-image: url(../images/burrito_main.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -87,6 +86,76 @@ body {
                 width: calc(13em * 2.5);
                 height: calc(12em * 2.5);
                 border: 1rem solid variables.$june-bud;
+            }
+
+            &-receipt {
+                grid-row: 3 / 4;
+                place-self: center;
+                margin: 0;
+                padding: 0;
+
+                &-box {
+                    position: relative;
+                    margin: 40px auto;
+                    width: fit-content;
+                    height: fit-content;
+                    background: #fff;
+                    border-radius: 2px;
+                    border-radius: 15px;
+                    padding: 2rem;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 10px;
+                        width: 40%;
+                        height: 10px;
+                        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+                        z-index: -1;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    &::before {
+                        left: 15px;
+                        transform: skew(-5deg) rotate(-5deg);
+                    }
+
+                    &::after {
+                        right: 15px;
+                        transform: skew(5deg) rotate(5deg);
+                    }
+
+                    &:hover::before,
+                    &:hover::after {
+                        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+                    }
+
+                    &:hover::before {
+                        left: 5px;
+                    }
+
+                    &:hover::after {
+                        right: 5px;
+                    }
+
+                    &-area {
+                        text-align: center;
+
+                        #order {
+                            color: blue;
+                        }
+
+                        #val {
+                            color: green;
+                        }
+
+                        p {
+                            text-align: left;
+                            width: 40ch;
+                        }
+                    }
+                }
             }
         }
     }
@@ -170,13 +239,22 @@ body {
             grid-row: 0 / 1;
 
             &-container {
-                /* &-info {
-                    // border: 1px black solid;
-                } */
+                &-info {
+                    place-self: center;
+                    padding: 0.7em;
+                }
                 &-img {
                     margin-bottom: 2rem;
                     height: 200px;
                     width: 308px;
+                    place-self: center;
+                }
+
+                &-receipt {
+                    &-box {
+                        width: 18em;
+                        height: fit-content;
+                    }
                 }
             }
         }
@@ -217,5 +295,14 @@ body {
 
     .main-body-top-right-container-info {
         font-size: 60pt;
+    }
+
+    .main-body-top-right-container-receipt-box {
+        height: fit-content;
+        width: 50em;
+
+        p {
+            font-size: 30pt;
+        }
     }
 }

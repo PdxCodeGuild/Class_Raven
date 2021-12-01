@@ -49,12 +49,6 @@ body {
   width: fit-content;
   padding: 2rem;
   background-color: #c5d86e;
-  /* &-name {
-      font-weight: 400;
-  } */
-  /* &-radio-1 {
-      // @include mixins.flex(column, flex-start, center);
-  } */
 }
 .main-body-top-right {
   grid-column: 3/4;
@@ -67,9 +61,18 @@ body {
   height: fit-content;
   font-family: "Anton", sans-serif;
 }
+.main-body-top-right-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+}
 .main-body-top-right-container-info {
+  grid-row: 1/2;
   font-size: 30pt;
   font-style: oblique;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .main-body-top-right-container-info h2 {
   letter-spacing: 0.09em;
@@ -78,6 +81,7 @@ body {
   color: #271d16;
 }
 .main-body-top-right-container-img {
+  grid-row: 2/3;
   background-image: url(../images/burrito_main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,6 +89,66 @@ body {
   width: calc(13em * 2.5);
   height: calc(12em * 2.5);
   border: 1rem solid #c5d86e;
+}
+.main-body-top-right-container-receipt {
+  grid-row: 3/4;
+  place-self: center;
+  margin: 0;
+  padding: 0;
+}
+.main-body-top-right-container-receipt-box {
+  position: relative;
+  margin: 40px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #fff;
+  border-radius: 2px;
+  border-radius: 15px;
+  padding: 2rem;
+}
+.main-body-top-right-container-receipt-box::before, .main-body-top-right-container-receipt-box::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 40%;
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.main-body-top-right-container-receipt-box::before {
+  left: 15px;
+  transform: skew(-5deg) rotate(-5deg);
+}
+.main-body-top-right-container-receipt-box::after {
+  right: 15px;
+  transform: skew(5deg) rotate(5deg);
+}
+.main-body-top-right-container-receipt-box:hover::before, .main-body-top-right-container-receipt-box:hover::after {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+.main-body-top-right-container-receipt-box:hover::before {
+  left: 5px;
+}
+.main-body-top-right-container-receipt-box:hover::after {
+  right: 5px;
+}
+.main-body-top-right-container-receipt-box-area {
+  text-align: center;
+}
+.main-body-top-right-container-receipt-box-area #order {
+  color: blue;
+}
+.main-body-top-right-container-receipt-box-area #val {
+  color: green;
+}
+.main-body-top-right-container-receipt-box-area p {
+  text-align: left;
+  width: 40ch;
 }
 .main-body-lower {
   grid-row: 2/3;
@@ -169,15 +233,21 @@ body {
     grid-column: 2/3;
     grid-row: 0/1;
   }
-  .main-body-top-right-container {
-    /* &-info {
-        // border: 1px black solid;
-    } */
+  .main-body-top-right-container-info {
+    place-self: center;
+    padding: 0.7em;
   }
   .main-body-top-right-container-img {
     margin-bottom: 2rem;
     height: 200px;
     width: 308px;
+    place-self: center;
+  }
+  .main-body-top-right-container-receipt-box {
+    width: 18em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .main-body-top-left {
     grid-row: 2/3;
@@ -211,5 +281,15 @@ body {
 
   .main-body-top-right-container-info {
     font-size: 60pt;
+  }
+
+  .main-body-top-right-container-receipt-box {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 50em;
+  }
+  .main-body-top-right-container-receipt-box p {
+    font-size: 30pt;
   }
 }/*# sourceMappingURL=index.css.map */
