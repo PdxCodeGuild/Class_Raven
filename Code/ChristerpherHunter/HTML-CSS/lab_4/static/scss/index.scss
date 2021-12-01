@@ -1,0 +1,532 @@
+@use "src/variables";
+@use "src/mixin";
+@use "src/functions";
+
+body {
+    background-image: variables.$gradient-bottom;
+    position: relative;
+}
+
+.main-head {
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    background-color: variables.$coffee;
+    z-index: 2;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+
+    &-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        column-gap: 3em;
+
+        &-butts {
+            @include mixin.rectangle(6em, 5em);
+            border-radius: 30px 30px;
+            background-color: variables.$grullo;
+            margin: 0.5em 0;
+            border: none;
+            color: black;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+
+.main-body {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: auto auto auto 10vh;
+    justify-content: center;
+
+    &-hero {
+        // Mobile consideration
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 97%;
+        @include mixin.flex(column, center, center);
+        // @include mixin.rectangle(auto, 700px);
+        margin-bottom: 1em;
+        &-image {
+            // Replace the garbage that is this picture
+            background-image: url(../assets/images/prof-image.jpeg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            // border: 2px solid black;
+            border-radius: 50% 50%;
+            @include mixin.rectangle(18em, 18em);
+            margin-bottom: 0.8em;
+        }
+        &-text-box {
+            background-color: variables.$almond;
+            // border: 2px solid black;
+            justify-items: center;
+            // margin: -2em;
+            // padding: 3px 2em;
+            width: 95%;
+            height: min-content;
+            border-radius: variables.$bd-size;
+            h2 {
+                padding: 0.6em 1em 0 1em;
+            }
+            p {
+                width: 90%;
+                padding: 0 1.5em;
+                // margin: 0 1rem;
+                font-size: large;
+            }
+        }
+    }
+
+    // Middle Card Section
+    &-card-section {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-self: center;
+        @include mixin.flex(row, center, space-evenly);
+        flex-wrap: wrap;
+        border-radius: 15px;
+        width: 80vw;
+        margin-bottom: 1em;
+
+        // Middle vertical card section
+        &-card {
+            @include mixin.flex(column, flex-start, center);
+            margin: 2em 0;
+            border-radius: variables.$bd-size;
+            overflow: hidden;
+            background-color: variables.$almond;
+
+            // Backgorund image for card 1
+            &-1-image {
+                padding: 0;
+                background-image: url("../assets/images/elec-eng.gif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                max-height: max-content;
+                aspect-ratio: 16 / 9;
+                transition: 0.3s ease-in;
+                &:hover {
+                    transform: scale(1.025);
+                }
+            }
+            &-1-info {
+                background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+                color: white;
+                font-size: small;
+                padding: 1.9em;
+                padding-top: 0;
+                overflow: hidden;
+                width: 70vw;
+                height: max-content;
+            }
+
+            // Backgorund image for card 2
+            &-2-image {
+                padding: 0;
+                background-image: url("../assets/images/agile.gif");
+                background-size: contain;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                max-height: max-content;
+                aspect-ratio: 16 / 9;
+                transition: 0.3s ease-in;
+                &:hover {
+                    transform: scale(1.025);
+                }
+            }
+            &-2-info {
+                background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+                color: white;
+                font-size: small;
+                padding: 1.9em;
+                padding-top: 0;
+                overflow: hidden;
+                width: 70vw;
+                height: max-content;
+            }
+
+            // Backgorund image for card 3
+            &-3-image {
+                padding: 0;
+                background-image: url("../assets/images/welding.gif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                max-height: max-content;
+                aspect-ratio: 16 / 9;
+                transition: 0.3s ease-in;
+                &:hover {
+                    transform: scale(1.025);
+                }
+            }
+            &-3-info {
+                background: linear-gradient(hsl(0 0% 0% / 0), hsl(0 0% 0% / 1));
+                color: white;
+                font-size: small;
+                padding: 1.9em;
+                padding-bottom: 0;
+                padding-top: 0;
+                overflow: hidden;
+                width: 70vw;
+                height: max-content;
+                margin: 0;
+            }
+        }
+    }
+
+    // Lower Card Section
+    &-exp-cards {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+
+        &-horz-card-1 {
+            @include mixin.flex(column, center, center);
+            margin-bottom: 2em;
+            width: 99%;
+            overflow: hidden;
+
+            &-1 {
+                @include mixin.flex(column, center, center);
+                overflow: hidden;
+                @include mixin.border-radius(variables.$bd-size, 0);
+
+                &-image {
+                    padding: 0;
+                    background-image: url("../assets/images/pdx-codeguil.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    overflow: hidden;
+                    // margin: 0 0.4em;
+                    display: block;
+                    width: 100%;
+                    // max-height: 10vh;
+                    // object-position: center;
+                    aspect-ratio: 16 / 9;
+                    transition: 0.3s ease-in;
+                    &:hover {
+                        transform: scale(1.025);
+                    }
+                }
+                &-info {
+                    color: black;
+                    font-size: small;
+                    position: relative;
+                    left: -1em;
+                    margin: 0;
+                    @include mixin.rectangle(15rem, 25rem);
+                }
+            }
+
+            b {
+                font-size: 15pt;
+            }
+        }
+
+        &-horz-card-2 {
+            @include mixin.flex(column, center, center);
+            margin-bottom: 2em;
+
+            &-1 {
+                @include mixin.flex(column, center, center);
+                overflow: hidden;
+                @include mixin.border-radius(variables.$bd-size, 0);
+
+                &-image {
+                    padding: 0;
+                    background-image: url("../assets/images/ASU-big.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    overflow: hidden;
+                    display: block;
+                    width: 100%;
+                    max-height: 100vh;
+                    aspect-ratio: 16 / 9;
+                    transition: 0.3s ease-in;
+                    &:hover {
+                        transform: scale(1.025);
+                    }
+                }
+                &-info {
+                    color: black;
+                    font-size: small;
+                    position: relative;
+                    left: -1em;
+                    margin: 0;
+                }
+            }
+        }
+
+        &-horz-card-3 {
+            @include mixin.flex(column, center, center);
+            margin-bottom: 2em;
+
+            &-1 {
+                @include mixin.flex(column, center, center);
+                overflow: hidden;
+                @include mixin.border-radius(variables.$bd-size, 0);
+
+                &-image {
+                    padding: 0;
+                    background-image: url("../assets/images/USMC-machine-gun.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    overflow: hidden;
+                    display: block;
+                    width: 100%;
+                    max-height: 100vh;
+                    aspect-ratio: 16 / 9;
+                    transition: 0.3s ease-in;
+                    &:hover {
+                        transform: scale(1.025);
+                    }
+                }
+                &-info {
+                    // background-color: variables.$xanadu;
+                    color: black;
+                    font-size: small;
+                    left: -1em;
+                    position: relative;
+                    margin: 0;
+                }
+            }
+        }
+
+        &-horz-card-4 {
+            @include mixin.flex(column, center, center);
+
+            &-1 {
+                @include mixin.flex(column, center, center);
+                overflow: hidden;
+                @include mixin.border-radius(variables.$bd-size);
+
+                &-image {
+                    padding: 0;
+                    background-image: url("../assets/images/Logo.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position-y: -9px;
+                    overflow: hidden;
+                    display: block;
+                    width: 100%;
+                    max-height: 100px;
+                    aspect-ratio: 16 / 9;
+                    transition: 0.3s ease-in;
+                    margin-bottom: -1.5em;
+                    &:hover {
+                        transform: scale(1.025);
+                    }
+                }
+                &-info {
+                    background-color: variables.$xanadu;
+                    color: black;
+                    font-size: small;
+                    left: -0.2em;
+                    overflow: hidden;
+                    position: relative;
+                    margin: 0 -0.9em;
+                }
+            }
+        }
+    }
+}
+
+.main-footer {
+    display: grid;
+    position: relative;
+    bottom: -0.4em;
+    left: -0.5em;
+    // justify-content: center;
+    align-content: end;
+    &-container {
+        @include mixin.flex(row, center, space-around);
+        @include mixin.rectangle(min-content, 100vw);
+        background-color: variables.$xanadu;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// Independently produced class and then apply; bootstrap style
+.card-shadow {
+    border: none;
+    border-radius: variables.$bd-size;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Large Screen Development
+@media screen and (min-width: 1000px) {
+    // HEADER
+    .main-head {
+        // grid-template-rows: min-content;
+
+        &-body {
+            column-gap: 0;
+            width: 100%;
+            justify-items: center;
+            justify-content: space-around;
+
+            &-butts {
+                @include mixin.rectangle(4em, 10em);
+                transition-duration: 0.4s;
+                font-size: clamp(small, medium, large);
+                padding: 0;
+                margin: 1em 0;
+                &:hover {
+                    opacity: 90%;
+                    transform: scale(1.035);
+                }
+            }
+        }
+    }
+
+    .main-body {
+        grid-template-columns: 190px auto 190px;
+
+        &-hero {
+            // Large Screen consideration
+            @include mixin.flex(row, flex-end, space-between);
+
+            &-text-box {
+                width: 60%;
+                height: min-content;
+                // overflow-wrap: break-word;
+                h2 {
+                    padding: 0.6em 1em 0 1em;
+                }
+            }
+        }
+
+        // Middle Card Section
+        &-card-section {
+            align-items: start;
+
+            /*  &-card {
+                // height: 26vh;
+            } */
+        }
+    }
+
+    // Experience horiztonal cards
+    .main-body-exp-cards-horz-card-1-1 {
+        @include mixin.flex(row, center, flex-start);
+        @include mixin.border-radius(variables.$bd-size);
+        width: 100%;
+
+        &-image {
+            width: 30%;
+            max-height: min-content;
+        }
+        &-info {
+            height: min-content;
+            // @include mixin.rectangle(min-content, 89em)
+        }
+    }
+
+    .main-body-exp-cards-horz-card-2 {
+        // @include mixin.flex(row, center, flex-start);
+
+        &-1 {
+            @include mixin.flex(row, center, flex-start);
+            @include mixin.border-radius(variables.$bd-size);
+            width: 100%;
+
+            &-image {
+                width: 30%;
+                max-height: min-content;
+            }
+            &-info {
+                height: min-content;
+                font-size: medium;
+            }
+        }
+    }
+
+    .main-body-exp-cards-horz-card-3 {
+        &-1 {
+            @include mixin.flex(row, center, flex-start);
+            @include mixin.border-radius(variables.$bd-size);
+            width: 100%;
+
+            &-image {
+                width: 44%;
+                max-height: min-content;
+            }
+            &-info {
+                height: min-content;
+                font-size: medium;
+            }
+        }
+    }
+
+    .main-body-exp-cards-horz-card-4 {
+        // @include mixin.flex(row, center, flex-start);
+
+        &-1 {
+            @include mixin.flex(row, center, flex-start);
+            @include mixin.border-radius(variables.$bd-size);
+            width: 100%;
+
+            &-image {
+                width: 30%;
+                max-height: min-content;
+                background-position: center;
+            }
+            &-info {
+                height: min-content;
+                font-size: medium;
+                left: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    // Upper middle card picture
+    .main-body-card-section-card-2-image {
+        background-size: cover;
+    }
+
+    // Middle cards transform effect
+    .transform-text {
+        transform: translateY(78%);
+        transition: 0.7s ease-in;
+        font-size: medium;
+        opacity: 0.6;
+        &:hover {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    // Middle Cards text box section width
+    .text-box-width {
+        width: 18vw;
+        height: 37vh;
+    }
+}
