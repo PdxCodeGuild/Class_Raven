@@ -9,10 +9,11 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/receipt', methods=['POST'])
+@app.route('/receipt', methods=['GET', 'POST'])
 def create_receipt():
     if request.method == 'POST':
         print(request.form)
+        
         items = {
             'first-name': request.form['f-name'],
             'last-name': request.form['l-name'],
@@ -23,7 +24,7 @@ def create_receipt():
             'extra': request.form['extra'],
             'deliver': request.form['deliv-instructions']
         }
-        return render_template('receipt.html')
+    return render_template('receipt.html', items=items) # this returns a 405 error if each button is not selected.
         
     
 
