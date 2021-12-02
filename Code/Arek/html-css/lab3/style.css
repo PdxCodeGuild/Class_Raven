@@ -1,17 +1,58 @@
-#top-bar{
-    background-color: green;
-    color: beige;
-    font-weight: bolder;
-    max-height: 100%;
-    max-width: 100%;
-   
-}
-col {
-    max-width: 100%;
-    max-height: 100%;
+#top-row{
+    background-color: beige;
+    height: 100px;
+    margin-bottom: 0;
+
 }
 
-img { /* htis is an setting this for all image tags */
-    max-width: 100%;
-    max-height: 100%;
+#green-box{
+    height: 100px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: larger;
+    font-weight:  bold;
 }
+
+header{
+    font-size: x-large;
+    font-weight: bolder;
+    color: beige;
+}
+
+#article-section{
+    background-image: url(green.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+
+#articles{
+    padding: 20px 20px;
+    margin: 20px 20px;
+    line-height: 150%;
+    background-color: rgb(0,0,0, 0.5);
+    color: beige;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    font-size: x-large;
+    
+
+}
+
+#contact-link{
+    background-color: black;
+    color: beige;
+    font-size: larger;
+    
+    text-align: center;
+}
+
+
+
+
+
+
