@@ -1,0 +1,39 @@
+body {
+    background-color: white;
+    margin:5%;
+}
+
+#submit-button {
+    background-color:slateblue;
+    color:white;
+    font-family: 'Rock Salt', cursive;
+    font-size:medium;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 20px;
+    background-color:slateblue;
+    color:white;
+    text-align:center;
+    font-family: 'Rock Salt', cursive;
+    font-size:xx-large
+}
+
+.order-box {
+    background-color: rgba(255, 173, 21, 0.897);
+    border-radius: 20px;
+    padding:5%;
+    
+}
+
+.order-form {
+    padding: 20px 20px;
+  
+}
+
+.button-box {
+    display:flex;
+    align-items:center !important;
+    padding-top:5%;
+}
