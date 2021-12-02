@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 /* SCSS HSL */
 /* SCSS Gradient */
 body {
@@ -161,6 +162,15 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.main-body-lower-container-img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1em;
+}
 
 .main-footer {
   display: grid;
@@ -184,6 +194,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  -moz-column-gap: 0.3em;
+       column-gap: 0.3em;
   /* &-blocks {
 
   } */
@@ -220,6 +232,15 @@ body {
   background-repeat: no-repeat;
   height: 40px;
   width: 40px;
+}
+
+.btn {
+  border-radius: 15px;
+  background: none;
+  color: #271d16;
+  padding: 0.7em;
+  font-size: large;
+  font-family: "Anton", "san-serrif";
 }
 
 @media screen and (max-width: 568px) {

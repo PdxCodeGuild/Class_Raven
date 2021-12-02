@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from json import dumps, loads, decoder
+from jinja2 import exceptions
 
 app = Flask(__name__)
 
@@ -16,8 +17,8 @@ def load_data() -> dict():
 def clear_order() -> None:
     """Remove the data in the json db"""
 
-    with open(db, "r+") as f_clear:
-        f_clear.truncate(0)
+    with open(db, "w") as f_clear:
+        f_clear.write("[]")
 
 
 def save_data(data: dict) -> None:
@@ -31,29 +32,31 @@ def save_data(data: dict) -> None:
 def index():
 
     try:
-        return render_template("index.html", orders=load_data())
-    except decoder.JSONDecodeError:
+        return render_template("index.html", orders=load_data()[-1])
+    except (IndexError, exceptions.UndefinedError):
         null_info = {"No Oders Placed": ""}
         return render_template("index.html", orders=null_info)
 
 
-@app.route("/orders", methods=['POST', 'GET'])
+@app.route("/orders", methods=['POST'])
 def orders():
 
-    if request.method == "POST":
-        order_dict = {
-            "First Name": request.form["f-name"].capitalize(),
-            "Last Name": request.form["l-name"].capitalize(),
-            "tortilla": request.form["tortilla-type"].lower(),
-            "rice": request.form["rice"].lower(),
-            "beans": request.form["beans"].lower(),
-            "protein": request.form["protein"].lower(),
-            "additional_ingredients": request.form.getlist("add-ingr"),
-            "delivery_instructions": request.form["deliv-instr"].lower(),
-        }
+    data_list = load_data()
 
-    save_data(order_dict)
-    # print(load_data())
+    order_dict = {
+        "First Name": request.form["f-name"].capitalize(),
+        "Last Name": request.form["l-name"].capitalize(),
+        "Tortilla": request.form["tortilla-type"].capitalize(),
+        "Rice": request.form["rice"].capitalize(),
+        "Beans": request.form["beans"].capitalize(),
+        "Protein": request.form["protein"].capitalize(),
+        # Pretty print the list
+        "Additional Ingredients": ", ".join(map(str, request.form.getlist("add-ingr"))),
+        "Delivery Instructions": request.form["deliv-instr"].lower(),
+    }
+
+    data_list.append(order_dict)
+    save_data(data_list)
 
     return redirect(url_for('index'))
 

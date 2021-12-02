@@ -2,6 +2,7 @@
 @use "src/variables";
 @use "src/functions";
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 body {
     background-color: orange;
@@ -168,6 +169,11 @@ body {
         &-container {
             @include mixins.flex(row, center, space-evenly);
             flex-wrap: wrap;
+
+            &-img {
+                @include mixins.rectangle(fit-content, fit-content);
+                margin: 1em;
+            }
         }
     }
 }
@@ -190,6 +196,7 @@ body {
     &-right {
         &-container {
             @include mixins.flex(row, center, center);
+            column-gap: 0.3em;
 
             /* &-blocks {
                 
@@ -225,6 +232,15 @@ body {
     background-image: url(../images/twitter.png);
     background-repeat: no-repeat;
     @include mixins.rectangle(40px, 40px);
+}
+
+.btn {
+    border-radius: 15px;
+    background: none;
+    color: variables.$black-chocolate;
+    padding: 0.7em;
+    font-size: large;
+    font-family: "Anton", "san-serrif";
 }
 
 @media screen and (max-width: 568px) {
@@ -302,7 +318,6 @@ body {
         width: 50em;
 
         &-area {
-
             h1 {
                 font-size: 30pt;
             }

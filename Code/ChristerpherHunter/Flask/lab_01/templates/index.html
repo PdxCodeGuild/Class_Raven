@@ -26,7 +26,7 @@
                 <form action="{{ url_for('orders') }}" method="POST">
                     <fieldset class="box-shadow">
                         <div class="main-body-top-left-form-name">
-                            <input type="text" name="f-name" placeholder="First Name" tabindex="1">
+                            <input type="text" name="f-name" placeholder="First Name" tabindex="1" required>
                             <br>
                             <input type="text" name="l-name" placeholder="Last Name" tabindex="1">
                         </div>
@@ -120,7 +120,7 @@
                         <br>
                         <div class="main-body-top-left-form-submit">
                             <div>
-                                <button type="submit">Submit</button>
+                                <button class="btn" type="submit">Submit</button>
                             </div>
                         </div>
                     </fieldset>
@@ -140,14 +140,16 @@
                         <div class="main-body-top-right-container-receipt-box-area">
                             <h1>ORDER CONFIRMATION</h1>
                             {% for order, val in orders.items() %}
-                            <p id="order">{{ order }}:</p>
-                            <p id="val">{{ val }}</p>
+                            <p>
+                                <span id="order">{{ order }}:</span>
+                                <span id="val">{{ val }}</span>
+                            </p>
                             {% endfor %}
                         </div>
                         <form action="{{ url_for('reset_receipt') }}" method="POST">
                             <div class="main-body-top-right-container-receipt-box-reset">
                                 <div>
-                                    <button type="submit">Clear Form</button>
+                                    <button class="btn" type="submit">Clear Form</button>
                                 </div>
                             </div>
                         </form>
@@ -189,7 +191,9 @@
         </div>
         <div class="main-footer-right">
             <div class="main-footer-right-container">
-                <div class="main-footer-right-container-blocks fb-image"></div>
+                <a href="facebook.com" target="_blank">
+                    <div class="main-footer-right-container-blocks fb-image"></div>
+                </a>
                 <div class="main-footer-right-container-blocks lk-image"></div>
                 <div class="main-footer-right-container-blocks yt-image"></div>
                 <div class="main-footer-right-container-blocks twt-image"></div>
