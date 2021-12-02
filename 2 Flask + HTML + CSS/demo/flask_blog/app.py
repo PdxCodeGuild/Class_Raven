@@ -27,7 +27,7 @@ def index():
 def create_article():
     # if the request method is GET, load blank article form
     if request.method == "GET":
-        return render_template('articles/new.html', article=None)
+        return render_template('articles/new.html', article=None, form_action="create_article")
     
     # if the request method is POST, use the form data to create a new article
     elif request.method == "POST":
@@ -63,3 +63,39 @@ def delete_article(article_id):
     save_data('./static/articles.json', new_articles)
 
     return redirect(url_for('index'))
+
+@app.route('/articles/<int:article_id>')
+def retrieve_article(article_id):
+    articles = load_data('./static/articles.json')
+
+    for article in articles:
+        if article['id'] == article_id:
+            break
+
+    return render_template('articles/detail.html', article=article)
+
+@app.route('/edit/<int:article_id>', methods=["GET", "POST"])
+def update_article(article_id):
+    articles = load_data('./static/articles.json')
+
+    for i in range(len(articles)):
+        article = articles[i]
+    
+        if article['id'] == article_id:
+            break
+
+
+    if request.method == 'GET':
+        return render_template('articles/edit.html', article=article, form_action='update_article')
+
+    elif request.method == 'POST':
+        article.update({
+            'title': request.form['title'],
+            'body': request.form['body']
+        })
+
+        articles[i] = article
+
+        save_data('./static/articles.json', articles)
+
+        return redirect(url_for('index'))
