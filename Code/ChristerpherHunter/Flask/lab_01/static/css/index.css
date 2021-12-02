@@ -289,7 +289,10 @@ body {
     height: fit-content;
     width: 50em;
   }
-  .main-body-top-right-container-receipt-box p {
+  .main-body-top-right-container-receipt-box-area h1 {
+    font-size: 30pt;
+  }
+  .main-body-top-right-container-receipt-box-area p {
     font-size: 30pt;
   }
 }/*# sourceMappingURL=index.css.map */

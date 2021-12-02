@@ -140,10 +140,17 @@
                         <div class="main-body-top-right-container-receipt-box-area">
                             <h1>ORDER CONFIRMATION</h1>
                             {% for order, val in orders.items() %}
-                                <p id="order">{{ order }}:</p>
-                                <p id="val">{{ val }}</p>
+                            <p id="order">{{ order }}:</p>
+                            <p id="val">{{ val }}</p>
                             {% endfor %}
                         </div>
+                        <form action="{{ url_for('reset_receipt') }}" method="POST">
+                            <div class="main-body-top-right-container-receipt-box-reset">
+                                <div>
+                                    <button type="submit">Clear Form</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

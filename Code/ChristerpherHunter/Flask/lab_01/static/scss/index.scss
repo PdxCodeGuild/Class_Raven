@@ -301,8 +301,15 @@ body {
         height: fit-content;
         width: 50em;
 
-        p {
-            font-size: 30pt;
+        &-area {
+
+            h1 {
+                font-size: 30pt;
+            }
+
+            p {
+                font-size: 30pt;
+            }
         }
     }
 }
