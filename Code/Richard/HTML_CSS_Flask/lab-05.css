@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* p= font-family: 'Roboto', sans-serif; */
+
+legend {
+    display:flex;
+    justify-content: center;
+    background-color: chocolate;
+}
+
+/* label {
+display: flex;
+justify-content: space-evenly;
+} */
+
+input.radio {
+    padding: auto;
+    margin:auto;
+}

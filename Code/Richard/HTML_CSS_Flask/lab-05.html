@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./lab-05.css">
+
+    <title>Burrito Time!</title>
+</head>
+<body>
+    <section id="burrito-form-container">
+        <form action="" id= "burrito form">
+            <label for="Name">
+                Name <br />
+                <input type="text" name="name" id = "name">
+            </label>
+            <br />
+            <fieldset>
+                <legend>Tortilla</legend>
+                <label>
+                    <input type="radio" name="tortilla" value="Wheat Flour">Wheat Flour
+                </label>
+                <label>
+                    <input type="radio" name="tortilla" value="White Flour">White Flour
+                </label>
+                <label>
+                    <input type="radio" name="tortilla" value="Spinach">Spinach
+                </label>
+                <label>
+                    <input type="radio" name="tortilla" value="Corn">Corn 
+                </label>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Rice</legend>
+                <label>
+                    <input type="radio" name="rice" value="Brown Rice">Brown Rice
+                </label>
+                <label>
+                    <input type="radio" name="rice" value="White Rice">White Rice
+                </label>
+                <br/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Beans</legend>
+                <label>
+                    <input type="radio" name="beans" value="Black Beans">Black Beans
+                </label>
+                <label>
+                    <input type="radio" name="beans" value="Pinto Beans">Pinto Beans
+                </label>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Protein</legend>
+                <label>
+                    <input type="radio" name="protein" value="Carnitas">Carnitas
+                </label>
+                <label>
+                    <input type="radio" name="protein" value="Chicken">Chicken
+                </label>
+                <label>
+                    <input type="radio" name="protein" value="Sofritas">Sofritas
+                </label>
+                <label>
+                    <input type="radio" name="protein" value="None">None
+                </label>
+                <br/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>Additional Ingredients</legend>
+                <label>
+                    <input type="checkbox" name="additional ingredients" value="Cheese">Cheese
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" name="additional ingredients" value="Sour Cream">Sour Cream
+                </label>
+                <br/>
+            </fieldset>
+            <br/>
+            <label for="Delivery">
+                Delivery Instructions
+                <br />
+                <input type="text" name="delivery" id = "delivery">
+            </label>
+            <br>
+            <input type="submit" value="Submit" />
+        </form>
+    </section>
+</body>
+</html>
