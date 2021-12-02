@@ -1,0 +1,33 @@
+HTML NOTES
+
+BOLD LETTER <STRONG></STRONG>
+ITALIC <EM></EM>
+
+lists
+<ol> (ordered list)
+<li> numbered list </li>
+</ol>
+
+<html lang="en"> LANGUAGE
+
+IMAGES
+<irc src"aaron.jpg" alt="me" width="300px" height
+
+create link to another page 
+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN Web Docs</a>
+
+create link to another page new tab 
+
+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>
+
+place holder
+<a href="#">place holder</a>
+
+
+CONTAINERS
+
+Navigation for links
+
+<nav></nav>
+
+<article>
