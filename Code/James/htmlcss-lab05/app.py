@@ -13,23 +13,26 @@ def index():
 
 @app.route('/login', methods=["POST", "GET"])
 def login():
-    if request.method =="POST":
+    if request.method =="GET":  
+        return render_template("login.html")
+         
+
+    else: 
+        
         user = request.form["fname"]
         user2 = request.form["lname"]
-        return f'Showing profile for {user} {user2}'
-
-    else:
-        return render_template("login.html")
+        return f'Welcome! {user} {user2}'
 
 
 @app.route('/order', methods=["POST", "GET"])
 def food_order():
     if request.method == "POST":
         meat = request.form['name']
-        return f'<h1> You ordered </h1>'
+        return f'<h1> You ordered {meat} </h1>'
     else:
-        return render_template("order.html")
-
+        meat_options = ['Carnitas', 'Chicken', 'Sofritas', 'None' ]
+        return render_template("order.html", meat_options = meat_options)
+        
 
 # @app.route("/<usr>")
 # def user(usr, usr2):
@@ -37,12 +40,6 @@ def food_order():
 
     
 
-
-
-@app.route('/order')
-def order():
-    print("here's your order")
-    return render_template('order.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
