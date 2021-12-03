@@ -1,0 +1,16 @@
+#main{
+    border-style:outset;
+    border-width: 20px;
+    margin-top: 30px;
+    border-radius: 50px;
+    min-height: 75vh;
+    border-color: lightblue;
+    
+}
+
+#top-header{
+    padding-top: 20px;
+    color: lightsalmon;
+    
+}
+
