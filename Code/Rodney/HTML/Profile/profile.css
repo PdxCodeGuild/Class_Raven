@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=M+PLUS+Code+Latin&display=swap');
+* {
+    /*border: 1px solid red;*/
+    font-family: 'Barlow', sans-serif; 
+}
+
+/*--------------Section 1------------------------------------------*/
+
+
+
+/*--------------Nav Bar styling----------------------------------*/
+.navbar {
+
+    display: flex;
+    border:solid;
+    border-color: rgb(27, 50, 184);
+    border-radius: .25rem;
+    border-width: medium;
+    z-index: 3;
+    
+}
+h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(27, 50, 184);
+    background-color: rgb(170, 234, 238);
+    border: solid;
+    border-radius: .5rem;
+    padding:.35rem;
+    border-width: .15rem;
+    
+}
+h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(27, 50, 184);
+    background-color: rgb(170, 234, 238);
+    border: solid;
+    border-radius: .5rem;
+    padding:.35rem;
+    border-width: .15rem;
+   
+}
+
+.box {
+display: flex;
+flex-basis: 80%;
+flex-direction: row-reverse;
+justify-content:right;
+
+}
+
+.logo {
+display: flex;
+height: 40px;
+border: solid;
+border-radius: 1rem;
+border-width: .05rem;
+border-color:rgb(27, 50, 184);
+
+}
+/*--------------Rows for section 1----------------------------------*/
+
+.row1{
+
+    display: flex;
+    align-items: center;
+    background-color: blanchedalmond;
+
+}
+
+.row .col-sm-1 {
+    
+    height: 45vh;
+    justify-content:center;
+    align-items:center;
+    background-color: blanchedalmond;
+    display: flex;
+    position: relative;
+
+}
+.row .col-sm-3 {
+    
+    height: 45vh;
+    display: flex;
+    position:relative;
+    justify-content:center;
+    align-items:center;
+    padding: 3.5rem;
+}
+
+.row .col-sm-4 {
+    
+    height: 45vh;
+    display: flex;
+    position: relative;
+    justify-content:center;
+    align-items:center;
+    padding: 1.5rem;
+  
+}
+/*----------------Columns for section 1--------------------------------*/
+
+#first-column1 {
+    
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    padding:10px
+}
+
+img {
+    position: relative;
+    left:-10px;
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;  
+    border: solid;
+    border-radius: 1rem;
+    border-width: .5rem;
+    border-color:rgb(27, 50, 184);
+    z-index: 2;
+}
+
+#first-image {
+    position: relative;
+    left:10px;
+
+}
+
+#third-column1  {
+
+    background-color: blanchedalmond;
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    font-size: xx-large;
+
+
+}
+
+
+#fifth-column1  {
+
+    background-color: blanchedalmond;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    padding:10px
+
+}
+
+.b-ground{
+    background-color: blanchedalmond;
+}
+
+/*-----------------Circles animation section 1-------------------------------*/
+
+ @keyframes top-circles {
+   
+  
+    0%  {background-color:rgb(170, 234, 238); border: solid; border-width: .5rem; border-color:rgb(27, 50, 184); bottom:140px; top:0px;}
+    25%  {background-color:rgb(27, 50, 184);border: solid; border-width: .55rem; border-color:rgb(170, 234, 238); bottom:140px; top:0px;}
+    50%  {background-color:rgb(170, 234, 238);border: solid; border-width: .5rem; border-color:rgb(27, 50, 184); bottom:140px; top:0px;}
+    75% {background-color:rgb(27, 50, 184); border: solid; border-width: .55rem; border-color:rgb(170, 234, 238);bottom:140px; top:0px;}
+    100%  {background-color:rgb(27, 50, 184); border: solid; border-width: .55rem; border-color:rgb(170, 234, 238);bottom:140px; top:0px;}
+    from {
+        transform: scale(.1);
+    }
+    to {
+    transform: scale(.75);    
+    }
+    
+}
+
+ .animation {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    background-color: blanchedalmond;;
+    animation-name: top-circles;
+    animation-duration: 4s;
+    animation-iteration-count:1;
+    animation-delay: .5s;
+    border-radius: 50%;
+
+ }
+ 
+
+/*------------------Hover effect section 1------------------------------*/
+.color:hover
+{
+    background:rgb(170, 234, 238)
+}
+
+.circle:hover
+{   
+    border-radius:20%;
+    border:solid;
+    border-color: blue;
+    padding: 1.0rem
+}
+/*------------------Rotate effect section 1------------------------------*/
+h1 {
+    font-size: 1.8em;
+    color: rgb(27, 50, 184);
+    font-weight: bolder;
+    text-shadow: 2px 2px cornflowerblue
+
+}
+
+.rotate {
+    
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    animation-iteration-count: 1;
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+/*---------------Section 2 ------------------------------------*/
+
+
+#section-2 {
+background-color:rgb(248, 221, 175)
+}
+
+.offset {
+background-color: rgb(236, 232, 223);
+}
+
+.container1 {
+display: flex;
+z-index: 1;
+flex-wrap: wrap;
+}
+
+.container1 div {
+display: flex;
+border: blanchedalmond;
+border:1px solid #ccc;
+height: 25vh;
+justify-content:center;
+align-items:center;
+font-size: 1.5em;
+color: cornflowerblue; font-weight: bolder;
+
+}
+
+.box-2 {
+flex-basis: 25%;
+
+}
+
+/*---------------Section 3 ------------------------------------*/
+#section-3 {
+background-color:rgb(248, 221, 175)
+}
+
+.offset {
+background-color: rgb(236, 232, 223);
+}
+
+.container2 {
+display: flex;
+
+}
+
+.container2 div {
+display: flex;
+border: blanchedalmond;
+border:1px solid #ccc;
+height: 25vh;
+width: 25%;
+justify-content:center;
+align-items:center;
+font-size: 1.5em;
+color: cornflowerblue; font-weight: bolder;
+flex-wrap: wrap;
+}
+
+/*---------------Hover Effect Section 2 and 3 ------------------------------------*/
+.color2:hover
+{
+    background:rgb(170, 234, 238)
+}
+
+.circle2:hover
+{   
+    border-radius:5%;
+    border:solid;
+    border-color: blue;
+    padding: .9rem;
+    color: blue;
+    font-size: 1.7em;
+    
+}
+
+/*---------------Section  4 ------------------------------------*/
+#section-4 {
+    
+    background-color:blanchedalmond;
+}
+
+.row .col-sm-2 {
+display: flex;
+height: 45vh;
+justify-content:center;
+align-items:center;
+background-color: blanchedalmond;
+
+}
+
+#fourth-column1-3 {
+    
+    color: blue;
+    font-size: 1.75em;
+
+}
+
+#fourth-column2-4 {
+    color: blue;
+    font-size: 1.7rem;
+    
+}
+
+.label {
+display: flex;
+height:80px;
+width: 150px;
+border: solid blue;
+background-color: rgb(170, 234, 238);
+border-radius: 25%;
+justify-content:center;
+align-items:center;
+}
+
+.circle3:hover
+{   
+font-weight: bolder;
+
+}
+
+
+/*---------------Footer------------------------------------*/
+.footer {
+    padding: .5rem;
+    background-color:blanchedalmond;
+    color: blue;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .row1 {
+        flex-direction: column;
+
+    }
+}
