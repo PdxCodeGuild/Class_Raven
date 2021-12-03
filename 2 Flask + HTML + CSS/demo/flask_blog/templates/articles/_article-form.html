@@ -1,0 +1,29 @@
+{% block article_form %} 
+
+<form action="{{url_for(form_action, article_id=article['id'] )}}" method="POST" class="my-5 pb-5">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input
+        type="text"
+        name="title"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        value="{{article['title']}}"
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        name="body"
+        id="exampleInputPassword1"
+        rows="10"
+      >
+{{ article['body'] }}</textarea
+      >
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  {% endblock %}
+</form>
