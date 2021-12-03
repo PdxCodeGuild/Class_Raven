@@ -14,13 +14,6 @@ def load_data() -> dict():
         return loads(f_read.read())
 
 
-def clear_order() -> None:
-    """Remove the data in the json db"""
-
-    with open(db, "w") as f_clear:
-        f_clear.write("[]")
-
-
 def save_data(data: dict) -> None:
     """Save the data input from the user"""
 
@@ -32,7 +25,7 @@ def save_data(data: dict) -> None:
 def index():
 
     try:
-        return render_template("index.html", orders=load_data()[-1])
+        return render_template("index.html", orders=load_data()[-1]["order"])
     except (IndexError, exceptions.UndefinedError):
         null_info = {"No Oders Placed": ""}
         return render_template("index.html", orders=null_info)
@@ -54,20 +47,40 @@ def orders():
         "Additional Ingredients": ", ".join(map(str, request.form.getlist("add-ingr"))),
         "Delivery Instructions": request.form["deliv-instr"].lower(),
     }
+    order_metadata = {
+        "id": len(data_list),
+        "confirmed": False,
+        "order filled": False
+    }
 
-    data_list.append(order_dict)
+    data = {
+        "metadata": order_metadata,
+        "order": order_dict
+    }
+
+    data_list.append(data)
     save_data(data_list)
 
     return redirect(url_for('index'))
 
 
 @app.route("/clear", methods=['POST'])
-def reset_receipt():
+def reset_receipt() -> object:
     """"Clear the db when the clear button is pressed"""
 
-    clear_order()
+    null_info = {"Form Cleared": ""}
 
-    return redirect(url_for('index'))
+    return render_template('index.html', orders=null_info)
+
+
+@app.route("/confirmation", methods=['POST'])
+def order_confirm() -> object:
+    """Confirm the order placed is correct"""
+
+    data_list = load_data()[-1]["metadata"]
+    data_list.update()
+
+    return render_template('index.html', metadata=data_list)
 
 
 if __name__ == "__main__":

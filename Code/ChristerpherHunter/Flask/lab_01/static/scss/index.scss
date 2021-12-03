@@ -243,7 +243,13 @@ body {
     font-family: "Anton", "san-serrif";
 }
 
-@media screen and (max-width: 568px) {
+.contain-btns {
+    @include mixins.flex(row, center, flex-start);
+    flex-wrap: wrap-reverse;
+    gap: 2em;
+}
+
+@media screen and (max-width: 1040px) {
     .main-body {
         grid-template-columns: 10% auto 10%;
         grid-template-rows: auto 2fr;
@@ -261,8 +267,8 @@ body {
                 }
                 &-img {
                     margin-bottom: 2rem;
-                    height: 200px;
-                    width: 308px;
+                    width: calc(13em * 1.9);
+                    height: calc(12em * 1.9);
                     place-self: center;
                 }
 
@@ -294,7 +300,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1558px) {
     .main-body-top-right-container-img {
         width: calc(20em * 3);
         height: calc(15em * 3);
@@ -326,5 +332,9 @@ body {
                 font-size: 30pt;
             }
         }
+    }
+
+    .btn {
+        font-size: 25pt;
     }
 }

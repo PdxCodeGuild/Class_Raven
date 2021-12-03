@@ -146,13 +146,22 @@
                             </p>
                             {% endfor %}
                         </div>
-                        <form action="{{ url_for('reset_receipt') }}" method="POST">
-                            <div class="main-body-top-right-container-receipt-box-reset">
-                                <div>
-                                    <button class="btn" type="submit">Clear Form</button>
+                        <div class="contain-btns">
+                            <form action="{{ url_for('reset_receipt') }}" method="POST">
+                                <div class="main-body-top-right-container-receipt-box-reset">
+                                    <div>
+                                        <button class="btn" type="submit">Clear Form</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                            <form action="{{ url_for('order_confirm') }}" method="POST">
+                                <div class="main-body-top-right-container-receipt-box-confirm">
+                                    <div>
+                                        <button class="btn">Confirm Order</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
