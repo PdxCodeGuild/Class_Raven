@@ -32,13 +32,17 @@ def index():
 
 @app.route('/create', methods=['GET', 'POST'])
 def create_todo():
-
+    # when arriving to the form page, render the template with the form
     if request.method == 'GET':
         return render_template('create.html')
 
+    # when receiving user's form data for a new todo item, 
+    # process it and redirect to index page
     elif request.method == 'POST':
+        # load all todo items from the database
         todos = load_data(JSON_DB)
 
+        # build new todo item dictionary
         new_todo = {
             'id': len(todos) + 1,
             'text': request.form['text'],
@@ -53,6 +57,7 @@ def create_todo():
 
 @app.route('/toggle-complete/<int:todo_id>')
 def toggle_complete(todo_id):
+    # load all todo items from the database
     todos = load_data(JSON_DB)
 
     # loop through the todos list to find the todo with the given todo_id
