@@ -9,25 +9,13 @@ Once you have your page together, use Flask to process the form and render an HT
 ### Extra Challenge
 Apply prices to each item and calculate a total for the user's receipt.
 
-- Name (text input)
-- Tortilla (radio buttons)
-  - White Flour
-  - Wheat Flour
-  - Spinach
-  - Corn
-- Rice (radio buttons)
-  - White Rice
-  - Brown Rice
-- Beans (radio buttons)
-  - Black Beans
-  - Pinto Beans
-- Protein (radio buttons)
-  - Carnitas
-  - Chicken
-  - Sofritas
-  - None
-- Additional Ingredients (check boxes)
-  - Cheese
-  - Sour Cream
-- Delivery Instructions (textarea)
+|Field Name|Field Type|Options|
+|-|-|-|
+|Name|text|<ul>Short text</ul>|
+|Tortilla|Radio Buttons|<ul><li>White Flour</li><li>Wheat Flour</li><li>Spinach</li><li>Corn</li></ul>|
+|Rice|Radio Buttons|<ul><li>White</li><li>Brown</li></ul>|
+|Beans|Radio Buttons|<ul><li>Black</li><li>Pinto</li></ul>|
+|Protein|Radio Buttons|<ul><li>Carnitas</li><li>Chicken</li><li>Sofritas</li><li>None</li></ul>|
+|Extra|Check Boxes|<ul><li>Cheese</li><li>Sour Cream</li></ul>|
+|Delivery Instructions|Text Area|<ul>Long text</ul>|
 
