@@ -1,0 +1,86 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+  <!-- INCOMPLETE TODOS -->
+  <div class="col-12 col-lg-6 offset-lg-3">
+    <h1
+      class="
+        display-4
+        bg-primary
+        text-light
+        rounded
+        p-3
+        d-flex
+        justify-content-between
+      "
+    >
+      To Do
+      <a
+        href="{{ url_for('create_todo') }}"
+        class="link-light"
+        title="Add Task"
+      >
+        <i class="far fa-plus-square"></i>
+      </a>
+    </h1>
+    <ul class="list-group">
+      {% for todo in incomplete_todos %}
+      <li class="list-group-item d-inline-flex justify-content-between">
+        <p class="lead m-0">{{ todo['text'] }}</p>
+        <div>
+          <a
+            href="{{ url_for('toggle_complete', todo_id=todo['id']) }}"
+            class="link-success"
+          >
+            <i class="fas fa-check"></i>
+          </a>
+        </div>
+      </li>
+      <!-- If there no todos in the list, render the %else% -->
+      {% else %}
+      <li class="list-group-item">
+        <p class="lead text-muted m-0">Nothing to do...</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- COMPLETED TODOS -->
+  <div class="col-12 col-lg-6 offset-lg-3 my-5 py-5">
+    <h1
+      class="
+        display-4
+        bg-secondary
+        text-light
+        rounded
+        p-3
+        d-flex
+        justify-content-between
+      "
+    >
+      Completed
+    </h1>
+    <ul class="list-group">
+      {% for todo in complete_todos %}
+      <li class="list-group-item d-inline-flex justify-content-between">
+        <p class="lead m-0 text-decoration-line-through">{{ todo['text'] }}</p>
+        <div>
+          <a
+            href="{{ url_for('toggle_complete', todo_id=todo['id']) }}"
+            class="link-success"
+          >
+            <i class="fas fa-check"></i>
+          </a>
+        </div>
+      </li>
+      <!-- If there no todos in the list, render the %else% -->
+      {% else %}
+      <li class="list-group-item">
+        <p class="lead text-muted m-0">Go do something!</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% endblock %}
