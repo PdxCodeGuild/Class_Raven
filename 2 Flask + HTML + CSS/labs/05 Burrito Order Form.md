@@ -11,7 +11,7 @@ Apply prices to each item and calculate a total for the user's receipt.
 
 |Field Name|Field Type|Options|
 |-|-|-|
-|Name|text|<ul>Short text</ul>|
+|Name|Text|<ul>Short text</ul>|
 |Tortilla|Radio Buttons|<ul><li>White Flour</li><li>Wheat Flour</li><li>Spinach</li><li>Corn</li></ul>|
 |Rice|Radio Buttons|<ul><li>White</li><li>Brown</li></ul>|
 |Beans|Radio Buttons|<ul><li>Black</li><li>Pinto</li></ul>|
