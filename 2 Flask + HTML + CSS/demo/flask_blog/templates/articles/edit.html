@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="p-2 mb-5">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h1>Update {{article['title']}}</h1>
+      {% include 'articles/_article-form.html' %}
+      <!-- <form
+        action="{{url_for('update_article', article_id=article['id'])}}"
+        method="POST"
+        class="my-5 pb-5"
+      >
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Title</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            value="{{article['title']}}"
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            name="body"
+            id="exampleInputPassword1"
+            rows="10"
+          >{{ article['body'] }}
+        </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> -->
+    </div>
+  </div>
+</section>
+
+{% endblock %}
