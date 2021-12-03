@@ -48,6 +48,10 @@ body {
             width: fit-content;
             padding: 2rem;
             background-color: variables.$june-bud;
+
+            span {
+                text-align: right;
+            }
         }
     }
 

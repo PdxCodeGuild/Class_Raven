@@ -51,6 +51,9 @@ body {
   padding: 2rem;
   background-color: #c5d86e;
 }
+.main-body-top-left-form span {
+  text-align: right;
+}
 .main-body-top-right {
   grid-column: 3/4;
   justify-self: center;

@@ -24,11 +24,11 @@ def save_data(data: dict) -> None:
 @app.route("/")
 def index() -> object:
 
-    # try:
-    return render_template("index.html")
-    # except (IndexError, exceptions.UndefinedError):
-    #     null_info = {"No Oders Placed": ""}
-    #     return render_template("index.html", orders=null_info, metadata=None)
+    try:
+        return render_template("index.html")
+    except (IndexError, exceptions.UndefinedError):
+        null_info = {"No Oders Placed": ""}
+        return render_template("index.html", orders=null_info, metadata=None)
 
 
 @app.route("/orders", methods=['POST'])
