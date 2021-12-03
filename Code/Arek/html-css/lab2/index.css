@@ -2,6 +2,7 @@
     background-image: url('water.jpg');
     font-family: 'Balsamiq Sans', cursive;
     
+    
 }
 
 #header-1{
@@ -28,7 +29,8 @@
 
 #section2{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+
 }
 
 
@@ -39,23 +41,27 @@
     align-content: flex-start;
     background-color: rgb(0,0,0, 0.8);
     width: 125px;
-    height: 100vh;
+    max-height: 100vh;
     justify-content: space-evenly;
     float: left;
     margin-top: 35px;
     border-style: double;
+    
 }
 
 .nav-side{
     padding: 20px;
     color: beige;
+    
 }
 
 #articles{
+    justify-content: center;
     text-align: center;
     padding: 0px;
     margin: 20px;
     color: beige;
+    max-width: 50vw;
 }
 
 #article1{
@@ -85,7 +91,8 @@
     border-style:solid;
     border-color: black;
     line-height: 120%;
-    color:beige
+    color:beige;
+    
     
 }
 
