@@ -16,7 +16,11 @@ main h3 {
 #gallery colm{
 	max-width: 80vw;
 }
-
+#gallery img{
+	height: 200px;
+	width: 200px;
+	border-radius: 50%
+}
 #copywrite {
 	margin-right: 1vw;
 }
@@ -49,4 +53,15 @@ label {
 form {
 	margin: 20px;
 	padding: 20px;
+}
+#blurb h1 {
+	border: 3px solid white;
+}
+#blurb div{
+	border-radius: 2%;
+	border: 1px solid white;
+}
+#blurb p{
+	font-size: 18px;
+	padding: 25px;
 }
