@@ -2,6 +2,18 @@
   {
     "userId": 2,
     "id": 8,
+    "title": "New interesting article",
+    "body": "LALALALA"
+  },
+  {
+    "userId": 2,
+    "id": 7,
+    "title": "qui est esse",
+    "body": "awkefwekfjwel"
+  },
+  {
+    "userId": 2,
+    "id": 8,
     "title": "Yesterday",
     "body": "All my troubles seemed so far away"
   },
@@ -48,7 +60,7 @@
     "userId": 3,
     "id": 5,
     "title": "nesciunt quas odio",
-    "body": "repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque",
+    "body": "Python!",
     "tags": [
       "boring",
       "pets",
@@ -60,7 +72,7 @@
     "id": 6,
     "userId": 1,
     "title": "dolorem eum magni eos aperiam quia",
-    "body": "ut aspernatur corporis harum nihil quis provident sequi mollitia nobis aliquid molestiae perspiciatis et ea nemo ab reprehenderit accusantium quas voluptate dolores velit et doloremque molestiae",
+    "body": "abc123",
     "tags": [
       "opinion",
       "pet care"

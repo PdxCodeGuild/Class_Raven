@@ -3,10 +3,10 @@
 <section class="p-2 mb-5">
   <div class="row">
     <div class="col-6 offset-3">
-      <h1>Publish a New Article</h1>
+      <h1>Update {{article['title']}}</h1>
       {% include 'articles/_article-form.html' %}
       <!-- <form
-        action="{{url_for('create_article', article_id=article['id'])}}"
+        action="{{url_for('update_article', article_id=article['id'])}}"
         method="POST"
         class="my-5 pb-5"
       >
