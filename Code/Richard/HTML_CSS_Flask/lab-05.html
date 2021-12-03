@@ -18,68 +18,69 @@
     <title>Burrito Time!</title>
 </head>
 <body>
-    <section id="burrito-form-container">
+    <section id="burrito-form" class= "container-sm bg-secondary">
+        <center><h1 class= "bg-primary">Customize your Burrito</h1></center>
         <form action="" id= "burrito form">
-            <label for="Name">
+            <center><label for="Name">
                 Name <br />
                 <input type="text" name="name" id = "name">
-            </label>
+            </label></center>
             <br />
-            <fieldset>
+            <center><fieldset>
                 <legend>Tortilla</legend>
                 <label>
-                    <input type="radio" name="tortilla" value="Wheat Flour">Wheat Flour
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="Wheat Flour">Wheat Flour
                 </label>
                 <label>
-                    <input type="radio" name="tortilla" value="White Flour">White Flour
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="White Flour">White Flour
                 </label>
                 <label>
-                    <input type="radio" name="tortilla" value="Spinach">Spinach
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="Spinach">Spinach
                 </label>
                 <label>
-                    <input type="radio" name="tortilla" value="Corn">Corn 
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="Corn">Corn 
                 </label>
-            </fieldset>
+            </fieldset></center>
             <br/>
-            <fieldset>
+            <center><fieldset>
                 <legend>Rice</legend>
                 <label>
-                    <input type="radio" name="rice" value="Brown Rice">Brown Rice
+                    <input class= "col-4 offset-2" type="radio" name="rice" value="Brown Rice">Brown Rice
                 </label>
                 <label>
-                    <input type="radio" name="rice" value="White Rice">White Rice
+                    <input class= "col-4 offset-2" type="radio" name="rice" value="White Rice">White Rice
                 </label>
                 <br/>
-            </fieldset>
+            </fieldset></center>
             <br/>
-            <fieldset>
+            <center><fieldset>
                 <legend>Beans</legend>
                 <label>
-                    <input type="radio" name="beans" value="Black Beans">Black Beans
+                    <input class= "col-6 offset-2"  type="radio" name="beans" value="Black Beans">Black Beans
                 </label>
                 <label>
-                    <input type="radio" name="beans" value="Pinto Beans">Pinto Beans
+                    <input class= "col-6 offset-2" type="radio" name="beans" value="Pinto Beans">Pinto Beans
                 </label>
-            </fieldset>
+            </fieldset></center>
             <br/>
-            <fieldset>
+            <center><fieldset>
                 <legend>Protein</legend>
                 <label>
-                    <input type="radio" name="protein" value="Carnitas">Carnitas
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="Carnitas">Carnitas
                 </label>
                 <label>
-                    <input type="radio" name="protein" value="Chicken">Chicken
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="Chicken">Chicken
                 </label>
                 <label>
-                    <input type="radio" name="protein" value="Sofritas">Sofritas
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="Sofritas">Sofritas
                 </label>
                 <label>
-                    <input type="radio" name="protein" value="None">None
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="None">None
                 </label>
                 <br/>
-            </fieldset>
+            </fieldset></center>
             <br/>
-            <fieldset>
+            <center><fieldset>
                 <legend>Additional Ingredients</legend>
                 <label>
                     <input type="checkbox" name="additional ingredients" value="Cheese">Cheese
@@ -89,15 +90,15 @@
                     <input type="checkbox" name="additional ingredients" value="Sour Cream">Sour Cream
                 </label>
                 <br/>
-            </fieldset>
+            </fieldset></center>
             <br/>
-            <label for="Delivery">
+            <center><label for="Delivery">
                 Delivery Instructions
                 <br />
-                <input type="text" name="delivery" id = "delivery">
-            </label>
-            <br>
-            <input type="submit" value="Submit" />
+                <input type="textarea" name="delivery" id = "delivery">
+            </label></center>
+            <br/>
+            <center><input type="submit" value="Submit" /></center>
         </form>
     </section>
 </body>

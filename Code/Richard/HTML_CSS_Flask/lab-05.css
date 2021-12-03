@@ -7,12 +7,10 @@ legend {
     background-color: chocolate;
 }
 
-/* label {
+/* label, input {
 display: flex;
-justify-content: space-evenly;
+justify-content: space-around;
 } */
 
-input.radio {
-    padding: auto;
-    margin:auto;
-}
+
+
