@@ -1,12 +1,9 @@
 {% extends 'base.html' %} {% block content %}
-<!-- MAIN CONTENT -->
-<button class="btn btn-lg btn-primary">
-  <a href="{{url_for('create_article')}}" class="link-light">New Article</a>
-</button>
+
+<a href="{{url_for('index')}}" class="link-dark">Back</a>
+
 <div class="row">
   <div class="col-12 col-lg-9">
-    <!-- ARTICLES -->
-    {% for article in articles %}
     <div class="card my-3">
       <div
         class="
@@ -18,24 +15,11 @@
       >
         <h3 class="m-2">{{ article['title'].title() }}</h3>
         <span>
-          <a
-            href="{{url_for('update_article', article_id=article['id'])}}"
-            class="link-warning"
-          >
-            <i class="far fa-edit mx-1"></i>
-          </a>
-          <a
-            href="{{url_for('delete_article', article_id=article['id'])}}"
-            class="link-danger"
-          >
+          <i class="far fa-edit mx-1"></i>
+          <a href="{{url_for('delete_article', article_id=article['id'])}}">
             <i class="far fa-trash-alt mx-1"></i>
           </a>
-          <a
-            href="{{url_for('retrieve_article', article_id=article['id'])}}"
-            class="link-dark"
-          >
-            <i class="far fa-arrow-alt-circle-right mx-1"></i>
-          </a>
+          <i class="far fa-arrow-alt-circle-right mx-1"></i>
         </span>
       </div>
       <div class="card-body">
@@ -51,9 +35,8 @@
         </span>
       </div>
     </div>
-    {% endfor %}
   </div>
-
-  {% include 'layout/_sidenav.html' %}
+  {% include 'layout/_sidenav.html'%}
 </div>
+
 {% endblock %}
