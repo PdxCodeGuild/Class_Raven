@@ -1,7 +1,0 @@
- /* Small screens */
-  @media all and (max-width: 500px) {
-    .navigation {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-    }
-  }
