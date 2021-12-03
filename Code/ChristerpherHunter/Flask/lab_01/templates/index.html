@@ -1,214 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" /> -->
-    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
-    <title>Document</title>
-</head>
+{% block content %}
 
-<body>
-    <!-- MAIN HEAD -->
-    <div class="main-head">
-        <div class="main-head-container">
-            <div class="main-head-container-item">
-                <h1>BURRITO HUNTER</h1>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN BODY -->
-    <div class="main-body">
-        <div class="main-body-top-left">
-            <div class="main-body-top-left-form box-shadow">
-                <form action="{{ url_for('orders') }}" method="POST">
-                    <fieldset class="box-shadow">
-                        <div class="main-body-top-left-form-name">
-                            <input type="text" name="f-name" placeholder="First Name" tabindex="1" required>
-                            <br>
-                            <input type="text" name="l-name" placeholder="Last Name" tabindex="1">
-                        </div>
-                        <div class="main-body-top-left-form-radio-1">
-                            <p>Tortilla Type:</p>
-                            <div>
-                                <input type="radio" id="tort-type-1" name="tortilla-type" tabindex="2"
-                                    value="White Flour" checked>
-                                <label for="tort-type-1">White Flour</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="tort-type-2" name="tortilla-type" tabindex="3"
-                                    value="Wheat Flour">
-                                <label for="tort-type-2">Wheat Flour</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="tort-type-3" name="tortilla-type" tabindex="4" value="Spinach">
-                                <label for="tort-type-3">Spinach</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="tort-type-4" name="tortilla-type" tabindex="5" value="Corn">
-                                <label for="tort-type-4">Corn</label>
-                            </div>
-                        </div>
+<!-- MAIN BODY -->
+<div class="main-body">
+    <div class="main-body-top-left">
+        <div class="main-body-top-left-form box-shadow">
+            <form action="{{ url_for('orders') }}" method="POST">
+                <fieldset class="box-shadow">
+                    <div class="main-body-top-left-form-name">
+                        <input type="text" name="f-name" placeholder="First Name" tabindex="1" required>
                         <br>
-                        <div class="main-body-top-left-form-radio-2">
-                            <p>Rice:</p>
-                            <div>
-                                <input type="radio" id="rice-1" name="rice" tabindex="6" value="White-Rice" checked>
-                                <label for="rice-1">White Rice</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="rice-2" name="rice" tabindex="7" value="Brown-Rice">
-                                <label for="rice-2">Brown Rice</label>
-                            </div>
+                        <input type="text" name="l-name" placeholder="Last Name" tabindex="1">
+                    </div>
+                    <div class="main-body-top-left-form-radio-1">
+                        <p>Tortilla Type:</p>
+                        <div>
+                            <input type="radio" id="tort-type-1" name="tortilla-type" tabindex="2" value="White Flour"
+                                checked>
+                            <label for="tort-type-1">White Flour</label>
                         </div>
-                        <br>
-                        <div class="main-body-top-left-form-radio-3">
-                            <p>Beans:</p>
-                            <div>
-                                <input type="radio" id="beans-1" name="beans" tabindex="8" value="Black-Beans" checked>
-                                <label for="beans-1">Black Beans</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="beans-2" name="beans" tabindex="9" value="Pinto-Beans">
-                                <label for="beans-2">Pinto Beans</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="tort-type-2" name="tortilla-type" tabindex="3" value="Wheat Flour">
+                            <label for="tort-type-2">Wheat Flour</label>
                         </div>
-                        <br>
-                        <div class="main-body-top-left-form-radio-4">
-                            <p>Protein:</p>
-                            <div>
-                                <input type="radio" id="protein-1" name="protein" tabindex="10" value="Carnitas">
-                                <label for="protein-1">Carnitas</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="protein-2" name="protein" tabindex="11" value="Chicken">
-                                <label for="protein-2">Chicken</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="protein-3" name="protein" tabindex="12" value="Sofritas">
-                                <label for="protein-3">Sofritas</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="protein-4" name="protein" tabindex="13" checked value="None">
-                                <label for="protein-4">None</label>
-                            </div>
+                        <div>
+                            <input type="radio" id="tort-type-3" name="tortilla-type" tabindex="4" value="Spinach">
+                            <label for="tort-type-3">Spinach</label>
                         </div>
-                        <br>
-                        <div class="main-body-top-left-form-checkbox">
-                            <p>Additional Ingredients:</p>
-                            <fieldset>
-                                <input type="checkbox" id="add-ingr-1" name="add-ingr" tabindex="14" value="Cheese">
-                                <label for="add-ingr-1">Cheese</label>
-                                <br>
-                                <input type="checkbox" id="add-ingr-2" name="add-ingr" tabindex="15" value="Sour-Cream">
-                                <label for="add-ingr-2">Sour Cream</label>
-                                <br>
-                                <input type="checkbox" id="add-ingr-3" name="add-ingr" tabindex="16" value="None"
-                                    checked>
-                                <label for="add-ingr-3">None</label>
-                            </fieldset>
-                        </div>
-                        <br>
-                        <div class="main-body-top-left-form-textar">
-                            <label for="textar">Delivery Instructions:</label>
-                            <br>
-                            <textarea id="textar" name="deliv-instr" cols="25" rows="10"
-                                placeholder="Place Text Here..."></textarea>
-                        </div>
-                        <br>
-                        <div class="main-body-top-left-form-submit">
-                            <div>
-                                <button class="btn" type="submit">Submit</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-        <div class="main-body-top-right">
-            <section class="main-body-top-right-container">
-                <div class="main-body-top-right-container-info">
-                    <h2>MEAL OF THE DAY</h2>
-                </div>
-                <div class="main-body-top-right-container-img box-shadow">
-                    <!-- Burrito cloud image -->
-                </div>
-                <div class="main-body-top-right-container-receipt">
-                    <div class="main-body-top-right-container-receipt-box">
-                        <div class="main-body-top-right-container-receipt-box-area">
-                            <h1>ORDER CONFIRMATION</h1>
-                            {% for order, val in orders.items() %}
-                            <p>
-                                <span id="order">{{ order }}:</span>
-                                <span id="val">{{ val }}</span>
-                            </p>
-                            {% endfor %}
-                        </div>
-                        <div class="contain-btns">
-                            <form action="{{ url_for('reset_receipt') }}" method="POST">
-                                <div class="main-body-top-right-container-receipt-box-reset">
-                                    <div>
-                                        <button class="btn" type="submit">Clear Form</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <form action="{{ url_for('order_confirm') }}" method="POST">
-                                <div class="main-body-top-right-container-receipt-box-confirm">
-                                    <div>
-                                        <button class="btn">Confirm Order</button>
-                                    </div>
-                                </div>
-                            </form>
+                        <div>
+                            <input type="radio" id="tort-type-4" name="tortilla-type" tabindex="5" value="Corn">
+                            <label for="tort-type-4">Corn</label>
                         </div>
                     </div>
-                </div>
-            </section>
+                    <br>
+                    <div class="main-body-top-left-form-radio-2">
+                        <p>Rice:</p>
+                        <div>
+                            <input type="radio" id="rice-1" name="rice" tabindex="6" value="White-Rice" checked>
+                            <label for="rice-1">White Rice</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rice-2" name="rice" tabindex="7" value="Brown-Rice">
+                            <label for="rice-2">Brown Rice</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="main-body-top-left-form-radio-3">
+                        <p>Beans:</p>
+                        <div>
+                            <input type="radio" id="beans-1" name="beans" tabindex="8" value="Black-Beans" checked>
+                            <label for="beans-1">Black Beans</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="beans-2" name="beans" tabindex="9" value="Pinto-Beans">
+                            <label for="beans-2">Pinto Beans</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="main-body-top-left-form-radio-4">
+                        <p>Protein:</p>
+                        <div>
+                            <input type="radio" id="protein-1" name="protein" tabindex="10" value="Carnitas">
+                            <label for="protein-1">Carnitas</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="protein-2" name="protein" tabindex="11" value="Chicken">
+                            <label for="protein-2">Chicken</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="protein-3" name="protein" tabindex="12" value="Sofritas">
+                            <label for="protein-3">Sofritas</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="protein-4" name="protein" tabindex="13" checked value="None">
+                            <label for="protein-4">None</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="main-body-top-left-form-checkbox">
+                        <p>Additional Ingredients:</p>
+                        <fieldset>
+                            <input type="checkbox" id="add-ingr-1" name="add-ingr" tabindex="14" value="Cheese">
+                            <label for="add-ingr-1">Cheese</label>
+                            <br>
+                            <input type="checkbox" id="add-ingr-2" name="add-ingr" tabindex="15" value="Sour-Cream">
+                            <label for="add-ingr-2">Sour Cream</label>
+                            <br>
+                            <input type="checkbox" id="add-ingr-3" name="add-ingr" tabindex="16" value="None" checked>
+                            <label for="add-ingr-3">None</label>
+                        </fieldset>
+                    </div>
+                    <br>
+                    <div class="main-body-top-left-form-textar">
+                        <label for="textar">Delivery Instructions:</label>
+                        <br>
+                        <textarea id="textar" name="deliv-instr" cols="25" rows="10"
+                            placeholder="Place Text Here..."></textarea>
+                    </div>
+                    <br>
+                    <div class="main-body-top-left-form-submit">
+                        <div>
+                            <button class="btn" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
-        <div class="main-body-lower">
-            <div class="main-body-lower-container">
-                <div class="main-body-lower-container-img">
-                    <!-- image 1 -->
-                    <img class="box-shadow" src="../static/images/burrito_1.jpg" alt="Burrito image 1">
+    </div>
+    <div class="main-body-top-right">
+        <section class="main-body-top-right-container">
+            <div class="main-body-top-right-container-info">
+                <h2>MEAL OF THE DAY</h2>
+            </div>
+            <div class="main-body-top-right-container-img box-shadow">
+                <!-- Burrito cloud image -->
+            </div>
+            <div class="main-body-top-right-container-receipt">
+                <div class="main-body-top-right-container-receipt-box">
+                    <div class="main-body-top-right-container-receipt-box-area">
+                        <h1>ORDER CONFIRMATION</h1>
+                        {% for order, val in orders.items() %}
+                        <p>
+                            <span id="order">{{ order }}:</span>
+                            <span id="val">{{ val }}</span>
+                        </p>
+                        {% endfor %}
+                    </div>
+                    <div class="contain-btns">
+                        <!-- <form action="{{ url_for('reset_receipt') }}" method="POST">
+                            <div class="main-body-top-right-container-receipt-box-reset">
+                                <div>
+                                    <button class="btn" type="submit">Clear Form</button>
+                                </div>
+                            </div>
+                        </form> -->
+                        <form action="{{ url_for('order_confirm') }}" method="POST">
+                            <div class="main-body-top-right-container-receipt-box-confirm">
+                                <div>
+                                    <button class="btn">Confirm Order</button>
+                                    <!-- {% if metadata["completed"] == True %} -->
+                                    <!-- <p>confirmed</p> -->
+                                    <!-- {% endif %} -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="main-body-lower-container-img">
-                    <!-- image 2 -->
-                    <img class="box-shadow" src="../static/images/burrito_2.jpg" alt="Burrito image 2">
-                </div>
-                <div class="main-body-lower-container-img">
-                    <!-- image 3 -->
-                    <img class="box-shadow" src="../static/images/burrito_3.jpg" alt="Burrito image 3">
-                </div>
-                <div class="main-body-lower-container-img">
-                    <!-- image 4 -->
-                    <img class="box-shadow" src="../static/images/burrito_4.jpg" alt="Burrito image 4">
-                </div>
+            </div>
+        </section>
+    </div>
+    <div class="main-body-lower">
+        <div class="main-body-lower-container">
+            <div class="main-body-lower-container-img">
+                <!-- image 1 -->
+                <img class="box-shadow" src="../static/images/burrito_1.jpg" alt="Burrito image 1">
+            </div>
+            <div class="main-body-lower-container-img">
+                <!-- image 2 -->
+                <img class="box-shadow" src="../static/images/burrito_2.jpg" alt="Burrito image 2">
+            </div>
+            <div class="main-body-lower-container-img">
+                <!-- image 3 -->
+                <img class="box-shadow" src="../static/images/burrito_3.jpg" alt="Burrito image 3">
+            </div>
+            <div class="main-body-lower-container-img">
+                <!-- image 4 -->
+                <img class="box-shadow" src="../static/images/burrito_4.jpg" alt="Burrito image 4">
             </div>
         </div>
     </div>
-
-    <!-- MAIN FOOTER -->
-    <div class="main-footer">
-        <div class="main-footer-left">
-            <div class="main-footer-left-container">
-                <div class="main-footer-left-container-text">
-                    <h4>Christerpher Hunter</h4>
-                    <h4>djhunter67@gmail.com</h4>
-                </div>
-            </div>
-        </div>
-        <div class="main-footer-right">
-            <div class="main-footer-right-container">
-                <a href="facebook.com" target="_blank">
-                    <div class="main-footer-right-container-blocks fb-image"></div>
-                </a>
-                <div class="main-footer-right-container-blocks lk-image"></div>
-                <div class="main-footer-right-container-blocks yt-image"></div>
-                <div class="main-footer-right-container-blocks twt-image"></div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
+</div>
+{% endblock %}

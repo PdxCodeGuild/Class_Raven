@@ -22,17 +22,17 @@ def save_data(data: dict) -> None:
 
 
 @app.route("/")
-def index():
+def index() -> object:
 
-    try:
-        return render_template("index.html", orders=load_data()[-1]["order"])
-    except (IndexError, exceptions.UndefinedError):
-        null_info = {"No Oders Placed": ""}
-        return render_template("index.html", orders=null_info)
+    # try:
+    return render_template("index.html")
+    # except (IndexError, exceptions.UndefinedError):
+    #     null_info = {"No Oders Placed": ""}
+    #     return render_template("index.html", orders=null_info, metadata=None)
 
 
 @app.route("/orders", methods=['POST'])
-def orders():
+def orders() -> object:
 
     data_list = load_data()
 
@@ -61,7 +61,8 @@ def orders():
     data_list.append(data)
     save_data(data_list)
 
-    return redirect(url_for('index'))
+    # return redirect(url_for('index', orders=orders, metadata=None))
+    return render_template('index.html', orders=load_data()[-1]["order"], metadata=None)
 
 
 @app.route("/clear", methods=['POST'])
@@ -70,17 +71,22 @@ def reset_receipt() -> object:
 
     null_info = {"Form Cleared": ""}
 
-    return render_template('index.html', orders=null_info)
+    return render_template('index.html', orders=null_info, metadata=None)
+    # return redirect(url_for("index", orders=null_info))
 
 
-@app.route("/confirmation", methods=['POST'])
+@app.route("/confirmation", methods=['GET', 'POST'])
 def order_confirm() -> object:
     """Confirm the order placed is correct"""
 
-    data_list = load_data()[-1]["metadata"]
-    data_list.update()
+    data_list = load_data()
+    data_list[-1]["metadata"].update({
+        'confirmed': True
+    })
 
-    return render_template('index.html', metadata=data_list)
+    save_data(data_list)
+
+    return render_template('confirmation.html', orders=load_data()[-1]["order"], metadata=None)
 
 
 if __name__ == "__main__":

@@ -141,6 +141,9 @@ body {
 .main-body-top-right-container-receipt-box-area {
   text-align: center;
 }
+.main-body-top-right-container-receipt-box-area #detach-page {
+  color: green;
+}
 .main-body-top-right-container-receipt-box-area #order {
   color: blue;
 }
@@ -149,7 +152,7 @@ body {
 }
 .main-body-top-right-container-receipt-box-area p {
   text-align: left;
-  width: 40ch;
+  width: 30ch;
 }
 .main-body-lower {
   grid-row: 2/3;

@@ -143,6 +143,10 @@ body {
                     &-area {
                         text-align: center;
 
+                        #detach-page {
+                            color: green;
+                        }
+
                         #order {
                             color: blue;
                         }
@@ -153,7 +157,7 @@ body {
 
                         p {
                             text-align: left;
-                            width: 40ch;
+                            width: 30ch;
                         }
                     }
                 }
