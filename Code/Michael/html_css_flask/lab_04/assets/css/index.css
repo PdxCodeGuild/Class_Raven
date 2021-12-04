@@ -1,0 +1,36 @@
+/*
+    Name: Michael
+    Date: 11/29/2021 
+    Description: Lab 04 - Personal Portfolio
+*/
+
+#left-list {
+	padding: auto;
+	left: 30vw;
+	position: fixed;
+	float: left;
+	overflow: auto;
+}
+
+#right-list {
+	padding: auto;
+	right: 60vw;
+	float: right;
+	overflow: auto;
+}
+
+#nav-list-spy {
+	width: auto;
+	position: fixed;
+	top: 25vh;
+	right: 0;
+	z-index: 2;
+}
+
+#transparent-nav {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#transparent-nav:hover {
+	background-color: rgba(0, 0, 0, 1);
+}
