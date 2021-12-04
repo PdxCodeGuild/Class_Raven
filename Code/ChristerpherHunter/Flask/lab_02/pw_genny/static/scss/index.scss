@@ -23,6 +23,47 @@ body {
 
 .main {
     display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+    align-content: center;
+    margin: 3rem 0;
+
+    &-body {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+
+        &-container {
+            place-self: center;
+            background-color: aqua;
+            outline: black 2px solid;
+            @include mixins.border-radius(15px);
+            padding: 2rem;
+
+            &-left {
+                place-self: left;
+
+                &-btn {
+                    @include mixins.flex(column, center, flex-start);
+                    gap: 2em;
+                    font-size: xx-large;
+
+                    input {
+                        @include mixins.border-radius(5px);
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
+
+.entry {
+    display: grid;
     min-height: 85vh;
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 0.5fr 1fr 0.5fr;
@@ -42,5 +83,55 @@ body {
                 font-style: italic;
             }
         }
+    }
+}
+
+.btn {
+    border-radius: 15px;
+    background: none;
+    color: functions.invert(aqua);
+    padding: 0.7em;
+    font-size: large;
+    font-family: "Anton", "san-serrif";
+}
+
+.boxed {
+    @include mixins.rectangle(2rem, 12rem);
+    background-color: white;
+    // outline: black 2px solid;
+    margin: 0.2em;
+    @include mixins.border-radius(15px);
+
+    p {
+        font-size: smaller;
+    }
+    animation: wall 1.5s ease-in infinite;
+}
+
+.stop {
+    animation-play-state: paused;
+    border: black 4px solid;
+    @include mixins.border-radius(9px);
+}
+
+@keyframes wall {
+    0%,
+    100% {
+        border-bottom: solid 1px black;
+    }
+    25% {
+        border-right: solid 1px black;
+    }
+    50% {
+        border-top: solid 1px black;
+    }
+    75% {
+        border-left: solid 1px black;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .main-body-container-left-btn {
+        font-size: medium;
     }
 }
