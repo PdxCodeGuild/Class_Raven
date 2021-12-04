@@ -12,8 +12,9 @@ def index():
 @app.route('/receipt', methods=['GET', 'POST'])
 def create_receipt():
     if request.method == 'POST':
-        print(request.form)
-        
+        extras = request.form.getlist('extra')
+        extras = ', '.join(extras)
+         
         items = {
             'first-name': request.form['f-name'],
             'last-name': request.form['l-name'],
@@ -21,7 +22,7 @@ def create_receipt():
             'rice': request.form['rice'],
             'beans': request.form['beans'],
             'protein': request.form['protein'],
-            'extra': request.form['extra'],
+            'extra': extras, #the request.form.getlist is useful if you have form input tags, where the user can select multiple items with the same 'name'
             'deliver': request.form['deliv-instructions']
         }
     return render_template('receipt.html', items=items) # this returns a 405 error if each button is not selected.
