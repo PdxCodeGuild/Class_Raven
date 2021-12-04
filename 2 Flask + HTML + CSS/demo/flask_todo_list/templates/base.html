@@ -30,17 +30,43 @@
     ></script>
 
     <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/7e23fc28a2.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7e23fc28a2.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>To Do List</title>
   </head>
   <body class="bg-dark">
+    <!-- If an error message is rendered with the template, display it here -->
+    {% if error %}
+    <div
+      class="
+        alert alert-danger alert-dismissable
+        position-absolute
+        w-100
+        d-flex
+        show
+        fade
+        align-items-center
+        justify-content-between
+      "
+    >
+      <span>
+        <i class="fas fa-exclamation-triangle"></i>
+        <strong>Oops!</strong> {{ error }}
+      </span>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    {% endif %}
 
     <div class="container bg-info rounded m-5 p-2 p-lg-5 mx-auto">
-
-        {% block content %}
-        {% endblock %}
-        
+      {% block content %} {% endblock %}
     </div>
-</body>
+  </body>
 </html>
