@@ -77,6 +77,13 @@ body {
   font-family: "Anton", "san-serrif";
 }
 
+.flex-me button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .boxed {
   height: 2rem;
   width: 12rem;
@@ -93,7 +100,7 @@ body {
 .stop {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
-  border: black 4px solid;
+  border: black 1px solid;
   border-radius: 9px;
 }
 

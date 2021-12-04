@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <form class="flex-me" action="{{ url_for('index') }}" method="get">
+        <div class="main-body-container-left-btn">
+            <label for="lw-letters">Lowercased Letters:</label>
+            <div class="boxed">
+                <!-- <p>
+                    <span>
+                        {% for i in bitty_bet %}
+                        {{ i }}
+                        {% endfor %}
+                    </span>
+                </p> -->
+            </div>
+            <br>
+            <br>
+            <label for="up-letters">Uppercased Letters:</label>
+            <div class="boxed"></div>
+            <br>
+            <br>
+            <label for="num-nums">Numbers:</label>
+            <div class="boxed"></div>
+            <br>
+            <br>
+            <label for="spec-chars">Special Characters:</label>
+            <div class="boxed"></div>
+            <br>
+            <label for="spec-chars">Password Generated:</label>
+            <div>
+                <input type="text" value="{{ p_word }}"></input>
+            </div>
+            <br>
+            <button class="btn" type="submit">Return</button>
+        </div>
+    </form>
+    <form class="flex-me" action="" method="get">
+        <button class="btn" type="submit">Hash It!</button>
+    </form>
+</div>
+
+
+
+{% endblock %}
