@@ -1,0 +1,32 @@
+body {
+  background-color: darkgray;
+}
+
+.main-head {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: darkkhaki;
+}
+.main-head-content-welcome-nav {
+  font-style: italic;
+}
+
+.main {
+  display: grid;
+  min-height: 85vh;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+}
+
+.main-foot {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: darkkhaki;
+  position: relative;
+  bottom: 0;
+}
+.main-foot-content-bye-space {
+  font-style: italic;
+}/*# sourceMappingURL=index.css.map */
