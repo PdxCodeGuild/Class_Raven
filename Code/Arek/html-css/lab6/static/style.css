@@ -11,6 +11,32 @@
 #top-header{
     padding-top: 20px;
     color: lightsalmon;
+    margin-bottom: 200px;
     
 }
+
+#uppercase-letters{
+    padding-top: 20px;
+    font-size: larger;
+}
+
+#lowercase-letters{
+    padding-top: 20px;
+    font-size: larger;
+}
+
+#punct-characters{
+    padding-top: 20px;
+    font-size: larger;
+}
+
+#number-characters{
+    padding-top: 20px;
+    font-size: larger;
+}
+
+#label{
+    font-size: x-large;
+}
+
 
