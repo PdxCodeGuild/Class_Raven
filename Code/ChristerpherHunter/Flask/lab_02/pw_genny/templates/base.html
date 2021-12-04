@@ -9,26 +9,38 @@
     <title>Flask Lab 05</title>
 </head>
 
-<div class="main-head">
-    <div class="main-head-content">
-        <div class="main-head-content-welcome">
-            <div class="main-head-content-welcome-nav">
-                <h1>HEADER</h1>
+<body>
+    <div class="main-head">
+        <div class="main-head-content">
+            <div class="main-head-content-welcome">
+                <div class="main-head-content-welcome-nav">
+                    <h1>HEADER</h1>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-{% block content %}
+    <div class="main">
+        <div class="main-body">
+            <div class="main-body-container">
+                <div class="main-body-container-left">
+                    {% block content %}
 
-{% endblock %}
-
-<div class="main-foot">
-    <div class="main-foot-content">
-        <div class="main-foot-content-bye">
-            <div class="main-foot-content-bye-space">
-                <h1>FOOTER</h1>
+                    {% endblock %}
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="main-foot">
+        <div class="main-foot-content">
+            <div class="main-foot-content-bye">
+                <div class="main-foot-content-bye-space">
+                    <h1>FOOTER</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
