@@ -5,9 +5,11 @@ from flask.json import load
 
 app = Flask(__name__)
 
+
 def load_data(filename):
     with open(filename, 'r') as json_file:
         return json.loads(json_file.read())
+
 
 def save_data(filename, data):
     with open(filename, 'w') as json_file:
@@ -26,8 +28,6 @@ def find_todo(todos, todo_id):
 JSON_DB = './static/todos.json'
 
 
-
-
 @app.route('/')
 def index():
     todos = load_data(JSON_DB)
@@ -38,13 +38,14 @@ def index():
 
     return render_template('index.html', complete_todos=complete_todos, incomplete_todos=incomplete_todos)
 
+
 @app.route('/create', methods=['GET', 'POST'])
 def create_todo():
     # when arriving to the form page, render the template with the form
     if request.method == 'GET':
         return render_template('create.html')
 
-    # when receiving user's form data for a new todo item, 
+    # when receiving user's form data for a new todo item,
     # process it and redirect to index page
     elif request.method == 'POST':
 
@@ -83,7 +84,7 @@ def update_todo(todo_id):
         # if the form text is blank, return to the template with an error message
         if not request.form['text']:
             return render_template('update.html', error="Text cannot be blank!", todo=todo)
-        
+
         # update the text
         todo.update({
             'text': request.form['text']
@@ -92,6 +93,7 @@ def update_todo(todo_id):
         save_data(JSON_DB, todos)
 
         return redirect(url_for('index'))
+
 
 @app.route('/delete/<int:todo_id>')
 def delete_todo(todo_id):
@@ -102,11 +104,8 @@ def delete_todo(todo_id):
     todos.pop(todo_index-1)
 
     save_data(JSON_DB, todos)
-    
+
     return redirect(url_for('index'))
-
-
-
 
 
 @app.route('/toggle-complete/<int:todo_id>')
