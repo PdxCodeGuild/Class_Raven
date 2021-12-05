@@ -12,6 +12,9 @@ def save_data(filename, data):
 
     return
 
+JSON_DB = "./static/JSON_DB.json"
+
+
 @app.route('/')
 def index():
 
@@ -31,7 +34,7 @@ def login():
         
 
 
-@app.route('/order', methods=["POST", "GET"])
+@app.route('/', methods=["POST", "GET"])
 def food_order():
     if request.method == "GET":
         categories =  ['tortilla', 'rice', 'bean', 'protein', 'additional_ingredients' ]
@@ -40,9 +43,9 @@ def food_order():
             'rice' : ['White Rice', 'Brown Rice'],
             'bean': ['Black Beans', 'Pinto Beans'],
             'protein' : ['Carnitas', 'Chicken', 'Sofritas', 'None'],
-            'additional_ingredients' : ['Cheese', 'Sour Cream']
+            
         }
-        images = ['tortila', 'rice', 'bean', 'protein', 'additional_ingredients']
+        images = ['tortila', 'rice', 'bean', 'protein']
 
 
 
@@ -59,18 +62,39 @@ def food_order():
 def receipt():
     if request.method == "GET":
         
-        return f'wlkefjaldkjflakdj'
+        return render_template()
 
     elif  request.method == "POST":
-          cost = {
+       
+        cost = {
             'tortilla': 2,
             'rice': 3,
             'bean': 1,
             'protein' : 3,
             'additional_ingredients': .5
         } 
+
+        total=0
+
+        print(request.form)
         
-        return render_template("receipt.html") 
+        burrito = {
+            'tortilla': request.form['tortilla'],
+            'rice': request.form['rice'],
+            'bean': request.form['bean'],
+            'protein': request.form['protein'],
+            'cheese': request.form['cheese'],
+            'sour_cream': request.form['sour_cream']
+            # 'additonal_ingredients': request.form['additonal_ingredients'],
+               
+
+        }
+        
+        save_data(JSON_DB, burrito)
+
+        
+        
+        # return render_template("receipt.html") 
 
 
 if __name__ == "__main__":

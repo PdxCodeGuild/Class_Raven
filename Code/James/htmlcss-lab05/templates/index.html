@@ -49,14 +49,65 @@
   </div>
 </div>
 
+<form action="{{url_for('receipt')}}" method='POST'>
+  {% for category in categories %}
+  <div class="card" style="width: 18rem;">
+    
+    <img src="../static/media/{{category}}.jpg" class="card-img-top" alt="...">
+    
+    <div class="card-body">
+      <h5 class="card-title">{{category}}</h5>
+      <p class="card-text">
+
+      <fieldset class="form-check">
+        {% for option in options['category'] %}
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="{{category}}" value="{{ option }}" />
+          <label class="form-check-label" for="{{ option+ '-radio' }}">
+            {{option}}
+          </label>
+        </div>
+      </fieldset>
+      {% endfor %}
+      
+      
+      
+      <fieldset class="form-check">
+        {% for option in options[category] %}
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="{{category}}" value="{{ option }}" />
+          <label class="form-check-label" for="{{ option+ '-radio' }}">
+            {{option}}
+          </label>
+          
+        </div>
+        {% endfor %}
+      </fieldset>
+    </div>
+  
+    {% endfor %}
+    
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="cheese" value=True id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        cheese
+      </label>
+    </div>
+    <div>
+      <input class="form-check-input" type="checkbox" name="sour_cream" value=True id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        sour cream
+      </label>
+      <p><input type="submit" value="Submit" a href="#" class="btn btn-primary"></a></p>
+    </div>
+  </form>
 
 
 
 
 
 
-<!-- first card -->
-
+<!-- <form action="{{url_for('receipt')}}" method='POST'>
 <div class="card-group">
   <div class="card" style="width: 18rem;">
     <img src="../static/media/visual-stories-micheile-1zyj8nOdwPs-unsplash.jpg" class="card-img-top" alt="...">
@@ -89,13 +140,11 @@
         </label>
       </div>
       </p>
-      <a href="#" class="btn btn-primary">Submit</a>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
   </div>
-  <!-- end first card -->
 
 
-  <!-- start second card -->
   <div class="card" style="width: 18rem;">
     <img src="../static/media/louis-hansel-CvLZ6hbIemI-unsplash.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -116,14 +165,11 @@
       </div>
 
       </p>
-      <a href="#" class="btn btn-primary">Submit</a>
     </div>
   </div>
-  <!-- end second card -->
 
 
 
-  <!-- start third card -->
   <div class="card" style="width: 18rem;">
     <img src="../static/media/shelley-pauls-t4X660oKiYs-unsplash.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -144,13 +190,11 @@
       </div>
 
       </p>
-      <a href="#" class="btn btn-primary">Submit</a>
     </div>
   </div>
-  <!-- end third card -->
 
 
-  <!-- start fourth card -->
+  
   <div class="card" style="width: 18rem;">
     <img src="../static/media/mark-deyoung-mjcJ0FFgdWI-unsplash.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -182,13 +226,10 @@
         </label>
       </div>
       </p>
-      <a href="#" class="btn btn-primary">Submit</a>
     </div>
   </div>
-  <!-- end fourth card -->
 
 
-<!-- start fifth card -->
 <div class="card" style="width: 18rem;">
   <img src="../static/media/andra-ion-qsPHXC4T2cY-unsplash.jpg" class="card-img-top" alt="...">
   <div class="card-body">
@@ -208,12 +249,12 @@
       </label>
     </div>
     </p>
-    <a href="#" class="btn btn-primary ">Submit</a>
   </div>
 </div>
-<!-- end fifth card -->
-</div>
-<!-- start text area -->
+</div> -->
+
+
+
 <div class="row">
   <div class="mb-3 col-md-4">
     <label for="exampleFormControlTextarea1" class="form-label">Delivery Instructions</label>
@@ -221,6 +262,4 @@
   </div>
 </div>
 <!-- end text area -->
-
-
 {% endblock %}
