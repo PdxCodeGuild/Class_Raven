@@ -2,7 +2,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
@@ -19,7 +20,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>
-        
+
     </div>
   </div>
 </nav>
@@ -49,217 +50,83 @@
   </div>
 </div>
 
+{% block order %}
 <form action="{{url_for('receipt')}}" method='POST'>
   {% for category in categories %}
-  <div class="card" style="width: 18rem;">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+  <div class="card">
     
-    <img src="../static/media/{{category}}.jpg" class="card-img-top" alt="...">
-    
-    <div class="card-body">
-      <h5 class="card-title">{{category}}</h5>
-      <p class="card-text">
 
-      <fieldset class="form-check">
-        {% for option in options['category'] %}
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="{{category}}" value="{{ option }}" />
-          <label class="form-check-label" for="{{ option+ '-radio' }}">
-            {{option}}
-          </label>
+        <div class="card " style="width: 18rem;">
+          <img src="../static/media/{{category}}.jpg" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title">{{category}}</h5>
+            <p class="card-text">
+
+            <fieldset class="form-check">
+              {% for option in options['category'] %}
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{category}}" value="{{ option }}" />
+                <label class="form-check-label" for="{{ option+ '-radio' }}">
+                  {{option}}
+                </label>
+              </div>
+            </fieldset>
+            {% endfor %}
+
+
+
+            <fieldset class="form-check">
+              {% for option in options[category] %}
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="{{category}}" value="{{ option }}" />
+                <label class="form-check-label" for="{{ option+ '-radio' }}">
+                  {{option}}
+                </label>
+
+              </div>
+              {% endfor %}
+            </fieldset>
+          </div>
+
+          {% endfor %}
+
+          <div class="form-check ">
+            <input class="form-check-input" type="checkbox" name="extras" value="cheese" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              cheese
+            </label>
+          </div>
+          <div>
+            <input class="form-check-input" type="checkbox" name="extras" value="sour cream" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              sour cream
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="">
+              <label for="exampleFormControlTextarea1" class="form-label">Delivery
+                Instructions</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="delivery_instructions"
+                value="delivery_instructions"></textarea>
+            </div>
+          </div>
+          <p><input type="submit" value="Submit" class="btn btn-primary"></a></p>
+
         </div>
-      </fieldset>
-      {% endfor %}
-      
-      
-      
-      <fieldset class="form-check">
-        {% for option in options[category] %}
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="{{category}}" value="{{ option }}" />
-          <label class="form-check-label" for="{{ option+ '-radio' }}">
-            {{option}}
-          </label>
-          
-        </div>
-        {% endfor %}
-      </fieldset>
-    </div>
-  
-    {% endfor %}
-    
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="cheese" value=True id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        cheese
-      </label>
-    </div>
-    <div>
-      <input class="form-check-input" type="checkbox" name="sour_cream" value=True id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        sour cream
-      </label>
-      <p><input type="submit" value="Submit" a href="#" class="btn btn-primary"></a></p>
-    </div>
-  </form>
-
-
-
-
-
-
-<!-- <form action="{{url_for('receipt')}}" method='POST'>
-<div class="card-group">
-  <div class="card" style="width: 18rem;">
-    <img src="../static/media/visual-stories-micheile-1zyj8nOdwPs-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Tortilla</h5>
-      <p class="card-text">
-
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          White Flour
-        </label>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Wheat FLour
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Spinach
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Corn
-        </label>
-      </div>
-      </p>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-
-
-  <div class="card" style="width: 18rem;">
-    <img src="../static/media/louis-hansel-CvLZ6hbIemI-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Rice</h5>
-      <p class="card-text">
-
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="rice-radio" id="rice-radio">
-        <label class="form-check-label" for="rice-radio">
-          White Rice
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="rice-radio" id="rice-radio">
-        <label class="form-check-label" for="rice-radio">
-          Brown Rice
-        </label>
-      </div>
-
-      </p>
-    </div>
-  </div>
-
-
-
-  <div class="card" style="width: 18rem;">
-    <img src="../static/media/shelley-pauls-t4X660oKiYs-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Beans</h5>
-      <p class="card-text">
-
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="beans-radio" id="beans-radio">
-        <label class="form-check-label" for="beans-radio">
-          Black Beans
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="beans-radio" id="beans-radio">
-        <label class="form-check-label" for="beans-radio">
-          Pinto Beans
-        </label>
-      </div>
-
-      </p>
-    </div>
-  </div>
-
-
-  
-  <div class="card" style="width: 18rem;">
-    <img src="../static/media/mark-deyoung-mjcJ0FFgdWI-unsplash.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Protein</h5>
-      <p class="card-text">
-
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
-        <label class="form-check-label" for="protein-radio">
-          Carnitas
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
-        <label class="form-check-label" for="protein-radio">
-          Chicken
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
-        <label class="form-check-label" for="protein-radio">
-          Sofritas
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="protein-radio" id="protein-radio">
-        <label class="form-check-label" for="protein-radio">
-          None
-        </label>
-      </div>
-      </p>
-    </div>
-  </div>
-
-
-<div class="card" style="width: 18rem;">
-  <img src="../static/media/andra-ion-qsPHXC4T2cY-unsplash.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Additional ingrediants</h5>
-    <p class="card-text">
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Cheese
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked">
-        Sour Cream
-      </label>
-    </div>
-    </p>
+    </form>
   </div>
 </div>
-</div> -->
+{% endblock %}
 
 
 
-<div class="row">
-  <div class="mb-3 col-md-4">
-    <label for="exampleFormControlTextarea1" class="form-label">Delivery Instructions</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</div>
+
+
+
 <!-- end text area -->
 {% endblock %}

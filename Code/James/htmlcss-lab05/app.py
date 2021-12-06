@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for 
 import json
 app = Flask(__name__)
 
@@ -15,10 +15,10 @@ def save_data(filename, data):
 JSON_DB = "./static/JSON_DB.json"
 
 
-@app.route('/')
-def index():
+# @app.route('/')
+# def index():
 
-    return render_template('index.html')
+#     return render_template('index.html')
 
 
 @app.route('/login', methods=["POST", "GET"])
@@ -47,10 +47,12 @@ def food_order():
         }
         images = ['tortila', 'rice', 'bean', 'protein']
 
+        extras = {
+            "extra":['cheese', 'sour cream']
+        }
 
 
-
-        return render_template("order.html", options=options, categories=categories, images=images)
+        return render_template("index.html", options=options, categories=categories, images=images, extras=extras)
 
     elif request.method == "POST":
         
@@ -71,10 +73,10 @@ def receipt():
             'rice': 3,
             'bean': 1,
             'protein' : 3,
-            'additional_ingredients': .5
+            'extras': .5,
+            'none': 0
         } 
 
-        total=0
 
         print(request.form)
         
@@ -83,18 +85,19 @@ def receipt():
             'rice': request.form['rice'],
             'bean': request.form['bean'],
             'protein': request.form['protein'],
-            'cheese': request.form['cheese'],
-            'sour_cream': request.form['sour_cream']
-            # 'additonal_ingredients': request.form['additonal_ingredients'],
-               
-
+            'extras': request.form['extras'],    
+            'delivery_instructions': request.form['delivery_instructions']
         }
         
+        
         save_data(JSON_DB, burrito)
-
         
+        total = 0
         
-        # return render_template("receipt.html") 
+            
+      
+        
+        return render_template("receipt.html", burrito=burrito, total=total, cost=cost) 
 
 
 if __name__ == "__main__":
