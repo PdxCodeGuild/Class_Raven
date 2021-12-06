@@ -18,11 +18,24 @@
       >
         <h3 class="m-2">{{ article['title'].title() }}</h3>
         <span>
-          <i class="far fa-edit mx-1"></i>
-          <a href="{{url_for('delete_article', article_id=article['id'])}}">
+          <a
+            href="{{url_for('update_article', article_id=article['id'])}}"
+            class="link-warning"
+          >
+            <i class="far fa-edit mx-1"></i>
+          </a>
+          <a
+            href="{{url_for('delete_article', article_id=article['id'])}}"
+            class="link-danger"
+          >
             <i class="far fa-trash-alt mx-1"></i>
           </a>
-          <i class="far fa-arrow-alt-circle-right mx-1"></i>
+          <a
+            href="{{url_for('retrieve_article', article_id=article['id'])}}"
+            class="link-dark"
+          >
+            <i class="far fa-arrow-alt-circle-right mx-1"></i>
+          </a>
         </span>
       </div>
       <div class="card-body">
