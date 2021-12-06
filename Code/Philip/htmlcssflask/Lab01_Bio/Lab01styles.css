@@ -1,0 +1,28 @@
+body {
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    text-align: center;
+    font-family: 'Shippori Antique', sans-serif;
+      }
+    #rickroll {
+      font-size:20px;}
+    #served {
+      font-size:64px;
+      color:red;
+      font-style:italic;}
+    #learn {
+      font-family: "Verdana"; font-style: italic;
+    }
+    #list {
+      text-align: center;
+      font-size:large;
+      font-family: 'Courgette', cursive;
+    }
+    #bio {background-color:hsl(0,2%,15%,85%);
+      color:white;
+      font-size:medium;
+      font-family: 'Montserrat', sans-serif;
+      text-align:center;
+      border-spacing: 10px;
+      border-radius: 10px;
+      
+    }
