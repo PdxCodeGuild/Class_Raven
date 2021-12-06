@@ -3,7 +3,7 @@ from colorama import init, Fore, Back, Style
 import random
 import time
 
-#Lab:20 ADVENTURE - Contributors: Rodney Russel, Richard Watkins, Rafael Medina
+#Lab:20 ADVENTURE - Contributors: Rodney Russel, Richard Watkins, Rafael Medina.
 
 class Ship:  
     def __init__(self, ship, weapon): # creating class, initializing class parameters
