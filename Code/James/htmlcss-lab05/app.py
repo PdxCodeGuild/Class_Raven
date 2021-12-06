@@ -26,11 +26,11 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
 
-    else:
+    elif request.method == "POST":
 
         user = request.form["fname"]
         user2 = request.form["lname"]
-        return f'Welcome! {user} {user2}' 
+        return render_template("login.html", user=user, user2=user2) 
         
 
 
