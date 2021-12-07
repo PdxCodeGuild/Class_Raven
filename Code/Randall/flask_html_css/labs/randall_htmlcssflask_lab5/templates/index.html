@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Burrito Order Form</title>
+      <link rel="stylesheet" href="burrito.css">
+   </head>
+   <body>
+      <div class="left">
+            <h2>Burrito Order Form</h2>
+         <img src="Images/burrito.jpeg" alt="Where the pic?">
+         <div class="name">
+            <h2>Burrito Order Form</h2>
+         </div>
+      </div>
+      <div class="Order-form">
+         <form action="https://webhook.site/86336c11-e118-4601-9a3b-3e2ca6d6cb50" method="POST">
+            <div class="burrito-choices">
+               <div class="Tortilla card">
+                  <h4>Tortilla:</h4>
+                  <div class="ocd">
+                     <input id = "Wheat" name="Tortilla" type="radio" value= "Wheat" checked>
+                     <label for="Wheat"> Wheat</label>
+                  </div>
+                  <div class="ocd">
+                     <input id = "white" name = "Tortilla" type="radio" value= "White">
+                     <label for="white"> White</label>
+                  </div>
+                  <div class="ocd">
+                     <input id = "spinach" name = "Tortilla" type="radio" value= "Spinach">
+                     <label for="spinach"> Spinach</label>
+                  </div>
+                  <div class="ocd">
+                     <input id = "corn" name = "Tortilla" type="radio" value= "Corn">
+                     <label for="corn"> Corn</label>
+                  </div>
+               </div>
+               <div class="Rice card">
+                  <h4>Rice:</h4>
+                  <div class="ocd">
+                     <input type="radio" name = "Rice" id="white-Rice" checked value= "White Rice">
+                     <label for="white-Rice"> White Rice</label>
+                  </div>
+                  <div class="ocd">
+                     <input type="radio" name = "Rice" id="brown-Rice" value= "Brown Rice">
+                     <label for="brown-Rice"> Brown Rice</label>
+                  </div>
+               </div>
+               <div class="Beans card">
+                  <h4>Bean:</h4>
+                  <div class="ocd">
+                     <input type="radio" name = "Beans" id="black-Beans" checked value= "Black Beans">
+                     <label for="black-Beans"> Black Beans</label>
+                  </div>
+                  <div class="ocd">
+                     <input type="radio" name = "Beans" id="pinto-Beans" value= "Pinto Beans">
+                     <label for="pinto-Beans"> Pinto Beans</label>
+                  </div>
+               </div>
+               <div class="meats card">
+                  <h4>Protein:</h4>
+                  <div class="ocd">
+                     <input id = "carnitas" name="Protein" type="radio" checked value= "Carnitas">
+                     <label for="carnitas"> Carnitas</label>
+                  </div>
+                  <div class="ocd">
+                     <input id = "chicken" name = "Protein" type="radio" value= "Chicken">
+                     <label for="chicken"> Chicken</label>
+                  </div>
+                  <div class="ocd">
+                     <input id = "sofritas" name = "Protein" type="radio" value= "Sofritas">
+                     <label for="sofritas"> Sofritas</label>
+                  </div>
+                  <div class="ocd">
+                     <input id = "none" name = "Protein" type="radio" value= "None">
+                     <label for="none"> None</label>
+                  </div>
+               </div>
+               <div class="addons card">
+                  <h4>Additional Ingredients:</h4>
+                  <div class="ocd">
+                     <input type="checkbox" name="additionals" id="sour" value= "Sour Cream">
+                     <label for="sour">Sour Cream</label>
+                  </div>
+                  <div class="ocd">
+                     <input type="checkbox" name="additionals" id="cheese" value= "Cheese">
+                     <label for="cheese">Cheese</label>
+                  </div>
+               </div>
+            </div>
+            <hr>
+            <div class= "stylin" style="margin: 4px 0 10px 0px;">
+            </div>
+            <div class="just-why">
+               <div class="top">
+                  <div class="ident card">
+                     <label for="User-name">Enter Name</label>
+                     <input required type="text" name="User" id="User-name" placeholder="Your Name">
+                  </div>
+                  <div class="delivery instructions card">
+                     <label for="Delivery_Instructions">Delivery Instructions</label>
+                     <input type="text" name="Delivery Instructions" id="Delivery_Instructions" placeholder="Where do you want this?">
+                  </div>
+               </div>
+               <div class="bottom">
+                  <input class="lone-button" type="submit">
+                  <input type="reset" value="Reset Form">
+               </div>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
