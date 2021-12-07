@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <div class="row bg-light py-5 px-2">
+    <div class="col-12 col-lg-6 offset-lg-3">
+      <h3 class="h3">Update Task</h3>
+      <form
+        action="{{ url_for('update_todo', todo_id=todo['id']) }}"
+        method="POST"
+        class="row"
+      >
+        <div class="col-9">
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            name="text"
+            placeholder="What do you have to do?"
+            value="{{todo['text']}}"
+          />
+        </div>
+        <div class="col-3">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
