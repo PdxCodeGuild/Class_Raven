@@ -47,15 +47,18 @@ body {
                 place-self: left;
 
                 &-btn {
-                    @include mixins.flex(column, center, flex-start);
+                    @include mixins.flex(column, center, center);
                     gap: 2em;
                     font-size: xx-large;
 
                     input {
                         @include mixins.border-radius(5px);
+                        margin-bottom: 2rem;
                     }
 
-                    
+                    form {
+                        @include mixins.flex(column, center, center);
+                    }
                 }
             }
         }
@@ -94,6 +97,7 @@ body {
     font-size: large;
     font-family: "Anton", "san-serrif";
 }
+
 .flex-me {
     button {
         @include mixins.flex(row, center, center);
@@ -117,6 +121,12 @@ body {
     animation-play-state: paused;
     border: black 1px solid;
     @include mixins.border-radius(9px);
+}
+
+#output-input {
+    min-width: 15rem;
+    min-height: 2.5rem;
+    font: x-large;
 }
 
 @keyframes wall {
