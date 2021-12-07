@@ -18,6 +18,8 @@
 
 .input-field label {
     color: black;
+    padding-bottom: 10px;
+    font-size: x-large;
 }
 
 .input-field label:hover{
@@ -30,7 +32,7 @@
 
 #generator{
 
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: lightblue;
 
 }
@@ -45,6 +47,11 @@
     padding-top: 10px;
 
 }
+
+.input-field input{
+    font-size: large;
+}
+
 
 
 
