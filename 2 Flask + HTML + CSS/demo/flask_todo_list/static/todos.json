@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "id": 1,
+    "text": "Say goodbye!",
+    "completed": false
+  }
+]
