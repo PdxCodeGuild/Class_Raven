@@ -1,0 +1,67 @@
+assignment a {
+	color: red;
+}
+#company-name {
+	font-size: 32px;
+	margin-left: 5vw;
+}
+.container {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	padding: 20px;
+}
+main h3 {
+	margin-top: 0;
+}
+#gallery colm{
+	max-width: 80vw;
+}
+#gallery img{
+	height: 200px;
+	width: 200px;
+	border-radius: 50%
+}
+#copywrite {
+	margin-right: 1vw;
+}
+@media screen and (max-width: 600px) {
+	#gallery colm {
+		margin-left: 5vw;
+	}
+}
+main p {
+	padding: 2rem;
+	text-indent: 10px;
+}
+.first-word {
+	font-size: 24px;
+	font-weight: bold;
+}
+main ol {
+	font-size: 20px;
+}
+.product-desc {
+	font-size: 16px;
+	font-style: italic;
+}
+label {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+form {
+	margin: 20px;
+	padding: 20px;
+}
+#blurb h1 {
+	border: 3px solid white;
+}
+#blurb div{
+	border-radius: 2%;
+	border: 1px solid white;
+}
+#blurb p{
+	font-size: 18px;
+	padding: 25px;
+}

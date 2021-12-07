@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+
+<a href="{{url_for('index')}}" class="link-dark">Back</a>
+
+<div class="row">
+  <div class="col-12 col-lg-9">
+    <div class="card my-3">
+      <div
+        class="
+          card-header
+          d-inline-flex
+          justify-content-between
+          align-items-center
+        "
+      >
+        <h3 class="m-2">{{ article['title'].title() }}</h3>
+        <span>
+          <i class="far fa-edit mx-1"></i>
+          <a href="{{url_for('delete_article', article_id=article['id'])}}">
+            <i class="far fa-trash-alt mx-1"></i>
+          </a>
+          <i class="far fa-arrow-alt-circle-right mx-1"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+        <p class="card-text">{{article['body'].capitalize()}}</p>
+      </div>
+      <div class="card-footer text-muted d-inline-flex justify-content-between">
+        2 days ago
+        <span>
+          {% for tag in article['tags'] %}
+          <span class="badge bg-info text-dark">{{ tag.title() }}</span>
+          {% endfor %}
+        </span>
+      </div>
+    </div>
+  </div>
+  {% include 'layout/_sidenav.html'%}
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+/*
+    Name: Michael
+    Date: 10/22/2021
+    Description: Lab 3
+*/
+
+/* right side nav bar */
+body {
+	background-color: #adadad;
+}
+
+#right-side-nav {
+	width: auto;
+	position: fixed;
+	top: 25vh;
+	right: 0;
+	z-index: 2;
+	text-align-last: right;
+}
+#right-side-nav:hover {
+	border: rgb(78, 78, 78) solid 1px;
+}
+
+#transparent-nav {
+	opacity: 0.8;
+}
+
+#transparent-nav:hover {
+	opacity: 1;
+	text-align-last: left;
+}
+
+#jumbotron {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-width: 1px;
+	border-radius: 0% 0% 100% 0%;
+	border-color: black;
+	border-style: solid;
+}
+#toast-container {
+	right: 0;
+	width: auto;
+	position: fixed;
+	top: 75vh;
+}
+
+#jumbo-hidden {
+	display: none;
+}
