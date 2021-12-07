@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 def make_pass(upper,lower,punct,nums):
     new_pass = []
-    total = (int(upper) + int(lower) + int(punct) + int(nums))
+    
+    total = upper + lower + punct + nums
     check = 0
 
     while check != total:
@@ -36,7 +37,7 @@ def index():
     if request.method == 'GET':
         return render_template('index.html')
     else:
-        password = make_pass(request.form['uppercase'],request.form['lowercase'],request.form['punctuation'],request.form['numbers'])
+        password = make_pass(int(request.form['uppercase']),int(request.form['lowercase']),int(request.form['punctuation']),int(request.form['numbers']))
         return render_template('index.html', password=password)
 
 app.run(debug=True)
