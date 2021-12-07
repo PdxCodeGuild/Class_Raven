@@ -4,7 +4,7 @@ from jinja2 import exceptions
 
 app = Flask(__name__)
 
-db = "lab_01/db.json"
+db = "./db.json"
 
 
 def load_data() -> dict():
