@@ -20,7 +20,7 @@
 
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/index.css') }}"
+      href="{{ url_for('static', filename='css/style.css') }}"
     />
 
     <script
@@ -30,43 +30,31 @@
     ></script>
 
     <!-- FONT AWESOME -->
-    <script
-      src="https://kit.fontawesome.com/7e23fc28a2.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b0dd4b96ac.js" crossorigin="anonymous"></script>
 
-    <title>To Do List</title>
+    <title>Rot Cypher</title>
   </head>
   <body class="bg-dark">
-    <!-- If an error message is rendered with the template, display it here -->
-    {% if error %}
-    <div
-      class="
-        alert alert-danger alert-dismissable
-        position-absolute
-        w-100
-        d-flex
-        show
-        fade
-        align-items-center
-        justify-content-between
-      "
-    >
-      <span>
-        <i class="fas fa-exclamation-triangle"></i>
-        <strong>Oops!</strong> {{ error }}
-      </span>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="alert"
-        aria-label="Close"
-      ></button>
-    </div>
-    {% endif %}
 
-    <div class="container bg-info rounded m-5 p-2 p-lg-5 mx-auto">
-      {% block content %} {% endblock %}
+    <div class="container bg-light rounded m-5 p-2 p-lg-5 mx-auto">
+
+        {% block content %}
+        {% endblock %}
+        
     </div>
-  </body>
-</html>
+</body>
+
+<!-- Footer, Copyright, and Anchor Link to Top of Page -->
+<footer class="p-5 bg-secondary text-dark position-relative">
+  <div class="container text-center">
+      <p class="lead">  Copyright &copy; 2021 Lee Colburn <br> Jk, not really. Just testing this out.
+      </p>
+      
+      
+      <!-- Anchor Link to Top of Page -->
+      <a href="#" class="position-absolute bottom-0 end-0 p-5">
+      <i class="bi bi-arrow-up-square-fill text-primary h1"></i>
+      </a>
+  </div>
+  </footer>
+</html
