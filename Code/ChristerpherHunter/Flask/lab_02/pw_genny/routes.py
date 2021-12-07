@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, url_for
 from pw_genny.models import Data
-from pw_genny import app, db, bcrypt
+from pw_genny import app, db
+
 
 
 def password_genny(low_lets: int, up_lets: int, num_of_numbers: int, spec_chars: int) -> str:
@@ -33,3 +34,12 @@ def show_pw():
     )
 
     return render_template("show_page.html", p_word=p_word)
+
+
+@app.route("/hash_pw", methods=["GET"])
+def hash_pw():
+    """Execute the password hashing"""
+
+    hash_word = "dsf45sa6dgf4d6f5g749a864df5a6fd7a96s5"
+
+    return render_template("show_page.html", hash_word=hash_word)
