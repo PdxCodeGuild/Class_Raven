@@ -63,6 +63,7 @@ Weeks 16, 17, 18: Capstone project
     <li>Lab 03 - Company Page</li>
     <li>Lab 04 - Personal Portfolio</li>
     <li>Lab 05 - Burrito Form</li>
+    <li>Lab 06 - Flask Redo</li>
   </ul>
 </details>
 
