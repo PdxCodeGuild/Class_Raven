@@ -41,6 +41,8 @@
     min-height: 50px;
     border-color: black;
     border-style: solid;
+    text-align: start;
+    padding-top: 10px;
 
 }
 

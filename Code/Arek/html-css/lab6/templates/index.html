@@ -13,22 +13,22 @@
     <body class='black'>
         <div id='main' class='container grey lighten-2'>
             <h3 id='top-header' class="center-align">Password Generator</h1>
-            <form class='row grey lighten-2'>
+            <form class='row grey lighten-2' action="{{url_for('index')}}" method="post">
                 <div class="input-field col s4 m4 l4 offset-s1 offset-m1 offset-l1">
                     <label for='uppercase-letters'>Number of UpperCase letters</label>
-                    <input type="text" name="uppercase" id='uppercase-letters' >
+                    <input value='0' type="text" name="uppercase" id='uppercase-letters' placeholder="0">
                 </div>
                 <div class="input-field col s4 m4 l4 offset-s2 offset-m2 offset-l2">
                     <label for='lowercase-letters'>Number of LowerCase letters</label>
-                    <input type="text" name="lowercase" id='lowercase-letters' >
+                    <input value='0' type="text" name="lowercase" id='lowercase-letters' placeholder="0">
                 </div>
                 <div class="input-field col s4 m4 l4 offset-s1 offset-m1 offset-l1">
                     <label for='punct-characters'>Punctuation Characters</label>
-                    <input type="text" name="punctuation" id='punct-characters' >
+                    <input value='0' type="text" name="punctuation" id='punct-characters' placeholder="0">
                 </div>
                 <div class="input-field col s4 m4 l4 offset-s2 offset-m2 offset-l2">
                     <label for="number-characters">Number Characters</label>
-                    <input type="text" name="numbers" id='number-characters' >
+                    <input value='0' type="text" name="numbers" id='number-characters' placeholder="0">
                 </div>
                 <div class='col s4 m4 l4 offset-s7 offset-m7 offset-l7 white' id='new-password'>
                     {{password}}
