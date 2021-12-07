@@ -3,7 +3,7 @@
     border-width: 20px;
     margin-top: 30px;
     border-radius: 50px;
-    min-height: 75vh;
+    min-height: 95vh;
     border-color: lightblue;
     
 }
@@ -13,7 +13,37 @@
     color: lightsalmon;
     margin-bottom: 200px;
     
+    
 }
+
+.input-field label {
+    color: black;
+}
+
+.input-field label:hover{
+    color: lightsalmon;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+
+}
+
+#generator{
+
+    margin-top: 100px;
+    background-color: lightblue;
+
+}
+#new-password{
+
+    margin-top: 100px;
+    background-color: lightblue;
+    min-height: 50px;
+    border-color: black;
+    border-style: solid;
+
+}
+
 
 
 
