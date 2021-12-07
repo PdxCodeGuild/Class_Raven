@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bare Bones</title>
+</head>
+<body>
+
+    <form action="{{ url_for('process_form') }}" method="POST">
+        <input type="text" name="text" placeholder="Enter some text">
+        <input type="submit">
+    </form>
+
+    <!-- The form action attribute needs to point to the Flask view
+        function that should receive the form data upon submission.
+        The method attribute needs to be set to "POST" so the form
+        data can be attached to the request. 
+
+        Flask's url_for() function is available inside rendered templates
+        and will be used to determine the proper route to which to POST the 
+        form data. The value passed to url_for() will be the name of the view
+        function that will receive the form data.
+        In this case it will be 'process_form()'
+    
+    
+         When the form is submitted, the names and values 
+        of each field will be arranged into key/value pairs 
+        and set to the backend via URL parameters.
+
+        If the form had two fields named 'word1' and 'word2'
+        The key/value pairs would be passed via the address bar like this:
+        www.somesite.com?word1=cat&word2=dog
+
+        word1 = cat
+        word2 = dog
+
+        Flask works a little magic so we won't see the URL parameters, but
+        the data will be available as a dictionary in the receiving view function
+        via 'request.form'
+    -->
+
+</body>
+</html>
