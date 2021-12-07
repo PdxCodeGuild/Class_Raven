@@ -25,14 +25,33 @@
     </h1>
     <ul class="list-group">
       {% for todo in incomplete_todos %}
-      <li class="list-group-item d-inline-flex justify-content-between">
+      <li
+        class="
+          list-group-item
+          d-inline-flex
+          justify-content-between
+          align-items-center
+        "
+      >
         <p class="lead m-0">{{ todo['text'] }}</p>
-        <div>
+        <div class="d-flex gap-3">
           <a
             href="{{ url_for('toggle_complete', todo_id=todo['id']) }}"
-            class="link-success"
+            class="link-success text-decoration-none"
           >
             <i class="fas fa-check"></i>
+          </a>
+          <a
+            href="{{ url_for('update_todo', todo_id=todo['id']) }}"
+            class="link-warning text-decoration-none"
+          >
+            <i class="far fa-edit"></i>
+          </a>
+          <a
+            href="{{ url_for('delete_todo', todo_id=todo['id']) }}"
+            class="link-danger text-decoration-none"
+          >
+            <i class="fas fa-trash"></i>
           </a>
         </div>
       </li>
@@ -62,14 +81,21 @@
     </h1>
     <ul class="list-group">
       {% for todo in complete_todos %}
-      <li class="list-group-item d-inline-flex justify-content-between">
+      <li
+        class="
+          list-group-item
+          d-inline-flex
+          justify-content-between
+          align-items-center
+        "
+      >
         <p class="lead m-0 text-decoration-line-through">{{ todo['text'] }}</p>
         <div>
           <a
             href="{{ url_for('toggle_complete', todo_id=todo['id']) }}"
             class="link-success"
           >
-            <i class="fas fa-check"></i>
+            <i class="fas fa-trash-restore-alt"></i>
           </a>
         </div>
       </li>
