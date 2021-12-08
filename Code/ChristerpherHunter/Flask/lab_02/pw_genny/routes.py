@@ -1,7 +1,7 @@
-from flask import render_template, request, redirect, url_for
-from pw_genny.models import Data
-from pw_genny import app, db
-
+from flask import render_template, request
+from pw_genny import app
+from random import sample, shuffle
+from string import ascii_lowercase, ascii_uppercase, punctuation, digits
 
 
 def password_genny(low_lets: int, up_lets: int, num_of_numbers: int, spec_chars: int) -> str:
@@ -9,7 +9,16 @@ def password_genny(low_lets: int, up_lets: int, num_of_numbers: int, spec_chars:
 
     pw_length = str(low_lets + up_lets + num_of_numbers + spec_chars)
 
-    return f"Password Length: {pw_length}"
+    password = \
+        sample(ascii_lowercase, low_lets) +\
+        sample(ascii_uppercase, up_lets) +\
+        sample(punctuation, spec_chars) +\
+        sample(digits, num_of_numbers)
+
+    shuffle(password)
+
+    return "".join(password)
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -21,16 +30,11 @@ def index():
 def show_pw():
     """Execute the password generation"""
 
-    num_of_lowercase_letters = int(request.form["lw-letters"])
-    num_of_capital_letters = int(request.form["up-letters"])
-    num_of_numbers = int(request.form["num-nums"])
-    num_of_special_characters = int(request.form["spec-chars"])
-
     p_word = password_genny(
-        low_lets=num_of_lowercase_letters,
-        up_lets=num_of_capital_letters,
-        num_of_numbers=num_of_numbers,
-        spec_chars=num_of_special_characters
+        low_lets=int(request.form["lw-letters"]),
+        up_lets=int(request.form["up-letters"]),
+        num_of_numbers=int(request.form["num-nums"]),
+        spec_chars=int(request.form["spec-chars"])
     )
 
     return render_template("show_page.html", p_word=p_word)
