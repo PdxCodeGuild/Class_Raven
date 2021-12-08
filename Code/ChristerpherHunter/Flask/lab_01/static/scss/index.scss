@@ -1,0 +1,348 @@
+@use "src/mixins";
+@use "src/variables";
+@use "src/functions";
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    background-color: orange;
+}
+
+.main-head {
+    &-container {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        &-item {
+            font-size: 30pt;
+            text-align: center;
+            font-family: "Anton", sans-serif;
+            letter-spacing: 0.09em;
+            word-spacing: 0.1em;
+
+            h1 {
+                color: variables.$black-chocolate;
+            }
+        }
+    }
+}
+
+.main-body {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 2fr 1fr;
+    margin-bottom: 2rem;
+
+    // ORDER FORM
+    &-top-left {
+        margin: 2rem;
+        grid-column: 2 / 3;
+        width: fit-content;
+        height: fit-content;
+
+        &-form {
+            @include mixins.flex(column, center, center);
+            border: solid 2px black;
+            width: fit-content;
+            padding: 2rem;
+            background-color: variables.$june-bud;
+
+            span {
+                text-align: right;
+            }
+        }
+    }
+
+    // PICTURE
+    &-top-right {
+        grid-column: 3 / 4;
+        justify-self: center;
+        width: fit-content;
+        height: fit-content;
+        font-family: "Anton", sans-serif;
+
+        &-container {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
+
+            &-info {
+                grid-row: 1 / 2;
+                font-size: 30pt;
+                font-style: oblique;
+                height: fit-content;
+
+                h2 {
+                    letter-spacing: 0.09em;
+                    word-spacing: 0.1em;
+                    text-align: center;
+                    color: variables.$black-chocolate;
+                }
+            }
+
+            &-img {
+                grid-row: 2 / 3;
+                background-image: url(../images/burrito_main.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+                width: calc(13em * 2.5);
+                height: calc(12em * 2.5);
+                border: 1rem solid variables.$june-bud;
+            }
+
+            &-receipt {
+                grid-row: 3 / 4;
+                place-self: center;
+                margin: 0;
+                padding: 0;
+
+                &-box {
+                    position: relative;
+                    margin: 40px auto;
+                    width: fit-content;
+                    height: fit-content;
+                    background: #fff;
+                    border-radius: 2px;
+                    border-radius: 15px;
+                    padding: 2rem;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 10px;
+                        width: 40%;
+                        height: 10px;
+                        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+                        z-index: -1;
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    &::before {
+                        left: 15px;
+                        transform: skew(-5deg) rotate(-5deg);
+                    }
+
+                    &::after {
+                        right: 15px;
+                        transform: skew(5deg) rotate(5deg);
+                    }
+
+                    &:hover::before,
+                    &:hover::after {
+                        box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+                    }
+
+                    &:hover::before {
+                        left: 5px;
+                    }
+
+                    &:hover::after {
+                        right: 5px;
+                    }
+
+                    &-area {
+                        text-align: center;
+
+                        #detach-page {
+                            color: green;
+                        }
+
+                        #order {
+                            color: blue;
+                        }
+
+                        #val {
+                            color: green;
+                        }
+
+                        p {
+                            text-align: left;
+                            width: 30ch;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // FOUR LOWER
+    &-lower {
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+
+        &-container {
+            @include mixins.flex(row, center, space-evenly);
+            flex-wrap: wrap;
+
+            &-img {
+                @include mixins.rectangle(fit-content, fit-content);
+                margin: 1em;
+            }
+        }
+    }
+}
+
+.main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid black;
+    width: 100%;
+
+    &-left {
+        @include mixins.flex(row, center, center);
+    }
+
+    &-right {
+        &-container {
+            @include mixins.flex(row, center, center);
+            column-gap: 0.3em;
+
+            /* &-blocks {
+                
+            } */
+        }
+    }
+}
+
+.box-shadow {
+    box-shadow: 10px 10px 8px variables.$black-chocolate;
+    border-radius: 15px;
+}
+
+.fb-image {
+    background-image: url(../images/facebook-icon.png);
+    background-repeat: no-repeat;
+    @include mixins.rectangle(40px, 40px);
+}
+
+.lk-image {
+    background-image: url(../images/linked-in-icon.png);
+    background-repeat: no-repeat;
+    @include mixins.rectangle(40px, 40px);
+}
+
+.yt-image {
+    background-image: url(../images/youtube-icon.png);
+    background-repeat: no-repeat;
+    @include mixins.rectangle(40px, 40px);
+}
+
+.twt-image {
+    background-image: url(../images/twitter.png);
+    background-repeat: no-repeat;
+    @include mixins.rectangle(40px, 40px);
+}
+
+.btn {
+    border-radius: 15px;
+    background: none;
+    color: variables.$black-chocolate;
+    padding: 0.7em;
+    font-size: large;
+    font-family: "Anton", "san-serrif";
+}
+
+.contain-btns {
+    @include mixins.flex(row, center, flex-start);
+    flex-wrap: wrap-reverse;
+    gap: 2em;
+}
+
+@media screen and (max-width: 1040px) {
+    .main-body {
+        grid-template-columns: 10% auto 10%;
+        grid-template-rows: auto 2fr;
+        justify-content: center;
+
+        &-top-right {
+            text-align: center;
+            grid-column: 2 / 3;
+            grid-row: 0 / 1;
+
+            &-container {
+                &-info {
+                    place-self: center;
+                    padding: 0.7em;
+                }
+                &-img {
+                    margin-bottom: 2rem;
+                    width: calc(13em * 1.9);
+                    height: calc(12em * 1.9);
+                    place-self: center;
+                }
+
+                &-receipt {
+                    &-box {
+                        width: 18em;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+
+        &-top-left {
+            grid-row: 2 / 3;
+            justify-content: center;
+
+            &-form {
+                place-self: center;
+            }
+        }
+
+        &-lower {
+            grid-row: auto;
+
+            /*  &:nth-child() {
+
+            } */
+        }
+    }
+}
+
+@media screen and (min-width: 1558px) {
+    .main-body-top-right-container-img {
+        width: calc(20em * 3);
+        height: calc(15em * 3);
+    }
+
+    fieldset {
+        font-size: x-large;
+    }
+
+    img {
+        @include mixins.rectangle(30rem, 45rem);
+        margin: 2em;
+    }
+
+    .main-body-top-right-container-info {
+        font-size: 60pt;
+    }
+
+    .main-body-top-right-container-receipt-box {
+        height: fit-content;
+        width: 50em;
+
+        &-area {
+            h1 {
+                font-size: 30pt;
+            }
+
+            p {
+                font-size: 30pt;
+            }
+        }
+    }
+
+    .btn {
+        font-size: 25pt;
+    }
+}
