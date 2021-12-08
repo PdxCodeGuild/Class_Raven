@@ -1,5 +1,5 @@
 #main{
-    border-style:outset;
+    border-style:solid;
     border-width: 20px;
     margin-top: 30px;
     border-radius: 50px;
@@ -20,6 +20,7 @@
     color: black;
     padding-bottom: 10px;
     font-size: x-large;
+    
 }
 
 .input-field label:hover{
@@ -51,6 +52,7 @@
 .input-field input{
     font-size: large;
 }
+
 
 
 
