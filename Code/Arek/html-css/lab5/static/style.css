@@ -1,13 +1,12 @@
-body{
-    background-image: url(burrito.jpg);
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-}
+
 
 
 #burrito-form{
     margin: 25vh 0px;
+    background-image: url(burrito.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
 }
 
 #burrito-page{
@@ -46,7 +45,7 @@ header{
     border-style:double;
     border-color: black;
     border-width: 10px;
-    margin-top: 300px;
+    margin-top: 200px;
     padding-top: 50px;
     padding-bottom: 100px;
     min-height: 75vh;

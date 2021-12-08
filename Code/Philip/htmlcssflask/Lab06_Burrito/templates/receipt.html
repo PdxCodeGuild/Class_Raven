@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+        </style>
+</head>
+<body>
+    <header class="header">
+        <h1">Order a <u>Delicioso</u> Burrito Today!</h1>
+        </header>
+    <ul>
+       <!-- {% for item in result %}
+        <li>{{item.name}}</li>
+        <li>{{item.delivery_instructions}}</li>
+        <li>{{item.tortilla}}</li>
+        <li>{{item.rice}}</li>
+        <li>{{item.beans}}</li>
+        <li>{{item.protein}}</li>
+        <li>{{item.cheese}}</li>
+        <li>{{item.sourcream}}</li>
+        {% endfor %}-->
+    </ul>
+    
+
+    <div class="receipt-box">
+       <div class="thank-you"> Gracias {{ name }} for your purchase!
+        <div class="delivery">The following burrito will be delivered to: {{delivery_instructions}}</div>
+         <div class="burrito">Tortilla type: {{ tortilla }}</div>
+        <div class="burrito">Rice: {{ rice }}</div>
+        <div class="burrito">Beans: {{ beans }}</div>
+        <div class="burrito">Protein: {{ protein }}</div>
+        <div class="burrito">Cheese: {{ cheese }}</div>
+        <div class="burrito">Sour Cream: {{ sourcream }}</div>
+        
+      </div>
+    
+</body>
+</html>
+  

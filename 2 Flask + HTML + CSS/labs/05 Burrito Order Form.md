@@ -2,31 +2,20 @@
 
 # Lab 5: Burrito Order Form
 
+Let's create a burrito order form with the following input controls. Try to incorporate some images and semantic elements. Below are some recommended fields, feel free to use your own. You may draw some inspiration from [this image](burrito-order-form.png). 
 
-Let's create a burrito order form with the following input controls. Try to incorporate some images and semantic elements. Below are some recommended fields, feel free to use your own. You may draw some inspiration from [this image](./burrito-order-form.png). 
+Once you have your page together, use Flask to process the form and render an HTML template to display the form information as a receipt/order confirmation.
 
-Once you have your page together, use link at https://webhook.site/ to create a temporary endpoint. Add the attributes `action="your-url-here"` and `method="post"` to your form. Then fill out your form and submit the data. You should see an "ok" response. You can then check your bin and look at the request's body. Make sure all the relevant data is present to ensure your form is working.
+### Extra Challenge
+Apply prices to each item and calculate a total for the user's receipt.
 
-- Name (text input)
-- Password (password input)
-- Tortilla (radio buttons)
-  - White Flour
-  - Wheat Flour
-  - Spinach
-  - Corn
-- Rice (radio buttons)
-  - White Rice
-  - Brown Rice
-- Beans (radio buttons)
-  - Black Beans
-  - Pinto Beans
-- Protein (radio buttons)
-  - Carnitas
-  - Chicken
-  - Sofritas
-  - None
-- Additional Ingredients (check boxes)
-  - Cheese
-  - Sour Cream
-- Delivery Instructions (textarea)
+|Field Name|Field Type|Options|
+|-|-|-|
+|Name|Text|<ul>Short text</ul>|
+|Tortilla|Radio Buttons|<ul><li>White Flour</li><li>Wheat Flour</li><li>Spinach</li><li>Corn</li></ul>|
+|Rice|Radio Buttons|<ul><li>White</li><li>Brown</li></ul>|
+|Beans|Radio Buttons|<ul><li>Black</li><li>Pinto</li></ul>|
+|Protein|Radio Buttons|<ul><li>Carnitas</li><li>Chicken</li><li>Sofritas</li><li>None</li></ul>|
+|Extra|Check Boxes|<ul><li>Cheese</li><li>Sour Cream</li></ul>|
+|Delivery Instructions|Text Area|<ul>Long text</ul>|
 
