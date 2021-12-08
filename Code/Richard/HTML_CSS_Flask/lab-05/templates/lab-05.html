@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="{{url_for('static', filename='normalize.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='lab-05.css')}}">
+
+    <title>Burrito Time!</title>
+</head>
+<body>
+    <section id="burrito-form" class= "container-sm bg-warning">
+        <center><h1 class= "bg-danger">Customize your Burrito</h1></center>
+        <form action="{{url_for('burrito_order')}}" id= "burrito form" method="POST">
+            <center><label for="Name">
+                Name <br />
+                <input type="text" name="name" id = "name">
+            </label></center>
+            <br />
+            <center><fieldset>
+                <legend>Tortilla</legend>
+                <label>
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="Wheat Flour">Wheat Flour
+                </label>
+                <label>
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="White Flour">White Flour
+                </label>
+                <label>
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="Spinach">Spinach
+                </label>
+                <label>
+                    <input class= "col-4 offset-2" type="radio" name="tortilla" value="Corn">Corn 
+                </label>
+            </fieldset></center>
+            <br/>
+            <center><fieldset>
+                <legend>Rice</legend>
+                <label>
+                    <input class= "col-4 offset-2" type="radio" name="rice" value="Brown Rice">Brown Rice
+                </label>
+                <label>
+                    <input class= "col-4 offset-2" type="radio" name="rice" value="White Rice">White Rice
+                </label>
+                <br/>
+            </fieldset></center>
+            <br/>
+            <center><fieldset>
+                <legend>Beans</legend>
+                <label>
+                    <input class= "col-6 offset-2"  type="radio" name="beans" value="Black Beans">Black Beans
+                </label>
+                <label>
+                    <input class= "col-6 offset-2" type="radio" name="beans" value="Pinto Beans">Pinto Beans
+                </label>
+            </fieldset></center>
+            <br/>
+            <center><fieldset>
+                <legend>Protein</legend>
+                <label>
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="Carnitas">Carnitas
+                </label>
+                <label>
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="Chicken">Chicken
+                </label>
+                <label>
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="Sofritas">Sofritas
+                </label>
+                <label>
+                    <input class= "col-4 offset-2"  type="radio" name="protein" value="None">None
+                </label>
+                <br/>
+            </fieldset></center>
+            <br/>
+            <center><fieldset>
+                <legend>Additional Ingredients</legend>
+                <label>
+                    <input type="checkbox" name="additional_ingredients" value="Cheese">Cheese
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" name="additional_ingredients" value="Sour Cream">Sour Cream
+                </label>
+                <br/>
+            </fieldset></center>
+            <br/>
+            <center><label for="Delivery">
+                Delivery Instructions
+                <br />
+                <textarea cols="30" rows="10" name="delivery" id = "delivery" required></textarea>
+            </label></center>
+            <br/>
+            <center><input type="submit" value="Submit" /></center>
+        </form>
+    </section>
+</body>
+</html>
