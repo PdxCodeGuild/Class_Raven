@@ -1,0 +1,104 @@
+{% extends 'base.html' %} {% block content %}
+
+<!--Testing out this script to copy to clipboard. This works, but  ... -->
+<script> function copyToClipboard(elementId) {
+
+  // Create a "hidden" input
+  var aux = document.createElement("input");
+
+  // Assign it the value of the specified element
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+
+  // Append it to the body
+  document.body.appendChild(aux);
+
+  // Highlight its content
+  aux.select();
+
+  // Copy the highlighted text
+  document.execCommand("copy");
+
+  // Remove it from the body
+  document.body.removeChild(aux);
+
+}
+</script>
+
+<div class="row">
+<!--body of rot cypher-->
+    <div class="col-12 col-lg-6 offset-lg-3">
+        <h1 class="display-4 bg-secondary text-dark rounded p-3 text-center">
+        <b>Rot Cypher Encoding</b>
+        </h1>
+    </div>
+</div>
+
+<div class="row my-4 ">
+    <div class="d-grid col-6 mx-auto">
+        <button class="btn btn-dark btn-outline-secondary position-relative" data-bs-toggle="modal" data-bs-target="#modalEncode">
+          <h3><i class="fas fa-unlock-alt"></i> START <i class="fas fa-lock"></i></h3>
+        </button>
+    </div>
+</div>
+
+    <!-- Encrypt Modal -->  
+    <div class="modal" tabindex="-1" id="modalEncode">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalEncode">Keep your communication safe</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{ url_for('encode_message', user_string=raw_string, rot='raw_rot') }}" method='POST' class="row">
+            <div class="modal-body mx-3">Enter your message and rotation below. <br><br>To decrypt your message enter your Cypher Text and subtract your rotation value from 87.</div>
+              <div class="input-group input-group-sm">
+                <span class="input-group-text mb-3" id="inputGroup-sizing-sm">Message</span>
+                <input type="text" class="form-control mb-3" name='raw_string' placeholder="Enter your secrets here..." aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+
+              <div class="input-group input-group-sm">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Rotation (1-91)</span>
+                <input type="text" name='raw_rot' class="form-control" placeholder="15" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            </div>
+          </div>
+        </div>
+    </div> 
+
+
+    <!-- COMPLETED CYPHERS -->
+  <div class="col-12 col-lg-6 offset-lg-3 my-3">
+    <h1 class="display-4 bg-secondary text-dark rounded p-3 text-center"><b>History</b></h1>
+    <ul class="list-group">
+      {% for message in memo %}
+      <li class="list-group-item d-inline-flex justify-content-between border-2 my-1">
+        <p class="m-0"> Input: "<b><element type="text" id="SimpleTextInput{{ loop.index }}">{{ message['user_string'] }}</element></b>" <button class="btn btn-light btn-outline-light text-dark" onclick="copyToClipboard('SimpleTextInput{{ loop.index }}')"><i class="far fa-copy"></i></button>
+          <br> Encoding Rotation: <b><element type="text" id="RotInput{{ loop.index }}">{{  message['rot'] }}</element></b> <button class="btn btn-light btn-outline-light text-dark" onclick="copyToClipboard('RotInput{{ loop.index }}')"><i class="far fa-copy"></i></button>
+          <br> Decoding Rotation: <b><element type="text" id="DecodeRotInput{{ loop.index }}">{{ 87-message['rot']}}</element></b> <button class="btn btn-light btn-outline-light text-dark" onclick="copyToClipboard('DecodeRotInput{{ loop.index }}')"><i class="far fa-copy"></i></button>
+          <br> Cypher Text: <b> <element type="text" id="CypherInput{{ loop.index }}">{{ message['encrypted_message'] }}</element></b> <button class="btn btn-light btn-outline-light text-dark" onclick="copyToClipboard('CypherInput{{ loop.index }}')"><i class="far fa-copy"></i></button>
+        </p>
+      </li> 
+      
+      <!-- If there no todos in the list, render the %else%-->
+      {% else %}
+      <li class="list-group-item">
+        <p class="lead text-muted m-0">Hope you wrote everything down!</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!--Erase JSON-->
+  <div class="row text-center">
+    <div class="d-grid gap-1 col-6 mx-auto">
+      <a href="{{ url_for('clear_json')}}"> <button class="btn btn-dark btn-outline-secondary" data-bs-toggle="modal">
+        Clear History <i class="fas fa-eraser"></i>
+      </button></a>
+    </div>
+  </div>
+  
+{% endblock %}

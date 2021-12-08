@@ -1,0 +1,174 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Burritotastic Order Form</h1>
+<form action="order" method="POST">
+	<div class="form-group card col-6">
+		<label for="name">Name:</label>
+		<input type="text" name="name" id="name" class="form-control" required />
+	</div>
+	<div class="form-group card col-6">
+		<label for="tortilla">Tortilla:</label>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="tortilla"
+				id="whiteFlour"
+				value="White Flour"
+				class="form-check-input"
+				required
+			/>
+			<label for="whiteFlour" class="form-check-label">White Flour</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="tortilla"
+				id="wheatFlour"
+				value="Wheat Flour"
+				class="form-check-input"
+				required
+			/>
+			<label for="wheatFlour" class="form-check-label">Wheat Flour</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="tortilla"
+				id="spinach"
+				value="Spinach"
+				class="form-check-input"
+				required
+			/>
+			<label for="spinach" class="form-check-label">Spinach</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="tortilla"
+				id="corn"
+				value="Corn"
+				class="form-check-input"
+				required
+			/>
+			<label for="corn" class="form-check-label">Corn</label>
+		</div>
+	</div>
+	<div class="form-group card col-6">
+		<label for="rice">Rice:</label>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="rice"
+				id="white"
+				value="White"
+				class="form-check-input"
+				required
+			/>
+			<label for="white" class="form-check-label">White</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="rice"
+				id="brown"
+				value="Brown"
+				class="form-check-input"
+				required
+			/>
+			<label for="brown" class="form-check-label">Brown</label>
+		</div>
+	</div>
+	<div class="form-group card col-6">
+		<label for="beans">Beans:</label>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="beans"
+				id="black"
+				value="Black"
+				class="form-check-input"
+				required
+			/>
+			<label for="black" class="form-check-label">Black</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="beans"
+				id="pinto"
+				value="Pinto"
+				class="form-check-input"
+				required
+			/>
+			<label for="pinto" class="form-check-label">Pinto</label>
+		</div>
+	</div>
+	<div class="form-group card col-6">
+		<label for="protein">Protein:</label>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="protein"
+				id="carnitas"
+				value="Carnitas"
+				class="form-check-input"
+				required
+			/>
+			<label for="carnitas" class="form-check-label">Carnitas</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="protein"
+				id="chicken"
+				value="Chicken"
+				class="form-check-input"
+				required
+			/>
+			<label for="chicken" class="form-check-label">Chicken</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="radio"
+				name="protein"
+				id="sofritas"
+				value="Sofritas"
+				class="form-check-input"
+				required
+			/>
+			<label for="sofritas" class="form-check-label">Sofritas</label>
+		</div>
+	</div>
+	<div class="form-group card col-6">
+		<label for="extra">Extra:</label>
+		<div class="form-check">
+			<input
+				type="checkbox"
+				name="extra"
+				id="cheese"
+				value="Cheese"
+				class="form-check-input"
+			/>
+			<label for="cheese" class="form-check-label">Cheese</label>
+		</div>
+		<div class="form-check">
+			<input
+				type="checkbox"
+				name="extra"
+				id="sourCream"
+				value="Sour Cream"
+				class="form-check-input"
+			/>
+			<label for="sourCream" class="form-check-label">Sour Cream</label>
+		</div>
+	</div>
+	<div class="form-group card col-6">
+		<label for="deliveryInstructions">Delivery Instructions:</label>
+		<textarea
+			name="deliveryInstructions"
+			id="deliveryInstructions"
+			class="form-control"
+		></textarea>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
