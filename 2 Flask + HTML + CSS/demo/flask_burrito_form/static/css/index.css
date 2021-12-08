@@ -17,3 +17,24 @@ font-family: 'Montserrat', sans-serif; */
     width: 100%;
     height: auto;
 }
+
+.card img {
+    height: 25%;
+}
+
+.card {
+    width: 80%;
+}
+
+textarea {
+    resize: none;
+    border: none;
+    height: 100%;
+    width: 80%;
+}
+
+@media screen and (min-width: 768px){
+    input, label {
+        font-size: 1.5rem;
+    }
+}
