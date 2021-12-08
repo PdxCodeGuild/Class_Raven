@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+	<div class="col-md-6">
+		<h1>Burritotastic</h1>
+		<p>
+			<a
+				class="btn btn-secondary btn-lg"
+				tabindex="-1"
+				role="button"
+				aria-disabled="false"
+				href="{{ url_for('order') }}"
+				>Order Now!</a
+			>
+		</p>
+	</div>
+</div>
+
+{% endblock %}
