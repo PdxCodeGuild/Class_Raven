@@ -30,11 +30,15 @@ textarea {
     resize: none;
     border: none;
     height: 100%;
-    width: 80%;
+    width: 100%;
 }
 
 @media screen and (min-width: 768px){
     input, label {
         font-size: 1.5rem;
+    }
+
+    #logo {
+        width: 60%;
     }
 }

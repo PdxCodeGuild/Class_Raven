@@ -1,11 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
 <form action="{{ url_for('process_order') }}" method="POST" class="container">
-
   <div class="row bg-light">
-
     <!-- LOGO -->
-    <div class="col-12 col-lg-6 offset-lg-3 d-flex justify-content-center align-items-center py-5">
+    <div
+      class="
+        col-12 col-lg-6
+        offset-lg-3
+        d-flex
+        justify-content-center
+        align-items-center
+        py-5
+      "
+    >
       <img
         id="logo"
         src="{{url_for('static', filename='images/logo.png')}}"
@@ -28,23 +35,18 @@
         />
         <div class="card-body p-lg-5">
           {%for choice in order_options[radio_category]['choices'] %}
-          <div class="form-check my-3">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="{{radio_category}}"
-              id="{{radio_category}}-radio"
-              value="{{choice}}"
-              
-              {% if loop.index == 1 %}
-              checked
-              {% endif %}
-            />
-            <!-- the first radio in each category will be checked with the if statement above -->
+          <div class="form-check my-3 d-flex justify-content-between border-bottom">
+            <div>
+              <input class="form-check-input" type="radio"
+              name="{{radio_category}}" id="{{radio_category}}-radio"
+              value="{{choice}}" {% if loop.index == 1 %} checked {%
+              endif %} />
+              <!-- the first radio in each category will be checked with the if statement above -->
 
-            <label for="{{radio_category}}-radio" class="form-check-label"
-              >{{choice.title()}}</label
-            >
+              <label for="{{radio_category}}-radio" class="form-check-label"
+                >{{choice.title()}}</label
+              >
+            </div>
           </div>
           {%endfor%}
         </div>
@@ -59,18 +61,20 @@
         <h1 class="h1 bg-dark text-light p-3">Extra</h1>
         <div class="card-body p-5">
           {%for choice in order_options['extra']['choices'] %}
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="extra"
-              id="extra-check"
-              value="{{choice}}"
-            />
-            <label for="extra-check" class="form-check-label"
-              >{{choice.title()}}</label
-            >
-          </div>
+          <div class="form-check d-flex justify-content-between border-bottom my-3">
+            <div>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="extra"
+                id="extra-check"
+                value="{{choice}}"
+              />
+              <label for="extra-check" class="form-check-label"
+                >{{choice.title()}}</label
+              >
+            </div>
+              </div>
           {%endfor%}
         </div>
       </div>
@@ -80,8 +84,8 @@
     <div class="col-12 col-lg-6 d-flex justify-content-center">
       <div class="card my-3">
         <h1 class="h1 bg-dark text-light p-3">Delivery Instructions</h1>
-        <div class="card-body p-3 text-center">
-          <textarea name="delivery" id="delivery"></textarea>
+        <div class="card-body text-center p-2">
+          <textarea class="p-2" name="delivery" id="delivery" rows="5"></textarea>
         </div>
       </div>
     </div>
