@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row bg-light">
+    <div class="col-12 col-lg-6 offset-lg-6">
+        <h1 class="h1">Order Receipt</h1>
+        {% for key in receipt.keys() %}
+            {% if key != 'extra' %}
+            <h3 class="h3">{{key.title()}}</h3>
+            <p class="lead">{{receipt[key]}}</p>
+            {% else %}
+            <h3 class="h3">Extra</h3>
+                <ul>
+                    {% for item in receipt['extra'] %}
+                    <li>{{item}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif%}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
