@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Burritotastic</h1>
+<h2>Order #{{ order['order_id'] }} Confirmation</h2>
+<p>Thank you for your order {{ order['name'].title() }}!</p>
+<p>Your order will be ready for pickup in 30 minutes.</p>
+<p>Your order details are below:</p>
+<div class="card col-6">
+	<table>
+		<tr>
+			<th>Item</th>
+		</tr>
+		<tr>
+			<td>Tortilla:&NonBreakingSpace;</td>
+			<td>{{ order['tortilla'].title() }}</td>
+		</tr>
+		<tr>
+			<td>Beans:&NonBreakingSpace;</td>
+			<td>{{ order['beans'].title() }}</td>
+		</tr>
+		<tr>
+			<td>Rice:&NonBreakingSpace;</td>
+			<td>{{ order['rice'].title() }}</td>
+		</tr>
+		<tr>
+			<td>Protein:&NonBreakingSpace;</td>
+			<td>{{ order['protein'].title() }}</td>
+		</tr>
+
+		<tr>
+			<td>Extra:&NonBreakingSpace;</td>
+
+			{% for item in order['extra'] %}
+
+			<td>{{ item.title() }}</td>
+
+			{% else %}
+
+			<td>None</td>
+
+			{% endfor %}
+		</tr>
+		<tr>
+			<td>Notes:&NonBreakingSpace;</td>
+			<td>{{ order['deliveryInstructions'] }}</td>
+		</tr>
+	</table>
+</div>
+{% endblock %}

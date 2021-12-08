@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="conf-main">
+    <div class="conf-main-contain">
+        <div class="main-body-top-right-container-receipt">
+            <div class="main-body-top-right-container-receipt-box">
+                <div class="main-body-top-right-container-receipt-box-area">
+                    <h1 id="detach-page">ORDER CONFIRMED!</h1>
+                    {% for order, val in orders.items() %}
+                    <p>
+                        <span id="order">{{ order }}:</span>
+                        <span id="val">{{ val }}</span>
+                    </p>
+                    {% endfor %}
+                </div>
+                <div class="contain-btns">
+                    <form action="{{ url_for('reset_receipt') }}" method="POST">
+                        <div class="main-body-top-right-container-receipt-box-reset">
+                            <!-- <input type="hidden" required> -->
+                            <div>
+                                <button class="btn" type="submit">Clear Form</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <form action="{{ url_for('order_confirm') }}" method="POST">
+                        <div class="main-body-top-right-container-receipt-box-confirm">
+                            <div>
+                                <button class="btn">Confirm Order</button>
+                                {% if metadata["completed"] == True %}
+                                <p>confirmed</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
