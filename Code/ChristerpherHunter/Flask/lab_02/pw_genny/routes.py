@@ -40,10 +40,15 @@ def show_pw():
     return render_template("show_page.html", p_word=p_word)
 
 
-@app.route("/hash_pw", methods=["GET"])
-def hash_pw():
+@app.route("/hash_pw/<int:pw_length>", methods=["POST"])
+def hash_pw(pw_length):
     """Execute the password hashing"""
 
     hash_word = "dsf45sa6dgf4d6f5g749a864df5a6fd7a96s5"
+    print(pw_length)
 
-    return render_template("show_page.html", hash_word=hash_word)
+    words = str()
+    with open("pw_genny/static/assets/words.txt") as word_list:
+        words = " ".join(sample(word_list.read().split("\n"), pw_length))
+    
+    return render_template("hashed.html", hash_word=words)

@@ -11,12 +11,10 @@
             <br>
             <button class="btn" type="submit">Return</button>
         </form>
-        <form class="flex-me" action="{{ url_for('hash_pw') }}" method="GET">
-            <div>
-                <textarea name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
-            </div>
-            <button class="btn" type="submit" style="margin-top: 2rem;">Passphrase</button>
-            </form>
+        <form class="flex-me" action="{{ url_for('hash_pw', pw_length = p_word|length) }}" method="POST">
+        
+            <button class="btn" type="submit" style="margin-top: 2rem;">Show Passphrase</button>
+        </form>
     </div>
 </div>
 
