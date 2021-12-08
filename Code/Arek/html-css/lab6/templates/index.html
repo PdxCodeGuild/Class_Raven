@@ -15,22 +15,22 @@
             <h3 id='top-header' class="center-align">Password Generator</h1>
             <form class='row grey lighten-2' action="{{url_for('index')}}" method="post">
                 <div class="input-field col s12 m12 l4   offset-l1">
-                    <label for='uppercase-letters'>Number of UpperCase letters</label>
+                    <label class='active' for='uppercase-letters'>UpperCase letters</label>
                     <input value='0' type="text" name="uppercase" id='uppercase-letters' placeholder="0">
                 </div>
                 <div class="input-field col s12 m12 l4   offset-l2">
-                    <label for='lowercase-letters'>Number of LowerCase letters</label>
+                    <label class='active' for='lowercase-letters'>LowerCase letters</label>
                     <input value='0' type="text" name="lowercase" id='lowercase-letters' placeholder="0">
                 </div>
                 <div class="input-field col s12 m12 l4   offset-l1">
-                    <label for='punct-characters'>Punctuation Characters</label>
+                    <label class='active' for='punct-characters'>Punctuation Characters</label>
                     <input value='0' type="text" name="punctuation" id='punct-characters' placeholder="0">
                 </div>
                 <div class="input-field col s12 m12 l4   offset-l2">
-                    <label for="number-characters">Number Characters</label>
+                    <label class='active' for="number-characters">Number Characters</label>
                     <input value='0' type="text" name="numbers" id='number-characters' placeholder="0">
                 </div>
-                <div class='col s4 m4 l4 offset-s6 offset-m7 offset-l7 white' id='new-password'>
+                <div class='col s8 m4 l4  offset-m7 offset-l7 white flow-text right-align ' id='new-password'>
                     {{password}}
                 </div>
                 <div class='col s4 m4 l4 offset-s6 offset-m9 offset-l9'>
