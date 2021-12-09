@@ -4,9 +4,9 @@
 
 Weeks 1, 2, 3, 4, 5: Python
 
-**Weeks 6, 7, 8, 9: HTML/CSS/Flask**
+Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
-Weeks 10, 11: Javascript
+**Weeks 10, 11: Javascript**
 
 Weeks 12, 13, 14, 15: Django
 
@@ -55,10 +55,21 @@ Weeks 16, 17, 18: Capstone project
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>HTML/CSS/Flask</summary>
   <ul>
     <li>Lab 01 - Bio</li>
+    <li>Lab 02 - Blog</li>
+    <li>Lab 03 - Company Page</li>
+    <li>Lab 04 - Personal Portfolio</li>
+    <li>Lab 05 - Burrito Form</li>
+    <li>Lab 06 - Flask Redo</li>
+  </ul>
+</details>
+
+<details open>
+  <summary>Javascript</summary>
+  <ul>
   </ul>
 </details>
 
@@ -73,7 +84,7 @@ To emulate a more professional Git workflow, we're going to start creating new b
 
 
 
-- `git branch` to check that you're on the master branch
+- `git branch` to check that you're on the master branch, use `git checkout master` to go to the master branch if needed.
 
 - `git status` to check if your local master branch is up to date with origin/master on Github.
   
@@ -165,7 +176,24 @@ Corrections will be made only to that particular branch.
 
 ---
 
+
+
+
 ## Additional Resources
+
+<details>
+  <summary>SEO & Accessibility</summary>
+  <p><b>SEO</b></p>
+  <ul>
+    <li><a href="https://developers.google.com/search/docs/beginner/get-started?hl=en%2F">Get Started with SEO</a></li>
+    <li><a href="https://moz.com/beginners-guide-to-seo">Beginner's Guide to SEO</a></li>
+  </ul>
+  <p><b>Accessibility</b></p>
+  <ul>
+    <li><a href="https://www.w3.org/TR/html-aria/#rules-wd">ARIA in HTML - W3C</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA - MDN Web Docs</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>Screen Capture Tools for Creating GIFs for Project READMEs</summary>
@@ -186,6 +214,12 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>Webpage Styling</summary>
 
+  <p><b>Flexbox Games</b></p>
+  <ul>
+    <li><a href="https://flexboxfroggy.com/">Flexbox Froggy</a></li>
+    <li><a href="https://mastery.games/flexboxzombies/">Flexbox Zombies</a></li>
+  </ul>
+
   <p><b>Color Schemes</b></p>
   <ul>
     <li><a href="https://coolors.co">Coolors</a></li>
@@ -194,6 +228,7 @@ Corrections will be made only to that particular branch.
 
   <p><b>Design Principles</b></p>
   <ul>
+    <li><a href="https://www.reddit.com/r/Indiewebdev/comments/lakhft/18_tips_to_make_websites_look_better_and_a/">18 Tips to Make Websites Look Better</a></li>
     <li><a href="https://www.canva.com/learn/20-web-design-principles-follow/">20 Web Design Principles</a></li>
     <li><a href="https://blog.tubikstudio.com/anatomy-of-web-page/">Anatomy of a Webpage</a></li>
     <li><a href="https://blog.devgenius.io/what-are-html-semantic-tags-and-why-should-you-care-a0403972a217">What are Semantic HTML Tags and Why You Should Care</a></li>
@@ -201,6 +236,12 @@ Corrections will be made only to that particular branch.
   </ul>
 </details>
   
+<details>
+  <summary>CSS Preprocessors</summary>
+  <ul>
+    <li><a href="https://youtu.be/RhX2rb10AC4">Intro to & Bootstrap Theming with Sass</a> & <a href="https://github.com/keegangood/sass_talk">Repository</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>Coding Principles</summary>

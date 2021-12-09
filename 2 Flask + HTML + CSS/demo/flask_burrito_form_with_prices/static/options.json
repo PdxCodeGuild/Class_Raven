@@ -1,0 +1,95 @@
+{
+  "radio_categories": ["tortilla", "rice", "beans", "protein"],
+  
+  "order_options": {
+    "tortilla": {
+      "image_url": "images/tortilla.webp",
+      "choices": [
+        {
+          "name": "white flour",
+          "price": "1.00"
+        },
+        {
+          "name": "wheat flour",
+          "price": "1.25"
+        },
+        {
+          "name": "corn",
+          "price": "1.50"
+        },
+        {
+          "name": "spinach",
+          "price": "2.00"
+        }
+      ]
+    },
+    "rice": {
+      "image_url": "images/rice.webp",
+      "choices": [
+        {
+          "name": "white",
+          "price": "1.00"
+        },
+        {
+          "name": "brown",
+          "price": "2.00"
+        }
+      ]
+    },
+    "beans": {
+      "image_url": "images/beans.webp",
+      "choices": [
+        {
+          "name": "black",
+          "price": "1.75"
+        },
+        {
+          "name": "pinto",
+          "price": "1.75"
+        },
+        {
+          "name": "refritos",
+          "price": "2.00"
+        }
+      ]
+    },
+    "protein": {
+      "image_url": "images/meat.webp",
+      "choices": [
+        {
+          "name": "veggies",
+          "price": "2.00"
+        },
+        {
+          "name": "pollo",
+          "price": "2.00"
+        },
+        {
+          "name": "carnitas",
+          "price": "2.50"
+        },
+        {
+          "name": "sofritas",
+          "price": "2.50"
+        },
+        {
+          "name": "carne asada",
+          "price": "3.00"
+        }
+      ]
+    },
+    "extra": {
+      "image_url": "",
+      "choices": [
+        {
+          "name": "cheese",
+          "price": "1.00"
+        },
+        {
+          "name": "sour cream",
+          "price": "0.50"
+        }
+      ]
+    }
+  }
+}
