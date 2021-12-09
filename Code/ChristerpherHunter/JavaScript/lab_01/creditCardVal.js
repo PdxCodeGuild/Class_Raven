@@ -1,18 +1,20 @@
-const cardTest = "4556737586899855"
+console.log("4556737586899855")
+
+const cardTest = new String(prompt("Enter a 15 digit credit card number: "))
+if (cardTest.length != 16) {
+    alert("Incorrect Number of digits")
+}
+
 
 // Turn the string into a list
 let cardList = []
 for (num in cardTest) {
     cardList.push(parseInt(cardTest[num]))
 }
-console.log(cardList)
 
 const checkDigit = cardList.pop()
 
-console.log(checkDigit)
-
 cardList = cardList.reverse()
-console.log(cardList)
 
 let cardNumSum = 0
 
@@ -26,12 +28,7 @@ for (odd in cardList) {
     cardNumSum += cardList[odd]
 }
 
-console.log(cardList)
-console.log(cardNumSum)
-
 cardNumSum %= 10
-
-console.log(cardNumSum)
 
 if (cardNumSum === checkDigit) {
     alert("Credit Card Valid!")
