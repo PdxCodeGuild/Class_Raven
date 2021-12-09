@@ -38,7 +38,7 @@ function playGame() {
 	let computerScore = 0;
 	let round = 1;
 
-	while (playerScore < 5 && computerScore < 5) {
+	while (playerScore < 3 && computerScore < 3) {
 		let playerSelection = "";
 		while (
 			playerSelection != "rock" &&
