@@ -6,6 +6,11 @@
   
 
     <form action="{{ url_for('show_rotation') }}" method="post">
+        {% if error %}
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Error! Text fields cannot be blank.
+          </div>
+        {% endif %}
       <div class="input-group mb-3 py-3 px-3">
         <input
           type="text"
