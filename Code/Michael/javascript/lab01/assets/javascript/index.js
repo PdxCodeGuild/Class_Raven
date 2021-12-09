@@ -55,7 +55,6 @@ function playGame() {
     Rock, paper, or scissors?`
 			).toLowerCase();
 		}
-
 		if (playerSelection == "quit") {
 			break;
 		}
