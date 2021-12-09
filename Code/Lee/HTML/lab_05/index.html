@@ -1,0 +1,226 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Normalize CSS-->
+        <link href="./static/css/normalize.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Bootstrap Icon CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <!-- Init Bootstrap as script -->
+        <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></script>
+        <!-- Link in css stylesheet-->
+        <link href="static/css/style.css" rel="stylesheet">
+        <!-- Bring in the custom theme-->
+        <link href="static/css/custom_theme.css" rel="stylesheet">
+
+
+        <title>Burri-Toes</title>
+    </head>
+
+    <body class="bg-light">
+        <!-- Init Bootstrap Javascript bundle with Popper-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-50 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                
+                <img src="static/images/burrito_image.png" alt="" width="100" height="50" class="d-inline-block rounded-3">
+                <b>Burri-Toez Shop</b>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#burrito_navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="burrito_navbar"> 
+                    <ul class="navbar-nav ms-auto">
+                        <a class="nav-link" aria-current="page" href=#>Home</a>
+                        <a class="nav-link" href="#history" >History of Burritos</a>  
+                        <a class="nav-link active" href="#order">Order Your Burrito</a>
+                        <a class="nav-link" href="#locations">Locations</a>
+                        <a class="nav-link" href="#contact_us">Contact Us</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4 rounded-3" src="static/images/main_burrito.jpg" alt="" width="200" height="200">
+                <h2>Order your perfect burrito</h2>
+                <p class="lead">Submit the form below to start your burri-toe journey.</p>
+            </div>
+
+            <form class="px-5" action="https://webhook.site/e20e8bbd-081e-4da8-93ea-051f915919ae" method="post">
+
+                <div class="row">
+                    <h4 class="mb-2">Enter Delivery Information:</h4>
+                    <!--If you want multiple columns for order and customer info ... break here-->
+                    <!--This is ready for bootstrap validation, but I'm just not there yet.-->
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" value="" required="">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name" value="" required="">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="you@example.com">
+                    </div>
+
+                    <div class="mb-5"> <!--Unneccesarry Floating label!-->
+                        <label for="deliveryInstructions">Delivery Instructions</label>
+                        <div class="form-floating">
+                            <textarea class="form-control lg" name="deliveryInstructions" id="deliveryInstructions" placeholder="Enter info here" aria-label="With textarea"></textarea>
+                            <label for="deliveryInstructions"> Details: </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--This can be a separate row to the left of the delivery instructions...-->
+                <h4>Enter Order Information:</h4>
+
+                <div class="row g-2 p-3 align-items-stretch row-cols-1 row-cols-lg-4">
+                    <!--Tortilla-->
+                    <div class="col-md">
+                        <div class="card my-2" style="width: 18rem;">
+                            <img src="static/images/tortilla.jpg" class="card-img-top p-3" height="200" alt="tortilla">
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <p class="card-text"><b>Tortilla</b></p>
+                                    <input class="form-check-input" type="radio" name="tortilla-select" value="white" id="tortilla" checked>
+                                    <label class="form-check-label" for="tortilla">
+                                    White Flour
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortilla-select" value="wheat" id="tortilla">
+                                    <label class="form-check-label" for="tortilla">
+                                    Wheat Flour
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortilla-select" value="spinach" id="tortilla">
+                                    <label class="form-check-label" for="tortilla">
+                                    Spinach
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tortilla-select" value="corn" id="tortilla">
+                                    <label class="form-check-label" for="tortilla">
+                                    Corn Flour
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Rice-->
+                    <div class="col-md">
+                        <div class="card my-2" style="width: 18rem;">
+                            <img src="static/images/rice.jpg" class="card-img-top p-3" height="200" alt="rice">
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <p class="card-text"><b>Rice</b></p>
+                                    <input class="form-check-input" type="radio" name="rice-select" value="white" id="rice-white" checked>
+                                    <label class="form-check-label" for="rice-white">
+                                    White Rice
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="rice-select" value="brown" id="rice-brown">
+                                    <label class="form-check-label" for="rice-brown">
+                                    Brown Rice
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Protien-->
+                    <div class="col-md">
+                        <div class="card my-2" style="width: 18rem;">
+                            <img src="static/images/protein.jpg" class="card-img-top p-3" height="200" alt="protein">
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <p class="card-text"><b>Protein</b></p>
+                                    <input class="form-check-input" type="radio" name="protein-select" value="carnitas" id="protein-carnitas">
+                                    <label class="form-check-label" for="protein-carnitas">
+                                    Carnitas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="protein-select" value="chicken" id="protein-chicken" checked>
+                                    <label class="form-check-label" for="protein-chicken">
+                                    Chicken
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="protein-select" value="sofritas" id="protein-sofritas">
+                                    <label class="form-check-label" for="protein-sofritas">
+                                    Sofritas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="protein-select" value="none" id="protein-none">
+                                    <label class="form-check-label" for="protein-none">
+                                    None
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Other-->
+                    <div class="col-md">
+                        <div class="card my-2" style="width: 18rem;">
+                            <img src="static/images/cheese.jpg" class="card-img-top p-3" height="200" alt="other-ingredients">
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <p class="card-text"><b>Other Options</b></p>
+                                    <input class="form-check-input" type="checkbox" name="other" value="AddCheese" id="other-cheese" checked>
+                                    <label class="form-check-label" for="other-cheese">
+                                    Cheese
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="other" value="AddSourCream" id="other-sourCream">
+                                    <label class="form-check-label" for="other-sourCream">
+                                    Sour Cream
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Submit Form-->
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg mb-5 " type="submit">Submit form</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer, Copyright, and Anchor Link to Top of Page -->
+        <footer class="p-5 bg-secondary text-center position-relative">
+            <div class="container">
+                <p class="lead">  Copyright &copy; 2021 Burri-Toez</p>
+                
+                <!-- Anchor Link to Top of Page -->
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-square-fill text-primary h1"></i>
+                </a>
+            </div>
+            </footer>
+</html>
+

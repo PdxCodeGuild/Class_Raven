@@ -4,9 +4,9 @@
 
 Weeks 1, 2, 3, 4, 5: Python
 
-**Weeks 6, 7, 8, 9: HTML/CSS/Flask**
+Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
-Weeks 10, 11: Javascript
+**Weeks 10, 11: Javascript**
 
 Weeks 12, 13, 14, 15: Django
 
@@ -55,7 +55,7 @@ Weeks 16, 17, 18: Capstone project
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>HTML/CSS/Flask</summary>
   <ul>
     <li>Lab 01 - Bio</li>
@@ -63,6 +63,13 @@ Weeks 16, 17, 18: Capstone project
     <li>Lab 03 - Company Page</li>
     <li>Lab 04 - Personal Portfolio</li>
     <li>Lab 05 - Burrito Form</li>
+    <li>Lab 06 - Flask Redo</li>
+  </ul>
+</details>
+
+<details open>
+  <summary>Javascript</summary>
+  <ul>
   </ul>
 </details>
 
