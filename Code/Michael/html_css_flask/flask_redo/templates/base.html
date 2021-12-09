@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Burritotastic</title>
+		<title>Flask Rot Cypher</title>
 
 		<link
 			rel="stylesheet"
@@ -29,11 +29,11 @@
 			crossorigin="anonymous"
 		></script>
 	</head>
-	<body class="bg-dark">
-		<div class="container bg-info rounded m-5 p-2 p-md-3 p-lg-5 mx-auto">
+	<body class="bg-black">
+		<div class="container bg-dark rounded m-5 p-2 p-md-3 p-lg-5 mx-auto col-12">
 			<img
-				src="{{ url_for('static', filename='img/burrito.jpg') }}"
-				alt="burrito"
+				src="{{ url_for('static', filename='img/hacker.jpg') }}"
+				alt="hacker"
 				class="img-fluid"
 			/>
 			{% block content %} {% endblock %}
