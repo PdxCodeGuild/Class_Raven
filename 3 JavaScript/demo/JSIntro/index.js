@@ -27,6 +27,14 @@ let person = {
   age: 46
 }
 
+// access values within objects
+let key = 'firstName'
+console.log(person['firstName'])
+console.log(person[key])
+console.log(person.firstName)
+
+
+
 // pre/post increment
 // console.log(a)
 // console.log('my number is ' + a++)
@@ -37,6 +45,15 @@ let person = {
 // Math.abs() // absolute value
 // console.log(Math.random()) // random number between 0 - 1
 // console.log(Math.random() * 100) // random number between 0 - 100
+
+
+
+// random element from array
+fruits = ['apple', 'banana', 'orange']
+
+// generate random index
+let randomIndex = Math.floor(Math.random() * fruits.length)
+console.log(randomIndex, fruits[randomIndex])
 
 // conditional statements
 var number = 7
