@@ -1,8 +1,10 @@
+console.log("Test Card Numbers")
 console.log("4556737586899855")
 
 const cardTest = new String(prompt("Enter a 15 digit credit card number: "))
 if (cardTest.length != 16) {
     alert("Incorrect Number of digits")
+    throw "Goodbye!"
 }
 
 
