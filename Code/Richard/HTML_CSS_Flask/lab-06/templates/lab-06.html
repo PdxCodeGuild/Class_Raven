@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./static/normalize.css">
+    <link rel="stylesheet" href="./static/lab-06.css">
+
+    <title>Distance Conversion Program</title>
+
+</head>
+
+<body class='bg-dark text-info'>
+    <section class='row'>
+        <center>
+            <h1 class='m-3'>Distance Conversion Program</h1>
+        </center>
+        <img src="https://3.bp.blogspot.com/-ZuPYJDM_QR0/Uh20EhGdwkI/AAAAAAAAEE4/-VDMi0ReSEU/s1600/Architecture-Ruler.jpg" height="150" alt="ruler and pencil">  
+        <center>
+            <section id="conversion" class="container-sm col-10 p-2 m-4">
+                <form action="{{url_for('calculate')}}" method="POST">
+                    <label for="">Distance Value</label>
+                    <input type="number" name= 'user_distance'>
+                    <fieldset>
+                        <legend>
+                            From:
+                        </legend>
+                        <label>
+                            <input type="radio" name="user_unit" value="in"> inches
+                        </label>
+                        <label>
+                            <input type="radio" name="user_unit" value="ft"> feet
+                        </label>
+                        <label>
+                            <input type="radio" name="user_unit" value="yd"> yards
+                        </label>
+                        <label>
+                            <input type="radio" name="user_unit" value="mi"> miles
+                        </label>
+                        <label>
+                            <input type="radio" name="user_unit" value="m"> meters
+                        </label>
+                        <label>
+                            <input type="radio" name="user_unit" value="km"> kilometers
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            To:
+                        </legend>
+                        <label>
+                            <input type="radio" name="output_unit" value="in"> inches
+                        </label>
+                        <label>
+                            <input type="radio" name="output_unit" value="ft"> feet
+                        </label>
+                        <label>
+                            <input type="radio" name="output_unit" value="yd"> yards
+                        </label>
+                        <label>
+                            <input type="radio" name="output_unit" value="mi"> miles
+                        </label>
+                        <label>
+                            <input type="radio" name="output_unit" value="m"> meters
+                        </label>
+                        <label>
+                            <input type="radio" name="output_unit" value="km"> kilometers
+                        </label>
+                    </fieldset>
+                    <center><input type="submit" value="Submit" class='m-4' /></center>
+                </form>
+            </section>
+        </center>
+        <center>
+            <section class='container-sm'>
+                {% if final_output %}
+                Distance:
+                {{final_output}}{{output_unit}}
+                {% endif %}
+            </section>
+        </center>
+    </section>
+</body>
+
+</html>
