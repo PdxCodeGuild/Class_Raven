@@ -37,8 +37,12 @@ function playGame() {
 	let playerScore = 0;
 	let computerScore = 0;
 	let round = 1;
+	let bestOf = "ask";
 
-	while (playerScore < 3 && computerScore < 3) {
+	while (isNaN(bestOf)) {
+		bestOf = prompt("First to how many wins?");
+	}
+	while (playerScore < bestOf && computerScore < bestOf) {
 		let playerSelection = "";
 		while (
 			playerSelection != "rock" &&
@@ -74,9 +78,11 @@ function playGame() {
 		round++;
 	}
 	if (playerScore > computerScore) {
-		alert("You win!");
+		alert(`You win! 
+        Round: ${round - 1} - Score: ${playerScore}:${computerScore}`);
 	} else {
-		alert("You lose!");
+		alert(`You lose! 
+        Round: ${round - 1} - Score: ${playerScore}:${computerScore}`);
 	}
 	playAgain();
 }
