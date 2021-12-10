@@ -109,8 +109,6 @@ To emulate a more professional Git workflow, we're going to start creating new b
   
 - `git commit -m "your commit message"` to commit your work
 
-- Before pushing your new branch, be sure to check the master branch for any updates. Anything changes that were merged into the master branch while you were working on your branch will need to be pulled and merged into your branch.
-
 - A remote branch will need to be created for each new local branch. Git will usually display the proper command to do this when a new branch is pushed for the first time.
 
   The command is:
