@@ -19,6 +19,5 @@ for(let i = 0; i < n_characters; ++i) {
     //appending to the output list a random character from the alphabet list
 	output += random_element(alphabet);
 }
-
 //Displays the PW result
 alert(output);
