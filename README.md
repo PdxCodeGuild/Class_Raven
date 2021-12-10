@@ -194,6 +194,19 @@ Corrections will be made only to that particular branch.
   </ul>
 </details>
 
+
+<details>
+  <summary>Useful VS Code Extensions</summary>
+  <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a>Makes code blocks and nested expressions easier to read</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a>GUI to make and manage HTTP requests</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All-In-One</a>Quickly create markdown tables of contents and other useful markdown features</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets">Javascript ES6 Snippets</a>Useful snippets to streamline Javascript development</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a>Compare differences between branches and easily manage remote repositories</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">LiveServer</a>Serve HTML/CSS/Javascript projects from VS Code</li>
+  </ul>
+</details>
+
 <details>
   <summary>SEO & Accessibility</summary>
   <p><b>SEO</b></p>
