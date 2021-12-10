@@ -183,6 +183,17 @@ Corrections will be made only to that particular branch.
 
 ## Additional Resources
 
+
+<details>
+  <summary>HTML/CSS/JS Online IDEs</summary>
+  <ul>
+    <li><a href="https://codepen.io">Code Pen</a></li>
+    <li><a href="https://replit.com">Replit</a></li>
+    <li><a href="https://codesandbox.io">Code Sandbox</a></li>
+    <li><a href="https://jsfiddle.net">JS Fiddle</a></li>
+  </ul>
+</details>
+
 <details>
   <summary>SEO & Accessibility</summary>
   <p><b>SEO</b></p>
