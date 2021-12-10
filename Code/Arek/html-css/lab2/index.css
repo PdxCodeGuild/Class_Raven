@@ -1,0 +1,124 @@
+#body{
+    background-image: url('water.jpg');
+    font-family: 'Balsamiq Sans', cursive;
+    
+    
+}
+
+#header-1{
+    display: flex;
+    justify-content: center;
+    color:  black;
+    background-color: rgb(200,200,200, 0.9);
+}
+
+#top-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0,0,0, 0.8);
+    padding: 20px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-style: double;
+}
+
+.nav-top{
+    color: beige;
+    padding: 20px;
+}
+
+#section2{
+    display: flex;
+    justify-content: left;
+
+}
+
+
+
+#side-nav{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: rgb(0,0,0, 0.8);
+    width: 125px;
+    max-height: 100vh;
+    justify-content: space-evenly;
+    float: left;
+    margin-top: 35px;
+    border-style: double;
+    
+}
+
+.nav-side{
+    padding: 20px;
+    color: beige;
+    
+}
+
+#articles{
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+    margin: 20px;
+    color: beige;
+    max-width: 50vw;
+}
+
+#article1{
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:  black;
+    background-color: rgb(200,200,200, 0.9);
+}
+
+
+
+.paragraphs{
+    display: flex;
+    background-color: rgb(0,0,0, 0.8);
+    align-items: center;
+    float:right;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-width: 10px;
+    border-style:solid;
+    border-color: black;
+    line-height: 120%;
+    color:beige;
+    
+    
+}
+
+#end{
+    text-align: center; 
+    font-size: x-large; 
+    font-weight: bold;
+    color: beige;
+    margin-top: 20px;
+    color:  black;
+    background-color: rgb(200,200,200, 0.9);
+}
+
+
+
+#contact-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(0,0,0, 0.8);
+    padding: 20px;
+    border-style: double;
+    border-color: black;
+    color: beige;
+}
+
+.li{
+    float: left;
+}

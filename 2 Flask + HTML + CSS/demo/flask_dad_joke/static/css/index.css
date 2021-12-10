@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Varela+Round&display=swap');
+
+* {
+    font-family: 'Questrial', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.h1, .h2, .h3 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+button {
+    padding: 15px;
+    margin: 15px;
+}
+
+form {
+    /* width: 100%;     */
+}
+
+input {
+    padding: 15px;
+    width: 33vw;
+}

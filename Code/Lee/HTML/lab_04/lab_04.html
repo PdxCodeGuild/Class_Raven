@@ -1,0 +1,362 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Normalize CSS-->
+        <link href="css/normalize.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Bootstrap Icon CDN-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <!-- Init Bootstrap as script -->
+        <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></script>
+        <!-- Link in css stylesheet-->
+        <link href="css/theme_test.css" rel="stylesheet">
+
+        <title>Lee Colburn</title>
+    </head>
+  
+  <body class="bg-light">
+        <!-- Init Bootstrap Javascript bundle with Popper-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-50 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Lee Colburn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolio_navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="portfolio_navbar"> 
+                    <ul class="navbar-nav ms-auto">
+                        <a class="nav-link active" aria-current="page" href=#>Home</a>
+                        <a class="nav-link" href="#about_me" data-bs-toggle="modal" data-bs-target="#about_me_blurb_modal" >About Me</a>  
+                        <a class="nav-link" href="#services" data-bs-toggle="modal" data-bs-target="#what_i_do_modal">Services</a>
+                        <a class="nav-link" href="https://github.com/colburnlee/mini-capstone" target="_blank">Work Example</a>
+                        <a class="nav-link" href="#find_me" data-bs-toggle="modal" data-bs-target="#find_me_modal">How to find me</a>
+                        <a class="nav-link" href="#contact_me" data-bs-toggle="modal" data-bs-target="#contact_me">Contact</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Showcase-->
+        <section class="bg-light text-dark mt-5 pt-5 p-lg-10 p-lg-15 text-center text-sm-start">
+            <div class="container">
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <div>
+                        <h1>Unbothered. Moisturized. Happy. In my lane. Focused. <span class="text-primary"><b> Flourishing</b>.</span></h1>
+                        <p class="lead my-4">
+
+                        </p>
+                    </div>
+                    <img class="img-fluid w-50 d-none d-md-block mx-2 rounded-1 border border-3 shadow-lg" src="images/lee_kalalau.gif"> 
+                </div> 
+            </div>
+        </section>
+
+    <!-- Boxes -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+
+                <!-- About Me -->
+                <div class="col-md">
+                    <div class="card bg-secondary text-dark">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                              <i class="bi bi-person-lines-fill text-primary"></i>
+                            </div>
+                            <h3 class="card-title mb-3">About Me</h3>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#about_me_blurb_modal"><i class="bi bi-box-arrow-up-right text-dark"></i></a>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#about_me_modal"><i class="bi bi-camera text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="col-md">
+                    <div class="card bg-secondary text-dark">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-hammer text-primary"></i>
+                            </div>
+                            <h3 class="card-title mb-3">What I Do</h3>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#what_i_do_modal"><i class="bi bi-box-arrow-up-right text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio -->
+                <div class="col-md">
+                    <div class="card bg-secondary text-dark">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-easel text-primary"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Work Example</h3>
+                            <a href="https://github.com/colburnlee/mini-capstone" target="_blank" class="btn btn-primary text-dark">To Github <i class="bi bi-github text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Find Me -->
+                <div class="col-md">
+                    <div class="card bg-secondary text-dark">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-bookmark-heart text-primary"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Reach Me</h3>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#find_me_modal"><i class="bi bi-box-arrow-up-right text-dark"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Me-->
+                <div class="col-md">
+                    <div class="card bg-secondary text-dark">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-file-person text-primary"></i>
+                            </div>
+                            <h3 class="card-title mb-3">Contact Me</h3>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact_me"><i class="bi bi-box-arrow-up-right text-dark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals-->
+
+    <!-- About Me: Blurb-->
+    <!-- Modal -->
+    <div class="modal fade" id="about_me_blurb_modal" tabindex="-1" aria-labelledby="about_me_blurb_modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="about_me_blurb_modalLabel">Lee Colburn, MHA</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Hello! I'm an experienced Consultant with a demonstrated history of working in the hospital & health care industry. Skilled in Management, Operational Planning, Training, Logistics Management, and Cultural Competency.
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#about_me_modal">Picture Story</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    <!-- About Me: Pictures-->
+    <div class="modal fade" id="about_me_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="about_me_modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="about_me_modalLabel">Lee Colburn, MHA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/lee_child.png" class="d-block w-100" alt="images/lee_background.JPG">
+                                    <p><b>Florida Born and Raised</b>: (pictured right) Also, please pay your respects to my sister's ALF shirt</p>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/lee_army.jpg" class="d-block w-100" alt="images/lee_background.JPG">
+                                    <p><b>Military</b>: I was once an Infantry Officer in the US Army. In 2012, I deployed to Kandahar, Afghanistan. This is a picture of me in front of a clinic I helped build. It's now abandoned due to the Taliban :(</p>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/lee_cigna.jpg" class="d-block w-100" alt="images/lee_background.JPG">
+                                    <p><b>Healthcare</b>: I left the military in 2014 and went on to pursue my MHA from the Univsity of Washington. I interned for Cigna's Provider Contracting Department at the time, and they had a great view from their office.</p>
+                            </div>
+                            <div class="carousel-item">
+                            <img src="images/lee_kp_scal.jpg" class="d-block w-100 " alt="images/lee_background.JPG">
+                                <p><b>A Kaiser Fellow</b>: After my MHA I became a KP Southern California fellow. Here I am with two fellow fellows at the time and my boss. Fun fact - he didn't even have his boating license at the time.</p>
+                            </div>
+                            <div class="carousel-item">
+                            <img src="images/lee_mhs.jpg" class="d-block w-100" alt="images/lee_background.JPG">
+                                <p><b>Healthcare</b>: I had the chance to help KP acquire the three hospitals in Maui County, HI. This is a photo from a 2017 community event.</p>
+                            </div>
+                            <div class="carousel-item">
+                            <img src="images/lee_kphi.JPG" class="d-block w-100" alt="images/lee_background.JPG">
+                                <p><b>Healthcare</b>: In 2018 I took a full time job working as a consultant for Dave Underriner and his Executive Team.</p>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+     <!-- Modal -->
+     <div class="modal fade" id="what_i_do_modal" tabindex="-1" aria-labelledby="what_i_do_modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="what_i_do_modalLabel">Skills</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="prog">
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item">
+                            <h4>Healthcare Industry Knowledge</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Mangement Consulting Ability</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>Python</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <h4>HTML</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                            </div>
+                        </li><li class="list-group-item">
+                            <h4>CSS</h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Find Me: Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="find_me_modal" tabindex="-1" aria-labelledby="find_me_modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="find_me_modalLabel">Find Me</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                The best way to reach me would be to contact me directly via the 'Contact Me' section of this site. My LinkedIn is below, too.            
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.linkedin.com/in/leecolburn/" target="_blank" button type="button" class="btn btn-outline-primary"><i class="bi bi-linkedin"></i></a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Contact Info Modal -->
+    <div
+      class="modal fade"
+      id="contact_me"
+      tabindex="-1"
+      aria-labelledby="contactLabel"
+      aria-hidden="true"
+    >
+    
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactLabel">Contact Me</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">...I'll get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="full-name" class="col-form-label">
+                  Name:
+                </label>
+                <input type="text" class="form-control" id="full-name" placeholder="First/Last Name" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name@email.com">
+                <div id="emailHelp" class="form-text">I won't share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label> 
+                <input type="tel" class="form-control" id="phone" placeholder="Phone #"/>
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Note:</label> 
+                <textarea class="form-control" id="note" placeholder="Lee is the greatest!"></textarea>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" disabled>Submit</button>
+
+        </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer, Copyright, and Anchor Link to Top of Page -->
+    <footer class="p-5 bg-secondary text-dark position-relative">
+    <div class="container">
+        <p class="lead">  Copyright &copy; 2021 Lee Colburn
+            <br><br> Shouts out to <a href="https://themestr.app/" target="_blank">Themestr.app</a> for custom bootstrap themes
+        </p>
+        
+        
+        <!-- Anchor Link to Top of Page -->
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-up-square-fill text-primary h1"></i>
+        </a>
+    </div>
+    </footer>
+
+  </body>
+</html>

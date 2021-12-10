@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Montagu+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Ubuntu:wght@500&display=swap');
+
+:root {
+    --bg-color: rgb(156, 99, 123);
+}
+
+html {
+    box-sizing: border-box;
+    /*background-image: linear-gradient(red, yellow);*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Estonia', cursive;
+}
+body {
+    position: relative;
+    background-image: url("https://imgr.search.brave.com/nzvJG6NbW5w797cinAh8R7_pdCh3vqRWMbHQFT6QVmk/fit/1200/720/ce/1/aHR0cHM6Ly93d3cu/d2hhdHMtb24tbmV0/ZmxpeC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTgvMTEv/bmF0aW9uYWwtZ2Vv/Z3JhcGhpYy1yZW1v/dmFsLW5ldGZsaXgt/MjAxOS5qcGc")
+    
+}
+
+#page-container {
+    
+    height: 95vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    
+}
+#page-title {
+    text-align: center;
+    padding: 1.1rem 0;
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#center-para{
+    display: flex;
+    border: rgb(77, 80, 87) 2rem solid;
+    border-radius: 3rem;
+    word-spacing: 0.3rem;
+    background-color: var(--bg-color);
+    opacity: 90%;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin: 0 5vh;
+    /* padding-bottom: 20px; */
+    justify-content: center;
+}
+
+.mid-section {
+    display: flex;
+    height: 39vh;
+    justify-content: space-between;
+    border-radius: 3rem;
+}
+
+#left-para{
+    text-align: left;
+    border-radius: 2rem;
+
+}
+
+aside{
+    /* padding: 5px; */
+    /* margin: 10px; */
+    margin-top: 15vh;
+    max-width: 400px;
+    /* word-spacing: 0.3rem; */
+    background-color: var(--bg-color);
+    opacity: 90%;
+    font-size: 2rem;
+    align-self: center;
+}
+
+#right-para{
+    text-align: right;
+    /* margin-left: 1000px; */
+    border-radius: 2rem;
+}
+
+/*Main picture*/
+#main-gould{    
+    width: 50rem;
+    height: 35rem;
+    margin-top: 9rem;
+    border-radius: 2rem;
+
+}
+
+/* Smaller pictures and the circle */
+.goulds {   
+    margin-top: 1rem;
+    display: flex;  
+    height: 20vh;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#left-gould {
+    border-radius: 2rem;
+}
+
+#right-gould {
+    border-radius: 2rem;
+}
+
+#cirlce {
+    width: 10vw;
+    height: 10vh;    
+    border: 1px solid black;
+    border-radius: 50%/50%;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 2.4rem;
+}
+
+#footer {
+    background-image: linear-gradient(to right, yellow, blue);    
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    padding-left: 0;
+    padding-right: 10vw;
+}
+
+#author {
+    position: static;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 1rem;
+}
+
+#credits {
+    position: static;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;    
+    padding-right: 1rem;
+}
