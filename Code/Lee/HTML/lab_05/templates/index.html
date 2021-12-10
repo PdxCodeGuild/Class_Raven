@@ -1,0 +1,185 @@
+{% extends 'base.html' %} {% block content %}
+<div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4 rounded-3 border border-1 border-primary" src="static/images/main_burrito.jpg" alt="" width="200" height="200">
+    <h2>Order your perfect burrito</h2>
+    <p class="lead">Submit the form below to start your burri-toe journey. Our standard burrito is <b>$8.00</b>, but we offer additional options to luxuriate your burri-toe experience.</p>
+</div>
+
+<form class="px-5 " action="{{ url_for('submit_order') }}" method='POST'>
+
+    <div class="row">
+        <h4 class="mb-2">Enter Delivery Information:</h4>
+        <!--If you want multiple columns for order and customer info ... break here-->
+        <!--This is ready for bootstrap validation, but I'm just not there yet.-->
+        <div class="col-md-6 mb-3">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" value="" required="">
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name" value="" required="">
+        </div>
+        
+        <div class="mb-3">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="toez@example.com">
+        </div>
+
+        <div class="mb-5"> <!--Unneccesarry Floating label!-->
+            <label for="deliveryInstructions">Delivery Instructions</label>
+            <div class="form-floating">
+                <textarea class="form-control lg" name="deliveryInstructions" id="deliveryInstructions" placeholder="Enter info here" aria-label="With textarea"></textarea>
+                <label for="deliveryInstructions"> Details: </label>
+            </div>
+        </div>
+    </div>
+
+    <!--This can be a separate row to the left of the delivery instructions...-->
+    <h4>Enter Order Information:</h4>
+
+    <div class="row row-cols-1 justify-content-center row-cols-md-2 row-cols-xl-3 g-4"> 
+        <!--Tortilla-->
+        <div class="col-md ">
+            <div class="card border-danger bg-secondary border-3 my-2" style="width: 18rem;">
+                <img src="static/images/tortilla.jpg" class="card-img-top rounded-circle border border-2 border-primary" height="200" alt="tortilla">
+                <div class="card-body">
+                    <div class="form-check">
+                        <p class="card-text"><b>Tortilla</b></p>
+                        <input class="form-check-input" type="radio" name="tortilla-select" value="white" id="tortilla" checked>
+                        <label class="form-check-label" for="tortilla">
+                        White Flour
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tortilla-select" value="wheat" id="tortilla">
+                        <label class="form-check-label" for="tortilla">
+                        Wheat Flour (+$1)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tortilla-select" value="spinach" id="tortilla">
+                        <label class="form-check-label" for="tortilla">
+                        Spinach (+$1)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tortilla-select" value="corn" id="tortilla">
+                        <label class="form-check-label" for="tortilla">
+                        Corn Flour
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Rice-->
+        <div class="col-md">
+            <div class="card border-danger bg-secondary border-3 my-2" style="width: 18rem;">
+                <img src="static/images/rice.jpg" class="card-img-top rounded-circle border border-2 border-primary" height="200" alt="rice">
+                <div class="card-body">
+                    <div class="form-check">
+                        <p class="card-text"><b>Rice</b></p>
+                        <input class="form-check-input" type="radio" name="rice-select" value="white" id="rice-white" checked>
+                        <label class="form-check-label" for="rice-white">
+                        White Rice
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rice-select" value="brown" id="rice-brown">
+                        <label class="form-check-label" for="rice-brown">
+                        Brown Rice (+$1)<br><br><br>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Beans-->
+        <div class="col-md">
+            <div class="card border-danger bg-secondary border-3 my-2" style="width: 18rem;">
+                <img src="static/images/beans.jpg" class="card-img-top rounded-circle border border-2 border-primary" height="200" alt="Beans">
+                <div class="card-body">
+                    <div class="form-check">
+                        <p class="card-text"><b>Beans</b></p>
+                        <input class="form-check-input" type="radio" name="beans-select" value="black" id="beans-black" checked>
+                        <label class="form-check-label" for="beans-black">
+                        Black Beans
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="beans-select" value="pinto" id="beans-pinto">
+                        <label class="form-check-label" for="beans-pinto">
+                        Pinto Beans<br><br><br>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Protien-->
+        <div class="col-md">
+            <div class="card border-danger bg-secondary border-3 my-2" style="width: 18rem;">
+                <img src="static/images/protein.jpg" class="card-img-top rounded-circle border border-2 border-primary" height="200" alt="protein">
+                <div class="card-body">
+                    <div class="form-check">
+                        <p class="card-text"><b>Protein</b></p>
+                        <input class="form-check-input" type="radio" name="protein-select" value="carnitas" id="protein-carnitas">
+                        <label class="form-check-label" for="protein-carnitas">
+                        Carnitas (+$3)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="protein-select" value="chicken" id="protein-chicken" checked>
+                        <label class="form-check-label" for="protein-chicken">
+                        Chicken
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="protein-select" value="sofritas" id="protein-sofritas">
+                        <label class="form-check-label" for="protein-sofritas">
+                        Sofritas (+$3)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="protein-select" value="none" id="protein-none">
+                        <label class="form-check-label" for="protein-none">
+                        None (-$1)
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Other-->
+        <div class="col-md">
+            <div class="card border-danger bg-secondary border-3 my-2" style="width: 18rem;">
+                <img src="static/images/cheese.jpg" class="card-img-top rounded-circle border border-2 border-primary" height="200" alt="other-ingredients">
+                <div class="card-body">
+                    <div class="form-check">
+                        <p class="card-text"><b>Other Options</b></p>
+                        <input class="form-check-input" type="checkbox" name="other-cheese" value="AddCheese" id="other-cheese" checked>
+                        <label class="form-check-label" for="other-cheese">
+                        Cheese (+$1)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="other-sourCream" value="AddSourCream" id="other-sourCream">
+                        <label class="form-check-label" for="other-sourCream">
+                        Sour Cream (+$1)<br><br><br>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Submit Form-->
+    <div class="col-12 my-3 text-center">
+        <button class="btn btn-primary btn-lg mb-5 " type="submit">Submit form</button>
+    </div>
+</form>
+</div>
+
+{% endblock %}
