@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'LuxoraGrotesk';
+    src: url('fonts/LuxoraGrotesk-ThinItalic.woff2') format('woff2');
+  }
+
+a.nav-link{
+  font-family: 'Lato';
+  font-size: 1.3rem;
+  
+}
+#navbarSupportedContent > ul > li:nth-child(1) > a{ color: #E02B20;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #E02B20;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(212, 212, 212, 0.55);
+  border-color: rgba(0,0,0,.1);
+  
+}
+
+  .header-img{
+  padding-left: 3em;
+  padding-right: 3em;
+  }
+
+  .bg-primary {
+  --bs-bg-opacity: 1;
+  background-color:#F8F9FA!important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h4{
+  font-size: 1.4rem!important;
+}
+
+p{
+  font-family: lato;
+}
+
+.skill-text{
+  font-family: 'lato';
+  font-size: 1.2rem;
+}
+
+ .portfolio-pic{
+  margin-right:20px;
+  max-height:600px;
+  padding-left:15px;
+  margin-top:50px;
+ }
+
+
+
+.display-6 {
+  padding-bottom: 15px;
+}
+
+ @media screen and (min-width: 200px) {
+  .portfolio-pic {
+   max-height: 200px;
+  }
+}
+
+ @media screen and (min-width: 400px) {
+  .portfolio-pic {
+  max-height: 300px;
+  }
+  h4{
+  font-size: 1rem!important;
+  }
+  h4{
+  font-size: 1.2rem!important;
+  }
+  
+}
+
+@media screen and (min-width: 700px) {
+  .portfolio-pic {
+  max-height: 400px;
+  }
+  h4{
+  font-size: 1.4rem!important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .portfolio-pic {
+  max-height: 500px;
+  }
+  h4{
+  font-size: 1.6rem!important;
+  }
+  
+}
+
+a{color:#E02B20;}
+
+
+
+.container-fluid-2{
+  margin-top: 75px;
+}
+
+.py-5 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+
+
+
+
+/*******************************************/
+/*******************************************/
+/*******************************************/
+/*******************************************/
+
+
