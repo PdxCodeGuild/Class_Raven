@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+.body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.burrito-header {
+    display: flex;
+    background-color: orangered;
+    width: 100%;
+}
+
+
+.burrito-header-text {
+    margin-left: 50px;
+    font-size: 4rem;
+    color: white;
+    text-shadow: orange;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.burrito-and-text {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    padding-bottom: 40px;
+}
+
+.burrito-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.picture-text {
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 10px;
+}
+
+.customize-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.required-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: -10px;
+}
+
+.options {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+}
+
+.receipt-background {
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 50px;
+    margin-top: 150px;
+}
+
+
+.receipt-done {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0%
+}
