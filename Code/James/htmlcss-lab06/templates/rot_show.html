@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+    <h1 class="title">Rot Cipher</h1>
+    <div class="card text-center">
+        <div class="card-body ">
+            
+            <h1>Your message was: <span>{{encrypt | join(" ") }}</span> </h1>
+            <h1>Your encrypted message is: <span>{{encrypted_message | join(" ") }}</span></h1> 
+        </div>
+        
+    </div>
+    <a  href="{{ url_for('index')}}"  id="back-btn"> Back</a>
+
+    
+
+
+</div>
+
+{% endblock %}

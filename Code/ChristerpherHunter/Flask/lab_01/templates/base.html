@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/index.css"> -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- MAIN HEAD -->
+    <div class="main-head">
+        <div class="main-head-container">
+            <div class="main-head-container-item">
+                <h1>BURRITO HUNTER</h1>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- MAIN FOOTER -->
+    <div class="main-footer">
+        <div class="main-footer-left">
+            <div class="main-footer-left-container">
+                <div class="main-footer-left-container-text">
+                    <h4>Christerpher Hunter</h4>
+                    <h4>djhunter67@gmail.com</h4>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer-right">
+            <div class="main-footer-right-container">
+                <a href="facebook.com" target="_blank">
+                    <div class="main-footer-right-container-blocks fb-image"></div>
+                </a>
+                <div class="main-footer-right-container-blocks lk-image"></div>
+                <div class="main-footer-right-container-blocks yt-image"></div>
+                <div class="main-footer-right-container-blocks twt-image"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

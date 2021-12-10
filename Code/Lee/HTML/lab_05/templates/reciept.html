@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+<row class="py-5 text-center">
+    <img class="d-block mx-auto my-5 rounded-3 border border-1 border-primary" src="static/images/main_burrito.jpg" alt="" width="200" height="200">
+    <h2>Is your mouth watering yet?</h2>
+    <p class="lead mb-3">Your Burri-toe Reciept</p>
+</row>
+
+<div class="row text-center">
+    <div class="col-12">
+        <div class="card border-secondary border-3 d-inline-flex my-1" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title text-center">{{ user_info }}'s Order</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center"> {{ email_address }} </h6>
+            <p class="card-text">
+                <b>Order</b>: <br>
+                Tortilla: {{ tortilla }} <br>
+                Rice: {{ rice }} <br>
+                Beans: {{ beans }} <br>
+                Protein: {{ protein }} <br>
+                Add Cheese? {{ cheese }} <br>
+                Add Sour Cream? {{ sour_cream }} <br><br> 
+
+                Total: <b>${{ price }}</b><br><br> 
+
+                <b>Delivery Instructions:</b><br> 
+                {{ delivery_instructions }} 
+            </p>
+            <a href="{{ url_for('clear_json') }}" class="card-link">I'm done here, take me home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

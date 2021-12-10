@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12  bg-warning mt-5">
+      <div class="card w-75 mx-auto text-center my-4" style="width: 18rem">
+        <div class="card-body mx-auto  ">
+          <h5 class="card-title text-danger">Thanks! you ordered</h5>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item my-4 ">
+            Tortilla: {{burrito['tortilla']}}
+          </li>
+          <li class="list-group-item my-4 ">
+            Rice: {{burrito['rice']}}
+          </li>
+          <li class="list-group-item my-4 ">
+            Bean: {{burrito['bean']}}
+          </li>
+          <li class="list-group-item my-4 ">
+            Protein: {{burrito['protein']}}
+          </li>
+          <li class="list-group-item my-4 ">
+            Additional Ingredients: {{burrito['extras']}}
+          </li>
+          <li class="list-group-item my-4 ">
+            delivery_instructions: {{burrito['delivery_instructions']}}
+          </li>
+        </ul>
+        <h5 class="my-4 ">Have a great day!</h5>
+      </div>
+    </div>
+  </div>
+  <!-- {%for value in burrito.values()%}
+        <h1> {{value}}</h1>
+        
+        {%endfor%} -->
+
+  {% endblock %}
+</div>
