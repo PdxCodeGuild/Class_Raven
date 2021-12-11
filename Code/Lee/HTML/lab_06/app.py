@@ -26,8 +26,12 @@ def index():
 def encode_message():
     user_string = request.form['raw_string']
     rot = int(request.form['raw_rot'])
-    alphabet_printable = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&()*+,-.:;<=>?@[]^_`{|}~' + ' ' # 91 
-    shifted_alphabet_printable = alphabet_printable[len(alphabet_printable)-rot:] + alphabet_printable[0:(len(alphabet_printable)-rot)] # rotates string to correspond with printable alphabet
+    alphabet_printable = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%()*+,-.:=?@[]^_`{|}~' + ' ' # 90 
+    shifted_alphabet_printable = (
+        alphabet_printable[len(alphabet_printable) - rot:]
+        + alphabet_printable[: len(alphabet_printable) - rot]
+    )
+
     encrypted_message = ""
     memo = load_data(JSON_DB)
 
