@@ -19,6 +19,11 @@ let lastDigit = parseInt(userNumList.pop())
 
 let reverseList = userNumList.reverse()
 
+for (let i=0; i<reverseList.length; i++){
+    reverseList[i] === parseInt(reverseList[i])
+    
+}
+
 
 console.log(reverseList);
 
