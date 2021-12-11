@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<form action="{{ url_for('show_pw') }}" method="post">
+    <div class="main-body-container-left-btn">
+        <label for="user">User</label>
+        <input type="text" name="user-name" id="user" placeholder="User Name" autocomplete="off" required
+            maxlength="15">
+        <br>
+        <br>
+        <label for="lw-letters">Number of lowercased letters:</label>
+        <input type="number" name="lw-letters" id="lw-letters" min="1" max="6" value="0">
+        <br>
+        <br>
+        <label for="up-letters">Number of uppercased letters:</label>
+        <input type="number" name="up-letters" id="up-letters" min="1" max="6" value="0">
+        <br>
+        <br>
+        <label for="num-nums">Number of numbers:</label>
+        <input type="number" name="num-nums" id="num-nums" min="0" max="4" value="0">
+        <br>
+        <br>
+        <label for="spec-chars">Number of special characters:</label>
+        <input type="number" name="spec-chars" id="spec-chars" min="0" max="3" value="0">
+        <br>
+        <button class="btn" type="submit">Submit for Permutation</button>
+    </div>
+</form>
+
+
+
+{% endblock %}
