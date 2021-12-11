@@ -29,15 +29,17 @@ function getChars(desiredLength, array){
 }
 
 function generatePassword(numberLength, specialLength, upperLength, lowerLength){
-    let passNumbers = '0123456789';
-    let passSpecial = '!#$%&*+,-.=>?@[]^_`~';
-    let passUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let passLower = 'abcdefghijklmnopqrstuvwxyz';
-    let numPass = getChars(numberLength, passNumbers) 
-    let specialPass = getChars(specialLength, passSpecial) 
-    let upperPass = getChars(upperLength, passUpper) 
-    let lowerPass = getChars(lowerLength, passLower)
-    let finalPass = numPass + specialPass + upperPass + lowerPass 
+    let passNumbers, passSpecial, passUpper, passLower, numPass, specialPass, upperPass, lowerPass, finalPass
+
+    passNumbers = '0123456789';
+    passSpecial = '!#$%&*+,-.=>?@[]^_`~';
+    passUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    passLower = 'abcdefghijklmnopqrstuvwxyz';
+    numPass = getChars(numberLength, passNumbers)
+    specialPass = getChars(specialLength, passSpecial) 
+    upperPass = getChars(upperLength, passUpper) 
+    lowerPass = getChars(lowerLength, passLower)
+    finalPass = numPass + specialPass + upperPass + lowerPass 
     console.log(finalPass)
     finalPass = getChars(finalPass.length, finalPass)
     return finalPass
