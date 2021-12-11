@@ -1,0 +1,32 @@
+* {
+
+color: green;
+}
+
+h2 {
+margin: 10px
+}
+
+span {
+    color: black;
+    }
+.receipt-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.receipt-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.submit {
+    margin: 20px;
+}

@@ -13,10 +13,24 @@ some text **bold** or *italics*
 
 > quote me some stoff
 
-- list item 1
-    - sub list item 1
-    - sub list item 2
-1. item 1
+- List of items you will need:
+    - Raspberry Pi Zero 2 W ~$15
+    - SD Card ~$7
+    - Micro USB Power Supply ~$10
+    - 5MP 1080P Camera ~$15
+    - 3V Active Buzzer ~$5
+    - HC-SR501 Motion Sensor ~$5
+    - Wiring ~$7
+
+Total estimated project cost = $64
+
+Instructions
+1. Insert the SD Card into the Raspberry Pi Zero and connect the USB Power Supply
+2. Connect the Camera to the Camera port
+3. Solder female wire.
+
+Install Raspbian onto the Raspberry Pi
+2. 
     1. sub item 1
 2. item 2
 
