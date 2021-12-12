@@ -1,7 +1,10 @@
+let userInput = prompt('Enter password length: ')
+
+
 let alphabet = "abcdefghijklmnopqrstuvwxyz".split('');
 console.log(alphabet)
 
-let punctuation = '!@#%^&*"><()_|{.,/;][/$-=+}'.split('');
+let punctuation = `!@#%^&*"><()_|{.,/;][$-=+}`.split('');
 console.log(punctuation)
 
 function generateArrayOfNumbers (numbers) {
@@ -24,11 +27,17 @@ console.log(randomPassword(randomList))
 let i = 0
 var list = []
 
-while (i < 9){
+while (i < userInput){
     list.push(randomList[Math.floor(Math.random() *randomList.length)])
     
     i++
 }
+
+// function name(params) {
+    
+// }
+
 console.log(list)
+alert(`Your password is ${list}`)
 
 // promp
