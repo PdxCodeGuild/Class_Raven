@@ -1,17 +1,35 @@
+#add-task{
+    float: left;
+}
+
 #app-header{
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: larger;
-    font-weight: bold;
+    font-size: xx-large;
+    font-weight: bolder;
 }
 
-#delete-task{
-    margin-top: 7px;
+#task-done{
+    float: right;
+    
+    
+
 }
+#delete-task{
+    float: right;
+
+}
+
 
 .card-content{
     font-size: xx-large;
     font-size: bolder;
+    line-height: 120%;
+    padding-right: 10px;
+}
+
+.card{
+    padding: 0%;
 }
 
 
