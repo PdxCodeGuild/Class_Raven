@@ -25,19 +25,17 @@ function randomPassword(randomList){
 
 console.log(randomPassword(randomList))
 let i = 0
-var list = []
+var string = '';
 
 while (i < userInput){
-    list.push(randomList[Math.floor(Math.random() *randomList.length)])
+    string += (randomList[Math.floor(Math.random() *randomList.length)])
     
     i++
 }
 
-// function name(params) {
-    
-// }
 
-console.log(list)
-alert(`Your password is ${list}`)
+
+// console.log(list)
+alert(`Your password is ${string}`)
 
 // promp
