@@ -9,18 +9,29 @@ let userNumList = user.split('')
 
 userNumList = userNumList.map((number)=> parseInt(number))
 
-
 console.log(userNumList);
 
-// let lastDigit = parseInt(userNumList.pop())
+let lastDigit = userNumList.pop()
+
+console.log(lastDigit);
 
 let reverseList = userNumList.reverse()
+console.log(reverseList);
 
-// for (let i=0; i<reverseList.length; i++){
-//     reverseList[i] === parseInt(reverseList[i])
-    
-// }
 
+for (let i = 1; i<reverseList.length; i+=2){
+   reverseList[i] = Math.pow(reverseList[i], 2)
+
+}
 
 console.log(reverseList);
+
+// console.log(reverseList);
+// console.log(doubleOther);
+
+
+
+
+
+
 
