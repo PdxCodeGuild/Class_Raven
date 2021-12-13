@@ -1,0 +1,75 @@
+body{
+    background-image: url('purple.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+#add-task{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: #36027c;
+    
+}
+
+#app-header{
+    font-family: 'Righteous', regular;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 80px;
+    font-weight: bolder;
+    color: #24689d;
+}
+
+#task-done{
+    float: right;
+    position: absolute; /* This is making the button stay at the bottom right of the box and the delButton has the same thing with a slight modification */
+    bottom: 0%;
+    right: 0%;
+    background-color: #36027c;
+    
+    
+    
+    
+
+}
+#delete-task{
+    float: right;
+    position: absolute;
+    bottom: 0%;
+    right: 5.8%;
+    
+    
+    
+
+}
+
+
+.card-content{
+    font-family: 'Cabin', sans-serif;
+    font-size: xx-large;
+    padding-right: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card{
+    margin: 75px 0px;
+}
+
+
+.todo{
+    display: flexbox;
+    justify-content: space-between;
+    overflow-wrap: break-word; /* this breaks long words so that they do not overflow out of the card */
+    background-color:  #d380ff ;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #434343;
+    min-height: 200px;
+
+
+}

@@ -9,24 +9,23 @@ addButton.addEventListener('click', function () {
     // It will make a card that is blank and too small
     console.log(task)
     var todo = document.createElement('div')
+    //adding materialize classes to the new div
     todo.classList.add('todo')
     todo.classList.add('col')
-    todo.classList.add('s10')
+    todo.classList.add('s12')
     todo.classList.add('card')
-    todo.classList.add('purple')
-    todo.style.color = 'red';
+    todo.style.color = 'black';
     
 
-    todo.innerHTML = `
-        
-        
+    todo.innerHTML =
+     `
         <div class="card-content">  
-            <p>
+            <p'>
                 ${task}
                 <a id='delete-task' class='btn-small waves-effect waves-light black'>
                     <i class=' material-icons center'>delete</i>
                 </a>
-                <a id='task-done' class='btn-small waves-effect waves-light grey darken-2'>
+                <a id='task-done' class='btn-small waves-effect waves-light'>
                     <i class=' material-icons center'>check</i>
                 </a>
                         
@@ -34,10 +33,6 @@ addButton.addEventListener('click', function () {
             
                     
         </div>
-        
-        
-      
-        
                 `
     // IF THERE ARE TWO CARDS, YOU HAVE TO DELETE THE FIRST ONE TO BE ABLE TO DELETE THE ONES UNDER
         
@@ -54,15 +49,11 @@ addButton.addEventListener('click', function () {
     })
 
     doneButton.addEventListener('click', function(){
-        todo.classList.replace('purple', 'yellow')
+        todo.style.backgroundColor = '#2b2b2b'
         //NEED TO FIND A WAY TO USE THE STRIKE() METHOD TO MAKE THE TEST
         // HAVE A LINE THROUGH IT
 
         // if you have more than one cards it will make them all yellow
-
-
-
-
 
     })
 
