@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+
+*{
+    font-family: 'Arvo', serif;
+}
+span {
+    color: red;
+    font-style: italic;
+}
+.title {
+    text-decoration: underline;
+    position: absolute;
+    top: 10%;
+    font-weight: bolder;
+}
+
+body {
+    background-color: rgba(0, 139, 139, 0.513);
+}
+
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#back-btn{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+}
+
+#back-btn:hover{
+    color: white;
+}
