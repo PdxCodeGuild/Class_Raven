@@ -109,8 +109,6 @@ To emulate a more professional Git workflow, we're going to start creating new b
   
 - `git commit -m "your commit message"` to commit your work
 
-- Before pushing your new branch, be sure to check the master branch for any updates. Anything changes that were merged into the master branch while you were working on your branch will need to be pulled and merged into your branch.
-
 - A remote branch will need to be created for each new local branch. Git will usually display the proper command to do this when a new branch is pushed for the first time.
 
   The command is:
@@ -191,6 +189,19 @@ Corrections will be made only to that particular branch.
     <li><a href="https://replit.com">Replit</a></li>
     <li><a href="https://codesandbox.io">Code Sandbox</a></li>
     <li><a href="https://jsfiddle.net">JS Fiddle</a></li>
+  </ul>
+</details>
+
+
+<details>
+  <summary>Useful VS Code Extensions</summary>
+  <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a>Makes code blocks and nested expressions easier to read</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a>GUI to make and manage HTTP requests</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All-In-One</a>Quickly create markdown tables of contents and other useful markdown features</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets">Javascript ES6 Snippets</a>Useful snippets to streamline Javascript development</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a>Compare differences between branches and easily manage remote repositories</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">LiveServer</a>Serve HTML/CSS/Javascript projects from VS Code</li>
   </ul>
 </details>
 

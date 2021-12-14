@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <div class="main-body-container-left-btn">
+        <div>
+            <textarea name="" id="" cols="30" rows="5" style="resize: none;" disabled>{{ hash_word }}</textarea>
+        </div>
+        <form class="flex-me" action="{{ url_for('index') }}" method="get">
+            <button class="btn" type="submit">Return</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

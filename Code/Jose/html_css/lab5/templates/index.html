@@ -1,0 +1,118 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{{ url_for('create_receipt') }}" method="POST" class="container">
+
+    <div class='burrito-header'>
+        <p class='burrito-header-text'>El Burrito Grande</p>
+    </div>
+
+
+    <div class='row'>
+        <div class="burrito-and-text col-3 shadow bg-white">
+            <img class='burrito-picture' src='https://content.hy-vee.com/remote.axd/3f4c2184e060ce99111b-f8c0985c8cb63a71df5cb7fd729edcab.ssl.cf2.rackcdn.com/media/17708/beefsteakburritos.jpg?v=1&mode=crop&&upscale=false'>
+            <p class='picture-text'>Would you like fries with that?</p>
+        </div>
+
+        <div class='col-8'>
+            <p class='customize-title'>Customize Your Burrito</p>
+            <p class='required-title'>Tortilla:</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tortilla" id="tortilla1"  value='White Flour' checked>
+                <label class="form-check-label" for="tortilla1">
+                <p class='options'>White Flour</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tortilla" id="tortilla2" value='Wheat Flour'>
+                <label class="form-check-label" for="tortilla2">
+                    <p class='options'>Wheat Flour</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tortilla" id="tortilla3" value='Spinach'>
+                <label class="form-check-label" for="tortilla3">
+                    <p class='options'>Spinach</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tortilla" id="tortilla4" value='Corn'>
+                <label class="form-check-label" for="tortilla4">
+                    <p class='options'>Corn</p>
+                </label>
+            </div>
+
+            <p class='required-title'>Protein:</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="protein" id="protein1" value='Carnitas'checked>
+                <label class="form-check-label" for="protein1">
+                <p class='options'>Carnitas</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="protein" id="protein2" value='Chicken'>
+                <label class="form-check-label" for="protein2">
+                    <p class='options'>Chicken</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="protein" id="protein3" value='Sofrtias'>
+                <label class="form-check-label" for="protein3">
+                    <p class='options'>Sofritas</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="protein" id="protein4" value='No protein'>
+                <label class="form-check-label" for="protein4">
+                    <p class='options'>No protein</p>
+                </label>
+            </div>
+
+            <p class='required-title'>Rice:</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rice" id="rice1" value='White' checked>
+                <label class="form-check-label" for="rice1">
+                <p class='options'>White</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rice" id="rice2" value='Brown'>
+                <label class="form-check-label" for="rice2">
+                    <p class='options'>Brown</p>
+                </label>
+            </div>
+
+            <p class='required-title'>Beans:</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="beans" id="beans1" value='Black' checked>
+                <label class="form-check-label" for="beans1">
+                <p class='options'>Black</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="beans" id="beans2" value='Pinto'>
+                <label class="form-check-label" for="beans2">
+                    <p class='options'>Pinto</p>
+                </label>
+            </div>
+
+            <p class='required-title'>Extra:</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="extra" id="optionalItems" value="Cheese">
+                <label class="form-check-label" for="optionalItems1">
+                <p class='options'>Cheese</p>
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="extra" id="optionalItems" value="Sour Cream">
+                <label class="form-check-label" for="optionalItems2">
+                <p class='options'>Sour Cream</p>
+                </label>
+            </div>
+
+            <a href="{{ url_for('create_receipt') }}">
+                <button type="submit" class='btn btn-primary'>Submit</button>
+            </a> 
+            
+        </div>
+    </div>
+</form>
+{% endblock %}
