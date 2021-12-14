@@ -27,52 +27,38 @@
   <body>
     <div class="container-lg">
       <div class="row">
-        <div class="col-12 col-lg-8 offset-lg-3">
+        <div class="col-12 col-lg-6 offset-lg-3">
           <div class="card w-70 my-5">
             <ul class="list-group list-group-flush">
               <li
                 class="list-group-item text-white bg-primary text-center py-4"
               >
-                To do List
+                <h2>To do List</h2>
               </li>
               <li class="list-group-item py-3">
                 <div style="float: left">
                   <input
                     class="form-control form-control-lg"
+                    id="text"
                     type="text"
                     name="text"
-                    placeholder="What do you have to do?"
+                    placeholder="Enter to do item"
                   />
                 </div>
                 <div style="float: right">
                   <button
-                    id="add"
+                    id="submit"
                     type="button"
-                    class="btn btn-outline-primary mx-1"
+                    class="btn mx-auto"
                   >
-                    <i class="fas fa-plus-square"></i>
-                  </button>
-                </div>
-                <div style="float: right">
-                  <button
-                    id="trash"
-                    type="button"
-                    class="btn btn-outline-primary mx-1"
-                  >
-                    <i class="far fa-trash-alt"></i>
-                  </button>
-                </div>
-                <div style="float: right">
-                  <button
-                    id="complete"
-                    type="button"
-                    class="btn btn-outline-primary mx-1"
-                  >
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-plus-square fa-2x"></i>
                   </button>
                 </div>
               </li>
-              <li class="list-group-item py-3">Completed To do</li>
+              <li id="incomplete-todos" class="list-group-item ">
+                incomplete To do
+              </li>
+              <li id="complete-todos" class="list-group-item ">complete</li>
             </ul>
           </div>
         </div>
