@@ -1,0 +1,36 @@
+/*general styling for pages*/
+body {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: consolas;
+}
+p {
+  margin: 3rem;
+}
+/*adds styling for completed items in the assignment details*/
+.complete {
+  text-decoration: line-through;
+  list-style: square;
+}
+#migration {
+  color: black;
+  background-image: url("../images/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+:link{
+  color: red;
+}
+:visited{
+  color: red;
+}
+#quote {
+  font-style: italic;
+}
+img {
+  border-radius: 50%;
+}
+ul {
+  list-style: none;
+}
