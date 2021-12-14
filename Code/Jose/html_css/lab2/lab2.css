@@ -1,0 +1,55 @@
+body {
+    font-family: Arial;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    
+}
+
+    .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.digitalsupercluster.ca/wp-content/uploads/2021/09/forestmachine.png");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -1.25%;
+}
+
+.hero-text {
+    padding-bottom: 20%;
+    text-align: center;
+    color: lightgray;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h3 {
+    display: block;
+    margin-left: 25%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.post-text {
+    display: block;
+    margin-left: 25%;
+    padding-bottom: 3%;
+    color: lightslategray;
+    width: 45%
+}

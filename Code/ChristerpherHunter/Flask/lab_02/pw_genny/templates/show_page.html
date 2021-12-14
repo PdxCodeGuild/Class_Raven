@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <div class="main-body-container-left-btn">
+        <form class="flex-me" action="{{ url_for('index') }}" method="get">
+            <div>
+                <input id="output-input" type="text" value="{{ p_word }}" disabled />
+            </div>
+            <br>
+            <button class="btn" type="submit">Return</button>
+        </form>
+        <form class="flex-me" action="{{ url_for('hash_pw', pw_length = p_word|length) }}" method="POST">
+        
+            <button class="btn" type="submit" style="margin-top: 2rem;">Show Passphrase</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
