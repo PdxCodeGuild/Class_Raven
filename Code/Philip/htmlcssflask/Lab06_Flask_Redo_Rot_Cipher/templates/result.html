@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- RESULT CONTENT -->
+<div class="container row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-8 results-box">
+        <div class="message-title">Your Encoded Message is: </div>
+        <div class="encoded-message">
+        {{encoded_message}}
+        </div>
+        <br>
+        <div class="message-title">Your Secret Key is: </div>
+        <div class="secret-key">
+        {{secret_key}}
+        </div>  
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}

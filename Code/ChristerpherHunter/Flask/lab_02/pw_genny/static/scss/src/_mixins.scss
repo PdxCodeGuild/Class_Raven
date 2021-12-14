@@ -1,0 +1,93 @@
+// if flex row is desired, pass only the last two args
+// if flex col is desired pass the first as well
+@mixin flex($dir: row, $align-items: flex-start, $justify-content: flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+// 1 arg sets all, 2 args sets top/bottom, 4 args sets TLDR
+@mixin border-radius(
+    $top-left,
+    $bottom-left: null,
+    $top-right: $top-left,
+    $bottom-right: $bottom-left
+) {
+    @if not $bottom-left {
+        border-radius: $top-left;
+    } @else {
+        border-top-left-radius: $top-left;
+        border-top-right-radius: $top-right;
+        border-bottom-left-radius: $bottom-left;
+        border-bottom-right-radius: $bottom-right;
+    }
+}
+
+@mixin rectangle($height, $width: $height) {
+    height: $height;
+    width: $width;
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// scalable elements (usually images / background images) that maintain a ratio.
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+    $padding: unquote(($y / $x) * 100 + "%");
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+// The example below showing the padding and font-size increasing
+// once the viewport gets over 1024px.
+
+// .site-header {
+//     padding: 2rem;
+//     font-size: 1.8rem;
+//     @include mq('tablet-wide') {
+//         padding-top: 4rem;
+//         font-size: 2.4rem;
+//     }
+// }
+
+$breakpoints: (
+    "phone": 400px,
+    "phone-wide": 480px,
+    "phablet": 560px,
+    "tablet-small": 640px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1248px,
+    "desktop-wide": 1440px,
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin absolute-position($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+    right: $right;
+    top: $top;
+}
