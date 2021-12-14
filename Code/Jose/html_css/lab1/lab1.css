@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+header {
+    background-image:url("https://www.earlygame.com/uploads/images/xqcow-icon.jpeg.jpg");
+}
+header span {
+    background: gray;
+    padding: .5%;
+    border-radius: 10px;
+
+}
+
+body {
+    background-color:lightgray;
+    font-family: 'Balsamiq Sans';
+}
+aside {
+    text-align: center;
+    list-style: inside;
+    margin-top: 2%;
+}
+p {
+    margin: 5px;
+    text-align: center;
+}
+
+div {
+    background-color: lightgray;
+    text-align: center;
+}
+
+footer {
+    background-image:url("https://www.earlygame.com/uploads/images/xqcow-icon.jpeg.jpg");
+}
+footer span {
+    background: gray;
+    padding: .5%;
+    border-radius: 10px;
+}
+ul {
+    list-style-image: url('https://static-cdn.jtvnw.net/emoticons/v2/301334587/default/dark/1.0');
+}

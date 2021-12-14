@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+	<div class="container-fluid col-6">
+		<h1 class="text-center">Rot13</h1>
+		<p class="text-center">
+			<a
+				class="btn btn-secondary btn-lg"
+				tabindex="-1"
+				role="button"
+				aria-disabled="false"
+				href="{{ url_for('input') }}"
+				>Lets encrpyt some text!</a
+			>
+		</p>
+	</div>
+</div>
+
+{% endblock %}
