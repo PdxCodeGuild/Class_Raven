@@ -1,7 +1,7 @@
 let trash = document.getElementById('trash')
 let container = document.getElementById('.container')
 let add = document.getElementById('add')
-
+let text = document.getElementById('#text')
 // trash.addEventListener('click', function(){
 //     trash.classList.add('grow')
 // })
@@ -14,5 +14,5 @@ let add = document.getElementById('add')
 
 add.addEventListener('click', function (){
     var txt = prompt('Task to do is..');
-    add.innerHTML += '<li class=list-group-item'> + txt + '</li>'
+    text.innerHTML += '<li class=list-group-item'> + txt + '</li>'
 })
