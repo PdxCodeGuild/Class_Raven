@@ -1,5 +1,3 @@
-# Monday 10/18
-# * simulates playing the lottery
 def lab_lottery():
     ''
 # * creates 6 random integers and outputs the ticket as a list
