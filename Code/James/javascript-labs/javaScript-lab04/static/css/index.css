@@ -1,0 +1,7 @@
+.grow {
+    transform: scale(1.2);
+}
+
+input {
+    display: inline;
+}
