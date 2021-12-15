@@ -1,0 +1,13 @@
+.bg-black {
+  background-color: black;
+}
+.bg-grey {
+  background-color: grey;
+}
+.txt-white {
+  color: white;
+}
+
+div {
+  margin: 1rem;
+}
