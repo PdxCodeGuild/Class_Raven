@@ -2,6 +2,14 @@
 //let feet = meters / 0.3048;
 //console.log(feet + " feet");
 
+
+
+
+
+
+
+//Working Version 2: (if/else if)
+
 let q2 = prompt('What are the units to convert(choose either: "ft", "m", "km", "mi" ');
 let q1 = parseInt(prompt('What is the distance in meters?'));
 
