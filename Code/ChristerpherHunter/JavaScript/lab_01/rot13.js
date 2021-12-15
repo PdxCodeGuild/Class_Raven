@@ -1,49 +1,79 @@
 
 
-const userString = "Hello World!"
-
-// userString = prompt("Please enter the word to be encrypted: ")
+let userString = "Hello World!"
+userString = prompt("Please enter the word to be encrypted: ")
 
 var n = 13
+n = prompt("Please enter the rotation number: ")
+
 
 const asciiLowerCase = "abcdefghijklmnopqrstuvwxyz"
 
-// let asciiLowerCase = {1: "a",
-//                       2: "b",
-//                       3: "c",
-//                       4: "d",
-//                       5: "e",
-//                       6: "f",
-//                       7: "g",
-//                       8: "h",
-//                       9: "i",
-//                       10: "j",
-//                       11: "k",
-//                       12: "l",
-//                       13: "m",
-//                       14: "n",
-//                       15: "o",
-//                       16: "p",
-//                       17: "q",
-//                       18: "r",
-//                       19: "s",
-//                       20: "t",
-//                       21: "u",
-//                       22: "v",
-//                       23: "w",
-//                       24: "x",
-//                       25: "y",
-//                       26: "z"
-// }
+function cleaner(userInput) {
 
-let wordArray = userString.split(" ")
-console.log(wordArray)
+    // Grab the index of the space and special chars
+    let space = userString.indexOf(" ")
+    
+    // console.log(`Space Count: ${space}`)
 
-// for (letter of userString) {
-//     console.log(letter.toLowerCase().charCodeAt(letter));
-//     // if (letter === asciiLowerCase[letter]) {
-//     //     console.log("working")
-//     // } else {
-//     //     console.log("Not Working")
-//     // }
-// }
+    return space
+}
+
+function cleaner2(userInput) {
+
+    let specChar = userString.match(/[!,."'?]/g)
+    // console.log(`Special Character: ${specChar}`)
+
+    return specChar
+}
+
+function smoother(userInput ,specChar) {
+
+    // Clean the input
+    userInput = userInput.replace(" ", "")
+    userInput = userInput.replace(specChar, "")
+    // console.log(`Input String: ${userInput}`)
+
+    return userInput
+}
+
+// Loop through the string and on each iteration extract the letter
+// store the corresponding alphabetical number
+function addN(userInput, n = 13, alphabet = asciiLowerCase) {
+    let wordCountList = 0
+    let word = ""
+    let space = 0
+    let specChar = ""
+
+    // Grab special information
+    space = cleaner(userInput)
+    specChar = cleaner2(userInput)
+    
+    // Strip the space and special char
+    userInput = smoother(userInput ,specChar)
+    // console.log(userInput)
+
+    for (letter of userInput) {
+        
+        // Store the corresponding alphabetical letter to the number
+        wordCountList = alphabet.indexOf(letter.toLowerCase())
+
+        // Add 'n' to that number
+        wordCountList += n
+
+        // if over 26, assign the letter to the difference of 26 and the overage.
+        if (wordCountList > 26) {
+            wordCountList -= alphabet.length
+        }
+        word += alphabet[wordCountList]
+    }
+
+    // reassemble the word
+    word = word.slice(0, space) + " " + word.slice(space, word.length) + specChar
+
+    return word
+}
+
+let encrypted = addN(userString, 13)
+
+alert(`Encrypted Message: ${encrypted}`)
