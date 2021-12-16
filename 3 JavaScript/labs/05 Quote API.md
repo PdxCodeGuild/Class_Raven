@@ -46,6 +46,16 @@ const FAVQS_API_KEY = 'ab09c7b09c7ca9c7b9ca0c79c7b97cb'
 
 As long as `secrets.js` is loaded before `index.js`, the API key variable will be available.
 
+The API key will be included in the headers object that's passed to the API along with your request. The authorization header will have to be formatted like so: 
+
+```javascript
+{
+    // ... other headers
+
+    Authorization: `Token token=${API_KEY_HERE}`
+}
+```
+
 **Note:** This is still not the most secure way to handle secret keys. We'll see other ways later in the course.
 
 You can use Favqs' `page` and `filter` parameters to get a bunch of quotes from the API. You can add page buttons and/or a text `input` field and `button` for filtering.
