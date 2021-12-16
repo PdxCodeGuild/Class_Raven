@@ -36,26 +36,29 @@ function addTodo(text) {
 }
 
 function toggleComplete(targetTodo) {
-  todos = todos.map((todo) => {
+  let newList = [];
+  todos.forEach((todo) => {
     if (todo.text === targetTodo.text) {
-      return {
+      newList.push({
         text: todo.text,
         complete: !todo.complete,
-      };
+      });
     } else {
-      return todo;
+      newList.push(todo);
     }
   });
+  todos = newList
 }
 
+
 function deleteTodo(targetTodo) {
-  todos = todos.filter((todo) => {
-    if (todo.text === targetTodo.text) {
-      return false;
-    } else {
-      return true;
-    }
+  let deleteList = []
+  todos.forEach((todo) => {
+    if (todo.text !== targetTodo.text) {
+      deleteList.push(todo)
+    }  
   });
+  todos = deleteList
 }
 
 function generateTodoItem(todo) {
