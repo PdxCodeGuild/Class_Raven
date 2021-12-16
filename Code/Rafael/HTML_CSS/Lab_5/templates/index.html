@@ -85,8 +85,8 @@
             <label for="black">None</label><br>
         </li>
         <!-- 4. Protein -->
-        <li class="flex-item" style="height:600px;">
-          <h2 id="center">4. Protein / Other</h2>
+        <li class="flex-item" style="height: 500px;">
+          <h2 id="center">4. Protein</h2>
      
             <input type="radio" id="carne-asada" name="protein" 
             value="carne-asada" required="required">
@@ -103,11 +103,6 @@
             <img src="{{url_for('static', filename='images/carnitas.png')}}" height="75" width="auto" />
             <label for="carniatas">Carnitas (Pork)</label><br>
 
-            <input type="radio" id="fajitas" name="protein" 
-            value="veggie fajitas (peppers, onions & mushrooms)" required="required">
-            <img src="{{url_for('static', filename='images/fajitas.png')}}" height="75" width="auto" />
-            <label for="fajitas">Fajitas (Peppers & Onions)</label><br>
-
             <input type="radio" id="none" name="protein" 
             value="none" required="required">
             <img src="{{url_for('static', filename='images/none.png')}}" height="75" width="auto" />
@@ -116,8 +111,13 @@
         
         </li>
           <!-- 6. Additional Ingredients -->
-        <li class="flex-item">
+        <li class="flex-item"  style="height: 700px;">
           <h2 id="center-additional-items" style="margin-top:-6px;">5. Additional Ingredients</h2>
+
+            <input type="radio" id="fajitas" name="additional" 
+            value="veggie fajitas (peppers, onions & mushrooms)" required="required">
+            <img src="{{url_for('static', filename='images/fajitas.png')}}" height="75" width="auto" />
+            <label for="fajitas">Fajitas (Peppers & Onions)</label><br>
         
             <input type="checkbox" id="guacamole" name="additional" 
             value="guacamole">
