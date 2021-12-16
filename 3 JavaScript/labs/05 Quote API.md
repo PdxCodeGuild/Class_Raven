@@ -26,16 +26,16 @@ There are bots that crawl Github looking for API keys to steal. If you publish a
 
 To keep it safe, we'll put the key in a file called `secrets.js` which will be included in a `<script>` tag before the main Javascript file in `index.html`.
 
+### secrets.js
 ```javascript
-// secrets.js
 
 // replace with your API key as a string
 const FAVQS_API_KEY = 'ab09c7b09c7ca9c7b9ca0c79c7b97cb' 
 
 ```
 
+### index.html
 ```html
-<!-- index.html -->
 <body>
     ...
 
@@ -73,3 +73,5 @@ axios.get(
     }
 )
 ```
+
+This will return data with a **list of quotes**, the **current page number** and a **boolean indicating whether or not it is the last page of quotes for that search**.
