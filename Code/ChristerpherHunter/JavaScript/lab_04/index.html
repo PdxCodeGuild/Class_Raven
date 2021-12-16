@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <title>To Do List</title>
 </head>
+
 <body>
-    <div class="main">
-        <div class="main-container">
-            <div class="main-container-page">
-                
+    <nav class="navbar has-background-grey-lighter mb-6" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item"> Home </a>
+
+                <a class="navbar-item"> Documentation </a>
+
+                <div class="navbar-item has-dropdown is-hoverable"></div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons"></div>
+                </div>
             </div>
         </div>
+    </nav>
+    <div class="columns is-mobile">
+        <div class="column is-one-quarter"></div>
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <h1>Card Title</h1>
+                        <h3>subtitle</h3>
+                        <p class="">to do items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-one-quarter"></div>
     </div>
 </body>
+
 </html>
