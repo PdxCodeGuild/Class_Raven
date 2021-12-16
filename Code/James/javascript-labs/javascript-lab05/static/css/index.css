@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Playfair+Display&display=swap');
+
+*{
+    font-family: 'Arvo', serif;  
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 0;
+    
+}
+
+#author {
+    font-style: italic;
+    margin-top: 2rem;
+}
