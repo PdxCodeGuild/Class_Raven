@@ -49,7 +49,7 @@ As long as `secrets.js` is loaded before `index.js`, the API key variable will b
 The API key will be included in the headers object that's passed to the API along with your request. The authorization header will have to be formatted like so: 
 
 ```javascript
-{
+const headers = {
     // ... other headers
 
     Authorization: `Token token=${API_KEY_HERE}`
