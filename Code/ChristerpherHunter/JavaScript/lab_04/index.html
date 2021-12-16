@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="index.css">
     <title>To Do List</title>
 </head>
 
@@ -24,7 +25,13 @@
             <div class="navbar-start">
                 <a class="navbar-item"> Home </a>
 
-                <a class="navbar-item"> Documentation </a>
+                <a class="navbar-item"> Create Task </a>
+
+                <a class="navbar-item"> Retrieve Task </a>
+
+                <a class="navbar-item"> Update Task </a>
+
+                <a class="navbar-item"> Delete Task </a>
 
                 <div class="navbar-item has-dropdown is-hoverable"></div>
             </div>
@@ -38,19 +45,45 @@
     </nav>
     <div class="columns is-mobile">
         <div class="column is-one-quarter"></div>
-        <div class="column">
-            <div class="card">
+        <div class="column is-half">
+            <div class="card has-background-primary-dark">
                 <div class="card-content">
                     <div class="content">
-                        <h1>Card Title</h1>
-                        <h3>subtitle</h3>
-                        <p class="">to do items</p>
+                        <h2>Title:</h2>
+                        <input class="input" type="text" id="title" required>
+                        <h3>Topic:</h3>
+                        <input class="input" type="text" id="subTitle" required>
+                        <br>
+                        <br>
+                        <h5>Content:</h5>
+                        <textarea class="textarea" id="content" cols="12" rows="5" placeholder="Detailed Task"></textarea>
+                        <br>
+                        <br>
+                        <button class="button is-primary" id="submit">Create Task</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div id="root-div">
+                <div class="card has-background-warning">
+                    <div class="card-content">
+                        <div class="content is-flex is-flex-direction-column">
+                            <h2 id="title-post">Card Title</h2>
+                            <h3 id="subTitle-post">subtitle</h3>
+                            <p id="body-post" class="">to do items</p>
+                            <button class="button is-small is-primary is-align-self-flex-end mb-4">Delete</button>
+                            <button class="button is-small is-primary is-align-self-flex-end">Re-Add</button>
+                        </div>
+                        <button class="button is-fullwidth is-primary">Complete</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="column is-one-quarter"></div>
     </div>
+    <script src="index.js"></script>
+
 </body>
 
 </html>
