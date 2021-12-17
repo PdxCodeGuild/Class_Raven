@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row bg-light pb-5 mb-5" id="receipt">
+  <div class="col-12 col-lg-6 offset-lg-3 text-center">
+    <img
+      id="logo"
+      src="{{url_for('static', filename='images/logo.png')}}"
+      alt="Dos Burros Logo"
+    />
+    <div class="display-1 text-center py-5">Order Receipt</div>
+  </div>
+  <div class="col-12 col-lg-6 offset-lg-3">
+    {% for field in receipt.keys() %}
+        <h3 class="h3 mt-3">{{field.title()}}</h3>
+        {% if field == 'extra' %} 
+            {% for item in receipt['extra'] %}
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="lead">{{ item['name'].title() }}</div>
+                <div class="price-label">{{item['price']}}</div>
+            </div>
+            {% endfor %}
+        {% elif field == 'delivery' %}
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="lead">{{ receipt[field]['name'].title() }}</div>
+                <div class="price-label">{{field['price']}}</div>
+            </div>
+        {% else %}
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="lead">{{ receipt[field]['name'].title() }}</div>
+                <div class="price-label">{{receipt[field]['price']}}</div>
+            </div>
+        {% endif %} 
+    {% endfor %}
+  </div>
+
+  <div class="col-12 col-lg-6 offset-lg-3 d-flex justify-content-between pt-5">
+      <div class="h1">Total</div>
+      <div class="h1">${{order_total}}</div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class='burrito-header'>
+    <p class='burrito-header-text'>El Burrito Grande - your receipt</p>
+</div>
+
+<div class="receipt-background">
+    <div class='receipt-done'>Tortilla: {{ receipt['tortilla'] }}</div>
+    <div class='receipt-done'>Protein: {{ receipt['protein'] }}</div>
+    <div class='receipt-done'>Rice: {{ receipt['rice'] }}</div>
+    <div class='receipt-done'>Beans: {{ receipt['beans'] }}</div>
+    <ul>
+        {% for item in receipt['extra'] %}
+        {% if item != None %}
+        <div class='receipt-done'>Extra:</div>
+        {% endif %}
+        <li class='receipt-done'>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}
