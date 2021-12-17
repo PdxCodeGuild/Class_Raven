@@ -1,11 +1,12 @@
 body{
-    background-color: rgb(20, 20, 20);
+  background-color: rgb(20, 20, 20);
 }
- 
+
 h1{
   text-align: center;
   font-size: 1.6rem;
 }
+
 #todo-list{
   font-family: Lato;
   margin-top: 30px;
@@ -25,7 +26,7 @@ h1{
   gap:5;
   /* reference: https://html-css-js.com/css/generator/box-shadow/ */
   -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -px 10px, #ff8000 0 5px 10px, red 0 18px 10px, 5px 5px 5px 5px rgba(0,0,0,0); 
-box-shadow: #FFF 0 1px 4px, #ff0 0 -2px 10px, #ff8000 0 5px 10px, red 0 8px 10px, 5px 5px 5px 5px rgba(0,0,0,0);
+  box-shadow: #FFF 0 1px 4px, #ff0 0 -2px 10px, #ff8000 0 5px 10px, red 0 8px 10px, 5px 5px 5px 5px rgba(0,0,0,0);
 }
 .todo-item{
   color:white;
@@ -36,7 +37,6 @@ box-shadow: #FFF 0 1px 4px, #ff0 0 -2px 10px, #ff8000 0 5px 10px, red 0 8px 10px
 /* space between evens the space between the CRUD div and the List div*/
   justify-content: space-between;
 }
-
 
 /* .complete to style the complete class */
 .complete{
