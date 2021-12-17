@@ -80,6 +80,11 @@ var game_on = false
 // console.log(5 === '5')
 // console.log(5 === 5)
 
+// Checking inequality
+var a = 3, b = 5
+// console.log(a !== b) // true
+
+
 var temp = 90
 // if(temp < 60){
 //   console.log('cold')
