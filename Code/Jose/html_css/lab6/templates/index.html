@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{{ url_for('lock') }}" method="POST" class="container">
+
+    <div class="word-box1 input-group mb-3">
+        <span class="input-group-text">String to encrypt</span>
+        <input type="text" class="form-control" id='word' name='word'>
+    </div>
+
+    <div class="word-box2 input-group mb-3">
+        <span class="input-group-text">Amount of rotations (1, 2, 3..)</span>
+        <input type="text" class="form-control" id='rotations' name='rotations'>
+    </div>
+
+    <a href="{{ url_for('lock') }}">
+        <button type="submit" class='btn btn-primary'>Submit</button>
+    </a>
+
+</form>
+{% endblock %}

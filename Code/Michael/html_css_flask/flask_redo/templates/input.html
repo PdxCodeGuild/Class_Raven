@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<div class="form-group container-fluid card col-6">
+	<form action="input" method="POST">
+		<label for="rot">Rotate by:</label>
+		<div class="flex-column">
+			<input type="text" name="rotations" id="rotations" value="13" />
+		</div>
+		<br />
+		<label for="text">Enter text to encrypt:</label>
+		<div class="flex-column">
+			<textarea name="text" id="text" required value=""></textarea>
+		</div>
+		<br />
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+{% endblock %}
