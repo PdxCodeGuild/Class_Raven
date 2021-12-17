@@ -23,30 +23,30 @@ function game (){
 
 function result (user, computer){
     if (user == computer){
-        console.log("You tied!")
+        alert("You tied!")
         return
     } else if (user == 'rock') {
         if (computer == 'paper') {
-            console.log("The computer's paper covers your rock - you lose!")
+            alert("The computer's paper covers your rock - you lose!")
             return
         } else if (computer == 'scissors') {
-            console.log("The computer's scissors are crushed by your rock - you win!")
+            alert("The computer's scissors are crushed by your rock - you win!")
             return
         }
     } else if (user == 'paper') {
         if (computer == 'scissors') {
-            console.log("The computer's scissors cuts your paper - you lose!")
+            alert("The computer's scissors cuts your paper - you lose!")
             return
         } else if (computer == 'rock') {
-            console.log("The computer's rock is covered by your paper - you win!")
+            alert("The computer's rock is covered by your paper - you win!")
             return
         }
     } else if (user == 'scissors') {
         if (computer == 'rock') {
-            console.log("The computer's rock crushes your scissors - you lose!")
+            alert("The computer's rock crushes your scissors - you lose!")
             return
         } else if (computer == 'paper') {
-            console.log("The computer's paper is cut by your scissors - you win!")
+            alert("The computer's paper is cut by your scissors - you win!")
             return
         }
     }

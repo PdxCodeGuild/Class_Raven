@@ -58,9 +58,9 @@ function getCustom(meters, unit){
 
 
 
-let outputUnit = prompt('Enter the unit you would like to convert to: ')
+let outputUnit = prompt('Enter the unit you would like to convert to ("feet", "miles", "meters", "kilometers", "yards", or "inches"): ')
 let inputDistance = prompt('Enter the distance you would like to convert:')
-let inputUnit = prompt('Enter the unit you are converting from (feet, miles, meters, kilometers, yards, or inches)')
+let inputUnit = prompt('Enter the unit you are converting from ("feet", "miles", "meters", "kilometers", "yards", or "inches")')
 let meterResult = getMeters(inputDistance, inputUnit)
 
 if (outputUnit != "meters"){
