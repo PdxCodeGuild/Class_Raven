@@ -8,18 +8,18 @@ let completeTodoSection = document.querySelector('#complete-todoListObject'),
 //console.log(typeof completeTodoSection)
 
 let todoListObject = [
-  {text: 'transfer godaddy domain to google',
+  {text: 'wash sand off vehicle',
   'complete': true },
 
   {text: 'get an external drive for laptop',
   'complete': false },
-  {text: 'wash the sand off truck',
+  {text: 'mail out holiday cards',
   'complete': true },
 
-  {text: 'sell used video-card',
+  {text: 'sell used video-card on ebay',
   'complete': false },
 
-  {text: 'upgrade pc case for christmas',
+  {text: 'research recipes for Christmas day',
   'complete': false },
 
   
@@ -34,7 +34,7 @@ let todoListObject = [
 submitButton.addEventListener('click', ()=>{
   //console.log(inputField.value) //To confirm button is working
   addTodo(inputField.value)
-  /* -- Clears the input field text -- */
+  /*-- Clears the input field text --*/
   inputField.value = ''
   updateTodoList()
 })
@@ -45,12 +45,12 @@ function addTodo(text){
     text: text,
     completed: false
   }
-    /* ---- Add the new todo item to the list by concatenations ----*/
+    /*---- Add the new todo item to the list by concatenations ----*/
   todoListObject = todoListObject.concat(newTodo)
 
 }
 
-/*---Complete & Incomplete button functionality, flips the complete and incomplete items*/
+/*--- Complete & Incomplete button functionality, flips the complete and incomplete items*/
 function toggleComplete(targetTodo){
   todoListObject = todoListObject.map((todo)=>{
     if(todo.text === targetTodo.text){
@@ -58,7 +58,7 @@ function toggleComplete(targetTodo){
         text: todo.text,
         complete: !todo.complete
     }
-    /*-- Otherwise return the todo value itself and keep it the same--*/
+    /*-- Otherwise return the todo value itself and keep it the same --*/
     } else {
        return todo 
     }
@@ -67,7 +67,7 @@ function toggleComplete(targetTodo){
 }
 
 
-/* *filter* instead of *map* Array method to go through each item*/
+/* *filter* instead of *map* Array method to go through each delete item*/
 function deleteTodo(targetTodo){
     todoListObject = todoListObject.filter(todo=>{
       if (todo.text === targetTodo.text){
@@ -88,17 +88,16 @@ function generateTodoItem(todo){
   todoItem = document.createElement('div');
   /* ----    ``````` not quotes ``````      ----*/
   todoItem.innerHTML = `<div>${todo.text}</div>`;
-  /* ----Returning todoItem will update the TodoList  ----*/
-
+ 
   /*--- Create CRUD Buttons ---*/
   crudButtons = document.createElement('div')
 
-  /* ----Create Additional Buttons CRUD **create, read, **update, **delete. These will be added to the function for Left todoItem  ----*/
+  /* ---- Create Additional Buttons CRUD **create, read, **update, **delete. These will be added to the function for Left todoItem  ----*/
    /* ---- *Complete Button* ----*/
   completeButton = document.createElement('button');
   completeButton.innerHTML = 'Complete';
 
-  /*---complete button eventListener to hook up html button and update todo list---*/ 
+  /*--- complete button eventListener to hook up html button and update todo list ---*/ 
   completeButton.addEventListener('click', ()=>{
       toggleComplete(todo)
       updateTodoList()
@@ -107,12 +106,12 @@ function generateTodoItem(todo){
    /* ---- *Delete Button* ----*/
   deleteButton = document.createElement('button');
   deleteButton.innerHTML = 'Delete';
-/*---delete button eventListener to hook up html button and update todo list---*/ 
+/*--- delete button eventListener to hook up html button and update todo list ---*/ 
   deleteButton.addEventListener('click', ()=>{
     deleteTodo(todo)
     updateTodoList()
 })
-   /* ---- *CRUD Buttons* to display the buttons in the div from created buttons above----*/
+   /* ---- *CRUD Buttons* to display the buttons in the div from created buttons above ----*/
   crudButtons.appendChild(completeButton)
   crudButtons.appendChild(deleteButton)
 
@@ -121,12 +120,12 @@ function generateTodoItem(todo){
 
  
 
-
+ /* ---- nReturning todoItem will update the Todo array  ----*/
   return todoItem
 }
 
 /* ---- CRUD  (create, Read, Update, Delete) ----*/
-/* ----    Render a function for todoListObject  part of completeTodoSection above      ----*/
+/* ----  Render a function for todoListObject  part of completeTodoSection above ----*/
 /* ---- Function **updateTodoList** return todoItem ----*/
 function updateTodoList(){
   let todoItem;
@@ -137,17 +136,17 @@ function updateTodoList(){
 /* ---- Test to return todoItem index value ----*/
   //todoItem = generateTodoItem(todoListObject[0])
   
-  /* ---- Separate 2 items into Complete/Incomplete using a loop  ----*/
-   /* ---- Cycle through the todoListObject array via *forEach()*, pulls them into the variable and passes them through the function *(todo=>{})* ----*/
+  /*---- Separate 2 items into Complete/Incomplete using a loop  ----*/
+   /*---- Cycle through the todoListObject array via *forEach()*, pulls them into the variable and passes them through the function *(todo=>{})* ----*/
   todoListObject.forEach(todo=>{
-      /*--- Indent --- */
+      /*--- Indent ---*/
     todoItem = generateTodoItem(todo)
     //console.log(todo)
 
     /*--- Filters the todoListObject within the .forEach ---*/  
     /*--- if(todo[complete]){} "can be interchanged" when targeting keys or specific target todo[`key-${x}`]  ---*/ 
     if(todo.complete){
-         /* ---- You can pass multiple, if/else takes care of complete and incomplete appends  ----*/
+         /*---- You can pass multiple, if/else .add()  of complete and incomplete appends  ----*/
         todoItem.classList.add("complete", "todo-item" )
         completeTodoSection.appendChild(todoItem)
     }else{ 
@@ -157,13 +156,13 @@ function updateTodoList(){
 
     }) 
   
-  /* ---- Add Items ----*/
+  /*---- Add Items ----*/
   todoItem.classList.add('todo-item')
-  /* ---- Add new items to the list ----*/
+  /*---- Add new items to the list ----*/
   incompleteTodoSection.appendChild(todoItem)  
 
 }
 
 
-/* ---- renders and updates the list  ----*/
+/*---- renders and updates the list  ----*/
 updateTodoList()
