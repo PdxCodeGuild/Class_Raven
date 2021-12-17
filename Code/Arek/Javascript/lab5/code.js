@@ -1,6 +1,13 @@
 //Version 1 of lab5
 
-let url = "https://favqs.com/api/qotd"
+
+
+
+let pageNumber = 1
+let queryString = 'astronomy'
+let url = "https://favqs.com/api/quotes"
+
+
 
 
 let btn = document.querySelector('#button1')
@@ -12,23 +19,33 @@ btn.addEventListener('click', function(){
             let newQuote = document.createElement('h1')
             
             newQuote.innerText = `
-            "${data.quote.body}"\n\n  -${data.quote.author}
+            "${data.quotes[Math.floor(Math.random()* data.quotes.length)].body}"\n\n
+             
             `
             quote.appendChild(newQuote) 
         }
-
-    fetch(url).then(function (response){
-        return response.json() //.json() returns another promise so we have to use another .then to get the data from the
-            //promise IT its fufilled
-    }).then(function (data){
-            // can manipulate the DOM right here with a function or hard coded in.
-        displayQuote(data) //calls the displayQuote function to display the quoute on the screen 
-        
-    }).catch(function (error){
-        alert(error) // this will alert and show the error if either of the two promises fail
+    axios({
+        method: 'get',
+        url: url,
+        headers: {
+            Authorization: `Token token=${FAVQS_API_KEY}`
+        },
+        params: {
+            page: pageNumber,
+            filter: queryString
+        }
+            
     })
+    .then(function (response){
+        console.log(response.data.quotes[Math.floor(Math.random()* response.data.quotes.length)].body)
+        displayQuote(response.data)
         
-})
+    })
+    .catch(function (error){
+            console.log(error)
+    })
+
+})  
 
 
 
