@@ -1,6 +1,6 @@
 
-/* ---- Complete/Incomplete  ----*/
-/* ---- Only one Let prefix,  DOM #targets the html id's   ----*/
+/* ---- Complete/Incomplete ----*/
+/* ---- Only one Let prefix,  DOM #targets the html id's  ----*/
 let completeTodoSection = document.querySelector('#complete-todoListObject'),
     incompleteTodoSection = document.querySelector('#incomplete-todoListObject'),
     submitButton = document.querySelector('#submit'),
@@ -21,14 +21,10 @@ let todoListObject = [
 
   {text: 'research recipes for Christmas day',
   'complete': false },
-
-  
-  
 ]
 //console.log(todoListObject) //*** Array(5)0: {text: 'textValue1', complete: false}1: {text: 'textValue2', complete: true}2: {text: 'textValue3', complete: false}3: {text: 'textValue4', complete: true}4: {text: 'textValue5', complete: false}length: 5 ***
 
 //console.log(typeof todoListObject) // *** object ***
-
 
 /*---- To create a new todo item from button click with a 'click' event and pass a function for the input field for addTodo input value and make sure to add updateTodoList() to render  ----*/
 submitButton.addEventListener('click', ()=>{
@@ -61,11 +57,9 @@ function toggleComplete(targetTodo){
     /*-- Otherwise return the todo value itself and keep it the same --*/
     } else {
        return todo 
-    }
-   
+    }  
   })
 }
-
 
 /* *filter* instead of *map* Array method to go through each delete item*/
 function deleteTodo(targetTodo){
@@ -74,8 +68,7 @@ function deleteTodo(targetTodo){
           return false
       } else {
           return true
-      }
-      
+      }      
     })
 }
 
@@ -118,8 +111,6 @@ function generateTodoItem(todo){
   /* ---- *This will add the buttons to the TodoItem* ----*/
   todoItem.appendChild(crudButtons)
 
- 
-
  /* ---- nReturning todoItem will update the Todo array  ----*/
   return todoItem
 }
@@ -153,16 +144,13 @@ function updateTodoList(){
             todoItem.classList.add("todo-item")
             incompleteTodoSection.appendChild(todoItem)
         }
-
     }) 
   
   /*---- Add Items ----*/
   todoItem.classList.add('todo-item')
   /*---- Add new items to the list ----*/
   incompleteTodoSection.appendChild(todoItem)  
-
 }
-
 
 /*---- renders and updates the list  ----*/
 updateTodoList()
