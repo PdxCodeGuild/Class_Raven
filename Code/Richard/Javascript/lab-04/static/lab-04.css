@@ -14,3 +14,7 @@ button {
     padding: 2px;
     margin: 7px;
 }
+
+#complete-todos {
+text-decoration: line-through;
+}

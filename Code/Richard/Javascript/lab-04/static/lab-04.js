@@ -1,82 +1,89 @@
-let task, create, vanish, finish, done, disappear
+let task, create, vanish, finish, done, disappear;
 
-const incompleteTodosDiv= document.querySelector('#incomplete-todos')
-const completeTodosDiv=document.querySelector('#complete-todos')
+const incompleteTodosDiv = document.querySelector("#incomplete-todos");
+const completeTodosDiv = document.querySelector("#complete-todos");
 
-let incomplete = [
-    "cut grass",
-    "hide eggs",
-    "fill baskets"
-]
+let incomplete = ["cut grass", "hide eggs", "fill baskets"];
 
-let complete = [
-    "buy grass",
-    "buy eggs",
-    "buy baskets"
-]
+let complete = ["buy grass", "buy eggs", "buy baskets"];
 
-function loadTodo(){
-    let todo, finish, vanish
-    incompleteTodosDiv.innerHTML=''
-    for (task of incomplete) {    
-        todo = document.createElement("div")
-        todo.innerText = task
-        finish= document.createElement("button")
-        finish.innerText='Done!'
-        vanish=document.createElement("button")
-        vanish.innerText="Delete"
-        todo.appendChild(finish)
-        todo.appendChild(vanish)
-        incompleteTodosDiv.appendChild(todo)
-    }
+function loadTodo() {
+  let todo, finish, vanish;
+  incompleteTodosDiv.innerHTML = "";
+  for (i in incomplete) {
+    task = incomplete[i];
+    todo = document.createElement("div");
+    todo.innerText = task;
+    todo.id = `incomplete-${i}`;
+
+    finish = document.createElement("button");
+    finish.id = `Incomplete-${i}`;
+    finish.innerText = "Done!";
+    finish.addEventListener('click', function (event){
+        let todoId= event.target.parentNode.id
+        let cut= todoId.split('-')
+        let num = parseInt(cut[1])
+        complete.push(incomplete[num])
+        incomplete.pop(num)
+        loadTodo()
+        loadDone()
+    })
+
+    vanish = document.createElement("button");
+    vanish.id = `Incomplete-${i}`;
+    vanish.innerText = "Delete";
+    vanish.addEventListener('click', function (event){
+        let todoId= event.target.parentNode.id
+        let cut= todoId.split('-')
+        let num = parseInt(cut[1])
+        complete.pop(num)
+        console.log(complete)
+        loadTodo()
+        loadDone()
+    })
+    todo.appendChild(finish);
+
+    todo.appendChild(vanish);
+
+    incompleteTodosDiv.appendChild(todo);
+  }
 }
 
-    
-function loadDone (){
-    for (task of complete) {
-        todo = document.createElement("div")
-        todo.innerText = task
-        vanish=document.createElement("button")
-        vanish.innerText="Delete"
-        todo.appendChild(vanish)
-        completeTodosDiv.appendChild(todo)
-    }
+function loadDone() {
+  let todo, vanish;
+  completeTodosDiv.innerHTML = "";
+  for (let i in complete) {
+    task = complete[i];
+
+    todo = document.createElement("div");
+    todo.innerText = task;
+    todo.id = `complete-${i}`;
+
+    vanish = document.createElement("button");
+    vanish.id = `Complete-${i}`;
+    vanish.innerText = "Delete";
+    vanish.addEventListener('click', function (event){
+        let todoId= event.target.parentNode.id
+        let cut= todoId.split('-')
+        let num = parseInt(cut[1])
+        complete.pop(num)
+        console.log(complete)
+        loadDone()
+    })
+
+    todo.appendChild(vanish);
+
+    completeTodosDiv.appendChild(todo);
+  }
 }
 
-create = document.querySelector('#create');
-create.addEventListener('click', function createtodo() {incomplete.push(task=text.value); text.value=''; loadTodo()})
+create = document.querySelector("#create");
+create.addEventListener("click", function createtodo() {
+  incomplete.push(text.value);
+  text.value = "";
+  loadTodo();
+});
 
-// disappear = document.querySelector('#vanish');
-// disappear.addEventListener('click', function vanishTodo(){task=text.value;loadTodo(); text.value=''})
+loadTodo();
+loadDone();
 
-// done = document.querySelector('#finish');
-// done.addEventListener('click', function finishTodo(){task=text.value;loadDone(); text.value=''})
-
-loadTodo()
-loadDone()
-
-
-
-
-
-
-
-
-// function deleteTodo (){
-
-
-// }
-// for (task of incomplete) {
-// containerDiv = document.querySelector('#todo-list')
-// todo = document.createElement("div")
-// todo.innerText = task
-// console.log(todo.innerText)
-// containerDiv.appendChild(todo)
-// }
-
-// console.log(document.getElementById('new-item-text').value)
-
-// let incomplete = document.querySelector('#incomplete-todos')
-// incomplete.innerHTML = '<h3>capture skunks</h3>'
-
-// incomplete.push(value."#new-text-item") // add value from create button to incomplete todos
