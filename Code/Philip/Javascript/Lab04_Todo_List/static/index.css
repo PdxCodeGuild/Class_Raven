@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+
+header {
+  background: slategray;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 15px;;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 8px 8px 8px 20px;
+  list-style-type: none;
+  background: rgba(105, 90, 205, 0.096);
+  font-size: 18px;
+  transition: 0.2s;
+  margin: 3%;
+  border-radius: 20px;
+  border-color:slateblue;
+  border-width:.2em;
+  border-style:solid;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ul li:hover {
+  background: rgba(105, 90, 205, 0.288)
+}
+
+.completed {
+    text-decoration: line-through;
+    border-color:#555;
+  background: rgb(145, 163, 182);
+  color: #fff;
+}
+
+.fas {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+}
+
+.fas:hover {
+  border-radius: 50%;
+    background-color: rgba(75, 109, 139, 0.445);
+  color: white;
+}
+
