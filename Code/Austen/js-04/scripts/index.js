@@ -1,70 +1,42 @@
-// document elements
+import Task from "./Task.js"
+
+// document element shortcut
   var doc = document;
-  var body = doc.body;
-  var main = doc.querySelector("main");
-  var addBtn = doc.getElementById('add')
-  var removeBtn = doc.getElementById('remove')
-  var updateBtn = doc.getElementById('update')
-  var tasklist = doc.getElementById("tasklist");
+// tasklist arrays
+  var tasklist = [new Task({id: 1, name: "test"})];
+  var complete = [];
   var tasksSection = doc.getElementById("tasks");
   var completeSection = doc.getElementById("complete-tasks")
-// tasklist arrays
-  var tasks = [{id: 1, task: 'test', complete: false}];
-  var complete = [];
-  var templates = [];
 
-// render structural styling to the page
-  function load() {
-    body.style.textAlign = "center";
-    body.style.fontFamily = "consolas";
-    main.style.margin = "4rem";
-    main.style.marginTop = "1rem";
-    main.style.minHeight = "75vh";
-    addBtn.classList.add('btn-dark')
-    removeBtn.classList.add('btn-dark')
-    updateBtn.classList.add('btn-dark')
-    tasklist.style.margin = "10%";
-    tasklist.style.marginTop = "5%";
-    tasklist.style.minHeight = "5vh";
-    tasklist.style.border = "3px solid black";
-    tasksSection.style.textAlign = "start";
-    tasks.forEach((task) => drawTask(task));
-  }
+
 
 // create html template and render it to the page
-  function drawTask(task, complete) {
-    if (task.complete === false){
-    let template = `
-    <div>
-      <label for="task-${task.id}" id="label-${task.id}">${task.task}</label>
-      <input type="checkbox" name="task-${task.id}" id="task-${task.id}">
-    </div>
-    `;
-    templates.push(template);
-    tasksSection.innerHTML += template;}
+  function drawTask(task) {
+      if (task.complete === false){
+      tasksSection.innerHTML += task.template;
+    }
   }
 
 // create a new task and add it to the tasks array
   function addtask() {
     let task = prompt("enter the task name: ");
-    task = {id: tasks.length + 1, task: task, complete: false}
-    tasks.push(task);
+    task = {id: tasklist.length + 1, name: task}
+    task = new Task(task)
+    tasklist.push(task);
     drawTask(task);
   }
 
+
 // find and delete an existing task in the array
   function removetask() {
-    let task = prompt("enter the task name: ");
-    let index = tasks.indexOf(task);
-    templates.splice(index, 1);
-    tasksSection.innerHTML = "";
-    templates.forEach((template) => (tasksSection.innerHTML += template));
-  }
+    let remove = prompt("enter the task name: ");
+    }
 
 // mark tasks completed, add them to the complete array,
 // and move them to the completed section on the page
+
   function updateTasklist(event) {
-    tasks.forEach((task) => {
+    tasklist.forEach((task) => {
       let labelELEM = doc.getElementById(`label-${task.id}`)
       let taskELEM = doc.getElementById(`task-${task.id}`)
       if (taskELEM.checked){
@@ -73,33 +45,28 @@
         labelELEM.classList.add('visually-hidden')
       }
     });
-    tasks.forEach((task) => {
+    tasklist.forEach((task) => {
       if (task.complete){
         complete.forEach((completeTask) => {
           if (task.id === completeTask.id){
             complete.pop(completeTask)
           }
         });
+        task = new Task({id: task.id, name: task.name, complete: true})
         complete.push(task)
         console.log(complete)
       }
     });
     completeSection.innerHTML = ''
     complete.forEach(task => {
-      let template = `
-      <div>
-        <label style="text-decoration: line-through;" for="task-${task.id}" id="label-${task.id}">${task.task}</label>
-        <input checked type="checkbox" name="task-${task.id}" id="task-${task.id}">
-      </div>
-      `
-      console.log(task)
-      completeSection.innerHTML += template
+
+      completeSection.innerHTML += task.template
     })
     event.preventDefault();
   }
 
-// assign functions to events
-  body.onload = load();
+// startup tasks and event assignments
+  tasklist.forEach((task) => drawTask(task))
   doc.getElementById("add").onclick = addtask;
   doc.getElementById("remove").onclick = removetask;
-  tasklist.onsubmit = updateTasklist;
+  doc.getElementById("tasklist").onsubmit = updateTasklist;
