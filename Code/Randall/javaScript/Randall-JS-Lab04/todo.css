@@ -1,0 +1,14 @@
+/* Lab4 Todo in JS */
+
+#maindiv {
+    width:100%;
+    color: tomato;
+}
+#todo_item div {
+    width:200px;
+}
+#completed_list {
+    text-decoration:line-through black;
+    list-style-type:circle;
+    color: green;
+}
