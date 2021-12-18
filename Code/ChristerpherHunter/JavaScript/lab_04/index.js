@@ -6,10 +6,7 @@ let createTask = document.querySelector("#submit")
 let outPutTask = document.querySelector("#madeTask")
 let templateCard = document.querySelector("#templateCard")
 
-
-
-let toDos = [   
-]
+let toDos = []
 
 function createTodo(title, topic, body) {
     let createTodoTask = {
@@ -21,25 +18,43 @@ function createTodo(title, topic, body) {
 
     toDos = toDos.concat(createTodoTask)
     // console.log(toDos)
+    showToDoItem(toDos)
 }
 
 // Listen for the click event
 createTask.addEventListener("click", () => {
-    createTodo(taskTitle.value, taskTopic.value, taskContent.value)
+    toDos = createTodo(taskTitle.value, taskTopic.value, taskContent.value)
     // console.log(taskContent.value, taskTopic.value, taskTitle.value)
     // Clears the field
     taskContent.value = ""
     taskTopic.value = ""
-    taskTitle.value = ""
+    taskTitle.value = ""    
     // console.log(toDos)
 })
 
-function showToDoItem(itemAdded) {
+function showToDoItem(toDos) {
 
+    // let todo
+
+    // for (todo of toDos) {
     let newTodoItem = document.createElement("div")
 
-    let templateCardThing = templateCard.textContent.cloneNode(true) 
+    let templateCardThing = templateCard.content.cloneNode(true)
 
-    let 
+    newTodoItem.appendChild(templateCardThing)
+    // console.log(JSON.stringify(templateCard, null, 2))
 
+    let todoTextTitle = newTodoItem.querySelector("#title-post")
+    let todoTextTopic = newTodoItem.querySelector("#subTitle-post")
+    let todoTextBody = newTodoItem.querySelector("#body-post")
+
+    // console.log(newTodoItem)
+    
+
+    todoTextTitle.innerHTML = toDos.title
+    todoTextTopic.innerHTML = toDos.topic
+    todoTextBody.innerHTML = toDos.body
+
+    outPutTask.appendChild(newTodoItem)
+    // }
 }
