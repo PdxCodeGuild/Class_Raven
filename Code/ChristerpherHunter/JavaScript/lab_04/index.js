@@ -1,12 +1,12 @@
 // Manipulate the DOM!
-let taskContent = document.querySelector("#content")
-let taskTopic = document.querySelector("#subTitle")
-let taskTitle = document.querySelector("#title")
-let createTask = document.querySelector("#submit")
-let outPutTask = document.querySelector("#madeTask")
-let templateCard = document.querySelector("#templateCard")
+let taskContent = document.querySelector("#content"),
+    taskTopic = document.querySelector("#subTitle"),
+    taskTitle = document.querySelector("#title"),
+    createTask = document.querySelector("#submit"),
+    outPutTask = document.querySelector("#madeTask"),
+    templateCard = document.querySelector("#templateCard")
 
-let toDos = []
+    let toDos = []
 
 function createTodo(title, topic, body) {
     let createTodoTask = {
@@ -17,26 +17,35 @@ function createTodo(title, topic, body) {
     // console.log(createTodoTask)
 
     toDos = toDos.concat(createTodoTask)
-    // console.log(toDos)
-    showToDoItem(toDos)
+}
+
+function removeTodo() {
+
+    let deleteTodoItem = document.createElement("div")
+    let templateCardThing = templateCard.content.cloneNode(true)
+    deleteTodoItem.removeChild(templateCardThing)
+
+    // let todoTextTitle = deleteTodoItem.querySelector("#title-post")
+    // let todoTextTopic = deleteTodoItem.querySelector("#subTitle-post")
+    // let todoTextBody = deleteTodoItem.querySelector("#body-post")
+
+    // toDos = toDos.filter(task => task.title !== currentToDo.title)
 }
 
 // Listen for the click event
 createTask.addEventListener("click", () => {
-    toDos = createTodo(taskTitle.value, taskTopic.value, taskContent.value)
+    createTodo(taskTitle.value, taskTopic.value, taskContent.value)
     // console.log(taskContent.value, taskTopic.value, taskTitle.value)
     // Clears the field
     taskContent.value = ""
     taskTopic.value = ""
-    taskTitle.value = ""    
+    taskTitle.value = ""
     // console.log(toDos)
+    showToDoItem(toDos)
 })
 
 function showToDoItem(toDos) {
 
-    // let todo
-
-    // for (todo of toDos) {
     let newTodoItem = document.createElement("div")
 
     let templateCardThing = templateCard.content.cloneNode(true)
@@ -47,14 +56,22 @@ function showToDoItem(toDos) {
     let todoTextTitle = newTodoItem.querySelector("#title-post")
     let todoTextTopic = newTodoItem.querySelector("#subTitle-post")
     let todoTextBody = newTodoItem.querySelector("#body-post")
+    // console.log(toDos)
+    if (!toDos[toDos.length - 1].title && !toDos[toDos.length - 1].topic && !toDos[toDos.length - 1].body) {
+        alert("Input Required")
+        return
+    }
 
-    // console.log(newTodoItem)
-    
-
-    todoTextTitle.innerHTML = toDos.title
-    todoTextTopic.innerHTML = toDos.topic
-    todoTextBody.innerHTML = toDos.body
+    todoTextTitle.innerHTML = toDos[toDos.length - 1].title
+    todoTextTopic.innerHTML = toDos[toDos.length - 1].topic
+    todoTextBody.innerHTML = toDos[toDos.length - 1].body
 
     outPutTask.appendChild(newTodoItem)
-    // }
+
 }
+
+
+outPutTask.addEventListener("click", () => {
+
+    removeTodo()
+})
