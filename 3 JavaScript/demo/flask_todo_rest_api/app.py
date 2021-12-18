@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import json
 
 from flask.json import load
@@ -34,8 +34,13 @@ def find_todo(todos, todo_id):
 JSON_DB = './static/todos.json'
 
 
-@app.route('/todos')
+@app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/todos')
+def get_todos():
     # create blank dict for response data
     response_data = {}
 
@@ -43,8 +48,8 @@ def index():
     todos = load_data(JSON_DB)
 
     # separate the todos based on completeness
-    incomplete_todos = [todo for todo in todos if not todo['complete']]
-    complete_todos = [todo for todo in todos if todo['complete']]
+    # incomplete_todos = [todo for todo in todos if not todo['complete']]
+    # complete_todos = [todo for todo in todos if todo['complete']]
 
     # for loop version of line 46
     # incomplete_todos = []
@@ -54,8 +59,7 @@ def index():
 
     response_data = {
         'statusCode': 200,
-        'completeTodos': complete_todos,
-        'incompleteTodos': incomplete_todos
+        'todos': todos
     }
 
     return jsonify(response_data)
@@ -178,6 +182,9 @@ def delete_todo():
     # get the new todo text and todoId from the request
     todo_id = form_data.get('todoId')
 
+# convert id to integer
+    todo_id = int(todo_id)
+
     # if there is no todoId specified
     if not todo_id:
         response_data = {
@@ -225,6 +232,9 @@ def toggle_complete():
 
     # get the new todo text and todoId from the request
     todo_id = form_data.get('todoId')
+
+    # convert id to integer
+    todo_id = int(todo_id)
 
     # if there is no todoId specified
     if not todo_id:
