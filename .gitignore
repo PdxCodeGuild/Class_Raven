@@ -7,6 +7,9 @@ Code/Theo/quote_login.py
 .env
 Code/josh/labs/API_lab/.env
 env
+secrets.*
+
+
 
 Code/Theo/django/blog/db.sqlite3
 
