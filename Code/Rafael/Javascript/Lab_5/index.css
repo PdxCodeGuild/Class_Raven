@@ -1,0 +1,29 @@
+
+
+
+.button-div{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top:50px;
+  
+  
+}
+
+button#submit-btn{
+  width:150px;
+  padding: 7px 7px;
+  font-size: 1.2rem;
+}
+
+
+.result{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top:50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
