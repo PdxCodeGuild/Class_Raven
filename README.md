@@ -15,7 +15,7 @@ Weeks 16, 17, 18: Capstone project
 ### Scheduled Holidays (no class)
 - **Nov 11** - Veterans Day
 - **Nov 25 - 26** - Thanksgiving
-- **Dec 24** - Christmas Eve
+- **Dec 23 & 24** - Christmas Eve
 - **Dec 31** - New Years Eve
 
 ### Assigned Labs:
@@ -72,6 +72,7 @@ Weeks 16, 17, 18: Capstone project
   <ul>
     <li>Lab 01-03 - JS Redo</li>
     <li>Lab 04 - To Do List</li>
+    <li>Lab 05 - Quote API</li>
   </ul>
 </details>
 
