@@ -1,22 +1,6 @@
-/* Rock Paper Scissors
-Let's play rock-paper-scissors with the computer. You may want to try using these emojis moyaipage_with_curlscissorsfist_raisedhandv
-
-The computer will ask the user for their choice (rock, paper, scissors)
-The computer will randomly choose rock, paper or scissors
-Determine who won and tell the user
-Let's list all the cases:
-
-rock vs rock (tie)
-rock vs paper
-rock vs scissors
-paper vs rock
-paper vs paper (tie)
-paper vs scissors
-scissors vs rock
-scissors vs paper
-scissors vs scissors (tie)
-Version 2 (optional)
-After playing, ask them if they'd like to play again. If they say yes, restart the game, otherwise exit.*/
+/* Lee Colburn
+Lab 1 Javascript
+Rock, Paper, Scissors */
 
 let options = ['rock', 'paper', 'scissors']
 
@@ -39,30 +23,30 @@ function game (){
 
 function result (user, computer){
     if (user == computer){
-        console.log("You tied!")
+        alert("You tied!")
         return
     } else if (user == 'rock') {
         if (computer == 'paper') {
-            console.log("The computer's paper covers your rock - you lose!")
+            alert("The computer's paper covers your rock - you lose!")
             return
         } else if (computer == 'scissors') {
-            console.log("The computer's scissors are crushed by your rock - you win!")
+            alert("The computer's scissors are crushed by your rock - you win!")
             return
         }
     } else if (user == 'paper') {
         if (computer == 'scissors') {
-            console.log("The computer's scissors cuts your paper - you lose!")
+            alert("The computer's scissors cuts your paper - you lose!")
             return
         } else if (computer == 'rock') {
-            console.log("The computer's rock is covered by your paper - you win!")
+            alert("The computer's rock is covered by your paper - you win!")
             return
         }
     } else if (user == 'scissors') {
         if (computer == 'rock') {
-            console.log("The computer's rock crushes your scissors - you lose!")
+            alert("The computer's rock crushes your scissors - you lose!")
             return
         } else if (computer == 'paper') {
-            console.log("The computer's paper is cut by your scissors - you win!")
+            alert("The computer's paper is cut by your scissors - you win!")
             return
         }
     }
