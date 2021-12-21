@@ -1,17 +1,7 @@
 [
   {
-    "id": 2,
-    "text": "Dig a hole",
-    "complete": true
-  },
-  {
-    "id": 4,
-    "text": "Build a fence",
-    "complete": true
-  },
-  {
-    "id": 5,
-    "text": "Feed the chickens",
+    "id": 1,
+    "text": "Prune the apple tree",
     "complete": false
   }
 ]
