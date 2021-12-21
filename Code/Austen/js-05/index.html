@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotable</title>
+  <link rel="stylesheet" href="./style/signature.css">
+</head>
+<body>
+<header>
+  <h1>Quotable</h1>
+  <h2>the quotiest quotes around</h2>
+</header>
+<main>
+  <!-- <form onsubmit="searchQuote(`${term}`)">
+    <label for="term">search:</label>
+    <input type="text" name="term" id="term"> -->
+    <button name="search" id="get-quote" onclick="searchQuote()">search</button>
+  <!-- </form> -->
+  <div class="quote" id="target">
+
+  </div>
+</main>
+<script src="./scripts/secrets.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./scripts/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
