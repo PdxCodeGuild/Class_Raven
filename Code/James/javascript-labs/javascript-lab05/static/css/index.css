@@ -16,6 +16,17 @@
 }
 
 #author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-style: italic;
+    margin-top: 2rem;
+}
+
+
+#body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2rem;
 }
