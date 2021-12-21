@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&family=Varela+Round&display=swap");
+
+* {
+  font-family: "Questrial", sans-serif;
+}
+
+h1 {
+    font-family: 'Varela Round', 'sans-serif';
+    margin: 0;
+}
+
+.container {
+    background-color: goldenrod;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#todo-lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.todo-list {
+    width: 400px;
+    padding: 0px 0px 20px;
+    margin: 50px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px darkgoldenrod;
+}
+
+h1 {
+    color: white;
+    background-color: darkgreen;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#add-todo-form {
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input:focus {
+    outline: 4px solid greenyellow;
+}
+
+#add-todo-button {
+    margin: 10px;
+    color: darkgreen;
+    font-size: 2rem;
+}
+
+#add-todo-button:hover {
+    color:greenyellow;
+}
+.todo-item {
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item .crud-icons {
+    display: flex;
+    justify-content: center;
+}
+
+
+.todo-item .crud-icon {
+    margin: 0px 10px;
+    font-size: 1.5rem;
+}
+.todo-item .crud-icon:hover {
+    cursor: pointer;
+}
+
+.crud-icon.complete, .crud-icon.restore {
+    color:greenyellow;
+}
+
+.crud-icon.complete:hover, .crud-icon.restore:hover {
+    color: darkgreen;
+}
+
+.crud-icon.delete {
+    color: lightcoral;
+}
+.crud-icon.delete:hover {
+    color: red;
+}
+
+.complete-todo {
+    text-decoration: line-through;
+}

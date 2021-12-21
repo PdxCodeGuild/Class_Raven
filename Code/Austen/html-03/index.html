@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>austen html lab 03</title>
+    <link rel="stylesheet" href="./company-site/style/materialize.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./company-site/style/local.css" />
+  </head>
+  <body class="black white-text">
+    <assignment class="blue-grey-text">
+      <details>
+        <summary>assignment</summary>
+        <p>
+          Pick an industry and create the landing page for a hypothetical
+          company, filling in as much detail as possible. Use
+          <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> or
+          <a href="https://materializecss.com/" target="_blank">Materialize</a>
+          and make sure it's responsive. Browse the internet for existing
+          company pages and imitate as much as you can.
+        </p>
+      </details>
+    </assignment>
+    <header>
+      <ul id="mobile-nav" class="sidenav black">
+        <li>
+          <a class="white-text" href="./index.html">home</a>
+        </li>
+        <li>
+          <a class="white-text" href="./pages/about.html">about</a>
+        </li>
+        <li>
+          <a class="white-text" href="./pages/products.html">products</a>
+        </li>
+        <li><a>contact us</a></li>
+      </ul>
+      <nav class="nav-wrapper blue darken-3">
+        <a id="company-name" href="../index.html">Company Name</a>
+        <ul class="right hide-on-med-and-down">
+          <li class="active">
+            <a href="./index.html">home</a>
+          </li>
+          <li>
+            <a href="./pages/about.html">about</a>
+          </li>
+          <li>
+            <a href="./pages/products.html">products</a>
+          </li>
+          <li>
+            <a onclick="load_contact_form()">contact us</a>
+          </li>
+        </ul>
+        <a href="" data-target="mobile-nav" class="right sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </nav>
+    </header>
+    <main class="container blue">
+      <section id="contact-form-target"></section>
+      <row class="row">
+        <div id="blurb" class="">
+          <h1 class="center blue darken-2">Our Mission</h1>
+          <div class="blue darken-3">
+            <p>
+              Synergistically evolve 2.0 technologies rather than just in time
+              initiatives. Quickly deploy strategic networks with compelling
+              e-business. Credibly pontificate highly efficient manufactured
+              products and enabled data.
+            </p>
+            <p>
+              Dynamically target high-payoff intellectual capital for customized
+              technologies. Objectively integrate emerging core competencies
+              before process-centric communities. Dramatically evisculate
+              holistic innovation rather than client-centric data.
+            </p>
+            <p>
+              Progressively maintain extensive infomediaries via extensible
+              niches. Dramatically disseminate standardized metrics after
+              resource-leveling processes. Objectively pursue diverse catalysts
+              for change for interoperable meta-services.
+            </p>
+          </div>
+        </div>
+      </row>
+      <h3>Gallery</h3>
+      <row id="gallery" class="row">
+        <colm class="col s12 m4 l3">
+          <div class="card">
+            <div class="card-image">
+              <img
+                class="hoverable"
+                src="company-site/images/company-building.jpg"
+                alt="placeholder-image"
+              />
+            </div>
+          </div>
+        </colm>
+        <colm class="col s12 m4 l3">
+          <div class="card">
+            <div class="card-image">
+              <img
+                class="hoverable"
+                src="company-site/images/company-location.jpg"
+                alt="placeholder-image"
+              />
+            </div>
+          </div>
+        </colm>
+        <colm class="col s12 m4 l3">
+          <div class="card">
+            <div class="card-image">
+              <img
+                class="hoverable"
+                src="company-site/images/company-joe.jpg"
+                alt="placeholder-image"
+              />
+            </div>
+          </div>
+        </colm>
+        <colm class="col l3 hide-on-med-and-down">
+          <div class="card">
+            <div class="card-image">
+              <img
+                class="hoverable"
+                src="company-site/images/company-jill.jpg"
+                alt="placeholder-image"
+              />
+            </div>
+          </div>
+        </colm>
+      </row>
+    </main>
+    <template id="contact-form">
+      <form class="blue darken-3">
+        <label for="customer-name">your name</label>
+        <input
+          type="text"
+          name="customer-name"
+          id="customer-name"
+          placeholder="Jesse Smith"
+          required
+        />
+        <label for="phone">phone number</label>
+        <input
+          type="tel"
+          pattern="[0-9]{10}"
+          name="phone"
+          id="phone"
+          placeholder="1234567890"
+        />
+        <label for="email">email</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="jesse.smith@domainmail.com"
+          required
+        />
+        <label>message type:</label>
+        <br />
+        <label>
+          <input class="message-type" type="radio" name="type" id="question" />
+          <span>question</span>
+        </label>
+        <label>
+          <input class="message-type" type="radio" name="type" id="comment" />
+          <span>comment</span>
+        </label>
+        <label>
+          <input class="message-type" type="radio" name="type" id="sales" />
+          <span>sales</span>
+        </label>
+        <br />
+        <label for="message">message:</label>
+        <input type="textarea" name="message" id="message" required />
+        <input type="submit" name="submit" />
+      </form>
+    </template>
+    <footer class="blue darken-3 right-align">
+      <span id="copywrite">&copy; Company Name 2021</span>
+    </footer>
+    <script type="text/javascript" src="./style/materialize.js"></script>
+    <script type="text/javascript" src="./scripts/doc.js"></script>
+  </body>
+</html>
