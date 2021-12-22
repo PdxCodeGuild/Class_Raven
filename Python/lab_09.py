@@ -7,9 +7,11 @@ Lab 9
 
 def blackjack_score(user_card):
     """takes in user score and returns integer of the card's value"""
-    user_card = user_card.upper()
+    if user_card == "a" or "j" or "q" or "k":
+            user_card = user_card.upper()
     if user_card in all_cards:
-        return all_cards[user_card]
+        value = all_cards[user_card]
+        return value
 
 def blackjack_advice(total):
     """Takes in total score and advices if user is bust, has blackjack, should stay, or should hit"""
@@ -26,7 +28,7 @@ def blackjack_advice(total):
 def low_or_high(aces_low, aces_high):
     """Work in progress - this function will consider the aces high and aces low scores and return the ideal option for the user"""
     if aces_low or aces_high == 21:
-        print('\nYour total is 21 - Blackjack!')
+        print(f"\nYour total is 21 - Blackjack!")
         return
     return
 

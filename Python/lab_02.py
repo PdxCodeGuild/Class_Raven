@@ -13,24 +13,24 @@ user_input = int(user_input * 100)
 
 # Quarter
 quarter = user_input // 25
-user_input %= 25
+user_input = user_input % 25
 # print(f"Quarters: {quarter}")
 # print(f"remainder: {user_input}")
 
 # Dimes
 dime = user_input // 10
-user_input %= 10
+user_input = user_input % 10
 # print(f"Dimes: {dime}")
 # print(f"remainder: {user_input}")
 
 # Nickels
 nickel = user_input // 5
-user_input %= 5
+user_input = user_input % 5
 # print(f"Nickels: {nickel}")
 # print(f"remainder: {user_input}")
 
 # Pennies
-penny = user_input
+penny = user_input 
 # print(f"Pennies: {penny}")
 
 # Print F statement summarizing change breakdown

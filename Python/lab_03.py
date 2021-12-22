@@ -16,7 +16,7 @@ def ave_example(nums):
     running_list = []
     # loop over the elements
     for num in nums:
-        running_value += int(num)
+        running_value = running_value + int(num)
         running_list.append(num)
         running_length = len(running_list)
         running_average = running_value / running_length
@@ -34,7 +34,7 @@ def user_directed(nums):
     running_list = []
     # loop over the elements
     for num in nums:
-        running_value += int(num)
+        running_value = running_value + int(num)
         running_list.append(num)
         running_length = len(running_list)
         running_average = running_value / running_length

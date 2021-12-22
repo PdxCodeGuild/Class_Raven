@@ -14,10 +14,10 @@ def encrypt(user_string,rot):
     for i in range(len(user_string)):
         encrypted_index = alphabet_printable.find(user_string[i])
         if encrypted_index == -1:
-            encrypted_message += user_string[i]
+            encrypted_message = encrypted_message + user_string[i]
         else:
-            encrypted_message += shifted_alphabet_printable[encrypted_index]
-
+            encrypted_message = encrypted_message + shifted_alphabet_printable[encrypted_index]
+        
     return encrypted_message
 
 def decrypt(user_string, rot):
@@ -30,43 +30,39 @@ def decrypt(user_string, rot):
 complete = False
 
 while not complete:
-      # Select Option 1-Pass Message, 2-Exit, 3+ Try Again
-    start = int(
-        input(
-            '\nPlease select from the following options:\n 1. Encode a string with ROT based encryption \n 2. Decrypt last message (or your own) \n 3. Exit Program \n\n Enter the number of your choice: \n'
-        )
-    )
+  # Select Option 1-Pass Message, 2-Exit, 3+ Try Again
+  start = int(input(f'\nPlease select from the following options:\n 1. Encode a string with ROT based encryption \n 2. Decrypt last message (or your own) \n 3. Exit Program \n\n Enter the number of your choice: \n'))
 
+  ################### DIRECTORY ################################################################
+  # Allow user to escape
+  if start == 3:
+    print(f"\nClosing application.\n")
+    complete = True
+    break
 
-      ################### DIRECTORY ################################################################
-      # Allow user to escape
-    if start == 3:
-        print('\nClosing application.\n')
-        complete = True
-        break
+  if start > 3:
+    print(f'\n Try again:\n')
+    continue
+  
+  # Direct user to appropriate function: Select Option 1 - Pass Message to encrypt or 2 - Decrypt a stored message (or your own)
+  if start == 1:
 
-    if start > 3:
-        print('\n Try again:\n')
-        continue
+    user_string = input("Enter your string: ")
+    rot = int(input("Enter the number of digits you'd like to offset the data (1-101): "))
+    encrypted_string = encrypt(user_string, rot)
+    print(f"\nYour encrypted string is: {encrypted_string}\n\n If you'd like to decrypt this string, please remember it has been offset {rot} digits. \n Returning to main menu...")
 
-      # Direct user to appropriate function: Select Option 1 - Pass Message to encrypt or 2 - Decrypt a stored message (or your own)
-    if start == 1:
-        user_string = input("Enter your string: ")
-        rot = int(input("Enter the number of digits you'd like to offset the data (1-101): "))
-        encrypted_string = encrypt(user_string, rot)
-        print(f"\nYour encrypted string is: {encrypted_string}\n\n If you'd like to decrypt this string, please remember it has been offset {rot} digits. \n Returning to main menu...")
+  if start == 2:
+    decrypted_string = ""
+    selection = int(input(f"Would you like to: \n 1. If available, decrypt the stored message: {encrypted_string} \n 2. Decrypt your own message \n"))
 
-    elif start == 2:
-        decrypted_string = ""
-        selection = int(input(f"Would you like to: \n 1. If available, decrypt the stored message: {encrypted_string} \n 2. Decrypt your own message \n"))
+    if selection == 1:
+        rot = int(input("Enter the amount of digits the string is offset (1-101): \n"))
+        decrypt(encrypted_string, rot)
+        print(decrypted_string)
 
-        if selection == 1:
-            rot = int(input("Enter the amount of digits the string is offset (1-101): \n"))
-            decrypt(encrypted_string, rot)
-            print(decrypted_string)
-
-        elif selection == 2:
-            user_string = input("Enter the encrypted string: ")
-            rot = int(input("Enter the amount of digits the string is offset (1-101): \n"))
-            decrypted_string = decrypt(user_string, rot)
-            print(f"Decrypted string: {decrypted_string} \n")
+    if selection == 2:
+        user_string = input("Enter the encrypted string: ")
+        rot = int(input("Enter the amount of digits the string is offset (1-101): \n"))
+        decrypted_string = decrypt(user_string, rot)
+        print(f"Decrypted string: {decrypted_string} \n")

@@ -3,7 +3,6 @@ Lee Colburn
 Evening Bootcamp - PDX Code Guild
 Lab 10 - Dad Jokes ... and Their APIs
 """
-
 import requests
 url = "https://icanhazdadjoke.com/search?term="
 user_search_term = input("Enter a search term: ")
@@ -24,5 +23,7 @@ for result in results:
     if counter > total_results:
         break
     more_jokes = input("\nWant more? Enter 1 to continue: ")
-    if more_jokes != "1":
+    if more_jokes == "1":
+        pass
+    else:
         break

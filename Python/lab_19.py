@@ -12,9 +12,19 @@ import random
 
 def api_request(difficulty='any', type='any', category='any'):
     """Takes in question parameters and returns a list of questions"""
-    category_url = "" if category == 'any' else f"&category={category}"
-    type_url = "" if type == 'any' else f"&type={type}"
-    difficulty_url = "" if difficulty ==  'any' else f"&difficulty={difficulty}"
+    if category == 'any':
+        category_url = ""
+    else:
+        category_url = f"&category={category}"
+    if type == 'any':
+        type_url = ""
+    else:
+        type_url = f"&type={type}"
+    if difficulty ==  'any':
+        difficulty_url = ""
+    else:
+        difficulty_url = f"&difficulty={difficulty}"
+    
     url = f"https://opentdb.com/api.php?amount=10{category_url}{difficulty_url}{type_url}"
     response = requests.request("GET", url).json()
 
@@ -37,20 +47,22 @@ def test(question_list):
             generated_question = html.unescape(question.get("question"))
             generated_answer = html.unescape(question.get("correct_answer"))
             generated_incorrect_answer = html.unescape(question.get("incorrect_answers"))
-            generated_type = html.unescape(question.get("type"))
+            generated_type = html.unescape(question.get("type"))            
             if generated_type == 'multiple':
                 answer = multiple_choice(generated_question, generated_answer, generated_incorrect_answer)
             elif generated_type == 'boolean':
                 answer = true_false(generated_question)
-
+            
             if answer == str.lower(generated_answer):
                 print(f"{answer.capitalize()} is correct!\n")
                 question['user_answer'] = 'correct'
                 score_counter += 1
+                complete = True
             else:
                 print(f"'{answer}' is not correct. Correct Answer: '{generated_answer}'\n")
                 question['user_answer'] = 'incorrect'
-            complete = True
+                complete = True
+
     print(f'You scored {score_counter}/10 questions right!\n')
     return
 
@@ -84,20 +96,22 @@ def custom_game():
 
 def multiple_choice(question, correct, incorrect):
     """Takes in correct and incorrect answer options to make a blinded list for user to evaluate the question. Returns user answer"""
-    blinded_list = [correct]
+    blinded_list = []
+    blinded_list.append(correct)
     blinded_list.extend(incorrect)
     random.shuffle(blinded_list)
     html.unescape(blinded_list)
     print(f"{question}")
     print(*blinded_list, sep=', ')
-    answer = input('\nAnswer: ')
+    answer = input(f"\nAnswer: ")
     return str.lower(answer)
 
 def true_false(question):
     """Presents question to user and returns a formatted user response"""
     print(f"{question}")
-    answer = input(' Answer True or False: ')
+    answer = input(f" Answer True or False: ")
     return str.lower(answer)
+    ...
 
 
 
