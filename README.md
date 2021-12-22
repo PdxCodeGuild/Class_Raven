@@ -189,7 +189,7 @@ Corrections will be made only to that particular branch.
     <li><a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
     <li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a></li>
     <li><a href="https://www.w3schools.com/sql/">W3 Schools</a> - SQL Tutorial</li>
-    <li><a href="https://learnsql.com/blog/ways-to-practice-sql-online/"></a>SQL Practice Resources</li>
+    <li><a href="https://learnsql.com/blog/ways-to-practice-sql-online/">SQL Practice Resources</a></li>
   </ul>
 </details>
 
