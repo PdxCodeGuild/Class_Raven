@@ -7,6 +7,9 @@ Code/Theo/quote_login.py
 .env
 Code/josh/labs/API_lab/.env
 env
+secrets.*
+
+
 
 Code/Theo/django/blog/db.sqlite3
 
@@ -17,7 +20,8 @@ Code/Theo/django/blog/db.sqlite3
 *.pot
 *.pyc
 __pycache__
-db.sqlite3
+*db.sqlite3
+
 media
 uploads/
 
