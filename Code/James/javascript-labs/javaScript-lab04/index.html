@@ -107,13 +107,13 @@
     ></script>
 
     <link rel="stylesheet" href="./static/css/index.css" />
+
+    <script defer src="./static/js/index.js"></script>
   </head>
   <body>
-    <script src="./static/js/index.js"></script>
-
     <div class="container-lg">
       <div class="row">
-        <div class="col-12 col-lg-6 offset-lg-3">
+        <div class="col-12 col-lg-8 offset-lg-3">
           <div class="card w-70 my-5">
             <ul class="list-group list-group-flush">
               <li
@@ -122,19 +122,38 @@
                 To do List
               </li>
               <li class="list-group-item py-3">
-                To do
-                <div style="float: right" >
-                  <button id ='add' type="button" class="btn btn-outline-primary mx-1">
+                <div style="float: left">
+                  <input
+                    class="form-control form-control-lg"
+                    type="text"
+                    name="text"
+                    placeholder="What do you have to do?"
+                  />
+                </div>
+                <div style="float: right">
+                  <button
+                    id="add"
+                    type="button"
+                    class="btn btn-outline-primary mx-1"
+                  >
                     <i class="fas fa-plus-square"></i>
                   </button>
                 </div>
                 <div style="float: right">
-                  <button id ='trash' type="button" class="btn btn-outline-primary mx-1">
+                  <button
+                    id="trash"
+                    type="button"
+                    class="btn btn-outline-primary mx-1"
+                  >
                     <i class="far fa-trash-alt"></i>
                   </button>
                 </div>
                 <div style="float: right">
-                  <button id ='complete'type="button" class="btn btn-outline-primary mx-1">
+                  <button
+                    id="complete"
+                    type="button"
+                    class="btn btn-outline-primary mx-1"
+                  >
                     <i class="fas fa-check"></i>
                   </button>
                 </div>

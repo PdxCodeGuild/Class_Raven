@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Playfair+Display&display=swap');
 
 *{
@@ -32,4 +33,12 @@ button:hover{
   background-color: white; 
   border: none;
   color: #0d6efd;
+=======
+.grow {
+    transform: scale(1.2);
+}
+
+input {
+    display: inline;
+>>>>>>> 5b26694b (prog)
 }
