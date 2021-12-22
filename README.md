@@ -6,9 +6,9 @@ Weeks 1, 2, 3, 4, 5: Python
 
 Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
-**Weeks 10, 11: Javascript**
+Weeks 10, 11: Javascript
 
-Weeks 12, 13, 14, 15: Django
+**Weeks 12, 13, 14, 15: Django**
 
 Weeks 16, 17, 18: Capstone project
 
@@ -182,6 +182,16 @@ Corrections will be made only to that particular branch.
 
 ## Additional Resources
 
+
+<details>
+  <summary>SQL</summary>
+  <ul>
+    <li><a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
+    <li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a></li>
+    <li><a href="https://www.w3schools.com/sql/">W3 Schools</a> - SQL Tutorial</li>
+    <li><a href="https://learnsql.com/blog/ways-to-practice-sql-online/"></a></li>
+  </ul>
+</details>
 
 <details>
   <summary>HTML/CSS/JS Online IDEs</summary>
