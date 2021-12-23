@@ -4,6 +4,14 @@
 
 Let's build a searchable pokedex! First we'll load the data from a `json` file into our own database. Then we'll list those pokemon in the page and add search.
 
+> The Pokédex (Japanese: ポケモン図鑑 illustrated Pokémon encyclopedia) is a digital encyclopedia for [Trainers](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Trainer) in the Pokémon world. It gives information about all Pokémon in the world that are contained in its database. 
+
+>Pokédex entries typically describe a Pokémon in only two or three sentences. They may give background information on the habitat or activities of a Pokémon in the wild or other information on the Pokémon's history or anatomy. 
+
+>Pokédex entries also include height, weight, cry, footprint, location, other forms, and a picture of the Pokémon.
+
+[Pokedex Wiki](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex), [Pokemon.com](https://www.pokemon.com/us/pokedex/)
+
 ## Part 1
 
 Create an app `pokedex` and add two models to store our pokemon, `Pokemon` and `PokemonType`.
