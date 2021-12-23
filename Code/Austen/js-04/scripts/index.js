@@ -1,72 +1,82 @@
 import Task from "./Task.js"
 
-// document element shortcut
-  var doc = document;
-// tasklist arrays
-  var tasklist = [new Task({id: 1, name: "test"})];
-  var complete = [];
-  var tasksSection = doc.getElementById("tasks");
-  var completeSection = doc.getElementById("complete-tasks")
+// document element shortcuts
+  const doc = document;
+  const tasklistELEM = doc.getElementById('tasks')
+  const completeELEM = doc.getElementById('complete-tasks')
 
+// tasklist array
+  let masterlist = []
 
-
-// create html template and render it to the page
-  function drawTask(task) {
-      if (task.complete === false){
-      tasksSection.innerHTML += task.template;
-    }
-  }
-
-// create a new task and add it to the tasks array
-  function addtask() {
-    let task = prompt("enter the task name: ");
-    task = {id: tasklist.length + 1, name: task}
-    task = new Task(task)
-    tasklist.push(task);
-    drawTask(task);
-  }
-
-
-// find and delete an existing task in the array
-  function removetask() {
-    let remove = prompt("enter the task name: ");
-    }
-
-// mark tasks completed, add them to the complete array,
-// and move them to the completed section on the page
-
-  function updateTasklist(event) {
-    tasklist.forEach((task) => {
-      let labelELEM = doc.getElementById(`label-${task.id}`)
-      let taskELEM = doc.getElementById(`task-${task.id}`)
-      if (taskELEM.checked){
-        task.complete = true
-        taskELEM.classList.add('visually-hidden')
-        labelELEM.classList.add('visually-hidden')
+// draw tasks to document
+  function drawTasks(tasks){
+    tasklistELEM.innerHTML = ''
+    completeELEM.innerHTML = ''
+    masterlist.forEach(task => {
+        if (task.complete === false){
+          tasklistELEM.innerHTML += task.template
+        };
+        if (task.complete === true){
+          completeELEM.innerHTML += task.template
+        }
       }
-    });
-    tasklist.forEach((task) => {
-      if (task.complete){
-        complete.forEach((completeTask) => {
-          if (task.id === completeTask.id){
-            complete.pop(completeTask)
-          }
-        });
-        task = new Task({id: task.id, name: task.name, complete: true})
-        complete.push(task)
-        console.log(complete)
+    )
+    masterlist.forEach(task => {
+      if (task.complete === true){
+        doc.getElementById(`task-${task.id}`).checked = true
+        doc.getElementById(`label-${task.id}`).classList.add('complete')
       }
-    });
-    completeSection.innerHTML = ''
-    complete.forEach(task => {
-
-      completeSection.innerHTML += task.template
     })
-    event.preventDefault();
+  }
+// create a new task and add it to the tasks array
+  function addTask() {
+    let task = prompt("enter the task name: ");
+    task = {id: masterlist.length + 1, name: task, complete: false}
+    task = new Task(task)
+    masterlist.push(task)
+    drawTasks()
+  }
+// change existing task.complete to 'trash'
+  function removeTask() {
+    let remove = prompt("enter the task to be removed: ")
+    masterlist.forEach(task => {
+      if (task.name === remove){
+        task.complete = 'trash'
+      }
+    })
+    drawTasks()
+    doc.getElementById('deleted-tasks').classList.remove('visually-hidden')
+  }
+// update task status based on 'checked' attribute
+  function updateTasks(event) {
+    masterlist.forEach(task => {
+      let taskELEM = doc.getElementById(`task-${task.id}`)
+      task.complete = taskELEM.checked
+    })
+    event.preventDefault()
+    drawTasks()
   }
 
-// startup tasks and event assignments
-  tasklist.forEach((task) => drawTask(task))
-  doc.getElementById("add").onclick = addtask;
-  doc.getElementById("remove").onclick = removetask;
-  doc.getElementById("tasklist").onsubmit = updateTasklist;
+// show deleted tasks for reference
+  function showTrash(){
+    doc.getElementById('show-trash').classList.toggle('visually-hidden')
+    doc.getElementById('hide-trash').classList.toggle('visually-hidden')
+    masterlist.forEach(task => {
+      if (task.complete === 'trash'){
+        doc.getElementById('trash').innerHTML += task.template
+        doc.getElementById(`task-${task.id}`).classList.add('visually-hidden')
+      }
+    })
+  }
+  function hideTrash(){
+    doc.getElementById('show-trash').classList.toggle('visually-hidden')
+    doc.getElementById('hide-trash').classList.toggle('visually-hidden')
+    doc.getElementById('trash').innerHTML = ''
+  }
+  // element event assignments
+    doc.body.onload = drawTasks()
+    doc.getElementById("add").onclick = addTask;
+    doc.getElementById("remove").onclick = removeTask;
+    doc.getElementById("tasklist").onsubmit = updateTasks;
+    doc.getElementById("show-trash").onclick = showTrash
+    doc.getElementById("hide-trash").onclick = hideTrash
