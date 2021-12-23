@@ -1,4 +1,4 @@
-#random-quote {
+#random-quotea {
 	position: fixed;
 	background-color: rgb(29, 29, 29);
 	width: 95%;
@@ -14,14 +14,15 @@
 	padding: 0 0 0 0;
 }
 
-#quote-box {
+/* bottomm box */
+#quote-boxa {
 	position: fixed;
 	width: fit-content;
 	padding: 0 0 0 0;
 	top: 25vh;
 }
 
-#quote-text {
+#quote-texta {
 	text-align: left;
 	padding: 0 0 0 0;
 	position: static;
@@ -29,7 +30,7 @@
 	top: 50vh;
 }
 
-#quote-author {
+#quote-authora {
 	position: static;
 	width: fit-content;
 	font-size: 1em;
