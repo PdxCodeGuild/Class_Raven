@@ -94,6 +94,7 @@ function promiseTest() {
 	Promise.all([promise1, promise2]).then((values) => {
 		data = values[0];
 		data2 = values[1];
+
 		const author = data.quote.author;
 		const quoteText = data.quote.body;
 		const quoteLink = data.quote.url; // Link to the quote on favqs.com, will use later maybe.
@@ -166,10 +167,18 @@ function searchQuotes(quoteNumber, pageNumber) {
 			document.getElementById("search-box").style.cursor = "auto";
 			document.getElementById("search").disabled = false;
 			document.getElementById("search").style.cursor = "auto";
-			if (quoteNumber > data.quotes.length) {
-				quoteNumber = data.quotes.length;
+
+			if (quoteNumber > data.quotes.length - 1) {
+				quoteNumber = data.quotes.length - 1;
 			}
-			const author = data.quotes[quoteNumber].author;
+			debugging ? console.log(quoteNumber, " quoteNumber") : null;
+			let author;
+			try {
+				author = data.quotes[quoteNumber].author;
+			} catch (error) {
+				author = `Unknown [${error}]`;
+			}
+
 			const quoteText = data.quotes[quoteNumber].body;
 			const quoteLink = data.quotes[quoteNumber].url; // Link to the quote on favqs.com, will use later maybe.
 			const quoteHTML = `<p><h4>${quoteText}</h4></p><p><i>&nbsp;-&nbsp;${author}</i></p>`;
@@ -216,14 +225,14 @@ document.getElementById("search-box").addEventListener("keydown", (event) => {
 	}
 });
 // Event Listener for Search
-document.getElementById("search").addEventListener("click", function (event) {
+document.getElementById("search").addEventListener("click", function (_event) {
 	(quoteNumber = 0), (pageNumber = 1);
 	searchQuotes(quoteNumber, pageNumber);
 });
 // Event Listener for Random
 document
 	.getElementById("random-btn")
-	.addEventListener("click", function (event) {
+	.addEventListener("click", function (_event) {
 		//Random Number
 		quoteNumber = Math.floor(Math.random() * 24);
 		debugging ? console.log(quoteNumber) : null;
@@ -232,17 +241,19 @@ document
 // Event Listener for Next
 document
 	.getElementById("right-btn")
-	.addEventListener("click", function (event) {
+	.addEventListener("click", function (_event) {
 		pageNumber++;
 		debugging ? console.log(pageNumber) : null;
 		searchQuotes(quoteNumber, pageNumber);
 	});
 // Event Listener for Previous
-document.getElementById("left-btn").addEventListener("click", function (event) {
-	pageNumber--;
-	debugging ? console.log(pageNumber) : null;
-	searchQuotes(quoteNumber, pageNumber);
-});
+document
+	.getElementById("left-btn")
+	.addEventListener("click", function (_event) {
+		pageNumber--;
+		debugging ? console.log(pageNumber) : null;
+		searchQuotes(quoteNumber, pageNumber);
+	});
 
 //promiseTest();  This fuction works, but because of API limitations and lack of API keys, I'm not using it.
 
