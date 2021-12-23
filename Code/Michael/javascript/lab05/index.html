@@ -11,11 +11,25 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="assets/css/index.css" />
 	</head>
 	<body style="background-color: black">
-		<div class="bg-black">
+		<div id="top-bar" class="container">
+			<input type="text" id="search-box" placeholder="Search" />
+			<button id="search">Search</button>
+			<button id="left-btn" disabled>&LeftArrow;</button>
+			<button id="random-btn" disabled>?</button>
+			<button id="right-btn" disabled>&RightArrow;</button>
+		</div>
+
+		<div id="quote-box" class="fluid-container bg-dark">
+			<div id="quote-text" class="col-12">
+				<p id="quote-result" class="text-light"></p>
+			</div>
+		</div>
+		<div class="fluid-container">
 			<div class="container bg-dark">
-				<div class="row">
+				<div id="random-quote">
 					<p id="quote" class="text-light">Loading...</p>
 				</div>
 			</div>
