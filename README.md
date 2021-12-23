@@ -67,12 +67,18 @@ Weeks 16, 17, 18: Capstone project
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>Javascript</summary>
   <ul>
     <li>Lab 01-03 - JS Redo</li>
     <li>Lab 04 - To Do List</li>
     <li>Lab 05 - Quote API</li>
+  </ul>
+</details>
+
+<details open>
+  <summary>Django</summary>
+  <ul>
   </ul>
 </details>
 
