@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href=".\static\normalize.css">
+    <link rel="stylesheet" href=".\static\lab-05.css">
+
+    <title>Quotes</title>
+
+</head>
+
+<body class='container-md'>
+    
+    <center><button id='get-qotd' class='fs-2'>Quote of the day</button></center>
+    <div class='row'>
+        <div class='col-8 offset-md-2'>
+            <center><span><input type="text"><button id='search'>Search</button></span></center>
+            <center>
+                <div id='quotes-set'></div>
+            </center>
+        </div>
+    </div>
+<script src=".\static\secrets.js"></script>
+    <script src=".\static\lab-05.js"></script>
+</body>
+
+</html>

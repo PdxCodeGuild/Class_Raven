@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Redacted&family=Roboto&family=Source+Sans+3:wght@500&display=swap");
+/* font-family: 'Arimo', sans-serif;
+
+font-family: 'Redacted', cursive;
+
+font-family: 'Roboto', sans-serif;
+
+font-family: 'Source Sans 3', sans-serif; */
+
+body {
+  /* background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/09fff995-cad9-42a0-b7e9-7833f8e8b20e/d1ucuex-36ad8987-e0ec-4fc2-8f98-b897203a8223.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; */
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16;
+  background-color: dimgray;
+}
+
+h1 {
+    backdrop-filter: blur(15px);
+  border-width: 7px;
+  border-color: cornflowerblue;
+  border-radius: 8%;
+  padding: 7px;
+  margin: 20px;
+}
+
+h2 {
+  backdrop-filter: blur(15px);
+  border-radius: 8%;
+  padding: 2px, 20px;
+  margin: 10px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button {
+  font-display: 28;
+  font-weight: bolder;
+  padding: 5px;
+  margin: 15px;
+
+}
+
+quote-set {
+  background-color: aqua;
+  background-blend-mode: color-burn;
+}
