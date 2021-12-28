@@ -1,0 +1,70 @@
+:root {
+  --background: black;
+  --text: white;
+  --border: solid darkgreen;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+  min-height: 94vh;
+  border: 8px var(--border);
+}
+header {
+  text-align: center;
+  border: 4px var(--border);
+  margin: 1rem 2rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  color: var(--text);
+  background-color: var(--background);
+  padding: 5px;
+  font-size: 18px;
+  border: 1px var(--border);
+  max-width: 50%;
+  align-self: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+
+  margin: 1rem;
+}
+input {
+  margin: .25rem;
+}
+
+footer {
+  color: lightgrey;
+  background-color: var(--background);
+  width: 75vw;
+  text-align: center;
+  position: fixed;
+  bottom: 5vh;
+  left: 12.5vw;
+}
+a:any-link {
+  color: red;
+}
+.quote {
+  text-align: center;
+  margin: 1rem;
+  padding: 20px;
+  border: 1px var(--border);
+}
+.quote-body {
+
+  font-style: italic;
+  font-size: 18px;
+}
+.author {
+  font-size: 14px;
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Playfair+Display&display=swap');
+
+*{
+    font-family: 'Arvo', serif;  
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 0;
+    
+}
+
+#author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: italic;
+    position: fixed;
+    top: 60%;
+    text-decoration: underline;
+}
+
+
+#body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    position: fixed;
+    top: 50%;
+}
+
+#button-group{
+    display: inline-flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+}
+
+/* #button-back{
+    margin-right: 5px;
+}
+#button-forward{
+    margin-left: 5px;
+} */
+
+nav{
+  cursor: pointer;
+  position: fixed;
+  top: 80%;
+}

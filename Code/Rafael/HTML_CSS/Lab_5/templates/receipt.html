@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/receipt.css') }}">
+   
+    <title>El Burrito 7 Receipt Page</title>
+</head>
+
+<body>
+<!-- Header  -->
+  <div class="receipt">
+    <header class="receipt__header">
+      <h1 class="receipt__title">
+        El Burrito 7
+      </h1>
+    <!--  Date -->
+      <p class="receipt__date">Day Month Year</p>
+    <!--  Customer Name -->
+      <p>Name:&nbsp;{{ order['firstname'] }} {{ order['lastname'] }}</p>
+    </header>
+
+    <!-- Receipt Items List -->
+      <!-- Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl -->
+        <!--  ***<dl><dl/>*** Known as "description list"  -->
+          <!--  ***<dt><dt/>*** Known as "term in a description" Indents left  -->
+            <!--  ***<dd><dd/>*** Known as "description details" automatically indents right  -->
+      <!-- Tortillas  -->      
+    <dl class="receipt__list">
+      <div class="receipt__list-row">
+        <dt class="receipt__item">Tortilla:<span>&nbsp;&nbsp;{{ order['tortillas'] }}</span></dt>
+        <dd class="receipt__cost">included</dd>
+      </div>
+      
+      <!-- Rice  -->
+      <div class="receipt__list-row">
+        <dt class="receipt__item">Rice:<span>&nbsp;&nbsp; {{ order['rice'] }}</span></dt>
+        <dd class="receipt__cost">included</dd>
+      </div>
+
+      <!-- Beans  -->
+      <div class="receipt__list-row">
+        <dt class="receipt__item">Beans:<span>&nbsp;&nbsp; {{ order['beans'] }}</span></dt>
+        <dd class="receipt__cost">included</dd>
+      </div>
+
+      <!-- Protein  -->
+      <div class="receipt__list-row">
+        <dt class="receipt__item">Protein:<span>&nbsp;&nbsp; {{ order['protein'] }}</span></dt>
+        <dd class="receipt__cost">included</dd>
+      </div>
+
+      <!-- Additional  -->
+      <div class="receipt__list-row">
+        <dt class="receipt__item">Additional:<span>&nbsp;&nbsp; {{ order['additional'] }}</span></dt>
+      </div>
+
+      <!--  Instructions -->
+      <div class="receipt__list-row">
+        <dt class="receipt__item">Instructions:<textarea style="margin: 0px; height: 233px; width: 291px; padding:10px; ">&nbsp;&nbsp; {{ order['instructions'] }}</textarea></dt>
+      </div>
+  
+      <!--  Items total -->
+      <div class="receipt__list-row receipt__list-row--total">
+        <dt class="receipt__item">Total </dt>
+        <dd class="receipt__cost">$9.95</dd>
+      </div>
+    </dl>
+  </div>
+
+
+
+<!-- No Footer -->

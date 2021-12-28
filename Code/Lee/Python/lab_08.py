@@ -15,11 +15,7 @@ def pick6(ticket):
 
 def num_matches(winning, guess):
     """Takes in winning string and guess string. evaluates returns total match count"""
-    match = 0
-    for (w, g) in zip(winning, guess):
-        if w == g:
-            match += 1
-    return match
+    return sum(w == g for (w, g) in zip(winning, guess))
 
 # Start your balances at 0
 balance = 0
@@ -28,8 +24,8 @@ match = 0
 winnings = 0
 pick6(winning_ticket)
 
-# Loop 100,000 times: 
-for i in range(1_000_000):
+# Loop 100,000 times:
+for _ in range(1_000_000):
     # Generate a list of 6 random numbers representing the ticket 
     guess_ticket = []
     pick6(guess_ticket)
