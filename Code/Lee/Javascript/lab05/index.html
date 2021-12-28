@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap ICON CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <link
+      rel="stylesheet"
+      href="css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/index.css"
+    />
+    <link rel="stylesheet" href="css/theme.css">
+    <title>Quote API</title>
+</head>
+
+<body>
+    
+    <div class="container bg-light rounded m-5 p-2 p-lg-5 mx-auto">
+        <h1 class="display-3 text-center my-2">Quote Search</h1>
+        <div class="input-group mb-3">
+            
+              <input type="text" class="form-control" id="topicText" placeholder="Quote Topic" aria-label="Quote Topic" aria-describedby="quote-topic">
+              <div class="input-group-append">
+              <button class="btn btn-outline-primary" id="searchTopic" type="button">Submit</button>
+              </div>
+            
+        </div>
+                
+        <div id="result"></div> <!--This is where the Quotes will be built-->
+
+        <button class="btn btn-outline-primary btn-block my-3" id="previousPageButton">Previous Page</button>
+        <button class="btn btn-outline-primary btn-block my-2" id="nextPageButton">Next Page</button>
+        <p class="lead text-center my-2" id="pageNumberValue"></p>
+
+
+        <!-- Template for H3 -->
+        <template id="quoteTemplate">
+        <div class="quote-item">
+          <h3>quote</h3>
+        </div>
+        </template>
+
+        <!-- Template for bootstrap quote -->
+        <template id="bootstrapQuoteTemplate">
+        <div class="card">
+            <div class="card-header">
+              Quote
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer quote-author">Someone famous in</footer>
+              </blockquote>
+              
+            </div>
+            <div id="quote-author">text</div>
+          </div>
+        </template>
+
+        <script src="secrets.js"></script>
+        <script src="index.js"></script>
+        
+    </div>
+
+</body>
+</html>
