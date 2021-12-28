@@ -55,6 +55,8 @@ This is my assignment folder.
   <ul>
     <li>Django 01 - To Do List</li>
 </details>
+  
 ## links
+  
 - Python "Mini Capstone"
 : [MysteonDex](https://github.com/austenc-id/MysteonDex)
