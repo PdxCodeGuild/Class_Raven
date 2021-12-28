@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotable</title>
+  <link rel="stylesheet" href="./index/index.css">
+</head>
+<body>
+<header>
+  <h1>Quotable</h1>
+  <h2>the quotiest quotes around</h2>
+</header>
+<main>
+  <button name="search" id="get-quote" onclick="showForm()">search</button>
+  <div class="form" id="form-target"></div>
+  <div id="quotes-target"></div>
+</main>
+<footer>&copy;2021 - Austen C. Myers-Flachson <br>built with: <a href="https://favqs.com">FavQs API</a></footer>
+<script src="./key/key.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./index/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<template id="search-form">
+  <form onsubmit="return false">
+    <div>
+      <label for="author">author
+        <input type="radio" name="searchBy" id="author">
+      </label>
+      <label for="tag">tag
+        <input type="radio" name="searchBy" id="tag">
+      </label>
+    </div>
+    <label for="term">search term: <input type="text" name="term" id="term"></label>
+    <br>
+    <button type="submit" name="button" onclick="searchQuotes()">get my quotes</button>
+  </form>
+</template>
+</html>
