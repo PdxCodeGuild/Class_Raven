@@ -56,3 +56,15 @@ document.getElementById("button").addEventListener("click", function () {
 	var item = document.getElementById("task").value;
 	addItem(item);
 });
+// Add item to the list when enter is pressed.
+document.getElementById("task").addEventListener("keyup", function (event) {
+	if (event.code === Enter) {
+		var item = document.getElementById("task").value;
+		addItem(item);
+	}
+});
+
+// Disable right click menu.
+document.addEventListener("contextmenu", function (e) {
+	e.preventDefault(); //Disable right click menu.
+});
