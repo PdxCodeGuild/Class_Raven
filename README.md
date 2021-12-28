@@ -79,6 +79,7 @@ Weeks 16, 17, 18: Capstone project
 <details open>
   <summary>Django</summary>
   <ul>
+    <li>Lab 01 - To Do List</li>
   </ul>
 </details>
 
