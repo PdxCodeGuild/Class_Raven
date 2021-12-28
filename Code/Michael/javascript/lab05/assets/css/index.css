@@ -1,39 +1,15 @@
-#random-quotea {
+#random-quote {
 	position: fixed;
 	background-color: rgb(29, 29, 29);
-	width: 95%;
 	padding: 5px;
 	padding-bottom: 0;
 	bottom: 10px;
-	left: 10px;
+	left: middle;
+	width: fit-content;
 }
 
 #top-bar {
 	position: static;
 	width: fit-content;
-	padding: 0 0 0 0;
-}
-
-/* bottomm box */
-#quote-boxa {
-	position: fixed;
-	width: fit-content;
-	padding: 0 0 0 0;
-	top: 25vh;
-}
-
-#quote-texta {
-	text-align: left;
-	padding: 0 0 0 0;
-	position: static;
-	width: fit-content;
-	top: 50vh;
-}
-
-#quote-authora {
-	position: static;
-	width: fit-content;
-	font-size: 1em;
-	text-align: right;
 	padding: 0 0 0 0;
 }
