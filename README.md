@@ -6,16 +6,16 @@ Weeks 1, 2, 3, 4, 5: Python
 
 Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
-**Weeks 10, 11: Javascript**
+Weeks 10, 11: Javascript
 
-Weeks 12, 13, 14, 15: Django
+**Weeks 12, 13, 14, 15: Django**
 
 Weeks 16, 17, 18: Capstone project
 
 ### Scheduled Holidays (no class)
 - **Nov 11** - Veterans Day
 - **Nov 25 - 26** - Thanksgiving
-- **Dec 24** - Christmas Eve
+- **Dec 23 & 24** - Christmas Eve
 - **Dec 31** - New Years Eve
 
 ### Assigned Labs:
@@ -67,11 +67,19 @@ Weeks 16, 17, 18: Capstone project
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>Javascript</summary>
   <ul>
     <li>Lab 01-03 - JS Redo</li>
     <li>Lab 04 - To Do List</li>
+    <li>Lab 05 - Quote API</li>
+  </ul>
+</details>
+
+<details open>
+  <summary>Django</summary>
+  <ul>
+    <li>Lab 01 - To Do List</li>
   </ul>
 </details>
 
@@ -181,6 +189,16 @@ Corrections will be made only to that particular branch.
 
 ## Additional Resources
 
+
+<details>
+  <summary>SQL</summary>
+  <ul>
+    <li><a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
+    <li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a></li>
+    <li><a href="https://www.w3schools.com/sql/">W3 Schools</a> - SQL Tutorial</li>
+    <li><a href="https://learnsql.com/blog/ways-to-practice-sql-online/">SQL Practice Resources</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>HTML/CSS/JS Online IDEs</summary>

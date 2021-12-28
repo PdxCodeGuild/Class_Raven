@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Lab01" content="width-device-width" , initial-scale="1.0" />
+    <meta lang="en" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="static/style.css" rel='stylesheet'/>
+
+  </head>
+  <body>
+    <div class="container">
+      <header id="app-header" class="center">Todo App</header>
+      <div class="row" >
+        <div class="col s12 m12 l10">
+          <a id="add-task" class="btn-large waves-effect waves-light">
+            Add Task
+            <i class=" material-icons right">add</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='container' id='complete-container'>
+      <header id='complete-header' class='center'>Completed</header>
+      <div class='row' id='completed'></div>
+      
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
