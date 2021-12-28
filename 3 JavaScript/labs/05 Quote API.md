@@ -58,7 +58,7 @@ const headers = {
 
 **Note:** This is still not the most secure way to handle secret keys. We'll see other ways later in the course.
 
-You can use Favqs' `page` and `filter` parameters to get a bunch of quotes from the API. You can add page buttons and/or a text `input` field and `button` for filtering.
+You can use Favqs' `page` and `filter` parameters to get a bunch of quotes from the API. You can add page buttons and a text `input` field and `button` for filtering.
 
 Provide URL parameters for your request either by including them in the URL using template literal syntax
 
