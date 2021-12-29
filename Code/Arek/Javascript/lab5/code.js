@@ -12,14 +12,16 @@ let back = document.querySelector('#back-page')
 let next = document.querySelector('#next-page')
 let btn = document.querySelector('#button1')
 let lastPage = false
-let count = 0
+
 let newQuote = document.createElement('div')
 
 function displayQuote(data){
+    let count = 0
     console.log(data.quotes.length) - 1
     let pagenum = document.getElementById('page-number')
     let quote = document.getElementById('quote-div')
-    
+    let quoteList = []
+    quote.innerHTML = ``
     
     
    
@@ -28,14 +30,24 @@ function displayQuote(data){
         <article>Last Page = ${data.last_page}</article>
         
     `
-    for (item of data.quotes){
-        newQuote.innerHTML = `
-            <h1>${item.body}</h1>
-        
-        
-        `
-        quote.appendChild(newQuote)
+    for (thing in data.quotes){
+        quoteList.push(data.quotes[count].body)
+        count += 1
+
     }
+    count = 0
+    for (item in quoteList){
+       let newquote = document.createElement('div')
+       newquote.innerHTML = `
+        <h1>${quoteList[count]}</h1>
+       `
+        quote.appendChild(newquote)
+        count += 1
+    }
+    console.log(quoteList)
+
+    
+    
     
     
     
