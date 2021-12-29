@@ -1,22 +1,37 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <h1 class="display-1">Pollster</h1>
+
+<!-- action and method form attributes are required for Django to access the data -->
+<form action="{% url 'polls:create' %}" method="POST">
+  <!-- to prevent CSRF attacks -->
+    {% csrf_token %}
+  <input type="text" name="question_text" placeholder="Enter Question" />
+  <div>
+    <p>How many choices?</p>
+    <input
+      type="number"
+      step="1"
+      min="2"
+      max="8"
+      value="2"
+      name="number_of_choices"
+    />
+  </div>
+  <button type="submit">Create</button>
+</form>
 
 {% for question in questions.all %}
 <div class="poll">
-    <h1>{{question.question_text}}</h1>
-    <small>Voting is {{question.status}}</small>
+  <h1>{{question.question_text}}</h1>
+  <small>Voting is {{question.status}}</small>
 
-    <ul class="choices">
-        {% for choice in question.choices.all %}
-            <li class="choice">{{choice.votes}} - {{ choice.choice_text }} <a href="{% url 'polls:vote' choice.id %}">Vote</a></li>
-        {% endfor %}
-    </ul>
+  <ul class="choices">
+    {% for choice in question.choices.all %}
+    <li class="choice">
+      {{choice.votes}} - {{ choice.choice_text }}
+      <a href="{% url 'polls:vote' choice.id %}">Vote</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
-{% endfor %}
-
-
-
-
-{% endblock %}
+{% endfor %} {% endblock %}

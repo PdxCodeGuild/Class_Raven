@@ -9,7 +9,7 @@
 
     <ul class="choices">
         {% for choice in question.choices.all %}
-            <li class="choice">{{choice.votes}} - {{ choice.choice_text }} <a href="">Vote</a></li>
+            <li class="choice">{{choice.votes}} - {{ choice.choice_text }} <a href="{% url 'polls:vote' choice.id %}">Vote</a></li>
         {% endfor %}
     </ul>
 </div>
