@@ -20,6 +20,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     
     path("/", include("lab01.urls")),
-    path("/save/", include("save.urls")),
-    path("/todolist/", include("todolist.urls")),
+    #path("/save/", include("save.urls")),
+    #path("/todolist/", include("todolist.urls")),
 ]
