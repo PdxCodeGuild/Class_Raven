@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item">
+                <a class="navbar-item" href={% url 'todo_list:index' %}>
                     Home
                 </a>
 
@@ -37,13 +37,13 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href={% url 'todo_list:retrieve' %}>
                             Retrieve
                         </a>
-                        <a class="navbar-item">
+                        <a class="navbar-item" href={% url 'todo_list:update' %}>
                             Update
                         </a>
-                        <a class="navbar-item">
+                        <a class="navbar-item" href={% url 'todo_list:delete' %}>
                             Delete
                         </a>
                     </div>
@@ -53,11 +53,14 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
+                        <a class="button is-primary" href={% url 'todo_list:signup' %}>
                             <strong>Sign up</strong>
                         </a>
-                        <a class="button is-light">
+                        <a class="button is-light" href={% url 'todo_list:login' %}>
                             Log in
+                        </a>
+                        <a class="button is-light" href={% url 'todo_list:logout' %}>
+                            Log out
                         </a>
                     </div>
                 </div>
@@ -65,9 +68,14 @@
         </div>
     </nav>
 
-    <div class="content">
-        {% block content %}{% endblock %}
+    <div class="columns">
+        <div class="column is-one-fifth"></div>
+        <div class="column">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="column is-one-fifth"></div>
     </div>
+
 
     <footer class="footer">
         <div class="content has-text-centered">
