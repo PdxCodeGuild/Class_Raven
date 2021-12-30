@@ -12,13 +12,13 @@ def create(request):
     return render(request, "todo_list/create.html")
 
 def update(request):
-    return render(request, "todo_list/update.html")
+    return render(request, "todo_list/update.html", context)
     
 def delete(request):
-    return render(request, "todo_list/delete.html")
+    return render(request, "todo_list/delete.html", context)
 
-def retrieve(request):
-    return render(request, "todo_list/retrieve.html")
+def completed(request):
+    return render(request, "todo_list/completed.html", context)
 
 def signup(request):
     return render(request, "todo_list/signup.html")

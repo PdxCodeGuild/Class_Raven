@@ -3,13 +3,13 @@
 {% block content %}
 
 <form action="">
-    <p><strong>Delete Posts</strong>
+    <p><strong>Completed To-Do</strong>
     <div class="field has-addons">
         <div class="control is-expanded">
             <div class="select is-fullwidth">
-                <select name="todo-delete">
-                    {% for created_todo in  dummy_iter %}
-                        <option value="title">Delete To-Do Title {{ created_todo }}</option>
+                <select name="todo-retrieve">
+                    {% for created_todo in dummy_iter %}
+                    <option value="title">Completed To-Do Title {{ created_todo }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -19,4 +19,5 @@
         </div>
     </div>
 </form>
+
 {% endblock %}
