@@ -4,7 +4,7 @@
 <!-- action and method form attributes are required for Django to access the data -->
 <form action="{% url 'polls:create' %}" method="POST">
   <!-- to prevent CSRF attacks -->
-    {% csrf_token %}
+  {% csrf_token %}
   <input type="text" name="question_text" placeholder="Enter Question" />
   <div>
     <p>How many choices?</p>

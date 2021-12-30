@@ -21,7 +21,7 @@ def index(request):
 
     # context is a dictionary containing the values we want to use on the template
     # render(request, template_name, context_dict)
-    return render(request, 'index.html', context)
+    return render(request, 'polls/index.html', context)
 
 
 def vote(request, choice_id):
@@ -44,7 +44,7 @@ def vote(request, choice_id):
         'question': choice.question
     }
 
-    return render(request, 'result.html', context)
+    return render(request, 'polls/result.html', context)
 
 
 def create_question(request):
@@ -70,7 +70,7 @@ def create_question(request):
     }
 
     # render the add_choices.html template using the context data
-    return render(request, 'add_choices.html', context)
+    return render(request, 'polls/add_choices.html', context)
 
 
 
