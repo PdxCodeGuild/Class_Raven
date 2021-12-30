@@ -1,0 +1,43 @@
+/* minor css reset */
+body {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+ul>li {
+  list-style: none;
+}
+
+/* flexbox */
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+/* positions */
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+/* shapes */
+.circle {
+  border-radius: 50%;
+}
+/* colors */
+.black-white {
+  color: white;
+  background-color: black;
+}
