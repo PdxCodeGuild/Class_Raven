@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     
-    "lab01",
-    #"save",
-    #"todolist",
+    "lab01app",
+    "save",
+    "todolist",
     "users",
 ]
 
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "lab01.urls"
+ROOT_URLCONF = "lab01app.urls"
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "lab01.wsgi.application"
+WSGI_APPLICATION = "lab01app.wsgi.application"
 
 
 # Database
