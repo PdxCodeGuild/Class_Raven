@@ -1,3 +1,9 @@
+:root {
+  --font: consolas;
+  --font-color: white;
+  --bg-color: black;
+}
+
 /* minor css reset */
 body {
   vertical-align: baseline;
@@ -10,34 +16,48 @@ ul>li {
   list-style: none;
 }
 
-/* flexbox */
-.flex {
+/* page styles */
+body {
+  font-family: var(--font);
+}
+button {
+  background-color: darkgrey;
+}
+section {
   display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
-.flex-col {
-  display: flex;
-  flex-direction: column;
+ul {
+  margin: 1rem;
+  padding: 2rem;
 }
-.flex-row {
-  display: flex;
-  flex-direction: row;
+ul>li {
+  margin-right: 2rem;
+  font-size: 20px;
 }
-/* positions */
-.fixed {
-  position: fixed;
+b {
+  font-size: 18px;
 }
-.absolute {
-  position: absolute;
-}
-.relative {
-  position: relative;
-}
-/* shapes */
-.circle {
-  border-radius: 50%;
-}
-/* colors */
 .black-white {
   color: white;
   background-color: black;
+}
+.center {
+  text-align: center;
+}
+.border {
+  border: 2px solid var(--font-color);
+}
+.container {
+  min-width: 50%;
+  text-align: center;
+  margin: 1rem;
+}
+.form-section {
+  margin-top: 1rem;
+}
+.option {
+  border-bottom: .5px dashed var(--font-color);
+  margin: 1rem;
 }
