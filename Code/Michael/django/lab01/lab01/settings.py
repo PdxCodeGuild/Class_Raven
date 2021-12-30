@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     "lab01",
-    "save",
-    "todolist",
+    #"save",
+    #"todolist",
     "users",
 ]
 
