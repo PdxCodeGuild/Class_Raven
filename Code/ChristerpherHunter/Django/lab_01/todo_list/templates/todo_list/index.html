@@ -3,6 +3,8 @@
 {% block content %}
 
 <div class="columns">
+
+    {% for key in dummy_iter %}
     <div class="column is-one-quarters"></div>
     <div class="column">
         <div class="card">
@@ -25,7 +27,7 @@
 
                 <div class="content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Phasellus nec iaculis mauris.
+                    Phasellus nec iaculis mauris. <strong>{{ key }}</strong>
                     <br>
                     <br>
                     <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
@@ -34,6 +36,7 @@
         </div>
     </div>
     <div class="column is-one-quarters"></div>
+    {% endfor %}
 </div>
 
 {% endblock %}
