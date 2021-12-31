@@ -6,25 +6,60 @@ context = {
 }
 
 def index(request):
-    return render(request, "todo_list/index.html", context)
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/index.html", context)
+    
+    form = request.POST
+    print(form)
 
 def create(request):
-    return render(request, "todo_list/create.html")
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/create.html")
+    
+    form = request.POST
+    print(form)
 
 def update(request):
-    return render(request, "todo_list/update.html", context)
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/update.html", context)
+    
+    form = request.POST
+    print(form)
     
 def delete(request):
-    return render(request, "todo_list/delete.html", context)
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/delete.html", context)
+    
+    form = request.POST
+    print(form)
 
 def completed(request):
-    return render(request, "todo_list/completed.html", context)
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/completed.html", context)
+    
+    form = request.POST
+    print(form)
 
 def signup(request):
-    return render(request, "todo_list/signup.html")
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/signup.html")
+    
+    form = request.POST
+    print(form)
 
 def login(request):
-    return render(request, "todo_list/login.html")
+    
+    if request.method == 'GET':
+        return render(request, "todo_list/login.html")
+    
+    form = request.POST
+    print(form)
     
 def logout(request):
     return render(request, "todo_list/logout.html")

@@ -3,13 +3,16 @@
 {% block content %}
 
 <form action="">
+
+    {% csrf_token %}
+
     <p><strong>Update To-Do</strong>
     <div class="field has-addons">
         <div class="control is-expanded">
             <div class="select is-fullwidth">
                 <select name="todo-update">
-                    {% for created_todo in  dummy_iter %}
-                        <option value="title">Update To-Do Title {{ created_todo }}</option>
+                    {% for created_todo in dummy_iter %}
+                    <option value="title">Update To-Do Title {{ created_todo }}</option>
                     {% endfor %}
                 </select>
             </div>

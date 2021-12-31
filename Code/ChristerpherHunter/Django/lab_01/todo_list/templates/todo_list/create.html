@@ -2,7 +2,10 @@
 
 {% block content %}
 
-<form action="">
+<form action="{% url 'todo_list:create' %}" , method="POST">
+
+    {% csrf_token %}
+
     <div>
         <div class="field">
             <label class="label">Name</label>
