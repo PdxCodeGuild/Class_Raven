@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # third-party apps
 
     # my apps
+    'users',
     'polls',
 ]
 
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'django_polls.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,6 +122,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# direct django to the project-level static folder
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+
+# direct django to use our CustomUser model as the default User model
+AUTH_USER_MODEL = 'users.CustomUser'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
