@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+	<header>
+    <h1>PassGen</h1>
+    <h4>your source for passwords you'll never remember</h4>
+    <h5>(or even where you saved them)</h5>
+  </header>
+	<main>
+    <form action="">
+      {% for set in charsets %}
+      <label for="{{set}}">{{set}}
+        <input type="checkbox" name="{{set}}" checked>
+      </label>
+      {% endfor %}
+      <button>go</button>
+    </form>
+	</main>
+
+{% endblock %}
