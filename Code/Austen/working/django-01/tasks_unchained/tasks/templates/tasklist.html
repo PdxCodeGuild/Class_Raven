@@ -5,10 +5,16 @@
   loser.
 </h1>
 <hr />
-{% for task in Tasks %}
-
-<br /><span class="task">{{task.task_name}}</span><br />
-
-{% endfor %}
+<form>
+  <div class="tasklist">
+    {% for task in tasks %}
+    <label class="task" for="task-{{task.id}}"> {{task.name}} </label>
+    <input type="checkbox" name="task-{{task.id}}" />
+    <input type="radio" name="delete-task-{{task.id}}" />
+    <br />
+    {% endfor %}
+  </div>
+  <button type="submit">I totally did all this crap.</button>
+</form>
 <!---->
 {% endblock %}

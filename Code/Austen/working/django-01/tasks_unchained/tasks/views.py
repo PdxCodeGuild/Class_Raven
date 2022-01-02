@@ -22,8 +22,9 @@ def form(request):
   return render(request, 'form.html', context)
 
 def tasklist(request):
-  Tasks = Task.objects.all()
+  tasks = Task.objects.all()
   context = {
-    'Tasks': Tasks
+    'tasks': tasks
   }
+  print(tasks)
   return render(request, 'tasklist.html', context)

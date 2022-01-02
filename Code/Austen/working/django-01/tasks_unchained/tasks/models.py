@@ -1,8 +1,9 @@
-from django.db.models import Model, CharField
+from django.db.models import Model, CharField, BooleanField
 
 # Create your models here.
 class Task(Model):
-  task_name = CharField(max_length=20)
+  name = CharField(max_length=20)
+  status = BooleanField
   
   def __str__(self):
-    return self.task_name
+    return self.name

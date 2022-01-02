@@ -10,12 +10,12 @@ ul > li {
 a:any-link {
   color: darkorange;
 }
-.task {
-  color: firebrick;
-  font-size: large;
-}
-
 button {
   color: darkorange;
   background-color: black;
+}
+
+.task {
+  color: firebrick;
+  font-size: large;
 }
