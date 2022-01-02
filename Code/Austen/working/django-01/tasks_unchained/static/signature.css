@@ -1,0 +1,21 @@
+body {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: consolas;
+}
+ul > li {
+  list-style: none;
+}
+a:any-link {
+  color: darkorange;
+}
+.task {
+  color: firebrick;
+  font-size: large;
+}
+
+button {
+  color: darkorange;
+  background-color: black;
+}

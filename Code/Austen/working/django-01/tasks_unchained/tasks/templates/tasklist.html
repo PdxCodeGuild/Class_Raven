@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<!---->
+<h1>
+  These are the things you have to do...<br />
+  loser.
+</h1>
+<hr />
+{% for task in Tasks %}
+
+<br /><span class="task">{{task.task_name}}</span><br />
+
+{% endfor %}
+<!---->
+{% endblock %}
