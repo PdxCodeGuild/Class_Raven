@@ -6,5 +6,7 @@ app_name = 'tasks'
 urlpatterns = [
     path('', views.index, name='home'),
     path('form', views.form, name='form'),
-    path('tasklist', views.tasklist, name='tasklist')
+    path('tasklist', views.tasklist, name='tasklist'),
+    path('submit-task', views.submit, name='submit'),
+    path('update-list', views.update, name='update'),
 ]

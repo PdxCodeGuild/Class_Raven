@@ -5,15 +5,13 @@
   loser.
 </h1>
 <hr />
-<form>
-  <div class="tasklist">
-    {% for task in tasks %}
-    <label class="task" for="task-{{task.id}}"> {{task.name}} </label>
-    <input type="checkbox" name="task-{{task.id}}" />
-    <input type="radio" name="delete-task-{{task.id}}" />
-    <br />
-    {% endfor %}
-  </div>
+<form action="{% url 'tasks:update' %}" method="post" class="tasklist">
+   {% for task in tasks %}
+  <label class="task" for="task-{{task.id}}"> {{task.name}} </label>
+  <input type="checkbox" name="{{task.id}}" />
+  <br />
+  {% endfor %}
+  {% csrf_token %}
   <button type="submit">I totally did all this crap.</button>
 </form>
 <!---->
