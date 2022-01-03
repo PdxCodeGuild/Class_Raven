@@ -18,11 +18,7 @@ app_name = 'todo'
 def index(request):
     todos = Todoitem.objects.all().order_by('created_date')
     
-    priority = Priority.objects.all()
-    
-    p = Todoitem.objects.get(text = 'Mow the lawn')
-
-    print(p.priority.name)
+    priority = Priority.objects.all
     
     context = {
         'todos': todos,
@@ -37,6 +33,8 @@ def save_todo_item(request):
     form = request.POST
     
     text = form['add_todo']
+    name = form.get['priority_choice']
+    print(name)
 
     new_todo = Todoitem()
     new_todo.text = text

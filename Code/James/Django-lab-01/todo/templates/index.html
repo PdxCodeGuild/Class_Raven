@@ -19,9 +19,15 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         {%for priority in priority.all%}
-        <li><button class="dropdown-item" type="button">{{priority.name}}</button></li>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="priority_choice" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            {{priority.name}}
+          </label>
+        </div>
         {%endfor%}
-      </ul>
+    </ul>
+    
     </div>
 
 
