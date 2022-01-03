@@ -7,4 +7,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+.todo-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.btn-group{
+    position: fixed;
+    
+}
+
+.list-group-item{
+    display: flex;
+    align-content: flex-start;
+    color: black;
 }
