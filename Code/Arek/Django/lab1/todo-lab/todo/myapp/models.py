@@ -13,7 +13,7 @@ priority_choices = [
 
 
 class Priority(models.Model):
-    name = models.CharField(max_length=6, choices=priority_choices,default='medium')
+    name = models.CharField(max_length=6, choices=priority_choices)
 
     def __str__(self):
         return self.name
