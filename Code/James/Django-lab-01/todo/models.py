@@ -23,8 +23,9 @@ class Priority(models.Model):
 class Todoitem(models.Model):
     text = models.CharField('Todo item', max_length=200)
     priority = models.ForeignKey(
-        Priority, on_delete=models.CASCADE, related_name='choices'),
+        Priority, on_delete=models.CASCADE, related_name='choices')
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.text, self.created_date,
+        print(type(self.priority.name))
+        return f'{self.text}, {self.created_date}, {self.priority.name}'

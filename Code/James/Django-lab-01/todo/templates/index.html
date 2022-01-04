@@ -18,11 +18,11 @@
         Priority
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        {%for priority in priority.all%}
+        {%for choice in choices%}
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="priority_choice" id="flexRadioDefault1">
+          <input class="form-check-input" value="{{choice}}" type="radio" name="key" id="{{choice}}">
           <label class="form-check-label" for="flexRadioDefault1">
-            {{priority.name}}
+            {{choice}}
           </label>
         </div>
         {%endfor%}
@@ -43,7 +43,7 @@
     
     {% for todo in todos.all%}
     
-    <li class="list-group-item">{{todo.text}}, created: {{todo.created_date}} priority: {{todo.choices}}
+    <li class="list-group-item">{{todo.text}}, created: {{todo.created_date}} priority: {{todo.priority.name}}
       <div class="btn-group">
       <button
         class="btn btn-outline-secondary"

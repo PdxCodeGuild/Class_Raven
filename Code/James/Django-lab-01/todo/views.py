@@ -18,11 +18,13 @@ app_name = 'todo'
 def index(request):
     todos = Todoitem.objects.all().order_by('created_date')
     
-    priority = Priority.objects.all
+    priority = Priority.objects.all()
+    print(priority)
     
     context = {
         'todos': todos,
-        'priority': priority
+        'priority': priority,
+        'choices' : ['high', 'medium', 'low' ]
     }
 
 
@@ -33,14 +35,17 @@ def save_todo_item(request):
     form = request.POST
     
     text = form['add_todo']
-    name = form.get['priority_choice']
-    print(name)
-
+    name = form['key']
+    # print(name)
+    # priority = Priority.objects.get_or_create(name=form['key'])
+    priority, created = Priority.objects.get_or_create(name=form['key'])
     new_todo = Todoitem()
     new_todo.text = text
+    
+    new_todo.priority = priority
+    
+    
+    print(priority.name)
     new_todo.save()
-
-   
-    print(form)
     return HttpResponseRedirect(reverse('todo:home'))
     
