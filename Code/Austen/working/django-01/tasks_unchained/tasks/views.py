@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse as HTTP
+# from django.http import HttpResponse as HTTP
 from .models import Task
 
 
@@ -23,12 +23,16 @@ def form(request):
   
   return render(request, 'form.html', context)
 
-def tasklist(request):
+def context():
   tasks = Task.objects.all()
-  context = {
+  tasks = {
     'tasks': tasks
   }
-  return render(request, 'tasklist.html', context)
+  return tasks
+
+def tasklist(request):
+  
+  return render(request, 'tasklist.html', context=context())
 
 def submit(request):
   submission = request.POST
@@ -36,14 +40,25 @@ def submit(request):
   new_task = Task()
   new_task.name = task_name
   new_task.save()
-  tasks = Task.objects.all()
-  context = {
-    'tasks': tasks
-  }
-  return render(request, 'tasklist.html', context)
+
+  return render(request, 'tasklist.html', context=context())
   
 def update(request):
-  form = request.POST
-  tasks = Task.objects.all()
-  # ? Cannot get tasks to update >:(
-  return HTTP('check terminal')
+  updates = request.POST.getlist(key='task_id')
+  tasklist = Task.objects.filter(id__in=updates)
+  for task in tasklist:
+    task.status = True
+    task.save()  
+
+  return render(request, 'tasklist.html', context=context())
+
+def update_complete(request):
+  do_not_update = request.POST.getlist(key='task_id')
+  do_not_update = Task.objects.filter(id__in=do_not_update)
+  tasklist = Task.objects.filter(status=True)
+  for task in tasklist:
+    if task not in do_not_update:
+      task.status = False
+      task.save()
+
+  return render(request, 'tasklist.html', context=context())

@@ -9,4 +9,5 @@ urlpatterns = [
     path('tasklist', views.tasklist, name='tasklist'),
     path('submit-task', views.submit, name='submit'),
     path('update-list', views.update, name='update'),
+    path('update-complete', views.update_complete, name='update_complete')
 ]

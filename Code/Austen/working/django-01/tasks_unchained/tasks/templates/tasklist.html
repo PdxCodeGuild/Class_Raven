@@ -6,13 +6,28 @@
 </h1>
 <hr />
 <form action="{% url 'tasks:update' %}" method="post" class="tasklist">
-   {% for task in tasks %}
-  <label class="task" for="task-{{task.id}}"> {{task.name}} </label>
-  <input type="checkbox" name="{{task.id}}" />
+  {% for task in tasks %} {% if task.status == False%}
+  <label class="task" for="task_id"> {{task.name}} </label>
+  <input type="checkbox" name="task_id" value="{{task.id}}" id="task_id" />
   <br />
-  {% endfor %}
-  {% csrf_token %}
+  {% endif %} {% endfor %} {% csrf_token %}
   <button type="submit">I totally did all this crap.</button>
+</form>
+<h1>Congrats you managed to actually do theses things :eyeroll:</h1>
+<hr />
+<form action="{% url 'tasks:update_complete' %}" method="post" class="tasklist">
+  {% for task in tasks %} {% if task.status == True%}
+  <label class="task complete" for="task_id"> {{task.name}} </label>
+  <input
+    type="checkbox"
+    name="task_id"
+    value="{{task.id}}"
+    id="task_id"
+    checked
+  />
+  <br />
+  {% endif %} {% endfor %} {% csrf_token %}
+  <button type="submit">I lied. Fix this for me.</button>
 </form>
 <!---->
 {% endblock %}

@@ -10,6 +10,7 @@ ul > li {
 a:any-link {
   color: darkorange;
 }
+
 button {
   color: darkorange;
   background-color: black;
@@ -18,4 +19,12 @@ button {
 .task {
   color: firebrick;
   font-size: large;
+}
+
+/* ? Don't work?? */
+form {
+  text-align: start;
+}
+.complete {
+  text-decoration: line-through;
 }
