@@ -1,0 +1,26 @@
+.button-center {
+    justify-content: center;
+}
+
+.author {
+    padding:0px;
+    margin:0px;
+}
+
+.quote {
+    background-color: rgba(40, 20, 15, 0.507);
+    border-radius: 30px;
+    border-color: rgb(70, 54, 30);
+    border-width: 5px;
+    border-style: solid;
+    padding:3%;
+    margin:3%;
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+.change-page {
+    margin-top:10%;
+    justify-content:center;
+}
