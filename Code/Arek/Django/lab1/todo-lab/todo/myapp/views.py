@@ -32,7 +32,7 @@ def add_todo(request):
    new_priority.save()
 
    new_todo_item.text = new_todo
-   new_todo_item.priority = Priority.name
+ 
    new_todo_item.save() #saving the new rows in the database
 
 
