@@ -48,14 +48,17 @@
 				<ul class="navbar-nav me-2">
 					{% if request.user.is_authenticated %}
 					<li class="nav-item">
-						<a class="nav-link" href="#">Account</a>
+						<a class="nav-link" href="{% url 'users:account' %}">Account</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Logout</a>
+						<a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
 					</li>
 					{% else %}
 					<li class="nav-item">
-						<a class="nav-link" href="#">Login</a>
+						<a class="nav-link" href="{% url 'users:login' %}">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'users:register' %}">Register</a>
 					</li>
 					{% endif%}
 				</ul>

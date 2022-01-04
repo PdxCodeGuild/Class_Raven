@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block content %}
+<!-- Display user account info -->
+<h1 class="display">Account</h1>
+<!-- Display error messages if they exist -->
+{% if error%}
+<h3 class="error">{{error}}</h3>
+{% endif%} {% csrf_token %}
+<!-- Display user info -->
+<p>Username: {{user.username}}</p>
+<p>Email: {{user.email}}</p>
+<p>First Name: {{user.first_name}}</p>
+<p>Last Name: {{user.last_name}}</p>
+
+<!-- Toggle display of edit-form -->
+<button id="edit-button">Edit</button>
+
+<form
+	action="{% url 'users:account' %}"
+	method="POST"
+	class="auth-form"
+	id="edit-form"
+>
+	{% csrf_token %}
+	<label for="first-name-field">First Name</label>
+	<input
+		type="text"
+		name="first-name"
+		id="first-name-field"
+		value="{{user.first_name}}"
+	/>
+	<label for="last-name-field">Last Name</label>
+	<input
+		type="text"
+		name="last-name"
+		id="last-name-field"
+		value="{{user.last_name}}"
+	/>
+	<label for="username-field">Username</label>
+	<input
+		type="text"
+		name="username"
+		id="username-field"
+		value="{{user.username}}"
+	/>
+	<label for="email-field">Email</label>
+	<input type="email" name="email" id="email-field" value="{{user.email}}" />
+	<label for="password-field">Password</label>
+	<input type="password" name="password" id="password-field" />
+	<button type="submit">Submit</button>
+</form>
+
+{% endblock %}
