@@ -1,0 +1,19 @@
+.quote-item {
+    margin: 10px 10px;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    margin: 10px 10px;
+}
+
+.blockquote {
+    margin: 10px 10px;
+}
+
+#quote-author {
+    margin: 10px 50px;
+    margin-bottom: 3rem;
+    text-align: right;
+}
+

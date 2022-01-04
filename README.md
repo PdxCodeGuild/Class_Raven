@@ -79,6 +79,7 @@ Weeks 16, 17, 18: Capstone project
 <details open>
   <summary>Django</summary>
   <ul>
+    <li>Lab 01 - To Do List</li>
   </ul>
 </details>
 
@@ -213,6 +214,7 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>Useful VS Code Extensions</summary>
   <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=WyattFerguson.jinja2-snippet-kit">Jinja2 Snippet Kit</a>Jinja2 snippets for cool attractive people to use in your HTML templates.</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a>Makes code blocks and nested expressions easier to read</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a>GUI to make and manage HTTP requests</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All-In-One</a>Quickly create markdown tables of contents and other useful markdown features</li>
