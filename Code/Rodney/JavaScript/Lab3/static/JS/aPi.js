@@ -44,18 +44,24 @@ submit.addEventListener("click", function () {
 
     .then(function (result) {
         console.log(result)
+        if (pageNumber = 1) {
+          previousPageButton.style.color = 'lightgray'
+        }
       if (result.last_page === true) {
         nextPageButton.disabled = true;
         previousPageButton.disabled = true;
+        nextPageButton.style.color = 'lightgray'
       }
+
 
       result.quotes.forEach((element) => {
         if (element.body === "No quotes found") {
           pageDisplay.innerHTML = "";
           nextPageButton.disabled = true;
+          nextPageButton.style.color = 'lightgray'
+          previousPageButton.style.color = 'lightgray'
           previousPageButton.disabled = true;
           li = document.createElement("li");
-
           li.appendChild(
             document.createTextNode("Sorry, no results for that search!")
           );
@@ -90,8 +96,15 @@ nextPageButton.addEventListener("click", function () {
     .then((response) => response.json())
 
     .then(function (result) {
+      previousPageButton.disabled = false;
+      if (pageNumber !== 1) {
+        previousPageButton.style.color = 'rgb(16, 6, 83)'
+      }
       if (result.last_page !== true) {
         nextPageButton.disabled = false;
+      }
+      if (result.last_page == true) {
+        nextPageButton.style.color = 'lightgray'
       }
     })
     .catch(function (error) {
@@ -127,12 +140,24 @@ nextPageButton.addEventListener("click", function () {
 
 previousPageButton.addEventListener("click", function () {
   nextPageButton.disabled = false;
+  nextPageButton.style.color = 'rgb(16, 6, 83)'
   ul.innerHTML = "";
   li.innerHTML = "";
 
   if (pageNumber > 1) {
     pageNumber = pageNumber - 1;
+  } else if (pageNumber === 2){
+    pageNumber = pageNumber - 1;
+    nextPageButton.disabled = false;
+    previousPageButton.disabled = true;
+    previousPageButton.style.color = 'lightgray'
   }
+  else {
+    nextPageButton.disabled = false;
+    previousPageButton.disabled = true;
+    previousPageButton.style.color = 'lightgray'
+  }
+
   pageDisplay.innerHTML = `Page: ${pageNumber}`;
   let url = `https://favqs.com/api/quotes?page=${pageNumber}&filter=${queryString}`;
   fetch(url, {
@@ -162,6 +187,8 @@ previousPageButton.addEventListener("click", function () {
 // ----------------------------------Error Message ---------------------------------------
 
 clear.addEventListener("click", function () {
+  nextPageButton.style.color = 'rgb(16, 6, 83)'
+  previousPageButton.style.color = 'rgb(16, 6, 83)'
   submit.disabled = false;
   nextPageButton.disabled = true;
   clear.disabled = true;
@@ -170,5 +197,5 @@ clear.addEventListener("click", function () {
   li.innerHTML = "";
   userInput.value = "";
   pageNumber = 1;
-  pageDisplay.innerHTML = "Search cleared! ";
+  pageDisplay.innerHTML = "Cleared!";
 });
