@@ -1,0 +1,44 @@
+
+{% load static %} <!--This lets you use your css file-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet"  href="{% static 'index.css' %}">
+        <link rel="stylesheet"  href="https://'cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body class='blue'>
+
+        
+        <div class='container center-align'>
+
+            {% block content %}
+
+
+
+        
+            {% endblock content %}
+
+
+
+
+        </div>
+        
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
