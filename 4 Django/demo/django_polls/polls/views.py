@@ -8,6 +8,8 @@ from django.http import HttpResponse, HttpResponseRedirect ,Http404
 # import the models from the Polls app
 from .models import Question, Choice
 
+from users.models import CustomUser
+
 def index(request):
     # return HttpResponse('<h1>Hello world!</h1>')
     
@@ -21,7 +23,7 @@ def index(request):
 
     # context is a dictionary containing the values we want to use on the template
     # render(request, template_name, context_dict)
-    return render(request, 'index.html', context)
+    return render(request, 'polls/index.html', context)
 
 
 def vote(request, choice_id):
@@ -44,10 +46,13 @@ def vote(request, choice_id):
         'question': choice.question
     }
 
-    return render(request, 'result.html', context)
+    return render(request, 'polls/result.html', context)
 
 
 def create_question(request):
+
+    print('user requesting to create a question:', request.user)
+
     # the form data is available through the request object
     form = request.POST
 
@@ -57,7 +62,13 @@ def create_question(request):
 
     # create the new question in the database
     new_question = Question()
+    # set the question text
     new_question.question_text = question_text
+
+    # assign a user to the question
+    new_question.user = request.user
+
+    # save the object to the database
     new_question.save()
 
     # generate a list of choice numbers
@@ -70,7 +81,7 @@ def create_question(request):
     }
 
     # render the add_choices.html template using the context data
-    return render(request, 'add_choices.html', context)
+    return render(request, 'polls/add_choices.html', context)
 
 
 
@@ -97,3 +108,14 @@ def add_choices(request):
 
     # redirect to the home page to view all the polls
     return HttpResponseRedirect(reverse('polls:home'))
+
+
+def user_polls_list(request, username):
+    user = get_object_or_404(CustomUser, username=username)
+    questions = Question.objects.filter(user=user)
+    
+    context = {
+        'questions': questions
+    }
+
+    return render(request, 'polls/polls-list.html', context)
