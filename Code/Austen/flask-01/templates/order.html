@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+  <h1 class="center">Your Taco Order</h1>
+
+  <section>
+    <ul class="border">
+      {% for key in order.keys() %}
+        <li><b>{{key.title()}}</b>: {{order[key]}}</li>
+        <br>
+      {% endfor %}
+    </ul>
+
+  </section>
+{% endblock %}
