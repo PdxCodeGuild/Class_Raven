@@ -80,6 +80,7 @@ Weeks 16, 17, 18: Capstone project
   <summary>Django</summary>
   <ul>
     <li>Lab 01 - To Do List</li>
+    <li>Lab 02 - Blog</li>
   </ul>
 </details>
 
@@ -191,6 +192,13 @@ Corrections will be made only to that particular branch.
 
 
 <details>
+  <summary>Django</summary>
+  <ul>
+    <li><a href="https://github.com/perennialAutodidact/django_guides/blob/master/custom_user_model.md">Guide to Extend Django's User Model</a> - by Keegan Good</li>
+  </ul>
+</details>
+
+<details>
   <summary>SQL</summary>
   <ul>
     <li><a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
@@ -214,6 +222,7 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>Useful VS Code Extensions</summary>
   <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=WyattFerguson.jinja2-snippet-kit">Jinja2 Snippet Kit</a>Jinja2 snippets for cool attractive people to use in your HTML templates.</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a>Makes code blocks and nested expressions easier to read</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a>GUI to make and manage HTTP requests</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All-In-One</a>Quickly create markdown tables of contents and other useful markdown features</li>
