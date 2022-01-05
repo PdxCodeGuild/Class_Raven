@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}{% block content %}{% load static %}
 <!-- Display user account info -->
 <h1 class="display">Account</h1>
 <!-- Display error messages if they exist -->
@@ -12,7 +12,7 @@
 <p>Last Name: {{user.last_name}}</p>
 
 <!-- Toggle display of edit-form -->
-<button id="edit-button">Edit</button>
+<button class="btn bg-dark text-light" id="edit-button">Edit</button>
 
 <form
 	action="{% url 'users:account' %}"
@@ -46,7 +46,7 @@
 	<input type="email" name="email" id="email-field" value="{{user.email}}" />
 	<label for="password-field">Password</label>
 	<input type="password" name="password" id="password-field" />
-	<button type="submit">Submit</button>
+	<button class="btn bg-dark text-light" type="submit">Submit</button>
 </form>
 
 {% endblock %}

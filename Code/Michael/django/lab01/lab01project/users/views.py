@@ -54,9 +54,6 @@ def logout(request):
     django_logout(request)
     return HttpResponseRedirect(reverse('assistant:home'))
 
-def accaount(request):
-    return render(request, 'users/account.html')
-
 def account(request):
     if request.method == 'GET':
         return render(request, 'users/account.html')

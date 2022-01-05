@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <h1 class="display">Log in</h1>
 
 <form action="{% url 'users:login' %}" method="POST" class="auth-form">
