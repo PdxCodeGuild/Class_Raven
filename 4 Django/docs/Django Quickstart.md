@@ -24,10 +24,12 @@ In most terminals the name of the environment should show up somewhere in on the
 The command `which pip` and `which python` should reveal that those commands are being pulled from your environment's `/lib` folder where Python is installed. Notice that the alias `python` is used instead of `py`.
 
 Bash
+
 <img src='./screenshots/which-pip-python-bash.jpg' width='800'/>
 
 
 PowerShell
+
 <img src='./screenshots/get-command-powershell.jpg' width='800'/>
 
 
