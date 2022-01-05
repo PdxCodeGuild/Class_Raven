@@ -194,7 +194,7 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>Django</summary>
   <ul>
-    <li><a href="https://github.com/perennialAutodidact/django_guides/blob/master/custom_user_model.md">Guide to Extend Django's User Model</a>by Keegan Good</li>
+    <li><a href="https://github.com/perennialAutodidact/django_guides/blob/master/custom_user_model.md">Guide to Extend Django's User Model</a> - by Keegan Good</li>
   </ul>
 </details>
 
