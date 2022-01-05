@@ -45,11 +45,18 @@ This is my assignment folder.
     <li>Lab 01 - JS Redo (unit converter)</li>
     <li><s>Lab 02 - JS Redo (password generator)</s></li>
     <li><s>Lab 03 - JS Redo (rot cipher)</s></li>
-    <li>Lab 04 - To Do List</li>
-    <li>Lab 05 - Quote API</li>
+    <li><s>Lab 04 - To Do List</s></li>
+    <li><s>Lab 05 - Quote API</s></li>
   </ul>
 </details>
 
+<details>
+  <summary>Django</summary>
+  <ul>
+    <li>Django 01 - To Do List</li>
+</details>
+  
 ## links
+  
 - Python "Mini Capstone"
 : [MysteonDex](https://github.com/austenc-id/MysteonDex)

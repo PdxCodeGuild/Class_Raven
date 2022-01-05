@@ -23,7 +23,7 @@
 {% for question in questions.all %}
 <div class="poll">
   <h1>{{question.question_text}}</h1>
-  <small>Voting is {{question.status}}</small>
+  <small>Created by: {{question.user.username}}</small><small>Voting is {{question.status}}</small>
 
   <ul class="choices">
     {% for choice in question.choices.all %}
