@@ -80,6 +80,7 @@ Weeks 16, 17, 18: Capstone project
   <summary>Django</summary>
   <ul>
     <li>Lab 01 - To Do List</li>
+    <li>Lab 02 - Blog</li>
   </ul>
 </details>
 
@@ -189,6 +190,13 @@ Corrections will be made only to that particular branch.
 
 ## Additional Resources
 
+
+<details>
+  <summary>Django</summary>
+  <ul>
+    <li><a href="https://github.com/perennialAutodidact/django_guides/blob/master/custom_user_model.md">Guide to Extend Django's User Model</a>by Keegan Good</li>
+  </ul>
+</details>
 
 <details>
   <summary>SQL</summary>
