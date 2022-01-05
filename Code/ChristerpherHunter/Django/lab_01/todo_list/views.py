@@ -1,4 +1,8 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib.auth import (
+    authenticate,
+    login as django_login
+)
 from .models import TodoItem
 from colorama import Fore as F
 
@@ -6,11 +10,6 @@ R = F.RESET
 
 
 # Create your views here.
-
-def sanitize(request, todo_name):
-    """Sanitize DB of duplicate titles"""
-    # if TodoItem.objects.count() 
-
 
 def index(request):
 
@@ -53,7 +52,11 @@ def create(request):
 def update(request):
 
     if request.method == 'GET':
-        return render(request, "todo_list/update.html")
+        items = TodoItem.objects.all()
+        context = {
+            "items": items
+        }
+        return render(request, "todo_list/update.html", context)
 
     form = request.POST
     print(form)
@@ -95,9 +98,20 @@ def completed(request):
 def signup(request):
 
     if request.method == 'GET':
+        
         return render(request, "todo_list/signup.html")
-
+    
     form = request.POST
+    username = form["username"]
+    password = form["password"]
+
+    user = authenticate(request, username=username, password=password)
+
+    if user is not None:
+        django_login(request, user)
+
+        # return redirect(reverse())
+
     print(form)
 
 

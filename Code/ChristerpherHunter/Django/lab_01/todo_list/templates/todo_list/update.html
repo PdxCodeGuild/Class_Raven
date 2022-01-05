@@ -1,8 +1,8 @@
 {% extends "todo_list/base.html" %}
-
+{% load static %}
 {% block content %}
 
-<form action="">
+<form action="{% url 'todo_list:update' %}", method="POST">
 
     {% csrf_token %}
 
@@ -11,14 +11,14 @@
         <div class="control is-expanded">
             <div class="select is-fullwidth">
                 <select name="todo-update">
-                    {% for created_todo in dummy_iter %}
-                    <option value="title">Update To-Do Title {{ created_todo }}</option>
+                    {% for item in items %}
+                    <option value="title">{{ item.todo_name }}</option>
                     {% endfor %}
                 </select>
             </div>
         </div>
         <div class="control">
-            <button type="submit" class="button is-primary">Choose</button>
+            <button type="submit" class="button is-primary">Update</button>
         </div>
     </div>
 </form>

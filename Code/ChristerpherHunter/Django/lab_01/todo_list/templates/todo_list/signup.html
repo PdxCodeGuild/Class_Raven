@@ -1,5 +1,5 @@
 {% extends "todo_list/base.html" %}
-
+{% load static %}
 {% block content %}
 
 <form action="{% url 'todo_list:signup' %}", method="POST">
@@ -20,9 +20,9 @@
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
-            <span class="icon is-small is-right">
+            <!-- <span class="icon is-small is-right">
                 <i class="fas fa-check"></i>
-            </span>
+            </span> -->
         </div>
         <!-- <p class="help is-success">This username is available</p> -->
     </div>
@@ -34,15 +34,32 @@
             <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
             </span>
-            <span class="icon is-small is-right">
+            <!-- <span class="icon is-small is-right">
                 <i class="fas fa-exclamation-triangle"></i>
-            </span>
+            </span> -->
         </div>
         <!-- <p class="help is-danger">This email is invalid</p> -->
     </div>
-    
     <div class="field">
-        <label class="label">Subject</label>
+        <p class="control has-icons-left">
+        <p class="mb-2"><strong>Password</strong></p>
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+        </span>
+        </p>
+    </div>
+    <div class="field">
+        <p class="control has-icons-left">
+        <p class="mb-2"><strong>Password</strong></p>
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+        </span>
+        </p>
+    </div>    
+    <div class="field">
+        <label class="label">Sex</label>
         <div class="control">
             <div class="select">
                 <select>
