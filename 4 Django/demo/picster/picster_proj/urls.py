@@ -1,4 +1,4 @@
-"""django_polls URL Configuration
+"""picster_proj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -18,9 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # include the urls from the polls app when localhost:8000/ is visited
-    path('', include('polls.urls')),
-    # include the urls from the users app when localhost:8000/users/ is visited
-    path('users/', include('users.urls')),
+    path('users/', include('users_app.urls'))
 ]
