@@ -122,6 +122,9 @@ STATIC_URL = 'static/'
 # direct django to the project-level static folder
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 
+# root directory for media files
+MEDIA_ROOT = 'static/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -129,3 +132,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # redefine the default auth user model from our users app
 AUTH_USER_MODEL = 'users_app.User'
+
+# tell django where to redirect if not logged in
+LOGIN_URL = '/users/login'
