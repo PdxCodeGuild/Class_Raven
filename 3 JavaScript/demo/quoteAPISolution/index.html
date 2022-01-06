@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/7e23fc28a2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Says Who?</title>
+  </head>
+  <body>
+    <section class="container">
+      <h1>Says Who?</h1>
+      <form>
+        <input type="text" id="search-query-input" />
+        <i class="fas fa-search button-icon" id="search-button"></i>
+      </form>
+      <div id="page-controls">
+        <div id="page-change-arrows">
+          <i
+            class="fas fa-arrow-circle-left button-icon"
+            id="previous-page-arrow"
+          ></i>
+          <i
+            class="fas fa-arrow-circle-right button-icon"
+            id="next-page-arrow"
+          ></i>
+        </div>
+        <div id="current-page-number" title="Current Page">1</div>
+      </div>
+      <div id="quotes">
+        <!-- render quotes with JS -->
+      </div>
+    </section>
+
+    <script src="secrets.js"></script>
+    <script src="quoteAPI.js"></script>
+  </body>
+</html>

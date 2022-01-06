@@ -38,35 +38,27 @@ class ContactList:
     def load(self):
         # 1) open 'contacts.json' with option 'r' for read
         f = open('contacts.json', 'r')
-        
+
         # 2) get the text from the file
         contents = f.read()
 
         # 3) convert the text into a python dictionary (json.loads)
         contents = json.loads(contents)
-        list_of_contents = []
-
-        # 4) get the list of contacts out of the dictionary
-        for i in contents['contacts']:
-            list_of_contents.append(i)
+        list_of_contents = [i for i in contents['contacts']]
 
         # 5) assign the list of dictionaries to self.contacts
         self.contacts = list_of_contents
         return
     
     def count(self):
-        # return the length of self.contacts
-        count = len(self.contacts)
-        return count
+        return len(self.contacts)
     
     def save(self):
         # 1) open 'contacts.json' with open 'w' for write
         f = open('contacts.json', 'w')
         # 2) put self.contacts in a dictionary with the key 'contacts'
         contacts_list = self.contacts
-        contacts = {}
-        contacts['contacts'] = contacts_list
-        
+        contacts = {'contacts': contacts_list}
         # 3) convert the dictionary to a json string (json.dumps)
         json_contacts = json.dumps(contacts, indent=2)
         # 4) write the json string to the file
@@ -74,11 +66,7 @@ class ContactList:
         return
 
     def print(self, contact=False):
-        # loop over self.contacts
-        # print the information for each contact on a separate line
-        counter=1
-        
-        for i in self.contacts:
+        for counter, i in enumerate(self.contacts, start=1):
             
             display = (
                 f"\nContact {counter}:\n"
@@ -87,7 +75,6 @@ class ContactList:
                 f"Email: {i['email']}"
             )
             print(display)
-            counter += 1
         return
 
     def add(self, name, phone_number, email):
@@ -111,17 +98,15 @@ class ContactList:
     
     def update(self, old_name, new_name, new_phone_number, new_email):
         
-        index = 0
         listing = self.contacts
         # find the contact in self.contacts with the given old_name
-        for entry in listing:
+        for index, entry in enumerate(listing):
             name_check = entry['name']
             # set that contacts' name, phone number, etc to the given values
             if name_check == old_name:
                 entry['name'] = new_name
                 entry['phone_number'] = new_phone_number
                 entry['email'] = new_email
-            index += 1
         return
 
 
