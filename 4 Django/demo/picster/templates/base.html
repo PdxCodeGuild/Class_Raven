@@ -33,10 +33,20 @@
     <title>Picster</title>
 </head>
 <body>
+    {% include 'partials/_navbar.html' %}
     <main class="container">
 
         {% if errors %}
-            {{errors}}
+        <div class="row w-100">
+            {% for error in errors %}
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="position-absolute start-50 translate-middle alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
+                    {{error}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
         {% endif %}
 
         {% block content %}
