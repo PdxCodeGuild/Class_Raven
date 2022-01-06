@@ -1,17 +1,64 @@
 
 # Django Quickstart
 
-## 1) Project Setup
+## Create Virtual Environment
+These instructions use Python's `venv` module to create a virtual environment. They will differ if using another library.
 
-1. Create a project: `django-admin startproject myproject`, if you get 'command not found', try `python -m django startproject myproject`
-2. Move into the project folder: `cd myproject`
+- Create a folder for the project
+
+    `$ mkdir <PROJ_NAME>`
+
+- Create the environment with `python -m venv <NAME_OF_ENVIRONMENT>`. The name of the environment folder should be in `.gitignore`.
+  
+- On Windows machines, this will create a command called `activate` 
+  
+    On Windows machines, this command is stored in `<NAME_OF_ENVIRONMENT>/Scripts/` and on Unix machines in `<NAME_OF_ENVIRONMENT>/bin/`.
+
+- From the directory containing your environment folder, run one of the following commands:
+  - Windows: `env/Scripts/activate` 
+    - The ability to run scripts might have to be enabled on your machine. If you don't want to do this, a Bash shell can be used instead with the Unix command below.
+  - Unix: `source env/bin/activate` or `. env/bin/activate`
+
+In most terminals the name of the environment should show up somewhere in on the command line, often in parentheses.
+
+The command `which pip` and `which python` should reveal that those commands are being pulled from your environment's `/lib` folder where Python is installed. Notice that the alias `python` is used instead of `py`.
+
+Bash
+
+<img src='./screenshots/which-pip-python-bash.jpg' width='800'/>
+
+
+PowerShell
+
+<img src='./screenshots/get-command-powershell.jpg' width='800'/>
+
+
+## Project Setup
+
+1. Create a project
+   
+   **Navigate into the folder containing your virtual environment.**
+
+    `django-admin startproject <PROJ_NAME> .`  
+    
+    `<PROJ_NAME>` is the name of your project. Note the `.` at the end. This tells Django to put the project in the **current directory**.
+    
+    If you get 'command not found', try `python -m django startproject <PROJ_NAME> .`
+
+    In this example, the project will be called `myproject`.
+
+2. Extend the User model, if desired (optional but recommended).
 3. Create the database with built-in models: `python manage.py migrate`
 4. Create a superuser: `python manage.py createsuperuser`
-5. Set the timezone in your `myproject/settings.py`: (e.g. `TIME_ZONE = 'America/Los_Angeles'`) [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+5. Set the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your `myproject/settings.py`:
+   
+    (e.g. `TIME_ZONE = 'America/Los_Angeles'`)
 
 ## 2) App Setup
 
-1. Create an app: `python manage.py startapp myapp`
+1. Create an app: `python manage.py startapp <NAME_OF_APP>`
+
+    `<NAME_OF_APP>` will be the actual name of the app. In this example the app will be called `myapp`, but yours will be a word describing what the app is used for (`users`, `posts`, `comments`, etc).
 2. Add `'myapp'` to the list of `INSTALLED_APPS`:
 
 **myproject/settings.py**
@@ -36,7 +83,7 @@ def myview(request):
     return HttpResponse('hello world!')
 ```
 
-2. Create a `urls.py` in your app folder with a path to your view:
+2. Create a file called `urls.py` in your app folder with a path to your view:
 
 **myapp/urls.py**
 ```python
@@ -64,6 +111,17 @@ urlpatterns = [
 
 4. Run the server `python manage.py runserver` and in your browser's address bar, type `localhost:8000/myapp/myview/` and you should see `hello world!`
 
+    To have this page render at `localhost:8000/`, change the path in both `urls.py` files to a blank string.
+
+    ```python
+    # myproject/urls.py
+    path('', include('myapp.urls'))
+
+    # myapp/urls.py
+    path('', views.myview, name='myview')
+
+    ```
+
 
 ## 4) Render a Template
 
@@ -80,7 +138,7 @@ myproject
         ...
 ```
 
-2. Inside your `mytemplate.html`, put some text to make sure the template is being served by django.
+2. Inside your `mytemplate.html`, put some text to make sure the template is being served by Django.
 
 **myapp/templates/myapp/mytemplate.html**
 ```html
