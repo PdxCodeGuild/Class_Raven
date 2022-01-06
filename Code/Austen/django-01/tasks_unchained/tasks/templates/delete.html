@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Select the tasks you want to give up on...</h1>
+<form action="{% url 'tasks:delete' %}" method="post" class="tasklist">
+    <div class="form">
+    {% for task in tasks %}
+        {% if task.status == False %}
+            <label class="task" for="delete_task_id"> {{task.name}} </label>
+            <input type="checkbox" name="delete_task_id" value="{{task.id}}" id="delete_task_id" />
+            <br />
+        {% elif task.status == True %}
+            <label class="task complete" for="delete_task_id"> {{task.name}} </label>
+            <input type="checkbox" name="delete_task_id" value="{{task.id}}" id="delete_task_id"/>
+            <br />
+        {% endif %}
+    {% endfor %}
+    </div>
+    {% csrf_token %}
+    <button type="submit">get rid of these failures</button>
+</form>
+
+
+{% endblock %}
