@@ -3,7 +3,7 @@ from django.contrib.auth import (
     authenticate,
     login as django_login
 )
-from .models import TodoItem
+from .models import Priority, TodoItem
 from colorama import Fore as F
 
 R = F.RESET
@@ -35,11 +35,16 @@ def create(request):
     priority = form["priority"]
 
     todo_item = TodoItem()
+    priority_obj = Priority.objects.get_or_create(priority_value=priority)[0]
+
     todo_item.todo_name = name
     todo_item.text = text
-    todo_item.priority = priority
+
+
+    todo_item.priority = priority_obj
 
     todo_item.save()
+    print(priority_obj)
 
     # context = {
     #     "message": todo_item,
