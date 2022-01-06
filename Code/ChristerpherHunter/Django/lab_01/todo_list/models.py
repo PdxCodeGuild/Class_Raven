@@ -19,5 +19,3 @@ class TodoItem(models.Model):
 
     priority = models.CharField(
         max_length=6, choices=RADIO_CHOICES, default='medium')
-
-
