@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+  <header class="center">
+    <h1>Not a Taco</h1>
+    <h4>the Burrito Shop</h4>
+  </header>
+  <main class="border">
+    <form class="container" action="" method="post">
+      <div class="form-section">
+        <label for="customer">Your Name:
+          <input type="text" name="customer" required>
+        </label>
+      </div>
+      {% for group in groups %}
+      <div class="form-section">{{group.title()}}
+        <br><br>
+        {% for choice in group_options[group]['choices'] %}
+          <label for="{{group}}" class="option">{{choice}}
+            <input type="radio" name="{{group}}" id="{{group}}-radio" value="{{choice}}" {% if loop.index == 1 %} checked {%
+              endif %}>
+          </label>
+          {% endfor %}
+      </div>
+      {% endfor %}
+      <div class="form-section">
+        <label for="delivery">Delivery Instructions:
+          <input type="text-area" name="delivery" id="delivery" required>
+        </label>
+      </div>
+      <div class="form-section">
+        <button type="submit">Order</button>
+      </div>
+    </form>
+  </main>
+
+{% endblock %}
