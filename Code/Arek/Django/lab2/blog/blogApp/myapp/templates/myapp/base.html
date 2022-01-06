@@ -1,16 +1,19 @@
 
-{% load static %} <!--This lets you use your css file-->
+ <!--This lets you use your css file-->
 
 
 <!DOCTYPE html>
 <html>
     <head>
+        {% load static %} 
         <meta charset="utf-8">
-        
-        <link rel="stylesheet"  href="{% static 'index.css' %}">
-        <link rel="stylesheet"  href="https://'cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta lang="en">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet"  type='text/css' href="{% static 'myapp/index.css' %}">
+
     </head>
-    <body class='blue'>
+    <body class='yellow lighten-3'>
+        <div id='top-bar' class='light-blue lighten-5' "></div>
 
         
         <div class='container center-align'>
