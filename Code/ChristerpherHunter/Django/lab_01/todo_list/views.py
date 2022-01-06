@@ -13,6 +13,7 @@ R = F.RESET
 
 def index(request):
 
+    
     items = TodoItem.objects.all().order_by('-created_date')
 
     context = {
@@ -44,7 +45,6 @@ def create(request):
     todo_item.priority = priority_obj
 
     todo_item.save()
-    print(priority_obj)
 
     # context = {
     #     "message": todo_item,
@@ -78,7 +78,6 @@ def delete(request):
         return render(request, "todo_list/delete.html", context)
 
     form = request.POST
-    print(form)
     todo_item = form["todo-delete"]
 
     try:
@@ -93,11 +92,32 @@ def delete(request):
 
 def completed(request):
 
-    if request.method == 'GET':
-        return render(request, "todo_list/completed.html")
+    
 
-    form = request.POST
-    print(form)
+    if request.method == 'GET':
+
+        items = TodoItem.objects.all().order_by('-created_date')
+
+        context = {
+                "items": items,
+            }
+                
+        return render(request, "todo_list/completed.html", context)
+
+    # form = request.POST
+    
+    todo_obj = TodoItem()
+    todo_obj.completed_or_not = True
+
+    todo_obj.save()
+    
+    items = TodoItem.objects.all()
+
+    context = {
+            "items": items,
+        }
+
+    return render(request, "todo_list/index.html")
 
 
 def signup(request):

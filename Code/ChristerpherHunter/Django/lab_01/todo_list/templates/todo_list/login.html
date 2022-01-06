@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 
+<h1 class="title center is-1">LOGIN</h1>
 <form action="{% url 'todo_list:login' %}" , method="POST">
 
     {% csrf_token %}

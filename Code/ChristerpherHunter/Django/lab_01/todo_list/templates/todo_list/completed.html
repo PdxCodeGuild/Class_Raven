@@ -2,25 +2,39 @@
 {% load static %}
 {% block content %}
 
-<form action="{% url 'todo_list:completed' %}" , method="POST">
 
-    {% csrf_token %}
+<h1 class="title center is-1">COMPLETED</h1>
+<div class="card">
 
-    <p><strong>Completed To-Do</strong>
-    <div class="field has-addons">
-        <div class="control is-expanded">
-            <div class="select is-fullwidth">
-                <select name="todo-retrieve">
-                    {% for created_todo in dummy_iter %}
-                    <option value="title">Completed To-Do Title {{ created_todo }}</option>
-                    {% endfor %}
-                </select>
+    {% for item in items.all %}
+
+    <div class="card-content">
+        {% if item.completed_or_not %}
+        <div class="media">
+            <!-- <div class="media-left">
+                <figure class="image is-48x48 ">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                </figure>
+            </div> -->
+            
+            <div class="media-content">
+                <p class="title is-4">{{ item.todo_name }}</p>
             </div>
         </div>
-        <div class="control">
-            <button type="submit" class="button is-primary">Choose</button>
+
+        <div class="content center box">
+            <h5>{{ item.text }}</h5>
+            
+            <time>{{ item.created_date }}</time>
         </div>
+
+        <div class="content">
+            <h5 id="priority">Priority:</h5>
+            <p><strong>{{ item.priority }}</strong></p>
+        </div>
+        {% endif %}
     </div>
-</form>
+    {% endfor %}
+</div>
 
 {% endblock %}

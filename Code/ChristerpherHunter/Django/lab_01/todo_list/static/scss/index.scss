@@ -1,7 +1,6 @@
-// @import "../../../node_modules/bulma/bulma.sass";
 
 body {
-    background-color: coral;
+    background-color: coral !important;
 }
 
 .navbar {
@@ -15,3 +14,12 @@ body {
 .center {
     text-align: center;
 }
+#priority {
+    color: Blue;
+}
+.is-1 {
+    color: white !important;
+    text-decoration: double;
+}
+
+
