@@ -21,6 +21,8 @@ def register(request):
         }
 
         return render(request, 'users/register.html', context)
+    elif request.method == 'POST':
+        pass
 
 
 def login(request):
@@ -28,6 +30,9 @@ def login(request):
         form = UserAuthForm()
 
         return render(request, 'users/login.html', {'form': form})
+
+    elif request.method == 'POST':
+        pass
 
 
 def profile(request, username):

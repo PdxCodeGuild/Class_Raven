@@ -9,7 +9,7 @@ class UserForm(forms.ModelForm):
         model = User
 
         fields = [
-            'first_name'
+            'first_name',
             'last_name'
         ]
 
@@ -17,7 +17,7 @@ class UserForm(forms.ModelForm):
         widgets = {
             'first_name': forms.TextInput(attrs={'class':'form-control'}),
             'last_name': forms.TextInput(attrs={'class':'form-control'}),
-            'username': forms.TextInput(attrs={'class':'form-control', 'id':'abcdefg'}),
+            'username': forms.TextInput(attrs={'class':'form-control'}),
             'password': forms.PasswordInput(attrs={'class':'form-control'})
         }
 
