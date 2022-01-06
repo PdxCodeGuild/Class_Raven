@@ -15,10 +15,12 @@ def index(request):
     return render(request, 'todoapp/index.html', context)
 
 def create(request):
-    priority = Priority.objects.get(priority_level=request.POST['priority_choices'])
+    priority = Priority.objects.get_or_create(priority_level=request.POST['priority_choices'])
+    priority = priority[0]
     new_to_do_item = request.POST['todotext']
     new_obj = TodoItem.objects.get_or_create(item_text=new_to_do_item, priority=priority)
     return HttpResponseRedirect("http://127.0.0.1:8000/todoapp/")
+
 
 def complete(request, pk):
     completed_item = get_object_or_404(TodoItem, pk=pk)
