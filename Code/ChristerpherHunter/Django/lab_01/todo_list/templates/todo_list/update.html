@@ -10,23 +10,24 @@
 <p><strong>Update To-Do</strong>
 <div class="field has-addons">
     <div class="control is-expanded">
+        <form id="my_form" action="{% url 'todo_list:update'%}" , method="POST">
         <div class="select is-fullwidth">
+            {% csrf_token %}
             <select name="todo-update">
                 {% for item in items %}
-                <form id="my_form" action="{% url 'todo_list:todo_update' item.id %}" , method="POST">
 
-                    <option value="title" name="todo_update">{{ item.todo_name }}</option>
+                <option value="{{item.id}}">{{ item.todo_name }}</option>
 
                 {% endfor %}
-            
+
             </select>
         </div>
     </div>
     <div class="control">
-        <!-- <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">
-            <i class="fas fa-edit"></i></a> -->
-            <button type="submit">update</button>
-        {% csrf_token %}
+        <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">
+            <i class="fas fa-edit"></i></a>
+        <!-- <button type="submit">update</button> -->
+
         </form>
     </div>
 </div>

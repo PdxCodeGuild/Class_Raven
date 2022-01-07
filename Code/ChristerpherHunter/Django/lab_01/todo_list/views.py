@@ -54,29 +54,32 @@ def create(request):
     return redirect(to="/todo_list")
 
 
-def update(request):
+def todo_update(request):
 
-    items = TodoItem.objects.all().order_by('-created_date')
-    context = {
-        "items": items
-    }
-    return render(request, "todo_list/update.html", context)
+    if request.method == 'GET':
 
-
-def todo_update(request, todo_id):
-
-    if request.method == 'POST':
-        
-        todo = get_object_or_404(TodoItem, id=todo_id)
+        # todo = get_object_or_404(TodoItem, id=todo_id)
+        items = TodoItem.objects.all().order_by('-created_date')
 
         context = {
-            "items": todo
+            "items": items
         }
-        
-        return render(request, "todo_list/todo_update.html", context)
 
-        
+        return redirect("/todo_list/todo_update.html", context)
 
+
+def update(request):
+
+    if request.method == 'GET':
+        items = TodoItem.objects.all().order_by('-created_date')
+        context = {
+            "items": items
+        }
+        return render(request, "todo_list/update.html", context)
+
+    todo = get_object_or_404(TodoItem, id=request.POST["todo-update"])
+
+    return render(request, "todo_list/todo_update.html", {"items": todo})
 
 def delete(request):
 
@@ -129,7 +132,7 @@ def toggle_completed(request, todo_id):
         "items": items
     }
 
-    return render(request, "todo_list/completed.html", context)
+    return render(request, "todo_list/index.html", context)
 
 
 def undo_todo(request, todo_id):
