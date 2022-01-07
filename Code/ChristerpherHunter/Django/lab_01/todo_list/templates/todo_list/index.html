@@ -4,11 +4,11 @@
 
 
 <h1 class="title center is-1">TODOS</h1>
-<div class="card">
-    {% for item in items.all %}
 
+{% for item in items.all %}
+{% if not item.completed_or_not %}
+<div class="card mb-4">
     <div class="card-content">
-        {% if not item.completed_or_not %}
         <div class="media">
             <!-- <div class="media-left">
                 <figure class="image is-48x48 ">
@@ -23,23 +23,20 @@
         <div class="content center box">
             <h5>{{ item.text }}</h5>
             <br>
-            <form action="{% url 'todo_list:completed' %}" , method="POST">
+            <form action="{% url 'todo_list:toggle_completed' item.id %}" , method="POST">
                 {% csrf_token %}
-                <input type="hidden" name="completed" value="True">
-                <input class="button is-success is-light" type="submit" value="Completed">
+                <input class="button is-warning is-light is-medium" type="submit" value="Incompleted">
             </form>
             <br>
             <br>
-            <time>{{ item.created_date }}</time>
+            <time class="box is-outlined">{{ item.created_date }}</time>
         </div>
 
         <div class="content">
             <h5 id="priority">Priority:</h5>
             <p><strong>{{ item.priority }}</strong></p>
         </div>
-        {% endif %}
     </div>
-    {% endfor %}
-</div>
-
+</div>{% endif %}
+{% endfor %}
 {% endblock %}

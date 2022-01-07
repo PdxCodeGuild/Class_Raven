@@ -1,10 +1,9 @@
-from django.shortcuts import get_object_or_404, redirect, render
-from django.contrib.auth import (
-    authenticate,
-    login as django_login
-)
-from .models import Priority, TodoItem
 from colorama import Fore as F
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as django_login
+from django.shortcuts import get_object_or_404, redirect, render
+
+from .models import Priority, TodoItem
 
 R = F.RESET
 
@@ -13,14 +12,14 @@ R = F.RESET
 
 def index(request):
 
-    
-    items = TodoItem.objects.all().order_by('-created_date')
+    if request.method == 'GET':
+        items = TodoItem.objects.all().order_by('-created_date')
 
-    context = {
-        "items": items,
-    }
+        context = {
+            "items": items,
+        }
 
-    return render(request, "todo_list/index.html", context)
+        return render(request, "todo_list/index.html", context)
 
 
 def create(request):
@@ -29,11 +28,13 @@ def create(request):
         return render(request, "todo_list/create.html")
 
     form = request.POST
-    print(form)
 
     name = form["name"]
     text = form["message"]
     priority = form["priority"]
+
+    if name == "":
+        return redirect(to="/todo_list")
 
     todo_item = TodoItem()
     priority_obj = Priority.objects.get_or_create(priority_value=priority)[0]
@@ -41,30 +42,40 @@ def create(request):
     todo_item.todo_name = name
     todo_item.text = text
 
-
     todo_item.priority = priority_obj
 
     todo_item.save()
 
+    # updated_info = TodoItem()
     # context = {
-    #     "message": todo_item,
-    #     "priority": priority_item
+    #     "message": updated_info
     # }
 
-    return render(request, "todo_list/create.html")
+    return redirect(to="/todo_list")
 
 
 def update(request):
 
-    if request.method == 'GET':
-        items = TodoItem.objects.all()
-        context = {
-            "items": items
-        }
-        return render(request, "todo_list/update.html", context)
+    items = TodoItem.objects.all().order_by('-created_date')
+    context = {
+        "items": items
+    }
+    return render(request, "todo_list/update.html", context)
 
-    form = request.POST
-    print(form)
+
+def todo_update(request, todo_id):
+
+    if request.method == 'POST':
+        
+        todo = get_object_or_404(TodoItem, id=todo_id)
+
+        context = {
+            "items": todo
+        }
+        
+        return render(request, "todo_list/todo_update.html", context)
+
+        
 
 
 def delete(request):
@@ -87,45 +98,62 @@ def delete(request):
     except:
         print(f"{F.RED}failed to delete!{R}")
 
-    return render(request, "todo_list/delete.html")
+    items = TodoItem.objects.all()
+    context = {
+        "items": items
+    }
+
+    return render(request, "todo_list/delete.html", context)
 
 
 def completed(request):
 
-    
-
-    if request.method == 'GET':
-
-        items = TodoItem.objects.all().order_by('-created_date')
-
-        context = {
-                "items": items,
-            }
-                
-        return render(request, "todo_list/completed.html", context)
-
-    # form = request.POST
-    
-    todo_obj = TodoItem()
-    todo_obj.completed_or_not = True
-
-    todo_obj.save()
-    
-    items = TodoItem.objects.all()
-
+    items = TodoItem.objects.all().order_by('-created_date')
     context = {
-            "items": items,
-        }
+        "items": items
+    }
 
-    return render(request, "todo_list/index.html")
+    return render(request, "todo_list/completed.html", context)
+
+
+def toggle_completed(request, todo_id):
+
+    todo = get_object_or_404(TodoItem, id=todo_id)
+
+    todo.completed_or_not = not todo.completed_or_not
+
+    todo.save()
+
+    items = TodoItem.objects.all().order_by('-created_date')
+    context = {
+        "items": items
+    }
+
+    return render(request, "todo_list/completed.html", context)
+
+
+def undo_todo(request, todo_id):
+
+    todo = get_object_or_404(TodoItem, id=todo_id)
+
+    todo.completed_or_not = not todo.completed_or_not
+
+    todo.save()
+
+    items = TodoItem.objects.all().order_by('-created_date')
+    context = {
+        "items": items
+    }
+
+    return render(request, "todo_list/index.html", context)
 
 
 def signup(request):
 
     if request.method == 'GET':
-        
+
         return render(request, "todo_list/signup.html")
-    
+
     form = request.POST
     username = form["username"]
     password = form["password"]

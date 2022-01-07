@@ -8,7 +8,7 @@ class Priority(models.Model):
     RADIO_CHOICES = [
         ("high", "High"),
         ("medium", "Medium"),
-        ("low", "Low"),
+        ("Low", "Low"),
     ]
 
     priority_value = models.CharField(
@@ -26,7 +26,7 @@ class TodoItem(models.Model):
 
     created_date = models.DateTimeField(auto_now_add=True)
 
-    completed_or_not = models.BooleanField(default=None)
+    completed_or_not = models.BooleanField(default=False)
 
     priority = models.ForeignKey(
         to=Priority, on_delete=models.SET_NULL, related_name="todos", null=True)

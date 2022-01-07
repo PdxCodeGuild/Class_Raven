@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 
-<h1 class="title center is-1">CREATE TODO</h1>
-<form action="{% url 'todo_list:create' %}" , method="POST">
+<h1 class="title center is-1">EDIT TODO</h1>
+<form action="{% url 'todo_list:todo_update' %}", method="POST">
 
     {% csrf_token %}
 
@@ -11,14 +11,14 @@
         <div class="field">
             <label class="label">Name</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Text input" , name="name">
+                <input class="input" type="text" placeholder={{ item.todo_name }} , name="name">
             </div>
         </div>
 
         <div class="field">
             <label class="label">Message</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Textarea" , name="message"></textarea>
+                <textarea class="textarea" placeholder={{ item.text }} , name="message"></textarea>
             </div>
         </div>
 
