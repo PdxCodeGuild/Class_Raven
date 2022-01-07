@@ -3,8 +3,23 @@
 
 {% block content %}
 
+<h1>Login form will go here.</h1>
+<!-- {% if success %} -->
+<h1>{{success}}</h1>
+<!-- {% endif %} -->
+
+{% if form %}
+
 <form action="" method="post">
-    <h1>Login form will go here.</h1>
+    {{form}}
+
+    {% csrf_token %}
+
+    <br><button class="btn-dark">login</button>
 </form>
+{% elif logged_in %}
+Welcome, {{logged_in}}.
+
+{% endif %}
 
 {% endblock %}
