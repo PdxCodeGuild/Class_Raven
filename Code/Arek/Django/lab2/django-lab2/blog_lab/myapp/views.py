@@ -34,10 +34,14 @@ def register_user(request):
     dj_login(request, user)
     return redirect('myapp:profile')
 
+@login_required
 def create(request):
     if request.method == 'POST':
         form = request.post
+        new_title = form['title']
+        new_post = form['body']
 
+        new_blog = BlogPost.objects.create(title=new_title, body=new_post, user=request.user)
 
     return render(request, 'myapp/create.html')
 
