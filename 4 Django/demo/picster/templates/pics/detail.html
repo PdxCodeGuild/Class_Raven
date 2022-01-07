@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row d-flex justify-content-center">
+        <!-- render the _card partial with the data for the current pic -->
+        {% include 'pics/_card.html' with pic=pic %}
+    </div>
+{% endblock content %}
