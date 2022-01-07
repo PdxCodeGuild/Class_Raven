@@ -5,8 +5,8 @@ from django.http import HttpResponse as HTTP
 
 
 def login(request):
-    return HTTP('login view connected')
+    return render(request, 'login.html')
 
 
 def register(request):
-    return HTTP('register view connected')
+    return render(request, 'register.html')

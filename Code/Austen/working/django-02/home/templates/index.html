@@ -4,14 +4,14 @@
 {% block index %}
 
 <header class="row border-bottom m-1">
-    <div class="col-9 d-flex align-items-center">
-        <h1>Golb</h1>
-        <h4 class="ms-3">- not a blog</h4>
-    </div>
-    <div class="col-3 d-flex align-items-center justify-content-end">
-        <nav>
-            <a href="user/login">login</a>
-            <a href="user/register">register</a>
+    <div class="col-12 d-flex justify-content-between">
+        <div id="title" class="d-flex align-items-center">
+            <h1>Golb</h1>
+            <h4 class="ms-3">- not a blog</h4>
+        </div>
+        <nav id="nav" class="d-flex gap-2 align-items-center justify-content-end">
+            <a href="{% url 'users:login' %}">login</a>
+            <a href="{% url 'users:register' %}">register</a>
         </nav>
     </div>
 </header>
