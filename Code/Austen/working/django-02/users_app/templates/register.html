@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block content %}
-<h1>Register form will go here.</h1>
+<h1>Register</h1>
 
 {% if form %}
 <form action="" method="post">
     {{form}}
     {% csrf_token %}
-    
+
     <br><button class="btn-dark">register</button>
 </form>
 {% endif %}
