@@ -1,0 +1,13 @@
+body{
+    background-color: lightgreen;
+}
+
+#todo-div{
+    padding: 20px 20px;
+    margin: 40px 0px;
+    font-size: larger;
+}
+label{
+    margin: 20px 20px;
+}
+

@@ -1,0 +1,19 @@
+body {
+  color: white;
+  font-family: consolas;
+  background-color: black;
+  text-align: center;
+}
+form {
+  text-align: right;
+  margin: 5rem;
+  border: 1px solid white;
+  padding: 20px;
+}
+
+input {
+  width: 50px;
+}
+a:any-link {
+  color: red;
+}
