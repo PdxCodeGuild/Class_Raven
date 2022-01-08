@@ -61,7 +61,10 @@
 
 <h1 class="h1">Pics</h1>
 <div class="row d-flex justify-content-center pb-5 mb-5">
-    <!-- render user's pics -->
+    {% for pic in user.pics.all %}
+        <!-- 'with' passes a context variable to the partial -->
+        {% include 'pics/_card.html' with pic=pic%}
+    {% endfor %}
 </div>
 
 
