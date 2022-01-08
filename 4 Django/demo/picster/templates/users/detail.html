@@ -11,6 +11,9 @@
             </a>
         {% endif %}
         <img src="{% static user.avatar.url %}" alt="{{user.username}}'s avatar" class="rounded-circle shadow" height=250 width=250>
+    
+        {% include 'users/_follow-panel.html' with user=user %}
+    
     </div>
 
     <div class="col-8 offset-2 col-lg-4 offset-lg-4 pt-5">
@@ -42,18 +45,6 @@
                 <th scope="row">Joined</th>
                 <td colspan="2">{{user.date_joined|date}}</td>
               </tr>
-              <tr>
-                <th scope="row">Pics</th>
-                <td colspan="2">0</td>
-              </tr>
-              <tr>
-                <th scope="row">Followers</th>
-                <td colspan="2">0</td>
-              </tr>
-              <tr>
-                <th scope="row">Following</th>
-                <td colspan="2">0</td>
-              </tr>
             </tbody>
           </table>
     </div>
@@ -61,7 +52,10 @@
 
 <h1 class="h1">Pics</h1>
 <div class="row d-flex justify-content-center pb-5 mb-5">
-    <!-- render user's pics -->
+    {% for pic in user.pics.all %}
+        <!-- 'with' passes a context variable to the partial -->
+        {% include 'pics/_card.html' with pic=pic%}
+    {% endfor %}
 </div>
 
 

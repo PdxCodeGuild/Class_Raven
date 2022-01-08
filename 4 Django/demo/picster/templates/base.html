@@ -30,9 +30,14 @@
     ></script>
 
 
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Picster</title>
 </head>
 <body>
+    <!-- include the csrf_token so it can be used in JS when making API calls -->
+    {% csrf_token %}
+
     {% include 'partials/_navbar.html' %}
     <main class="container">
 
@@ -53,5 +58,7 @@
             
         {% endblock content %}
     </main>
+
+    <script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>
