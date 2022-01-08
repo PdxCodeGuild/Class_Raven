@@ -1,6 +1,9 @@
+
+
 body{
     margin: 20px 20px;
     padding: 10px 10px;
+    
     
 }
 label{
@@ -47,5 +50,7 @@ textarea{
     border: 2px solid purple;
     text-align: left;
     font-size: larger;
+    font-family: 'Luxurious Roman', cursive;
+    
     
 }
