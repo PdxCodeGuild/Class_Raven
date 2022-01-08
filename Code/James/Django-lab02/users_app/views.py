@@ -12,26 +12,55 @@ from .forms import UserForm, UserAuthForm
 
 # Create your views here.
 def register(request):
+    
     form = UserAuthForm()
     
     if request.method == 'GET':
-        
         context = {
             'form':form
         }
-
         return render(request, 'users/register.html', context)
+    
     elif request.method == 'POST':
-        pass
+        
+        form = UserAuthForm(request.POST)
+        
+        # print(form.is_valid())
+        # print(form.errors)
+        
+        if form.is_valid():
+
+            new_user = form.save(commit=False)
+
+            new_user.set_password(form.cleaned_data['password'])
+
+            new_user.save()
+
+            return redirect(reverse('users_app:register'))
+
+    
+        else:
+            context = {
+                'form': UserAuthForm(),
+                'errors': [value for value in form.errors.values()]
+            }
+        return render(request, 'users/register.html', context)
 
 
 def login(request):
-    if request.method == 'GET':
-        form = UserAuthForm()
+    # if request.method == 'GET':
+    #     form = UserAuthForm()
 
-        return render(request, 'users/login.html', {'form': form})
+    #     return render(request, 'users/login.html', {'form': form})
 
-    elif request.method == 'POST':
+    # elif request.method == 'POST':
+    #     form = request.POST
+
+    #     username = form['username']
+    #     password = form['password']
+
+    #     user = authenticate(request, username=username, password=password)
+    #     print(user)
         pass
 
 
