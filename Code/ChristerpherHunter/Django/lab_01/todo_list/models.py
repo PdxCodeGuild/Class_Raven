@@ -8,7 +8,7 @@ class Priority(models.Model):
     RADIO_CHOICES = [
         ("high", "High"),
         ("medium", "Medium"),
-        ("Low", "Low"),
+        ("low", "Low"),
     ]
 
     priority_value = models.CharField(
