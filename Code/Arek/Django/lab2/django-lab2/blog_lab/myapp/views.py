@@ -55,6 +55,7 @@ def profile(request):
         'myitems': items
     }
     return render(request, 'myapp/profile.html', context)
+    
 
 
     
