@@ -40,7 +40,8 @@
         <div class="col-lg-1"></div>
         <div class="task-bucket col-lg-10">
             <div class="new-todo">
-            <a href="./todo_form/">Add a Todo <i class="fas fa-plus"></i></a>
+                
+            <a href="{% url 'todo_form.new' %}">Add a Todo <i class="fas fa-plus"></i></a>
             </div>
             <ul id="task">
                 <!-- Here we will add, via Javascript for each task: <li data-id=”0">Clean the garden</li> and <i class=”far fa-trash-alt”></i> -->
