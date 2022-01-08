@@ -37,11 +37,11 @@ def register_user(request):
 @login_required
 def create(request):
     if request.method == 'POST':
-        form = request.post
+        form = request.POST
         new_title = form['title']
         new_post = form['body']
-
         new_blog = BlogPost.objects.create(title=new_title, body=new_post, user=request.user)
+        return redirect('myapp:profile')
 
     return render(request, 'myapp/create.html')
 
@@ -50,8 +50,11 @@ def create(request):
 
 @login_required
 def profile(request):
-
-    return render(request, 'myapp/profile.html')
+    items = BlogPost.objects.filter(user=request.user)
+    context = {
+        'myitems': items
+    }
+    return render(request, 'myapp/profile.html', context)
 
 
     
