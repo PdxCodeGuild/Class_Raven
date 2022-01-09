@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<p>Create Task</p>
+<form action="{{ url_for('task.create') }}" method="post">
+	<input type="text" name="title" placeholder="Title" />
+	<input type="text" name="description" placeholder="Description" />
+	<input type="text" name="status" placeholder="Status" />
+	<input type="text" name="priority" placeholder="Priority" />
+	<input type="text" name="due_date" placeholder="Due Date" />
+	<input type="text" name="assigned_to" placeholder="Assigned To" />
+	<input type="text" name="created_by" placeholder="Created By" />
+	<input type="text" name="project_id" placeholder="Project ID" />
+	<input type="submit" value="Create" />
+</form>
+
+{% endblock %}
