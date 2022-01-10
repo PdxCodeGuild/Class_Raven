@@ -1,4 +1,40 @@
-{% extends 'base.html' %}
-{% block content %}
-    
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="row">
+  <div
+    class="col-12 col-lg-8 offset-lg-2 d-flex gap-3 flex-column align-items-center pt-5"
+  >
+    <h1 class="py-2">{{user.username}}</h1>
+  </div>
+
+  <div class="col-8 offset-2 col-lg-4 offset-lg-4 pt-5">
+    <table class="table">
+      <thead>
+        <tr>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">First</th>
+          <td>
+            {% if user.first_name %} {{user.first_name}} {% else %} Not Provided
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Last</th>
+          <td>
+            {% if user.last_name %} {{user.last_name}} {% else %} Not Provided
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Joined</th>
+          <td colspan="2">{{user.date_joined|date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 {% endblock content %}

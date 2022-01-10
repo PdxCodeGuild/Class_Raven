@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="d-flex flex-column align-items-center">
+  <ul class="list-group">
+    {% for blog in blogs %}
+    <li class="list-group-item">Title: {{blog.title}} | {{blog.date_created}}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock content %}
