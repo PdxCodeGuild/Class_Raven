@@ -14,4 +14,4 @@ class BlogPost(models.Model):
     date_edited = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.title} {self.body} {self.user} {self.body} {self.date_created} {self.date_edited}'
+        return f'{self.title}'
