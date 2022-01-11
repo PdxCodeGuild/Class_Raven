@@ -24,7 +24,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'users_app:detail' user.username %}">
-                            <img src="{% static user.avatar.url %}" class="rounded-circle" height=40 width=40 alt="{{user.username}}'s avatar">
+                            <img src="{% static request.user.avatar.url %}" class="rounded-circle" height=40 width=40 alt="{{user.username}}'s avatar">
                         </a>
                     </li>
                 </div>

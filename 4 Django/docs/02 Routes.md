@@ -1,11 +1,12 @@
 
 # Routes
 
-- [Overview](#overview)
-- [Connecting the Project's `urls.py` to the App's `urls.py`](#connecting-the-projects-urlspy-to-the-apps-urlspy)
-- [Connecting an App's `urls.py` to a View](#connecting-an-apps-urlspy-to-a-view)
-- [Reverse URL Lookup](#reverse-url-lookup)
-- [Parameters in the Path](#parameters-in-the-path)
+- [Routes](#routes)
+  - [Overview](#overview)
+  - [Connecting the Project's `urls.py` to the App's `urls.py`](#connecting-the-projects-urlspy-to-the-apps-urlspy)
+  - [Connecting an App's `urls.py` to a View](#connecting-an-apps-urlspy-to-a-view)
+  - [Reverse URL Lookup](#reverse-url-lookup)
+  - [Parameters in the Path](#parameters-in-the-path)
 
 
 ## Overview
@@ -74,5 +75,5 @@ urlpatterns = [
 
 ## Parameters in the Path
 
-You can specify a parameter in your path using `<type:var_name>`, where `type` is the data type of the parameter (e.g. `str`, `int`, etc). See the [views.md](03%20-%20Views.md#path-parameters) file.
+You can specify a parameter in your path using `<type:var_name>`, where `type` is the data type of the parameter (e.g. `str`, `int`, etc). See the [views.md](https://github.com/PdxCodeGuild/Class_Raven/blob/master/4%20Django/docs/03%20Views.md#path-parameters) file.
 
