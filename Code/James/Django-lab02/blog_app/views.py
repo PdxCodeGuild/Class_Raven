@@ -12,12 +12,12 @@ from .forms import BlogForm
 # Create your views here.
 
 
-def profile(request):
+def home(request):
     blogs = BlogPost.objects.all().order_by("-date_created")
     print(blogs)
     context = {"blogs": blogs}
 
-    return render(request, "blogs/profile.html", context)
+    return render(request, "blogs/home.html", context)
 
 
 @login_required

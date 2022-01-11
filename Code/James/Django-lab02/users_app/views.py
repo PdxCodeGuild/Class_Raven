@@ -67,3 +67,9 @@ def login(request):
 def profile(request, username):
     user = get_object_or_404(get_user_model(), username=username)
     return render(request, 'users/profile.html', {'user':user})
+
+
+def logout(request):
+    django_logout(request)
+
+    return redirect(reverse('users_app:login'))
