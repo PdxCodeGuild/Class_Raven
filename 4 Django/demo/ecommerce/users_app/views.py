@@ -1,3 +1,6 @@
+from django.shortcuts import render
+
+# Create your views here.
 from django.http.response import JsonResponse
 from django.shortcuts import get_object_or_404, render, redirect, reverse
 from django.contrib.auth import (
@@ -142,24 +145,3 @@ def logout(request):
 
     return redirect(reverse('users_app:login'))
 
-
-@login_required
-def follow(request, user_id):
-    # get the user to be followed from the db
-    user = get_object_or_404(get_user_model(), id=user_id)
-
-    # if they aren't already in the list of followers,
-    # add the user who made the request to the followers list
-    # of the user from the db. If they are in the list, remove them (unfollow)
-    if request.user not in user.followers.all():
-        user.followers.add(request.user)
-
-    else:
-        user.followers.remove(request.user)
-
-    return JsonResponse({
-        'isFollowing': request.user in user.followers.all(),
-        'followerCount': user.followers.count(),
-        'followingCount': request.user.following.count(),
-        'followerId': request.user.id
-    })

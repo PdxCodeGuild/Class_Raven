@@ -11,6 +11,9 @@
             </a>
         {% endif %}
         <img src="{% static user.avatar.url %}" alt="{{user.username}}'s avatar" class="rounded-circle shadow" height=250 width=250>
+    
+        {% include 'users/_follow-panel.html' with user=user %}
+    
     </div>
 
     <div class="col-8 offset-2 col-lg-4 offset-lg-4 pt-5">
@@ -41,18 +44,6 @@
               <tr>
                 <th scope="row">Joined</th>
                 <td colspan="2">{{user.date_joined|date}}</td>
-              </tr>
-              <tr>
-                <th scope="row">Pics</th>
-                <td colspan="2">0</td>
-              </tr>
-              <tr>
-                <th scope="row">Followers</th>
-                <td colspan="2">0</td>
-              </tr>
-              <tr>
-                <th scope="row">Following</th>
-                <td colspan="2">0</td>
               </tr>
             </tbody>
           </table>

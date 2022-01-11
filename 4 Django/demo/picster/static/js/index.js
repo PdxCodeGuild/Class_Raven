@@ -1,6 +1,16 @@
 let likeButtons = document.querySelectorAll('.like'),
-    csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0];
+    csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0],
+    followButtons = document.querySelectorAll('.follow');
 
+console.log(followButtons);
+
+const axios_config = {
+   headers: {
+    'Content-Type': 'application/json',
+    'X-CSRFToken': csrfToken.value // include Django's CSRF token
+  }, 
+   xsrfHeaderName: 'X-CSRFToken' 
+}
 
 function handleLikeEvent(event){
   let picId, url, headers;
@@ -12,15 +22,11 @@ function handleLikeEvent(event){
   // include the picId as a url parameter
   url = 'http://localhost:8000/like/' + picId
 
-  headers = {
-    'Content-Type': 'application/json',
-    'X-CSRFToken': csrfToken.value // include Django's CSRF token
-  }
 
   // axios.post(url, data, config)
-  axios.post(url, {}, { headers: headers, xsrfHeaderName: 'X-CSRFToken' })
+  axios.post(url, {}, axios_config)
     .then(response=>{
-
+      console.log(response);
       const isLiked = response.data.isLiked // true if the current user is in the list of likes, else false
       const likeButton = document.querySelector(`#like-${picId}`) // heart icon
       const likeCount = document.querySelector(`#like-count-${picId}`) // like count element
@@ -46,3 +52,51 @@ function handleLikeEvent(event){
 likeButtons.forEach(likeButton =>
   likeButton.addEventListener('click', handleLikeEvent)
 )
+
+
+
+
+
+function handleFollowEvent(event){
+  let userId1, userId2, url;
+
+  userId1 = event.target.id // follow-14
+  userId1 = userId1.split('-')[1] // 14
+
+  url = 'http://localhost:8000/users/follow/' + userId1
+  axios.post(url, {}, axios_config)
+    .then(response=>{
+
+      // pull the data from the response
+      let isFollowing = response.data.isFollowing
+      let followerCount = response.data.followerCount
+      let followingCount = response.data.followingCount
+      userId2 = response.data.follwerId
+
+      // target the badge and follwer count of the clicked user
+      // and the following count of the user who made the click
+      let followBadge = document.querySelector(`#follow-${userId1}`)
+      let followerCountElement = document.querySelector(`#follower-count-${userId1}`)
+      let followingCountElement = document.querySelector(`#following-count-${userId2}`)
+
+      // isFollowing is a boolean indicating if request.user is following the other user
+      // render the green following badge if true, otherwise the yellow follow badge
+      if(isFollowing){
+        followBadge.classList.replace('bg-warning', 'bg-success')
+        followBadge.innerHTML = 'Following'
+      } else {
+        followBadge.classList.replace('bg-success', 'bg-warning')
+        followBadge.innerHTML = 'Follow'
+      }
+
+      // change the follower/following counts of the users
+      followerCountElement.innerHTML = followerCount
+      followingCountElement.innerHTML = followingCount
+
+    })
+    .catch(error=>console.log(error))
+}
+
+
+// apply click event to all followButtons
+followButtons.forEach(followButton=>followButton.addEventListener('click', handleFollowEvent))
