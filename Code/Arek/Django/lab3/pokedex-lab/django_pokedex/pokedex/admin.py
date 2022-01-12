@@ -5,3 +5,4 @@ from .models import User, PokemonType, Pokemon
 
 admin.site.register(User, UserAdmin) # need this if you are going to have users in your ap
 admin.site.register(Pokemon)
+admin.site.register(PokemonType)
