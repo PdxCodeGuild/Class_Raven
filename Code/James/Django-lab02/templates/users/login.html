@@ -1,28 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %} {% block content %}
+<main class="d-flex min-vh-100 align-items-center p-4 p-md-0">
+<div class="container">
+<div class="row">
+<div class="col-md-6 intro-section">
+<form
+  action="{% url 'users_app:login' %}"
+  method="POST"
+  
+>
+  {% csrf_token %}
+  <fieldset>
+    <label for="id_username">{{form.username.label}}</label>
+    {{form.username}}
+  </fieldset>
 
-{% block content %}
-    <h1 class="h1 text-center">Log in</h1>
+  <fieldset>
+    <label for="id_password">{{form.password.label}}</label>
+    {{form.password}}
+  </fieldset>
 
-    <form action="{% url 'users_app:login' %}" method="POST" class="d-flex flex-column align-items-center gap-3">
-        {% csrf_token %}
-        <fieldset>
-            <label for="id_username">{{form.username.label}}</label>
-            {{form.username}}
-        </fieldset>
-
-        <fieldset>
-            <label for="id_password">{{form.password.label}}</label>
-            {{form.password}}
-        </fieldset>
-        
-
-        <button type="submit" class="btn btn-success">Log in</button>
-
-
-    </form>
-
-    <!-- <form action="{% url 'users_app:logout' %}" method="POST" class="d-flex flex-column align-items-center gap-3"> -->
-        <!-- {% csrf_token %} -->
-        <!-- <button type="submit" class="btn btn-success">Log out</button>
-    </form> -->
+  <button type="submit" class="btn btn-success">Sign in</button>
+</form>
+</div>
+</div>
+</div>
+</main>
 {% endblock content %}
