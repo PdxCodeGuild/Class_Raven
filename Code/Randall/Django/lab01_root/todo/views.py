@@ -17,7 +17,7 @@ def home(request):
             messages.success(request, ('Item has been added.'))
             return render(request, 'home.html', {'all_items': all_items})
 
-#If nothing is requested to add to list then just show the current list
+
 #=====================SOMETHING WRONG HERE. ERROR WHEN NOTHING POSTED TO ADD======
     else:
         all_items = List.objects.all
