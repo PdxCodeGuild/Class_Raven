@@ -28,7 +28,7 @@ class Command(BaseCommand):
                 types = models.ManyToManyField(PokemonType)
             
             """
-            pktype = contents['pokemon'][i]['types']
+            
             pknumber = contents['pokemon'][i]['number']
             pkname = contents['pokemon'][i]['name']
             pkheight = contents['pokemon'][i]['height']
@@ -36,6 +36,7 @@ class Command(BaseCommand):
             pk_image_front = contents['pokemon'][i]['image_front']
             pk_image_back = contents['pokemon'][i]['image_back']
             pktypes = contents['pokemon'][i]['types']
+            pkdescription = contents['pokemon'][i]['url']
 
             
             new_pokemon = Pokemon.objects.create(
@@ -44,7 +45,12 @@ class Command(BaseCommand):
                 weight=pkweight, 
                 image_front=pk_image_front, 
                 image_back=pk_image_back, 
+                description=pkdescription
                 )
+
+            for item in pktypes:
+                new_pokemon_types, created = PokemonType.objects.get_or_create(name=item)
+                new_pokemon.types.add(new_pokemon_types)
 
             #Right now the each pokemons types are either a single one or something like this
             # ['flying', 'fire'] But it the types should all be a single entry, and if a pokemon has

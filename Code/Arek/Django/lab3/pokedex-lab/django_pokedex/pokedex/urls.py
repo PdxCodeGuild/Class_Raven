@@ -4,3 +4,8 @@ from . import views
 
 app_name = 'pokedex'
 
+urlpatterns = [
+    path('', views.home, name='home')
+
+]
+

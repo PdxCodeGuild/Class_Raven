@@ -29,6 +29,7 @@ class Pokemon(models.Model):
     image_front = models.CharField(max_length=100)
     image_back = models.CharField(max_length=100)
     types = models.ManyToManyField(PokemonType)
+    description = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
