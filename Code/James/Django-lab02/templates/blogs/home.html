@@ -1,23 +1,17 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<div class="d-flex flex-column align-items-center">
-  <h1>Blog Posts</h1>
-  <ul class="list-group">
+<div class="row d-flex justify-content-center">
+  <h1 class="text-center pt-4 pb-4">Blog Posts</h1>
+<div class="d-flex col-12 col-md-5 col-lg-6 justify-content-center">
+  <ul class="list-group shadow">
     {% for blog in blogs %}
-    <li class="list-group-item"><div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            {{blog.user}}: {{blog.title}} | {{blog.date_created}} 
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>{{blog.body}}</strong> 
-          </div>
-        </div>
-      </div></li>
-    {% endfor %}
-  </ul>
-</div>
-
+      <li class="list-group-item p-3">
+            {{blog.user}}: {{blog.title}} | {{blog.date_created}}
+            <br> 
+            <br><strong>{{blog.body}}</strong>
+          </li> 
+          
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
 {% endblock content %}

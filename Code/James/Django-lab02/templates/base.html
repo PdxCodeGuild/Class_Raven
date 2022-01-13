@@ -30,11 +30,11 @@
   </head>
   <body>
     {% include 'partials/_navbar.html' %}
-    <main class="container">
+    <main class="container min-vh-100">
       {% if errors %}
-      <div class="row w-100">
+      <div class="row d-flex justify-content-center">
         {% for error in errors %}
-        <div class="col-12 col-lg-6 offset-lg-3">{{error}}</div>
+        <div class="col-12 col-lg-6 text-center p-3">{{error}}</div>
         {% endfor %}
       </div>
       {% endif %} {% block content %} {% endblock content %}

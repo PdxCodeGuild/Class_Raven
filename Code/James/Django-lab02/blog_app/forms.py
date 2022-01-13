@@ -9,6 +9,6 @@ class BlogForm(forms.ModelForm):
         model = BlogPost
         fields = ['title','body']
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'body': forms.Textarea(attrs={'class': 'form-control', 'style': 'resize: none'})
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Title'}),
+            'body': forms.Textarea(attrs={'class': 'form-control', 'style': 'resize: none', 'placeholder': 'Enter blog here'})
         }

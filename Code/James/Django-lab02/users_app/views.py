@@ -14,15 +14,11 @@ from .forms import UserForm, UserAuthForm
 def register(request):
     form = UserAuthForm()
     if request.method == "GET":
-        context = {
-            "form": form
-            }
+        context = {"form": form}
         return render(request, "users/register.html", context)
 
     elif request.method == "POST":
         form = UserAuthForm(request.POST)
-        # print(form.is_valid())
-        # print(form.errors)
         if form.is_valid():
             new_user = form.save(commit=False)
             new_user.set_password(form.cleaned_data["password"])
@@ -38,38 +34,38 @@ def register(request):
 
 
 def login(request):
-    if request.method == 'GET':
+    if request.method == "GET":
         form = UserAuthForm()
 
-        return render(request, 'users/login.html', {'form': form})
+        return render(request, "users/login.html", {"form": form})
 
-    elif request.method == 'POST':
+    elif request.method == "POST":
         form = request.POST
-        username = form['username']
-        password = form['password']
+        username = form["username"]
+        password = form["password"]
         user = authenticate(request, username=username, password=password)
 
         if user is None:
             context = {
-                'form': UserAuthForm(),
-                'errors': ['Invalid Username or Password']
+                "form": UserAuthForm(),
+                "errors": ["Invalid Username or Password"],
             }
 
-            return render(request, 'users/login.html', context)
-    
+            return render(request, "users/login.html", context)
+
         else:
             django_login(request, user)
-            return redirect(reverse('users_app:profile', kwargs={'username': user.username}))
-        
-    
+            return redirect(
+                reverse("users_app:profile", kwargs={"username": user.username})
+            )
 
-
+@login_required
 def profile(request, username):
     user = get_object_or_404(get_user_model(), username=username)
-    return render(request, 'users/profile.html', {'user':user})
+    return render(request, "users/profile.html", {"user": user})
 
 
 def logout(request):
     django_logout(request)
 
-    return redirect(reverse('users_app:login'))
+    return redirect(reverse("users_app:login"))

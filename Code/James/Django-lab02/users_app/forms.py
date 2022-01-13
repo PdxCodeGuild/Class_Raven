@@ -15,10 +15,10 @@ class UserForm(forms.ModelForm):
 
 
         widgets = {
-            'first_name': forms.TextInput(attrs={'id':'form_field'}),
-            'last_name': forms.TextInput(attrs={'id':'form_field'}),
-            'username': forms.TextInput(attrs={'id':'form_field'}),
-            'password': forms.PasswordInput(attrs={'id':'form_field'})
+            'first_name': forms.TextInput(attrs={'id':'input_field'}),
+            'last_name': forms.TextInput(attrs={'id':'input_field'}),
+            'username': forms.TextInput(attrs={'id':'input_field','class': 'input_class', 'placeholder':'Enter username'}),
+            'password': forms.PasswordInput(attrs={'id':'input_field','class': 'input_class', 'placeholder':'Enter password'})
         }
 
 

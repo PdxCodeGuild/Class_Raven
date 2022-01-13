@@ -1,43 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap");
 
 * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-body{
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
+.btn {
+  display: inline-block;
+  text-align: center;
+  transition: ease-in-out;
 }
 
-
-
-input{
-    border-radius: 25px;
-    
+h1 {
+  line-height: 1.2;
+  margin-top: 0;
 }
 
-#form_field{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 255, 0);
+h2 {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+  color: black;
 }
 
-/* #log_in {
-    
-} */
-
-.col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.intro-section{
-    color: black
+#input_field {
+  display: flex;
+  justify-content: start;
+  border-radius: 25px;
+  border-style: solid;
+  color: black;
+  text-indent: 0.8rem;
 }

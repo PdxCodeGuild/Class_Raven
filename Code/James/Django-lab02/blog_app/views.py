@@ -36,4 +36,4 @@ def create(request):
             new_blog.user = request.user
             new_blog.save()
 
-            return redirect(reverse('blog_app:profile'))
+            return redirect(reverse('blog_app:home'))
