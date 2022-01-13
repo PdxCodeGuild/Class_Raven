@@ -12,6 +12,7 @@ from django.contrib.auth import (
 from django.contrib.auth.decorators import login_required
 
 from .forms import UserForm, UserAuthForm
+from shop_app.models import Cart
 
 def register(request):
     # create a blank form
@@ -40,6 +41,8 @@ def register(request):
             # set the new user's password
             # validated form data is in form.cleaned_data
             new_user.set_password(form.cleaned_data['password'])
+
+            cart = Cart.objects.create(owner=new_user)
 
             # save the object to the database
             new_user.save()

@@ -31,24 +31,24 @@
             </div>
 
 
-            {% for product in user.cart.products.all %}
             <div class="row border-bottom">
+            {% for cart_item in user.cart.cart_items.all %}
                 <div class="col-7 d-flex align-items-center pt-4">
                     <h4 class="m-0 d-flex flex-column flex-md-row align-items-center">
-                        <img src="{{product.image_url}}" alt="{{product.id}}" height=50 width=auto class="mx-3 my-2">
-                        {{product.title}}
+                        <img src="{{cart_item.product.image_url}}" alt="{{cart_item.product.id}}" height=50 width=auto class="mx-3 my-2">
+                        {{cart_item.product.title}}
                     </h4>
                 </div>
 
                 <div class="col-3 d-flex align-items-center">
                     <form action="" class='d-flex flex-column flex-md-row gap-2'>
-                        <input type="number" value=1 class='form-control'>
+                        <input type="number" value={{cart_item.quantity}} class='form-control'>
                         <button type='submit' class='btn btn-sm btn-success'>Update</button>
                     </form>
                 </div>
 
                 <div class="col-2 lead d-flex align-items-center">
-                    {{product.formatted_price}}
+                    {{cart_item.product.formatted_price}}
                 </div>
 
                 {% empty %}
