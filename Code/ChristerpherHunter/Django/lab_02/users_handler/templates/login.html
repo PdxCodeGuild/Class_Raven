@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<form action="{% url 'users_handler:login' %}" method="POST">
+    <div class="my-5">
+
+        {% csrf_token %}
+
+        {% for form in forms %}
+        <label for="id_{{form.name}}">{{form.name}}</label>
+        <br>
+        {{ form }}
+        <br>
+        {% endfor %}
+        <br>
+        <div class="field">
+            <button type="submit" class="button is-success">
+                Login
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+{% for field in form %}
+
+<label for="id_{{field.name}}">{{field.label}}</label>
+<br>
+{{ field }}
+<br>
+{% endfor %}
+
+{% endblock content %}
