@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row d-flex justify-content-center">
+
+
+    {% for product in products %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card mt-4 shadow">
+                <img src="{{product.image_url}}" alt="{{image.title}}" class="card-img-top mx-auto my-4" style='width:10rem;'>
+            
+                <div class="card-body">
+                    <h5 class="card-title">{{product.title}}</h5>
+                    <p class="d-flex">
+                        Rated {{product.rating}} / 5 by {{product.rating_count}} users
+                    </p>
+
+                    <h3>${{product.price}}</h3>
+                    
+                    <p class="card-text">
+                        {{product.description|truncatewords:20}}
+                    </p>
+
+                    <p class="card-text">
+                        {% for category in product.categories.all %}
+                            <div class="badge bg-info p-2">
+                                {{category|title}}
+                            </div>
+                        {% endfor %}
+                    </p>
+                </div>
+
+                <div class="card-footer bg-secondary d-flex justify-content-end">
+                    <a href="{% url 'shop_app:add_to_cart' product.id %}" class="link-light h4 my-auto">
+                        <i class="fas fa-cart-plus"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+    
+{% endblock content %}
