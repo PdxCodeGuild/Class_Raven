@@ -19,7 +19,9 @@ def index(request):
     # filters can be chained
     # categories = Category.objects.filter(title__in=['jewelery', 'electronics']).filter(title__startswith='e')
     
-    # products = Product.objects.filter(categories__icontains='electronics')
+    # find all the products whose categories list contains the title 'electronics'
+    # other_model__field_name__lookup
+    # products = Product.objects.filter(categories__title__icontains='electronics')
 
     # __lte is less than or equal to for the given field
     # products = Product.objects.filter(price__lte=100).order_by('price')
