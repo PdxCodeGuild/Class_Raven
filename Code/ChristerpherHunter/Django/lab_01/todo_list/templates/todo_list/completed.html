@@ -1,0 +1,45 @@
+{% extends "todo_list/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<h1 class="title center is-1">COMPLETED</h1>
+
+
+{% for item in items.all %}
+
+{% if item.completed_or_not %}
+<div class="card mb-4 is-fluid">
+    <div class="card-content">
+        <div class="media">
+            <!-- <div class="media-left">
+                <figure class="image is-48x48 ">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                </figure>
+            </div> -->
+
+            <div class="media-content">
+                <p class="title is-4">{{ item.todo_name }}</p>
+            </div>
+        </div>
+
+        <div class="content center box">
+            <h5>{{ item.text }}</h5>
+            <input class="button is-success" value="COMPLETED" disabled>
+            <time class="box">{{ item.created_date }}</time>
+        </div>
+        <h5 class="title is-5" id="priority">Priority:</h5>
+        <div class="content is-flex is-justify-content-space-between">
+            <p><strong>{{ item.priority }}</strong></p>
+            <form action="{% url 'todo_list:undo_todo' item.id %}" , method="POST">
+                {% csrf_token %}
+                <button style="border: none; background: none" type="submit">
+                    <i class="fa fa-undo"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}

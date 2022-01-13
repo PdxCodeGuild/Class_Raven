@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12 col-lg-3 border-right">
+        <h3>{{user.username}}</h3>
+        <h5>{{user.full_name}}</h5>
+        <h5>{{user.email}}</h5>
+    </div>
+
+    <div class="col-12 col-lg-9">
+        <h1>Cart</h1>
+
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-6">
+                    <h4>Product</h4>
+                </div>
+                <div class="col-4">
+                    <h4>
+                        Quantity
+                    </h4>
+                </div>
+                <div class="col-2">
+                    <h4>
+                        Price
+                    </h4>
+                </div>
+            </div>
+
+
+            <div class="row border-bottom">
+            {% for cart_item in user.cart.cart_items.all %}
+                <div class="col-6 d-flex align-items-center pt-4">
+                    <h4 class="m-0 d-flex flex-column flex-md-row align-items-center">
+                        <img src="{{cart_item.product.image_url}}" alt="{{cart_item.product.id}}" height=50 width=auto class="mx-3 my-2">
+                        {{cart_item.product.title}}
+                    </h4>
+                </div>
+
+                <div class="col-4 d-flex align-items-center">
+                    <form action="{% url 'shop_app:update_cart' cart_item.id %}" method="POST" class='d-flex flex-column flex-md-row gap-2'>
+                        <input type="number" name='quantity' value={{cart_item.quantity}} class='form-control'>
+                        {% csrf_token %}
+                        <button type='submit' class='btn btn-sm btn-info'>Update</button>
+                    </form>
+                    <a href="{% url 'shop_app:remove_from_cart' cart_item.id %}">
+                        <button class="btn btn-danger mx-2">Delete</button>
+                    </a>
+                </div>
+
+                <div class="col-2 lead d-flex align-items-center">
+                    ${{cart_item.product.price}}
+                </div>
+
+                {% empty %}
+                    <h3>No Products...</h3>
+                {% endfor %}
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-3 offset-7 d-flex align-items-center">
+                    <h4 class='ms-auto'>Total</h4>
+                </div>
+                <div class="col-2"><h4>${{user.cart.total_price}}</h4></div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}
