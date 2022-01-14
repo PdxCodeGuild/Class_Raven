@@ -14,15 +14,13 @@ from .forms import UserForm, UserAuthForm
 def register(request):
     form = UserAuthForm()
     if request.method == "GET":
-        context = {"form": form}
-        return render(request, "users/register.html", context)
+        return render(request, "users/register.html")
 
     elif request.method == "POST":
-        form = UserAuthForm(request.POST)
-        if form.is_valid():
-            new_user = form.save(commit=False)
-            new_user.set_password(form.cleaned_data["password"])
-            new_user.save()
+        print(request.POST)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = .save()
             return redirect(reverse("users_app:register"))
 
         else:
@@ -35,9 +33,8 @@ def register(request):
 
 def login(request):
     if request.method == "GET":
-        form = UserAuthForm()
 
-        return render(request, "users/login.html", {"form": form})
+        return render(request, "users/login.html")
 
     elif request.method == "POST":
         form = request.POST
@@ -47,7 +44,6 @@ def login(request):
 
         if user is None:
             context = {
-                "form": UserAuthForm(),
                 "errors": ["Invalid Username or Password"],
             }
 

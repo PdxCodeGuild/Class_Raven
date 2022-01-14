@@ -15,16 +15,9 @@
           <h2 class="login-title">Sign in</h2>
           <form action="{% url 'users_app:login' %}" method="POST">
             {% csrf_token %}
-            <div class="">
-              <fieldset class="mb-1 mt-2">
-                <label for="id_username"
-                  >{{form.username.label}}</label>
-                {{form.username}}
-              </fieldset>
-              <fieldset >
-                <label for="id_password">{{form.password.label}}</label>
-                {{form.password}}
-              </fieldset>
+            <div class="d-flex flex-column">
+            <input class="rounded mt-1" type="text" name="username" placeholder="Enter username">
+            <input class="rounded mt-3 " type="text" name="password" placeholder="Enter password">
             </div>
             <div class="">
               <button type="submit" class="btn shadow btn-sm btn-outline-primary mt-3">Sign in</button>
