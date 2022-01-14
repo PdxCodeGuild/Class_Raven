@@ -30,3 +30,12 @@ h2 {
   color: black;
   text-indent: 0.8rem;
 }
+
+/* .register_page{
+  background-image: url(/static/images/pics/sand.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+} */

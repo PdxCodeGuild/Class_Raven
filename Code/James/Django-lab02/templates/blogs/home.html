@@ -5,11 +5,10 @@
   <ul class="list-group shadow">
     {% for blog in blogs %}
       <li class="list-group-item p-3">
-            {{blog.user}}: {{blog.title}} | {{blog.date_created}}
+            User: {{blog.username}}: {{blog.title}} | {{blog.date_created}}
             <br> 
             <br><strong>{{blog.body}}</strong>
           </li> 
-          
           {% endfor %}
         </ul>
       </div>

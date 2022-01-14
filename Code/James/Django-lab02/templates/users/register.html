@@ -1,19 +1,23 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
+<!-- <div class="register_page"> -->
 <h1 class="h1 text-center p-5">Register</h1>
 <div class="row d-flex justify-content-center">
-  <div class="card col-12 col-md-6 col-lg-4 shadow">
+  <div class="card d-flex justify-content-center col-12 col-md-6 col-lg-4 shadow">
     <div class="card-body d-flex justify-content-center">
       <form action="{% url 'users_app:register' %}" method="POST">
         <div class="d-flex flex-column justify-content-center">
-          <fieldset>
-            <label for="id_username">{{form.username.label}}</label>
-            {{form.username}}
-          </fieldset>
-
-          <fieldset>
-            <label for="id_password">{{form.password.label}}</label>
-            {{form.password}}
-          </fieldset>
+          <input
+            class="rounded mt-1"
+            type="text"
+            name="username"
+            placeholder="Enter username"
+          />
+          <input
+            class="rounded mt-3"
+            type="text"
+            name="password"
+            placeholder="Enter password"
+          />
           {% csrf_token %}
 
           <button
@@ -27,5 +31,5 @@
     </div>
   </div>
 </div>
-
+<!-- </div> -->
 {% endblock content %}
