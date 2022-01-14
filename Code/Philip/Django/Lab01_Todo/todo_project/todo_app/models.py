@@ -3,17 +3,17 @@ from django.db.models.deletion import SET_DEFAULT
 from django.db.models.fields import CharField
 from django.db import models
 
-CHOICES=[
-    ('low','Low'),
-    ('medium','Medium'),
-    ('high','High'),
-]
+
 
 class Priority(models.Model):
-    priority= models.CharField(choices=CHOICES,max_length=20)
+    priority= models.CharField(max_length=20)
 
     def __str__(self):
         return self.priority
+
+priority, created = Priority.objects.get_or_create(priority='High')
+priority, created = Priority.objects.get_or_create(priority='Medium')
+priority, created = Priority.objects.get_or_create(priority='Low')
 
 class Todo(models.Model):
     title = models.CharField(max_length=100)
