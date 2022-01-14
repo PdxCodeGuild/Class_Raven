@@ -1,7 +1,7 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
-
-import users_handler
+from blog.models import BlogPost
+from django.urls import reverse
 
 # Create your views here.
 
@@ -9,11 +9,9 @@ import users_handler
 def index(request):
 
     posts = [
-        ("Hey I think that meeting got scheduled for the wrong time because my availability on Calendly ends at 2pm. I canceled that meeting but I have you in my  calendar for 4:30PST tomorrow. We'll use the class call", "Keegan Good"),
-        ("My new OS vscode did not sync my key bindings.  Did you happen to copy that editor.emmet.action.wrapWithAbbreviation json config snippet I showed you?", "Christerpher Hunter")
+        ("Hey I think that meeting got scheduled for the wrong time because my availability on Calendly ends at 2pm. I canceled that meeting but I have you in my  calendar for 4:30PST tomorrow. We'll use the class call."),
+        ("My new OS vscode did not sync my key bindings.  Did you happen to copy that editor.emmet.action.wrapWithAbbreviation json config snippet I showed you?")
     ]
-
-    
     
     return render(request, "index.html", {"posts": posts})
 
@@ -37,3 +35,8 @@ def edit(request, blog_id):
 # @login_required
 def delete(request, blog_id):
     """form for deleting a user's blog"""
+
+    blog = get_object_or_404(BlogPost, id=blog_id)
+    blog.delete()
+
+    return redirect(reverse('users_handler:profile'))
