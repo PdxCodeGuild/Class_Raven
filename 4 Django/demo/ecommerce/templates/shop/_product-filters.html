@@ -1,0 +1,85 @@
+<div class="col-12 col-md-3 mx-5 pt-5">
+    <form action="{% url 'shop_app:index' %}" method="POST" class="row gap-3">
+        
+        <!-- SEARCH QUERY -->
+        <fieldset class="col-12">
+            <h5>Query</h5>
+            <label for="search-query" class="w-100">
+                <input type="text" id="search-query" name="search_query" value="{{form.search_query}}" class="w-100 form-control">
+            </label>
+        </fieldset>
+
+        <!-- ORDER_BY SELECT MENU -->
+        <fieldset class="col-12">
+            <h5>Order By</h5>
+            <label for="order-by" class="w-100">
+                <select id="order-by" name="order_by" class="form-control">
+                    <!-- OPTIONS -->
+                    {% for option in search_options.order_by_options %}
+                        <!-- select the option if its value is the one in the form -->
+                        <option 
+                            value="{{option.value}}" 
+                            {% if form.order_by == option.value %}
+                                selected 
+                            {% endif %}
+                        >
+                            {{option.label}}
+                        </option>
+                    {% endfor %}
+                </select>
+            </label>
+        </fieldset>
+
+        <!-- CATEGORIES CHECKBOXES -->
+        <fieldset class="col-12">
+            <h5>Categories</h5>
+            {% for category in search_options.categories %}
+                <label for="category-{{forloop.counter}}" class="d-flex gap-2 align-items-center p-1">
+                    <!-- the checkbox will be checked if its value is in the list from the form -->
+                    <input 
+                        type="checkbox"
+                        id="category-{{forloop.counter}}"
+                        name="categories"
+                        value="{{category}}"
+                        {% if category in form.checked_categories %} 
+                            checked 
+                        {% endif %}
+                    >
+                    {{category|title}}
+                </label>
+            {% endfor %}
+        </fieldset>
+
+
+        <!-- MIN/MAX PRICE -->
+        <fieldset class="col-5 d-flex flex-column gap-2">
+            <h5>Price</h5>
+            <label for="min-price">
+                Min
+                <input type="number" id="min-price" name="min_price" value="{{form.min_price}}" class="form-control">
+            </label>
+            <label for="max-price">
+                Max
+                <input type="number" id="max-price" name="max_price" value="{{form.max_price}}" class="form-control">
+            </label>
+        </fieldset>
+
+
+        <!-- MIN/MAX RATING -->
+        <fieldset class="col-5 d-flex flex-column gap-2">
+            <h5>Rating</h5>
+            <label for="min-rating">
+                Min
+                <input type="number" id="min-rating" name="min_rating" value="{{form.min_rating}}" class="form-control">
+            </label>
+            <label for="max-rating">
+                Max
+                <input type="number" id="max-rating" name="max_rating" value="{{form.max_rating}}" class="form-control">
+            </label>
+        </fieldset>
+
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
