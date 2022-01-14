@@ -4,13 +4,35 @@
 
 {% block content %}
 
+<form action="{% url 'users_handler:register' %}" method="POST" class="">
+    {% csrf_token %}
 
-{% for field in form %}
 
-<label for="id_{{field.name}}">{{field.label}}</label>
-<br>
-{{ field }}
-<br>
-{% endfor %}
+    <fieldset class="field">
+        <p class="control is-expanded has-icons-left">
+            <!-- <label for="id_username">{{form.username.label}}</label> -->
+            {{form.username}}
+            <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+            </span>
+        </p>
+    </fieldset>
+
+    <div class="field">
+        <p class="control has-icons-left">
+            <!-- <label for="id_password">Password</label> -->
+            {{form.password}}
+            <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+            </span>
+        </p>
+    </div>
+
+    <div class="field">
+        <p class="control">
+            <button type="submit" class="button is-success ">Register</button>
+        </p>
+    </div>
+</form>
 
 {% endblock content %}

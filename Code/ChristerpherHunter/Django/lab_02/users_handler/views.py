@@ -1,7 +1,9 @@
+from audioop import reverse
 from django.contrib.auth import authenticate
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.shortcuts import render, redirect, redirect
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import UserForms, UserAuthorizeForm
 
 
 # Create your views here.
@@ -9,16 +11,35 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 def register(request):
     """form for creating a new user; redirect to /profile/ after registering"""
 
-    form = UserCreationForm()
+    form = UserAuthorizeForm()
 
-    return render(request, 'register.html', {"form": form})
+    if request.method =="GET":
+        return render(request, 'register.html', {"form": form})
+    
+    form = UserAuthorizeForm(data=request.POST)
+
+    if form.is_valid():
+        new_user = form.save(commit=False)
+
+        new_user.set_password(form.cleaned_data['password'])
+
+        new_user.save()
+
+        return redirect(reverse('users_handler:regsiter'))
+    
+    context = {
+        "form": UserAuthorizeForm(),
+        "errors": form.errors,
+    }
+
+    return render(request, "users_handler/register.html", context)
 
 
 def login(request):
     """form for logging a user in;redirect to /profile/ after logging in"""
 
     if request.user.is_authenticated:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('login.html')
     if request.method == 'GET':
         form = AuthenticationForm()
         return render(request, 'login.html', {'forms': form})

@@ -63,7 +63,7 @@
                 <div class="navbar-item">
                     <div class="buttons">
                         <a class="button is-primary" href="{% url 'users_handler:register' %}">
-                            <strong>Sign up</strong>
+                            <strong>Register</strong>
                         </a>
                         <a class="button is-light" href="{% url 'users_handler:login' %}">
                             Log in
@@ -74,6 +74,11 @@
         </div>
     </nav>
 
+    {% if errors %}
+
+        {{errors}}
+        
+    {% endif %}
     <!-- MAIN BODY -->
     <div class="columns">
         <div class="column is-one-fifth"></div>
@@ -89,9 +94,7 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Hunter Hang Out</strong> by <a href="#">Christerpher Hunter</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
-            </p>
+                <strong>Hunter Hang Out</strong> by <a href="#">Christerpher Hunter</a>. 
         </div>
     </footer>
 </body>
