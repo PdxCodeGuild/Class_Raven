@@ -1,0 +1,22 @@
+{%load static%}
+
+<nav class="navbar navbar-light bg-secondary">
+
+    <!-- Icons for Navbar -->
+    <div class="container-fluid">
+      <a href="{% url 'pokedex:index' %}" class="navbar-brand"><i class="bi bi-lightning-fill"></i> <i class="bi bi-droplet-fill"></i> <i class="bi bi-thermometer-high"></i></i><i class="bi bi-wind"></i></a>
+
+    <!-- Form for Navbar Search -->
+      <form action="{% url 'pokedex:index' %}" class="d-flex" method="POST"  >
+
+        <fieldset>
+        <input class="form-control me-2" type="text" placeholder="Enter Name or Number" aria-label="Search" name="pokemon_search" id="pokemon_search">
+        </fieldset>
+        <button class="btn btn-outline-dark mx-1" type="submit">Search</button>
+        
+
+        {% csrf_token %}
+
+      </form>
+    </div>
+</nav>
