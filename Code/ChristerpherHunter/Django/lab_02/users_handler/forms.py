@@ -3,6 +3,8 @@ from .models import UserInfo
 
 class UserForms(forms.ModelForm):
 
+    re_password = forms.CharField(max_length=128)
+
     class Meta:
 
         model = UserInfo    
@@ -10,6 +12,7 @@ class UserForms(forms.ModelForm):
         fields = [
             "first_name",
             "last_name",
+            "re_password",
             "avatar"
         ]
 
@@ -19,6 +22,7 @@ class UserForms(forms.ModelForm):
             "last_name": forms.TextInput(attrs={'class':' input'}),
             "username": forms.TextInput(attrs={'class':'input', 'placeholder':'Username'}),
             "password": forms.PasswordInput(attrs={'class':'input', 'placeholder':'Password'}),
+            "re_password": forms.PasswordInput(attrs={'class':'input', 'placeholder':'Password'}),
             "avatar": forms.FileInput(attrs={'class':'control file has-name is-right'}),
         }
         
@@ -26,4 +30,4 @@ class UserForms(forms.ModelForm):
 class UserAuthorizeForm(UserForms):
     
     class Meta(UserForms.Meta):
-        fields = ["username", "password"]
+        fields = ["username", "password", "re_password"]
