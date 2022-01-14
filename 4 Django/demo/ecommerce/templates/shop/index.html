@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="row d-flex justify-content-center">
+{% include 'shop/_product-filters.html' %}
 
 
     {% for product in products %}
@@ -16,7 +16,7 @@
                         Rated {{product.rating}} / 5 by {{product.rating_count}} users
                     </p>
 
-                    <h3>{{product.formatted_price}}</h3>
+                    <h3>${{product.price}}</h3>
                     
                     <p class="card-text">
                         {{product.description|truncatewords:20}}
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="card-footer bg-secondary d-flex justify-content-end">
-                    <a href="" class="link-light h4 my-auto">
+                    <a href="{% url 'shop_app:add_to_cart' product.id %}" class="link-light h4 my-auto">
                         <i class="fas fa-cart-plus"></i>
                     </a>
                 </div>
@@ -41,6 +41,6 @@
         </div>
     {% endfor %}
 
-</div>
+
     
 {% endblock content %}
