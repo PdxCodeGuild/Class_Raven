@@ -1,0 +1,47 @@
+
+
+{% block content %}
+  {% load static %}
+
+
+
+
+<div class="col-12 col-lg-12 mt-4">
+
+    <div class="card pt-3">
+        <h5 class="h5 card-title; d-flex justify-content-between" style="color:rgb(25, 135, 84); font-weight: bolder; padding-left: 15px; padding-right: 15px;">
+                <span style="font-size: 1.4rem;"> {{ blogpost.blog_title }}  </span><span> Created by: {{ blogpost.user }}  </span>
+        </h5>
+    
+        <div class="card-body" style="padding-top: 0px;">
+            {{ blogpost.blog_body }}
+
+        </div>
+
+        <div style=" width: 100%;  background-color:rgb(205, 240, 206); padding: 5px;">
+
+            <small class="card-footer d-flex justify-content-between" style="padding: 0px";>  
+                Posted: {{ blogpost.created_date|date }}
+        
+
+            {% if blogpost.user == request.user %}
+        
+                <a class="nav-link active" href="{% url 'post_app:delete' pk=blogpost.pk %}"><i class="far fa-trash-alt" style="font-size: 20px;"></i></a>
+
+            {% endif %}
+
+            </small>
+
+        </div>
+
+    </div>
+        
+    <br>
+    <br>
+
+
+</div>
+
+
+{% endblock content %}
+
