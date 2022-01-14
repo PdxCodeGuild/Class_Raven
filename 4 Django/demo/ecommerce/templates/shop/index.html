@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="row d-flex justify-content-center">
+{% include 'shop/_product-filters.html' %}
 
 
     {% for product in products %}
@@ -41,6 +41,6 @@
         </div>
     {% endfor %}
 
-</div>
+
     
 {% endblock content %}
