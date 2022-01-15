@@ -9,265 +9,49 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import TodoList, Task, Comment, Tag, Attachment
 
 # Create your views here.
-class TodoListListView(ListView):
-    model = TodoList
-    template_name = "assistant/todo_list.html"
-    context_object_name = "todo_lists"
-    
-    def get_queryset(self):
-        return TodoList.objects.filter(owner=self.request.user)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_lists"] = TodoList.objects.filter(owner=self.request.user)
-        return context
-    
-class TodoListDetailView(DetailView):
-    model = TodoList
-    template_name = "assistant/todo_list.html"
-    context_object_name = "todo_list"
-    
-    def get_queryset(self):
-        return TodoList.objects.filter(owner=self.request.user)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
+def index(request):
+    return render(request, 'assistant/index.html')
 
+def edit_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    if request.method == "POST":
+        task.title = request.POST['title']
+        task.description = request.POST['description']
+        task.save()
+        return HttpResponseRedirect(reverse('assistant:task_detail', args=(task.id,)))
+    return render(request, 'assistant/edit_task.html', {'task': task})
 
-class TaskListView(ListView):
-    model = Task
-    template_name = "assistant/task_list.html"
-    context_object_name = "tasks"
-    
-    def get_queryset(self):
-        return Task.objects.filter(todo_list=self.kwargs["pk"])
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
-    
-class TaskDetailView(DetailView):
-    model = Task
-    template_name = "assistant/task.html"
-    context_object_name = "task"
-    
-    def get_queryset(self):
-        return Task.objects.filter(todo_list=self.kwargs["pk"])
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
+def delete_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    task.delete()
+    return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(task.todolist.id,)))
 
+def create_task(request, todolist_id):
+    todolist = get_object_or_404(TodoList, pk=todolist_id)
+    if request.method == "POST":
+        task = Task(title=request.POST['title'], description=request.POST['description'], todolist=todolist)
+        task.save()
+        return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
+    return render(request, 'assistant/create_task.html', {'todolist': todolist})
 
-class TaskCreateView(CreateView):
-    model = Task
-    template_name = "assistant/task_form.html"
-    fields = ["name", "due_on", "status"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def form_valid(self, form):
-        form.instance.todo_list = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return super().form_valid(form)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
+def create_todolist(request):
+    if request.method == "POST":
+        todolist = TodoList(title=request.POST['title'], description=request.POST['description'])
+        todolist.save()
+        return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
+    return render(request, 'assistant/create_todolist.html')
 
+def edit_todolist(request, todolist_id):
+    todolist = get_object_or_404(TodoList, pk=todolist_id)
+    if request.method == "POST":
+        todolist.title = request.POST['title']
+        todolist.description = request.POST['description']
+        todolist.save()
+        return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
+    return render(request, 'assistant/edit_todolist.html', {'todolist': todolist})
 
-class TaskUpdateView(UpdateView):
-    model = Task
-    template_name = "assistant/task_form.html"
-    fields = ["name", "due_on", "status", "comment", "tag", "attachment"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
-    
-    
-class TaskDeleteView(DeleteView):
-    model = Task
-    template_name = "assistant/task_confirm_delete.html"
-    
-    def get_success_url(self):
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
-    
-    
-class CommentCreateView(CreateView):
-    model = Comment
-    template_name = "assistant/comment_form.html"
-    fields = ["text"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_detail", kwargs={"pk": self.kwargs["pk"]})
-    
-    def form_valid(self, form):
-        form.instance.task = get_object_or_404(Task, id=self.kwargs["pk"])
-        return super().form_valid(form)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["task"] = get_object_or_404(Task, id=self.kwargs["pk"])
-        return context
-    
-    
-class CommentUpdateView(UpdateView):
-    model = Comment
-    template_name = "assistant/comment_form.html"
-    fields = ["text"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_detail", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["task"] = get_object_or_404(Task, id=self.kwargs["pk"])
-        return context
-    
-    
-class CommentDeleteView(DeleteView):
-    model = Comment
-    template_name = "assistant/comment_confirm_delete.html"
-    
-    def get_success_url(self):
-        return reverse("assistant:task_detail", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["task"] = get_object_or_404(Task, id=self.kwargs["pk"])
-        return context
-    
-
-    
-class TagCreateView(CreateView):
-    model = Tag
-    template_name = "assistant/tag_form.html"
-    fields = ["name"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def form_valid(self, form):
-        form.instance.todo_list = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return super().form_valid(form)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
-    
-    
-class TagUpdateView(UpdateView):
-    model = Tag
-    template_name = "assistant/tag_form.html"
-    fields = ["name"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
-    
-
-
-class TagDeleteView(DeleteView):
-    model = Tag
-    template_name = "assistant/tag_confirm_delete.html"
-    
-    def get_success_url(self):
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["todo_list"] = get_object_or_404(TodoList, id=self.kwargs["pk"])
-        return context
-    
-
-
-class AttachmentCreateView(CreateView):
-    model = Attachment
-    template_name = "assistant/attachment_form.html"
-    fields = ["file"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_detail", kwargs={"pk": self.kwargs["pk"]})
-    
-    def form_valid(self, form):
-        form.instance.task = get_object_or_404(Task, id=self.kwargs["pk"])
-        return super().form_valid(form)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["task"] = get_object_or_404(Task, id=self.kwargs["pk"])
-        return context
-
-
-class AttachmentUpdateView(UpdateView):
-    model = Attachment
-    template_name = "assistant/attachment_form.html"
-    fields = ["file"]
-    
-    def get_success_url(self):
-        return reverse("assistant:task_detail", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["task"] = get_object_or_404(Task, id=self.kwargs["pk"])
-        return context
-
-
-class AttachmentDeleteView(DeleteView):
-    model = Attachment
-    template_name = "assistant/attachment_confirm_delete.html"
-    
-    def get_success_url(self):
-        return reverse("assistant:task_detail", kwargs={"pk": self.kwargs["pk"]})
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["task"] = get_object_or_404(Task, id=self.kwargs["pk"])
-        return context
-    
-class index(TemplateView):
-    template_name = "assistant/index.html"
-    
-class TodoListCreateView(CreateView):
-    model = TodoList
-    template_name = "assistant/todo_list_form.html"
-    fields = ["name"]
-    
-    
-    def get_success_url(self):
-        print("success")
-        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
-    
-    def form_valid(self, form):
-        print("valid")
-        form.instance.user = get_object_or_404(User, id=self.kwargs["pk"])
-        return super().form_valid(form)
-    
-    def get_context_data(self, **kwargs):
-        print("kwargs", kwargs)
-        context = super().get_context_data(**kwargs)
-        print("context", context)
-        context["user"] = get_object_or_404(User, id=self.kwargs["pk"])
-        print("context2", context)
-        #return context
-        render(CreateView, "assistant/todo_list_form.html", context)
+def delete_todolist(request, todolist_id):
+    todolist = get_object_or_404(TodoList, pk=todolist_id)
+    todolist.delete()
+    return HttpResponseRedirect(reverse('assistant:index'))
