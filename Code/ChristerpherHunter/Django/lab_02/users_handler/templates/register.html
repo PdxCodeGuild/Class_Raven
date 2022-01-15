@@ -7,8 +7,7 @@
 <form action="{% url 'users_handler:register' %}" method="POST" class="">
     {% csrf_token %}
 
-
-    <fieldset class="field">
+    <div class="field">
         <p class="control is-expanded has-icons-left">
             <!-- <label for="id_username">{{form.username.label}}</label> -->
             {{form.username}}
@@ -16,7 +15,7 @@
                 <i class="fas fa-user"></i>
             </span>
         </p>
-    </fieldset>
+    </div>
 
     <div class="field">
         <p class="control has-icons-left">
@@ -37,6 +36,18 @@
             </span>
         </p>
     </div>
+
+    {% if errors %}
+    <div class="notification is-danger">
+        {% for error, erra in errors.items %}
+        {{erra}}
+
+        {% endfor %}
+        <button class="delete"></button>
+    </div>
+
+
+    {% endif %}
 
     <div class="field">
         <p class="control">

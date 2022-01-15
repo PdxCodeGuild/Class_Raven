@@ -1,9 +1,10 @@
-from audioop import reverse
-from django.contrib.auth import authenticate
-from django.http.response import HttpResponseRedirect
-from django.shortcuts import render, redirect, redirect
-from django.contrib.auth.forms import AuthenticationForm
-from .forms import UserForms, UserAuthorizeForm
+from django.contrib.auth import authenticate, login as django_login
+from django.contrib import messages
+from django.shortcuts import render, redirect, redirect, reverse
+from .forms import UserCreationsForm, UserForms, UserAuthorizeForm
+from colorama import Fore as F
+
+R = F.RESET
 
 
 # Create your views here.
@@ -11,55 +12,59 @@ from .forms import UserForms, UserAuthorizeForm
 def register(request):
     """form for creating a new user; redirect to /profile/ after registering"""
 
-    form = UserAuthorizeForm()
-
-    if request.method =="GET":
+    if request.method == "GET":
+        form = UserCreationsForm()
         return render(request, 'register.html', {"form": form})
-    
-    form = UserAuthorizeForm(data=request.POST)
+
+    form = UserCreationsForm(data=request.POST)
 
     if form.is_valid():
         new_user = form.save(commit=False)
 
         new_user.set_password(form.cleaned_data['password'])
+        
+        new_user.save()    
 
-        new_user.save()
+        context = {
+            "form": UserCreationsForm()                
+        }
+        return render(request, 'register.html', context)
 
-        return redirect(reverse('users_handler:regsiter'))
-    
+    for error in form.errors:
+        messages.add_message(request, messages.INFO, error)        
+
     context = {
-        "form": UserAuthorizeForm(),
-        "errors": form.errors,
+        "form": UserCreationsForm(),
+        # "errors": form.errors,
     }
+    print(f"{F.RED}{form.errors.as_json()}{R}")
 
-    return render(request, "users_handler/register.html", context)
+    return render(request, "register.html", context)
 
 
 def login(request):
     """form for logging a user in;redirect to /profile/ after logging in"""
 
-    if request.user.is_authenticated:
-        return HttpResponseRedirect('login.html')
-    if request.method == 'GET':
-        form = AuthenticationForm()
-        return render(request, 'login.html', {'forms': form})
-    if request.method == 'POST':
-        form = AuthenticationForm(request=request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                print(user)
-                login(request, user)
-                return HttpResponseRedirect('/')
-            else:
-                print('User not found')
-        else:
-            # If there were errors, we render the form with these
-            # errors
-            return render(request, 'login.html', {'forms': form})
-  
+    if request.method == "GET":
+        form = UserAuthorizeForm()
+
+        return render(request, 'login.html', {"form": form})
+
+    form = UserAuthorizeForm(initial=request.POST)
+
+    username = form.initial.get('username')[0]
+    password = form.initial.get('password')[0]
+    print(f"{F.BLUE}{username}{password}{R}")
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        print(f"{F.GREEN}{user}{R}")
+        django_login(request, user)
+        return redirect(reverse('blog:index'))
+    else:
+        print(f'{F.RED}User not found{R}')
+        print(f"{F.RED}Returning errors{R} {F.YELLOW}{form.errors}{R}")
+        return render(request, 'login.html', {'errors': form.errors})
+
 
 def profile(request):
     """form for logging a user in; redirect to /profile/ after logging in"""
