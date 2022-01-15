@@ -3,81 +3,42 @@
 {% block content %}
 
 <nav aria-label="Page navigation example" class="mt-5">
-    <ul class="pagination justify-content-center">
-
-
-        <li 
-            {% if not products_page.has_previous %} 
-                class="page-item disabled"
-            {% else %}
-                class="page-item"
-            {% endif %}
-        >
-
+    <ul class="pagination justify-content-center align-items-center ">
+        <li class="
+            d-flex align-items-center page-item 
+            {% if not products_page.has_previous %} disabled {% endif %}
+        ">
             <a class="page-link" href="?page_num=1" href="#" tabindex="-1">
                 &laquo; First
             </a>
-        </li>
-
-
-        <li 
-            {% if not products_page.has_previous %} 
-                class="page-item disabled"
-            {% else %}
-                class="page-item"
-            {% endif %}
-        >
-
-            <a 
-                class="page-link"
+            <a class="page-link"
                 {% if products_page.has_previous %}
                     href="?page_num={{products_page.previous_page_number}}"
-                    {% else %}
-                    href="#"
                 {% endif %}
-                tabindex="-1"
-               
             >
                 Previous
             </a>
         </li>
 
         <li class="page-item"><a class="page-link" href="#">{{products_page.number}}</a></li>
-        <li 
-            {% if not products_page.has_next %} 
-                class="page-item disabled"
-            {% else %}
-                class="page-item"
-            {% endif %}
-        >
+        <li class="
+            d-flex align-items-center page-item 
+            {% if not products_page.has_next %} disabled {% endif %}">
 
             <a 
-            class="page-link"
-            {% if products_page.has_next %}
-            href="?page_num={{products_page.next_page_number}}"
-            {% else %}
-            href="#"
-            tabindex="-1"
-            {% endif %}
+                class="page-item page-link"
+                {% if products_page.has_next %}
+                    href="?page_num={{products_page.next_page_number}}"
+                {% endif %}
             >
-            Next
-        </a>
-    </li>
+                Next
+            </a>
+            <a class="page-link" href="?page_num={{products_page.paginator.num_pages}}" tabindex="-1">
+                Last &raquo;
+            </a>
+        </li>
 
-    <li 
-        {% if not products_page.has_next %} 
-            class="page-item disabled"
-        {% else %}
-            class="page-item"
-        {% endif %}
-    >
-        <a class="page-link" href="?page_num={{products_page.paginator.num_pages}}" tabindex="-1">
-            Last &raquo;
-        </a>
-    </li>
-
-
-</ul>
+    </ul>
 </nav>
 
 {% include 'shop/_product-filters.html' %}
