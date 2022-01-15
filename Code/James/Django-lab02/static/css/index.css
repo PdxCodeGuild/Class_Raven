@@ -42,3 +42,10 @@ h2 {
   z-index: -1;
 } */
 
+.hero-image{
+  background-image: url(/static/images/pics/create.jpg) no-repeat center; 
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  width: 100%;
+}

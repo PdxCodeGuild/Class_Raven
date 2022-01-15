@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div class="container p-0 m-0">
 <div class="row d-flex justify-content-center vw-100">
-  <div class="blog-heading pt-4 pb-4 d-flex text-light bg-dark justify-content-center">
+  <div class="hero-image jumbotron d-flex text-light bg-dark justify-content-center">
     <h1>
       Blog Posts
     </h1>
@@ -10,7 +10,7 @@
     <ul class="list-group shadow">
       {% for blog in blogs %}
       <li class="list-group-item p-3">
-        User: {{blog.user}} <strong>Title: </strong>{{blog.title}} | {{blog.date_created}}
+        User: {{blog.user.username}} <strong>Title: </strong>{{blog.title}} | {{blog.date_created}}
         <br />
         <br /><strong>" {{blog.body}} "</strong>
       </li>
