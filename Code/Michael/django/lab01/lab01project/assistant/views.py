@@ -1,7 +1,8 @@
+from urllib import request
 from django.shortcuts import render, get_list_or_404, get_object_or_404, reverse
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.views.generic.base import TemplateView
-from users.models import CustomUser
+from users.models import CustomUser as User
 
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -65,7 +66,7 @@ class TaskDetailView(DetailView):
 class TaskCreateView(CreateView):
     model = Task
     template_name = "assistant/task_form.html"
-    fields = ["name", "due_on", "status", "comment", "tag", "attachment"]
+    fields = ["name", "due_on", "status"]
     
     def get_success_url(self):
         return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
@@ -246,3 +247,27 @@ class AttachmentDeleteView(DeleteView):
     
 class index(TemplateView):
     template_name = "assistant/index.html"
+    
+class TodoListCreateView(CreateView):
+    model = TodoList
+    template_name = "assistant/todo_list_form.html"
+    fields = ["name"]
+    
+    
+    def get_success_url(self):
+        print("success")
+        return reverse("assistant:task_list", kwargs={"pk": self.kwargs["pk"]})
+    
+    def form_valid(self, form):
+        print("valid")
+        form.instance.user = get_object_or_404(User, id=self.kwargs["pk"])
+        return super().form_valid(form)
+    
+    def get_context_data(self, **kwargs):
+        print("kwargs", kwargs)
+        context = super().get_context_data(**kwargs)
+        print("context", context)
+        context["user"] = get_object_or_404(User, id=self.kwargs["pk"])
+        print("context2", context)
+        #return context
+        render(CreateView, "assistant/todo_list_form.html", context)
