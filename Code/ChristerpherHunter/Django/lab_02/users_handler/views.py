@@ -1,5 +1,4 @@
 from django.contrib.auth import authenticate, login as django_login
-from django.contrib import messages
 from django.shortcuts import render, redirect, redirect, reverse
 from .forms import UserCreationsForm, UserForms, UserAuthorizeForm
 from colorama import Fore as F
@@ -22,20 +21,17 @@ def register(request):
         new_user = form.save(commit=False)
 
         new_user.set_password(form.cleaned_data['password'])
-        
-        new_user.save()    
+
+        new_user.save()
 
         context = {
-            "form": UserCreationsForm()                
+            "form": UserCreationsForm()
         }
         return render(request, 'register.html', context)
 
-    for error in form.errors:
-        messages.add_message(request, messages.INFO, error)        
-
     context = {
         "form": UserCreationsForm(),
-        # "errors": form.errors,
+        "errors": form.errors,
     }
     print(f"{F.RED}{form.errors.as_json()}{R}")
 
