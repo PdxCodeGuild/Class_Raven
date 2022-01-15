@@ -2,9 +2,15 @@ from django.shortcuts import get_object_or_404, render, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Category, Product, Cart, CartItem
 from django.db.models import Q
+from django.core.paginator import Paginator
 
-def index(request):
+def index(request, page_num=1, per_page=5):
 
+
+    # if URL parameters exist for page_num or per_page, use those values
+    # otherwise, use the defaults from the index view
+    page_num = request.GET.get('page_num') or page_num
+    per_page = request.GET.get('per_page') or per_page
 
 
     # create a dictionary with the values from the form if they exist or defaults if they don't
@@ -73,6 +79,12 @@ def index(request):
     products = products.order_by(order_by)
 
 
+    # create a page object from the remaining products
+    products_page = Paginator(products, per_page).get_page(page_num)
+
+    # print(products_page.num_pages)
+    # print(products_page.page_range)
+
     # data for rendering 'categories' checkboxes and 'order by' select menu
     search_options = {
         'categories': [category.title for category in Category.objects.all()],
@@ -88,7 +100,7 @@ def index(request):
 
     # pack it up in a dictionary and ship it to the template
     context = {
-        'products': products,
+        'products_page': products_page,
         'search_options': search_options,
         'form': form
     }
