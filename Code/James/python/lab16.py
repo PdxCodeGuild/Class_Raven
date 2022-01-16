@@ -1,4 +1,5 @@
 """ Linear search """
+import math
 import random
 
 nums = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -16,7 +17,6 @@ def linear_search(list, value):
 # linear_search(nums, 3)
 
 
-""" binary search """
 length = range(len(nums))
 
 
@@ -60,13 +60,56 @@ def bubble_sort(array):
             if array[i] > array[i + 1]:
                 # Swap the item in the list if it's greater then it's neighbor.
                 array[i + 1], array[i] = array[i], array[i + 1]
-                amount_of_swaps += 1 # was curious to see how many times the loop ran
+                amount_of_swaps += 1  # was curious to see how many times the loop ran
                 swapped = True
     print(amount_of_swaps)
     return array
 
 
-print(bubble_sort(swap_list))
+# print(bubble_sort(swap_list))
+
+insertion_list = [5, 8, 6, 7, 1, 2, 3, 4, 9]
 
 
-def insertion_sort()
+def insertion_sort(array):
+    i = 1
+    loops = 0
+    while i < len(array):
+        j = i
+        while j > 0 and array[j - 1] > array[j]:
+            array[j], array[j - 1] = array[j - 1], array[j]
+            j = j - 1
+
+        i = i + 1
+        loops += 1
+    print(array)
+    print(loops)
+    return array
+
+# insertion_sort(insertion_list)
+
+
+def quicksort(array):
+    quicksort_recursive(array, 0, len(array) - 1)
+    print(array)
+
+def quicksort_recursive(array, lo, hi):
+    if lo < hi:
+        p = partition(array, lo, hi)
+        quicksort_recursive(array, lo, p)
+        quicksort_recursive(array, p + 1, hi)
+
+
+def partition(array, lo, hi):
+    pivot = array[math.floor(lo + (hi - lo) / 2)]
+    i = lo - 1
+    j = hi + 1
+    while True:
+        while array[i] < pivot:
+            i = i + 1
+        while array[j] > pivot:
+            j = j - 1
+        if i >= j:
+            return j
+        array[i] = array[j]
+quicksort(insertion_list)
