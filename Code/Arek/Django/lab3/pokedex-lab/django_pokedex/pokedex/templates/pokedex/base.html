@@ -7,53 +7,28 @@
         <meta lang="en">
         <meta name="lab3" content="width-device-width", initial-scale=1.0>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'pokedex/style.css' %}">
     </head>
     <body class="black">
-        <h2 class='center-align white-text'>Pokedex</h2>
-        <div class='container'>
-            <div class='row'>
-                {% for item in allpokemon %}
-                    <div id='poke-div' class="center-align ">
-                        <p>
-                            Number #{{ item.number }}:
-                            {{ item.name }}
-                        </p>
-                        <img src="{{ item.image_front }}">
-                        <img src="{{ item.image_back }}">
-                        <p>
-                            Description: <a href="{{ item.description }}">Click Here</a>
-                        </p>
+        <nav>
+            <div id='top-nav-bar' class='nav-wrapper green accent-4'>
+                <form action="{% url 'pokedex:choice' %}", method="POST">
+                    {% csrf_token %}
+                    <div class='input-field'>
+                        <input name='search' id="search-bar" type="search">
+                        <label class='label-icon' for="search-bar">
+                            <i class='material-icons'>search</i>
+                        </label>
                     </div>
-    
-    
-                {% endfor %}
-    
-    
-    
-    
+                </form>
             </div>
-
-        </div>
+        </nav>
+        <h2 class='center-align white-text'>Pokedex</h2>
         
+        {% block content %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        {% endblock content %}
 
 
 
