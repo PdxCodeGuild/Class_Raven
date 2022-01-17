@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/7e23fc28a2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/normalize.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/index.css')}}"
+    />
+
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="todo-lists">
+        <div class="todo-list">
+          <h1>To Do</h1>
+          <div id="add-todo-form">
+            <input type="text" id="new-todo-input" />
+            <i class="far fa-plus-square crud-icon" id="add-todo-button"></i>
+          </div>
+          <div id="incomplete-todos">
+            <!-- RENDER TODOS WITH JS -->
+          </div>
+        </div>
+        <div class="todo-list">
+          <h1>Complete</h1>
+          <div id="complete-todos"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+    <i class="far fa-plus-square"></i>
+    <i class="fas fa-undo-alt"></i>
+<i class="fas fa-check"></i>
+<i class="fas fa-times"></i> -->
+
+    <!--  -->
+    <template id="todo-item-template">
+      <div class="todo-item">
+        <div class="todo-text">Go grocery shopping</div>
+        <div class="crud-icons">
+          <i class="fas fa-check crud-icon complete" title="complete"></i>
+          <i class="fas fa-times crud-icon delete" title="delete"></i>
+        </div>
+      </div>
+    </template>
+
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "todo_list/base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="title center is-1">DELETE TODO</h1>
+<form action="{% url 'todo_list:delete' %}" , method="POST">
+
+    {% csrf_token %}
+
+    <p><strong>Delete Posts</strong>
+    <div class="field has-addons">
+        <div class="control is-expanded">
+            <div class="select is-fullwidth">
+                <select name="todo-delete">
+                    {% for item in  items %}
+                        <option name="todo_delete">{{ item.todo_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="control">
+            <button type="submit" class="button is-primary">Delete</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+
+<h4>Register</h4>
+<form action="{% url 'myapp:register_user' %}" method="POST">
+    {% csrf_token %}
+    <label id='labels' class='left light-blue-text' for="username">Username</label>
+    <input id='username-text' type="text" name="username">
+
+    <label id='labels' class='left light-blue-text' for="password">Password</label>
+    <input type="password" name="password">
+
+    <button class='right ' type="submit">Register</button>
+
+
+</form>
+<a class='left purple-text' href="/">Click here to login</a>
+
+
+{% endblock content %}
