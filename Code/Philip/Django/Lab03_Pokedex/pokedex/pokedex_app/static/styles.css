@@ -40,3 +40,24 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
+.album {
+  background-color: rgb(51, 50, 50) !important;
+}
+
+.card {
+  background-color: rgb(235, 242, 247) !important;
+}
+
+.card-body {
+  font-size: large !important;
+}
+
+.card-text {
+  margin-bottom: 3px !important;
+}
+
+.card-title {
+  text-align: center;
+  font-size: x-large;
+}
