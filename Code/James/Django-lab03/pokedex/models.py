@@ -15,6 +15,6 @@ class Pokemon(models.Model):
     weight = models.FloatField()
     image_front = models.CharField(max_length=100)
     image_back = models.CharField(max_length=100)
-    types = models.ManyToManyField(PokemonType, related_name='type', blank=True)
+    types = models.ManyToManyField(PokemonType, related_name='pokemon-type', blank=True)
     def __str__(self):
         return f'{self.name}'
