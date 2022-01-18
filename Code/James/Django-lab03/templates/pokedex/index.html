@@ -1,3 +1,27 @@
-{% extends 'base.html' %}{% block content %}
-<h1>HELLO WORLD!</h1>
+{% extends 'base.html' %}{% block content %} 
+<div class="row d-flex justify-content-center">
+  <table class="table table-hover table-bordered border-primary">
+    <thead class="table-primary">
+        <tr class="text-center">
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Height</th>
+          <th scope="col">Weight</th>
+          <th scope="col">Types</th>
+        </tr>
+      </thead>
+      {% for pokemon in pokemon.all %}
+    <tbody class="text-center align-middle" id="{{pokemon.number}}">
+      <tr>
+        <td>{{pokemon.number}}</td>
+        <td><img class="mx-2" src="{{pokemon.image_front}}" alt=""><br>{{pokemon.name}} </td>
+        <td class="">{{pokemon.height}}</td>
+        <td class=" ">{{pokemon.weight}}lbs</td>
+        <td class=" ">{{pokemon.types.name}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+
+</div>
 {% endblock content %}

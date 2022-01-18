@@ -5,7 +5,7 @@ from django.db.models.fields import CharField
 class PokemonType(models.Model):
     name = models.CharField(max_length=50)
     def __str__(self):
-        return self.name
+        return f'{self.name}'
 
 
 class Pokemon(models.Model):
@@ -13,8 +13,8 @@ class Pokemon(models.Model):
     name = models.CharField(max_length=50)
     height = models.FloatField()
     weight = models.FloatField()
-    image_front = models.CharField(max_length=100)
-    image_back = models.CharField(max_length=100)
-    types = models.ManyToManyField(PokemonType, related_name='pokemon-type', blank=True)
+    image_front = models.CharField(max_length=300)
+    image_back = models.CharField(max_length=300)
+    types = models.ManyToManyField(PokemonType, related_name='pokemontype', blank=True)
     def __str__(self):
         return f'{self.name}'

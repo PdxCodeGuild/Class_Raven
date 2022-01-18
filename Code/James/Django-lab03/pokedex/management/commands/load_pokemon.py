@@ -23,7 +23,7 @@ class Command(BaseCommand):
                 types, created = PokemonType.objects.get_or_create(name=types)
 
 
-                print(types)
+                print(image_front)
 
                 pokemon = Pokemon.objects.create(
                     number=number,
