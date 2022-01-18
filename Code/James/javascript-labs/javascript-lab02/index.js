@@ -1,3 +1,4 @@
+'Rock paper scissors'
 game = ['rock', 'sciccors', 'paper']
 
 
