@@ -7,7 +7,7 @@ class Command(BaseCommand):
         with open('./pokedex/management/commands/pokemon.json', 'r') as f:
             contents = json.load(f)
             pokemon_dict = contents['pokemon']
-            
+            print(pokemon_dict)
             
             # f.read()
             
@@ -21,10 +21,7 @@ class Command(BaseCommand):
                 types = pokemon['types']
 
                 types, created = PokemonType.objects.get_or_create(name=types)
-
-
-                print(image_front)
-
+               
                 pokemon = Pokemon.objects.create(
                     number=number,
                     name=name,
@@ -32,8 +29,10 @@ class Command(BaseCommand):
                     weight=weight,
                     image_front=image_front,
                     image_back=image_back,
-                    # types=types,
+                    # types=all_types
                 )
 
+                
+                Pokemon.types.add(types)
 
             

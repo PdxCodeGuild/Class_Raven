@@ -10,8 +10,10 @@ from .models import Pokemon, PokemonType
 # Create your views here.
 def home(request):
     pokemon = Pokemon.objects.all().order_by('number')
-
+    pokemontype = PokemonType.objects.all()
+    print(pokemontype)
     context = {
-        'pokemon': pokemon
+        'pokemon': pokemon,
+        'pokemontype': pokemontype
     }
     return render(request, 'pokedex/index.html', context)
