@@ -7,9 +7,10 @@ let button = document.querySelector("#button-quote"),
   quotesContainer = document.querySelector("#quotes-container"),
   queryStringInput = document.getElementById("user-input"),
   currentPage = document.querySelector("#current-page"),
-  button4 = document.querySelector("#button-search");
-(quotesList = []), (i = 0);
-quoteDiv = document.querySelector("#quoteDiv");
+  button4 = document.querySelector("#button-search"),
+  quotesList = [],
+  i = 0
+  quoteDiv = document.querySelector("#quoteDiv");
 
 const headers = {
   Accept: "application/json",
@@ -57,7 +58,9 @@ button2.addEventListener("click", () => {
   //   else set i back to 0 and empty the quotes list then run the request function to start over with new list
   else if (i === 25) {
     pageNumber++;
-    getQuote(pageNumber, queryStringInput.value);
+    // h3.innerHTML = quotesList.quotes[i].author;
+    // h1.innerHTML = quotesList.quotes[i].body;
+    getQuote(pageNumber);
   }
 });
 
@@ -77,7 +80,7 @@ function getQuote(pageNumber, queryStringInput) {
     .then((response) => {
       //   set i back to zero when function is called outside of the button 2 function
       i = 0;
-
+      quotesList = ''
       quotesList = [];
       let quotes = response.data.quotes;
       let data = response.data;

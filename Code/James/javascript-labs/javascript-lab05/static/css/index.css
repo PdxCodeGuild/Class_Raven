@@ -21,7 +21,7 @@
     align-items: center;
     font-style: italic;
     position: fixed;
-    top: 60%;
+    top: 80%;
     text-decoration: underline;
 }
 
@@ -52,5 +52,6 @@
 nav{
   cursor: pointer;
   position: fixed;
-  top: 80%;
+  
+  top: 90%;
 }
