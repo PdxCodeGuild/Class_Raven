@@ -1,3 +1,4 @@
+'Credit Card Validation'
 let user = prompt("Enter credit card digits: ")
 console.log(user);
 
