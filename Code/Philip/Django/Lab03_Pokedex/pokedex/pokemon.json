@@ -2,7 +2,7 @@
     "pokemon": [
         {
             "number": 1,
-            "name": "bulbasaur2",
+            "name": "bulbasaur",
             "height": 7,
             "weight": 69,
             "image_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",

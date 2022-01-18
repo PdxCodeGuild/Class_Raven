@@ -61,3 +61,12 @@
   text-align: center;
   font-size: x-large;
 }
+
+.modal-content {
+  width: fit-content;
+  height: auto
+}
+
+.skillz {
+  text-align: center;
+}

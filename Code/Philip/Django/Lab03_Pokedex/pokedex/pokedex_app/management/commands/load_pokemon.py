@@ -67,7 +67,7 @@ class Command(BaseCommand):
 
             pokemon = Pokemon.objects.create(
                 number=number,
-                name=name,
+                name=str.title(name),
                 height=height,
                 weight=weight,
                 image_front=image_front,
