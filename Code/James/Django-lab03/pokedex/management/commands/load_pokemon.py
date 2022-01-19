@@ -9,7 +9,8 @@ class Command(BaseCommand):
             pokemon_dict = contents['pokemon']
             print(pokemon_dict)
             
-            # f.read()
+            Pokemon.objects.all().delete()
+            PokemonType.objects.all().delete()
             
             for pokemon in pokemon_dict:
                 number = pokemon['number']
@@ -19,9 +20,8 @@ class Command(BaseCommand):
                 image_front = pokemon['image_front']
                 image_back = pokemon['image_back']
                 types = pokemon['types']
-
-                types, created = PokemonType.objects.get_or_create(name=types)
-               
+                url = pokemon['url']
+                
                 pokemon = Pokemon.objects.create(
                     number=number,
                     name=name,
@@ -29,10 +29,15 @@ class Command(BaseCommand):
                     weight=weight,
                     image_front=image_front,
                     image_back=image_back,
-                    # types=all_types
+                    url = url
                 )
-
                 
-                Pokemon.types.add(types)
+                for i in map(str, types):
+                    i, created = PokemonType.objects.get_or_create(name=i)
+                    pokemon.types.add(i)
 
+            
+            
+                
+                
             

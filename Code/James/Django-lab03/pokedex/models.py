@@ -16,5 +16,6 @@ class Pokemon(models.Model):
     image_front = models.CharField(max_length=300)
     image_back = models.CharField(max_length=300)
     types = models.ManyToManyField(PokemonType, related_name='pokemontype', blank=True)
+    url = models.CharField(max_length=800)
     def __str__(self):
         return f'{self.name}'

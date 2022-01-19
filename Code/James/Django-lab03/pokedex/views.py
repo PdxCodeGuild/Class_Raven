@@ -3,17 +3,16 @@ from django.shortcuts import (
     get_object_or_404, 
     redirect
 )
-from django.urls import reverse
+
 
 from .models import Pokemon, PokemonType
 
 # Create your views here.
 def home(request):
     pokemon = Pokemon.objects.all().order_by('number')
-    pokemontype = PokemonType.objects.all()
-    print(pokemontype)
+    pokemon_type = PokemonType.objects.all()
     context = {
         'pokemon': pokemon,
-        'pokemontype': pokemontype
+        'pokemon_type': pokemon_type,
     }
     return render(request, 'pokedex/index.html', context)
