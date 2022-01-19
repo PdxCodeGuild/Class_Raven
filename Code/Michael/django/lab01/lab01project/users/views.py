@@ -29,7 +29,7 @@ def register(request):
         )
 
         django_login(request, new_user)
-        return HttpResponseRedirect(reverse('assistant:home'))
+        return HttpResponseRedirect(reverse('assistant:index'))
 
 
 def login(request):
@@ -48,11 +48,11 @@ def login(request):
             return render(request, 'users/login.html', {'error': 'Invalid Username or Password!'})
 
         django_login(request, user)
-        return HttpResponseRedirect(reverse('assistant:home'))
+        return HttpResponseRedirect(reverse('assistant:index'))
 
 def logout(request):
     django_logout(request)
-    return HttpResponseRedirect(reverse('assistant:home'))
+    return HttpResponseRedirect(reverse('assistant:index'))
 
 def account(request):
     if request.method == 'GET':

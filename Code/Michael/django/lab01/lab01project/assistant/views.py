@@ -1,12 +1,11 @@
-from urllib import request
 from django.shortcuts import render, get_list_or_404, get_object_or_404, reverse
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.views.generic.base import TemplateView
 from users.models import CustomUser as User
+from .models import TodoList, Task
+from django.contrib.auth.decorators import login_required
 
-from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import TodoList, Task, Comment, Tag, Attachment
+
+
 
 # Create your views here.
 
@@ -35,6 +34,7 @@ def create_task(request, todolist_id):
         return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
     return render(request, 'assistant/create_task.html', {'todolist': todolist})
 
+@login_required
 def create_todolist(request):
     if request.method == "POST":
         todolist = TodoList(title=request.POST['title'], description=request.POST['description'])
