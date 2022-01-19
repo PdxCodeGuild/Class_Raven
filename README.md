@@ -85,7 +85,7 @@ Weeks 12, 13, 14, 15: Django
   </ul>
 </details>
 
-Capstone proposals due Friday, 2022-01-21
+### Capstone proposals due Friday, 2022-01-21
 
 ## Submitting your work
 
