@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+    <h2 id='main-title'> New blog post</h2>
+
+
+    <div class="col-12">
+        <form action="{% url 'post_app:create' %}" method= "POST">
+
+            {% csrf_token %}
+            {{form}}
+
+            <button class="btn btn-dark" style='margin-left: 30px; margin-top: 10px;'  type='submit'>Create Blog Post</button>
+        </form>
+
+
+    </div>
+
+
+
+
+
+
+
+    
+{% endblock content %}
