@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+<h1 class="heading">Welcome to BlogIt!</h1>
+
+</div>
+<br/>
+<h2 class="paragraph">Profile Page</h2>
+<h3>{{ user.first_name }} {{ user.last_name }}</h3>
+<br/>
+
+<ul class="paragraph">
+{% for post in object_list %}
+   <li class='blog-article'> 
+       <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+
+       <ul class="item">
+           <li><small>Created: {{ post.date_created }} | 
+                       <a href="{% url 'update_post' post.pk %}">Edit</a> | 
+                       <a href="{% url 'delete_post' post.pk %}">Delete</a>
+                    </small>
+            </li>
+       </ul>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
