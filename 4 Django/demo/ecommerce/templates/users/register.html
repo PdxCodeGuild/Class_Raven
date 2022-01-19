@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="h1 text-center">Register</h1>
+
+
+    <form action="{% url 'users_app:register' %}" method='POST' class='d-flex flex-column align-items-center gap-3'>
+
+        <!-- {{form}} will render the entire form -->
+        <fieldset>
+            <label for="id_username">{{form.username.label}}</label>
+            {{form.username}}
+        </fieldset>
+        
+        <fieldset>
+            <label for="id_password">{{form.password.label}}</label>
+            {{form.password}}
+        </fieldset>
+        
+        {% csrf_token %}
+
+        <button type='submit' class='btn btn-success'>Register</button>
+    </form>
+
+{% endblock content %}
