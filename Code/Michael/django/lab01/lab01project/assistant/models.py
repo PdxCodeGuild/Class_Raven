@@ -4,7 +4,10 @@ from users.models import CustomUser
 # Create your models here.
 class TodoList(models.Model):
     name = models.CharField(max_length=250)
+    description = models.CharField(max_length=250)
     owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True)
+    icon = models.CharField(max_length=250, default="fas fa-list")
+    color = models.CharField(max_length=250, default="bg-primary")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

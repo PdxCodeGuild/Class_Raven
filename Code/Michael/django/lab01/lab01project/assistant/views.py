@@ -37,9 +37,9 @@ def create_task(request, todolist_id):
 @login_required
 def create_todolist(request):
     if request.method == "POST":
-        todolist = TodoList(title=request.POST['title'], description=request.POST['description'])
+        todolist = TodoList(name=request.POST['name'], description=request.POST['description'],color=request.POST['color'],icon=request.POST['icon'], owner=request.user)
         todolist.save()
-        return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
+        #return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
     return render(request, 'assistant/create_todolist.html')
 
 def edit_todolist(request, todolist_id):
@@ -51,7 +51,18 @@ def edit_todolist(request, todolist_id):
         return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
     return render(request, 'assistant/edit_todolist.html', {'todolist': todolist})
 
+# Deletes a todo list
 def delete_todolist(request, todolist_id):
     todolist = get_object_or_404(TodoList, pk=todolist_id)
     todolist.delete()
-    return HttpResponseRedirect(reverse('assistant:index'))
+    return HttpResponseRedirect(reverse('assistant:view_all_todolists'))
+
+def view_todolist(request, todolist_id):
+    todolist = get_object_or_404(TodoList, pk=todolist_id)
+    return render(request, 'assistant/view_todolist.html', {'todolist': todolist})
+
+# Shows all todo lists
+def view_all_todolists(request):
+    todolists = TodoList.objects.all()
+    print(todolists)
+    return render(request, 'assistant/todo_list.html', {'todolists': todolists})
