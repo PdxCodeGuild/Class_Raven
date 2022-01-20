@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <title>Vue Intro</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>{{ headerText }}</h1>
+
+
+        <h2>
+            <button v-on:click="increaseCount">++</button>
+            <button v-on:click="decreaseCount">- -</button>
+
+            The number {{ counter }} is
+
+            <span v-if="counter % 2 === 0">Even</span>
+            <span v-if="counter % 2 === 1">Odd</span>
+        </h2>
+
+        <div>
+            <button v-on:click="generateRandomNumber">Random!</button><br />
+            {{ randomNumber }} is
+
+            <span v-if="randomNumber < 5">less than 5</span>
+            <span v-else-if="randomNumber == 5">equal to 5</span>
+            <span v-else>greater than 5</span>
+            <div>
+                <h4>Previous numbers:</h4>
+                <ul>
+                    <!-- loop through the generatedNumbers array and display each in an <li> -->
+                    <li v-for="number in generatedNumbers">{{number}}</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <pre>{{userData}}</pre>
+
+    </div>
+
+
+    <script>
+
+        const app = new Vue({
+            // define the app's container element
+            el: '#app',
+            // data is the app's state
+            data: {
+                headerText: 'Welcome to Vue JS!!!',
+                counter: 0,
+                randomNumber: null,
+                generatedNumbers: [],
+                userData: null
+            },
+            methods: {
+                increaseCount: function () {
+                    this.counter++;
+                },
+                decreaseCount: function () {
+                    if (this.counter > 0) {
+                        this.counter--;
+                    }
+                },
+                generateRandomNumber: function () {
+                    this.generatedNumbers.push(this.randomNumber)
+
+                    // change the Vue component's randomNumber
+                    this.randomNumber = Math.round(1 + Math.random() * 10)
+                }
+            },
+            // lifecycle methods
+            created: function () {
+                // run this method when the app is created
+
+                // set the randomNumber for the first time
+                this.randomNumber = Math.round(1 + Math.random() * 10)
+
+                // when the app is created, call an api to get some data
+                fetch('https://jsonplaceholder.typicode.com/users/1')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.userData = data
+                    })
+                    .catch(error => console.log(error))
+            },
+            updated: function () {
+                // run this method whenever the component's data changes
+                console.log('The app was updated!');
+            }
+        })
+        // console.log(app)
+    </script>
+</body>
+
+</html>
