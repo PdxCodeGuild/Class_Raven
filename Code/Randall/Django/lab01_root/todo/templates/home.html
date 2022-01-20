@@ -9,7 +9,7 @@
    {% else %}
    <tr>
       <td><a>{{ things.item }}</a></td>
-   <td><a>Time Goes Here</a></td>
+   <td><a>Date added: {{ things.time_created }}</a></td>
  
       <td>
          <a href="{% url 'delete' things.id %}"> Delete</a>
