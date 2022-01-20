@@ -1,6 +1,7 @@
 '''ATM Lab14
 By Philip Bartoo
 10/25/21
+Updated 1/16/22
 '''
 
 class ATM:
@@ -12,8 +13,11 @@ class ATM:
         return self.balance
     
     def deposit(self, amount):
-        self.balance += amount
-        return self.balance
+        if amount < 0:
+            return print("Not Allowed")
+        else:
+            self.balance += amount
+            return self.balance
     
     def check_withdrawal(self, amount):
         if self.balance - amount > 0:
@@ -81,4 +85,3 @@ while True:
 
     else:
         print('Command not recognized')
-    
