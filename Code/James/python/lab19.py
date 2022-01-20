@@ -71,7 +71,7 @@ while play:
      #added these three lines to check if answers were correct and they are.
     
     # print(trivia.info)
-    # print(trivia.current_question, html.unescape(trivia.info[counter]['question']))  
+    print(trivia.current_question, html.unescape(trivia.info[counter]['question']))  
     # print(trivia.current_question, html.unescape(trivia.info[counter]['correct_answer']))
     
     user_answer = input('Enter True or False: ').capitalize()
