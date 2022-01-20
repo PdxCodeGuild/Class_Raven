@@ -1,7 +1,4 @@
 from django.db import models
-from django.db.models.fields import BooleanField, CharField, DateTimeField, TextField
-from django.db.models.fields.related import ForeignKey
-
 from users_handler.models import UserInfo
 
 # Create your models here.
@@ -19,3 +16,6 @@ class BlogPost(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
 
     date_edited = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return self.title

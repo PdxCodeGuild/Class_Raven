@@ -32,10 +32,12 @@
                 <a class="navbar-item" href="{% url 'blog:index' %}">
                     Home
                 </a>
-
-                <a class="navbar-item" href="{% url 'users_handler:profile' %}">
+                {% if request.user.is_authenticated %}
+                    <a class="navbar-item" href="{% url 'users_handler:profile' %}">
                     Account
                 </a>
+                {% endif %}
+                
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
@@ -43,9 +45,11 @@
                     </a>
 
                     <div class="navbar-dropdown">
+                        {% if request.user.is_authenticated %}
                         <a class="navbar-item" href="{% url 'blog:create' %}">
-                            Post
+                            Create
                         </a>
+                        {% endif %}
                         <a class="navbar-item" href="{% url 'blog:search' %}">
                             Search
                         </a>
@@ -63,19 +67,24 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'users_handler:logout' %}" class="button is-warning">
+                            Logout
+                        </a>
+                        {% else %}
                         <a class="button is-primary" href="{% url 'users_handler:register' %}">
                             <strong>Register</strong>
                         </a>
                         <a class="button is-light" href="{% url 'users_handler:login' %}">
                             Log in
                         </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    
     <!-- MAIN BODY -->
     <div class="columns">
         <div class="column is-one-fifth"></div>
@@ -91,7 +100,7 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Hunter Hang Out</strong> by <a href="#">Christerpher Hunter</a>. 
+                <strong>Hunter Hang Out</strong> by <a href="#">Christerpher Hunter</a>.
         </div>
     </footer>
 </body>

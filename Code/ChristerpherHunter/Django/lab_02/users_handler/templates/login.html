@@ -28,7 +28,15 @@
                 </span>
             </p>
         </div>
-        
+
+        {% if errors %}
+        <div class="notification is-danger">
+            {{errors}}
+            
+            <button class="delete"></button>
+        </div>
+        {% endif %}
+
         <div class="field">
             <button type="submit" class="button is-success">
                 Login

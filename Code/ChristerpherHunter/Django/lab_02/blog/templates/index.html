@@ -16,15 +16,17 @@
                 </figure>
             </div>
             <div class="media-content">
-                <p class="title is-4">John Smith</p>
-                <p class="subtitle is-6">@johnsmith</p>
+                <p class="title is-4">{{post.user}}</p>
+                <p class="subtitle is-6">{{post.title}}</p>
             </div>
         </div>
 
         <div class="content">
-            {{post}}
+            {{post.body}}
             <br>
-            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            <br>
+            <hr>
+            <time datetime="2016-1-1">{{post.date_created}}</time>
         </div>
     </div>
 </div>

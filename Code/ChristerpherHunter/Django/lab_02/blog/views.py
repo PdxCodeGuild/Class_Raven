@@ -1,3 +1,4 @@
+from hashlib import new
 from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from blog.models import BlogPost
@@ -8,18 +9,26 @@ from django.urls import reverse
 
 def index(request):
 
-    posts = [
-        ("Hey I think that meeting got scheduled for the wrong time because my availability on Calendly ends at 2pm. I canceled that meeting but I have you in my  calendar for 4:30PST tomorrow. We'll use the class call."),
-        ("My new OS vscode did not sync my key bindings.  Did you happen to copy that editor.emmet.action.wrapWithAbbreviation json config snippet I showed you?")
-    ]
-    
-    return render(request, "index.html", {"posts": posts})
+    all_posts = BlogPost.objects.all()
+    return render(request, "index.html", {"posts": all_posts})
 
 
-# @login_required
+@login_required
 def create(request):
     """form for creating a blog post"""
+    
+    if request.method == 'GET':
+        return render(request, "create.html")
+    
+    form = request.POST
+    
+    new_post = BlogPost()
+    new_post.user = request.user
+    new_post.title = form["title"]
+    new_post.body = form["content"]
+    new_post.save()
 
+    return redirect(reverse("users_handler:profile"))
 
 def search(request):
     """form presented to search for a blog"""
