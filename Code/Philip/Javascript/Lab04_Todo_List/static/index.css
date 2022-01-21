@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
 
+body{
+  background-image: linear-gradient(90deg, #3c30e6, #d36dd3);
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 header {
   background: slategray;
   padding: 30px 40px;
@@ -8,47 +14,80 @@ header {
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
   margin-bottom: 15px;;
 }
 
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 8px 8px 8px 20px;
-  list-style-type: none;
-  background: rgba(105, 90, 205, 0.096);
-  font-size: 18px;
-  transition: 0.2s;
-  margin: 3%;
+.honeydo_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-align {
+  justify-content: center ;
+}
+
+
+.honeydo_list{
+  list-style: none;
+}
+
+.honeydo-title {
+  text-align: center;
+}
+
+.honeydo{
+  align-items: center;
+  margin: 20px auto;
+  background-color: slateblue;
   border-radius: 20px;
-  border-color:slateblue;
-  border-width:.2em;
-  border-style:solid;
-  font-family: 'Ubuntu', sans-serif;
+  border-color: white;
+  border-style: solid;
+  border-width: .1em;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+
 }
 
-ul li:hover {
-  background: rgba(105, 90, 205, 0.288)
+.honeydo li {
+  flex: 1;
 }
 
-.completed {
-    text-decoration: line-through;
-    border-color:#555;
-  background: rgb(145, 163, 182);
-  color: #fff;
+.complete {
+  text-align: center;
+  font-size: xx-large;
 }
 
-.fas {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px;
+.complete_btn, 
+.trash_btn{
+  padding: 3%;
+  border: none;
+  border-radius:50%;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-.fas:hover {
+.complete_btn{
   border-radius: 50%;
-    background-color: rgba(75, 109, 139, 0.445);
-  color: white;
 }
 
+.fa-trash,
+.fa-check{
+  pointer-events: none;
+}
+
+.completedItem{
+   opacity: 0.7;
+   list-style: none;
+   text-decoration: line-through;
+   font-size:medium;
+   text-align: left;
+}
+
+
+
+
+.input-align {
+  justify-content: center ;
+}
