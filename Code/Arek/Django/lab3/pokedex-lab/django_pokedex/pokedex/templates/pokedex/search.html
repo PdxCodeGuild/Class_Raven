@@ -1,0 +1,25 @@
+{% extends 'pokedex/base.html' %}
+
+{% block content %}
+    {% for item in choices %}
+        <div class='container'>
+            <div class='row'>
+                    <div id='poke-div' class="center-align ">
+                        <p>
+                            Number #{{ item.number }}:
+                            {{ item.name }}
+                        </p>
+                        <img src="{{ item.image_front }}">
+                        <img src="{{ item.image_back }}">
+                        <p>
+                            Description: <a href="{{ item.description }}">Click Here</a>
+                        </p>
+                    </div>
+
+            </div>
+
+        </div>
+    {% endfor %}
+
+
+{% endblock content %}
