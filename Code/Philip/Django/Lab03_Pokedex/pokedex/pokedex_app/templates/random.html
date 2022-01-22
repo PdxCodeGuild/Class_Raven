@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">The Oracle Has Spoken</h1>
+        <p class="lead text-muted">Your spirit Pokemon is:</p>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <small class="text-muted card-body">{{name.number}}</small>
+                    <div class="mb-4 flip-card">
+                        <div class="mb-4 flip-card-inner">
+                            <div class="card-img-top flip-card-front">
+                                <img id="myImage" class="card-img-top"
+                                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{name.number}}.png"
+                                    alt="Card image cap" />
+                            </div>
+                            <div class="card-img-top flip-card-back">
+                                <img id="myImage" class="card-img-top"
+                                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/{{name.number}}.png"
+                                    ; alt="Card image cap" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text card-title">{{name.name}}</p>
+                        <p class="card-text">Height: {{name.height}}</p>
+                        <p class="card-text">Weight: {{name.weight}}</p>
+                        <p class="card-text">Skillz:</p>
+                        <ul>
+                            {% for i in name.types.all %}
+                            <li>{{ i.name }}</li>
+                            {% endfor %}
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <a href="{% url 'home' %}" class="btn btn-secondary my-2">Back</a>
+</div>
+
+{% endblock content %}
