@@ -6,31 +6,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ecfb2d94ee.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-
     </script>
-    
+    <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-
+    <!-- Title -->
     <title>AXIOS API</title>
 
 </head>
 <!-- Body -->
 <body>
+    <div class="container">
+        <h1 class="title">Quote Box</h1>
+        <div class="text-field">
+        <h2>Search</h2><i class="fa fa-search"></i>
+        <input type="text" id="search" placeholder="Search for Quotes..">
+    </div>
+    <div class= "arrows-page-div">
+        <div>
+            <i class="fas fa-chevron-circle-left" id="click-left"></i>
+        </div>    
+            <h4 class="page-number">Page x of x</h4>
+            <div>
+                <i class="fas fa-chevron-circle-right" id="click-right"></i>
+            </div>
+    </div>
     <!-- Initiate Button -->
     <div class="button-div">
             <button id="submit-btn">Get Quote</button>
     </div>
+</div>
     <div>
         <!-- Result -->
-        <h1 class="result"></h1>
+       <h1 class="result"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i></h1>
     </div>
     <!-- AXIOS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
     <!-- Secrets "before main js file" -->
     <script src="secrets.js"></script>
     <!-- JavaScript -->
-    <script src="index.js"></script>
-    
+    <script src="index.js" defer></script>
 </body>
 </html>
+
