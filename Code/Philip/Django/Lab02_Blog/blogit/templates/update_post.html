@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Edit blog post{% endblock %}
+{% block content %}
+
+<h1 class='details'>Update Post</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 form-group blog-entry">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-secondary">Update</button>   <a href="{% url 'profile' %}" class="btn btn-secondary">Back</a>
+        </div>
+        <div class="col=sm-2"></div>
+    </div>
+</div>
+
+
+
+{% endblock %}

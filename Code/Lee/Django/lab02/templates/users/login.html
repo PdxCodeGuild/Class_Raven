@@ -1,0 +1,25 @@
+
+  
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+{% endif %}
+
+    <form action="{% url 'users:login' %}" method='POST' class='d-flex flex-column align-items-center mt-5'>
+        <fieldset>
+            <legend class="text-center"> Log in</legend>
+            
+            <label for="id_username">{{form.username.label}}</label>
+            {{form.username}}
+            <label for="id_password">{{form.password.label}}</label>
+            {{form.password}}
+        </fieldset>
+        {% csrf_token %}
+
+        <button type='submit' class='btn btn-primary mt-3'>Log in</button>
+    </form>
+
+{% endblock content %}
