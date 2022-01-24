@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+    <h1 class="h1">Register for the Blog</h1>
+
+
+    <form action="{% url 'users:register' %}" method='POST' class='d-flex flex-column align-items-center'>
+
+        {{form}}
+        
+        {% csrf_token %}
+
+        <button type='submit' class='btn btn-dark my-3'>Register</button>
+    </form>
+
+{% endblock content %}
+

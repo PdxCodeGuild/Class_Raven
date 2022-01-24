@@ -19,7 +19,7 @@ class Command(BaseCommand):
         # create a database entry for each product
         for product in products:
             title = product['title']
-            price = int(float(product['price']) * 100)
+            price = float(product['price'])
             description = product['description']
             category = product['category']
             rating = float(product['rating']['rate'])
