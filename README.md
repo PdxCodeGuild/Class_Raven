@@ -4,18 +4,18 @@
 
 Weeks 1, 2, 3, 4, 5: Python
 
-**Weeks 6, 7, 8, 9: HTML/CSS/Flask**
+Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
 Weeks 10, 11: Javascript
 
 Weeks 12, 13, 14, 15: Django
 
-Weeks 16, 17, 18: Capstone project
+**Weeks 16, 17, 18: Capstone project**
 
 ### Scheduled Holidays (no class)
 - **Nov 11** - Veterans Day
 - **Nov 25 - 26** - Thanksgiving
-- **Dec 24** - Christmas Eve
+- **Dec 23 & 24** - Christmas Eve
 - **Dec 31** - New Years Eve
 
 ### Assigned Labs:
@@ -55,7 +55,7 @@ Weeks 16, 17, 18: Capstone project
   </ul>
 </details>
 
-<details open>
+<details>
   <summary>HTML/CSS/Flask</summary>
   <ul>
     <li>Lab 01 - Bio</li>
@@ -63,8 +63,29 @@ Weeks 16, 17, 18: Capstone project
     <li>Lab 03 - Company Page</li>
     <li>Lab 04 - Personal Portfolio</li>
     <li>Lab 05 - Burrito Form</li>
+    <li>Lab 06 - Flask Redo</li>
   </ul>
 </details>
+
+<details>
+  <summary>Javascript</summary>
+  <ul>
+    <li>Lab 01-03 - JS Redo</li>
+    <li>Lab 04 - To Do List</li>
+    <li>Lab 05 - Quote API</li>
+  </ul>
+</details>
+
+<details open>
+  <summary>Django</summary>
+  <ul>
+    <li>Lab 01 - To Do List</li>
+    <li>Lab 02 - Blog</li>
+    <li>Lab 03 - Pokedex</li>
+  </ul>
+</details>
+
+### Capstone proposals due Friday, 2022-01-21
 
 ## Submitting your work
 
@@ -99,8 +120,6 @@ To emulate a more professional Git workflow, we're going to start creating new b
 - `git add <FILENAME>` to add a specific file or `git add .` to add everything in the current dicrectory
   
 - `git commit -m "your commit message"` to commit your work
-
-- Before pushing your new branch, be sure to check the master branch for any updates. Anything changes that were merged into the master branch while you were working on your branch will need to be pulled and merged into your branch.
 
 - A remote branch will need to be created for each new local branch. Git will usually display the proper command to do this when a new branch is pushed for the first time.
 
@@ -173,6 +192,52 @@ Corrections will be made only to that particular branch.
 
 
 ## Additional Resources
+
+
+<details>
+  <summary>Django</summary>
+  <ul>
+    <li><a href="https://github.com/perennialAutodidact/django_guides/blob/master/custom_user_model.md">Guide to Extend Django's User Model</a> - by Keegan Good</li>
+    <li><a href="https://sodocumentation.net/django/topic/1235/querysets">Explanation of QuerySets</a></li>
+    <li><a href="https://medium.com/shecodeafrica/understanding-the-mvc-pattern-in-django-edda05b9f43f">Understanding MVC/MTV architecture in Django</a></li>
+    <li><a href="https://docs.djangoproject.com/en/4.0/topics/db/queries/#complex-lookups-with-q-objects">Complex Database Lookups with Q Objects</a></li>
+
+  </ul>
+</details>
+
+<details>
+  <summary>SQL</summary>
+  <ul>
+    <li><a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
+    <li><a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a></li>
+    <li><a href="https://www.w3schools.com/sql/">W3 Schools</a> - SQL Tutorial</li>
+    <li><a href="https://learnsql.com/blog/ways-to-practice-sql-online/">SQL Practice Resources</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>HTML/CSS/JS Online IDEs</summary>
+  <ul>
+    <li><a href="https://codepen.io">Code Pen</a></li>
+    <li><a href="https://replit.com">Replit</a></li>
+    <li><a href="https://codesandbox.io">Code Sandbox</a></li>
+    <li><a href="https://jsfiddle.net">JS Fiddle</a></li>
+  </ul>
+</details>
+
+
+<details>
+  <summary>Useful VS Code Extensions</summary>
+  <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=WyattFerguson.jinja2-snippet-kit">Jinja2 Snippet Kit</a>Jinja2 snippets for cool attractive people to use in your HTML templates.</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a>Makes code blocks and nested expressions easier to read</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a>GUI to make and manage HTTP requests</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All-In-One</a>Quickly create markdown tables of contents and other useful markdown features</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets">Javascript ES6 Snippets</a>Useful snippets to streamline Javascript development</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a>Compare differences between branches and easily manage remote repositories</li>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">LiveServer</a>Serve HTML/CSS/Javascript projects from VS Code</li>
+  </ul>
+</details>
 
 <details>
   <summary>SEO & Accessibility</summary>

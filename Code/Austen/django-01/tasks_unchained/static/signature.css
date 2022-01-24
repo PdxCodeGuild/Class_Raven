@@ -1,0 +1,37 @@
+body {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: consolas;
+}
+ul > li {
+  list-style: none;
+}
+a:any-link {
+  color: darkorange;
+  text-decoration: none;
+}
+
+button {
+  color: darkorange;
+  background-color: black;
+  margin-top: 1rem;
+}
+
+.task {
+  color: firebrick;
+  font-size: large;
+}
+
+/* ? Don't work?? */
+.form {
+  text-align: start;
+  margin: 2rem;
+}
+label,
+input {
+  margin: 0 1rem 0;
+}
+.complete {
+  text-decoration: line-through;
+}

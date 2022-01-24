@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display the data</title>
+    <style>
+        h1 {
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Values passed to this template are available on the template -->
+    <h1>{{ text }}</h1>
+
+    
+    <!-- Button that will trigger the index() view function -->
+    <a href="{{ url_for('index') }}">Back</a>
+
+
+</body>
+</html>

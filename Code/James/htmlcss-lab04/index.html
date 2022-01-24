@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./static/css/normalize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./static/css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbarResponsive"
+    data-bs-offset="50"
+  >
+    <!-- start home section -->
+    <div id="home">
+      <!-- navigation -->
+      <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="full-screen-video-container">
+      <video autoplay muted loop id="myVideo">
+        <source
+          src="./static/screenshots/pexels-cottonbro-9665235.mp4"
+          type="video/mp4"
+        />
+      </video>
+    
+    </div>
+      
+    
+    <!-- end of navigation -->
+    </div>
+    <!-- start landing page section -->
+    <div class="container-fluid-md">
+      <div class="caption text-center">
+        <h1 id="fade-in-text">
+          Hello, I'm <span>James</span>.<br />
+          I'm a Software Developer.
+        </h1>
+        <a id="fade-in-text" class="btn outline-light btn-lg" href="#portfolio"
+          >View my work</a
+        >
+      </div>
+    </div>
+    <!-- end landing page section -->
+
+    <!-- end home section -->
+
+    <!-- start about section -->
+    <div id="about" class="col-12 narrow text-center">
+      <!-- start jumbotron -->
+      <div class="jumbotron">
+        <div class="narrow">
+          <div class="col-12">
+            <h3 id="slide-left" class="heading">About</h3>
+            <div class="heading-underline"></div>
+          </div>
+
+          <div class="row text-center">
+            <div class="col-md-4">
+              <div class="about">
+                <i
+                  class="fas fa-users fa-4x"
+                  data-fa-transform="shrink-3 up-5"
+                ></i>
+                <h3>Team player</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus, harum.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="about">
+                <i
+                  class="fas fa-graduation-cap fa-4x"
+                  data-fa-transform="shrink-3 up-5"
+                ></i>
+                <h3>Love learning</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus, harum.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="about">
+                <i
+                  class="fas fa-puzzle-piece fa-4x"
+                  data-fa-transform="shrink-3 up-5"
+                ></i>
+                <h3>Love solving puzzles</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus, harum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end of row -->
+        </div>
+        <!-- end narrow -->
+      </div>
+      <!-- end jumbotron  -->
+    </div>
+    <!-- end about section -->
+
+    <!-- start portfolio section -->
+    <div id="portfolio">
+      <div class="col-12 text-center">
+        <h3 class="heading mt-4">Portfolio</h3>
+        <div class="heading-underline"></div>
+      </div>
+
+      <div class="col-12 text-center project">
+        <h3>Project</h3>
+        <div class="project">
+          <i class="fas fa-code fa-3x"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end portfolio section -->
+
+    <div id="btn-chevron" class="row text-center">
+      <div class="col-12">
+        <button type="button" class="btn">
+          <i class="bx bxs-chevrons-up bx-lg"></i>
+        </button>
+      </div>
+    </div>
+    <!-- start contact section -->
+
+    <div id="contact" class="">
+      <footer>
+        <div class="row justify-content-center">
+          <div class="col-md-5 text-center">
+            <div class="col-12 text-center">
+              <h3 class="heading">Contact</h3>
+              <div class="underline-contact"></div>
+              <div class="quest pt-5">
+                <p>Have a question or want to work together?</p>
+              </div>
+            </div>
+
+            <div class="w-50 mx-auto">
+              <form id="form-group">
+                <div id="frm" class="form-group my-1">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="form-group"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div id="frm" class="form-group my-1">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="form-group"
+                    placeholder="email@example.com"
+                  />
+                </div>
+
+                <div id="frm" class="form-group my-1">
+                  <textarea
+                    class="form-control"
+                    id="form-group"
+                    placeholder="Enter message here"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <button
+                  id="frm-btn"
+                  type="submit"
+                  class="btn btn-primary my-2 mx-auto"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            <div class="icon pt-5">
+              <a href="#" class="bx bxl-facebook bx-fade-up-hover bx-lg"></a>
+              <a href="#" class="bx bxl-github bx-fade-up-hover bx-lg"></a>
+              <a href="#" class="bx bxl-twitter bx-fade-up-hover bx-lg"></a>
+              <a href="#" class="bx bxl-linkedin bx-fade-up-hover bx-lg"></a>
+            </div>
+          </div>
+          <hr class="socket" />
+          James Johnson&copy; 2021
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

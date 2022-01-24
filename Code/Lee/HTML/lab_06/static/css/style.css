@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Questrial&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.h1, .h2, .h3, .display-4 {
+    font-family: 'Questrial', sans-serif;
+}

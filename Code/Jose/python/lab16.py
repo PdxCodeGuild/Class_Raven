@@ -27,13 +27,28 @@ def binary_search(nums, value):
             return mid
     return None
 
-def bubblesort(nums):
-    for i in range(len(nums)):
-        for x in range(len(nums) - 1 - i):    # i is used to prevent the bubblesort from looping over index which have been sorted already.
-            if nums[x] > nums[x + 1]:            # range 0 to 8 minus the last index in the list AND i.
-                nums[x], nums[x + 1] = nums[x + 1], nums[x]    # The new index are swapped in place of each other.
-    return nums
+#def bubblesort(nums):
+    #for i in range(len(nums)):
+        #for x in range(len(nums) - 1 - i):    # i is used to prevent the bubblesort from looping over index which have been sorted already.
+            #if nums[x] > nums[x + 1]:            # range 0 to 8 minus the last index in the list AND i.
+                #nums[x], nums[x + 1] = nums[x + 1], nums[x]    # The new index are swapped in place of each other.
+    #return nums
 # index 0  1  2  3  4  5  6  7
+
+def bubblesort(nums):
+    length = len(nums)
+
+    while True:
+        swapped = False
+
+        for i in range(length - 1):    # Counter measure to not go out of index
+            if nums[i + 1] < nums [i]:
+                nums[i + 1], nums[i] = nums[i], nums[i + 1]
+                swapped = True
+        
+        if swapped == False:
+            return nums
+
 nums = [8, 7, 6, 5, 4, 3, 2, 1]
 index = bubblesort(nums)
 print(nums)

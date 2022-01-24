@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav aria-label="Page navigation example" class="mt-5">
+    <ul class="pagination justify-content-center align-items-center ">
+        <li class="
+            d-flex align-items-center page-item 
+            {% if not products_page.has_previous %} disabled {% endif %}
+        ">
+            <a class="page-link" href="?page_num=1" href="#" tabindex="-1">
+                &laquo; First
+            </a>
+            <a class="page-link"
+                {% if products_page.has_previous %}
+                    href="?page_num={{products_page.previous_page_number}}"
+                {% endif %}
+            >
+                Previous
+            </a>
+        </li>
+
+        <li class="page-item"><a class="page-link" href="#">{{products_page.number}}</a></li>
+        <li class="
+            d-flex align-items-center page-item 
+            {% if not products_page.has_next %} disabled {% endif %}">
+
+            <a 
+                class="page-item page-link"
+                {% if products_page.has_next %}
+                    href="?page_num={{products_page.next_page_number}}"
+                {% endif %}
+            >
+                Next
+            </a>
+            <a class="page-link" href="?page_num={{products_page.paginator.num_pages}}" tabindex="-1">
+                Last &raquo;
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
+{% include 'shop/_product-filters.html' %}
+
+
+{% for product in products_page %}
+<div class="col-12 col-md-6 col-lg-4">
+    <div class="card mt-4 shadow">
+        <img src="{{product.image_url}}" alt="{{image.title}}" class="card-img-top mx-auto my-4" style='width:10rem;'>
+
+        <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="d-flex">
+                Rated {{product.rating}} / 5 by {{product.rating_count}} users
+            </p>
+
+            <h3>${{product.price}}</h3>
+
+            <p class="card-text">
+                {{product.description|truncatewords:20}}
+            </p>
+
+            <p class="card-text">
+                {% for category in product.categories.all %}
+            <div class="badge bg-info p-2">
+                {{category|title}}
+            </div>
+            {% endfor %}
+            </p>
+        </div>
+
+        <div class="card-footer bg-secondary d-flex justify-content-end">
+            <a href="{% url 'shop_app:add_to_cart' product.id %}" class="link-light h4 my-auto">
+                <i class="fas fa-cart-plus"></i>
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endfor %}
+
+
+
+{% endblock content %}
