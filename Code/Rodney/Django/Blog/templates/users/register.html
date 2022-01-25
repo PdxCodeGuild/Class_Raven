@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <h1 id="main-title">
+
+        MyBlogz Registration
+    </h1>
+ 
+        <form action="{% url 'users_app:register' %}" method="POST" class="user-registration">
+    
+
+            <fieldset>
+    
+                <label for="id_username"> {{form.username.label}}</label>
+                {{form.username}}
+    
+            </fieldset>
+    
+            <fieldset>
+    
+                <label for="id_password"> {{form.password.label}}</label>
+                {{form.password}}
+    
+            </fieldset>
+        
+            {% csrf_token %}
+    
+            <button type="submit" class="btn btn-light register-button"> Register </button>
+        </form>
+    
+
+
+
+    
+{% endblock content %}
