@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  transition: ease-in-out;
+}
+
+h1 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+  color: black;
+}
+
+#input_field {
+  display: flex;
+  justify-content: start;
+  border-radius: 25px;
+  border-style: solid;
+  color: black;
+  text-indent: 0.8rem;
+}
+
+/* .register_page{
+  background-image: url(/static/images/pics/sand.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+} */
+
+.hero-image{
+  background-image: url(/static/images/pics/create.jpg) no-repeat center; 
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  width: 100%;
+}
