@@ -8,23 +8,23 @@ A non-admin user will be able to log in and view the keys or badges that are ass
 
 ## Data Model
 
-There will be at least 3 data tables. One for the master key list, users, and key issuing. The key issuing table will be the joining table between the other table with a one to many relationship
+There will be at least 3 data tables. One for the master key list, users, and key issuing. The key issuing table will use foreign keys to tie together data from the other tables.
 
 | 1. key_list |
-- key_id       
-- key_for      
-- available_status
+- key_id = models.CharField(max_length = 100)
+- key_for = models.CharField(max_length = 100)   
+- available_status = models.BooleanField()
               
 | 2. key_issue |
-- key_id
-- key_user
-- issue_date
-- user_sign_date
-- return_due_date
+- key_id = models.ForeignKey(key_list, on_delete = models.CASCADE)
+- key_user = models.ForeignKey(key_list, on_delete = models.CASCADE)
+- issue_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+- user_sign_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+- return_due_date = models.DateTimeField(auto_now=False, auto_now_add=False)
 
 | 3. key-user |
-- user_id
-- user_name|
+- user_id = models.CharField(max_length= 100)
+- user_name = models.CharField(max_length= 100)
 
 ## Schedule
 
