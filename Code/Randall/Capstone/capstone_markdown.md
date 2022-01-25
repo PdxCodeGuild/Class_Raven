@@ -8,7 +8,23 @@ A non-admin user will be able to log in and view the keys or badges that are ass
 
 ## Data Model
 
-There will be at least 3 data tables. One for the master key list, users, and key issuing/return. 
+There will be at least 3 data tables. One for the master key list, users, and key issuing. The key issuing table will be the joining table between the other table with a one to many relationship
+
+| 1. key_list |
+- key_id       
+- key_for      
+- available_status
+              
+| 2. key_issue |
+- key_id
+- key_user
+- issue_date
+- user_sign_date
+- return_due_date
+
+| 3. key-user |
+- user_id
+- user_name|
 
 ## Schedule
 
