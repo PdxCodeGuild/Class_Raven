@@ -17,12 +17,12 @@ There will be at least 3 data tables. One for the master key list, users, and ke
               
 | 2. key_issue |
 - key_id = models.ForeignKey(key_list, on_delete = models.CASCADE)
-- key_user = models.ForeignKey(key_list, on_delete = models.CASCADE)
+- key_user = models.ForeignKey(key_user, on_delete = models.CASCADE)
 - issue_date = models.DateTimeField(auto_now=False, auto_now_add=False)
 - user_sign_date = models.DateTimeField(auto_now=False, auto_now_add=False)
 - return_due_date = models.DateTimeField(auto_now=False, auto_now_add=False)
 
-| 3. key-user |
+| 3. key_user |
 - user_id = models.CharField(max_length= 100)
 - user_name = models.CharField(max_length= 100)
 
