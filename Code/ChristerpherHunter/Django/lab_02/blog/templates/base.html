@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9e458748cc.js" crossorigin="anonymous"></script>
+    <script src="{% static 'index.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+    <title>Hunter Hang Out</title>
+</head>
+
+<body>
+    <!-- UNIVERSAL HEADER -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://christerpher.github.io">
+                <img src="../static/img/Logo.png">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="{% url 'blog:index' %}">
+                    Home
+                </a>
+                {% if request.user.is_authenticated %}
+                    <a class="navbar-item" href="{% url 'users_handler:profile' %}">
+                    Account
+                </a>
+                {% endif %}
+                
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        {% if request.user.is_authenticated %}
+                        <a class="navbar-item" href="{% url 'blog:create' %}">
+                            Create
+                        </a>
+                        {% endif %}
+                        <a class="navbar-item" href="{% url 'blog:search' %}">
+                            Search
+                        </a>
+                        <a class="navbar-item" href="{% url 'blog:edit' 1 %}">
+                            Edit
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="{% url 'blog:delete' 1 %}">
+                            Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'users_handler:logout' %}" class="button is-warning">
+                            Logout
+                        </a>
+                        {% else %}
+                        <a class="button is-primary" href="{% url 'users_handler:register' %}">
+                            <strong>Register</strong>
+                        </a>
+                        <a class="button is-light" href="{% url 'users_handler:login' %}">
+                            Log in
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN BODY -->
+    <div class="columns">
+        <div class="column is-one-fifth"></div>
+        <div class="column">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+        <div class="column is-one-fifth"></div>
+    </div>
+
+    <!-- UNIVERSAL FOOTER -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Hunter Hang Out</strong> by <a href="#">Christerpher Hunter</a>.
+        </div>
+    </footer>
+</body>
+
+</html>
