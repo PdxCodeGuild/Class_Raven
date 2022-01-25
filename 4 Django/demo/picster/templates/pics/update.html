@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+    <h1 class="h1 text-center py-3">Update Pic</h1>
+    <div class="row pb-5">
+        <div class="col-10 offset-1 col-md-6 offset-md-3">
+
+            <div class="text-center">
+                <img src="{% static pic.image.url %}" class="card-img-top mx-auto" style="height: auto; width: 300px"
+            alt="pic{{pic.id}}">
+            </div>
+
+            <!-- enctype attribute allows the image to be uploaded -->
+            <form action="{% url 'pics_app:update' pic.id %}" method="POST" enctype="multipart/form-data" class="d-flex flex-column gap-3 p-3">
+                {% csrf_token %}
+                {{form}}
+                <button type='submit' class='btn btn-success form-control mt-3'>Update</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

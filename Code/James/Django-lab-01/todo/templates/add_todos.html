@@ -1,0 +1,9 @@
+{%extends 'base.html'%}{%block content%}
+<h1>todos</h1>
+
+<form action="{%url 'todos: add_todos%}" method="POST">
+{%csrf_token%}
+
+
+</form>
+{%endblock %}

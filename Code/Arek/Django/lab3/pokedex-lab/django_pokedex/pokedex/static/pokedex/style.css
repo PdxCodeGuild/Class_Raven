@@ -1,0 +1,21 @@
+#poke-div{
+    background-color: #f44242;
+    padding: 20px 20px;
+    margin: 40px;
+    border: 5px solid darkgrey;
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+a{
+    color: yellow;
+    text-decoration: underline;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+

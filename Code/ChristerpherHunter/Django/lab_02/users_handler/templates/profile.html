@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+
+<h1 class="title is-primary">Hello {{user}}</h1>
+
+<div>
+    {% for posts in user_posts %}
+    <div class="card mb-4">
+    
+        <div class="card-content">
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-48x48">
+                        <img src="{% static 'img/avatars/default_avt.png' %}" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">{{posts.user}}</p>
+                    <p class="subtitle is-6">{{posts.title}}</p>
+                </div>
+            </div>
+            <div class="content">
+                {{posts.body}}
+                <br>
+                <br>
+                <hr>
+                <time datetime="2016-1-1">{{posts.date_created}}</time>
+            </div>
+        </div>
+    </div>
+        
+    {% endfor %}
+</div>
+
+{% endif %}
+
+
+{% endblock content %}

@@ -1,0 +1,64 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'todoapp/style.css' %}">
+
+<h1 class="title">To do list</h1>
+
+<form action= "{% url 'todoapp:create' %}" method="POST">
+{% csrf_token %}
+
+<input type='text' name='todotext' class='submit-form'>
+<button type='submit' class='submit-button'>
+    Submit
+</button>
+
+<select name="priority_choices" class='submit-button'>
+    <option value = "HIGH"> High Priority </option> 
+    <option class='MEDIUM' value = "MEDIUM"> Medium Priority</option> 
+    <option class='LOW' value = "LOW" selected > Low Priority </option> 
+</select>
+
+
+</form>
+
+<h1 class="title1">Active items</h1>
+
+{% if to_do_list %}
+
+    {% csrf_token %}
+    <ul>
+    {% for item in to_do_list %}
+        <li name="todoitem" class="{{item.priority}}">{{ item.item_text }}
+        </li>
+        <a href="{% url 'todoapp:complete' pk=item.pk %}" class="complete">Completed</a>
+        <a href="{% url 'todoapp:delete' pk=item.pk %}" class="delete">Delete</a>  
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <h3>Looks like you're all caught up! </h3>
+
+{% endif %}
+
+
+
+
+<h1 class="title1">Completed items</h1>
+
+{% if completed_to_do_list %}
+
+    {% csrf_token %}
+    <ul>
+    {% for item in completed_to_do_list %}
+
+        <li 
+        style="text-decoration:line-through;" class="{{item.priority}}" >{{ item.item_text }}  
+        </li>
+        <a href="{% url 'todoapp:delete' pk=item.pk %}">Delete</a>  
+       
+    {% endfor %}
+    </ul>
+
+
+
+{% endif %}

@@ -1,0 +1,127 @@
+* {
+    /*border: .5px red solid;*/
+    background-color:rgb(197, 229, 149);
+}
+
+body {
+background-color:rgb(197, 229, 149); 
+}
+h2 {
+display: flex;
+flex-wrap: wrap;
+color: darkgreen;
+padding: 20px;
+}
+
+h3 {
+color: darkgreen;
+border: 2px darkgreen solid;
+padding: 25px;
+border-radius: 50%;
+background-color: rgb(115, 196, 115);
+}
+
+#content-container {
+
+margin-left: 20vw;
+margin-right: 5vw;
+
+}
+
+/*---------------Section 1--------------------------*/
+
+.enter-name{
+margin-right: 15vw;
+margin-bottom: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.container1 {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 25vh;
+flex-wrap: wrap;
+
+}
+
+.box1 {
+margin-right: 150px;
+padding: 10px;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+width:fit-content;
+}
+        
+
+img {
+z-index: 2;
+max-width: 200px;
+border: solid darkgreen 3px;
+border-radius: 50%;
+}
+
+/*---------------Section 2--------------------------*/
+
+.tortilla-container {
+z-index: 1;
+margin: 15px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+.rice-container {
+z-index: 1;
+margin: 15px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+
+/*---------------Section 3--------------------------*/
+.protein-container {
+margin: 15px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+.beans-container {
+margin: 15px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+.instructions-label{
+margin-bottom: 5px;
+}
+/*---------------Section 4--------------------------*/
+.additional-container {
+margin: 15px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+.delivery-container {
+margin: 15px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}
+
+.submit {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-direction: column;
+}

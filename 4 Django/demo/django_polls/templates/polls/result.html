@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-1">Pollster</h1>
+
+<div class="poll">
+    <h1>{{question.question_text}}</h1>
+    <small>Voting is {{question.status}}</small>
+
+    <ul class="choices">
+        {% for choice in question.choices.all %}
+            <li class="choice">{{choice.votes}} - {{ choice.choice_text }} <a href="{% url 'polls:vote' choice.id %}">Vote</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+{% endblock %}

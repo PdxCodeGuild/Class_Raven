@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="en">
+        <meta name="lab3" content="width-device-width", initial-scale=1.0>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'pokedex/style.css' %}">
+    </head>
+    <body class="black">
+        <nav>
+            <div id='top-nav-bar' class='nav-wrapper green accent-4'>
+                <form action="{% url 'pokedex:choice' %}", method="POST">
+                    {% csrf_token %}
+                    <div class='input-field'>
+                        <input name='search' id="search-bar" type="search">
+                        <label class='label-icon' for="search-bar">
+                            <i class='material-icons'>search</i>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <h2 class='center-align white-text'>Pokedex</h2>
+        
+        {% block content %}
+
+        {% endblock content %}
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+
+</html>
