@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<form action="{% url 'users_handler:login' %}" method="POST">
+    <div class="my-5">
+
+        {% csrf_token %}
+
+        <div class="field">
+            <p class="control is-expanded has-icons-left">
+                <!-- <label for="id_username">{{form.username.label}}</label> -->
+                {{form.username}}
+                <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                </span>
+            </p>
+        </div>
+
+        <div class="field">
+            <p class="control has-icons-left">
+                <!-- <label for="id_password">Password</label> -->
+                {{form.password}}
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+
+        {% if errors %}
+        <div class="notification is-danger">
+            {{errors}}
+            
+            <button class="delete"></button>
+        </div>
+        {% endif %}
+
+        <div class="field">
+            <button type="submit" class="button is-success">
+                Login
+            </button>
+        </div>
+    </div>
+</form>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="row d-flex justify-content-center pb-5">
+        {% for pic in pics %}
+            <!-- 'with' passes a context variable to the partial -->
+            {% include 'pics/_card.html' with pic=pic%}
+        {% endfor %}
+    </div>
+
+{% endblock content %}

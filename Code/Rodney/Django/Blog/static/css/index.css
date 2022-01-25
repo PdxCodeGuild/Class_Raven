@@ -1,0 +1,68 @@
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+}
+
+#profile-user {
+
+  font-size: 3rem;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-title {
+margin-top: 20px;
+font-size: 1.5rem;
+color: rgb(205, 240, 206)
+}
+
+
+.fas {
+  font-size: 25px;
+}
+
+.far {
+  font-size: 25px;
+}
+
+
+.user-registration {
+  color: white;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 30px;
+  background-color: rgb(25, 135, 84); 
+}
+
+#id_username {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  margin-top: 20px;
+}
+
+.profile-margin {
+  margin-top: 50px;
+}
+
+.blogbody {
+    border-width: 20px;
+    border: black;
+    border: solid;
+
+
+}
+
+label {
+  color: rgb(205, 240, 206);
+  margin: 5px;
+}

@@ -1,0 +1,95 @@
+{% extends "todo_list/base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="title center is-1">REGISTER</h1>
+<form action="{% url 'todo_list:signup' %}", method="POST">
+
+    {% csrf_token %}
+    
+    <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Username</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Text input" value="">
+            <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+            </span>
+            <!-- <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+            </span> -->
+        </div>
+        <!-- <p class="help is-success">This username is available</p> -->
+    </div>
+    
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email input" value="">
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+            <!-- <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+            </span> -->
+        </div>
+        <!-- <p class="help is-danger">This email is invalid</p> -->
+    </div>
+    <div class="field">
+        <p class="control has-icons-left">
+        <p class="mb-2"><strong>Password</strong></p>
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+        </span>
+        </p>
+    </div>
+    <div class="field">
+        <p class="control has-icons-left">
+        <p class="mb-2"><strong>Password</strong></p>
+        <input class="input" type="password" placeholder="Password">
+        <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+        </span>
+        </p>
+    </div>    
+    <div class="field">
+        <label class="label">Sex</label>
+        <div class="control">
+            <div class="select">
+                <select>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                    <option>Do Not Wish To Answer</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="control">
+            <label class="checkbox">
+                <input type="checkbox">
+                I agree to the <a href="#">terms and conditions</a>
+            </label>
+        </div>
+    </div>
+    
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Submit</button>
+        </div>
+        <div class="control">
+            <button class="button is-link is-light">Cancel</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

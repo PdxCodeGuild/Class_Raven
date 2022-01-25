@@ -7,6 +7,9 @@ Code/Theo/quote_login.py
 .env
 Code/josh/labs/API_lab/.env
 env
+secrets.*
+images/
+
 
 Code/Theo/django/blog/db.sqlite3
 
@@ -17,7 +20,8 @@ Code/Theo/django/blog/db.sqlite3
 *.pot
 *.pyc
 __pycache__
-db.sqlite3
+*db.sqlite3
+
 media
 uploads/
 
@@ -131,3 +135,4 @@ GitHub.sublime-settings
 .history
 
 .vscode/settings.json
+Code/Austen/js-05/scripts/secrets.js

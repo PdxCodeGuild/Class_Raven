@@ -1,0 +1,206 @@
+
+<!-- Lab:5 Burrito Order Form -Rafael Medina (El Burrito 7)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+   
+    <title>El Burrito 7</title>
+
+
+    
+</head>
+
+<body>
+    <header><ul class="flex-container">
+      <img class="img-banner" src="{{url_for('static', filename='images/banner-1.png')}}" height="140" width="auto" />
+      <img class="img-banner" src="{{url_for('static', filename='images/banner-2.png')}}" height="140" width="auto" />
+   
+        <li class="flex-item-header" style="text-align:center;"><h1>El Burrito 7</h1></li>
+        <li class="flex-item-header-2"><h3>Fill out steps 1-7 below & then submit your order</h3></li>
+      
+    </ul></header>
+      <!-- Main Content -->
+      <ul class="flex-container">
+        <!-- 1. Tortillas -->
+        <!-- required = "required" used to prevent page error, message instead-->
+        <li class="flex-item" style="height:400px;"> 
+          <h2 id="center">1. Tortillas</h2>
+          <form action="{{url_for('receipt')}}" method='POST'>
+            <input type="radio" id="white" name="tortillas"
+            value="white" required="required">
+            <img src="{{url_for('static', filename='images/flour-tortilla.png')}}" height="75" width="auto" />
+            <label for="white">White Flour</label><br>
+
+            <input type="radio" id="wheat" name="tortillas"
+            value="wheat" required="required">
+            <img src="{{url_for('static', filename='images/wheat-tortilla.png')}}" height="75" width="auto" />
+            <label for="wheat">Wheat Flour</label><br>
+
+            <input type="radio" id="spinach" name="tortillas" value="spinach" required="required">
+            <img src="{{url_for('static', filename='images/spinach-tortilla.png')}}" height="75" width="auto" />
+            <label for="spinach">Spinach Flour</label>
+        
+          </li>
+        <!-- 2. Rice -->
+        <li class="flex-item"  style="height:400px;" >  
+          <h2 id="center">2. Rice</h2>
+       
+            <input type="radio" id="mexican" name="rice" value="mexican style rice" required="required">
+            <img src="{{url_for('static', filename='images/mexican-rice.png')}}" height="75" width="auto" />
+            <label for="mexican">Spanish-Style Rice</label><br>
+
+            <input type="radio" id="cilantro-lime" name="rice" value="cilantro-lime white rice" required="required">
+            <img src="{{url_for('static', filename='images/cilantro-rice.png')}}" height="75" width="auto" />
+            <label for="cilantro-lime">Cilantro-Lime Rice</label><br>
+
+            <input type="radio" id="none" name="rice" 
+            value="none" required="required">
+            <img src="{{url_for('static', filename='images/none.png')}}" height="75" width="auto" />
+            <label for="black">None</label><br>
+       
+        </li>
+        <!-- 3. Beans -->
+        <li class="flex-item" style="height:400px;">
+          <h2 id="center">3. Beans</h2>
+       
+            <input type="radio" id="pinto" name="beans" 
+            value="pinto beans" required="required">
+            <img src="{{url_for('static', filename='images/pinto-beans.png')}}" height="75" width="auto" />
+            <label for="pinto">Pinto Beans</label><br>
+
+            <input type="radio" id="black" name="beans" 
+            value="black beans" required="required">
+            <img src="{{url_for('static', filename='images/black-beans.png')}}" height="75" width="auto" />
+            <label for="black">Black Beans</label><br>
+
+            <input type="radio" id="none" name="beans" 
+            value="none" required="required">
+            <img src="{{url_for('static', filename='images/none.png')}}" height="75" width="auto" />
+            <label for="black">None</label><br>
+        </li>
+        <!-- 4. Protein -->
+        <li class="flex-item" style="height: 500px;">
+          <h2 id="center">4. Protein</h2>
+     
+            <input type="radio" id="carne-asada" name="protein" 
+            value="carne-asada" required="required">
+            <img src="{{url_for('static', filename='images/carne-asada.png')}}" height="75" width="auto" />
+            <label for="carne-asada">Carne Asada (Grilled Steak)</label><br>
+
+            <input type="radio" id="pollo-asado" name="protein" 
+            value="pollo-asado" required="required">
+            <img src="{{url_for('static', filename='images/pollo-asado.png')}}" height="75" width="auto" />
+            <label for="pollo-asado">Pollo Asado (Grilled Chicken)</label><br>
+
+            <input type="radio" id="carniatas" name="protein" 
+            value="carnitas" required="required">
+            <img src="{{url_for('static', filename='images/carnitas.png')}}" height="75" width="auto" />
+            <label for="carniatas">Carnitas (Pork)</label><br>
+
+            <input type="radio" id="none" name="protein" 
+            value="none" required="required">
+            <img src="{{url_for('static', filename='images/none.png')}}" height="75" width="auto" />
+            <label for="black">None</label><br>
+
+        
+        </li>
+          <!-- 6. Additional Ingredients -->
+        <li class="flex-item"  style="height: 700px;">
+          <h2 id="center-additional-items" style="margin-top:-6px;">5. Additional Ingredients</h2>
+
+            <input type="radio" id="fajitas" name="additional" 
+            value="veggie fajitas (peppers, onions & mushrooms)" required="required">
+            <img src="{{url_for('static', filename='images/fajitas.png')}}" height="75" width="auto" />
+            <label for="fajitas">Fajitas (Peppers & Onions)</label><br>
+        
+            <input type="checkbox" id="guacamole" name="additional" 
+            value="guacamole">
+            <img src="{{url_for('static', filename='images/guacamole.png')}}" height="75" width="auto" />
+            <label for="guacamole">Guacamole</label><br>
+
+            <input type="checkbox" id="sour-cream" name="additional" 
+            value="sour cream">
+            <img src="{{url_for('static', filename='images/sour-cream.png')}}" height="75" width="auto" />
+            <label for="sour-cream">Sour Cream</label><br>
+
+            <input type="checkbox" id="pico" name="additional" 
+            value="pico de gallo" >
+            <img src="{{url_for('static', filename='images/pico-de-galllo.png')}}" height="75" width="auto" />
+            <label for="pico">Pico De Gallo Salsa</label><br>
+
+            <input type="checkbox" id="pico" name="additional" 
+            value="3-cheese" >
+            <img src="{{url_for('static', filename='images/cheese.png')}}" height="75" width="auto" />
+            <label for="cheese">3-Cheese Blend</label><br>
+
+            <input type="checkbox" id="none" name="additional" 
+            value="none" >
+            <img src="{{url_for('static', filename='images/none.png')}}" height="75" width="auto" />
+            <label for="black">None</label><br>
+        
+        </li>
+         <li class="flex-item" style="height:300px;">
+          <h2 id="center-additional-items" style="margin-top:-09px;">6. <u>Additional Instructions</u></h2>
+        
+            <textarea name='instructions' id="instructions" placeholder="enter text here..."></textarea>
+            
+    
+        
+        </li>
+         
+        <!-- 7. Submit Your Order -->  
+        </li>
+        <li class="flex-item-footer">
+          <div action="/action_page.php" method="POST" style="padding-top:25px;">
+            <h2 id="center-additional-items "><u>7. Submit Your Order</u></h2>
+          <div action="/action_page.php" method="POST" style="padding-top:35px;">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="First name.." style="max-width: 300px;"><br>
+        
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="Last name.." style="max-width: 300px;"><br><br>
+            <small>Press "Submit" after steps 1-7. </small><br>
+            <input type="submit" value="Submit" style="color:white; max-width:250px; margin-top:30px;">
+          </div>
+            </select>
+           
+          </form>
+      </ul>
+</body>
+<!-- Footer -->
+  <footer>
+    <ul class="flex-container">
+     
+        
+      <li class="flex-item-footer-last"><br><br><br><br>Lab:05 Burrito Form - Class Raven - Rafael Medina</li>      
+    </ul>
+    
+  </footer>
+</html>
+<!-- End -->
+
+
+
+
+
+
+
+<!-- NOTE: *****Javascript can be used to allow the de-selection of a radio button*****
+  
+  function toggleRadio(event)
+{
+    if(event.target.type === 'radio' && event.target.checked === true)
+    {
+        setTimeout(()=>{ event.target.checked = false; },0);
+    }
+}
+document.addEventListener('mouseup', toggleRadio
+
+-->
+
