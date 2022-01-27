@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+
+body{
+  background-image: linear-gradient(90deg, #3c30e6, #d36dd3);
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  background: slategray;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 15px;;
+}
+
+.honeydo_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-align {
+  justify-content: center ;
+}
+
+
+.honeydo_list{
+  list-style: none;
+}
+
+.honeydo-title {
+  text-align: center;
+}
+
+.honeydo{
+  align-items: center;
+  margin: 20px auto;
+  background-color: slateblue;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  border-width: .1em;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+
+}
+
+.honeydo li {
+  flex: 1;
+}
+
+.complete {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.complete_btn, 
+.trash_btn{
+  padding: 3%;
+  border: none;
+  border-radius:50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.complete_btn{
+  border-radius: 50%;
+}
+
+.fa-trash,
+.fa-check{
+  pointer-events: none;
+}
+
+.completedItem{
+   opacity: 0.7;
+   list-style: none;
+   text-decoration: line-through;
+   font-size:medium;
+   text-align: left;
+}
+
+
+
+
+.input-align {
+  justify-content: center ;
+}
