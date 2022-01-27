@@ -123,22 +123,25 @@
                 },
                 // toggle the complete value for the given todo
                 toggleComplete: function(todoId){
-                    // combine the complete and incomplete arrays
-                    let todos = this.completeTodos.concat(this.incompleteTodos)
-
-                    // change the target todo item's complete value
-                    todos = todos.map((todo)=> todo.id !== todoId ? todo : {...todo, complete: !todo.complete})
                     
-                    this.updateTodos(todos)
+                    axios({
+                        url: BASE_URL + `/toggle-complete/${todoId}`,
+                        method: 'post',
+                    })
+                    .then(response=>{
+                        this.updateTodos(response.data.todos)
+                    })
+                    .catch(error=>console.log(error))
                 },
                 deleteTodo: function(todoId){
-                    // combine the complete and incomplete arrays
-                    let todos = this.completeTodos.concat(this.incompleteTodos)
-                    
-                    todos = todos.filter(todo => todo.id !== todoId)
-                    
-                    this.updateTodos(todos)
-
+                    axios({
+                        url: BASE_URL + `/delete/${todoId}`,
+                        method: 'post'
+                    })
+                    .then(response=>{
+                        this.updateTodos(response.data.todos)
+                    })
+                    .catch(error=>console.log(error))
                 }
             }
         })
