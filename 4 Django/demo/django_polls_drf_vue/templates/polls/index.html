@@ -1,0 +1,81 @@
+{% extends 'base.html' %} {% block content %}
+<div id="app">
+
+    <h1 class="display-1">Pollster</h1>
+
+    <!-- action and method form attributes are required for Django to access the data -->
+    <form action="{% url 'polls:create' %}" method="POST" class='poll'>
+        <!-- to prevent CSRF attacks -->
+        {% csrf_token %}
+        <input type="text" name="question_text" placeholder="Enter Question" />
+        <div>
+            <p>How many choices?</p>
+            <input type="number" step="1" min="2" max="8" value="2" name="number_of_choices" />
+        </div>
+        <button type="submit">Create</button>
+    </form>
+
+    <div class="poll" v-for="question in questions">
+        <h1>[[question.question_text]]</h1>
+        <small>Created by: [[question.user.username]]</small><small>Voting is [[question.status]]</small>
+
+        
+        <ul class="choices">
+            <li class="choice" v-for="choice in question.choices">
+                [[choice.votes]] - [[ choice.choice_text ]]
+                <a v-on:click="submitVote(choice.id)">Vote</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+
+    const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0]
+
+    const headers = {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrfToken.value
+    }
+
+    const app = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data: {
+            questions: [],
+            newQuestionText: '',
+            choiceQuantity: 2,
+            choices: ['', '']
+        },
+        created: function(){
+            // call the api to get the polls
+            fetch('/list/')
+                .then(response=>response.json())
+                .then(data=>{
+                    console.log(data)
+                    this.questions = data.questions
+                })
+                .catch(error=>console.log(error))
+        },
+        methods: {
+            submitVote: function(choiceId){
+                fetch('/vote/', {
+                    method:'POST',
+                    body: JSON.stringify({choiceId: choiceId}),
+                    headers: headers
+                })
+                .then(response=>response.json())
+                .then(data=>{
+                    console.log(data)
+                    this.questions = data.questions
+                })
+                .catch(error=>console.log(error))
+            }
+        }
+    })
+
+    // console.log(app);
+</script>
+
+{% endblock %}
