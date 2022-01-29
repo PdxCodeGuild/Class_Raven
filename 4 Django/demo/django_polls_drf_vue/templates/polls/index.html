@@ -2,17 +2,21 @@
 <div id="app">
 
     <h1 class="display-1">Pollster</h1>
-
-    <!-- action and method form attributes are required for Django to access the data -->
-    <form action="{% url 'polls:create' %}" method="POST" class='poll'>
-        <!-- to prevent CSRF attacks -->
+    <!-- v-on:submit.prevent will run the Vue method createQuestion instead of the default JS action -->
+    <form v-on:submit.prevent="createQuestion" method="POST" class='poll'>
         {% csrf_token %}
-        <input type="text" name="question_text" placeholder="Enter Question" />
-        <div>
-            <p>How many choices?</p>
-            <input type="number" step="1" min="2" max="8" value="2" name="number_of_choices" />
+        <input type="text" name="question_text" v-model="newQuestionText" placeholder="Enter Question" />
+        <div v-if="newQuestionText !== ''">
+            <h3>Choices</h3>
+            <i class="fas fa-minus" v-on:click="changeChoiceQuantity(-1)"></i>
+            <i class="fas fa-plus" v-on:click="changeChoiceQuantity(1)"></i>
+
+            <p v-for="(choice, index) in choiceQuantity">
+                <span class="choice-label">{{ choice_number }}</span>
+                <input type="text" name="choice{{index}}" v-model="choices[index]"/>
+            </p>
+            <button type="submit">Create</button>
         </div>
-        <button type="submit">Create</button>
     </form>
 
     <div class="poll" v-for="question in questions">
@@ -53,7 +57,6 @@
             fetch('/list/')
                 .then(response=>response.json())
                 .then(data=>{
-                    console.log(data)
                     this.questions = data.questions
                 })
                 .catch(error=>console.log(error))
@@ -67,10 +70,36 @@
                 })
                 .then(response=>response.json())
                 .then(data=>{
-                    console.log(data)
                     this.questions = data.questions
                 })
                 .catch(error=>console.log(error))
+            },
+
+            changeChoiceQuantity: function(n){
+                if(this.choiceQuantity == 2 && n === -1){
+                    return
+                }
+                this.choiceQuantity += n
+            },
+
+            createQuestion: function(){
+                fetch('/create/', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        newQuestionText: this.newQuestionText,
+                        choices: this.choices
+                    }),
+                    headers: headers
+                })
+                .then(response=>response.json())
+                .then(data=>{
+                    this.questions = data.questions
+                })
+                .catch(error=>console.log(error))
+                
+                this.newQuestionText = ''
+                this.choiceQuantity = 2
+                this.choices = ['', '']
             }
         }
     })

@@ -48,6 +48,7 @@ form {
     border: none;
     border-radius: 5px;
     padding:10px;
+    margin-top: 15px;
     width: 5vw;
   }
   
@@ -82,8 +83,8 @@ form {
   
   .choice {
     width: 40%;
-    padding: 15px;
-    margin: 20px auto;
+    padding: 5px;
+    margin: 5px auto;
     
     background-color: lightsteelblue;
     border-radius: 5px;
