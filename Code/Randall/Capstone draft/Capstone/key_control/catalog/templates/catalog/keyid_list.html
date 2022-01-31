@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Key List</h1>
+  {% if keyid_list %}
+  <ul>
+    {% for key in keyid_list %}
+      <li>
+        <a href="{{ key.get_absolute_url }}">{{ key.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no keys available.</p>
+  {% endif %}
+{% endblock %}
