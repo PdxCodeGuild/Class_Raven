@@ -27,8 +27,6 @@ class KeyId(models.Model):
 
     display_usefor.short_description = 'usefor'
 
-
-
 class KeyInstance(models.Model):
     #Model representing a specific copy of a key (i.e. that can be borrowed from the key library).
     id = models.CharField(max_length=10, primary_key=True, help_text='Unique ID for this particular key across whole library')
