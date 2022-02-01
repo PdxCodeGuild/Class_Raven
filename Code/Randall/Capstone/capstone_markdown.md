@@ -10,7 +10,7 @@ A non-admin user will be able to log in and view the keys or badges that are ass
 
 There will be at least 3 data tables. One for the key type, key details, and specific copies. There will be no model for users as the Django admin will manage that.
 
-| 1. KeyType | (e.g. Vehicle, Door , Locker, Padlock)
+| 1. Lock | (e.g. Vehicle, Door , Locker, Padlock)
 - name = models.CharField
 
 | 1. KeyId | (Key details)
