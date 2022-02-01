@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import KeyId, KeyInstance, KeyType
+from .models import KeyId, KeyInstance, Lock
 from django.views import generic
 
 def index(request):

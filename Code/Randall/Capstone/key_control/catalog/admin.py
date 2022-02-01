@@ -1,9 +1,9 @@
 from asyncio.format_helpers import extract_stack
 from django.contrib import admin
-from .models import KeyType, KeyId, KeyInstance
+from .models import Lock, KeyId, KeyInstance
 
 #admin.site.register(KeyId)
-admin.site.register(KeyType)
+admin.site.register(Lock)
 #admin.site.register(KeyInstance)
 
 class KeyInstanceInline(admin.TabularInline):

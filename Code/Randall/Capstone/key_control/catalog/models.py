@@ -1,7 +1,7 @@
-from django.db import models
+from django.db import models 
 from django.urls import reverse # Used to generate URLs by reversing the URL patterns
 
-class KeyType(models.Model):
+class Lock(models.Model):
     #Model representing the key is used for.
     name = models.CharField(max_length=200, help_text='Enter what key is used for (e.g. Vehicle, Door , Locker, Padlock)')
 
@@ -12,7 +12,7 @@ class KeyId(models.Model):
     #Model representing a key (but not a specific copy of).
     title = models.CharField(max_length=200)
     summary = models.TextField(max_length=1000, help_text='Enter a brief description of the key')
-    usefor = models.ManyToManyField(KeyType, help_text='Select what this key is used for')
+    usefor = models.ManyToManyField(Lock, help_text='Select what this key is used for')
 
     def __str__(self):
         return self.title
