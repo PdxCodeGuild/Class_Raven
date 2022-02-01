@@ -22,6 +22,7 @@ There will be at least 3 data tables. One for the key type, key details, and spe
 - id = models.CharField
 - key = models.ForeignKey (uses KeyId)
 - due_back = models.DateField
+- borrower = models.ForeignKey
 
 ## Schedule
 
