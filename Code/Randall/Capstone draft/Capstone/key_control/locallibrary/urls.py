@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import RedirectView #opens the catalog page by default
+from django.views.generic import RedirectView # using below to open the key catalog page by default
 from django.conf import settings
 from django.conf.urls.static import static
 
