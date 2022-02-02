@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Borrowed Keys</h1>
+
+    {% if keyinstance_list %}
+    <ul>
+
+      {% for keyinst in keyinstance_list %}
+      <li class="{% if keyinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'key-detail' keyinst.key.pk %}">{{keyinst.key.title}}</a> Due Back On: {{ keyinst.due_back }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>There are no borrowed keys.</p>
+    {% endif %}
+{% endblock %}

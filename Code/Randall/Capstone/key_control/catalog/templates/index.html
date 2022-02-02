@@ -1,14 +1,13 @@
 {% extends "base.html" %}
-
 {% block content %}
-  <h1>Key Library Home</h1>
-  <p>Welcome to your local Key Library, a web app for key management.</p>
-  <h2>Will add stuff here////maybe diagram with some kind of hover over objects</h2>
-  <p>The key library catalog contains the following record counts:</p>
-  <ul>
-    <li><strong>Lock Types:</strong> {{ num_keys }}</li>          
-    <li><strong>Total Keys:</strong> {{ num_instances }}</li>   
-    <li><strong>Keys Available:</strong> {{ num_instances_available }}</li> 
-  </ul>
-  <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+<h1>The Key Library</h1>
+<p>Welcome to your local Key Library, a web app for physical key management.</p>
+<h2>Will add stuff here////maybe diagram with some kind of hover over objects</h2>
+<p>The key library catalog contains the following record counts:</p>
+<ul>
+   <li><strong>Lock Types:</strong> {{ num_keys }}</li>
+   <li><strong>Total Keys:</strong> {{ num_instances }}</li>
+   <li><strong>Keys Available:</strong> {{ num_instances_available }}</li>
+</ul>
+<p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 {% endblock %}

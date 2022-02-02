@@ -19,7 +19,17 @@ class KeyAdmin(admin.ModelAdmin):
 # Register the Admin classes for KeyInstance using the decorator
 @admin.register(KeyInstance)
 class KeyInstanceAdmin(admin.ModelAdmin):
+    list_display = ('key', 'status', 'borrower', 'due_back', 'id')        ###Double check of key or keyid
     list_filter = ('status', 'due_back')
+
+    fieldsets = (
+        (None, {
+            'fields': ('key', 'id')
+        }),
+        ('Availability', {
+            'fields': ('status', 'due_back','borrower')
+        }),
+    )
 
 
 
