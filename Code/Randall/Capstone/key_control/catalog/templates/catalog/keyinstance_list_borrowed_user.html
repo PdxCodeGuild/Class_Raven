@@ -7,11 +7,12 @@
     <ul>
 
       {% for keyinst in keyinstance_list %}
-      <li class="{% if keyinst.is_overdue %}text-danger{% endif %}">
+      <li class="{% if keyinst.is_overdue %}text-danger{% endif %}">  <!--Turns red if Key is overdue for turn in-->
         <a href="{% url 'key-detail' keyinst.key.pk %}">{{keyinst.key.title}}</a> Due Back On: {{ keyinst.due_back }}
       </li>
       {% endfor %}
     </ul>
+    <ul style="color: red; font-weight: bold;" >Red text means your key is OVERDUE!</ul>
 
     {% else %}
       <p>There are no borrowed keys.</p>

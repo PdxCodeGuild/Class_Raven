@@ -12,7 +12,7 @@ def index(request):
     # Available keys (status = 'a')
     num_instances_available = KeyInstance.objects.filter(status__exact='a').count()
     # Show a count of the number of times user has visited the page
-    num_visits = request.session.get('num_visits', 0)
+    num_visits = request.session.get('num_visits', 0) #Starts over after server restart
     request.session['num_visits'] = num_visits + 1
 
     context = {
@@ -27,7 +27,7 @@ def index(request):
 
 class KeyListView(generic.ListView):
     model = KeyId
-    paginate_by = 5
+    paginate_by = 50
 
 class KeyDetailView(generic.DetailView):
     model = KeyId
