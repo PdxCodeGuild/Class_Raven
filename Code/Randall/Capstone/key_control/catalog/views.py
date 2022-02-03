@@ -34,7 +34,7 @@ class KeyDetailView(generic.DetailView):
     model = KeyId
 
 class LoanedKeysByUserListView(LoginRequiredMixin,generic.ListView):
-    """Generic class-based view listing books on loan to current user."""
+    #Generic class-based view listing keys on loan to current user.
     model = KeyInstance
     template_name ='catalog/keyinstance_list_borrowed_user.html'
     paginate_by = 5
