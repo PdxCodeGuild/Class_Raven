@@ -37,6 +37,8 @@ class KeyInstance(models.Model):
     due_back = models.DateField(null=True, blank=True)
     borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 
+
+
     LOAN_STATUS = (
         ('m', 'Missing'),
         ('o', 'On loan'),
@@ -54,6 +56,8 @@ class KeyInstance(models.Model):
 
     class Meta:
         ordering = ['due_back']
+    #    permissions = (("can_mark_returned", "Set key as returned"),)         #==============DRAFT TRY
+
 
     def __str__(self):
         #String for representing the Model object.
