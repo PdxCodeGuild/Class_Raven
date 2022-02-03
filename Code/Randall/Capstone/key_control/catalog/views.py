@@ -3,6 +3,7 @@ from .models import KeyId, KeyInstance, Lock
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 def index(request):
     #View function for home page of site.
 
@@ -40,3 +41,4 @@ class LoanedKeysByUserListView(LoginRequiredMixin,generic.ListView):
 
     def get_queryset(self):
         return KeyInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+

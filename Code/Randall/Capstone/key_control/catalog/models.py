@@ -1,7 +1,8 @@
 from django.db import models 
 from django.urls import reverse # Used to generate URLs by reversing the URL patterns
-from django.contrib.auth.models import User
 from datetime import date
+from django.contrib.auth.models import User
+
 
 class Lock(models.Model):
     #Model representing the key is used for.

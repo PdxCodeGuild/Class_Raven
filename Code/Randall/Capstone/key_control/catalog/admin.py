@@ -30,6 +30,3 @@ class KeyInstanceAdmin(admin.ModelAdmin):
             'fields': ('status', 'due_back','borrower')
         }),
     )
-
-
-
