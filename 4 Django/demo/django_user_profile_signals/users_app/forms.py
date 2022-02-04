@@ -11,10 +11,10 @@ class RegisterForm(forms.ModelForm):
     def save(self, commit=True):
         # create a User instance from a copy of the RegisterForm
         user_instance = super(RegisterForm, self).save(commit=False)
-        user_instance.set_password(self.clean_data['password'])
+        user_instance.set_password(self.cleaned_data['password'])
         user_instance.save()
 
         # create a Profile object for the user
-        Profile.objects.create(user=user_instance)
+        # Profile.objects.create(user=user_instance)
 
         return user_instance
