@@ -1,11 +1,11 @@
 from django.db import models 
-from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+from django.urls import reverse # generate URLs by reversing the URL patterns
 from datetime import date
 from django.contrib.auth.models import User
 
 
 class Lock(models.Model):
-    #Model representing the key is used for.
+    #Model representing what the key is used for.
     name = models.CharField(max_length=50, help_text='What the key is for (e.g. Vehicle, Door , Locker, Padlock)')
 
     def __str__(self):
@@ -22,10 +22,10 @@ class KeyId(models.Model):
 
     def get_absolute_url(self):
         #Returns the url to access a detail record for this key. Official base URL.
-        return reverse('key-detail', args=[str(self.id)])                       #CHECK
+        return reverse('key-detail', args=[str(self.id)])                               #CHECK LATER
 
     def display_usefor(self):
-        #Create a string for usefor. This is required to display usefor in Admin.        # CHECK THIS
+        #Create string for usefor. This is required to display usefor in Admin.        # CHECK THIS
         return ', '.join(lock.name for lock in self.usefor.all()[:3])   # 
 
     display_usefor.short_description = 'usefor'

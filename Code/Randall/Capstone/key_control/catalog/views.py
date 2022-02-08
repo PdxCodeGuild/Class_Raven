@@ -2,6 +2,13 @@ from django.shortcuts import render
 from .models import KeyId, KeyInstance, Lock
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+import datetime
+from django.contrib.auth.decorators import login_required, permission_required
+from catalog.forms import RenewKeyForm
 
 
 def index(request):
@@ -23,7 +30,7 @@ def index(request):
         'num_visits': num_visits,
     }
 
-    # Render the HTML template index.html with the data in the context variable
+    # Render the HTML template index.html with data in context variable
     return render(request, 'index.html', context=context)
 
 class KeyListView(generic.ListView):
@@ -34,11 +41,56 @@ class KeyDetailView(generic.DetailView):
     model = KeyId
 
 class LoanedKeysByUserListView(LoginRequiredMixin,generic.ListView):
-    #Generic class-based view listing keys on loan to current user.
+    # View listing keys on loan to current user.
     model = KeyInstance
     template_name ='catalog/keyinstance_list_borrowed_user.html'
     paginate_by = 5
 
     def get_queryset(self):
         return KeyInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+
+class LoanedKeysAllListView(PermissionRequiredMixin, generic.ListView):
+    # View listing all keyss on loan. Only visible to users with can_mark_returned permission.
+    model = KeyInstance
+    permission_required = 'catalog.can_mark_returned'
+    template_name = 'catalog/keyinstance_list_borrowed_all.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        return KeyInstance.objects.filter(status__exact='o').order_by('due_back')
+
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
+def renew_key_librarian(request, pk):
+            #View function for renewing a specific KeyInstance by admin.
+    key_instance = get_object_or_404(KeyInstance, pk=pk)
+
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
+
+      
+        form = RenewKeyForm(request.POST)
+
+        # Check if the form is valid:
+        if form.is_valid():
+            #write to the model due_back field
+            key_instance.due_back = form.cleaned_data['renewal_date']
+            key_instance.save()
+
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed'))
+
+    # If  GET create the default form
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewKeyForm(initial={'renewal_date': proposed_renewal_date})
+
+    context = {
+        'form': form,
+        'key_instance': key_instance,
+    }
+
+    return render(request, 'catalog/key_renew_admin.html', context)
+
+
 
