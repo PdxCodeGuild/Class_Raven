@@ -7,15 +7,27 @@
   <p><strong>Key Type:</strong> {{ keyid.usefor.all|join:", " }}</p>
 
   <div style="margin-left:20px;margin-top:20px">
-    <h4>Copies</h4>
 
+
+    <h4>Copies</h4>                                           
+      <!--ADD key request here=================================================================================-->
+    
     {% for copy in keyid.keyinstance_set.all %}
       <hr>
       <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+       
         {{ copy.get_status_display }}
+        {% if copy.status == 'a' %}
+        <button type="button" class="btn btn-success">Request Key</button>
+        {% endif %}
       </p>
+      <!--ADD key request here================================================================================-->
+
+
+
+
       {% if copy.status != 'a' %}
-        <p><strong>Due to be returned:</strong> {{ copy.due_back }}</p>
+        <p><strong>Return Date:</strong> {{ copy.due_back }}</p> 
       {% endif %}
       <p class="text-muted"><strong>Id:</strong> {{ copy.id }}</p>
     {% endfor %}
