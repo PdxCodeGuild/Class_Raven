@@ -1,12 +1,9 @@
-
 {% extends "base.html" %}
 
 {% block content %}
     <h1>All Checked out Keys</h1>
-
 {% if keyinstance_list %}
     <ul>
-
 {% for keyinst in keyinstance_list %} 
       <li class="{% if keyinst.is_overdue %}text-danger{% endif %}">
         <a href="{% url 'key-detail' keyinst.key.pk %}">{{keyinst.key.title}}</a>
@@ -21,8 +18,11 @@
       <p>There are no keys checked out at this time.</p>
 {% endif %}       
 
-
 <!--Hover Row Table-->
+
+    <h1>All Checked out Keys</h1>
+
+    <ul>
 
 <div class="container">          
   <table class="table table-hover">

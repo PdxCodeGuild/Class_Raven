@@ -23,7 +23,7 @@ def index(request):
     num_visits = request.session.get('num_visits', 0) #Starts over after server restart
     request.session['num_visits'] = num_visits + 1
 
-    context = {
+    context = {                    # COMMENTED OUT VISITS COUNTER ON HTML FOR NOW
         'num_keys': num_keys,
         'num_instances': num_instances,
         'num_instances_available': num_instances_available,
