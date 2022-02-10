@@ -92,5 +92,48 @@ def renew_key_librarian(request, pk):
 
     return render(request, 'catalog/key_renew_admin.html', context)
 
+# NEW BLOCK ================================================================
+#NOT SAVED 
 
+class RequestedKeysAllListView(PermissionRequiredMixin, generic.ListView):
+    # View listing all keyss on loan. Only visible to users with can_mark_returned permission.
+    model = KeyInstance
+    permission_required = 'catalog.can_mark_returned'
+    template_name = 'catalog/key_requests.html'
+    paginate_by = 10
 
+    def get_queryset(self):
+        return KeyInstance.objects.filter(status__exact='r').order_by('due_back')
+
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
+def request_key_librarian(request, pk):
+            #View function for renewing a specific KeyInstance by admin.
+    key_instance = get_object_or_404(KeyInstance, pk=pk)
+
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
+
+      
+        form = RenewKeyForm(request.POST)
+
+        # Check if the form is valid:
+        if form.is_valid():
+            #write to the model due_back field
+            key_instance.due_back = form.cleaned_data['renewal_date']
+            key_instance.save()
+
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed'))
+
+    # If  GET create the default form
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewKeyForm(initial={'renewal_date': proposed_renewal_date})
+
+    context = {
+        'form': form,
+        'key_instance': key_instance,
+    }
+
+    return render(request, 'catalog/key_renew_admin.html', context)

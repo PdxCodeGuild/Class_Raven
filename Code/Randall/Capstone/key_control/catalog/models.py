@@ -43,7 +43,7 @@ class KeyInstance(models.Model):
         ('m', 'Missing'),
         ('o', 'On loan'),
         ('a', 'Available'),
-        ('r', 'Reserved'),
+        ('r', 'Requested'),
     )
 
     status = models.CharField(

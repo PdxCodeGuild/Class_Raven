@@ -37,6 +37,7 @@
                <li>Admin Users</li>
                {% if perms.catalog.can_mark_returned %}
                <li><a href="{% url 'all-borrowed' %}">All Loaned</a></li>
+               <li><a href="{% url 'all-requests' %}">All Requests</a></li>
                {% endif %}
                </ul>
                 {% endif %}

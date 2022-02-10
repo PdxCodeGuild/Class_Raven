@@ -1,13 +1,12 @@
 
 
-<!--RENEW FORM FOR ADMIN USERS-->
+<!--APPROVE/DENY REQUESTED FOR ADMIN USERS-->
 
 {% extends "base.html" %}
 {% block content %}
-    <h1>Renew: {{key_instance.key.title}}</h1>
-    <p>Borrower: {{key_instance.borrower}}</p>
-    <p{% if key_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{key_instance.due_back}}</p>
-    
+    <h1>Key Requested: {{key_instance.key.title}}</h1>
+    <p>Request from user: {{key_instance.borrower}}</p>
+
     <form action="" method="post">
         {% csrf_token %}
         <table>
