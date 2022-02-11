@@ -22,14 +22,14 @@
        
         {{ copy.get_status_display }}
         {% if copy.status == 'a' %}
-        <button type="button" class="btn btn-success" style="float: right">Request</button>
+        <button type="button" href="#" class="btn btn-success" style="float: right">Request</button>
         {% endif %}
       </p>
       <!--ADD key request here================================================================================-->
 
 
       {% if copy.status != 'a' %}
-        <button type="button" class="btn btn-warning" style="float: right;" >Return</button>
+        <button type="button" href="#"  class="btn btn-warning" style="float: right;" >Return</button>
       
      
         <p><strong>Return Date:</strong> {{ copy.due_back }}</p> 
