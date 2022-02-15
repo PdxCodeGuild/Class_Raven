@@ -201,6 +201,7 @@ Corrections will be made only to that particular branch.
     <li><a href="https://sodocumentation.net/django/topic/1235/querysets">Explanation of QuerySets</a></li>
     <li><a href="https://medium.com/shecodeafrica/understanding-the-mvc-pattern-in-django-edda05b9f43f">Understanding MVC/MTV architecture in Django</a></li>
     <li><a href="https://docs.djangoproject.com/en/4.0/topics/db/queries/#complex-lookups-with-q-objects">Complex Database Lookups with Q Objects</a></li>
+    <li><a href="https://docs.djangoproject.com/en/4.0/ref/models/querysets/#select-related">select_related()</a> & <a href="https://docs.djangoproject.com/en/4.0/ref/models/querysets/#prefetch-related">prefetch_related()</a> - Solving the n+1 problem in Django</li>
 
   </ul>
 </details>
