@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block forms %}
+    <h3>{{name.title}}</h3>
+
+    <form class="border-void p-3 d-flex flex-column align-items-center gap-2" action="{% url url %}" method="post">
+        {% if errors %}
+            {% for error in errors %}
+                <b>
+                    {{error.message}}
+                </b>
+            {% endfor %}
+        {% endif %}
+        {% csrf_token %}
+        {{form}}
+        <button class="btn-dark" type="submit">
+            {{name}}
+        </button>
+    </form>
+
+    <script src="{% static '_scripts/help-text.js' %}" onload="hideHelpText()"></script>
+{% endblock forms %}

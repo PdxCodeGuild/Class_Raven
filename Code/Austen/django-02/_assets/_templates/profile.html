@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block nav %}
+    <div class="d-flex flex-column align-items-center">
+        <a href="">view blog</a>
+        <a href="">new post</a>
+    </div>
+{% endblock nav %}
+{% block content %}
+    <h3>
+        {{user.username}}'s profile
+    </h3>
+{% endblock content %}
