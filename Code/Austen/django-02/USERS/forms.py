@@ -13,7 +13,7 @@ class user:
             model = get_user_model()
             fields = ['username', 'email', 'password']
         def save(self, commit=True):
-            new_user = super(self.Register, self).save(commit=False)
+            new_user = super(user.register, self).save(commit=False)
             new_user.username = self.cleaned_data['username']
             new_user.set_password(self.cleaned_data['password'])
             if commit:

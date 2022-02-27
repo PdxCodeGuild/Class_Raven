@@ -51,6 +51,7 @@ class login:
                 return redirect(reverse('USER:login'))
             else:
                 errors.append(form.errors.as_text())
+                print(errors)
                 context.update({'errors': errors})
         return render(REQUEST, 'form.html', context)
 
