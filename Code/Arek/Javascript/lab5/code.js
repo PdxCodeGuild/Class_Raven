@@ -81,7 +81,7 @@ function apiCall(){
 
 
 btn.addEventListener('click', function(){
-    
+    queryString = document.getElementById('filterType').value
     console.log(queryString)
     apiCall()
 
