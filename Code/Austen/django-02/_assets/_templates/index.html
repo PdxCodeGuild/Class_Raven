@@ -4,6 +4,7 @@
     <h1>Django Blogs</h1>
     <nav class="d-flex align-items-center gap-2">
         {% if user.is_authenticated %}
+        <li><a href="{% url 'USER:view' %}">profile</a></li>
         <li><a href="{% url 'USER:logout' %}">logout</a></li>
         {% else %}
         <li><a href="{% url 'USER:login' %}">login</a></li>
@@ -15,7 +16,16 @@
     <div class="row"></div>
     <div class="row">
         <div class="col p-3 text-center">
-            {% block nav %}{% endblock nav %}
+            {% block nav %}
+                <div class="d-flex flex-column align-items-end">
+                    <a href="{% url 'BLOG:browse' %}">Browse all blogs</a>
+                    {% if blogs %}
+                        {% for blog in blogs %}
+                            <a href="{% url 'BLOG:index' blog.user.username %}">{{blog}}</a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endblock nav %}
         </div>
         <div class="col p-3 text-center">
             {% block content %}{% endblock content %}

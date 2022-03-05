@@ -11,10 +11,14 @@
     --rubble: #9c9c9c;
     --acme: "Acme", sans-serif;
   }
-
 a:any-link {
     color: var(--sand);
     text-decoration: none;
+}
+a:hover {
+    color: var(--stone);
+    background-color: var(--void);
+    border-radius: 5%;
 }
 li {
     list-style: none;
