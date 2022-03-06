@@ -3,9 +3,9 @@ from . import views
 
 app_name = "assistant"
 urlpatterns = [
-    path("", views.index, name="index"), # TODO: Change to landing page
-    #path("todolist/<int:todolist_id>/", views.todolist_detail, name="todolist_detail"),
-    path("todolist/new/", views.create_todolist, name="create_todolist"),
-    path("todolist/", views.view_all_todolists, name="view_all_todolists"),
-    path("todolist/delete/<int:todolist_id>/", views.delete_todolist, name="delete_todolist"),
+    path("index/", views.index, name="index"),  # TODO: Change to landing page
+    path("new/", views.create_task, name="create_task"),
+    path("", views.view_all_tasks, name="view_all_tasks"),
+    path("delete/<int:task_id>/", views.delete_task, name="delete_task"),
+    path("complete/<int:task_id>/", views.complete_task, name="complete_task"),
 ]

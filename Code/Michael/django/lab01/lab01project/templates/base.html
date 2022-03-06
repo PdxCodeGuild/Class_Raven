@@ -20,18 +20,29 @@
 		></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
-	<body
-		class="d-flex flex-column h-100"
-		style="background-color: rgba(25, 109, 81, 0.336)"
-	>
-		<!-- Navbar -->
-		{% block navbar %} {% include 'partials/_navbar.html' %} {% endblock %}
-		<!-- Content -->
-		<main class="flex-shrink-0">
-			<div class="container">{% block content %}{% endblock %}</div>
-		</main>
-		<!-- Footer -->
-		{% block footer %} {% include 'partials/_footer.html' %} {% endblock %}
+	<body style="background-color: rgba(25, 109, 81, 0.336)">
+		<div class="row">
+			<!-- Navbar -->
+			<div class="col-12">
+				{% block navbar %} {% include 'partials/_navbar.html' %}
+				<!-- Stop prettier -->
+				{% endblock %}
+			</div>
+			<!-- Content -->
+
+			<div class="offset-3 col-auto">
+				<main class="">
+					<div class="container">{% block content %}{% endblock %}</div>
+				</main>
+			</div>
+			<!-- Footer -->
+			<div class="col-12">
+				{% block footer %} {% include 'partials/_footer.html' %}
+				<!-- Stop prettier -->
+				{% endblock %}
+			</div>
+		</div>
+
 		<!-- Scripts -->
 		<script src="{% static 'js/main.js' %}"></script>
 	</body>

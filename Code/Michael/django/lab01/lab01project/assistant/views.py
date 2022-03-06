@@ -1,68 +1,58 @@
-from django.shortcuts import render, get_list_or_404, get_object_or_404, reverse
-from django.http import HttpResponse, HttpResponseRedirect, Http404
-from users.models import CustomUser as User
-from .models import TodoList, Task
+from datetime import datetime
+from random import randint
+from django.shortcuts import render, get_object_or_404, reverse
+from django.http import HttpResponseRedirect
+from .models import *
 from django.contrib.auth.decorators import login_required
 
 
-
-
-# Create your views here.
-
+# Index page
 def index(request):
-    return render(request, 'assistant/index.html')
+    return HttpResponseRedirect(reverse("assistant:view_all_tasks"))
 
-def edit_task(request, task_id):
-    task = get_object_or_404(Task, pk=task_id)
-    if request.method == "POST":
-        task.title = request.POST['title']
-        task.description = request.POST['description']
-        task.save()
-        return HttpResponseRedirect(reverse('assistant:task_detail', args=(task.id,)))
-    return render(request, 'assistant/edit_task.html', {'task': task})
 
-def delete_task(request, task_id):
-    task = get_object_or_404(Task, pk=task_id)
-    task.delete()
-    return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(task.todolist.id,)))
-
-def create_task(request, todolist_id):
-    todolist = get_object_or_404(TodoList, pk=todolist_id)
-    if request.method == "POST":
-        task = Task(title=request.POST['title'], description=request.POST['description'], todolist=todolist)
-        task.save()
-        return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
-    return render(request, 'assistant/create_task.html', {'todolist': todolist})
-
+# Creates a task
 @login_required
-def create_todolist(request):
+def create_task(request):
     if request.method == "POST":
-        todolist = TodoList(name=request.POST['name'], description=request.POST['description'],color=request.POST['color'],icon=request.POST['icon'], owner=request.user)
-        todolist.save()
-        #return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
-    return render(request, 'assistant/create_todolist.html')
+        try:
+            Priority.objects.get(name=int(request.POST["priority"]))
+        except:
+            Priority.objects.create(name=int(request.POST["priority"]))
+        TodoItem(
+            name=request.POST["name"],
+            description=request.POST["description"],
+            owner=request.user,
+            priority=Priority.objects.get(name=int(request.POST["priority"])),
+        ).save()
+        return HttpResponseRedirect(reverse("assistant:view_all_tasks"))
+    else:
+        return render(request, "assistant/create_task.html")
 
-def edit_todolist(request, todolist_id):
-    todolist = get_object_or_404(TodoList, pk=todolist_id)
-    if request.method == "POST":
-        todolist.title = request.POST['title']
-        todolist.description = request.POST['description']
-        todolist.save()
-        return HttpResponseRedirect(reverse('assistant:todolist_detail', args=(todolist.id,)))
-    return render(request, 'assistant/edit_todolist.html', {'todolist': todolist})
 
-# Deletes a todo list
-def delete_todolist(request, todolist_id):
-    todolist = get_object_or_404(TodoList, pk=todolist_id)
-    todolist.delete()
-    return HttpResponseRedirect(reverse('assistant:view_all_todolists'))
+# Deletes a task
+@login_required
+def delete_task(request, task_id):
+    get_object_or_404(TodoItem, pk=task_id).delete()
+    return HttpResponseRedirect(reverse("assistant:view_all_tasks"))
 
-def view_todolist(request, todolist_id):
-    todolist = get_object_or_404(TodoList, pk=todolist_id)
-    return render(request, 'assistant/view_todolist.html', {'todolist': todolist})
 
-# Shows all todo lists
-def view_all_todolists(request):
-    todolists = TodoList.objects.all()
-    print(todolists)
-    return render(request, 'assistant/todo_list.html', {'todolists': todolists})
+# Shows all tasks
+@login_required
+def view_all_tasks(request):
+    tasks = TodoItem.objects.all()
+    return render(request, "assistant/task_list.html", {"tasks": tasks})
+
+
+# Completes a task
+@login_required
+def complete_task(request, task_id):
+    try:
+        Priority.objects.get(name=0)
+    except:
+        Priority.objects.create(name=0)
+    task = get_object_or_404(TodoItem, pk=task_id)
+    task.completed = datetime.now()
+    task.priority = Priority.objects.get(name=0)
+    task.save()
+    return HttpResponseRedirect(reverse("assistant:view_all_tasks"))

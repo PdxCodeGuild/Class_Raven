@@ -21,20 +21,6 @@
 	id="edit-form"
 >
 	{% csrf_token %}
-	<label for="first-name-field">First Name</label>
-	<input
-		type="text"
-		name="first-name"
-		id="first-name-field"
-		value="{{user.first_name}}"
-	/>
-	<label for="last-name-field">Last Name</label>
-	<input
-		type="text"
-		name="last-name"
-		id="last-name-field"
-		value="{{user.last_name}}"
-	/>
 	<label for="username-field">Username</label>
 	<input
 		type="text"
@@ -42,8 +28,7 @@
 		id="username-field"
 		value="{{user.username}}"
 	/>
-	<label for="email-field">Email</label>
-	<input type="email" name="email" id="email-field" value="{{user.email}}" />
+	
 	<label for="password-field">Password</label>
 	<input type="password" name="password" id="password-field" />
 	<button class="btn bg-dark text-light" type="submit">Submit</button>

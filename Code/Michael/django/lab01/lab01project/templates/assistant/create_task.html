@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<div class="row">
+	<div class="col-auto">
+		<form
+			action="{% url 'assistant:create_task' %}"
+			method="POST"
+			class="form-control">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input
+					type="text"
+					class="form-control"
+					id="name"
+					name="name"
+					placeholder="Name"/>
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<input
+					type="text"
+					class="form-control"
+					id="description"
+					name="description"
+					placeholder="Description"/>
+			</div>
+			<div class="form-group">
+				<label for="priority">Priority</label>
+				<select class="form-control" id="priority" name="priority">
+					<option value="3">High</option>
+					<option value="2">Medium</option>
+					<option value="1">Low</option>
+				</select>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
