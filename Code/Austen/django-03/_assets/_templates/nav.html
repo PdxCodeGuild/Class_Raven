@@ -1,0 +1,9 @@
+{% block nav %}
+<ul class="p-1">
+    <li class="m-2"><a class="p-1" href="{% url 'DEX:pokemon' 'all' 1 %}">view all</a></li>
+    <li class="m-2"><a class="p-1" href="">generations</a></li>
+    <li class="m-2"><a class="p-1" href="{% url 'DEX:typings' %}">types</a></li>
+    <li class="m-2"><a class="p-1" href="{% url 'DEX:abilities' %}">abilities</a></li>
+</ul>
+{% endblock nav %}
+

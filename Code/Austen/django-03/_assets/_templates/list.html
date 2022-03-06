@@ -1,0 +1,50 @@
+{% block list %}
+<ul>
+    {% if list_type == 'pokemon' %}
+        <h3>Pokemon</h3>
+        {% for item in list %}  
+            <li><a href="{% url 'DEX:details' filter page_number item.species %}">{{item}}</a></li>
+        {% endfor %}
+        {% if hidden %}
+            {% if page_number == pages %}
+                <details>
+                    <summary>hidden</summary>
+                    {% for item in hidden %}
+                        <li><a href="{% url 'DEX:details' filter page_number item.species %}">{{item}}</a></li>
+                    {% endfor %}
+                </details>  
+            {% endif %}
+        {% endif %}
+    {% elif list_type == 'typings' %}
+        <h3>Types</h3>
+        {% for item in list %}  
+            <li><a href="{% url 'DEX:pokemon' item.name page_number %}">{{item}}</a></li>
+        {% endfor %}
+    {% elif list_type == 'abilities' %}
+            <h3>Abilities</h3>
+            {% for item in list %}  
+                <li><a href="{% url 'DEX:pokemon' item.name page_number %}">{{item}}</a></li>
+            {% endfor %}
+    {% endif %}
+
+</ul>
+{% if pages %}
+pages:
+    {% if page_number > 2 %}
+        <a class="p-1" href="{% url 'DEX:pokemon' filter 1 %}">1</a>
+    {% endif %}
+
+    {% if page_number > 1 %}
+        <a class="p-1" href="{% url 'DEX:pokemon' filter prev_page %}">{{prev_page}}</a>
+    {% endif %}
+    <a class="p-1" href="{% url 'DEX:pokemon' filter page_number %}">{{page_number}}</a>
+    {% if page_number < pages %}
+        <a class="p-1" href="{% url 'DEX:pokemon' filter next_page %}">{{next_page}}</a>
+    {% endif %}
+    {% if page_number < last_page %}
+        <a class="p-1" href="{% url 'DEX:pokemon' filter pages %}">{{pages}}</a>
+    {% endif %}
+{% endif %}
+
+{% endblock list %}
+

@@ -1,0 +1,44 @@
+{% block details %}
+<div class="container">
+    <div class="row d-flex align-items-center">
+        <div class="col">
+            <h2 id="pokemon-header">{{pokemon}}</h2>
+        </div>
+        <div class="col-3">
+            <img id="pokemon-sprite" class="" src="{{pokemon.sprite}}" alt="{{pokemon.species}}-icon">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div id="stats-list" class="d-flex flex-column justify-content-center align-items-end pe-2">
+                <li>
+                    {{pokemon.height}}
+                </li>
+                <li>
+                    {{pokemon.weight}}
+                </li>
+            </div>
+
+        </div>
+        <div id="typing-ability-bar" class="col-8 d-flex flex-column justify-content-center">
+            <span id="pokemon-typing">
+                {{pokemon.typings_string}}
+            </span>
+            <br>
+            <span id="pokemon-abilities">
+                {{pokemon.abilities_string}}
+                {% if pokemon.hidden_ability_string != None %}
+                <br>
+                {{pokemon.hidden_ability_string}}
+                {% endif %}
+                
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+</div>
+
+
+{% endblock details %}
