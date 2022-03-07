@@ -1,0 +1,36 @@
+{% load static %}
+
+<div class="text-center">
+    <!-- follow/following badge -->
+    {% if request.user != user %}
+
+        {% if request.user in user.followers.all %}
+            <span class="badge bg-success follow" id="follow-{{user.id}}">Following</span>
+        {% else %}
+            <span class="badge bg-warning follow" id="follow-{{user.id}}">Follow</span>
+        {% endif %}
+
+    {% endif %}
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <strong class="ps-2">
+                Pics:
+            </strong>
+            <span class="lead">{{user.pics.all.count}}</span>
+        </div>
+        <div>
+            <strong class="ps-2">
+                Followers:
+            </strong>
+            <span class="lead" id='follower-count-{{user.id}}'>{{user.followers.all.count}}</span>
+        </div>
+        <div>
+            <strong class="ps-2">
+                Following:
+            </strong>
+            <span class="lead" id='following-count-{{user.id}}'>{{user.following.all.count}}</span>
+        </div>
+    </div>
+
+</div>

@@ -18,6 +18,8 @@ class trivia:
         questions = contents['results'] # gives all the data from the api
         
         self.info = questions # now the class is initialized
+
+        
         
         
 
@@ -64,9 +66,14 @@ counter = 0
 play = True
 
 
+
 while play:
+     #added these three lines to check if answers were correct and they are.
     
-    print(trivia.current_question, html.unescape(trivia.info[counter]['question']))
+    # print(trivia.info)
+    print(trivia.current_question, html.unescape(trivia.info[counter]['question']))  
+    # print(trivia.current_question, html.unescape(trivia.info[counter]['correct_answer']))
+    
     user_answer = input('Enter True or False: ').capitalize()
     
     if user_answer not in  ['True', 'False']:
@@ -79,7 +86,7 @@ while play:
     trivia.current_question += 1
     
     
-    if counter == 9:
+    if counter == 10:
         print(f'You answered {trivia.points} questions correctly')
         play_again = (input('Do you want to play again type yes or no \n>> ')).lower()
         if play_again == 'no':

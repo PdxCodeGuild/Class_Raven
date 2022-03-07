@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- <div class="register_page"> -->
+<h1 class="h1 text-center p-5">Register</h1>
+<div class="row d-flex justify-content-center">
+  <div class="card d-flex justify-content-center col-12 col-md-6 col-lg-4 shadow">
+    <div class="card-body d-flex justify-content-center">
+      <form action="{% url 'users_app:register' %}" method="POST">
+        <div class="d-flex flex-column justify-content-center">
+          <input
+            class="rounded mt-1"
+            type="text"
+            name="username"
+            placeholder="Enter username"
+          />
+          <input
+            class="rounded mt-3"
+            type="text"
+            name="password"
+            placeholder="Enter password"
+          />
+          {% csrf_token %}
+
+          <button
+            type="submit"
+            class="btn shadow btn-outline-primary d-flex mx-auto mt-4"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+{% endblock content %}

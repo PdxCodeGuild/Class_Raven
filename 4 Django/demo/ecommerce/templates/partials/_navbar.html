@@ -1,0 +1,45 @@
+{%load static%}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'shop_app:index' %}">eCommerce</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100 d-flex justify-content-end">
+                <div class="d-flex gap-2">
+
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="{% url 'users_app:logout' %}">
+                            <i class="fa fa-shopping-cart"></i> ({{request.user.cart.item_count}})
+                        </a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="{% url 'users_app:logout' %}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users_app:detail' user.username %}">
+                            Account
+                        </a>
+                    </li>
+                </div>
+
+                {% else %}
+                <div class="d-flex gap-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users_app:login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users_app:register' %}">Sign up</a>
+                    </li>
+                </div>
+
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>

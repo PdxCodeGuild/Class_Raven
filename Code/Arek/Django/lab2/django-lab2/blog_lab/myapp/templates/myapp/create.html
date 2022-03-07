@@ -1,0 +1,28 @@
+{% extends 'myapp/base.html' %}
+
+
+{% block content %}
+<h4>Create Post</h4>
+<form action="{% url 'myapp:create' %}" method="POST">
+    {% csrf_token %}
+    <div class='input-field'>
+        <label class='left light-blue-text' for="title">Title</label>
+    <input id='title-text' type="text" name="title">
+    
+    <label for="body"></label>
+    <textarea id='blog-body' name="body"></textarea>
+    
+
+    <button class='right ' type="submit">create</button>
+
+    </div>
+    
+
+
+</form>
+
+
+
+
+
+{% endblock content %}

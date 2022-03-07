@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Sora:wght@100&display=swap');
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-image: linear-gradient(to right, slateblue, #f28500);
+ }
+   .flex-item {
+   padding: 5px;
+   margin: 0px;
+   width: auto;
+   height: 50px;
+   line-height: 2.2em;
+   color: whitesmoke;
+   font-size: 1.5em;
+   text-align: center;
+   font-family: 'Sora', sans-serif;
+ }
+   .heading {
+     font-family: 'Rock Salt', cursive;
+     font-size:xx-large;
+     text-align: center;
+     font-size: 3em;
+   }
+   .blog-article {
+     background-color: #f2f1f8;
+     margin: 5%;
+     border-style: solid;
+     border-color:#f28500;
+     border-width: 1px;
+     padding: 30px;
+     border-radius: 30px;
+     list-style-type: none;
+
+   }
+   .blog-entry {
+       display:flex;
+    color: #f28500;
+    font-size: 2em;
+    font-weight:bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+  }
+
+
+  .paragraph {
+    color: #333333;
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    letter-spacing: 0.03em;
+  }
+
+  .item {
+    list-style-type:none;
+  }
+  .date {
+      font-family: 'Sora', sans-serif;
+      color: slateblue;
+  }
+  .details {
+    border-radius: 100px;
+    text-align:center;
+    border-style: solid;
+     border-color:slateblue;
+     border-width: 1px;
+     margin: 50px;
+     padding: 0px;
+
+
+  }
+  .authors-info {
+    font-family: 'Sora', sans-serif;
+    color: slateblue;
+
+  }

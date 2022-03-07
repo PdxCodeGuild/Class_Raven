@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # install our apps
     'users_app',
+    'pics_app',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +58,7 @@ ROOT_URLCONF = 'picster_proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # add the project-level templates folder to the list of templates directories
         'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -134,4 +137,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users_app.User'
 
 # tell django where to redirect if not logged in
+# when a view function with @login_required is visited
 LOGIN_URL = '/users/login'
