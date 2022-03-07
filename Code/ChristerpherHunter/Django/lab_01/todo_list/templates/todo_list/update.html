@@ -1,0 +1,36 @@
+{% extends "todo_list/base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="title center is-1">EDIT</h1>
+
+
+
+
+<p><strong>Update To-Do</strong>
+<div class="field has-addons">
+    <div class="control is-expanded">
+        <form id="my_form" action="{% url 'todo_list:update'%}" , method="POST">
+        <div class="select is-fullwidth">
+            {% csrf_token %}
+            <select name="todo-update">
+                {% for item in items %}
+
+                <option value="{{item.id}}">{{ item.todo_name }}</option>
+
+                {% endfor %}
+
+            </select>
+        </div>
+    </div>
+    <div class="control">
+        <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">
+            <i class="fas fa-edit"></i></a>
+        <!-- <button type="submit">update</button> -->
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

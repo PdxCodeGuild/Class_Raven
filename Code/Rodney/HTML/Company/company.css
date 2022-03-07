@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300&display=swap');
+
+
+/*-----------------body styling-------------------------------*/
+body {
+
+    background: url("image1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+   
+}
+/*-----------------navbar-------------------------------*/
+.navbar {
+
+    display: flex;
+    border:solid;
+    border-color: rgb(20, 88, 54);
+    border-radius: 1rem;
+    border-width: medium;
+}
+/*-----------------Top section (title and login an main pic)-------------------------------*/
+.container1 {
+display: flex;
+justify-content:center;
+flex-wrap: wrap;
+
+}
+#first-column1 {
+
+width: fit-content;
+height: 175px;
+font-size: xx-large;
+background-color: rgb(31, 153, 92);
+border: solid;
+border-radius: 8rem;
+text-decoration-color: rgb(20, 88, 54);
+text-align: center;
+justify-content: start;
+border-width:thin medium;
+padding: 50px;
+margin-top: 10px;
+margin-right:10%;
+text-shadow:2.5px 2.5px rgb(20, 88, 54);
+font-size: 2.5rem;
+margin-bottom: 2px;
+position: relative;
+bottom: -15px;
+}
+
+
+.login-style {
+float: right;
+border:solid;
+border-color: rgb(20, 88, 54);
+border-radius: 10%;
+padding: .5rem;
+box-shadow: 1px 2.5px;
+margin-top: 20px;
+}
+
+#second-column1 {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+#login-button {
+    margin-top: .51rem;
+    color: rgb(20, 88, 54);
+    height: 30px;
+}
+
+input[type=text], input[type=password] {
+    width:100%;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.picture {
+
+display: flex;
+justify-content: center;
+}
+
+#main-pic {
+    margin-top: 10px;
+    height: 250px;
+    width: 265px;
+    max-width: 265px;
+    border:solid;
+    border-color:rgb(20, 88, 54);
+    border-radius: 10%;
+}
+
+/*-----------------navbar-------------------------------*/
+
+.container2 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+text-align: center;
+font-size: 1.8rem;
+
+}
+
+#second-column2 {
+   margin-top: 20px;
+   font-weight: bolders;
+}
+
+.container2 div {
+    min-width: 300px;
+}
+
+
+.main-container {
+    font-size: xx-large;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    margin-top: 300px;
+    line-height: 1.5;
+}
+
+hr {
+    position: absolute;
+    margin-top: -1.5rem;
+    left:355px;
+    text-align: center; 
+    border-bottom: 4px solid rgb(18, 68, 43); 
+}
+
+.bold {
+    font-style: italic;
+    font-weight: bolder;
+    background-color: rgb(31, 153, 92);
+
+}
+
+a {
+    color:rgb(20, 88, 54)
+}
+
+h2 {
+    position: absolute;
+    margin-top: -3rem;
+    line-height: 4rem;
+    font-weight: bolder;
+}
+
+
+img {
+    height: 150px;
+    width: 45%;
+    max-width: 350px
+}
+
+
+.clearfix {
+    clear:both
+}
+
+.footer {
+    position:relative;
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+    color:rgb(20, 88, 54) ;
+    background-color: rgb(31, 153, 92);
+    text-align: center;
+    border:solid;
+    border-color:rgb(20, 88, 54);
+    height: 33px;
+    border-radius: 8%;
+    width: fit-content;
+    padding-left: .15rem;
+    padding-right: .15rem;
+    
+}

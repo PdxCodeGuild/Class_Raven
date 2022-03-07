@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    
+
+
+<div class="row d-flex justify-content-center">
+
+    <h3 style="color:rgb(25, 135, 84); margin-top: 50px; background-color: rgb(205, 240, 206); width: max-content; border-radius: 2%; padding: 10px ">
+        Blog Posts
+    </h3>
+
+    {% for blogpost in blogposts %}
+
+    {% include 'post/_card.html' with blogposts=blogposts %}
+
+        
+    {% endfor %}
+
+
+</div>
+
+
+{% endblock content %}

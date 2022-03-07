@@ -8,9 +8,9 @@ Weeks 6, 7, 8, 9: HTML/CSS/Flask
 
 Weeks 10, 11: Javascript
 
-**Weeks 12, 13, 14, 15: Django**
+Weeks 12, 13, 14, 15: Django
 
-Weeks 16, 17, 18: Capstone project
+**Weeks 16, 17, 18: Capstone project**
 
 ### Scheduled Holidays (no class)
 - **Nov 11** - Veterans Day
@@ -80,8 +80,12 @@ Weeks 16, 17, 18: Capstone project
   <summary>Django</summary>
   <ul>
     <li>Lab 01 - To Do List</li>
+    <li>Lab 02 - Blog</li>
+    <li>Lab 03 - Pokedex</li>
   </ul>
 </details>
+
+### Capstone proposals due Friday, 2022-01-21
 
 ## Submitting your work
 
@@ -191,6 +195,18 @@ Corrections will be made only to that particular branch.
 
 
 <details>
+  <summary>Django</summary>
+  <ul>
+    <li><a href="https://github.com/perennialAutodidact/django_guides/blob/master/custom_user_model.md">Guide to Extend Django's User Model</a> - by Keegan Good</li>
+    <li><a href="https://sodocumentation.net/django/topic/1235/querysets">Explanation of QuerySets</a></li>
+    <li><a href="https://medium.com/shecodeafrica/understanding-the-mvc-pattern-in-django-edda05b9f43f">Understanding MVC/MTV architecture in Django</a></li>
+    <li><a href="https://docs.djangoproject.com/en/4.0/topics/db/queries/#complex-lookups-with-q-objects">Complex Database Lookups with Q Objects</a></li>
+    <li><a href="https://docs.djangoproject.com/en/4.0/ref/models/querysets/#select-related">select_related()</a> & <a href="https://docs.djangoproject.com/en/4.0/ref/models/querysets/#prefetch-related">prefetch_related()</a> - Solving the n+1 problem in Django</li>
+
+  </ul>
+</details>
+
+<details>
   <summary>SQL</summary>
   <ul>
     <li><a href="https://mystery.knightlab.com/">SQL Murder Mystery</a></li>
@@ -214,6 +230,7 @@ Corrections will be made only to that particular branch.
 <details>
   <summary>Useful VS Code Extensions</summary>
   <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=WyattFerguson.jinja2-snippet-kit">Jinja2 Snippet Kit</a>Jinja2 snippets for cool attractive people to use in your HTML templates.</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a>Makes code blocks and nested expressions easier to read</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">Thunder Client</a>GUI to make and manage HTTP requests</li>
     <li><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All-In-One</a>Quickly create markdown tables of contents and other useful markdown features</li>

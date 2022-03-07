@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="uff-8">
+        <meta lang="en">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+
+
+    </head>
+    <body>
+        <h1 class="center-align">Todo List</h1>
+        <div class='container'>
+            <form action="{% url 'myapp:add_todo' %}" method="POST">
+                {%csrf_token %}
+                <label class="left-align black-text" for="choice-field">Priority</label>
+                <select name='choice-field' style="display: block; margin: 20px 0px;">
+                    <option value="" disabled selected>Choose the priority</option>
+                    <option value='High'>High</option>
+                    <option value='Medium'>Medium</option>
+                    <option value='Low'>Low</option>
+                </select>
+
+                <label class='left-align black-text' for="new-todo">New Todo</label>
+                <input type="text" name='new-todo'>
+            
+                <button class='orange' id ='submit-button' type="submit">Submit</button>
+
+            </form>
+
+        </div>
+        
+        <div class='container center-align'>
+            {% for myitem in myitems %}
+            <div id='todo-div' class='black white-text'>{{ myitem.text }}</div>
+            {% endfor %}
+
+
+
+        </div>
+        
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

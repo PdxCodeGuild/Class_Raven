@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12 col-lg-8 offset-lg-2 d-flex gap-3 flex-column align-items-center pt-5">
+        <h1 class="h1 py-2">{{user.username}}</h1>
+        {% if request.user == user %}
+            <a href="{% url 'users_app:update' user.username %}" class='link-secondary'>
+                <i class="fas fa-edit"></i>
+            </a>
+        {% endif %}
+        <img src="{% static user.avatar.url %}" alt="{{user.username}}'s avatar" class="rounded-circle shadow" height=250 width=250>
+    
+        {% include 'users/_follow-panel.html' with user=user %}
+    
+    </div>
+
+    <div class="col-8 offset-2 col-lg-4 offset-lg-4 pt-5">
+        <table class="table">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">First</th>
+                <td>
+                    {% if user.first_name %}
+                    {{user.first_name}}
+                        {% else %}
+                        Not Provided
+                    {% endif %}
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Last</th>
+                <td>{% if user.last_name %}
+                    {{user.last_name}}
+                        {% else %}
+                        Not Provided
+                    {% endif %}</td>
+              </tr>
+              <tr>
+                <th scope="row">Joined</th>
+                <td colspan="2">{{user.date_joined|date}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<h1 class="h1">Pics</h1>
+<div class="row d-flex justify-content-center pb-5 mb-5">
+    {% for pic in user.pics.all %}
+        <!-- 'with' passes a context variable to the partial -->
+        {% include 'pics/_card.html' with pic=pic%}
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="navigate-pages d-flex justify-content-end" style="margin-top: 5px;">
+
+  {% if pokemons_page.has_previous %}
+    <a class="mx-3 page-link" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253); border-radius: 5px;" href="?page_num={{pokemons_page.previous_page_number}}">Previous</a>
+  {% endif %}
+  <a class="page-link" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253); border-radius: 5px;" href="#">{{pokemons_page.number}}</a>
+  {% if pokemons_page.has_next %}
+    <a class="mx-3 page-link" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253); border-radius: 5px;" href="?page_num={{pokemons_page.next_page_number}}">Next</a>
+  {% endif %}
+
+
+</div>
+
+
+<div class="row d-flex justify-content-center ">
+
+    <div class="col-lg-10 col-sm-12">
+        
+        <nav class="navbar" style="margin: 20px;">
+            <div class="container-fluid d-flex justify-content-center">
+              <form action="{% url 'pokedex_app:home' %}" method='POST' class='d-flex'>
+                <input class="form-control me-2" type="text" id='search-name' name='search_name' placeholder="Search by name" aria-label="Search">
+                <button class="btn btn-outline-success" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);" type="submit">Search</button>
+                <a href="{% url 'pokedex_app:home' %}">
+                  <button class="btn btn-outline-success mx-2" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);">Clear</button>               
+               </a>
+  
+               
+                {% csrf_token %}
+              </form>
+            </div>
+          </nav>
+
+          <div class="d-flex justify-content-center" style="margin-bottom: 15px;">
+            <div class="ruler">
+              <i class="fas fa-ruler-vertical" style="color:rgb(13,110,253); font-size: 2.5rem; margin-bottom: 0px;"></i>
+            </div>
+      
+            <a href="{% url 'pokedex_app:heightup' %}">
+                <button class="btn btn-outline-success mx-2" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);" type="submit">Height <i class="fas fa-long-arrow-alt-up"></i></button>               
+            </a>
+
+            <a href="{% url 'pokedex_app:heightdown' %}">
+                <button class="btn btn-outline-success mx-2" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);" type="submit">Height <i class="fas fa-long-arrow-alt-down"></i></button>               
+            </a>
+        
+            <div class="space" style="margin:25px">
+
+            </div>
+
+            <a href="{% url 'pokedex_app:weightup' %}">
+                <button class="btn btn-outline-success mx-2" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);" type="submit">Weight <i class="fas fa-long-arrow-alt-up"></i></button>               
+            </a>
+
+            <a href="{% url 'pokedex_app:weightdown' %}">
+                <button class="btn btn-outline-success mx-2" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);" type="submit">Weight <i class="fas fa-long-arrow-alt-down"></i></button>               
+            </a>
+            <i class="fas fa-balance-scale-right" style="color:rgb(13,110,253); font-size: 2.2rem; margin-bottom: 0px;"></i>
+          </div>
+
+          <!-- <form action="% url 'pokedex_app:home' %" style="border-top: solid; margin-bottom: 15px; border-color:rgb13,110,253;" method='POST'>
+        <div class="col-12 d-flex justify-content-center" style="margin: 20px; flex-wrap: wrap;">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="normal" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox1">Normal</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="fire" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox2">Fire</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="water" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox3">Water</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="grass" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox1">Grass</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="electric" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox2">Electric</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="ice" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox3">Ice</label>
+              </div>
+              
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="poison" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox2">Poison</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="ground" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox3">Ground</label>
+              </div>
+              
+            </div>
+              
+            <div class="col-12 d-flex justify-content-center" style="margin: 20px; flex-wrap: wrap;">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="flying" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox1">Flying</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="psychic" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox2">Psychic</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="bug" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox3">Bug</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="rock" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox1">Rock</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="ghost" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox2">Ghost</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="fighting" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox1">Fighting</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="dragon" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox1">Dragon</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" value="steel" name="types" checked>
+                <label class="form-check-label" for="inlineCheckbox2">Steel</label>
+              </div>     
+            </div>
+
+            <div class="d-flex justify-content-center" style="margin: 20px;">
+              <button class="btn btn-outline-success" style="color:rgb(13,110,253); background-color: white; border-color:rgb(13,110,253);" type="submit">Filter by Type</button>
+            </div> -->
+           
+
+          <!-- % csrf_token %
+        </form> -->
+    
+        {% for pokemon in pokemons_page %}
+
+        <div class="card d-flex justify-content-center align-items-center" style="margin-bottom: 15px;">
+        
+            <div class="row" style="display: flex;">
+
+                <div class="column" style="flex: 50%; padding: 5px;">
+                    <img src="{{pokemon.image_front}}" width="200" height="200">
+                </div>
+      
+                <div class="column" style="flex: 50%; padding: 5px;">
+                    <img src="{{pokemon.image_back}}" width="200" height="200">
+                </div>
+    
+              </div>
+            <div class="card-body">
+              <h5 class="card-title" style="box-shadow: 2.5px 5px; border:solid; border-color:rgb(13,110,253); border-radius: 10px; background-color: rgb(169, 226, 236); padding: 15px">Name: <span style='font-size: 1.5rem; font-weight: bold; color: rgb(13,110,253);'>{{pokemon.name|title}}</span></h5>
+              <p class="card-text"></p>
+            </div>
+            <span class="badge badge-pill badge-danger">Danger</span>
+            <ul class="list-group list-group-flush d-flex justify-content-center align-items-center">
+              <li class="list-group-item">Number: {{pokemon.number}}</li>
+              <li class="list-group-item">Height: {{pokemon.height}}</li>
+              <li class="list-group-item">Weight: {{pokemon.weight}} pounds</li>
+
+              {% for type in pokemon.type %}
+              <div class="card-text" style="margin: 5px;">
+                <div class="badge badge-pill bg-primary p-2.8" style="font-weight: normal; font-size: 1rem; border: solid; border-color: rgb(169, 226, 236)">
+                    {{type}}
+                </div>
+            </div>
+             {% endfor %}     
+            </ul>
+            <div class="card-body">
+
+                  <a href="{{pokemon.url}}" class="card-link" style="color:rgb(13,110,253);">More about {{pokemon.name|title}} <i class="far fa-arrow-alt-circle-right" style="font-size: 1.5rem;"></i></a>
+        
+            </div>
+          </div>
+    
+        {% endfor %}
+    
+    </div>  
+
+</div>
+
+
+{% endblock content %}
+
+
