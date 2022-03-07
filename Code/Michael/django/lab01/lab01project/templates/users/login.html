@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<h1 class="display">Log in</h1>
+
+<form action="{% url 'users:login' %}" method="POST" class="auth-form">
+	<!-- Render error messages if they exist -->
+	{% if error%}
+	<h3 class="error">{{error}}</h3>
+	{% endif%} {% csrf_token %}
+	<label for="username-field">Username</label>
+	<input type="text" name="username" id="username-field" />
+
+	<label for="password-field">Password</label>
+	<input type="password" name="password" id="password-field" />
+
+	<button type="submit">Submit</button>
+</form>
+
+{% endblock content %}
