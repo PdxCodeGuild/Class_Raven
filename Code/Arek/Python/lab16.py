@@ -65,7 +65,7 @@ We repeatedly loop over the list, comparing each number to the one next to it, a
 
 """
 
-def bubbleSort(nums):
+"""def bubbleSort(nums):
     long = len(nums)
     reps = 0
     while reps < long + 1:
@@ -85,7 +85,31 @@ def bubbleSort(nums):
                    
 nums = [2, 4, 99, 45, 6, 5, 88, 8]
 index = bubbleSort(nums)
-print(index)
+print(index)"""
+
+
+
+nums = [2, 4, 99, 45, 6, 5, 88, 8]
+
+def bubble_sort(nums):
+    long = len(nums) - 1
+    
+    while True:
+        swapped = False
+        for i in range(long):
+           if nums[i] > nums[i + 1]:
+                check = nums[i]
+                nums[i] = nums[i + 1]
+                nums[i + 1] = check
+                swapped = True
+        if swapped == False:
+            break
+
+    return nums
+
+print(bubble_sort(nums))
+    
+
 
 
 

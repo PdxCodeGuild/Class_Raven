@@ -1,0 +1,12 @@
+asgiref==3.4.1
+black==21.12b0
+click==8.0.3
+colorama==0.4.4
+Django==4.0.1
+mypy-extensions==0.4.3
+pathspec==0.9.0
+platformdirs==2.4.1
+sqlparse==0.4.2
+tomli==1.2.3
+typing_extensions==4.0.1
+tzdata==2021.5

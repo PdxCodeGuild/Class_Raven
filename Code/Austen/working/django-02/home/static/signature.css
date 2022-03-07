@@ -1,0 +1,23 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+main {
+    min-height: 10vh;
+}
+a:any-link {
+    color: darkorange;
+    text-decoration: none;
+}
+
+#nav,
+#title {
+    max-width: fit-content;
+}
+
+@media screen and (min-width: 700px) {
+    #credits {
+        text-align: end;
+    }
+}

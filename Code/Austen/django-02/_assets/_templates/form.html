@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block forms %}
+    <h3>{{name.title}}</h3>
+    {% if selected_post %}
+        <form class="border-void p-3 d-flex flex-column align-items-center gap-2" action="{% url url username selected_post%}" method="post">
+    
+    {% elif username %}
+        <form class="border-void p-3 d-flex flex-column align-items-center gap-2" action="{% url url username %}" method="post">
+    {% else %}
+        <form class="border-void p-3 d-flex flex-column align-items-center gap-2" action="{% url url %}" method="post">
+    {% endif %}
+        {% if errors %}
+            {% for error in errors %}
+                <b>
+                    {{error}}
+                </b>
+            {% endfor %}
+        {% endif %}
+        {% csrf_token %}
+        {{form}}
+        <button class="btn-dark" type="submit">
+            {{name}}
+        </button>
+    </form>
+
+    <script src="{% static '_scripts/help-text.js' %}" onload="hideHelpText()"></script>
+{% endblock forms %}
