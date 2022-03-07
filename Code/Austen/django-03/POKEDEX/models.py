@@ -1,70 +1,126 @@
 from django.db.models import *
+from colorful.fields import RGBColorField as ColorField
 
 # Create your models here.
-
-class Pokemon(Model):
+class Species(Model):
     class Meta:
-        verbose_name = 'Pokemon'
-        verbose_name_plural = 'Pokemon'
-    dexid = IntegerField()
-    # url = URLField(required=False)
-    species = CharField(max_length=20)
-    stats = JSONField()
-    images = JSONField()
-    type1 = CharField(max_length=10)
-    type2 = CharField(max_length=10)
-    ability1 = CharField(max_length=25)
-    ability2 = CharField(max_length=25)
-    hidden_ability = CharField(max_length=25)
-    def __str__(self):
-        return f'#{self.dexid} - {self.species.title()}'
-    def typings_string(self):
-        if self.type2 != 'False':
-            return f'a {self.type1} and {self.type2} type pokemon.'
-        else:
-            return f'a {self.type1} type pokemon.'
-    def abilities_string(self):
-        string = f'abilit'
-        if self.ability2 != 'False':
-            string += f'ies: {self.ability1}, {self.ability2}'
-        else:
-            string += f'y: {self.ability1}'
-        return string
-    def hidden_ability_string(self):
-        if self.hidden_ability != 'False':
-            return f'hidden: {self.hidden_ability}'
-    def height(self):
-        stat = self.stats['height']
-        return f'height: {stat}m'
-    def weight(self):
-        stat = self.stats['weight']
-        return f'weight: {stat}kg'
-    def sprite(self):
-        sprite = self.images['standard']
-        return sprite    
-    def shiny_sprite(self):
-        sprite = self.images['shiny']
-        return sprite
-
-
-class Typing(Model):
-    typeid = IntegerField()
-    symbol = ImageField()
-    # url = URLField()
-    name = CharField(max_length=10)
-    immunities = CharField(max_length=10)
-    weaknesses = CharField(max_length=10)
-    strengths = CharField(max_length=10)
-    def __str__(self):
-        return f'{self.name}'
-
-class Ability(Model):
-    class Meta:
-        verbose_name = 'Ability'
-        verbose_name_plural = 'Abilities'
-    abilityid = IntegerField()
+        verbose_name_plural = 'Species'
+    dexid = IntegerField(primary_key=True)
+    url = URLField()
     name = CharField(max_length=25)
-    # url = URLField()
-    description = TextField()
+    type1 = ForeignKey('Typing', on_delete=SET_NULL, null=True, related_name='type1')
+    type2 = ForeignKey('Typing', on_delete=SET_NULL, null=True, related_name='type2')
+    sprite = URLField()
+    ability1 = ForeignKey('Ability', on_delete=SET_NULL, null=True, related_name='ability1')
+    ability2 = ForeignKey('Ability', on_delete=SET_NULL, null=True, related_name='ability2')
+    hidden_ability = ForeignKey('Ability', on_delete=SET_NULL, null=True, related_name='hidden_ability')
+    height = DecimalField(default=0, decimal_places=2, max_digits=5)
+    weight = DecimalField(default=0, decimal_places=2, max_digits=5)
+    hp = IntegerField(default=0)
+    attack = IntegerField(default=0)
+    s_attack = IntegerField(default=0)
+    defense = IntegerField(default=0)
+    s_defense = IntegerField(default=0)
+    speed = IntegerField(default=0)
     def __str__(self):
-        return f'{self.name}'
+        return self.name
+    def stat_total(self):
+        return self.hp + self.attack + self.s_attack + self.defense + self.s_defense + self.speed
+    def get_data(query=False):
+        import requests as api
+        url = 'https://pokeapi.co/api/v2/pokemon/'
+        if query:
+            url += str(query)
+        response = api.get(url)
+        data = response.json()
+        return data
+    def get_list(filter=False, filter_type=False):
+        from django.core.paginator import Paginator
+        pokemon_list = Species.objects.all().order_by('dexid')
+        if filter:
+            if filter_type == 'typing':
+                typing = Typing.objects.get(name=filter)
+                if len(typing.pokemon.all()) == 0:
+                    pokemon_list = Species.objects.filter(Q(type1=typing.typeid)|Q(type2=typing.typeid)).order_by('dexid')
+                    for pokemon in pokemon_list:
+                        try:
+                            typing.pokemon.add(pokemon)
+                            typing.save()
+                        except:
+                            print('\n\n\n\n\n\n\n\n\nno\n\n\n\n\n\n\n\n\n')
+                else:
+                    pokemon_list = typing.pokemon.all()
+            elif filter_type == 'ability':
+                ability = Ability.objects.get(name=filter)
+                if len(ability.pokemon.all()) == 0:
+                    pokemon_list = Species.objects.filter(Q(ability1=ability.abilityid)|Q(ability2=ability.abilityid)).order_by('dexid')
+                    hidden = Species.objects.filter(hidden_ability=ability.abilityid).order_by('dexid')
+                    for pokemon in pokemon_list:
+                        try:
+                            ability.pokemon.add(pokemon)
+                            ability.save()
+                        except:
+                            print('\n\n\n\n\n\n\n\n\nno\n\n\n\n\n\n\n\n\n')
+                    for pokemon in hidden:
+                        try:
+                            ability.pokemon.add(pokemon)
+                            ability.save()
+                        except:
+                            print('\n\n\n\n\n\n\n\n\nno\n\n\n\n\n\n\n\n\n')
+                else:
+                    pokemon_list = ability.pokemon.all()
+                    hidden = Species.objects.filter(hidden_ability=ability.abilityid).order_by('dexid')
+
+                return (Paginator(pokemon_list, 18), hidden)
+            
+        return Paginator(pokemon_list, 18)
+    def check_data(self):
+        stats = [
+            self.height,
+            self.weight,
+            self.hp,
+            self.attack,
+            self.s_attack,
+            self.defense,
+            self.s_defense,
+            self.speed
+        ]
+        for stat in stats:
+            if stat == 0:
+                stats = None
+        if self.sprite == 'x.com':
+            sprite = None
+        else:
+            sprite = self.sprite
+        details = [
+            self.type1,
+            sprite,
+            self.ability1,
+            stats
+        ]
+        return details
+class Typing(Model):
+    typeid = IntegerField(primary_key=True)
+    url = URLField()
+    name = CharField(max_length=25)
+    color = ColorField(default='#000000')
+    pokemon = ManyToManyField('Species')
+    def __str__(self):
+        return self.name
+    def get_data(query=False):
+        import requests as api
+        url = 'https://pokeapi.co/api/v2/type/'
+        if query:
+            url += str(query)
+        response = api.get(url)
+        data = response.json()
+        return data
+class Ability(Model):
+    abilityid = IntegerField(primary_key=True)
+    url = URLField()
+    name = CharField(max_length=25)
+    pokemon = ManyToManyField('Species')
+    def __str__(self):
+        return self.name
+    def get_data(query=False):
+        return

@@ -1,6 +1,7 @@
 :root {
     --red: #660000;
-    --grey: #c2c2c2;
+    --light-grey: #c2c2c2;
+    --grey: #7c7c7c;
     --dark-grey: #5c5c5c;
     --white: #ffffff;
     --black: #000000;
@@ -8,7 +9,7 @@
 
 body {
     background-color: var(--red);
-    color: var(--grey)
+    color: var(--light-grey)
 }
 
 a:any-link {
@@ -35,13 +36,17 @@ header {
 #pokemon-header {
     font-size: 38px;
 }
-#typing-ability-bar {
+#pokemon-typing {
     color: var(--white);
     background-color: var(--dark-grey);
+    font-size: 14px;
 }
-#pokemon-typing {
+#pokemon-abilities, #hidden-ability {
     font-size: 14px;
 }
 #pokemon-abilities {
-    font-size: 14px;
+    background-color: var(--grey);
+}
+#hidden-ability {
+    background-color: var(--black);
 }
