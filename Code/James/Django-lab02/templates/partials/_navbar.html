@@ -1,0 +1,25 @@
+{% load static %}
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a
+      class="nav-link active"
+      aria-current="page"
+      href="{% url 'blog_app:home' %}"
+      >Home</a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link p-2" href="{% url 'users_app:logout' %}">Sign out</a>
+  </li>
+  {% if request.user.is_authenticated %}
+  <li class="nav-item">
+    <a class="nav-link p-2" href="{% url 'blog_app:create' %}">Create</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link p-2" href="{% url 'users_app:profile' user.username %}"
+      >Profile</a
+    >
+  </li>
+</ul>
+{% endif %}

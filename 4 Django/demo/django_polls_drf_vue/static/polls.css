@@ -1,0 +1,103 @@
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }
+  
+  h1, .display-1 {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  .display-1 {
+    font-size: 3rem;
+    margin: 30px;
+  }
+  
+  .container {
+    background-color: lightslategray;
+    min-height: 100vh;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    text-align: center;
+  }
+
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  input {
+    padding: 10px;
+  }
+  
+  input[type=number] {
+    width: 2vw;
+  }
+  
+  button {
+    color: lightgrey;
+    background-color: purple;
+    border: none;
+    border-radius: 5px;
+    padding:10px;
+    margin-top: 15px;
+    width: 5vw;
+  }
+  
+  
+  
+  
+  /* POLLS */
+  
+  .poll {
+    width: 50vw;
+    padding: 30px;
+    margin: 10px auto;
+  
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    
+    background-color: lightseagreen;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .choice-label {
+    font-size: 2rem;
+  }
+  
+  .choices {
+    list-style: none;
+    padding:0;
+  }
+  
+  .choice {
+    width: 40%;
+    padding: 5px;
+    margin: 5px auto;
+    
+    background-color: lightsteelblue;
+    border-radius: 5px;
+      
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: teal;
+  }

@@ -11,13 +11,9 @@ let pageNumber, newQuote;
 
 pageNumber = 1;
 
-
-// notice that the base url changes from /api/qotd to /api/quotes
 let url = `https://favqs.com/api/quotes?page=${pageNumber}&filter=${queryString}`
 
 const headers = {
-    // ... other headers
-
     Authorization: `Token token=${FAVQS_API_KEY}`
 }
 

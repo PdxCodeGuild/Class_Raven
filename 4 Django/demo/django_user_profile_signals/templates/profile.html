@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .success {
+            color: green;
+        }
+        .warning {
+            color: gold;
+        }
+        .error {
+            color: darkred;
+        }
+    </style>
+
+    <title>Profile</title>
+</head>
+<body>
+
+    {% if messages %}
+        {% for message in messages %}
+            <h1 style="text-align: center;" class="{{ message.tags }}">{{ message }}</h1>
+        {% endfor %}
+    {% endif %}
+
+    <h1 style="text-align: center;">{{ profile }}</h1>
+</body>
+</html>
