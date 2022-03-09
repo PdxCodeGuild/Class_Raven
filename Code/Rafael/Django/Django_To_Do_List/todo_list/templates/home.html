@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   | Home
+{% endblock title %}
+
+{% block content %}
+  
+        {% if myinstances %}
+        <div class="table-responsive table-bordered" style="margin-top:80px;">
+            <table class="table table-sm  table-striped table-bordered table-light">
+                <thead>
+                    <tr>
+                    <th class="text-center" scope="col">To-Do's</th>
+                    <th class="text-center" scope="col">Delete</th>
+                    <th class="text-center" scope="col">Not Complete</tr>
+                </thead>
+                <tbody class=" align-center">
+                {% for myinstance in myinstances %}
+                    {% if myinstance.completed %}
+                       
+                        
+                            
+                        </tr>
+                    {% else %}
+                    <tr>
+                            <td class="text-center"><h5>{{ myinstance.mymodel }}</h5> <p> (&nbsp;Priority: {{ myinstance.priority }}&nbsp;)<br><p style="font-size:0.8rem;">[&nbsp;Created: {{ myinstance.created }}&nbsp;] </p></td>
+                            <td class="text-center"><a class="btn btn-warning" href="{% url 'delete' myinstance.id %}"><i class="far fa-trash-alt"></i></a></td>
+                            <td class="text-center"><a class="btn btn-success" href="{% url 'cross_off' myinstance.id %}">Complete&nbsp;<i class="fas fa-check-square"></i></a></td>
+                           
+                            
+                        </tr>            
+                    {% endif %}
+                    
+                {% endfor %}
+
+                <div class="table-responsive">
+                    
+                    <table class="table table-sm table-bordered table-success">
+                        <thead>
+                            <tr>
+                            <th class="text-center" scope="col">Completed To-Do's</th>
+                            <th class="text-center" scope="col">Delete</th>
+                            <th class="text-center" scope="col">Completed</th>
+                </tbody>
+                <tbody class=" align-center">
+                    {% for myinstance in myinstances %}
+                        {% if myinstance.completed %}
+                            <tr class="table-secondary" >
+                                <td class="striker text-center"><h5>{{ myinstance.mymodel }}</h5></td>
+                                <td class="text-center"><a class="btn btn-danger" href="{% url 'delete' myinstance.id %}"><i class="far fa-trash-alt"></i></a></td>
+                                <td class="text-center"><a class="btn btn-info" href="{% url 'uncross' myinstance.id %}">un-complete&nbsp<i class="far fa-calendar-times"></i></i></a></td>
+                                
+                            </tr>
+                       
+                               
+                                
+                            </tr>            
+                        {% endif %}
+                        
+                    {% endfor %}
+    
+                    <div class="table-responsive">
+                        </div>
+                        
+                      
+                    </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+{% endblock content %}
+
