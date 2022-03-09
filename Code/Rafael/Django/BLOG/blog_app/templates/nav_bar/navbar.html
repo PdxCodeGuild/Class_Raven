@@ -1,0 +1,70 @@
+{% load static %}
+
+
+{% if request.user.is_authenticated %}
+
+
+<!-- boolean value in django using jinja to authenticate a user -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
+  <div class="container-fluid">
+   
+    <a class="navbar-brand" href="{% url 'post_app:home' %}"><i class="fa-solid fa-house-user" style="1.8rem;"></i></i>&nbsp;BLOG</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample05">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <i style=" color:#4de053;" >logged in&nbsp;&nbsp;&nbsp;</i></i>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'blog_app:logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i><i>&nbsp;</i>Log Out</a>
+        </li>
+        <div class="v2"></div>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'post_app:home' %}"> <i class="fas fa-briefcase">&nbsp;</i>Make a Post</a>
+        </li>
+        
+      </ul>
+      <form>
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+  </div>
+</nav>
+
+{% else %}
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
+  <div class="container-fluid">
+   
+    <a class="navbar-brand" href="{% url 'post_app:home' %}"><i class="fas fa-home"></i></i>&nbsp;BLOG</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample05">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       <p style="color:red;">&nbsp;logged Out&nbsp;&nbsp;&nbsp;</p></i>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'blog_app:login' %}"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;<i>Log In</i></a>
+        </li>
+        <div class="v3"></div>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'blog_app:register' %}"> <i class="fa-solid fa-pen-to-square"></i>&nbsp;</i>register</a>
+        </li>
+        <div class="v2"></div>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'post_app:home' %}"> <i class="fas fa-briefcase">&nbsp;</i>Login to make a Post</a>
+        </li>
+      
+       
+      </ul>
+      <form>
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+{% endif %}

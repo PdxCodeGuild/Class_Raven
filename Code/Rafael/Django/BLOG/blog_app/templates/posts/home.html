@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+
+
+
+
+
+<div class="  d-flex container-fluid section2bg pb-5 pt-5" style="margin-top:-150px;" >
+  <div class="  rowmargins pt-5 pb-5">
+    
+    <div class=" row mb-5 mt-5">
+     <div class="row d-flex justify-content-center">
+      <a class="create_job" type="button" href="{% url 'post_app:create' %}">Create a Job Post</a>
+    
+        {% for post in posts %}
+        {% include 'posts/card.html' with post=post %}
+        {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+{% endblock content %}

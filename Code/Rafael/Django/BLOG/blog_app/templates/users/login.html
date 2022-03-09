@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<container class="register_container shadow p-3 mb-5 bg-body rounded" style=" display:flex;
+max-width:600px;
+justify-content: center; flex-direction:column; margin-top:50px;">
+    <h1 class="h1" style="display:flex; justify-content:center; margin-top:40px; margin-bottom: 25px; margin-left:35px; color:black; font-family:lato;">Login User</h1>
+<!-- Add the {% csrf_token %} to every Django template you create that uses POST to submit data. -->
+<!--form action is tied to the view name and method for get/post method-->
+    <form action="{% url 'blog_app:login' %}" method="POST" class='d-flex flex-column align-items-center gap-2'>
+        <fieldset>
+            <label for="id_username">
+                {{form.username.label}}
+            </label>
+            <br>
+            {{form.username}} 
+        </fieldset>
+        <fieldset>
+            <label for="id_password" style="padding-left:5px;">
+                {{form.password.label}}
+            </label>
+            <br>
+            {{form.password}} 
+        </fieldset>
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success" style="max-width:265px; margin-bottom:50px; margin-top:15px;">Login</button>
+        <!-- {{form}} will render the entire default form fields -->
+       
+    </form>
+    
+</container>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 style="text-align:center; padding-bottom:30px; padding-top:40px;">Create a Blog Post</h1>
+<div id="container">
+  
+    
+<body 
+style="white;" >
+
+<div 
+class="row" >
+
+    <!-- enctype allows images and other types to be generated -->
+<form action="{% url 'post_app:create' %}"
+
+{{form}}
+{% csrf_token %}
+<button 
+type="submit" 
+class="">Submit</button>
+</form>
+</div> 
+
+</body>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

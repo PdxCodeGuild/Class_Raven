@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+
+
+<section>
+     
+      <div class=" row mb-5 mt-5">
+    
+        {% if request.user.is_authenticated %}
+       
+        <div class="detail-page" >
+<!-- Login Options Available with request.user.is.authenticated -->
+          {% if request.user.is_authenticated %}
+         
+          
+             
+         
+       
+    
+         </div>
+
+       
+       <div class="row d-flex justify-content-center" style="max-width:800px; margin-right:auto; margin-left:auto;">
+       
+        <div class="container detail">
+
+
+        <div>
+          <h2><i class="fa-solid fa-circle-user" >&nbsp;&nbsp;</i><br>{{post.user.username}}</h2>
+        </div>
+            
+        </div>
+          
+          <h1 class="secondary-text" style="font-size:2.6rem!important; text-align:center;">{{post.title}}</h1>
+             
+         
+    
+          </section>
+           <div id="date">
+           <a ></i> {{post.job_boby}}</a><br>
+           <i class="fa-solid fa-calendar-days">&nbsp;&nbsp;</i>Created: {{post.date_created}}</a>
+           <hr class="solid">
+         
+           {% endif %}
+      
+        
+
+
+{% endblock content %}

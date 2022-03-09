@@ -1,0 +1,35 @@
+
+
+{% block content %}
+{% load static %}
+{% load humanize %}
+
+<div >
+  
+     
+   </div>
+   <a href="" class="alpha" style="margin-top:-23px; font-size:1.3rem;">{{post.user.username}}&nbsp;</a>
+   <div class="desc" style="margin-top:23px;">
+   
+    <hr class="solid">
+    <h3 class="secondary-text">{{post.title}}</h3>
+    <hr class="solid">
+    <div id="date">
+    <a >Created: {{post.date_created}}</a>
+    <a >Edited: {{post.date_edited}}</a>
+    <hr class="solid">
+    </div style="margin-bottom:10px;">
+    <p class="card-text" style="color:white; padding-left:6px; padding-right:22px;">{{post.body}}</p>
+   </div>
+   <a href="{% url 'post_app:detail' post.id %}"><button class="primary-text">
+    <div class="d-flex flex-row justify-content-center">
+   
+    </div>
+   <div class="details">
+    
+    {% endif %}
+    </div>
+     
+   </div>
+    
+ {% endblock content %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+
+<div class="row" style="margin-top:50px; margin-right:auto; margin-left:auto; max-width:600px;"> 
+
+    <div>
+
+        <!-- Conditioanl rendering  -->
+        {% if request.user == user %}
+        <a href="{% url 'blog_app:update' user.username %}" class="link-secondary" title="" >
+            <i class="fa fa-edit" style="font-size:1.5rem;">Edit: First/Last Name/Email&nbsp;&nbsp;&nbsp;</i>
+
+        </a>
+        {% endif %}
+<!--
+        <img src="{% static user.user_images.url %}" alt="{{ user.username }}" class="rounded-circle" height="300" width="300">
+-->
+<br>
+<br>
+</div>
+<div class="user-detail" 
+</div>
+        
+        
+  
+    <table class="table table-success table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+           
+            <th scope="col">Last Name</th>
+          
+            <th scope="col">Joined</th>
+
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+<!--
+            <th scope="col">Job Field</th>
+          </tr>
+        </thead>
+      -->        
+        <tbody>
+          <tr>
+         
+            <td>
+                {% if user.first_name %}
+                {{user.first_name}}
+                {% else %}
+                Not Provided
+                {% endif %}
+            </td>
+
+            <td>
+                 {% if user.last_name %}
+                {{user.last_name}}
+                {% else %}
+                Not Provided
+                {% endif %}
+
+            </td>
+            <td>{{user.date_joined | naturaltime}}</td>
+            <td>{{user.email}}</td>
+      
+        </tbody>
+      </table>
+      <table class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+           
+         
+        </tbody>
+      </table>
+
+      
+</div>
+<!-- Job posting's to appear in decending order  -->
+<h2  class="d-flex justify-content-center">Your Blog Posts</h2>
+<div class=".row d-flex"></div>
+
+
+<div class="row d-flex justify-content-center pb-5 mb-5">
+
+    {% for post in user.post.all %}
+
+        <!-- 'with' passes a context variable to the partial -->
+        {% include 'posts/card2.html' with post=post%}
+
+    {% endfor %}
+
+</div>
+
+
+
+
+{% endblock content %}
