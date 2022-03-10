@@ -1,0 +1,52 @@
+body {
+    background-color: #8fbc8f;
+    font-family: sans-serif;
+}
+
+.instructions{
+    display: flex;
+    margin-top: 15%;
+    justify-content: center;
+
+}
+
+.instruction-text {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.btn {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.row {
+    margin-left: 45%;
+    width: 10%
+}
+
+.quoteDiv {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: -5%;
+    background-color: seagreen;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: darkslategrey;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.searchBar {
+    display: flex;
+    margin-left: 25%;
+    width: 50%;
+}
+
