@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="row d-flex justify-content-center align-items-center">
+    <h1 class="py-5 text-center">Hello, {{user.username}}.</h1>
+    <div class="col-12 col-md-6 col-lg-4 pt-3 shadow">
+        <table class="table table-dark table-striped">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">First:</th>
+                    <td>
+                        {% if user.first_name %} {{user.first_name}} {% else %} Not Provided
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Last:</th>
+                    <td>
+                        {% if user.last_name %} {{user.last_name}} {% else %} Not Provided
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Joined:</th>
+                    <td colspan="2">{{user.date_joined|date}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}
