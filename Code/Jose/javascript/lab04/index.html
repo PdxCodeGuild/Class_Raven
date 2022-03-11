@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="./static/index.css">
+    <title>To do list</title>
+</head>
+
+
+<body>
+    <h1>To do list</h1>
+
+    <div>
+        <input id='todoInput' type='text' placeholder="Add a new task here.">
+        <button id='addTodo'>+</button>
+    </div>
+    <h2>To do:</h2>
+    <ul id='incompletedList'></ul>
+
+    <h2>Completed:</h2>
+    <ul id='completedList'></ul>
+
+    <script src='./static/todolist.js'> </script>
+</body>
+</html>

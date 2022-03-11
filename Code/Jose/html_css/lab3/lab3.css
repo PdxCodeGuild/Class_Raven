@@ -1,0 +1,214 @@
+.topnav {
+    overflow: hidden;
+    background-color: rgb(30,45,59);
+    position: absolute;
+    width: 85%;
+    font-family: helvetica;
+    margin-left: 15%;
+    padding: 25px;
+}
+
+    .topnav a {
+    float: right;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.top-nav-image {
+    background-color: #EDCD1F; 
+    position: absolute;
+    width: 335px;
+    height: 86px;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center
+}
+
+.hero-text {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(59, 59, 59, 0.5)), url("https://imgs.6sqft.com/wp-content/uploads/2017/09/11132406/ODA_Rheingold.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 400px;
+    padding-bottom: 400px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20rem;
+}
+
+.column-text {
+    font-weight: 500;
+    font-size: 4rem;
+    color: rgb(30,45,59);
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 0.1;
+}
+
+.service-title {
+    color:#3d5975;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 50%;
+    line-height: 25px;
+}
+
+.service-description {
+    margin-left: 20px;
+    width: 90%;
+    font-weight: 350;
+}
+
+
+.first-column {
+    background-color: #f7f7f7;
+}
+
+.second-column {
+    background-color: #f7f7f7;
+}
+
+.third-column {
+    background-color: #f7f7f7;
+}
+
+.about-column {
+    background-image: url("https://static.wixstatic.com/media/c19c76_427a7bbf62474f74968cb087499c7a3e.jpg/v1/fill/w_1903,h_683,al_c,q_85,usm_0.66_1.00_0.01/c19c76_427a7bbf62474f74968cb087499c7a3e.webp");
+    background-repeat: no-repeat;
+}
+
+.about-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: left;
+}
+
+.about-header {
+    background-color: #f7f7f7;
+    color:rgb(30,45,59);
+    margin-bottom: 0%;
+    padding-top: 3%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    width: 50%;
+}
+.about-text {
+    width: 50%;
+    background-color: #f7f7f7;
+    padding-left: 20%;
+    padding-right: 10%;
+    padding-bottom: 52px;
+    font-weight: 350;
+    font-size: 1.2rem;
+    margin-bottom: 0%;
+}
+@media (min-width: 1200px) {
+    .about-text {
+    width: 50%;
+    }
+    .about-header {
+        width: 50%
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .about-text {
+    width: 520px;
+    }
+    .about-header {
+        width: 520px
+    }
+}
+
+.stats-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background-color: #edcd1f;
+
+
+}
+
+.stats-column {
+    display: flex;
+    flex-direction: column;
+    flex: 0.1;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #3d5975;
+    margin-bottom: 0%;
+    
+}
+.stat-description {
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 20px;
+    color: #3d5975;
+    text-align: center;
+}
+
+.project-text {
+    font-weight: 500;
+    font-size: 4rem;
+    color: rgb(30,45,59);
+    text-align: center;
+}
+
+.projects-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.projects-column {
+    padding: 0.5%;
+    background-color: #f7f7f7;
+}
+
+.navbar-brand {
+    color:black;
+    background-color:#EDCD1F;
+    border-radius: 25px;
+    font-family: helvetica;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
