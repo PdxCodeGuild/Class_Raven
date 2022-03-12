@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block nav %}
+    <div class="d-flex flex-column align-items-center">
+        {% for post in posts %}
+            {% if post.public %}
+                <a href="{% url 'BLOG:view' selected_user.username post.title %}">{{post.title.title}}</a>
+            {% elif post.blog == user.blog %}
+                <a href="{% url 'BLOG:view' selected_user.username post.title %}" class="private-post">{{post.title.title}} (private)</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock nav %}
+{% block content %}
+    <h5>
+        {{selected_user.username}}'s blog
+    </h5>
+    {% if selected %}
+        <h3>{{selected.title.title}}</h3>
+        <p>{{selected.content}}</p>
+
+        <small>created: {{selected.created.date}}</small>
+        {% if selected.edited.date != selected.created.date %}
+            <br>
+            <small>last edited: {{selected.edited.date}}</small>
+        {% endif %}
+        {% if selected_user == user %}
+            <br>
+            <a href="{% url 'BLOG:edit_post' user.username selected.title %}">edit post</a>
+        {% endif %}
+    {% endif %}
+{% endblock content %}

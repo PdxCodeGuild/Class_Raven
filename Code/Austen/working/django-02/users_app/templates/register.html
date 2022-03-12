@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Register</h1>
+
+{% if form %}
+<form action="" method="post">
+    {{form}}
+    {% csrf_token %}
+
+    <br><button class="btn-dark">register</button>
+</form>
+{% endif %}
+
+<h1>{{registered}}</h1>
+
+{% endblock %}

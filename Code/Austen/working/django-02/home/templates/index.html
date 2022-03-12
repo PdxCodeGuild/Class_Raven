@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block index %}
+
+<header class="row border-bottom m-1">
+    <div class="col-12 d-flex justify-content-between">
+        <div id="title" class="d-flex align-items-center">
+            <h1>Golb</h1>
+            <h4 class="ms-3">- not a blog</h4>
+        </div>
+        <nav id="nav" class="d-flex gap-2 align-items-center justify-content-end">
+            <a href="{% url 'users:login' %}">login</a>
+            <a href="{% url 'users:register' %}">register</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    {% block content %}
+    {% endblock content %}
+</main>
+<footer class="row m-1 d-flex align-items-center border-top text-secondary">
+    <span class="col-lg-6" id="copywrite">&copy;2022 Austen Myers-Flachson</span>
+    <span class="col-lg-6" id="credits">built with Django, styled
+        with
+        Bootstrap</span>
+</footer>
+{% endblock index %}

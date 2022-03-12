@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Login</h1>
+
+{% if form %}
+
+<form action="" method="post">
+    {{form}}
+
+    {% csrf_token %}
+
+    <br><button class="btn-dark">login</button>
+</form>
+{% elif logged_in %}
+Welcome, {{logged_in}}.
+
+{% endif %}
+
+{% endblock %}

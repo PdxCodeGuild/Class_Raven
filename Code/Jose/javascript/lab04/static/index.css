@@ -1,0 +1,8 @@
+body {
+    background-color: #8fbc8f;
+    font-family: sans-serif;
+}
+
+#completedList {
+    text-decoration: line-through;
+}
