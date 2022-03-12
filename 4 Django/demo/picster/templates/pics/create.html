@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <h1 class="h1 text-center py-3">New Pic</h1>
+    <div class="row">
+        <div class="col-10 offset-1 col-md-6 offset-md-3">
+            <!-- enctype attribute allows the image to be uploaded -->
+            <form action="{% url 'pics_app:create' %}" method="POST" enctype="multipart/form-data" class="d-flex flex-column gap-3 p-3">
+                {% csrf_token %}
+                {{form}}
+                <button type='submit' class='btn btn-success form-control mt-3'>Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
+
+    

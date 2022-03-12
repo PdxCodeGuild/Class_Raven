@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+    <div class="row d-flex justify-content-center my-auto min-vh-100">
+      <div class="col-12 col-md-column col-lg-6 my-auto p-5">
+          <h2 class="d-flex justify-content-start"><i class="bi bi-paragraph"></i>Welcome to BlogPost</h1>
+          <p class="d-flex mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </p>
+          <a href="{% url 'users_app:register' %}" class="btn btn-sm shadow btn-outline-primary"
+            >Register</a
+          >
+      </div>
+      <div class="d-flex col-12 col-md-column col-lg-6 my-auto p-5 ">
+        <div class="">
+          <h2 class="login-title">Sign in</h2>
+          <form action="{% url 'users_app:login' %}" method="POST">
+            {% csrf_token %}
+            <div class="d-flex flex-column">
+            <input class="rounded mt-1" type="text" name="username" placeholder="Enter username">
+            <input class="rounded mt-3 " type="text" name="password" placeholder="Enter password">
+            </div>
+            <div class="">
+              <button type="submit" class="btn shadow btn-sm btn-outline-primary mt-3">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+{% endblock content %}

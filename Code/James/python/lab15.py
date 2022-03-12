@@ -12,7 +12,7 @@ def linear_search(list, value):
     return match
 
 
-#linear_search(nums, 3)
+linear_search(nums, 3)
 
 
 """ binary search """
@@ -53,19 +53,19 @@ def binary_search(list, target):
 
 
 
-# def bubble_sort(array):
-#     print('First list is inital list')
-#     print(nums)
-#     swapped = True
+def bubble_sort(array):
+    print('First list is inital list')
+    print(nums)
+    swapped = True
 
-#     while(swapped): # while swap is True run the code.
-#         swapped = False
-#         for i in range(len(array) - 1): # will run until second to last item in list
-#             if array[i] > array[i + 1]:
-#                 # Swap the item in the list if it's greater then it's neighbor.
-#                 array[i], array[i + 1] = array[i + 1], array[i]
-#                 swapped = True
-#     return array
+    while(swapped): # while swap is True run the code.
+        swapped = False
+        for i in range(len(array) - 1): # will run until second to last item in list
+            if array[i] > array[i + 1]:
+                # Swap the item in the list if it's greater then it's neighbor.
+                array[i], array[i + 1] = array[i + 1], array[i]
+                swapped = True
+    return array
 
 
 # print(bubble_sort(nums))

@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<form action="{% url 'TodoApp:add_todos' %}" method="POST">
+    {% csrf_token %}
+    <h1>Todo List</h1>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Have a new task?" name="add_todo"/>
+        <button class="btn btn-primary" type="submit" id="button-addon2">
+            Add todo
+        </button>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Priority
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            {% for choice in choices %}
+            <div class="form-check">
+                <input class="form-check-input" value="{{choice}}" type="radio" name="key" id="{{choice}}">
+                <label class="form-check-label" for="flexRadioDefault1">
+                {{choice}}
+                </label>
+            </div>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</form>
+    <div class="card">
+        <ul class="list-group list-group-flush">
+        {% for todo in todos.all %}
+        <li class="list-group-item"><span style="font-weight:500;">{{todo.text}}</span>, created: {{todo.created_date}} <span style="color:darkred">priority:</span> {{todo.priority.name}}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

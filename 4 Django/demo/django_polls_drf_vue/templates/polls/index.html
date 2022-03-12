@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% block content %}
+<div id="app">
+
+    <h1 class="display-1">Pollster</h1>
+    <!-- v-on:submit.prevent will run the Vue method createQuestion instead of the default JS action -->
+    <form v-on:submit.prevent="createQuestion" method="POST" class='poll'>
+        {% csrf_token %}
+        <input type="text" name="question_text" v-model="newQuestionText" placeholder="Enter Question" />
+        <div v-if="newQuestionText !== ''">
+            <h3>Choices</h3>
+            <i class="fas fa-minus" v-on:click="changeChoiceQuantity(-1)"></i>
+            <i class="fas fa-plus" v-on:click="changeChoiceQuantity(1)"></i>
+
+            <p v-for="(choice, index) in choiceQuantity">
+                <span class="choice-label">{{ choice_number }}</span>
+                <input type="text" name="choice{{index}}" v-model="choices[index]"/>
+            </p>
+            <button type="submit">Create</button>
+        </div>
+    </form>
+
+    <div class="poll" v-for="question in questions">
+        <h1>[[question.question_text]]</h1>
+        <small>Created by: [[question.user.username]]</small><small>Voting is [[question.status]]</small>
+
+        
+        <ul class="choices">
+            <li class="choice" v-for="choice in question.choices">
+                [[choice.votes]] - [[ choice.choice_text ]]
+                <a v-on:click="submitVote(choice.id)">Vote</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+
+    const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0]
+
+    const headers = {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrfToken.value
+    }
+
+    const app = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'],
+        data: {
+            questions: [],
+            newQuestionText: '',
+            choiceQuantity: 2,
+            choices: ['', '']
+        },
+        created: function(){
+            // call the api to get the polls
+            fetch('/list/')
+                .then(response=>response.json())
+                .then(data=>{
+                    this.questions = data.questions
+                })
+                .catch(error=>console.log(error))
+        },
+        methods: {
+            submitVote: function(choiceId){
+                fetch('/vote/', {
+                    method:'POST',
+                    body: JSON.stringify({choiceId: choiceId}),
+                    headers: headers
+                })
+                .then(response=>response.json())
+                .then(data=>{
+                    this.questions = data.questions
+                })
+                .catch(error=>console.log(error))
+            },
+
+            changeChoiceQuantity: function(n){
+                if(this.choiceQuantity == 2 && n === -1){
+                    return
+                }
+                this.choiceQuantity += n
+            },
+
+            createQuestion: function(){
+                fetch('/create/', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        newQuestionText: this.newQuestionText,
+                        choices: this.choices
+                    }),
+                    headers: headers
+                })
+                .then(response=>response.json())
+                .then(data=>{
+                    this.questions = data.questions
+                })
+                .catch(error=>console.log(error))
+                
+                this.newQuestionText = ''
+                this.choiceQuantity = 2
+                this.choices = ['', '']
+            }
+        }
+    })
+
+    // console.log(app);
+</script>
+
+{% endblock %}

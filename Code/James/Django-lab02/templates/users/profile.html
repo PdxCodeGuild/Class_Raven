@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="row d-flex justify-content-center align-items-center">
+  <h1 class="py-5 text-center">Hello! {{user.username}}</h1>
+  <div class="col-12 col-md-6 col-lg-4 p-0 m-0 shadow">
+    <table class="table table-light m-0 p-0">
+      <tbody>
+        <tr>
+          <th scope="row" class="p-4 table-dark">First</th>
+          <td class="p-4">
+            {% if user.first_name %} {{user.first_name}} {% else %} Not Provided
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="p-4 table-dark">Last</th>
+          <td class="p-4">
+            {% if user.last_name %} {{user.last_name}} {% else %} Not Provided
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="p-4 table-dark">Joined</th>
+          <td colspan="2" class="p-4">{{user.date_joined|date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex justify-content-center justify-space-between p-5 position-fixed bottom-0">
+    <span
+      ><i class="bi bi-twitter px-2" style="font-size: 2rem;"></i
+      ><i class="bi bi-discord px-2" style="font-size: 2rem;"></i
+      ><i class="bi bi-linkedin px-2" style="font-size: 2rem;"></i
+      ><i class="bi bi-mailbox px-2" style="font-size: 2rem;"></i
+    ></span>
+  </div>
+</div>
+
+{% endblock content %}
