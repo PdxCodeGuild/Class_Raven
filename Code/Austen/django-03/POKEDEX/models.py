@@ -1,4 +1,5 @@
 from django.db.models import *
+from POKEDEX.models import *
 from colorful.fields import RGBColorField as ColorField
 
 # Create your models here.
@@ -72,7 +73,7 @@ class Species(Model):
                     hidden = Species.objects.filter(hidden_ability=ability.abilityid).order_by('dexid')
 
                 return (Paginator(pokemon_list, 18), hidden)
-            
+
         return Paginator(pokemon_list, 18)
     def check_data(self):
         stats = [
@@ -88,17 +89,92 @@ class Species(Model):
         for stat in stats:
             if stat == 0:
                 stats = None
-        if self.sprite == 'x.com':
+        if self.sprite == '':
             sprite = None
         else:
             sprite = self.sprite
+        if self.ability1 == None:
+            abilities = None
+        else:
+            abilities = self.ability1
         details = [
             self.type1,
             sprite,
-            self.ability1,
+            abilities,
             stats
         ]
         return details
+    def update_data(self, details):
+        data = Species.get_data(query=self.dexid)
+        if details[0] == None:
+            typing = data['types']
+            type1 = typing[0]
+            type1 = type1['type']
+            type1 = type1['name']
+            type1 = Typing.objects.get(name=type1)
+            self.type1 = type1
+            try:
+                type2 = typing[1]
+                type2 = type2['type']
+                type2 = type2['name']
+                type2 = Typing.objects.get(name=type2)
+                self.type2 = type2
+            except:
+                pass
+        if details[1] == None:
+            sprites = data['sprites']
+            sprite = sprites['front_default']
+            self.sprite = sprite
+        if details[2] == None:
+            abilities = data['abilities']
+            standard = []
+            hidden = []
+            for ability in abilities:
+                is_hidden = ability['is_hidden']
+                slot = ability['slot']
+                ability = ability['ability']
+                name = ability['name']
+                url = ability['url']
+                abilityid = url.replace('https://pokeapi.co/api/v2/ability/', '')
+                abilityid = abilityid.replace('/', '')
+                ability = Ability.objects.get_or_create(abilityid=abilityid, name=name, url=url)
+                ability = ability[0]
+                if is_hidden:
+                    hidden.append(ability)
+                else:
+                    standard.append(ability)
+            self.ability1 = standard[0]
+            try:
+                self.ability2 = standard[1]
+            except:
+                pass
+            try:
+                self.hidden_ability = hidden[0]
+            except:
+                pass
+        if details[3] == None:
+            self.height = (data['height']/10)
+            self.weight = (data['weight']/10)
+            stats = data['stats']
+            for stat in stats:
+                value = stat['base_stat']
+                stat = stat['stat']
+                name = stat['name']
+                if name == 'hp':
+                    self.hp = value
+                elif name == 'attack':
+                    self.attack = value
+                elif name == 'special-attack':
+                    self.s_attack = value
+                elif name == 'defense':
+                    self.defense = value
+                elif name == 'special-defense':
+                    self.s_defense = value
+                elif name == 'speed':
+                    self.speed = value
+        self.save()
+        return
+
 class Typing(Model):
     typeid = IntegerField(primary_key=True)
     url = URLField()

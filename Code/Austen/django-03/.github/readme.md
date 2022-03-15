@@ -8,3 +8,9 @@
 - list loaded pokemon in pages
     - write a view, url, and template
 - display pokemon based on user search queries
+
+## Changelog
+- 3/14/22-1
+    - generated requirements.txt
+    - added load all option
+    - added update_data method to Species model

@@ -8,7 +8,8 @@
         {% if form %}
             <li><form action="{% url 'SITE:search' %}" method="post">{% csrf_token %}{{form}}</form></li>
         {% else%}
-            <li><a class="p-1" href="{% url 'SITE:search' %}">search</a></li>
+        <li><a class="p-1" href="{% url 'SITE:load_all' %}">load all (will take a while)</a></li>
+        <li><a class="p-1" href="{% url 'SITE:search' %}">search</a></li>
         {% endif %}
     </ul>
 </header>
@@ -26,4 +27,3 @@
 
 
 {% endblock home %}
-
