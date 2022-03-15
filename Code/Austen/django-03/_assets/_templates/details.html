@@ -1,0 +1,87 @@
+{% block details %}
+<div class="container">
+    <div class="row d-flex align-items-center">
+        {{data}}
+        <div class="col">
+            <h2 id="pokemon-header" class="text-capitalize">{{pokemon.dexid}} - {{pokemon.name}}</h2>
+        </div>
+        <div class="col-3">
+            <img id="pokemon-sprite" class="" src="{{pokemon.sprite}}" alt="{{pokemon.species}}-icon">
+        </div>
+    </div>
+    <div class="row">
+        <div id="stats-list" class="col-4 d-flex flex-column pe-2">
+                <li>
+                    <span>height:</span>  
+                    <span>{{pokemon.height}}m</span>
+                </li>
+                <li>
+                    <span>weight:</span>  
+                    <span>{{pokemon.weight}}kg</span>
+                </li>
+        </div>
+            <div class="col text-center d-flex justify-content-center align-items-center" style="background-color: {{pokemon.type1.color}}">
+                <span class="text-capitalize">
+                    {{pokemon.type1}}
+                </span>
+            </div>
+        {% if pokemon.type2 != None %}
+            <div class="col text-center d-flex justify-content-center align-items-center" style="background-color: {{pokemon.type2.color}}">
+                <span class="text-capitalize">
+                    {{pokemon.type2}}
+                </span>
+            </div>
+        {% endif %}
+        <div id="pokemon-typing" class="col-8 d-flex flex-column justify-content-center align-items-center">
+        </div>
+    </div>
+    <div id="pokemon-abilities" class="row">
+            {% if pokemon.ability2 != None %}
+            <div class="col text-center text-capitalize">{{pokemon.ability1}}</div>
+            <div class="col text-center text-capitalize">{{pokemon.ability2}}</div>
+            {% else %}
+            <div class="col text-center text-capitalize">{{pokemon.ability1}}</div>
+            {% endif %}              
+    </div>
+    <div class="row">
+        <span id="hidden-ability">
+            {% if pokemon.hidden_ability != None %}
+            <div class="col text-center text-capitalize">{{pokemon.hidden_ability}}</div>
+            {% endif %}              
+        </span>
+    </div>
+    <div class="row">
+        <span id="battle-stats">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">att: {{pokemon.attack}}</div>
+                    <div class="col">s-att: {{pokemon.s_attack}}</div>
+                    <div class="col">speed: {{pokemon.speed}}</div>
+                </div>
+                <div class="row">
+                    <div class="col">def: {{pokemon.defense}}</div>
+                    <div class="col">s-def: {{pokemon.s_defense}}</div>
+                    <div class="col">hp: {{pokemon.hp}}</div>
+                </div>
+                <div class="row">
+                    <div class="col">total: {{pokemon.stat_total}}</div>
+                </div>
+            </div>           
+        </span>
+    </div>
+    <div class="row">
+        {% if evolve_from %}
+            <div class="col">
+                <a href="{% url 'SITE:link' evolve_from.name %}"><img src="{{evolve_from.sprite}}" alt=""></a>
+            </div>
+        {% endif %}
+        {% if evolve_to %}
+            <div class="col">
+                <a href="{% url 'SITE:link' evolve_to.name %}"><img src="{{evolve_to.sprite}}" alt=""></a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock details %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block home %}
+<header class="d-flex justify-content-between m-2 p-2">
+    <h1>Pokedex</h1>
+    <ul class="d-flex gap-2 align-items-center">
+        {% if error %}<li>{{error}}</li>{% endif %}
+        {% if form %}
+            <li><form action="{% url 'SITE:search' %}" method="post">{% csrf_token %}{{form}}</form></li>
+        {% else%}
+        <li><a class="p-1" href="{% url 'SITE:load_all' %}">load all (will take a while)</a></li>
+        <li><a class="p-1" href="{% url 'SITE:search' %}">search</a></li>
+        {% endif %}
+    </ul>
+</header>
+<main class="container">
+    <div class="row">
+        <div id="nav" class="col-2 me-2">{% include 'nav.html' %}{% block nav %}{% endblock nav %}</div>
+        {% if list %}
+            <div class="col-3">{% include 'list.html' %}{% block list %}{% endblock list %}</div>
+        {% endif %}
+        {% if pokemon %}
+            <div class="col-6">{% include 'details.html' %}{% block details %}{% endblock details %}</div>
+        {% endif %}
+    </div>
+</main>
+
+
+{% endblock home %}

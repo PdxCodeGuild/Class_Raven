@@ -1,0 +1,77 @@
+{% block list %}
+<h1 class="text-capitalize">{{list_type}}</h1>
+{% if list_type == 'typings'%}
+    {% for item in list %}
+        <li>
+            <a class="text-capitalize" href="{% url 'SITE:by_type' item.name 1 %}">{{item}}</a>
+        </li>
+    {% endfor %}
+{% elif list_type == 'abilities'%}
+    {% for item in list %}
+        <li>
+            <a class="text-capitalize" href="{% url 'SITE:by_ability' item.name 1 %}">{{item}}</a>
+        </li>
+    {% endfor %}
+    {% if list.has_previous %}
+        <a href="{% url 'SITE:abilities' list.previous_page_number %}">{{list.previous_page_number}}</a>
+    {% endif %}
+        <a href="">{{page_number}}</a>
+    {% if list.has_next %}
+        <a href="{% url 'SITE:abilities' list.next_page_number %}">{{list.next_page_number}}</a>
+    {% endif %}
+{% elif list_type == 'pokemon' %}
+    {% if filter %}
+        {% for pokemon in list %}
+        <li>
+            <a class="text-capitalize" href="{% url url filter page_number pokemon.name %}">
+                #{{pokemon.dexid}} - {{pokemon.name}}
+            </a>
+        </li>
+        {% endfor %}
+        {% if hidden_list %}
+            {% if list.has_next %}
+            {% else %}
+                <details>
+                    <summary>hidden ability</summary>
+                    {% for hidden_pokemon in hidden_list %}
+                        {% if hidden_pokemon %}
+                            <li>
+                                <a class="text-capitalize" href="{% url url filter page_number hidden_pokemon.name %}">
+                                    #{{hidden_pokemon.dexid}} - {{hidden_pokemon.name}}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </details>
+            {% endif %}
+        {% endif %}
+        {% if list.has_previous %}
+            <a href="{% url url_page filter list.previous_page_number %}">{{list.previous_page_number}}</a>
+            {% endif %}
+            <a href="">{{page_number}}</a>
+        {% if list.has_next %}
+            <a href="{% url url_page filter list.next_page_number %}">{{list.next_page_number}}</a>
+        {% endif %}
+    {% else %}
+        {% for pokemon in list %}
+        <li>
+            <a class="text-capitalize" href="{% url 'SITE:details' page_number pokemon.name %}">
+                #{{pokemon.dexid}} - {{pokemon.name}}
+            </a>
+        </li>
+        {% endfor %}
+        {% if list.has_previous %}
+            <a href="{% url 'SITE:all' list.previous_page_number %}">{{list.previous_page_number}}</a>
+            {% endif %}
+            <a href="">{{page_number}}</a>
+            {% if list.has_next %}
+            <a href="{% url 'SITE:all' list.next_page_number %}">{{list.next_page_number}}</a>
+        {% endif %}
+    {% endif %}
+
+{% endif %}
+
+
+
+{% endblock list %}
+

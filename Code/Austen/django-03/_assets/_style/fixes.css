@@ -1,0 +1,6 @@
+li {
+    list-style: none;
+}
+a:any-link {
+    text-decoration: none;
+}

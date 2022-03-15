@@ -1,0 +1,52 @@
+:root {
+    --red: #660000;
+    --light-grey: #c2c2c2;
+    --grey: #7c7c7c;
+    --dark-grey: #5c5c5c;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    background-color: var(--red);
+    color: var(--light-grey)
+}
+
+a:any-link {
+    color: var(--white);
+}
+a:hover {
+    border: 2px solid var(--white);
+}
+header {
+    border-bottom: 3px solid var(--black);
+}
+#nav {
+    border-right: 1px solid var(--black);
+}
+#stats-list {
+    font-size: 14px;
+    color: var(--white);
+    background-color: #000000;
+}
+#pokemon-sprite {
+    height: 100%;
+    width: 100%;
+}
+#pokemon-header {
+    font-size: 38px;
+}
+#pokemon-typing {
+    color: var(--white);
+    background-color: var(--dark-grey);
+    font-size: 14px;
+}
+#pokemon-abilities, #hidden-ability {
+    font-size: 14px;
+}
+#pokemon-abilities {
+    background-color: var(--grey);
+}
+#hidden-ability {
+    background-color: var(--black);
+}
