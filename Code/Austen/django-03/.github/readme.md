@@ -14,3 +14,5 @@
     - generated requirements.txt
     - added load all option
     - added update_data method to Species model
+- 3/14/22-2
+    - created custom management command
