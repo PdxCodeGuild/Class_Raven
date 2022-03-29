@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <h1 class='brand'><a href="{% url 'polls:home' %}">Pollster</a></h1>
+
+  <ul class="nav-links">
+      <!-- render different nav links based on whether or not the user is authenticated -->
+    {% if request.user.is_authenticated %}
+    
+    <li class="nav-link"><a href="#"> Account </a></li>
+    {% else %}
+    <li class="nav-link"><a href="{% url 'users:register' %}"> Register </a></li>
+    <li class="nav-link"><a href="#"> Login </a></li>
+    {% endif%}
+</ul>
+</nav>
