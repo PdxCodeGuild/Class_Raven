@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="display-1">Create Poll</h1>
+
+<div class="poll">
+  <h1>{{question.question_text}}</h1>
+  <h3>Choices</h3>
+  <!-- the form will POST to the path named add_choices 
+    in the polls app ('polls:add_choices') -->
+  <form action="{% url 'polls:add_choices' %}" method="POST">
+    <!-- include CSRF token for security -->
+    {% csrf_token %}
+    <!-- loop through the choice numbers and create an input for each -->
+    {% for choice_number in choice_numbers %}
+    <div class="choice">
+      <span class="choice-label">{{ choice_number }}</span>
+      <input type="text" name="choice{{choice_number}}"/>
+    </div>
+    {% endfor %}
+
+    <!-- create a hidden field to store the id of the question to which the choices belong -->
+    <input type="hidden" name="question_id" value="{{question.id}}" />
+
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+{% endblock %}

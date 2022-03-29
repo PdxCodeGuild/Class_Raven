@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block nav %}
+    <div class="d-flex flex-column align-items-start p-4">
+        <a href="{% url 'BLOG:index' user.username %}">view blog</a>
+        <a href="{% url 'BLOG:new' user.username %}">new post</a>
+        <a href="{% url 'USER:update_email' %}">update email address</a>
+        <a href="{% url 'USER:update_password' %}">change password</a>
+
+    </div>
+{% endblock nav %}
+{% block content %}
+    <h3>
+        {{user.username}}'s profile
+    </h3>
+    <span>email: {{user.email}}</span>
+{% endblock content %}

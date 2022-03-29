@@ -1,0 +1,15 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+    <h1>Your Posts: </h1>
+    <a href="create" class='purple-text'>Create a Post</a>
+    <div class='row'>
+        {% for item in myitems %}
+            <div id='post-div' class='black-text col s12 m12 l8 push-l2'>
+                {{ item.title }}
+            </div>
+            
+        {% endfor %}
+    </div>
+    
+{% endblock content %}

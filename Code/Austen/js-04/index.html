@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/bootstrap.css">
+    <link rel="stylesheet" href="./style/signature.css" />
+    <title>Taskmaster</title>
+  </head>
+  <body class="bg-black txt-white txt-center">
+    <header>
+      <h1>Taskmaster</h1>
+    </header>
+    <main class="bg-grey">
+      <h3>my tasks</h3>
+      <button class="btn-dark" id="add">add task</button>
+      <button class="btn-dark" id="remove">remove task</button>
+      <form class="tasklist-form" id="tasklist">
+        <tasks class="tasklist" id="tasks"></tasks>
+        <button class="btn-dark" id="update">update</button>
+      </form>
+      <form id="complete-list">
+        <h4>complete:</h4>
+        <tasks id="complete-tasks"></tasks>
+      </form>
+      <div id="deleted-tasks" class="visually-hidden">
+        <button id="show-trash">show deleted tasks</button>
+        <button id="hide-trash" class="visually-hidden">hide deleted tasks</button>
+        <div id="trash">
+
+        </div>
+      </div>
+    </main>
+    <footer>&copy;2021 - Austen C. Myers-Flachson</footer>
+  </body>
+
+  <script type="module" src="./scripts/index.js"></script>
+</html>

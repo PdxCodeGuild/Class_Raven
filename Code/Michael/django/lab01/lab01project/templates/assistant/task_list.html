@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<div class="row">
+	<div class="col-auto">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Name</th>
+					<th scope="col">Description</th>
+					<th scope="col">Priority</th>
+					<th scope="col">Owner</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for task in tasks %} 
+					{% if task.completed %}
+						<tr class="table-dark">
+					{% elif task.priority == "High" %}
+						<tr class="table-danger">
+					{% elif task.priority == "Medium" %}
+						<tr class="table-warning">
+					{% elif task.priority == "Low" %}
+						<tr class="table-success">
+					{% else %}
+						<tr>
+					{% endif %}
+					<th scope="row">{{ task.id }}</th>
+					<td>{{ task.name }}</td>
+					<td>{{ task.description }}</td>
+					<td>{{ task.priority }}</td>
+					<td>{{ task.owner }}</td>
+					<td>
+						{% if not task.completed %}
+							<a href="{% url 'assistant:complete_task' task.id %}">Completed</a>
+						{% else %}
+							<a style="pointer-events: none;cursor: default;color:black;" href="#"><strike>Completed</strike></a>	
+						{% endif %}
+						<a href="{% url 'assistant:delete_task' task.id %}">Delete</a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<div class="offset-5">
+			<a href="{% url 'assistant:create_task' %}" class="btn btn-primary"
+				>Create a Todo List</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

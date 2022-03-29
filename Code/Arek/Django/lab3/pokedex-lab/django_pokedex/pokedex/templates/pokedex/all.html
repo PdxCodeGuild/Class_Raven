@@ -1,0 +1,30 @@
+{% extends 'pokedex/base.html' %}
+
+{% block content %}
+    <div class='container'>
+        <div class='row'>
+            {% for item in allpokemon %}
+                <div id='poke-div' class="center-align ">
+                    <p>
+                        Number #{{ item.number }}:
+                        {{ item.name }}
+                    </p>
+                    <img src="{{ item.image_front }}">
+                    <img src="{{ item.image_back }}">
+                    <p>
+                        Description: <a href="{{ item.description }}">Click Here</a>
+                    </p>
+                </div>
+
+
+            {% endfor %}
+
+
+
+
+        </div>
+
+    </div>
+
+
+{% endblock content %}

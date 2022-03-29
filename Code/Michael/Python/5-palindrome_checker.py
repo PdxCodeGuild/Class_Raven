@@ -43,4 +43,6 @@ if __name__ == '__main__':
             case unknown_command:
                 print (f"\nUnknown command '{unknown_command}' Please enter Palindrome or Anagram or Quit.")
                 valid_command = False
+                
+
     print("\nGoodbye. Thank you for using this program.")

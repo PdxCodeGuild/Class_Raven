@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!---->
+{% block content %}
+<h1>Are you really going to do this?</h1>
+<form action="{% url 'tasks:submit' %}" method="post">
+  {% csrf_token %}
+  <div class="form">
+    <label>task name
+      <input type="text" name="task-name" />
+    </label>
+  </div>
+  <button type="submit">
+    add it to the list of things you're too lazy to do right now
+  </button>
+</form>
+<!---->
+{% endblock %}

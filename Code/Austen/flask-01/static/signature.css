@@ -1,0 +1,63 @@
+:root {
+  --font: consolas;
+  --font-color: white;
+  --bg-color: black;
+}
+
+/* minor css reset */
+body {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+ul>li {
+  list-style: none;
+}
+
+/* page styles */
+body {
+  font-family: var(--font);
+}
+button {
+  background-color: darkgrey;
+}
+section {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+ul {
+  margin: 1rem;
+  padding: 2rem;
+}
+ul>li {
+  margin-right: 2rem;
+  font-size: 20px;
+}
+b {
+  font-size: 18px;
+}
+.black-white {
+  color: white;
+  background-color: black;
+}
+.center {
+  text-align: center;
+}
+.border {
+  border: 2px solid var(--font-color);
+}
+.container {
+  min-width: 50%;
+  text-align: center;
+  margin: 1rem;
+}
+.form-section {
+  margin-top: 1rem;
+}
+.option {
+  border-bottom: .5px dashed var(--font-color);
+  margin: 1rem;
+}
