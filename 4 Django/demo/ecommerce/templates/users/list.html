@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    
+    <div class="row d-flex justify-content-center">
+
+        
+        {% for user in users %}
+        
+        <div class="col-12 col-lg-6 mt-4">
+            
+            {% include 'users/_card.html' with user=user %}
+            
+        </div>
+        
+        {% endfor %}
+    </div>
+
+{% endblock content %}

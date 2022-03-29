@@ -1,0 +1,57 @@
+{%extends 'base.html'%} {%block content%}
+<form action="{%url 'todo:add_todos'%}" method="POST">
+
+  {% csrf_token %}
+  <h1>Todo List</h1>
+  <div class="card ">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="add-todos" aria-label="add-todos"
+        aria-describedby="button-addon2" name="add_todo" />
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Priority
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          {%for choice in choices%}
+          <div class="form-check">
+            <input class="form-check-input" value="{{choice}}" type="radio" name="key" id="{{choice}}">
+            <label class="form-check-label" for="flexRadioDefault1">
+              {{choice}}
+            </label>
+          </div>
+          {%endfor%}
+        </ul>
+
+      </div>
+
+
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+        Add todo
+      </button>
+
+
+</form>
+</div>
+<div class="card-body p-0">
+  <ul class="list-group">
+
+    {% for todo in todos.all%}
+
+    <li class="list-group-item">{{todo.text}}, created: {{todo.created_date}} priority: {{todo.priority.name}}
+      <div class="btn-group">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" name="delete">
+          delete
+        </button>
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" name="complete">
+          complete
+        </button>
+      </div>
+    </li>
+
+    {%endfor%}
+  </ul>
+</div>
+</div>
+
+{%endblock%}

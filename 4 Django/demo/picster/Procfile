@@ -1,0 +1,1 @@
+web: gunicorn picster_proj.wsgi

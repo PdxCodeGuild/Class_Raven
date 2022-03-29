@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+<!---->
+{% block content %}
+<h1>Insulting Tasks</h1>
+{% for action in actions %}
+<a href="{{action.link}}">{{action.name.capitalize}}</a><br /><br />
+
+{% endfor %}
+<!---->
+{% endblock %}

@@ -1,0 +1,40 @@
+:root {
+    --void: #0c011a;
+    --ocean: #142058;
+    --wave: #1f5c91;
+    --sand: #ebca10;
+    --land: #642805;
+    --grass: #078d12;
+    --forest: #06690e;
+    --rock: #8e8f4d;
+    --stone: #b6c8d8;
+    --rubble: #9c9c9c;
+    --acme: "Acme", sans-serif;
+  }
+a:any-link {
+    color: var(--sand);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--stone);
+    background-color: var(--void);
+    border-radius: 5%;
+}
+li {
+    list-style: none;
+}
+.ocean-stone {
+    background-color: var(--ocean);
+    color: var(--stone);
+}
+.wave-stone {
+    background-color: var(--wave);
+    color: var(--stone);
+}
+.void-stone {
+    background-color: var(--void);
+    color: var(--stone);
+}
+.border-void {
+    border: 2px solid var(--void);
+}
