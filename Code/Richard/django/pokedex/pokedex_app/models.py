@@ -17,4 +17,4 @@ class Pokemon(models.Model):
     types=models.ManyToManyField(PokemonType)
 
 def __str__(self):
-        return f"{self.name} {self.number} {self.height} {self.weight} {self.image_front} {self.image_back} {self.types}" 
+        return f"{self.name} {self.number} {self.height} {self.weight} {self.image_front} {self.image_back} {self.types}"
