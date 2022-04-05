@@ -10,6 +10,7 @@ class Command(BaseCommand):
         url = 'https://raw.githubusercontent.com/PdxCodeGuild/Class_Raven/master/4%20Django/labs/03%20Pokedex/pokemon.json'
 
         Pokemon.objects.all().delete()
+        PokemonType.objects.all().delete()
         response= requests.get(f'https://raw.githubusercontent.com/PdxCodeGuild/Class_Raven/master/4%20Django/labs/03%20Pokedex/pokemon.json')
         data=response.json()
         data=data['pokemon']
@@ -21,6 +22,7 @@ class Command(BaseCommand):
             weight = poke['weight']
             image_front = poke['image_front']
             image_back = poke['image_back']
+            #types=[type['type']['name'] for type in poke['types']]
             types=poke['types']
 
             pokemon, create=Pokemon.objects.get_or_create(
@@ -29,16 +31,21 @@ class Command(BaseCommand):
                 height=height,
                 weight=weight,
                 image_front=image_front,
-                image_back=image_back,
-                types=types
+                image_back=image_back,    
             )
-            
-            # for type in types:
-            #     pokemon=PokemonType.objects.add(type)
-            #     #pokemon.types.add(type)
 
-            # print(f"{pokemon} is in the database.")
+            for type in types:
+                pokemon_type, created=PokemonType.objects.get_or_create(name=type)
+                pokemon.types.add(pokemon_type)
+                print(pokemon, pokemon_type)
+                #print(vars(pokemon))
             
+            # for type in types: #starting poiint with Keegan
+            #     pokemon, created=PokemonType.objects.get_or_create(name=type)
+            #     pokemon.types.add(name)
+
+            #print(pokemon)
+        #print(PokemonType.objects.all)
 
 
 
