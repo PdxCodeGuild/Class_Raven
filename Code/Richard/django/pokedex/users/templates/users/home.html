@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <Center><h1>Pokedex</h1></Center>
-    {% for pokemon in my_pokemon %}
-    <li>{{ pokemon.name }}, {{pokemon.number}}</li>
+    <Center>
+        <h1>Pokedex</h1>
+    </Center>
+        {% for pokemon in my_pokemon %}
+        <li>{{ pokemon.name }}, Height: {{pokemon.height}} Weight: {{ pokemon.weight}}<br />
+            Pokemon Type: <br/>{% for type in pokemon.types.all %} {{ type }}<br/> {% endfor %}<br />
+            <img src="{{ pokemon.image_front }}" alt="Pokemon front">
+            <img src="{{pokemon.image_back}}" alt="Pokemon back">
+        </li>
     {% endfor %}
 </body>
+
 </html>

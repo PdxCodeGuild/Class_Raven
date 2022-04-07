@@ -4,7 +4,7 @@ from django.db import models
 class PokemonType(models.Model):
     name=models.CharField(max_length=30)
 
-def __str__(self):
+    def __str__(self):
         return f"{self.name}"
 
 class Pokemon(models.Model):
@@ -14,7 +14,7 @@ class Pokemon(models.Model):
     weight=models.FloatField()
     image_front=models.CharField(max_length=30)
     image_back=models.CharField(max_length=30)
-    types=models.ManyToManyField(PokemonType)
+    types=models.ManyToManyField('PokemonType')
 
-def __str__(self):
-        return f"{self.name} {self.number} {self.height} {self.weight} {self.image_front} {self.image_back} {self.types}"
+    def __str__(self):
+        return f"{self.name}"

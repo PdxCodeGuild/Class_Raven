@@ -14,6 +14,7 @@ class Command(BaseCommand):
         response= requests.get(f'https://raw.githubusercontent.com/PdxCodeGuild/Class_Raven/master/4%20Django/labs/03%20Pokedex/pokemon.json')
         data=response.json()
         data=data['pokemon']
+        #data.reverse()
 
         for poke in data:
             number=poke['number']
@@ -25,22 +26,24 @@ class Command(BaseCommand):
             #types=[type['type']['name'] for type in poke['types']]
             types=poke['types']
 
-            pokemon, create=Pokemon.objects.get_or_create(
+            pokemon, created=Pokemon.objects.get_or_create(
                 number=number,
-                name=name,
+                name=name.title(),
                 height=height,
                 weight=weight,
                 image_front=image_front,
                 image_back=image_back,    
             )
-
-            for type in types:
-                pokemon_type, created=PokemonType.objects.get_or_create(name=type)
+            for type_item in types:
+                type_item=type_item.title()
+                pokemon_type, created=PokemonType.objects.get_or_create(name=type_item)
                 pokemon.types.add(pokemon_type)
-                print(pokemon, pokemon_type)
+                #print(pokemon, pokemon_type)
                 #print(vars(pokemon))
             
-            # for type in types: #starting poiint with Keegan
+
+
+            # for type in types: #starting point with Keegan
             #     pokemon, created=PokemonType.objects.get_or_create(name=type)
             #     pokemon.types.add(name)
 
